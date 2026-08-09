@@ -1,0 +1,106 @@
+(() => {
+  const cfg = window.DIO_SITE_CONFIG || {};
+  const $ = (s, r=document) => r.querySelector(s);
+  const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+
+  // Mobile nav.
+  const menu = $('#menuButton'), links = $('#navLinks');
+  if (menu && links) {
+    menu.addEventListener('click', () => {
+      const open = menu.getAttribute('aria-expanded') === 'true';
+      menu.setAttribute('aria-expanded', String(!open));
+      links.dataset.open = String(!open);
+    });
+    $$('#navLinks a').forEach(a => a.addEventListener('click', () => {
+      menu.setAttribute('aria-expanded','false'); links.dataset.open='false';
+    }));
+  }
+
+  // Product links configurable.
+  Object.entries(cfg.products || {}).forEach(([key, href]) => {
+    if (!href) return;
+    $$(`[data-product-link="${key}"]`).forEach(a => a.href = href);
+  });
+  $$('[data-select-product]').forEach(a => a.addEventListener('click', () => {
+    const p = $('#product'); if (p) p.value = a.dataset.selectProduct;
+  }));
+
+  // Reveal.
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+    }), { threshold:.12, rootMargin:'0px 0px -30px' });
+    $$('.reveal').forEach(el => io.observe(el));
+  } else $$('.reveal').forEach(el => el.classList.add('is-visible'));
+
+  // Cursor glow.
+  const orb = $('#cursorOrb');
+  if (orb && !reduce && matchMedia('(pointer:fine)').matches) {
+    addEventListener('pointermove', e => { orb.style.left=e.clientX+'px'; orb.style.top=e.clientY+'px'; });
+  } else if (orb) orb.style.display='none';
+
+  // Canvas field, deliberately subtle.
+  const canvas = $('#field');
+  if (canvas && !reduce) {
+    const ctx = canvas.getContext('2d'); let w=0,h=0,dpr=1,pts=[];
+    function resize(){ dpr=Math.min(devicePixelRatio||1,2); w=innerWidth; h=innerHeight; canvas.width=w*dpr; canvas.height=h*dpr; canvas.style.width=w+'px'; canvas.style.height=h+'px'; ctx.setTransform(dpr,0,0,dpr,0,0); pts=Array.from({length:Math.min(80,Math.floor(w*h/19000))},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.2+.2,a:Math.random()*.32+.05,v:Math.random()*.08+.02})); }
+    function draw(){ ctx.clearRect(0,0,w,h); pts.forEach(p=>{p.y-=p.v;if(p.y<0)p.y=h;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(225,195,120,${p.a})`;ctx.fill();}); requestAnimationFrame(draw); }
+    resize(); addEventListener('resize',resize,{passive:true}); draw();
+  }
+
+  // Public demonstration event feed. It never claims live production telemetry.
+  const feed = $('#eventFeed');
+  const eventPool = [
+    ['mail.received','conversation enters governed intake','MAIL'],
+    ['lead.qualified','bounded request accepted for review','LEAD'],
+    ['source.receipt_bound','evidence lineage attached','PROOF'],
+    ['payment.succeeded','provider event settles commercial state','MONEY'],
+    ['job.output_prepared','review-ready artifact produced','WORK'],
+    ['human.review_required','consequential output pauses at authority gate','AUTH'],
+    ['mail.draft_ready','approved workflow prepares customer communication','MAIL'],
+    ['delivery.prepared','reviewed output reaches release boundary','SHIP'],
+    ['campaign.outcome_observed','market experiment receives evidence','MARKET']
+  ];
+  if (feed) {
+    let tick=0;
+    const addRow = (animated=false) => {
+      const [name,detail,type] = eventPool[tick % eventPool.length]; tick++;
+      const row=document.createElement('div'); row.className='event-row'+(animated?' new':'');
+      row.innerHTML=`<i></i><span><strong>${name}</strong><small>${detail}</small></span><time>${type} / now</time>`;
+      feed.prepend(row); while(feed.children.length>7) feed.lastElementChild.remove();
+      if(animated) setTimeout(()=>row.classList.remove('new'),600);
+    };
+    for(let i=0;i<6;i++) addRow(false);
+    if(!reduce) setInterval(()=>addRow(true),3100);
+  }
+
+  // Intake bridge.
+  const form=$('#pilotForm'), status=$('#formStatus'), submit=$('#submitPilot');
+  if (form) form.addEventListener('submit', async e => {
+    e.preventDefault(); const fd=new FormData(form);
+    const payload={
+      schema:'dio.public_intake.v1', source:'dio_master_site_god_tier', product:fd.get('product'),
+      contact:{name:fd.get('name'),email:fd.get('email'),organisation:fd.get('organisation')||''},
+      request:{summary:fd.get('summary'),preferred_pilot:'bounded_pilot'},
+      consents:{reply_requested:fd.get('replyConsent')==='on'},
+      attribution:{page:location.pathname,referrer:document.referrer||''}, submitted_at:new Date().toISOString()
+    };
+    if(!payload.consents.reply_requested){status.textContent='Confirm that DIO may reply to this request.';return;}
+    submit.disabled=true; submit.textContent='BINDING INTAKE…'; status.textContent='Preparing governed request…';
+    try{
+      if(cfg.intakeEndpoint){
+        const res=await fetch(cfg.intakeEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+        if(!res.ok) throw new Error(`Intake endpoint returned ${res.status}`);
+        const data=await res.json().catch(()=>({})); status.textContent=data.lead_id?`DIO received the request. Reference: ${data.lead_id}`:'DIO received the request.'; form.reset();
+      } else {
+        const address=cfg.fallbackEmail||'dio_workflows@outlook.com';
+        const subject=`DIO CONTROLLED PILOT REQUEST / ${String(payload.product).toUpperCase()}`;
+        const body=['DIO CONTROLLED PILOT REQUEST','',`Product: ${payload.product}`,`Name: ${payload.contact.name}`,`Organisation: ${payload.contact.organisation||'Not specified'}`,`Reply email: ${payload.contact.email}`,'','Bounded problem:',payload.request.summary,'','Permission: You may reply to this specific request.','', 'Structured payload:', JSON.stringify(payload,null,2)].join('\n');
+        status.textContent='Opening the structured Outlook/email bridge…';
+        location.href=`mailto:${encodeURIComponent(address)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      }
+    }catch(err){ console.error(err); status.textContent=`The intake endpoint refused the request. Use the current bridge at ${cfg.fallbackEmail||'dio_workflows@outlook.com'}.`; }
+    finally{submit.disabled=false;submit.textContent='CREATE DIO INTAKE ↗';}
+  });
+})();
