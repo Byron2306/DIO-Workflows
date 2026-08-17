@@ -1,0 +1,48 @@
+name: Validate proof-backed pilot storefront
+
+on:
+  pull_request:
+    paths:
+      - "products/**"
+      - "assets/dio-config.js"
+      - "assets/site.js"
+      - ".github/workflows/storefront-check.yml"
+  workflow_dispatch:
+
+jobs:
+  storefront:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Validate 38-offer catalog and public entrypoints
+        run: |
+          node - <<'NODE'
+          global.window = {};
+          require('./products/catalog.js');
+          const rows = window.DIO_PRODUCT_CATALOG;
+          if (!Array.isArray(rows) || rows.length !== 38) throw new Error(`expected 38 offers, found ${rows && rows.length}`);
+          const slugs = new Set(rows.map(x => x.slug));
+          if (slugs.size !== 38) throw new Error('product slugs are not unique');
+          for (const p of rows) {
+            for (const key of ['slug','name','family','headline','buyer','offer','boundary','proof']) {
+              if (!String(p[key] || '').trim()) throw new Error(`${p.slug || '<unknown>'}: missing ${key}`);
+            }
+            if (!Array.isArray(p.bring) || p.bring.length < 3) throw new Error(`${p.slug}: needs 3 pilot inputs`);
+            if (!Array.isArray(p.deliverables) || p.deliverables.length < 3) throw new Error(`${p.slug}: needs 3 deliverables`);
+          }
+          const highRisk = rows.filter(p => p.family === 'High-Risk Review');
+          if (highRisk.length !== 9) throw new Error(`expected 9 high-risk review offers, found ${highRisk.length}`);
+          if (highRisk.some(p => !p.proof.includes('domain engine intentionally unassigned'))) throw new Error('high-risk page lost no-engine truth boundary');
+          const change = rows.find(p => p.slug === 'changeproof');
+          if (!change || !change.boundary.includes('not generic enterprise change management')) throw new Error('ChangeProof scope ceiling missing');
+          console.log(`STORE_FRONT_READY products=${rows.length} high_risk=${highRisk.length}`);
+          NODE
+          test -f products/index.html
+          test -f products/pilot.html
+          test -f products/product.css
+          test -f products/app.js
+          grep -q 'portfolioUrl: "products/"' assets/dio-config.js
+          grep -q 'EXPLORE 38 PILOTS' assets/site.js
