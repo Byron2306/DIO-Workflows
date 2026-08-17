@@ -1,6 +1,5 @@
 window.DIO_SITE_CONFIG = {
-  // Set when the public DIO ingress is ready, e.g. https://host/api/public/intake
-  intakeEndpoint: "",
+  intakeEndpoint: "https://dio-edge-gateway-live.dio-workflows.workers.dev/api/public/intake",
   fallbackEmail: "dio_workflows@outlook.com",
   portfolioUrl: "products/",
   products: {

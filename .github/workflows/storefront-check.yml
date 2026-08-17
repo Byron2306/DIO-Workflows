@@ -1,4 +1,4 @@
-name: Validate proof-backed pilot storefront
+name: Validate proof-backed commercial storefront
 
 on:
   pull_request:
@@ -17,7 +17,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - name: Validate 38-offer catalog and public entrypoints
+      - name: Validate 38-offer commercial catalog
         run: |
           node - <<'NODE'
           const fs = require('fs');
@@ -41,13 +41,39 @@ jobs:
           if (highRisk.some(p => !p.proof.includes('domain engine intentionally unassigned'))) throw new Error('high-risk page lost no-engine truth boundary');
           const change = rows.find(p => p.slug === 'changeproof');
           if (!change || !change.boundary.includes('not generic enterprise change management')) throw new Error('ChangeProof scope ceiling missing');
-          console.log(`STORE_FRONT_READY products=${rows.length} permanent_routes=${rows.length} high_risk=${highRisk.length}`);
+          console.log(`COMMERCIAL_STORE_FRONT_READY products=${rows.length} permanent_routes=${rows.length} high_risk=${highRisk.length}`);
           NODE
+      - name: Validate pricing, positioning and one-ingress contract
+        run: |
           test -f products/index.html
-          test -f products/pilot.html
           test -f products/product.css
           test -f products/app.js
-          grep -q 'document.body.dataset.product' products/app.js
-          grep -q 'VIEW PILOT' products/app.js
-          grep -q 'portfolioUrl: "products/"' assets/dio-config.js
-          grep -q 'EXPLORE 38 PILOTS' assets/site.js
+          grep -q "'Documents & Rooms':4900" products/app.js
+          grep -q "'Evidence & Assurance':7900" products/app.js
+          grep -q "'Obligations':8900" products/app.js
+          grep -q "'AI & Digital Trust':12900" products/app.js
+          grep -q "'Regulated Operations':14900" products/app.js
+          grep -q "GRC · audit readiness · evidence automation" products/app.js
+          grep -q "AI governance · model risk · agent authority · auditability" products/app.js
+          grep -q "Simple South African commercial entry point" products/index.html
+          grep -q "From R 4,900 ZAR" products/index.html
+          grep -q "intakeEndpoint: \"https://dio-edge-gateway-live.dio-workflows.workers.dev/api/public/intake\"" assets/dio-config.js
+          grep -q "product_class:requestedClass" assets/site.js
+          grep -q "launch_price_zar" assets/site.js
+          grep -q "document_studio" assets/site.js
+          grep -q "pricing_basis" assets/site.js
+          grep -q "EXPLORE 38 PILOTS" assets/site.js
+          grep -q -- "--paper:#fff" products/product.css
+          if grep -q "mailto:" products/app.js; then echo "product class CTA bypasses governed intake"; exit 1; fi
+      - name: Validate permanent page shell
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');
+          global.window={};
+          require('./products/catalog.js');
+          for(const p of window.DIO_PRODUCT_CATALOG){
+            const html=fs.readFileSync(`products/${p.slug}/index.html`,'utf8');
+            if(!html.includes('catalog.js') || !html.includes('app.js')) throw new Error(`${p.slug}: dynamic commercial shell missing`);
+          }
+          console.log('PERMANENT_PRODUCT_SHELLS_READY=38');
+          NODE

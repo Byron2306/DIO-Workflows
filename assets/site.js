@@ -2,8 +2,12 @@
   const cfg = window.DIO_SITE_CONFIG || {};
   const $ = (s, r=document) => r.querySelector(s);
   const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+  const params = new URLSearchParams(location.search);
+  const requestedParent = (params.get('product') || '').trim();
+  const requestedClass = (params.get('class') || '').trim();
+  const requestedOffer = (params.get('offer') || '').trim();
+  const requestedPrice = Number.parseInt(params.get('price') || '', 10);
 
-  // Mobile nav.
   const menu = $('#menuButton'), links = $('#navLinks');
   if (menu && links) {
     menu.addEventListener('click', () => {
@@ -16,7 +20,6 @@
     }));
   }
 
-  // Proof-backed portfolio discovery.
   const portfolioHref = cfg.portfolioUrl || 'products/';
   if (links && !links.querySelector('[data-portfolio-link]')) {
     const a=document.createElement('a'); a.href=portfolioHref; a.textContent='38 PILOTS'; a.dataset.portfolioLink='true';
@@ -27,7 +30,6 @@
     const a=document.createElement('a'); a.className='btn ghost'; a.href=portfolioHref; a.textContent='EXPLORE 38 PILOTS'; a.dataset.portfolioLink='true'; heroActions.appendChild(a);
   }
 
-  // Product links configurable.
   Object.entries(cfg.products || {}).forEach(([key, href]) => {
     if (!href) return;
     $$(`[data-product-link="${key}"]`).forEach(a => a.href = href);
@@ -36,7 +38,6 @@
     const p = $('#product'); if (p) p.value = a.dataset.selectProduct;
   }));
 
-  // Reveal.
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!reduce && 'IntersectionObserver' in window) {
     const io = new IntersectionObserver(entries => entries.forEach(e => {
@@ -45,13 +46,11 @@
     $$('.reveal').forEach(el => io.observe(el));
   } else $$('.reveal').forEach(el => el.classList.add('is-visible'));
 
-  // Cursor glow.
   const orb = $('#cursorOrb');
   if (orb && !reduce && matchMedia('(pointer:fine)').matches) {
     addEventListener('pointermove', e => { orb.style.left=e.clientX+'px'; orb.style.top=e.clientY+'px'; });
   } else if (orb) orb.style.display='none';
 
-  // Canvas field, deliberately subtle.
   const canvas = $('#field');
   if (canvas && !reduce) {
     const ctx = canvas.getContext('2d'); let w=0,h=0,dpr=1,pts=[];
@@ -60,7 +59,6 @@
     resize(); addEventListener('resize',resize,{passive:true}); draw();
   }
 
-  // Public demonstration event feed. It never claims live production telemetry.
   const feed = $('#eventFeed');
   const eventPool = [
     ['mail.received','conversation enters governed intake','MAIL'],
@@ -86,32 +84,55 @@
     if(!reduce) setInterval(()=>addRow(true),3100);
   }
 
-  // Intake bridge.
   const form=$('#pilotForm'), status=$('#formStatus'), submit=$('#submitPilot');
-  if (form) form.addEventListener('submit', async e => {
-    e.preventDefault(); const fd=new FormData(form);
-    const payload={
-      schema:'dio.public_intake.v1', source:'dio_master_site_god_tier', product:fd.get('product'),
-      contact:{name:fd.get('name'),email:fd.get('email'),organisation:fd.get('organisation')||''},
-      request:{summary:fd.get('summary'),preferred_pilot:'bounded_pilot'},
-      consents:{reply_requested:fd.get('replyConsent')==='on'},
-      attribution:{page:location.pathname,referrer:document.referrer||''}, submitted_at:new Date().toISOString()
-    };
-    if(!payload.consents.reply_requested){status.textContent='Confirm that DIO may reply to this request.';return;}
-    submit.disabled=true; submit.textContent='BINDING INTAKE…'; status.textContent='Preparing governed request…';
-    try{
-      if(cfg.intakeEndpoint){
-        const res=await fetch(cfg.intakeEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
-        if(!res.ok) throw new Error(`Intake endpoint returned ${res.status}`);
-        const data=await res.json().catch(()=>({})); status.textContent=data.lead_id?`DIO received the request. Reference: ${data.lead_id}`:'DIO received the request.'; form.reset();
-      } else {
+  if (form) {
+    const productSelect=$('#product');
+    if(productSelect && ![...productSelect.options].some(o=>o.value==='document_studio')){
+      const option=document.createElement('option'); option.value='document_studio'; option.textContent='Document Studio · Documents / localisation'; productSelect.appendChild(option);
+    }
+    if (requestedParent && productSelect && ![...productSelect.options].some(o=>o.value===requestedParent)) {
+      const option=document.createElement('option'); option.value=requestedParent; option.textContent=requestedParent.replaceAll('_',' '); productSelect.appendChild(option);
+    }
+    if (requestedParent && productSelect && [...productSelect.options].some(o=>o.value===requestedParent)) productSelect.value=requestedParent;
+    const contactIntro=document.querySelector('.contact-copy p:not(.eyebrow)');
+    if(contactIntro){
+      contactIntro.textContent=requestedClass
+        ? `You selected ${requestedClass}. Confirm the bounded problem below and DIO will bind the product class, offer and launch price into one governed intake record.`
+        : 'Choose the product lane and tell us what hurts. This form submits directly into the governed DIO public intake, where one lead record and one event spine carry the request into review.';
+    }
+    if (status && requestedClass) {
+      const quoted=Number.isFinite(requestedPrice)?` · launch pilot R ${requestedPrice.toLocaleString('en-ZA')} ZAR`:'';
+      status.textContent=`Preloaded: ${requestedClass}${quoted}`;
+    }
+    form.addEventListener('submit', async e => {
+      e.preventDefault(); const fd=new FormData(form);
+      const parentProduct=String(fd.get('product')||'').trim();
+      const defaultOffer=`${parentProduct}_controlled_pilot`;
+      const offer=(requestedOffer||defaultOffer).slice(0,80);
+      const payload={
+        schema:'dio.public_intake.v1', product:parentProduct, offer,
+        contact:{name:fd.get('name'),email:fd.get('email'),organisation:fd.get('organisation')||''},
+        request:{summary:fd.get('summary'),preferred_pilot:'bounded_pilot',product_class:requestedClass||null,product_slug:requestedClass||null,offer_label:requestedOffer||null,launch_price_zar:Number.isFinite(requestedPrice)?requestedPrice:null,pricing_basis:Number.isFinite(requestedPrice)?'public_launch_pilot_one_bounded_case':null},
+        consents:{reply_requested:fd.get('replyConsent')==='on'},
+        attribution:{page:location.pathname,referrer:document.referrer||'',source:'dio_public_site',product_class:requestedClass||null},
+        submitted_at:new Date().toISOString()
+      };
+      if(!payload.consents.reply_requested){status.textContent='Confirm that DIO may reply to this request.';return;}
+      submit.disabled=true; submit.textContent='BINDING INTAKE…'; status.textContent='Sending this request into the DIO lead pipeline…';
+      try{
+        if(cfg.intakeEndpoint){
+          const res=await fetch(cfg.intakeEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+          if(!res.ok) throw new Error(`Intake endpoint returned ${res.status}`);
+          const data=await res.json().catch(()=>({})); status.textContent=data.lead_id?`DIO received the request. Reference: ${data.lead_id}`:'DIO received the request.'; form.reset();
+        } else throw new Error('public intake endpoint is not configured');
+      }catch(err){
+        console.error(err);
         const address=cfg.fallbackEmail||'dio_workflows@outlook.com';
-        const subject=`DIO CONTROLLED PILOT REQUEST / ${String(payload.product).toUpperCase()}`;
-        const body=['DIO CONTROLLED PILOT REQUEST','',`Product: ${payload.product}`,`Name: ${payload.contact.name}`,`Organisation: ${payload.contact.organisation||'Not specified'}`,`Reply email: ${payload.contact.email}`,'','Bounded problem:',payload.request.summary,'','Permission: You may reply to this specific request.','', 'Structured payload:', JSON.stringify(payload,null,2)].join('\n');
-        status.textContent='Opening the structured Outlook/email bridge…';
+        const subject=`DIO CONTROLLED PILOT REQUEST / ${requestedClass||parentProduct}`;
+        const body=['DIO CONTROLLED PILOT REQUEST','',`Parent lane: ${parentProduct}`,`Product class: ${requestedClass||'not specified'}`,`Offer: ${offer}`,`Launch price ZAR: ${Number.isFinite(requestedPrice)?requestedPrice:'scope required'}`,`Name: ${payload.contact.name}`,`Organisation: ${payload.contact.organisation||'Not specified'}`,`Reply email: ${payload.contact.email}`,'','Bounded problem:',String(payload.request.summary||''),'','Permission: You may reply to this specific request.'].join('\n');
+        status.textContent='The governed endpoint could not receive the request. Opening the controlled email fallback…';
         location.href=`mailto:${encodeURIComponent(address)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      }
-    }catch(err){ console.error(err); status.textContent=`The intake endpoint refused the request. Use the current bridge at ${cfg.fallbackEmail||'dio_workflows@outlook.com'}.`; }
-    finally{submit.disabled=false;submit.textContent='CREATE DIO INTAKE ↗';}
-  });
+      } finally { submit.disabled=false; submit.textContent='CREATE DIO INTAKE ↗'; }
+    });
+  }
 })();
