@@ -87,11 +87,19 @@
   const form=$('#pilotForm'), status=$('#formStatus'), submit=$('#submitPilot');
   if (form) {
     const productSelect=$('#product');
+    if(productSelect && ![...productSelect.options].some(o=>o.value==='document_studio')){
+      const option=document.createElement('option'); option.value='document_studio'; option.textContent='Document Studio · Documents / localisation'; productSelect.appendChild(option);
+    }
     if (requestedParent && productSelect && ![...productSelect.options].some(o=>o.value===requestedParent)) {
-      const labels={document_studio:'Document Studio · Documents & publishing'};
-      const option=document.createElement('option'); option.value=requestedParent; option.textContent=labels[requestedParent]||requestedParent.replaceAll('_',' '); productSelect.appendChild(option);
+      const option=document.createElement('option'); option.value=requestedParent; option.textContent=requestedParent.replaceAll('_',' '); productSelect.appendChild(option);
     }
     if (requestedParent && productSelect && [...productSelect.options].some(o=>o.value===requestedParent)) productSelect.value=requestedParent;
+    const contactIntro=document.querySelector('.contact-copy p:not(.eyebrow)');
+    if(contactIntro){
+      contactIntro.textContent=requestedClass
+        ? `You selected ${requestedClass}. Confirm the bounded problem below and DIO will bind the product class, offer and launch price into one governed intake record.`
+        : 'Choose the product lane and tell us what hurts. This form submits directly into the governed DIO public intake, where one lead record and one event spine carry the request into review.';
+    }
     if (status && requestedClass) {
       const quoted=Number.isFinite(requestedPrice)?` · launch pilot R ${requestedPrice.toLocaleString('en-ZA')} ZAR`:'';
       status.textContent=`Preloaded: ${requestedClass}${quoted}`;
@@ -122,7 +130,7 @@
         const address=cfg.fallbackEmail||'dio_workflows@outlook.com';
         const subject=`DIO CONTROLLED PILOT REQUEST / ${requestedClass||parentProduct}`;
         const body=['DIO CONTROLLED PILOT REQUEST','',`Parent lane: ${parentProduct}`,`Product class: ${requestedClass||'not specified'}`,`Offer: ${offer}`,`Launch price ZAR: ${Number.isFinite(requestedPrice)?requestedPrice:'scope required'}`,`Name: ${payload.contact.name}`,`Organisation: ${payload.contact.organisation||'Not specified'}`,`Reply email: ${payload.contact.email}`,'','Bounded problem:',String(payload.request.summary||''),'','Permission: You may reply to this specific request.'].join('\n');
-        status.textContent='The governed endpoint refused or could not receive the request. Opening the controlled email fallback…';
+        status.textContent='The governed endpoint could not receive the request. Opening the controlled email fallback…';
         location.href=`mailto:${encodeURIComponent(address)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       } finally { submit.disabled=false; submit.textContent='CREATE DIO INTAKE ↗'; }
     });
