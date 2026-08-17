@@ -20,6 +20,7 @@ jobs:
       - name: Validate 38-offer catalog and public entrypoints
         run: |
           node - <<'NODE'
+          const fs = require('fs');
           global.window = {};
           require('./products/catalog.js');
           const rows = window.DIO_PRODUCT_CATALOG;
@@ -32,17 +33,21 @@ jobs:
             }
             if (!Array.isArray(p.bring) || p.bring.length < 3) throw new Error(`${p.slug}: needs 3 pilot inputs`);
             if (!Array.isArray(p.deliverables) || p.deliverables.length < 3) throw new Error(`${p.slug}: needs 3 deliverables`);
+            const permanentPage = `products/${p.slug}/index.html`;
+            if (!fs.existsSync(permanentPage)) throw new Error(`${p.slug}: permanent public pilot route missing`);
           }
           const highRisk = rows.filter(p => p.family === 'High-Risk Review');
           if (highRisk.length !== 9) throw new Error(`expected 9 high-risk review offers, found ${highRisk.length}`);
           if (highRisk.some(p => !p.proof.includes('domain engine intentionally unassigned'))) throw new Error('high-risk page lost no-engine truth boundary');
           const change = rows.find(p => p.slug === 'changeproof');
           if (!change || !change.boundary.includes('not generic enterprise change management')) throw new Error('ChangeProof scope ceiling missing');
-          console.log(`STORE_FRONT_READY products=${rows.length} high_risk=${highRisk.length}`);
+          console.log(`STORE_FRONT_READY products=${rows.length} permanent_routes=${rows.length} high_risk=${highRisk.length}`);
           NODE
           test -f products/index.html
           test -f products/pilot.html
           test -f products/product.css
           test -f products/app.js
+          grep -q 'document.body.dataset.product' products/app.js
+          grep -q 'VIEW PILOT' products/app.js
           grep -q 'portfolioUrl: "products/"' assets/dio-config.js
           grep -q 'EXPLORE 38 PILOTS' assets/site.js
