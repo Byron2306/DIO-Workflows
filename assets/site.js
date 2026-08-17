@@ -16,6 +16,17 @@
     }));
   }
 
+  // Proof-backed portfolio discovery.
+  const portfolioHref = cfg.portfolioUrl || 'products/';
+  if (links && !links.querySelector('[data-portfolio-link]')) {
+    const a=document.createElement('a'); a.href=portfolioHref; a.textContent='38 PILOTS'; a.dataset.portfolioLink='true';
+    links.insertBefore(a, links.querySelector('.nav-cta'));
+  }
+  const heroActions=$('.hero-actions');
+  if(heroActions && !heroActions.querySelector('[data-portfolio-link]')){
+    const a=document.createElement('a'); a.className='btn ghost'; a.href=portfolioHref; a.textContent='EXPLORE 38 PILOTS'; a.dataset.portfolioLink='true'; heroActions.appendChild(a);
+  }
+
   // Product links configurable.
   Object.entries(cfg.products || {}).forEach(([key, href]) => {
     if (!href) return;
