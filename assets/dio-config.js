@@ -9,3 +9,20 @@ window.DIO_SITE_CONFIG = {
     vamp: "products/vamp/"
   }
 };
+
+(() => {
+  const footer = document.querySelector('.footer-links');
+  if (!footer || footer.querySelector('[data-dio-legal-link]')) return;
+
+  [
+    ['Privacy', 'privacy/'],
+    ['Terms', 'terms/'],
+    ['Data deletion', 'data-deletion/']
+  ].forEach(([label, href]) => {
+    const link = document.createElement('a');
+    link.href = href;
+    link.textContent = label;
+    link.dataset.dioLegalLink = 'true';
+    footer.appendChild(link);
+  });
+})();
