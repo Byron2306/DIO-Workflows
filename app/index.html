@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DIO Workflows is a governed media publishing and analytics application for authorised Google and YouTube workflows.">
+  <meta name="theme-color" content="#050607">
+  <meta name="color-scheme" content="dark">
+  <title>DIO Workflows | Application</title>
+  <link rel="icon" href="../assets/dio-favicon.png">
+  <link rel="stylesheet" href="../assets/site.css">
+  <style>
+    body{background:#050607;color:#edf1ee}.app-shell{position:relative;z-index:2;padding:150px 0 80px}.app-hero{display:grid;grid-template-columns:.72fr 1.28fr;gap:48px;align-items:end;padding-bottom:48px;border-bottom:1px solid #ffffff20}.app-kicker{font:800 .78rem/1.2 system-ui,sans-serif;letter-spacing:.16em;color:#d9b86c}.app-hero h1{margin:.18em 0 0;font-size:clamp(3rem,8vw,7rem);line-height:.9;letter-spacing:-.06em}.app-lede{font-size:1.12rem;color:#c7d0cb;max-width:720px}.app-body{max-width:980px;margin:58px auto 0}.app-body section{padding:30px 0;border-bottom:1px solid #ffffff16}.app-body h2{font-size:1.5rem;margin:0 0 12px}.app-body p,.app-body li{color:#c7d0cb}.app-body a{color:#e2c57d}.app-body ul{padding-left:1.2rem}.boundary{padding:20px 22px;border:1px solid #d9b86c55;background:#d9b86c0b;border-radius:14px}.app-footer{padding:36px 0;color:#87918d;border-top:1px solid #ffffff16}.app-footer a{color:#d9b86c}@media(max-width:760px){.app-shell{padding-top:120px}.app-hero{grid-template-columns:1fr;gap:20px}}
+  </style>
+</head>
+<body>
+  <canvas id="field" class="field" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+
+  <nav class="nav" aria-label="Primary navigation">
+    <a class="brand" href="../" aria-label="DIO Workflows home">
+      <img src="../assets/dio-favicon.png" alt="">
+      <span><strong>DIO Workflows</strong><small>CONTROL / PROOF / ROUTE</small></span>
+    </a>
+    <div class="nav-links" data-open="true">
+      <a href="../products/">Products</a>
+      <a href="../privacy/">Privacy</a>
+      <a href="../terms/">Terms</a>
+      <a class="nav-cta" href="../#contact">CONTACT DIO</a>
+    </div>
+  </nav>
+
+  <main class="app-shell">
+    <div class="page">
+      <header class="app-hero">
+        <div>
+          <p class="app-kicker">DIO WORKFLOWS / GOOGLE-CONNECTED APPLICATION</p>
+          <h1>DIO<br>Workflows.</h1>
+        </div>
+        <div>
+          <p class="app-lede"><strong>DIO Workflows</strong> is a governed media publishing and analytics application used to connect an authorised Google/YouTube account to DIO and NicheFoundry media workflows.</p>
+          <p class="app-lede">The application helps an authorised operator upload and manage media assets, verify channel and video metadata, read channel/video information and analytics, and preserve an auditable record of requested publishing actions.</p>
+        </div>
+      </header>
+
+      <article class="app-body">
+        <div class="boundary"><strong>Human authority boundary.</strong> DIO Workflows does not treat OAuth access as permission for unrestricted autonomous publication. External publishing remains tied to an authorised user or operator action and the permissions granted by the connected account.</div>
+
+        <section>
+          <h2>What the application does</h2>
+          <ul>
+            <li>Connects an authorised Google/YouTube account to the DIO media workflow.</li>
+            <li>Uploads user-authorised videos and related media metadata.</li>
+            <li>Supports captions, thumbnails, metadata verification and scheduling where the authorised Google/YouTube API permissions allow those functions.</li>
+            <li>Reads channel and video information needed to confirm the correct channel and verify published media.</li>
+            <li>Reads YouTube Analytics data for controlled reporting and performance measurement.</li>
+            <li>Records technical receipts so the operator can verify which bounded action occurred.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Why Google user data is requested</h2>
+          <p>DIO Workflows requests Google/YouTube access only so the user can connect the intended YouTube channel, publish or manage media they have authorised, verify the resulting channel/video state, and read relevant analytics for that same governed workflow.</p>
+          <p>The application does not request Google user data for unrelated advertising profiles, sale of personal information, or hidden background publication.</p>
+        </section>
+
+        <section>
+          <h2>Requested YouTube capabilities</h2>
+          <p>The current media workflow uses Google OAuth permissions for YouTube uploads, YouTube account/channel operations required by the media workflow, read-only YouTube channel/video access, and read-only YouTube Analytics.</p>
+        </section>
+
+        <section>
+          <h2>Privacy, terms and deletion</h2>
+          <p>Read the <a href="../privacy/">DIO Workflows Privacy Policy</a> for details about Google user data access, storage, use and sharing. Use the <a href="../data-deletion/">Data Deletion Instructions</a> to request deletion or disconnection of integration data. Use of DIO Workflows is also subject to the <a href="../terms/">Terms of Service</a>.</p>
+        </section>
+
+        <section>
+          <h2>Operator and support</h2>
+          <p>DIO Workflows is operated as the DIO Workflows service and product identity. Questions about the application, OAuth permissions or privacy can be sent to <a href="mailto:dio_workflows@outlook.com">dio_workflows@outlook.com</a>.</p>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="app-footer">
+    <div class="page">DIO Workflows · <a href="../">Home</a> · <a href="../privacy/">Privacy</a> · <a href="../terms/">Terms</a> · <a href="../data-deletion/">Data deletion</a></div>
+  </footer>
+</body>
+</html>
