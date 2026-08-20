@@ -1,0 +1,64 @@
+{
+  "schema": "dio.public_launch_registry.v2",
+  "as_of": "2026-08-20",
+  "launch_rule": "Receipts prove custody. Artifacts prove product. Available products require execution proof, a customer-visible artifact and human-held external release.",
+  "available": [
+    {
+      "id": "document-studio",
+      "name": "DIO Document Studio",
+      "family": "Documents",
+      "headline": "Edit, localise and prepare real documents you can actually open and review.",
+      "deliverables": ["clean edited document", "visible redline", "bilingual review copy", "PDF / accessible HTML", "QA and provenance pack"],
+      "proof": "Golden controlled document execution with openable DOCX, PDF, HTML and review ZIP outputs.",
+      "href": "../#contact",
+      "cta": "Request a Document Studio pilot"
+    },
+    {
+      "id": "sophia-tutor",
+      "name": "Sophia Tutor",
+      "family": "Research & Learning",
+      "headline": "Governed tutoring that teaches without quietly replacing learner authorship.",
+      "deliverables": ["grounded dialogic support", "authorship-pressure boundary", "Mandos / constitutional evidence", "human-reviewable tutoring output"],
+      "proof": "Selective professional full-pipeline pass through Vesper, governed integrity routing and constitutional release checks.",
+      "href": "sophia-tutor/",
+      "cta": "Explore Sophia Tutor"
+    },
+    {
+      "id": "site-studio",
+      "name": "DIO Site Studio",
+      "family": "Design Studio",
+      "headline": "A governed website redesign and build pilot with copy, structure, evidence and deployment control in one spine.",
+      "deliverables": ["positioning and site structure", "responsive HTML site package", "governed copy", "claim / evidence proof", "human-held deployment receipt"],
+      "proof": "Native multi-organ capability closure proved across seven declared DIO organs.",
+      "href": "../#contact",
+      "cta": "Request a Site Studio pilot"
+    },
+    {
+      "id": "professional-correspondence-studio",
+      "name": "DIO Professional Correspondence Studio",
+      "family": "Communication Studio",
+      "headline": "Turn evidence and intent into controlled professional correspondence without surrendering send authority.",
+      "deliverables": ["response brief", "reviewable correspondence draft", "semantic custody evidence", "release preparation receipt"],
+      "proof": "Native multi-organ capability closure proved with external send held for human authority.",
+      "href": "../#contact",
+      "cta": "Request a correspondence pilot"
+    }
+  ],
+  "next": [
+    {"name":"DIO Finance Readiness Studio / EntrepreneurProof","state":"fresh proof run + openable readiness artifact required"},
+    {"name":"DIO Article / Publication Studio","state":"fresh proof run + openable publication artifact required"}
+  ],
+  "held_families": [
+    "Legal Operations compositions including POPIA Readiness, Corporate Readiness and Contract Desk",
+    "Design compositions including Launch Studio and Report & Pitch Studio",
+    "Remaining canonical product classes pending the expanded customer-artifact revalidation gate"
+  ],
+  "truth": {
+    "available_count": 4,
+    "canonical_product_class_count": 53,
+    "canonical_53_is_complete_product_universe": false,
+    "market_validation_claimed": false,
+    "commercial_validation_claimed": false,
+    "autonomous_external_release": false
+  }
+}
