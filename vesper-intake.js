@@ -4,6 +4,7 @@ const $ = selector => document.querySelector(selector);
 const messages = $("#messages"), product = $("#product"), nameInput = $("#name"), emailInput = $("#email"), orgInput = $("#organisation");
 const messageInput = $("#message"), filesInput = $("#files"), fileCount = $("#fileCount"), sendButton = $("#send"), notice = $("#notice");
 const routeState = $("#routeState"), routeCandidates = $("#routeCandidates");
+const vesperPortraitWrap = $("#vesperPortraitWrap");
 const params = new URLSearchParams(location.search);
 const cfg = window.DIO_SITE_CONFIG || {};
 const apiOrigin = params.get("api") || cfg.vesperApiOrigin || (location.port === "8765" ? "http://127.0.0.1:8770" : location.origin);
@@ -12,6 +13,14 @@ let sessionReady = false;
 
 function endpoint(path){ return `${apiOrigin}${path}`; }
 function escapeText(value){ return String(value ?? ""); }
+function pulseVesper(duration = 1600){
+  if (!vesperPortraitWrap) return;
+  vesperPortraitWrap.classList.add("is-speaking");
+  clearTimeout(pulseVesper.timer);
+  pulseVesper.timer = setTimeout(() => {
+    vesperPortraitWrap.classList.remove("is-speaking");
+  }, duration);
+}
 function messageNode(row){
   const wrap = document.createElement("article");
   const customer = row.role === "customer";
@@ -97,6 +106,7 @@ async function send(){
       body:JSON.stringify({conversation_id:conversationId,message:text,attachments,incarnation_hint:product.value||null})
     });
     renderSession(body.session);
+    pulseVesper();
     messageInput.value = ""; filesInput.value = ""; fileCount.textContent = "No files selected";
     notice.textContent = body.session.handoff?.state === "READY_FOR_PRODUCT_EXECUTION"
       ? `Governed handoff ready for ${body.session.handoff.incarnation}. Product execution is still internally/human gated.`
