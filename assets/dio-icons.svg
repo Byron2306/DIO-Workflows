@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg"><defs>
+<symbol id="document" viewBox="0 0 48 48"><path d="M12 6h17l7 7v29H12zM29 6v8h7M18 22h12M18 28h12M18 34h8" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="shield" viewBox="0 0 48 48"><path d="M24 5l14 5v11c0 10-5.5 17-14 22C15.5 38 10 31 10 21V10zM17 24l5 5 10-11" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="research" viewBox="0 0 48 48"><circle cx="21" cy="20" r="11" fill="none" stroke="currentColor" stroke-width="2"/><path d="M29 28l10 10M17 20h8M21 16v8" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="performance" viewBox="0 0 48 48"><path d="M8 39h32M12 34V24h6v10M22 34V17h6v17M32 34V10h6v24M11 18l9-7 8 4 10-9" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="person" viewBox="0 0 48 48"><circle cx="24" cy="16" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 40c1-9 6-14 14-14s13 5 14 14z" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="network" viewBox="0 0 48 48"><circle cx="24" cy="24" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="10" cy="10" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="38" cy="10" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="10" cy="38" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="38" cy="38" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14 13l7 7M34 13l-7 7M14 35l7-7M34 35l-7-7" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="authority" viewBox="0 0 48 48"><path d="M8 39h32M12 18h24M16 18v17M24 18v17M32 18v17M9 18l15-10 15 10" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="route" viewBox="0 0 48 48"><circle cx="10" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="38" cy="36" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14 12h9c7 0 7 8 7 12s0 12 8 12M25 19l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+</defs></svg>
