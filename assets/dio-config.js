@@ -2,27 +2,19 @@ window.DIO_SITE_CONFIG = {
   intakeEndpoint: "https://dio-edge-gateway-live.dio-workflows.workers.dev/api/public/intake",
   fallbackEmail: "dio_workflows@outlook.com",
   portfolioUrl: "products/",
+  vesperUrl: "vesper-intake.html",
+  social: {
+    instagram: "https://www.instagram.com/dio_workflows/",
+    facebook: "https://www.facebook.com/profile.php?id=61593271043069",
+    linkedin: "https://www.linkedin.com/company/139354569/",
+    youtube: "https://www.youtube.com/channel/UCc916iuoPLseg05t5J5leaQ"
+  },
   products: {
     homs: "products/homs/",
     evidex: "products/evidex/",
     sophia: "products/sophia/",
-    vamp: "products/vamp/"
+    vamp: "products/vamp/",
+    programmeproof: "products/programmeproof/",
+    site_studio: "#intake"
   }
 };
-
-(() => {
-  const footer = document.querySelector('.footer-links');
-  if (!footer || footer.querySelector('[data-dio-legal-link]')) return;
-
-  [
-    ['Privacy', 'privacy/'],
-    ['Terms', 'terms/'],
-    ['Data deletion', 'data-deletion/']
-  ].forEach(([label, href]) => {
-    const link = document.createElement('a');
-    link.href = href;
-    link.textContent = label;
-    link.dataset.dioLegalLink = 'true';
-    footer.appendChild(link);
-  });
-})();
