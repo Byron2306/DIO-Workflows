@@ -32,7 +32,7 @@ jobs:
           const requiredApp=[
             'DISPLAY_BY_SLUG','function displayFor','function vesperHref',
             'editorial-hero','artifact-gallery','evidence-ledger','system-pathway','delivery-flow','pilot-scope','vesper-conversion',
-            'What you actually get','Evidence, not promises','What runs underneath',
+            'WHAT YOU ACTUALLY GET','EVIDENCE, NOT PROMISES','WHAT RUNS UNDERNEATH',
             'Bring this','DIO does this','You receive this','Human decides this',
             'Built before it was pitched.',
             'Controlled engineering evidence is shown as engineering evidence.',
