@@ -7,6 +7,8 @@ on:
       - "vesper-intake.html"
       - "vesper-intake.js"
       - "assets/vesper-avatar.svg"
+      - "assets/vesper-public.webp"
+      - "assets/launch-hero.webp"
       - "assets/launch-v2.css"
       - "assets/launch-v2.js"
       - "products/**"
@@ -47,6 +49,8 @@ jobs:
               "Website Launch Studio",
               'id="launchIntakeForm"',
               "data-vesper-link",
+              "assets/launch-hero.webp",
+              "assets/vesper-public.webp",
           )
           for token in required:
               if token not in root:
@@ -67,18 +71,21 @@ jobs:
           if "https://dio-edge-gateway-live.dio-workflows.workers.dev/api/public/intake" not in config:
               raise SystemExit("governed public intake endpoint drifted")
 
-          avatar = Path("assets/vesper-avatar.svg").read_text(encoding="utf-8")
-          if "PORTRAIT PENDING" not in avatar or "data:image" in avatar:
-              raise SystemExit("Vesper skeleton must use the neutral portrait placeholder")
+          portrait = Path("assets/vesper-public.webp")
+          if not portrait.exists() or portrait.stat().st_size < 20000:
+              raise SystemExit("canonical Vesper portrait missing or unexpectedly small")
 
+          chat_html = Path("vesper-intake.html").read_text(encoding="utf-8")
           chat = Path("vesper-intake.js").read_text(encoding="utf-8")
+          if "assets/vesper-public.webp" not in chat_html:
+              raise SystemExit("Vesper chat shell does not use canonical portrait")
           for endpoint in ("/api/vesper/chat/products", "/api/vesper/chat/session", "/api/vesper/chat/message"):
               if endpoint not in chat:
                   raise SystemExit(f"Vesper API contract missing: {endpoint}")
           if 'params.get("incarnation")' not in chat:
               raise SystemExit("Vesper product-context binding missing")
-          if "assets/vesper-avatar.svg" not in chat:
-              raise SystemExit("Vesper chat avatar hook missing")
+          if "assets/vesper-public.webp" not in chat:
+              raise SystemExit("Vesper canonical chat avatar hook missing")
 
           print("DIO_PUBLIC_LAUNCH_SKELETON_VERIFIED")
           PY
