@@ -136,7 +136,13 @@ jobs:
           grep -q "pricing_basis" assets/site.js
           grep -q "EXPLORE 38 PILOTS" assets/site.js
           grep -q -- "--paper:#fff" products/product.css
-          if grep -Eq 'href=["'"']mailto:' products/app.js; then echo "product class CTA bypasses governed intake"; exit 1; fi
+          python3 - <<'PY'
+          from pathlib import Path
+          app = Path("products/app.js").read_text(encoding="utf-8")
+          for token in ('href="mailto:', "href='mailto:"):
+              if token in app:
+                  raise SystemExit("product class CTA bypasses governed intake")
+          PY
       - name: Validate permanent page shell
         run: |
           node - <<'NODE'
