@@ -39,7 +39,7 @@ jobs:
           root = Path("index.html").read_text(encoding="utf-8")
           required = (
               "AI workflows are easy to build.",
-              "Exam &amp; Assessment Studio",
+              "Exam & Assessment Studio",
               "Performance Evidence Studio",
               "Research Integrity Studio",
               "Evidence Assurance",
