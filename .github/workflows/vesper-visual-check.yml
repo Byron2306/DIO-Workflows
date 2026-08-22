@@ -1,0 +1,48 @@
+name: Validate Vesper speaking state
+
+on:
+  pull_request:
+    paths:
+      - "vesper-intake.html"
+      - "vesper-intake.js"
+      - ".github/workflows/vesper-visual-check.yml"
+  workflow_dispatch:
+
+jobs:
+  vesper-speaking-state:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate speaking halo contract
+        run: |
+          node --check vesper-intake.js
+          python3 - <<'PY'
+          from pathlib import Path
+
+          html = Path("vesper-intake.html").read_text(encoding="utf-8")
+          js = Path("vesper-intake.js").read_text(encoding="utf-8")
+
+          required_html = (
+              'id="vesperPortraitWrap"',
+              'class="vesper-portrait-wrap"',
+              '.vesper-portrait-wrap.is-speaking::before',
+              '@keyframes vesperPulse',
+              'prefers-reduced-motion:reduce',
+          )
+          required_js = (
+              'function pulseVesper',
+              'classList.add("is-speaking")',
+              'classList.remove("is-speaking")',
+              'renderSession(body.session);',
+              'pulseVesper();',
+          )
+
+          for token in required_html:
+              if token not in html:
+                  raise SystemExit(f"Vesper speaking halo missing HTML/CSS contract: {token}")
+          for token in required_js:
+              if token not in js:
+                  raise SystemExit(f"Vesper speaking halo missing JS contract: {token}")
+
+          print("VESPER_SPEAKING_HALO_VERIFIED")
+          PY
