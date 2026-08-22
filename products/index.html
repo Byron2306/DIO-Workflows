@@ -3,88 +3,65 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Launch-ready DIO controlled pilots with execution proof, customer-visible artifacts and human-held authority.">
-  <meta name="theme-color" content="#081522">
-  <title>DIO | Available Now</title>
+  <meta name="description" content="Explore 38 controlled DIO commercial offer routes across evidence, assessment, research, obligations, AI trust and regulated operations.">
+  <meta name="theme-color" content="#f8faf8">
+  <title>DIO Workflows · Product Portfolio</title>
   <link rel="icon" href="../assets/dio-favicon.png">
   <link rel="stylesheet" href="product.css">
-  <style>
-    :root{--launch-green:#0f7a50;--launch-green-bg:#e9f8f0;--launch-amber:#8a5a00;--launch-line:#dce3ea;--launch-ink:#10202f;--launch-muted:#667587}
-    body{background:#f6f8fb;color:var(--launch-ink)}
-    .launch-hero{padding:76px 0 56px;background:radial-gradient(circle at 82% 18%,#174f82 0,#0d3152 35%,#071522 75%);color:#fff}
-    .launch-hero h1{font-size:clamp(3rem,7vw,6.6rem);line-height:.91;letter-spacing:-.055em;margin:.15em 0 .28em;max-width:960px}
-    .launch-hero .lead{font-size:1.15rem;line-height:1.65;color:#d6e1ec;max-width:820px}
-    .launch-proofbar{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.15);margin-top:34px}
-    .launch-proofbar div{padding:18px;background:rgba(7,21,34,.64)}
-    .launch-proofbar small{display:block;color:#9fb3c6;margin-bottom:5px}.launch-proofbar b{color:#fff}
-    .launch-law{margin:28px 0 36px;padding:22px 24px;border:1px solid #cfdae5;background:#fff;border-radius:12px;box-shadow:0 8px 30px rgba(10,30,50,.05)}
-    .launch-law strong{color:#0d3b66}
-    .launch-section{padding:38px 0}
-    .launch-head{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:20px}
-    .launch-head h2{font-size:clamp(2rem,4vw,3.3rem);margin:4px 0 0;letter-spacing:-.04em}.launch-head p{max-width:620px;color:var(--launch-muted);line-height:1.55;margin:0}
-    .launch-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-    .launch-card{background:#fff;border:1px solid var(--launch-line);padding:24px;border-radius:14px;box-shadow:0 7px 28px rgba(12,34,55,.045);display:flex;flex-direction:column}
-    .launch-card h3{font-size:1.55rem;margin:12px 0 8px}.launch-card .headline{color:var(--launch-muted);font-size:1.02rem;line-height:1.55}
-    .launch-badge{display:inline-block;align-self:flex-start;padding:6px 10px;border-radius:999px;background:var(--launch-green-bg);color:var(--launch-green);font-weight:800;font-size:.75rem;letter-spacing:.04em;text-transform:uppercase}
-    .launch-list{list-style:none;padding:0;margin:18px 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px 14px}.launch-list li{font-size:.9rem;color:#405164;position:relative;padding-left:16px}.launch-list li:before{content:'✓';position:absolute;left:0;color:var(--launch-green);font-weight:900}
-    .launch-proof{font-size:.86rem;line-height:1.5;color:#526477;border-top:1px solid var(--launch-line);padding-top:15px;margin-top:auto}.launch-card .cta{margin-top:16px;text-align:center;text-decoration:none}
-    .next-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.next-card{background:#fff7e4;border:1px solid #ecd7a5;padding:18px;border-radius:10px}.next-card b{display:block;margin-bottom:6px}.next-card span{color:#76561c}
-    .estate{background:#071522;color:#d8e3ed;padding:58px 0}.estate-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:38px;align-items:start}.estate h2{color:#fff;font-size:clamp(2rem,4vw,3.6rem);letter-spacing:-.04em;margin:5px 0 12px}.estate p{line-height:1.6}.estate-stat{border:1px solid #294057;padding:22px;background:#0c2033}.estate-stat strong{display:block;color:#f2c66d;font-size:3.2rem;line-height:1}.estate-stat span{color:#b7c8d8}
-    .truth-note{font-size:.86rem;color:#718194;line-height:1.55;margin-top:16px}
-    .load-error{padding:18px;background:#fff0f0;border:1px solid #e1a5a5;color:#7a2626;border-radius:10px}
-    @media(max-width:850px){.launch-proofbar,.launch-grid,.next-grid,.estate-grid{grid-template-columns:1fr}.launch-list{grid-template-columns:1fr}.launch-head{align-items:start;flex-direction:column}}
-  </style>
+  <script defer src="catalog.js"></script>
+  <script defer src="app.js"></script>
 </head>
-<body>
+<body data-view="portfolio">
   <nav class="nav wrap">
-    <a class="brand" href="../"><img src="../assets/dio-favicon.png" alt=""><span>DIO / AVAILABLE NOW</span></a>
-    <div class="navlinks"><a href="#available">AVAILABLE</a><a href="proven-routes.html">PROOF LIBRARY</a><a class="cta" href="../#contact">START A PILOT</a></div>
+    <a class="brand" href="../"><img src="../assets/dio-favicon.png" alt=""><span>DIO / PRODUCT PORTFOLIO</span></a>
+    <div class="navlinks"><a href="../">HOME</a><a href="proven-routes.html">PROOF</a><a class="cta" href="../vesper-intake.html?surface=product_portfolio">TALK TO VESPER</a></div>
   </nav>
 
-  <header class="launch-hero">
+  <header class="hero">
     <div class="wrap">
-      <p class="eyebrow">LAUNCH REGISTRY V2 / SHIP WHAT IS PROVEN</p>
-      <h1>Receipts prove custody. Artifacts prove product.</h1>
-      <p class="lead">DIO is bigger than the original 53 product classes. This page is intentionally smaller than the full organism: it lists only the controlled pilots we are prepared to offer now because the execution route is proved and the customer receives a real, reviewable artifact.</p>
-      <div class="launch-proofbar">
-        <div><small>Available now</small><b id="available-count">4 controlled pilots</b></div>
-        <div><small>Canonical evidence classes</small><b>53 registered</b></div>
-        <div><small>Launch rule</small><b>Execution + artifact</b></div>
-        <div><small>Authority</small><b>Human-held</b></div>
+      <p class="eyebrow">CUSTOMER OUTCOMES FIRST · DIO ROUTES UNDERNEATH</p>
+      <h1>38 controlled offer routes.<br>One governed architecture.</h1>
+      <p>DIO is not four products. This public portfolio exposes the 38 controlled commercial routes that already have permanent offer pages. Search by the problem you need solved, the people doing the work, or the market family. The customer-facing outcome leads; the underlying DIO route remains visible as provenance.</p>
+      <div class="proofbar">
+        <div><small>Public commercial routes</small><b>38 discoverable offers</b></div>
+        <div><small>Wider mapped estate</small><b>53+ product classes</b></div>
+        <div><small>Commercial posture</small><b>Bounded pilot first</b></div>
+        <div><small>Consequential authority</small><b>Human-held</b></div>
       </div>
     </div>
   </header>
 
-  <main class="wrap">
-    <div class="launch-law"><strong>No flat catalog fiction.</strong> A route, profile, receipt or attractive page is not enough to earn a launch badge. Available products need a named proof source, an openable customer artifact and a human-held release boundary. Market validation and guaranteed outcomes are not claimed.</div>
-
-    <section id="available" class="launch-section">
-      <div class="launch-head"><div><p class="eyebrow">AVAILABLE NOW</p><h2>Controlled pilots we can stand behind.</h2></div><p>Start with one bounded case. DIO prepares the governed output and evidence. You retain the consequential professional, publication and send decisions.</p></div>
-      <div id="available-grid" class="launch-grid"></div>
-    </section>
-
-    <section class="launch-section">
-      <div class="launch-head"><div><p class="eyebrow">NEXT TO LAUNCH</p><h2>Built. Held. One proof gate away.</h2></div><p>These products exist in the organism, but Launch Registry v2 refuses to promote them until the fresh run produces the actual customer-facing artifact.</p></div>
-      <div id="next-grid" class="next-grid"></div>
-    </section>
-  </main>
-
-  <section class="estate">
-    <div class="wrap estate-grid">
-      <div><p class="eyebrow">THE WIDER ORGANISM</p><h2>Four products on the shelf. Far more behind the glass.</h2><p>The 53-class Professional Evidence Portfolio remains part of DIO's proven capability estate, alongside newer Professional Intelligence Studios and Design / Legal / entrepreneurial compositions. We are not deleting that breadth. We are separating <b>proof estate</b> from <b>launch authority</b>.</p><p><a class="cta" href="proven-routes.html">Explore the controlled route proof library</a></p></div>
-      <div class="estate-stat"><strong>53+</strong><span>canonical classes plus newer Studios and commercial compositions. Each can earn promotion independently.</span></div>
+  <section class="local-band" aria-label="Portfolio truth boundary">
+    <div class="wrap">
+      <span>BUY THE OUTCOME<small>Plain-language problem and deliverable first.</small></span>
+      <span>SEE THE ROUTE<small>DIO system identity stays visible underneath.</small></span>
+      <span>START BOUNDED<small>One authorised case before larger rollout.</small></span>
+      <span>PROOF ≠ MARKET VALIDATION<small>Controlled execution is labelled honestly.</small></span>
     </div>
   </section>
 
-  <footer><div class="wrap">DIO Workflows · Controlled pilots · Human-held authority · <a href="../privacy.html">Privacy</a> · <a href="../#contact">Request a pilot</a><div class="truth-note">Execution proof is not guaranteed ROI, market validation, certification, legal advice, autonomous publication or professional authority.</div></div></footer>
+  <main class="wrap">
+    <div class="toolbar">
+      <input class="search" id="search" type="search" autocomplete="off" placeholder="Search a problem, audience, offer or DIO route…" aria-label="Search DIO products">
+      <div class="filters" id="filters" aria-label="Filter product families"></div>
+    </div>
+    <section class="grid" id="grid" aria-live="polite"></section>
+  </main>
 
-<script>
-fetch('launch-registry.json').then(r=>{if(!r.ok) throw new Error(`HTTP ${r.status}`);return r.json()}).then(data=>{
-  const available=data.available||[];
-  document.querySelector('#available-count').textContent=`${available.length} controlled pilots`;
-  document.querySelector('#available-grid').innerHTML=available.map(row=>`<article class="launch-card"><span class="launch-badge">Available controlled pilot</span><h3>${row.name}</h3><p class="headline">${row.headline}</p><ul class="launch-list">${(row.deliverables||[]).map(x=>`<li>${x}</li>`).join('')}</ul><div class="launch-proof"><b>Proof posture:</b> ${row.proof}</div><a class="cta" href="${row.href}">${row.cta}</a></article>`).join('');
-  document.querySelector('#next-grid').innerHTML=(data.next||[]).map(row=>`<article class="next-card"><b>${row.name}</b><span>${row.state}</span></article>`).join('');
-}).catch(err=>{document.querySelector('#available-grid').innerHTML=`<div class="load-error">Launch registry failed closed: ${err.message}. No product promotion is inferred.</div>`});
-</script>
+  <section class="truth">
+    <div class="wrap truthgrid">
+      <div>
+        <p class="eyebrow">ONE PORTFOLIO · DIFFERENT MATURITY</p>
+        <h2>Visibility is not the same thing as pretending every route has earned the same launch badge.</h2>
+      </div>
+      <div>
+        <p>The old public page collapsed the story to four launch-grade studios. That maturity signal still matters, but it is not the size of DIO. The broader controlled-route estate remains visible here so customers, partners and investors can understand what the architecture can already compose.</p>
+        <p>Each offer keeps its own authority boundary, evidence posture and bounded pilot scope. Customer acceptance, repeat demand, ROI and market validation remain things the public launch must earn.</p>
+        <p><a class="button ghost" href="proven-routes.html">EXPLORE THE PROOF LIBRARY</a> <a class="button" href="../vesper-intake.html?surface=product_portfolio">ASK VESPER WHAT FITS ↗</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer><div class="wrap">DIO Workflows · From intelligence to accountable work · <a href="../">Corporate front door</a> · <a href="../vesper-intake.html">Vesper</a></div></footer>
 </body>
 </html>

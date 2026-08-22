@@ -3,6 +3,12 @@ name: Validate proof-backed commercial storefront
 on:
   pull_request:
     paths:
+      - "index.html"
+      - "vesper-intake.html"
+      - "vesper-intake.js"
+      - "assets/vesper-avatar.svg"
+      - "assets/launch-v2.css"
+      - "assets/launch-v2.js"
       - "products/**"
       - "assets/dio-config.js"
       - "assets/site.js"
@@ -17,6 +23,65 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
+      - name: Validate investor launch skeleton
+        run: |
+          node --check assets/launch-v2.js
+          node --check vesper-intake.js
+          python3 - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          for filename in ("index.html", "vesper-intake.html"):
+              parser = HTMLParser()
+              parser.feed(Path(filename).read_text(encoding="utf-8"))
+              parser.close()
+
+          root = Path("index.html").read_text(encoding="utf-8")
+          required = (
+              "AI workflows are easy to build.",
+              "Exam & Assessment Studio",
+              "Performance Evidence Studio",
+              "Research Integrity Studio",
+              "Evidence Assurance",
+              "Programme Assurance",
+              "Website Launch Studio",
+              'id="launchIntakeForm"',
+              "data-vesper-link",
+          )
+          for token in required:
+              if token not in root:
+                  raise SystemExit(f"launch skeleton missing: {token}")
+
+          config = Path("assets/dio-config.js").read_text(encoding="utf-8")
+          social_urls = (
+              "https://www.instagram.com/dio_workflows/",
+              "https://www.facebook.com/profile.php?id=61593271043069",
+              "https://www.linkedin.com/company/139354569/",
+              "https://www.youtube.com/channel/UCc916iuoPLseg05t5J5leaQ",
+          )
+          for url in social_urls:
+              if url not in config:
+                  raise SystemExit(f"social route missing: {url}")
+          if "/admin/" in config:
+              raise SystemExit("public LinkedIn route must not point to admin dashboard")
+          if "https://dio-edge-gateway-live.dio-workflows.workers.dev/api/public/intake" not in config:
+              raise SystemExit("governed public intake endpoint drifted")
+
+          avatar = Path("assets/vesper-avatar.svg").read_text(encoding="utf-8")
+          if "PORTRAIT PENDING" not in avatar or "data:image" in avatar:
+              raise SystemExit("Vesper skeleton must use the neutral portrait placeholder")
+
+          chat = Path("vesper-intake.js").read_text(encoding="utf-8")
+          for endpoint in ("/api/vesper/chat/products", "/api/vesper/chat/session", "/api/vesper/chat/message"):
+              if endpoint not in chat:
+                  raise SystemExit(f"Vesper API contract missing: {endpoint}")
+          if 'params.get("incarnation")' not in chat:
+              raise SystemExit("Vesper product-context binding missing")
+          if "assets/vesper-avatar.svg" not in chat:
+              raise SystemExit("Vesper chat avatar hook missing")
+
+          print("DIO_PUBLIC_LAUNCH_SKELETON_VERIFIED")
+          PY
       - name: Validate 38-offer commercial catalog
         run: |
           node - <<'NODE'
@@ -55,8 +120,8 @@ jobs:
           grep -q "'Regulated Operations':14900" products/app.js
           grep -q "GRC · audit readiness · evidence automation" products/app.js
           grep -q "AI governance · model risk · agent authority · auditability" products/app.js
-          grep -q "Simple South African commercial entry point" products/index.html
-          grep -q "From R 4,900 ZAR" products/index.html
+          grep -q "38 controlled offer routes" products/index.html
+          grep -q "CUSTOMER OUTCOMES FIRST" products/index.html
           grep -q "intakeEndpoint: \"https://dio-edge-gateway-live.dio-workflows.workers.dev/api/public/intake\"" assets/dio-config.js
           grep -q "product_class:requestedClass" assets/site.js
           grep -q "launch_price_zar" assets/site.js

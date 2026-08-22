@@ -1,0 +1,21 @@
+{
+  "schema": "dio.public_offer_registry.v1",
+  "as_of": "2026-08-22",
+  "corporate_surface": {
+    "surface_id": "dio_corporate",
+    "public_name": "DIO Workflows",
+    "audience": ["investors", "strategic partners", "enterprise technology leaders"],
+    "primary_goal": "Establish DIO as a credible reusable AI product operating architecture and route serious interest into the portfolio, Vesper or governed intake.",
+    "primary_cta": "Explore the portfolio",
+    "secondary_cta": "Talk to Vesper",
+    "page_slug": "/"
+  },
+  "launch_offers": [
+    {"commercial_name":"Exam & Assessment Studio","system_name":"HOMS","audience":"educators, schools and assessment teams","customer_promise":"Create curriculum-aware assessment materials with educator judgement preserved.","page_slug":"/products/homs/"},
+    {"commercial_name":"Performance Evidence Studio","system_name":"VAMP","audience":"professionals, teams and performance reviewers","customer_promise":"Turn objectives and supporting evidence into a structured review-ready evidence picture without automating the final judgement.","page_slug":"/products/vamp/"},
+    {"commercial_name":"Research Integrity Studio","system_name":"Sophia","audience":"researchers, scholars and research teams","customer_promise":"Strengthen claims, source fit and research integrity without replacing authorship.","page_slug":"/products/sophia/"},
+    {"commercial_name":"Evidence Assurance","system_name":"Evidex","audience":"evidence-heavy professional, assurance and review teams","customer_promise":"Structure requirements, sources, evidence gaps and review packs into a traceable workflow.","page_slug":"/products/evidex/"},
+    {"commercial_name":"Programme Assurance","system_name":"VAMP + META","audience":"programme and project organisations","customer_promise":"Bring milestones, benefits, obligations and programme evidence into a governed review surface for authorised human decision-makers.","page_slug":"/products/programmeproof/"},
+    {"commercial_name":"Website Launch Studio","system_name":"Site Studio + Market Command","audience":"small businesses, consultants and product teams","customer_promise":"Turn positioning, audience truth and campaign intent into a customer-facing launch website.","page_slug":"/#intake"}
+  ]
+}

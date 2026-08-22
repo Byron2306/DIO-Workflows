@@ -3,271 +3,205 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="DIO is an evidence-governed operating intelligence for professional workflows across assessment, evidence review, research support and performance evidence.">
+  <meta name="description" content="DIO Workflows is an operating architecture for turning reusable intelligence, workflows and evidence systems into governed AI products.">
   <meta name="theme-color" content="#050607">
   <meta name="color-scheme" content="dark">
-  <title>DIO Workflows</title>
+  <title>DIO Workflows · From intelligence to accountable work</title>
   <link rel="icon" href="assets/dio-favicon.png">
   <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/launch-v2.css">
   <script defer src="assets/dio-config.js"></script>
-  <script defer src="assets/site.js"></script>
+  <script defer src="assets/launch-v2.js"></script>
 </head>
-<body>
+<body class="launch-v2">
   <canvas id="field" class="field" aria-hidden="true"></canvas>
   <div class="noise" aria-hidden="true"></div>
-  <div class="cursor-orb" id="cursorOrb" aria-hidden="true"></div>
 
-  <nav class="nav" aria-label="Primary navigation">
-    <a class="brand" href="#top" aria-label="DIO home">
+  <nav class="nav launch-nav" aria-label="Primary navigation">
+    <a class="brand" href="#top" aria-label="DIO Workflows home">
       <img src="assets/dio-favicon.png" alt="">
-      <span><strong>DIO Workflows</strong><small>CONTROL / PROOF / ROUTE</small></span>
+      <span><strong>DIO Workflows</strong><small>FROM INTELLIGENCE TO ACCOUNTABLE WORK</small></span>
     </a>
     <button class="menu" id="menuButton" type="button" aria-expanded="false" aria-controls="navLinks">MENU</button>
     <div class="nav-links" id="navLinks" data-open="false">
-      <a href="#doctrine">Doctrine</a>
       <a href="#products">Products</a>
-      <a href="#architecture">Architecture</a>
-      <a href="#control">Control</a>
+      <a href="#technology">Technology</a>
       <a href="#proof">Proof</a>
-      <a class="nav-cta" href="#contact">ENTER DIO</a>
+      <a href="#about">About</a>
+      <a class="nav-cta" data-vesper-link href="vesper-intake.html">Talk to Vesper</a>
     </div>
   </nav>
 
   <main id="top">
-    <header class="hero section-dark">
-      <div class="hero-grid page">
-        <div class="hero-copy reveal is-visible">
-          <p class="eyebrow"><span class="live-dot"></span> DIO WORKFLOWS</p>
-          <h1><span>WE GOT TIRED OF ASKING AI TO GUESS.</span><em>SO WE BUILT A WORLD IT COULD KNOW.</em></h1>
-          <p class="hero-lede">DIO is an evidence-governed operating intelligence for professional work. It observes state, binds evidence, applies domain rules, routes bounded action, preserves human authority and records what actually happened.</p>
+    <header class="investor-hero">
+      <div class="page investor-hero-grid">
+        <div class="investor-copy reveal is-visible">
+          <p class="eyebrow"><span class="live-dot"></span> DIO WORKFLOWS / 2026</p>
+          <h1>AI workflows are easy to build.<br><em>Trustworthy AI products are not.</em></h1>
+          <p class="hero-lede">DIO is an operating architecture for turning reusable intelligence, workflows and evidence systems into governed AI products — with evidence, authority and outcomes kept explicit.</p>
           <div class="hero-actions">
-            <a class="btn primary" href="#architecture">ENTER THE SYSTEM <span>↘</span></a>
-            <a class="btn ghost" href="#control">INSPECT CONTROL DECK</a>
+            <a class="btn primary" href="#products">EXPLORE THE PORTFOLIO <span>↘</span></a>
+            <a class="btn ghost" data-vesper-link href="vesper-intake.html">ASK VESPER</a>
           </div>
-          <div class="hero-badges" aria-label="DIO operating principles">
-            <span>HUMAN AUTHORITY</span><span>EVENT-TRACEABLE</span><span>EVIDENCE-BOUND</span><span>FAIL-CLOSED</span>
+          <div class="hero-badges" aria-label="DIO principles">
+            <span>REUSABLE SYSTEMS</span><span>HUMAN AUTHORITY</span><span>EVIDENCE-BOUND</span><span>MARKET-LEARNING READY</span>
           </div>
         </div>
 
-        <div class="sigil-stage reveal is-visible" aria-label="DIO sigil">
-          <div class="sigil-halo halo-a"></div>
-          <div class="sigil-halo halo-b"></div>
-          <div class="sigil-halo halo-c"></div>
-          <img class="sigil" src="assets/dio-sigil.webp" alt="DIO sigil: a radiant eye within a gold and silver geometric seal">
-          <div class="sigil-callout callout-a"><b>SEE STATE</b><span>world → evidence</span></div>
-          <div class="sigil-callout callout-b"><b>PRESERVE AUTHORITY</b><span>machine prepares · human decides</span></div>
-          <div class="sigil-callout callout-c"><b>LEAVE RECEIPTS</b><span>event → lineage → outcome</span></div>
+        <div class="investor-stage reveal is-visible" aria-label="DIO platform overview">
+          <div class="stage-orbit orbit-one"></div>
+          <div class="stage-orbit orbit-two"></div>
+          <img class="stage-sigil" src="assets/dio-sigil.webp" alt="DIO geometric sigil">
+          <div class="stage-card stage-a"><small>PLATFORM</small><b>ONE ARCHITECTURE</b><span>shared intelligence + governance</span></div>
+          <div class="stage-card stage-b"><small>PORTFOLIO</small><b>MULTIPLE PRODUCTS</b><span>commercial incarnations</span></div>
+          <div class="stage-card stage-c"><small>MARKET</small><b>MULTIPLE DOMAINS</b><span>assessment · evidence · research · ops</span></div>
         </div>
       </div>
-      <a class="scroll-cue" href="#doctrine"><span>SCROLL TO DESCEND</span><i></i></a>
+      <div class="page hero-proof-strip reveal">
+        <div><strong>53</strong><span>mapped product classes</span></div>
+        <div><strong>159</strong><span>controlled gauntlet journeys</span></div>
+        <div><strong>3×</strong><span>normal · messy · adversarial variants</span></div>
+        <div><strong>0</strong><span>claim that this equals market validation</span></div>
+      </div>
     </header>
 
-    <section id="doctrine" class="manifesto section-ink">
-      <div class="page manifesto-grid">
-        <div class="manifesto-number reveal">01</div>
-        <div class="manifesto-copy reveal">
-          <p class="eyebrow">THE DIO DOCTRINE</p>
-          <h2>Intelligence should not keep rediscovering what has already been settled.</h2>
-          <p>The original DIO idea was simple and dangerous: use inference where ambiguity exists, verify the result, crystallise the settled state, then stop paying the uncertainty tax. The larger DIO extends that logic across professional work itself.</p>
-          <div class="doctrine-quote">SEE CLEARLY. BIND EVIDENCE. PRESERVE AUTHORITY. ACT ONLY ON WHAT HAS BEEN EARNED.</div>
+    <section id="products" class="launch-products section-obsidian">
+      <div class="page launch-section-head reveal">
+        <div>
+          <p class="eyebrow">ONE ARCHITECTURE · MULTIPLE PRODUCTS · MULTIPLE MARKETS</p>
+          <h2>The customer buys the outcome.<br><em>DIO runs backstage.</em></h2>
         </div>
-      </div>
-      <div class="page doctrine-grid">
-        <article class="doctrine-card reveal"><span>01</span><b>SEE STATE</b><p>Observe the world, the request, the evidence and the commercial condition before acting.</p></article>
-        <article class="doctrine-card reveal"><span>02</span><b>BIND EVIDENCE</b><p>Outputs remain connected to sources, rules, receipts and the state that justified them.</p></article>
-        <article class="doctrine-card reveal"><span>03</span><b>CRYSTALLISE</b><p>Once ambiguity is resolved and validated, reuse the settled representation instead of re-guessing it.</p></article>
-        <article class="doctrine-card reveal"><span>04</span><b>PRESERVE AUTHORITY</b><p>Machines prepare. Humans retain consequential professional, academic, HR and release authority.</p></article>
-        <article class="doctrine-card reveal"><span>05</span><b>PROVE THE OUTCOME</b><p>Events, payment, delivery and campaign outcomes close the loop with observable evidence.</p></article>
-      </div>
-    </section>
-
-    <section id="products" class="products section-obsidian">
-      <div class="page section-head reveal">
-        <div><p class="eyebrow">FOUR DOORS / ONE OPERATING SYSTEM</p><h2>The customer buys relief.<br>DIO runs backstage.</h2></div>
-        <p>Each product solves a different professional problem. Underneath, the same operating spine handles intake, evidence, rules, review, commerce, delivery and outcome learning.</p>
+        <p>DIO lore is the machinery. Commercial products lead with the problem they solve, while the underlying systems stay visible as provenance and platform identity.</p>
       </div>
 
-      <div class="page product-stack">
-        <article class="portal homs reveal">
-          <div class="portal-index">01</div>
-          <div class="portal-copy">
-            <span class="portal-label">HOMS / ASSESSMENT INTELLIGENCE</span>
-            <h3>Curriculum in.<br>Moderated assessment out.</h3>
-            <p>CAPS-aware assessment architecture, beautiful papers, memoranda, rubrics and structured marking support with educator authority preserved at the final boundary.</p>
-            <ul><li>Subject and phase-aware design</li><li>Exam / task + memorandum + rubric</li><li>Review and moderation gates</li></ul>
-            <div class="portal-actions"><a class="btn portal-btn" data-product-link="homs" href="products/homs/">OPEN HOMS ↗</a><a href="#contact" data-select-product="homs">REQUEST PILOT</a></div>
-          </div>
-          <div class="portal-visual"><img src="products/homs/assets/homs-assessment-hero.png" alt="HOMS assessment workflow visual"></div>
+      <div class="page launch-product-grid">
+        <article class="launch-product-card reveal">
+          <div class="product-kicker">EDUCATION & ASSESSMENT</div>
+          <h3>Exam & Assessment Studio</h3>
+          <p>Create curriculum-aware exams, memoranda, rubrics and review-ready assessment packs while keeping educator judgement with the educator.</p>
+          <div class="powered">Powered by <strong>HOMS</strong></div>
+          <div class="card-actions"><a href="products/homs/">Explore product</a><a data-vesper-product="homs" href="vesper-intake.html?incarnation=homs">Ask Vesper</a></div>
         </article>
-
-        <article class="portal evidex reveal">
-          <div class="portal-index">02</div>
-          <div class="portal-copy">
-            <span class="portal-label">EVIDEX / EVIDENCE INTELLIGENCE</span>
-            <h3>Evidence in.<br>Review-ready pack out.</h3>
-            <p>Turn scattered programme, grant, audit and compliance evidence into an indexed, source-mapped review trail with visible provenance and a human release gate.</p>
-            <ul><li>Claims ↔ evidence ↔ source mapping</li><li>Provenance and evidence receipts</li><li>Controlled delivery and payment state</li></ul>
-            <div class="portal-actions"><a class="btn portal-btn" data-product-link="evidex" href="products/evidex/">OPEN EVIDEX ↗</a><a href="#contact" data-select-product="evidex">REQUEST PILOT</a></div>
-          </div>
-          <div class="portal-visual"><img src="products/evidex/assets/evidex-review-hero.png" alt="Evidex evidence review visual"></div>
+        <article class="launch-product-card reveal">
+          <div class="product-kicker">PERFORMANCE & ACHIEVEMENT</div>
+          <h3>Performance Evidence Studio</h3>
+          <p>Turn objectives, activity and supporting evidence into a review-ready performance evidence view without manufacturing a rating or employment decision.</p>
+          <div class="powered">Powered by <strong>VAMP</strong></div>
+          <div class="card-actions"><a href="products/vamp/">Explore product</a><a data-vesper-product="vamp" href="vesper-intake.html?incarnation=vamp">Ask Vesper</a></div>
         </article>
-
-        <article class="portal sophia reveal">
-          <div class="portal-index">03</div>
-          <div class="portal-copy">
-            <span class="portal-label">SOPHIA / SCHOLARLY & LEARNING INTELLIGENCE</span>
-            <h3>Strengthen the work.<br>Never steal the authorship.</h3>
-            <p>Sophia supports technical source finding, source-fit checking, citation and formatting diagnostics, literature-review critique and a new guided-learning lane for original supplementary resources.</p>
-            <ul><li>Source, citation and literature-review diagnostics</li><li>Authorship-preserving research support</li><li>Guided learning + HOMS companion resources</li></ul>
-            <div class="portal-actions"><a class="btn portal-btn" data-product-link="sophia" href="products/sophia/">OPEN SOPHIA ↗</a><a href="#contact" data-select-product="sophia">REQUEST PILOT</a></div>
-          </div>
-          <div class="portal-visual"><img src="products/sophia/assets/sophia-review-hero.png" alt="Sophia academic review visual"></div>
+        <article class="launch-product-card reveal">
+          <div class="product-kicker">RESEARCH & KNOWLEDGE</div>
+          <h3>Research Integrity Studio</h3>
+          <p>Strengthen claims, source fit, citation quality and research reasoning without quietly replacing the scholar who owns the work.</p>
+          <div class="powered">Powered by <strong>Sophia</strong></div>
+          <div class="card-actions"><a href="products/sophia/">Explore product</a><a data-vesper-product="sophia" href="vesper-intake.html?incarnation=sophia">Ask Vesper</a></div>
         </article>
-
-        <article class="portal vamp reveal">
-          <div class="portal-index">04</div>
-          <div class="portal-copy">
-            <span class="portal-label">VAMP / PERFORMANCE EVIDENCE INTELLIGENCE</span>
-            <h3>Stop reconstructing a year<br>the week before review.</h3>
-            <p>VAMP prepares evidence snapshots from task agreements and proof artifacts. It maps accepted evidence to objectives, exposes gaps and leaves the performance judgment with the authorised human reviewer.</p>
-            <ul><li>Institution-profile-driven objectives</li><li>Read-only evidence preparation</li><li>No automated employee rating or employment action</li></ul>
-            <div class="portal-actions"><a class="btn portal-btn" data-product-link="vamp" href="products/vamp/">OPEN VAMP ↗</a><a href="#contact" data-select-product="vamp">REQUEST PILOT</a></div>
-          </div>
-          <div class="portal-visual vamp-screen" aria-label="VAMP performance evidence console">
-            <div class="vamp-ui"><header><span>VAMP / PERFORMANCE EVIDENCE</span><i>HUMAN REVIEW ONLINE</i></header><div class="vamp-metrics"><div><small>OBJECTIVES</small><b>61</b></div><div><small>EVIDENCE</small><b>116</b></div><div><small>GAPS</small><b>VISIBLE</b></div></div><div class="vamp-lines"><span style="--w:88%"></span><span style="--w:73%"></span><span style="--w:94%"></span><span style="--w:62%"></span><span style="--w:81%"></span></div><footer>snapshot_ready / operator review required</footer></div>
-          </div>
+        <article class="launch-product-card reveal">
+          <div class="product-kicker">EVIDENCE & ASSURANCE</div>
+          <h3>Evidence Assurance</h3>
+          <p>Convert scattered claims, requirements and evidence into a source-mapped review pack with visible gaps, provenance and human-held release.</p>
+          <div class="powered">Powered by <strong>Evidex</strong></div>
+          <div class="card-actions"><a href="products/evidex/">Explore product</a><a data-vesper-product="evidex" href="vesper-intake.html?incarnation=evidex">Ask Vesper</a></div>
+        </article>
+        <article class="launch-product-card reveal">
+          <div class="product-kicker">PROGRAMME OPERATIONS</div>
+          <h3>Programme Assurance</h3>
+          <p>Structure programme objectives, milestones, benefits and supporting evidence into a governed assurance view for authorised human review.</p>
+          <div class="powered">Powered by <strong>VAMP + META</strong></div>
+          <div class="card-actions"><a href="products/programmeproof/">Explore product</a><a data-vesper-product="programmeproof" href="vesper-intake.html?incarnation=programmeproof">Ask Vesper</a></div>
+        </article>
+        <article class="launch-product-card reveal">
+          <div class="product-kicker">PRESENCE & MARKET</div>
+          <h3>Website Launch Studio</h3>
+          <p>Turn positioning, audience truth and campaign intent into a customer-facing website package designed to pitch the right problem to the right market.</p>
+          <div class="powered">Powered by <strong>Site Studio + Market Command</strong></div>
+          <div class="card-actions"><a href="#intake" data-select-interest="site_studio">Start an enquiry</a><a data-vesper-product="site-studio" href="vesper-intake.html?incarnation=site-studio">Ask Vesper</a></div>
         </article>
       </div>
+
+      <div class="page portfolio-cta reveal">
+        <div><small>THE BROADER PRODUCT UNIVERSE</small><strong>Selected products are becoming public first. The wider mapped portfolio remains visible without pretending every class has earned the same commercial maturity.</strong></div>
+        <a class="btn ghost" href="products/">VIEW THE FULL PORTFOLIO</a>
+      </div>
     </section>
 
-    <section id="architecture" class="architecture section-black">
-      <div class="page arch-grid">
-        <div class="arch-copy reveal">
-          <p class="eyebrow">THE BIGGER BEAST</p>
-          <h2>BEAST was the fortress.<br>DIO is the city that grew around it.</h2>
-          <p>The substrate protects execution. DIO turns the surrounding world into governed state, routes the right engine, asks humans only where their authority matters, then watches what happened next.</p>
-          <div class="arch-legend"><span class="green"></span> settled / allowed <span class="amber"></span> review / authority <span class="red"></span> blocked / refused</div>
+    <section id="technology" class="platform-thesis section-black">
+      <div class="page thesis-grid">
+        <div class="thesis-copy reveal">
+          <p class="eyebrow">THE INVESTMENT THESIS</p>
+          <h2>Not a collection of AI apps.<br><em>A system for creating them.</em></h2>
+          <p>The interesting asset is not any single interface. DIO composes reusable intelligence, evidence, governance, document, market and presence systems into different products while preserving product-specific boundaries.</p>
+          <p class="thesis-note">That changes the economics of expansion: new products can inherit proven capabilities instead of rebuilding their entire operating spine from scratch.</p>
         </div>
-        <div class="system-diagram reveal" id="systemDiagram" aria-label="DIO operating architecture">
-          <div class="sys-node world"><b>WORLD</b><small>market · mail · files · requests</small></div>
-          <div class="sys-line l1"></div>
-          <div class="sys-node sensor"><b>DIO SENSORIUM</b><small>observe · classify · bind</small></div>
-          <div class="sys-line l2"></div>
-          <div class="sys-node core"><b>EVENT / AUTHORITY SPINE</b><small>state · rules · provenance</small></div>
-          <div class="sys-line branch b1"></div><div class="sys-line branch b2"></div><div class="sys-line branch b3"></div><div class="sys-line branch b4"></div>
-          <div class="sys-node engine e1">HOMS<small>assessment</small></div>
-          <div class="sys-node engine e2">EVIDEX<small>evidence</small></div>
-          <div class="sys-node engine e3">SOPHIA<small>research / learning</small></div>
-          <div class="sys-node engine e4">VAMP<small>performance</small></div>
-          <div class="sys-line l3"></div>
-          <div class="sys-node human"><b>HUMAN AUTHORITY</b><small>approve · refuse · revise</small></div>
-          <div class="sys-line l4"></div>
-          <div class="sys-node outcome"><b>OUTCOME</b><small>delivery · payment · response · learning</small></div>
-        </div>
-      </div>
-
-      <div class="page event-stage reveal">
-        <div class="event-console">
-          <div class="console-top"><span>DIO EVENT SPINE</span><span>SIMULATED PUBLIC DEMO · NOT LIVE CUSTOMER TELEMETRY</span></div>
-          <div id="eventFeed" class="event-feed" aria-live="polite"></div>
-        </div>
-        <div class="event-doctrine">
-          <p class="eyebrow">WHY EVENTS MATTER</p>
-          <h3>The dashboard does not invent the story.</h3>
-          <p>Operational state is derived from receipts such as <code>mail.received</code>, <code>payment.succeeded</code>, <code>job.review_required</code> and <code>delivery.prepared</code>. The point is not prettier telemetry. The point is a causal trail.</p>
+        <div class="platform-map reveal" aria-label="DIO reusable systems map">
+          <div class="map-core">DIO<span>ORCHESTRATION</span></div>
+          <div class="map-ring">
+            <div><b>HOMS</b><small>assessment</small></div><div><b>SOPHIA</b><small>research integrity</small></div><div><b>VAMP</b><small>achievement evidence</small></div><div><b>EVIDEX</b><small>evidence assurance</small></div><div><b>VESPER</b><small>presence & intake</small></div><div><b>META</b><small>governance primitives</small></div><div><b>SERAPH</b><small>challenge & assurance</small></div><div><b>ARDA</b><small>execution identity</small></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="control" class="control section-paper">
-      <div class="page section-head dark-text reveal">
-        <div><p class="eyebrow dark">HUMAN SOVEREIGNTY SURFACE</p><h2>The Control Deck asks one question:<br><em>what actually needs you?</em></h2></div>
-        <p>DIO should minimise the amount of reality that requires human attention, without confiscating human authority. Machine-resolvable work moves. Ambiguity, risk and consequential judgment rise to the surface.</p>
+    <section id="proof" class="launch-proof section-ink">
+      <div class="page launch-section-head reveal">
+        <div><p class="eyebrow">BUILT BEFORE IT WAS PITCHED</p><h2>Engineering evidence first.<br><em>Market truth next.</em></h2></div>
+        <p>DIO has already been exercised through controlled product journeys, custody checks and customer-surface proofs. Those receipts are engineering evidence — not a substitute for independent customers, repeat demand or revenue validation.</p>
       </div>
-      <div class="page control-grid">
-        <div class="deck-frame reveal">
-          <div class="deck-bar"><span></span><span></span><span></span><b>LOCAL OPERATOR SURFACE / CONTROLLED STATE</b></div>
-          <img src="assets/control-deck.webp" alt="DIO Control Deck showing leads, orders, revenue, attention queue, live activity and product operations">
-        </div>
-        <aside class="deck-aside reveal">
-          <div class="deck-stat"><span>01</span><div><b>NEEDS YOU</b><p>Human review, mail approval, payment disputes and exceptional cases become an explicit queue.</p></div></div>
-          <div class="deck-stat"><span>02</span><div><b>PANIC SWITCHES</b><p>Outbound mail, automation and fulfilment release remain separate operator controls.</p></div></div>
-          <div class="deck-stat"><span>03</span><div><b>NO VANITY TELEMETRY</b><p>Leads, paid orders, revenue, active jobs, failures and actions waiting are the numbers that matter.</p></div></div>
-          <div class="control-switches"><div><small>OUTBOUND MAIL</small><b>APPROVED ONLY</b></div><div><small>AUTOMATION</small><b>CONTROLLED</b></div><div><small>FULFILMENT</small><b>REVIEW GATED</b></div></div>
-        </aside>
+      <div class="page proof-story-grid">
+        <article class="proof-story reveal"><span>01</span><h3>Controlled systems exist</h3><p>Assessment, research, evidence, performance, programme and production workflows have working controlled paths with explicit human authority boundaries.</p></article>
+        <article class="proof-story reveal"><span>02</span><h3>Products share machinery</h3><p>Vesper, evidence, governance, formatting, market and execution capabilities can be reused across multiple incarnations rather than recreated as isolated apps.</p></article>
+        <article class="proof-story reveal"><span>03</span><h3>The empirical gate is now commercial</h3><p>The next evidence that matters is external: real enquiries, real buyers, real delivery, repeat usage and measured economics.</p></article>
       </div>
+      <div class="page proof-callout reveal"><strong>No mythology without receipts.</strong><span>Controlled proof is labelled as controlled proof. Human authority remains human. Market validation must be earned in the market.</span></div>
     </section>
 
-    <section class="commerce section-ink">
-      <div class="page commerce-head reveal">
-        <p class="eyebrow">THE COMMERCIAL NERVOUS SYSTEM</p>
-        <h2>Every rand should have ancestry.</h2>
-        <p>Campaign, conversation, order, payment, job, review and delivery can become one traceable commercial lineage instead of seven unrelated dashboards.</p>
-      </div>
-      <div class="page commerce-loop reveal" aria-label="DIO commercial loop">
-        <div><small>01</small><b>MARKET</b><span>NicheFoundry</span></div><i>→</i>
-        <div><small>02</small><b>LEAD</b><span>site / Outlook</span></div><i>→</i>
-        <div><small>03</small><b>ORDER</b><span>commerce core</span></div><i>→</i>
-        <div><small>04</small><b>PAYMENT</b><span>verified event</span></div><i>→</i>
-        <div><small>05</small><b>WORK</b><span>product engine</span></div><i>→</i>
-        <div><small>06</small><b>REVIEW</b><span>human authority</span></div><i>→</i>
-        <div><small>07</small><b>DELIVERY</b><span>receipt</span></div><i>→</i>
-        <div><small>08</small><b>LEARN</b><span>promote / modify / kill</span></div>
-      </div>
-      <div class="page lineage reveal"><code>campaign_id</code><span>↓</span><code>lead_id</code><span>↓</span><code>conversation_id</code><span>↓</span><code>order_id</code><span>↓</span><code>payment_id</code><span>↓</span><code>job_id</code><span>↓</span><code>delivery_id</code></div>
-    </section>
-
-    <section id="proof" class="proof section-obsidian">
-      <div class="page section-head reveal">
-        <div><p class="eyebrow">NO MYTHOLOGY WITHOUT RECEIPTS</p><h2>What exists now.<br>What still has to be earned.</h2></div>
-        <p>DIO can celebrate the milestone without pretending the market has already crowned it. The site distinguishes implemented control-plane mechanics from controlled product proofs and the remaining external validation gate.</p>
-      </div>
-      <div class="page proof-grid">
-        <article class="proof-card green reveal"><span>IMPLEMENTED</span><h3>Event + control spine</h3><p>Control Deck, event-derived operational state, product routing, attention surfaces and policy controls exist in the current DIO build.</p></article>
-        <article class="proof-card green reveal"><span>IMPLEMENTED</span><h3>Mail + commerce primitives</h3><p>Structured mail intents, Microsoft Graph ingress/drafts, payment events and controlled release mechanics are present, with outbound authority being hardened.</p></article>
-        <article class="proof-card amber reveal"><span>CONTROLLED PROOF</span><h3>HOMS · Evidex · Sophia · VAMP</h3><p>The product lanes have controlled examples, explicit review boundaries and adapters. They are not represented here as unattended production systems.</p></article>
-        <article class="proof-card white reveal"><span>THE EMPIRICAL GATE</span><h3>Independent customers</h3><p>The next milestone is beautifully boring and brutally important: real organisations, real payment, real delivery, repeat usage and measured economics.</p></article>
-      </div>
-    </section>
-
-    <section class="origin section-black">
-      <div class="page origin-grid">
-        <div class="origin-title reveal"><p class="eyebrow">THE ORIGIN STORY</p><h2>From crystal intelligence<br>to governed reality.</h2></div>
-        <div class="timeline reveal">
-          <article><span>FIRST REVELATION</span><h3>Stop re-inferring settled knowledge.</h3><p>Use inference to resolve ambiguity. Verify it. Crystallise the trustworthy representation. Reuse it deterministically.</p></article>
-          <article><span>SECOND REVELATION</span><h3>Apply the same discipline to work itself.</h3><p>Evidence, authority, communication, payment, delivery and market outcomes can all become governed state rather than disconnected automation.</p></article>
-          <article class="timeline-now"><span>NOW</span><h3>The Bigger Beast has a control plane.</h3><p>Not one giant model. Not one giant prompt. A stateful, evidence-governed system of specialised engines and explicit human authority.</p></article>
+    <section class="market-stage section-obsidian">
+      <div class="page market-stage-grid">
+        <div class="market-stage-copy reveal"><p class="eyebrow">FROM ARCHITECTURE TO MARKET</p><h2>DIO is entering the third stage now.</h2><p>The machinery exists. Product incarnations exist. The public launch connects those systems to audiences through Site Studio, Market Command, NicheFoundry, Vesper and measurable response.</p></div>
+        <div class="stage-steps reveal">
+          <article><small>01</small><b>PROVEN SYSTEMS</b><span>Reusable governed capabilities and controlled execution.</span></article>
+          <article><small>02</small><b>PRODUCT INCARNATION</b><span>Capabilities composed into focused offerings for specific work.</span></article>
+          <article class="active"><small>03</small><b>MARKET LEARNING</b><span>Real audiences, real enquiries and measurable demand.</span></article>
         </div>
       </div>
-      <div class="page war-cry reveal"><small>DIO / 2026</small><strong>BEAST WAS THE FORTRESS.<br>DIO IS THE CITY THAT GREW AROUND IT.</strong></div>
     </section>
 
-    <section id="contact" class="contact section-ink">
-      <div class="page contact-grid">
-        <div class="contact-copy reveal">
-          <p class="eyebrow">ENTER DIO</p>
-          <h2>Bring us one bounded professional problem.</h2>
-          <p>Choose the product lane, tell us what hurts, and DIO will prepare a structured intake for the current Outlook bridge. When the public ingress endpoint is enabled, this same form can submit directly into the DIO lead pipeline.</p>
-          <div class="contact-doctrine"><b>THE RULE</b><span>Professional judgment stays with the professional who owns it.</span></div>
-        </div>
-        <form id="pilotForm" class="pilot-form reveal">
-          <label>PRODUCT LANE<select name="product" id="product" required><option value="homs">HOMS · Assessment</option><option value="evidex">Evidex · Evidence pack</option><option value="sophia">Sophia · Research / guided learning</option><option value="vamp">VAMP · Performance evidence</option></select></label>
-          <label>YOUR NAME<input name="name" autocomplete="name" required></label>
-          <label>ORGANISATION<input name="organisation" autocomplete="organization"></label>
-          <label>REPLY EMAIL<input type="email" name="email" autocomplete="email" required></label>
-          <label class="full">WHAT DO YOU NEED HELP WITH?<textarea name="summary" required placeholder="Describe the bounded problem, deliverable or workflow you want to test."></textarea></label>
+    <section class="youtube-stage section-black">
+      <div class="page youtube-grid reveal">
+        <div><p class="eyebrow">DIO / ON FILM</p><h2>Watch the machine leave the laboratory.</h2><p>Launch announcements, product walkthroughs and controlled demonstrations will show DIO working across radically different problem domains.</p></div>
+        <a class="youtube-card" data-social="youtube" href="https://www.youtube.com/channel/UCc916iuoPLseg05t5J5leaQ" target="_blank" rel="noopener noreferrer"><span>YOUTUBE CHANNEL</span><strong>DIO Workflows</strong><em>Launch films · demos · product announcements ↗</em></a>
+      </div>
+    </section>
+
+    <section id="about" class="about-founder section-paper">
+      <div class="page about-grid">
+        <div class="about-copy reveal"><p class="eyebrow dark">FOUNDER / BUILDER</p><h2>DIO was built as a systems problem before it became a company problem.</h2><p>The work began with a recurring question: how can AI perform meaningful professional work without silently losing evidence, provenance or human authority? DIO grew from that constraint into a reusable product architecture.</p><p>The public phase now tests the commercial consequence of that architecture: whether the same governed machinery can produce useful products across multiple markets.</p></div>
+        <div class="about-actions reveal"><a data-social="linkedin" href="https://www.linkedin.com/company/139354569/" target="_blank" rel="noopener noreferrer">DIO on LinkedIn <span>↗</span></a><a href="https://github.com/Byron2306" target="_blank" rel="noopener noreferrer">Engineering on GitHub <span>↗</span></a><a data-vesper-link href="vesper-intake.html">Ask Vesper about DIO <span>↗</span></a></div>
+      </div>
+    </section>
+
+    <section id="intake" class="launch-intake section-ink">
+      <div class="page intake-grid">
+        <div class="intake-copy reveal"><p class="eyebrow">START WITH THE PROBLEM</p><h2>Tell DIO what you are trying to achieve.</h2><p>Customer, partner, enterprise lead or investor: give us enough context to route the conversation properly. The intake enters the existing governed public lead pipeline.</p><div class="vesper-inline"><img src="assets/vesper-avatar.svg" alt="Vesper, DIO Presence Core"><div><b>Prefer conversation?</b><span>Talk to Vesper · AI guide / DIO Presence Core</span></div><a data-vesper-link href="vesper-intake.html">OPEN VESPER ↗</a></div></div>
+        <form id="launchIntakeForm" class="launch-form reveal">
+          <label>WHAT ARE YOU HERE FOR?<select name="interest" id="interest" required><option value="">Choose one</option><option value="investor">Investment / strategic partnership</option><option value="homs">Exam & Assessment Studio</option><option value="vamp">Performance Evidence Studio</option><option value="sophia">Research Integrity Studio</option><option value="evidex">Evidence Assurance</option><option value="programmeproof">Programme Assurance</option><option value="site_studio">Website Launch Studio</option><option value="other">Something else</option></select></label>
+          <label>YOUR NAME<input name="name" autocomplete="name" required></label><label>ORGANISATION<input name="organisation" autocomplete="organization"></label><label>REPLY EMAIL<input type="email" name="email" autocomplete="email" required></label>
+          <label class="full">WHAT ARE YOU TRYING TO SOLVE OR EXPLORE?<textarea name="summary" required placeholder="Describe the problem, opportunity, workflow, product interest or partnership angle."></textarea></label>
           <label class="consent full"><input type="checkbox" name="replyConsent" required><span>You may reply to this specific request. This does not opt me into unrelated marketing.</span></label>
-          <div class="form-bottom full"><button class="btn primary" id="submitPilot" type="submit">CREATE DIO INTAKE ↗</button><span id="formStatus" class="form-status" role="status"></span></div>
+          <div class="form-bottom full"><button class="btn primary" id="submitLaunchIntake" type="submit">SEND GOVERNED INTAKE ↗</button><span id="launchFormStatus" class="form-status" role="status"></span></div>
         </form>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="page footer-grid">
-      <div class="footer-brand"><img src="assets/dio-favicon.png" alt=""><div><b>DIO</b><span>Evidence-Governed Operating Intelligence</span></div></div>
-      <div class="footer-links"><a href="#products">Products</a><a href="#architecture">Architecture</a><a href="#control">Control</a><a href="#proof">Proof</a></div>
-      <p>Controlled-pilot positioning. No claim of autonomous professional authority or proven product-market fit.</p>
+  <a class="vesper-float" data-vesper-link href="vesper-intake.html" aria-label="Talk to Vesper, DIO Presence Core"><img src="assets/vesper-avatar.svg" alt=""><span><b>VESPER</b><small>ASK ABOUT DIO</small></span></a>
+
+  <footer class="launch-footer">
+    <div class="page launch-footer-grid">
+      <div class="footer-brand"><img src="assets/dio-favicon.png" alt=""><div><b>DIO WORKFLOWS</b><span>Deterministic Intelligence Orchestration</span></div></div>
+      <div class="footer-line"><strong>From intelligence to accountable work.</strong><span>Controlled engineering proof is not represented as market validation.</span></div>
+      <div class="social-rail" aria-label="DIO social channels"><a data-social="instagram" href="https://www.instagram.com/dio_workflows/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a data-social="facebook" href="https://www.facebook.com/profile.php?id=61593271043069" target="_blank" rel="noopener noreferrer">Facebook ↗</a><a data-social="linkedin" href="https://www.linkedin.com/company/139354569/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a data-social="youtube" href="https://www.youtube.com/channel/UCc916iuoPLseg05t5J5leaQ" target="_blank" rel="noopener noreferrer">YouTube ↗</a></div>
+      <div class="footer-links"><a href="products/">Products</a><a href="#technology">Technology</a><a href="#proof">Proof</a><a href="privacy/">Privacy</a><a href="terms/">Terms</a><a href="data-deletion/">Data deletion</a></div>
     </div>
   </footer>
 </body>
