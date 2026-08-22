@@ -43,20 +43,20 @@ jobs:
           const requiredCss=['.editorial-hero','.artifact-gallery','.artifact-card','.evidence-ledger','.system-pathway','.delivery-flow','.pilot-scope','.vesper-conversion','prefers-reduced-motion',':focus-visible','@media(max-width:980px)','@media(max-width:640px)'];
           for(const token of requiredCss) if(!css.includes(token)) throw new Error(`product styling missing: ${token}`);
 
-          const prices={
-            "'Documents & Rooms':4900":true,
-            "'Performance & People':4900":true,
-            "'Education':5900":true,
-            "'Research & Learning':5900":true,
-            "'Evidence & Assurance':7900":true,
-            "'Obligations':8900":true,
-            "'AI & Digital Trust':12900":true,
-            "'High-Risk Review':12900":true,
-            "'Regulated Operations':14900":true,
-          };
-          for(const token of Object.keys(prices)) if(!app.includes(token)) throw new Error(`pricing drift: ${token}`);
+          const prices=["'Documents & Rooms':4900","'Performance & People':4900","'Education':5900","'Research & Learning':5900","'Evidence & Assurance':7900","'Obligations':8900","'AI & Digital Trust':12900","'High-Risk Review':12900","'Regulated Operations':14900"];
+          for(const token of prices) if(!app.includes(token)) throw new Error(`pricing drift: ${token}`);
 
           const forbidden=['/home/byron/','dio_workflows@outlook.com'];
           for(const token of forbidden) if(app.includes(token)) throw new Error(`private/internal detail leaked into renderer: ${token}`);
+
+          const flagships=['homs','vamp','sophia','evidex'];
+          for(const slug of flagships){
+            const page=fs.readFileSync(`products/${slug}/index.html`,'utf8');
+            for(const token of ['data-view="product"','editorial-hero','artifact-gallery','evidence-ledger','system-pathway','delivery-flow','pilot-scope','vesper-conversion','../../assets/vesper-public.webp']){
+              if(!page.includes(token)) throw new Error(`${slug} flagship missing: ${token}`);
+            }
+            if(page.includes('class="producthero"')) throw new Error(`${slug} still uses legacy producthero shell`);
+          }
+
           console.log('DIO_EDITORIAL_EVIDENCE_PRODUCT_CONTRACT_VERIFIED');
           NODE
