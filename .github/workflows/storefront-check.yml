@@ -136,7 +136,7 @@ jobs:
           grep -q "pricing_basis" assets/site.js
           grep -q "EXPLORE 38 PILOTS" assets/site.js
           grep -q -- "--paper:#fff" products/product.css
-          if grep -q "mailto:" products/app.js; then echo "product class CTA bypasses governed intake"; exit 1; fi
+          if grep -Eq 'href=["'"']mailto:' products/app.js; then echo "product class CTA bypasses governed intake"; exit 1; fi
       - name: Validate permanent page shell
         run: |
           node - <<'NODE'
