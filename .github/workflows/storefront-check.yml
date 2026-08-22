@@ -120,8 +120,8 @@ jobs:
           grep -q "'Regulated Operations':14900" products/app.js
           grep -q "GRC · audit readiness · evidence automation" products/app.js
           grep -q "AI governance · model risk · agent authority · auditability" products/app.js
-          grep -q "Simple South African commercial entry point" products/index.html
-          grep -q "From R 4,900 ZAR" products/index.html
+          grep -q "LAUNCH REGISTRY V2 / SHIP WHAT IS PROVEN" products/index.html
+          grep -q "Start with one bounded case" products/index.html
           grep -q "intakeEndpoint: \"https://dio-edge-gateway-live.dio-workflows.workers.dev/api/public/intake\"" assets/dio-config.js
           grep -q "product_class:requestedClass" assets/site.js
           grep -q "launch_price_zar" assets/site.js
