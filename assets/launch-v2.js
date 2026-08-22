@@ -24,10 +24,18 @@
   });
 
   const vesperUrl = cfg.vesperUrl || 'vesper-intake.html';
+  const vesperHints = {
+    homs: 'HOMS Exam',
+    vamp: 'VAMP Performance',
+    sophia: 'Sophia Integrity',
+    evidex: 'Evidex EvidenceOps',
+    programmeproof: 'ProgrammeProof'
+  };
   $$('[data-vesper-link]').forEach(link => { link.href = vesperUrl; });
   $$('[data-vesper-product]').forEach(link => {
-    const incarnation = link.dataset.vesperProduct;
-    link.href = `${vesperUrl}?incarnation=${encodeURIComponent(incarnation)}`;
+    const key = link.dataset.vesperProduct;
+    const incarnation = vesperHints[key] || '';
+    link.href = incarnation ? `${vesperUrl}?incarnation=${encodeURIComponent(incarnation)}` : vesperUrl;
   });
 
   $$('[data-select-interest]').forEach(link => link.addEventListener('click', () => {
