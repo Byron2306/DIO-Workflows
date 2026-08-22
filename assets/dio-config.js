@@ -15,7 +15,7 @@ window.DIO_SITE_CONFIG = {
     evidex: "products/evidex/",
     sophia: "products/sophia/",
     vamp: "products/vamp/",
-    programmeproof: "products/programmeproof/",
+    programmeproof: "products/pilot.html?product=programmeproof",
     site_studio: "#intake"
   }
 };
