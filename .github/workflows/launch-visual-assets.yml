@@ -1,0 +1,53 @@
+name: Validate launch visual assets
+
+on:
+  pull_request:
+    paths:
+      - "index.html"
+      - "vesper-intake.html"
+      - "vesper-intake.js"
+      - "assets/launch-v2.css"
+      - "assets/launch-hero.webp"
+      - "assets/vesper-public.webp"
+      - ".github/workflows/launch-visual-assets.yml"
+  workflow_dispatch:
+
+jobs:
+  launch-visual-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate M01 and Vesper integration
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          required_assets = {
+              "assets/launch-hero.webp": 20000,
+              "assets/vesper-public.webp": 20000,
+          }
+          for name, minimum in required_assets.items():
+              path = Path(name)
+              if not path.exists():
+                  raise SystemExit(f"launch asset missing: {name}")
+              if path.stat().st_size < minimum:
+                  raise SystemExit(f"launch asset unexpectedly small: {name}")
+
+          root = Path("index.html").read_text(encoding="utf-8")
+          chat_html = Path("vesper-intake.html").read_text(encoding="utf-8")
+          chat_js = Path("vesper-intake.js").read_text(encoding="utf-8")
+          css = Path("assets/launch-v2.css").read_text(encoding="utf-8")
+
+          for token in ('assets/launch-hero.webp', 'hero-media-art', 'hero-seal'):
+              if token not in root and token not in css:
+                  raise SystemExit(f"M01 wiring missing: {token}")
+
+          if 'assets/vesper-public.webp' not in chat_html:
+              raise SystemExit("Vesper public portrait not wired into chat shell")
+          if 'assets/vesper-public.webp' not in chat_js:
+              raise SystemExit("Vesper public portrait not wired into message avatars")
+          if 'PORTRAIT PENDING' in chat_html or 'PORTRAIT PENDING' in chat_js:
+              raise SystemExit("Vesper placeholder leaked into public chat wiring")
+
+          print("DIO_LAUNCH_VISUAL_ASSETS_VERIFIED")
+          PY
