@@ -111,7 +111,11 @@ async function send(){
     notice.textContent = body.session.handoff?.state === "READY_FOR_PRODUCT_EXECUTION"
       ? `Governed handoff ready for ${body.session.handoff.incarnation}. Product execution is still internally/human gated.`
       : "Vesper needs more routing context before product execution can begin.";
-  }catch(error){ notice.textContent = `REFUSED: ${error.message}`; notice.classList.add("error"); }
+  }catch(error){
+    console.warn("Vesper message route unavailable", error);
+    notice.textContent = "Live chat may be unavailable right now. Structured intake remains available on the DIO home page.";
+    notice.classList.add("error");
+  }
   finally{ sendButton.disabled = false; messageInput.disabled = false; filesInput.disabled = false; messageInput.focus(); }
 }
 
@@ -123,7 +127,8 @@ product.addEventListener("change",()=>{ if (!sessionReady) return; notice.textCo
 (async()=>{
   try{ await loadProducts(); await startSession(); }
   catch(error){
-    notice.textContent = `Vesper live chat is not reachable yet: ${error.message}. Use the structured intake on the DIO home page while the public chat endpoint is restored.`;
+    console.warn("Vesper live route unavailable", error);
+    notice.textContent = "Live chat may be unavailable right now. Structured intake remains available on the DIO home page.";
     notice.classList.add("error");
     sendButton.disabled = true;
   }
