@@ -1,0 +1,62 @@
+name: Validate editorial evidence product pages
+
+on:
+  pull_request:
+    paths:
+      - "products/**"
+      - "assets/vesper-public.webp"
+      - ".github/workflows/product-editorial-evidence.yml"
+  workflow_dispatch:
+
+jobs:
+  editorial-evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Validate product presentation contract
+        run: |
+          node --check products/app.js
+          node - <<'NODE'
+          const fs=require('fs');
+          global.window={};
+          require('./products/catalog.js');
+          const rows=window.DIO_PRODUCT_CATALOG;
+          if(!Array.isArray(rows) || rows.length!==38) throw new Error(`expected 38 routes, got ${rows && rows.length}`);
+          if(new Set(rows.map(p=>p.slug)).size!==38) throw new Error('product slugs are not unique');
+
+          const app=fs.readFileSync('products/app.js','utf8');
+          const css=fs.readFileSync('products/product.css','utf8');
+          const requiredApp=[
+            'DISPLAY_BY_SLUG','function displayFor','function vesperHref',
+            'editorial-hero','artifact-gallery','evidence-ledger','system-pathway','delivery-flow','pilot-scope','vesper-conversion',
+            'What you actually get','Evidence, not promises','What runs underneath',
+            'Bring this','DIO does this','You receive this','Human decides this',
+            'Built before it was pitched.',
+            'Controlled engineering evidence is shown as engineering evidence.',
+            'assets/vesper-public.webp'
+          ];
+          for(const token of requiredApp) if(!app.includes(token)) throw new Error(`product renderer missing: ${token}`);
+
+          const requiredCss=['.editorial-hero','.artifact-gallery','.artifact-card','.evidence-ledger','.system-pathway','.delivery-flow','.pilot-scope','.vesper-conversion','prefers-reduced-motion',':focus-visible','@media(max-width:980px)','@media(max-width:640px)'];
+          for(const token of requiredCss) if(!css.includes(token)) throw new Error(`product styling missing: ${token}`);
+
+          const prices={
+            "'Documents & Rooms':4900":true,
+            "'Performance & People':4900":true,
+            "'Education':5900":true,
+            "'Research & Learning':5900":true,
+            "'Evidence & Assurance':7900":true,
+            "'Obligations':8900":true,
+            "'AI & Digital Trust':12900":true,
+            "'High-Risk Review':12900":true,
+            "'Regulated Operations':14900":true,
+          };
+          for(const token of Object.keys(prices)) if(!app.includes(token)) throw new Error(`pricing drift: ${token}`);
+
+          const forbidden=['/home/byron/','dio_workflows@outlook.com'];
+          for(const token of forbidden) if(app.includes(token)) throw new Error(`private/internal detail leaked into renderer: ${token}`);
+          console.log('DIO_EDITORIAL_EVIDENCE_PRODUCT_CONTRACT_VERIFIED');
+          NODE
