@@ -29,7 +29,7 @@ function messageNode(row){
   if (customer) {
     avatar = document.createElement("div"); avatar.className = "avatar"; avatar.textContent = "Y";
   } else {
-    avatar = document.createElement("img"); avatar.className = "avatar vesper-message-avatar"; avatar.src = "assets/vesper-avatar.svg"; avatar.alt = "Vesper";
+    avatar = document.createElement("img"); avatar.className = "avatar vesper-message-avatar"; avatar.src = "assets/vesper-public.webp"; avatar.alt = "Vesper";
   }
   const bubble = document.createElement("div"); bubble.className = "bubble"; bubble.textContent = escapeText(row.text);
   if ((row.attachment_ids || []).length){
