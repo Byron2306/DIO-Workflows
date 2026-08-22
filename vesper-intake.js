@@ -5,7 +5,8 @@ const messages = $("#messages"), product = $("#product"), nameInput = $("#name")
 const messageInput = $("#message"), filesInput = $("#files"), fileCount = $("#fileCount"), sendButton = $("#send"), notice = $("#notice");
 const routeState = $("#routeState"), routeCandidates = $("#routeCandidates");
 const params = new URLSearchParams(location.search);
-const apiOrigin = params.get("api") || (location.port === "8765" ? "http://127.0.0.1:8770" : location.origin);
+const cfg = window.DIO_SITE_CONFIG || {};
+const apiOrigin = params.get("api") || cfg.vesperApiOrigin || (location.port === "8765" ? "http://127.0.0.1:8770" : location.origin);
 let conversationId = null;
 let sessionReady = false;
 
@@ -111,5 +112,9 @@ product.addEventListener("change",()=>{ if (!sessionReady) return; notice.textCo
 
 (async()=>{
   try{ await loadProducts(); await startSession(); }
-  catch(error){ notice.textContent = `Vesper could not start: ${error.message}`; notice.classList.add("error"); sendButton.disabled = true; }
+  catch(error){
+    notice.textContent = `Vesper live chat is not reachable yet: ${error.message}. Use the structured intake on the DIO home page while the public chat endpoint is restored.`;
+    notice.classList.add("error");
+    sendButton.disabled = true;
+  }
 })();
