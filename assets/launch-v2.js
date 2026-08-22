@@ -1,4 +1,9 @@
 (() => {
+  const visualStyles = document.createElement('link');
+  visualStyles.rel = 'stylesheet';
+  visualStyles.href = 'assets/dio-visual-system.css';
+  document.head.appendChild(visualStyles);
+
   const cfg = window.DIO_SITE_CONFIG || {};
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
