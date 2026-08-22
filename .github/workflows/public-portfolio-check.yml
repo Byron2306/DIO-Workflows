@@ -46,9 +46,9 @@ jobs:
               if token.lower() in html.lower():
                   raise SystemExit(f"stale four-product public claim remains: {token}")
 
-          if '<h2>${esc(p.headline)}</h2>' not in app:
+          if '<h2>${esc(product.headline)}</h2>' not in app:
               raise SystemExit('portfolio cards must lead with the buyer problem/outcome headline')
-          if 'DIO route · ${esc(p.name)}' not in app:
+          if 'DIO route · ${esc(product.name)}' not in app:
               raise SystemExit('DIO route name must remain visible as provenance, not the sales headline')
 
           print("DIO_PUBLIC_PORTFOLIO_CUSTOMER_FACING_VERIFIED")
