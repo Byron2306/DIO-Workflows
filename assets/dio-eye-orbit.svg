@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" role="img" aria-labelledby="title desc">
+  <title id="title">DIO orbital eye</title><desc id="desc">A restrained gold orbital system surrounding the DIO eye motif.</desc>
+  <defs>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff1bd"/><stop offset=".16" stop-color="#e7bd65"/><stop offset=".42" stop-color="#8d652b"/><stop offset="1" stop-color="#0a0c0f"/></radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="720" height="720" fill="none"/>
+  <g fill="none" stroke="#d9b66f" stroke-width="1.2" opacity=".34" transform-origin="360px 360px">
+    <circle cx="360" cy="360" r="290"/><circle cx="360" cy="360" r="244" stroke-dasharray="2 14"/><ellipse cx="360" cy="360" rx="316" ry="132"/><ellipse cx="360" cy="360" rx="132" ry="316"/>
+    <path d="M64 360H656M360 64V656" opacity=".6"/>
+    <animateTransform attributeName="transform" type="rotate" from="0 360 360" to="360 360 360" dur="38s" repeatCount="indefinite"/>
+  </g>
+  <g fill="none" stroke="#f1d79b" stroke-width="1.4" opacity=".48" transform-origin="360px 360px">
+    <circle cx="360" cy="360" r="188" stroke-dasharray="5 18"/><circle cx="360" cy="360" r="158"/>
+    <animateTransform attributeName="transform" type="rotate" from="360 360 360" to="0 360 360" dur="26s" repeatCount="indefinite"/>
+  </g>
+  <path d="M180 360Q360 205 540 360Q360 515 180 360Z" fill="#090b0d" stroke="#d9b66f" stroke-width="3"/>
+  <ellipse cx="360" cy="360" rx="92" ry="122" fill="url(#core)" stroke="#f1d79b" stroke-width="3" filter="url(#glow)"/>
+  <circle cx="360" cy="360" r="38" fill="#08090b" stroke="#f1d79b" stroke-width="2"/>
+  <circle cx="360" cy="360" r="10" fill="#fff4c6" filter="url(#glow)"><animate attributeName="r" values="8;13;8" dur="3.4s" repeatCount="indefinite"/></circle>
+  <g fill="#e3bb6d" filter="url(#glow)"><circle cx="360" cy="70" r="5"/><circle cx="650" cy="360" r="5"/><circle cx="360" cy="650" r="5"/><circle cx="70" cy="360" r="5"/></g>
+</svg>
