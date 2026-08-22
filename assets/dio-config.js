@@ -1,5 +1,6 @@
 window.DIO_SITE_CONFIG = {
   intakeEndpoint: "https://dio-edge-gateway-live.dio-workflows.workers.dev/api/public/intake",
+  vesperApiOrigin: "https://dio-edge-gateway-live.dio-workflows.workers.dev",
   fallbackEmail: "dio_workflows@outlook.com",
   portfolioUrl: "products/",
   vesperUrl: "vesper-intake.html",
