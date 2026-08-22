@@ -2,6 +2,12 @@
   const cfg = window.DIO_SITE_CONFIG || {};
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+  const params = new URLSearchParams(location.search);
+  const requestedProduct = (params.get('product') || '').trim();
+  const requestedClass = (params.get('class') || '').trim();
+  const requestedOffer = (params.get('offer') || '').trim();
+  const parsedPrice = Number.parseInt(params.get('price') || '', 10);
+  const requestedPrice = Number.isFinite(parsedPrice) ? parsedPrice : null;
 
   const menu = $('#menuButton');
   const navLinks = $('#navLinks');
@@ -22,6 +28,11 @@
     const url = social[link.dataset.social];
     if (url) link.href = url;
   });
+
+  const programmeUrl = (cfg.products || {}).programmeproof;
+  if (programmeUrl) {
+    $$('a[href="products/programmeproof/"]').forEach(link => { link.href = programmeUrl; });
+  }
 
   const vesperUrl = cfg.vesperUrl || 'vesper-intake.html';
   const vesperHints = {
@@ -99,16 +110,34 @@
     evidex: 'evidex', programmeproof: 'programmeproof', site_studio: 'site_studio',
     other: 'dio_workflows'
   };
+  const ingressToInterest = {
+    homs: 'homs', vamp: 'vamp', sophia: 'sophia', evidex: 'evidex',
+    programmeproof: 'programmeproof', site_studio: 'site_studio',
+    document_studio: 'other', dio_workflows: 'other'
+  };
+  const interestSelect = $('#interest');
+  if (requestedProduct && interestSelect) {
+    const interest = ingressToInterest[requestedProduct] || 'other';
+    if ([...interestSelect.options].some(option => option.value === interest)) interestSelect.value = interest;
+  }
+  if (requestedClass && status) {
+    const priceNote = requestedPrice === null ? '' : ` · launch pilot R ${requestedPrice.toLocaleString('en-ZA')} ZAR`;
+    status.textContent = `Preloaded from product page: ${requestedClass}${priceNote}`;
+  }
+  if (location.hash === '#contact') {
+    requestAnimationFrame(() => $('#intake')?.scrollIntoView({ block: 'start' }));
+  }
 
   form.addEventListener('submit', async event => {
     event.preventDefault();
     const data = new FormData(form);
     const interest = String(data.get('interest') || '').trim();
-    const product = routeMap[interest] || 'dio_workflows';
+    const product = requestedProduct || routeMap[interest] || 'dio_workflows';
+    const offer = requestedOffer || (interest === 'investor' ? 'strategic_partnership_conversation' : `${product}_public_enquiry`);
     const payload = {
       schema: 'dio.public_intake.v1',
       product,
-      offer: interest === 'investor' ? 'strategic_partnership_conversation' : `${product}_public_enquiry`,
+      offer,
       contact: {
         name: String(data.get('name') || '').trim(),
         email: String(data.get('email') || '').trim(),
@@ -117,18 +146,18 @@
       request: {
         summary: String(data.get('summary') || '').trim(),
         preferred_pilot: interest === 'investor' ? 'strategic_conversation' : 'bounded_pilot',
-        product_class: interest || null,
-        product_slug: interest || null,
-        offer_label: interest || null,
-        launch_price_zar: null,
-        pricing_basis: null
+        product_class: requestedClass || interest || null,
+        product_slug: requestedClass || interest || null,
+        offer_label: requestedOffer || interest || null,
+        launch_price_zar: requestedPrice,
+        pricing_basis: requestedPrice === null ? null : 'public_launch_pilot_one_bounded_case'
       },
       consents: { reply_requested: data.get('replyConsent') === 'on' },
       attribution: {
         page: location.pathname,
         referrer: document.referrer || '',
-        source: 'dio_investor_front_door',
-        product_class: interest || null
+        source: requestedClass ? 'dio_product_storefront' : 'dio_investor_front_door',
+        product_class: requestedClass || interest || null
       },
       submitted_at: new Date().toISOString()
     };
@@ -156,9 +185,11 @@
     } catch (error) {
       console.error(error);
       const address = cfg.fallbackEmail || 'dio_workflows@outlook.com';
-      const subject = `DIO PUBLIC ENQUIRY / ${interest || 'general'}`;
+      const subject = `DIO PUBLIC ENQUIRY / ${requestedClass || interest || 'general'}`;
       const body = [
         'DIO PUBLIC ENQUIRY', '', `Interest: ${interest || 'general'}`, `Product route: ${product}`,
+        `Product class: ${requestedClass || 'not specified'}`, `Offer: ${offer}`,
+        `Launch price ZAR: ${requestedPrice === null ? 'scope required' : requestedPrice}`,
         `Name: ${payload.contact.name}`, `Organisation: ${payload.contact.organisation || 'Not specified'}`,
         `Reply email: ${payload.contact.email}`, '', 'Request:', payload.request.summary, '',
         'Permission: You may reply to this specific request.'
