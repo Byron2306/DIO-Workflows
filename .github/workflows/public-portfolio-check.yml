@@ -1,0 +1,55 @@
+name: Validate public product portfolio
+
+on:
+  pull_request:
+    paths:
+      - "products/index.html"
+      - "products/app.js"
+      - "products/catalog.js"
+      - ".github/workflows/public-portfolio-check.yml"
+  workflow_dispatch:
+
+jobs:
+  public-portfolio:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate public portfolio contract
+        run: |
+          node --check products/app.js
+          python3 - <<'PY'
+          from pathlib import Path
+
+          html = Path("products/index.html").read_text(encoding="utf-8")
+          app = Path("products/app.js").read_text(encoding="utf-8")
+
+          required_html = (
+              'data-view="portfolio"',
+              'id="search"',
+              'id="filters"',
+              'id="grid"',
+              'catalog.js',
+              'app.js',
+              '38 controlled offer routes',
+              '53+',
+          )
+          for token in required_html:
+              if token not in html:
+                  raise SystemExit(f"public portfolio missing: {token}")
+
+          forbidden = (
+              'Four products on the shelf',
+              '4 controlled pilots',
+              'only four',
+          )
+          for token in forbidden:
+              if token.lower() in html.lower():
+                  raise SystemExit(f"stale four-product public claim remains: {token}")
+
+          if '<h2>${esc(p.headline)}</h2>' not in app:
+              raise SystemExit('portfolio cards must lead with the buyer problem/outcome headline')
+          if 'DIO route · ${esc(p.name)}' not in app:
+              raise SystemExit('DIO route name must remain visible as provenance, not the sales headline')
+
+          print("DIO_PUBLIC_PORTFOLIO_CUSTOMER_FACING_VERIFIED")
+          PY
