@@ -31,7 +31,11 @@ Sell the outcome. Reveal the lore.
 
 ## Vesper
 
-Vesper is the persistent DIO Presence Core persona. The existing Vesper web-chat session/message API remains unchanged. The supplied Vesper portrait becomes the stable visual identity in the sidebar and assistant messages. Corporate CTAs open Vesper in broad DIO context; product CTAs pass an incarnation hint.
+Vesper is the persistent DIO Presence Core persona. The existing Vesper web-chat session/message API remains unchanged. The public skeleton reserves a stable Vesper portrait slot, but no final portrait ships until the post-skeleton media audit establishes the canonical visual identity. The earlier joke/anime-nun concept is explicitly excluded from the public brand. Corporate CTAs open Vesper in broad DIO context; product CTAs pass an incarnation hint.
+
+## Media sequence
+
+Skeleton first. Then one media audit maps every reserved slot to the correct medium: real product artifact, UI capture, diagram, illustration, motion, portrait, video, or no asset. Final assets are created only after the layout and aspect ratios are fixed.
 
 ## Intake
 
