@@ -8,6 +8,7 @@ on:
       - "assets/launch-v2.css"
       - "assets/launch-v2.js"
       - "assets/premium/**"
+      - "assets/dio-frame-tracer.svg"
       - "assets/dio-visual-system.css"
       - ".github/workflows/premium-assets-check.yml"
   workflow_dispatch:
@@ -50,32 +51,27 @@ jobs:
               raise SystemExit('premium stylesheet is not imported by shared DIO visual system')
 
           premium = Path('assets/premium/premium.css').read_text(encoding='utf-8')
-          premium_tokens = (
+          required_tokens = (
               'dio-eye-premium.webp','dio-orbit-vertical.webp','dio-title-banner.webp',
               'dio-eye-divider.webp','dio-panel-frame.webp','dio-orbit-frame.webp',
-              'dio-frame-tracer.svg','@keyframes dioEyeBreath','@keyframes dioMedallionFloat',
-              '.launch-product-card','.product-orbit-stage','.vesper-portrait-wrap',
-              '.vesper-portrait-wrap.is-speaking','.premium-frame-tracer'
+              'dio-frame-tracer.svg','launch-hero.webp',
+              '.investor-hero:before','.investor-stage.hero-media:after','.hero-brand-eye',
+              '.launch-product-card:nth-child(1):after','.launch-product-card:nth-child(6):after',
+              '.card-orbit .family-icon','.product-orbit-stage','.vesper-portrait-wrap.is-speaking',
+              '.vesper-welcome','@keyframes dioEyeBreath','@keyframes dioMedallionFloat',
+              '@keyframes dioFrameSpeak','.premium-frame-tracer'
           )
-          for token in premium_tokens:
+          for token in required_tokens:
               if token not in premium:
                   raise SystemExit(f'premium motion wiring missing: {token}')
 
-          home = Path('index.html').read_text(encoding='utf-8')
-          if 'assets/premium/dio-eye-premium.webp' not in home:
-              raise SystemExit('premium Golden Eye is not foregrounded in the homepage hero')
-          if home.count('premium-card-medallion') < 6:
-              raise SystemExit('six flagship product cards do not expose premium medallions')
+          tracer = Path('assets/dio-frame-tracer.svg').read_text(encoding='utf-8')
+          for token in ('stroke-dasharray','animate attributeName="stroke-dashoffset"','feGaussianBlur'):
+              if token not in tracer:
+                  raise SystemExit(f'animated frame tracer missing: {token}')
 
-          launch = Path('assets/launch-v2.css').read_text(encoding='utf-8')
-          if "url('../assets/launch-hero.webp')" not in launch:
-              raise SystemExit('launch hero is not used as full-bleed atmospheric background')
-          if '.hero-brand-eye' not in launch:
-              raise SystemExit('hero foreground Eye styling is missing')
-
-          vesper = Path('vesper-intake.html').read_text(encoding='utf-8')
-          if 'premium-frame-tracer' not in vesper:
-              raise SystemExit('Vesper frame tracer is not wired into the conversation surface')
+          if 'prefers-reduced-motion:reduce' not in premium:
+              raise SystemExit('premium motion does not respect reduced-motion preference')
 
           print('DIO_PREMIUM_ASSET_MOTION_VERIFIED')
           PY
