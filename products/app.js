@@ -29,11 +29,23 @@
     'Performance & People':'growth',
     'Education':'education',
     'Research & Learning':'evidence',
-    'Evidence & Assurance':'evidence',
+    'Evidence & Assurance':'governance',
     'Obligations':'workflow',
     'AI & Digital Trust':'governance',
     'High-Risk Review':'governance',
     'Regulated Operations':'partnership'
+  };
+
+  const HERO_BY_FAMILY = {
+    'Education':'dio-hero-homs-2026.webp',
+    'Performance & People':'dio-hero-vamp-2026.webp',
+    'Research & Learning':'dio-hero-sophia-2026.webp',
+    'Evidence & Assurance':'dio-hero-evidex-2026.webp',
+    'Obligations':'dio-hero-evidex-2026.webp',
+    'AI & Digital Trust':'dio-hero-product-2026.webp',
+    'High-Risk Review':'dio-hero-product-2026.webp',
+    'Regulated Operations':'dio-hero-product-2026.webp',
+    'Documents & Rooms':'dio-hero-product-2026.webp'
   };
 
   const FAMILY_MARKET = {
@@ -70,6 +82,7 @@
   const iconId = product => ICON_BY_FAMILY[product.family] || 'network';
   const iconUse = (product, className='family-icon') => `<svg class="${className}" aria-hidden="true"><use href="${rootHref()}assets/dio-icons.svg#${iconId(product)}"></use></svg>`;
   const premiumIconSrc = product => `${rootHref()}assets/premium/icons/dio-icon-${PREMIUM_ICON_BY_FAMILY[product.family] || 'evidence'}.webp`;
+  const heroSrc = product => `${rootHref()}assets/premium/${HERO_BY_FAMILY[product.family] || 'dio-hero-product-2026.webp'}`;
 
   const visualStyles = document.createElement('link');
   visualStyles.rel = 'stylesheet';
@@ -80,9 +93,22 @@
   premiumStyles.href = `${rootHref()}assets/premium/premium.css`;
   document.head.appendChild(premiumStyles);
 
+  function upgradeDioBrand(label = 'WORKFLOWS') {
+    const brand = document.querySelector('.nav .brand');
+    if (!brand) return;
+    brand.classList.add('brand-dio');
+    brand.innerHTML = `<img class="brand-sigil" src="${rootHref()}assets/dio-favicon.png" alt=""><img class="brand-wordmark" src="${rootHref()}assets/dio-wordmark.svg" alt="DIO"><span>${esc(label)}</span>`;
+  }
+
+  if (document.body.dataset.view === 'product') upgradeDioBrand('WORKFLOWS');
+  if (document.body.dataset.view === 'portfolio') upgradeDioBrand('PRODUCT PORTFOLIO');
+
   document.querySelectorAll('a[href$="#control"]').forEach(link => { link.href = `${rootHref()}#proof`; });
   document.querySelectorAll('a[href$="#contact"]').forEach(link => { link.href = `${rootHref()}#intake`; });
   document.querySelectorAll('a[href$="privacy.html"]').forEach(link => { link.href = `${rootHref()}privacy/`; });
+  document.querySelectorAll('.navlinks a').forEach(link => {
+    if (link.textContent.trim().toUpperCase() === 'CONTROL') link.textContent = 'EVIDENCE';
+  });
 
   function displayFor(product) {
     const explicit = DISPLAY_BY_SLUG[product.slug] || {};
@@ -133,6 +159,7 @@
     document.documentElement.style.setProperty('--accent', theme.accent);
     document.documentElement.style.setProperty('--accent-dark', theme.dark);
     document.documentElement.style.setProperty('--accent-soft', theme.soft);
+    document.documentElement.style.setProperty('--product-hero-bg', `url('${heroSrc(product)}')`);
     document.title = `${display.displayName} | DIO Workflows`;
     const meta = document.querySelector('meta[name="description"]');
     if (meta) meta.setAttribute('content', `${product.headline} ${product.offer} from ${price} for one bounded, human-reviewed case.`);
@@ -145,10 +172,12 @@
     const pathway = display.pathway.map((node,index)=>`<div class="pathway-node"><small>${String(index+1).padStart(2,'0')}</small><b>${esc(node)}</b></div>`).join('<span class="pathway-arrow" aria-hidden="true">→</span>');
     const bring = product.bring.map(item=>`<li>${esc(item)}</li>`).join('');
     const receive = product.deliverables.map(item=>`<li>${esc(item)}</li>`).join('');
+    const routeLabel = display.poweredBy.toUpperCase();
+    const routeLength = routeLabel.length > 14 ? 'xlong' : routeLabel.length > 8 ? 'long' : 'short';
 
     root.innerHTML = `
       <section class="editorial-hero"><div class="wrap editorial-hero-grid"><div class="editorial-copy"><div class="breadcrumb"><a href="${portfolioHref()}">38-product portfolio</a><span>/</span>${esc(product.family)}</div><p class="eyebrow">${esc(product.family)}</p><h1>${esc(display.displayName)}</h1><p class="lead">${esc(product.headline)}</p><p class="buyer-line"><span>Built for</span>${esc(product.buyer)}</p><div class="provenance-line">Powered by <strong>${esc(display.poweredBy)}</strong></div><div class="hero-price"><b>${esc(price)}</b><span>Launch pilot · one bounded case · scope confirmed before work begins</span></div><div class="hero-actions"><a class="button" href="${vesperHref(product)}">START WITH VESPER ↗</a><a class="button ghost" href="#evidence">SEE THE EVIDENCE</a></div></div>
-        <figure class="product-orbit-stage corner-glow"><img class="product-matrix" src="${matrixAsset}" alt=""><img class="product-orbit-eye" src="${orbitAsset}" alt="DIO governed product route"><img class="premium-family-medallion" src="${premiumIconSrc(product)}" alt=""><span class="orbit-label a">${esc(product.family)}</span><span class="orbit-label b">EVIDENCE-BOUND</span><span class="orbit-label c">BOUNDED PILOT</span><span class="orbit-label d">HUMAN AUTHORITY</span><figcaption><span>DIO PRODUCT ROUTE</span><strong>${esc(product.name)}</strong></figcaption></figure>
+        <figure class="product-orbit-stage corner-glow"><img class="product-matrix" src="${matrixAsset}" alt=""><img class="product-orbit-eye" src="${orbitAsset}" alt="DIO governed product route"><img class="premium-family-medallion" src="${premiumIconSrc(product)}" alt=""><span class="route-word" data-length="${routeLength}">${esc(routeLabel)}</span><span class="orbit-label a">${esc(product.family)}</span><span class="orbit-label b">EVIDENCE-BOUND</span><span class="orbit-label c">BOUNDED PILOT</span><span class="orbit-label d">HUMAN AUTHORITY</span><figcaption><span>DIO PRODUCT ROUTE</span><strong>${esc(product.name)}</strong></figcaption></figure>
       </div></section>
       <section class="product-proof-strip"><div class="wrap proof-strip-grid"><div><small>Route</small><b>Controlled proof</b></div><div><small>Delivery</small><b>Review-ready</b></div><div><small>Evidence posture</small><b>Hash-bound where applicable</b></div><div><small>Authority</small><b>Human-held</b></div></div></section>
       <section class="editorial-section" id="artifacts"><div class="wrap"><div class="section-intro"><div><p class="eyebrow">WHAT YOU ACTUALLY GET</p><h2>Concrete work, not an AI promise.</h2></div><p>${esc(theme.value)}</p></div><div class="artifact-gallery">${artifacts}</div></div></section>
