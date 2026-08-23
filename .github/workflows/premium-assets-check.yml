@@ -1,0 +1,61 @@
+name: Validate premium DIO asset integration
+
+on:
+  pull_request:
+    paths:
+      - "assets/premium/**"
+      - "assets/dio-visual-system.css"
+      - ".github/workflows/premium-assets-check.yml"
+  workflow_dispatch:
+
+jobs:
+  premium-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate premium library and wiring
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          required = {
+              'assets/premium/dio-eye-premium.webp': 50000,
+              'assets/premium/dio-orbit-vertical.webp': 50000,
+              'assets/premium/dio-title-banner.webp': 100000,
+              'assets/premium/dio-eye-divider.webp': 100000,
+              'assets/premium/dio-panel-frame.webp': 150000,
+              'assets/premium/dio-orbit-frame.webp': 150000,
+              'assets/premium/icons/dio-icon-education.webp': 10000,
+              'assets/premium/icons/dio-icon-growth.webp': 10000,
+              'assets/premium/icons/dio-icon-evidence.webp': 10000,
+              'assets/premium/icons/dio-icon-governance.webp': 10000,
+              'assets/premium/icons/dio-icon-workflow.webp': 10000,
+              'assets/premium/icons/dio-icon-media.webp': 10000,
+              'assets/premium/icons/dio-icon-conversation.webp': 10000,
+          }
+          for filename, minimum in required.items():
+              p = Path(filename)
+              if not p.exists():
+                  raise SystemExit(f'premium asset missing: {filename}')
+              if p.stat().st_size < minimum:
+                  raise SystemExit(f'premium asset unexpectedly small: {filename}')
+
+          shared = Path('assets/dio-visual-system.css').read_text(encoding='utf-8')
+          if "@import url('premium/premium.css')" not in shared:
+              raise SystemExit('premium stylesheet is not imported by shared DIO visual system')
+
+          premium = Path('assets/premium/premium.css').read_text(encoding='utf-8')
+          tokens = (
+              'dio-eye-premium.webp','dio-orbit-vertical.webp','dio-title-banner.webp',
+              'dio-eye-divider.webp','dio-panel-frame.webp','dio-orbit-frame.webp',
+              'dio-icon-education.webp','dio-icon-growth.webp','dio-icon-evidence.webp',
+              'dio-icon-governance.webp','dio-icon-workflow.webp','dio-icon-media.webp',
+              'dio-icon-conversation.webp','.launch-product-card','.product-orbit-stage',
+              '.vesper-portrait-wrap','.vesper-welcome'
+          )
+          for token in tokens:
+              if token not in premium:
+                  raise SystemExit(f'premium wiring missing: {token}')
+
+          print('DIO_PREMIUM_ASSET_LIBRARY_VERIFIED')
+          PY
