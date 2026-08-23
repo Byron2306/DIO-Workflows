@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" role="img" aria-labelledby="title desc">
+<title id="title">DIO orchestration system</title><desc id="desc">Eight DIO systems connected to a governed orchestration core.</desc>
+<defs>
+ <radialGradient id="core" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#3a2b16"/><stop offset=".62" stop-color="#101215"/><stop offset="1" stop-color="#070809"/></radialGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <style><![CDATA[
+  .wire{stroke:#b8914a;stroke-width:1.25;fill:none;opacity:.42}.orbit{stroke:#8d713f;stroke-width:1;fill:none;opacity:.26}.node{fill:#0a0c0f;stroke:#9e7d42;stroke-width:1.2}.name{fill:#ead19b;font:700 19px Georgia,serif}.sub{fill:#817b71;font:12px Arial,sans-serif}.micro{fill:#826c43;font:700 10px monospace;letter-spacing:2px}.pulse{fill:#f1d79b;filter:url(#glow)}
+ ]]></style>
+</defs>
+<rect width="1000" height="720" fill="#060708"/>
+<g class="orbit"><circle cx="500" cy="360" r="235"/><circle cx="500" cy="360" r="180" stroke-dasharray="3 12"/><ellipse cx="500" cy="360" rx="340" ry="145"/><ellipse cx="500" cy="360" rx="170" ry="292"/></g>
+<g class="wire">
+ <path id="w1" d="M420 300L255 170"/><path id="w2" d="M500 275L500 120"/><path id="w3" d="M580 300L745 170"/><path id="w4" d="M610 360L810 360"/><path id="w5" d="M580 420L745 550"/><path id="w6" d="M500 445L500 600"/><path id="w7" d="M420 420L255 550"/><path id="w8" d="M390 360L190 360"/>
+</g>
+<g opacity=".7"><circle cx="500" cy="360" r="122" fill="url(#core)" stroke="#b18a47"/><circle cx="500" cy="360" r="96" fill="none" stroke="#765d34" stroke-dasharray="2 8"/></g>
+<path d="M422 360Q500 296 578 360Q500 424 422 360Z" fill="#090b0d" stroke="#d1a856" stroke-width="1.5"/><ellipse cx="500" cy="360" rx="33" ry="45" fill="#b98c42" opacity=".55"/><circle cx="500" cy="360" r="11" fill="#f3d98f" filter="url(#glow)"><animate attributeName="r" values="8;13;8" dur="3s" repeatCount="indefinite"/></circle>
+<text x="500" y="334" text-anchor="middle" class="name" font-size="28">DIO</text><text x="500" y="405" text-anchor="middle" class="micro">ORCHESTRATION</text>
+<g transform="translate(145 118)"><rect class="node" width="220" height="78" rx="14"/><text x="110" y="32" text-anchor="middle" class="name">HOMS</text><text x="110" y="54" text-anchor="middle" class="sub">assessment</text></g>
+<g transform="translate(390 50)"><rect class="node" width="220" height="78" rx="14"/><text x="110" y="32" text-anchor="middle" class="name">SERAPH</text><text x="110" y="54" text-anchor="middle" class="sub">challenge &amp; assurance</text></g>
+<g transform="translate(635 118)"><rect class="node" width="220" height="78" rx="14"/><text x="110" y="32" text-anchor="middle" class="name">SOPHIA</text><text x="110" y="54" text-anchor="middle" class="sub">research integrity</text></g>
+<g transform="translate(748 321)"><rect class="node" width="220" height="78" rx="14"/><text x="110" y="32" text-anchor="middle" class="name">EVIDEX</text><text x="110" y="54" text-anchor="middle" class="sub">evidence assurance</text></g>
+<g transform="translate(635 524)"><rect class="node" width="220" height="78" rx="14"/><text x="110" y="32" text-anchor="middle" class="name">META</text><text x="110" y="54" text-anchor="middle" class="sub">governance primitives</text></g>
+<g transform="translate(390 592)"><rect class="node" width="220" height="78" rx="14"/><text x="110" y="32" text-anchor="middle" class="name">ARDA</text><text x="110" y="54" text-anchor="middle" class="sub">execution identity</text></g>
+<g transform="translate(145 524)"><rect class="node" width="220" height="78" rx="14"/><text x="110" y="32" text-anchor="middle" class="name">VESPER</text><text x="110" y="54" text-anchor="middle" class="sub">presence &amp; intake</text></g>
+<g transform="translate(32 321)"><rect class="node" width="220" height="78" rx="14"/><text x="110" y="32" text-anchor="middle" class="name">VAMP</text><text x="110" y="54" text-anchor="middle" class="sub">achievement evidence</text></g>
+<g class="pulse"><circle r="4"><animateMotion dur="3.2s" repeatCount="indefinite"><mpath href="#w1"/></animateMotion></circle><circle r="4"><animateMotion dur="3.8s" begin="-.8s" repeatCount="indefinite"><mpath href="#w2"/></animateMotion></circle><circle r="4"><animateMotion dur="3.4s" begin="-1.2s" repeatCount="indefinite"><mpath href="#w3"/></animateMotion></circle><circle r="4"><animateMotion dur="3s" begin="-.5s" repeatCount="indefinite"><mpath href="#w4"/></animateMotion></circle><circle r="4"><animateMotion dur="3.7s" begin="-1.5s" repeatCount="indefinite"><mpath href="#w5"/></animateMotion></circle><circle r="4"><animateMotion dur="3.1s" begin="-.9s" repeatCount="indefinite"><mpath href="#w6"/></animateMotion></circle><circle r="4"><animateMotion dur="3.5s" begin="-2s" repeatCount="indefinite"><mpath href="#w7"/></animateMotion></circle><circle r="4"><animateMotion dur="3.3s" begin="-1.1s" repeatCount="indefinite"><mpath href="#w8"/></animateMotion></circle></g>
+</svg>
