@@ -25,7 +25,6 @@ jobs:
           required_html = (
               'id="vesperPortraitWrap"',
               'class="vesper-portrait-wrap"',
-              '.vesper-portrait-wrap.is-speaking::before',
               '@keyframes vesperPulse',
               'prefers-reduced-motion:reduce',
           )
@@ -40,6 +39,8 @@ jobs:
           for token in required_html:
               if token not in html:
                   raise SystemExit(f"Vesper speaking halo missing HTML/CSS contract: {token}")
+          if '.vesper-portrait-wrap.is-speaking::before' not in html and '.vesper-portrait-wrap.is-speaking:before' not in html:
+              raise SystemExit('Vesper speaking halo pseudo-element contract missing')
           for token in required_js:
               if token not in js:
                   raise SystemExit(f"Vesper speaking halo missing JS contract: {token}")
