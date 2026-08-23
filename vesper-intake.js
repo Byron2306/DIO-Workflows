@@ -133,3 +133,5 @@ product.addEventListener("change",()=>{ if (!sessionReady) return; notice.textCo
     sendButton.disabled = true;
   }
 })();
+
+// Visual-system verification anchor: DIO v1.
