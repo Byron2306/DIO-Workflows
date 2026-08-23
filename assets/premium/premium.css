@@ -1,0 +1,43 @@
+:root{--premium-gold:#d9b66f;--premium-gold2:#f1d79b;--premium-shadow:0 0 34px rgba(217,182,111,.10)}
+
+/* Premium DIO ornament layer. Decorative only; content and evidence remain primary. */
+.launch-v2 .launch-products,.launch-v2 .platform-thesis,.launch-v2 .launch-proof,body[data-view="product"] .editorial-section{position:relative}
+.launch-v2 .launch-products:after,.launch-v2 .platform-thesis:after,.launch-v2 .launch-proof:after,body[data-view="product"] .evidence-section:before,body[data-view="product"] .pilot-scope:before{content:"";position:absolute;left:50%;width:min(1040px,82vw);height:90px;transform:translateX(-50%);background:url('dio-eye-divider.webp') center/contain no-repeat;opacity:.22;pointer-events:none;filter:drop-shadow(0 0 18px rgba(217,182,111,.12));z-index:1}
+.launch-v2 .launch-products:after,.launch-v2 .platform-thesis:after,.launch-v2 .launch-proof:after{bottom:-46px}
+body[data-view="product"] .evidence-section:before,body[data-view="product"] .pilot-scope:before{top:-44px}
+
+.launch-v2 .platform-map{overflow:hidden;isolation:isolate}
+.launch-v2 .platform-map:before{content:"";position:absolute;inset:8px;background:url('dio-panel-frame.webp') center/100% 100% no-repeat;opacity:.34;pointer-events:none;z-index:4;filter:drop-shadow(0 0 16px rgba(217,182,111,.10))}
+.launch-v2 .platform-map:after{content:"";position:absolute;inset:5%;background:url('dio-eye-premium.webp') center/66% auto no-repeat;opacity:.055;pointer-events:none;z-index:0;mix-blend-mode:screen}
+.launch-v2 .platform-map>*{position:relative;z-index:2}
+
+.launch-v2 .portfolio-cta{overflow:hidden;isolation:isolate}
+.launch-v2 .portfolio-cta:before{content:"";position:absolute;inset:0;background:url('dio-title-banner.webp') center/100% 100% no-repeat;opacity:.16;pointer-events:none;z-index:0}
+.launch-v2 .portfolio-cta>*{position:relative;z-index:2}
+
+/* Product hero: premium eye + orbit frame over the existing evidence matrix. */
+body[data-view="product"] .editorial-hero:after{content:"";position:absolute;right:-7%;top:4%;width:min(43vw,650px);height:92%;background:url('dio-orbit-vertical.webp') center/contain no-repeat;opacity:.055;pointer-events:none;mix-blend-mode:screen;filter:drop-shadow(0 0 28px rgba(217,182,111,.08))}
+.product-orbit-stage{isolation:isolate}
+.product-orbit-stage:after{content:"";position:absolute;inset:1.5%;background:url('dio-orbit-frame.webp') center/94% 94% no-repeat;opacity:.42;pointer-events:none;z-index:4;filter:drop-shadow(0 0 18px rgba(217,182,111,.12))}
+.product-orbit-stage .product-orbit-eye{opacity:.42}
+.product-orbit-stage .premium-family-medallion{position:absolute;left:50%;top:46%;width:118px;height:118px;object-fit:contain;transform:translate(-50%,-50%);z-index:5;filter:drop-shadow(0 0 22px rgba(217,182,111,.24));transition:transform .35s ease,filter .35s ease}
+.product-orbit-stage:hover .premium-family-medallion{transform:translate(-50%,-50%) scale(1.035);filter:drop-shadow(0 0 30px rgba(217,182,111,.30))}
+.card-orbit .premium-card-medallion{position:relative;z-index:3;width:86px;height:86px;object-fit:contain;filter:drop-shadow(0 0 18px rgba(217,182,111,.18))}
+.card-orbit .family-icon{display:none}
+
+body[data-view="product"] .artifact-gallery{position:relative}
+body[data-view="product"] .artifact-card{overflow:hidden}
+body[data-view="product"] .artifact-card:after{content:"";position:absolute;right:-34px;bottom:-38px;width:120px;height:120px;background:url('dio-eye-premium.webp') center/contain no-repeat;opacity:.035;pointer-events:none}
+body[data-view="product"] .evidence-ledger,body[data-view="product"] .delivery-flow,body[data-view="product"] .pilot-card{position:relative;z-index:2}
+
+/* Vesper: frame the canonical portrait; never replace her identity with generated composite art. */
+.vesper-portrait-wrap{isolation:isolate}
+.vesper-portrait-wrap:after{content:"";position:absolute;left:50%;top:50%;width:134px;height:134px;transform:translate(-50%,-50%);background:url('dio-orbit-frame.webp') center/contain no-repeat;opacity:.46;pointer-events:none;z-index:2;filter:drop-shadow(0 0 14px rgba(217,182,111,.16))}
+.vesper-portrait-wrap .vesper-portrait{z-index:3}
+.vesper-welcome{overflow:hidden;isolation:isolate}
+.vesper-welcome:after{content:"";position:absolute;inset:8%;background:url('dio-eye-premium.webp') center/54% auto no-repeat;opacity:.045;pointer-events:none;z-index:0;mix-blend-mode:screen}
+.vesper-welcome>*{position:relative;z-index:2}
+
+@media(prefers-reduced-motion:reduce){.product-orbit-stage .premium-family-medallion{transition:none}}
+@media(max-width:900px){.launch-v2 .launch-products:after,.launch-v2 .platform-thesis:after,.launch-v2 .launch-proof:after{height:64px;bottom:-34px}.product-orbit-stage .premium-family-medallion{width:92px;height:92px}.vesper-portrait-wrap:after{width:116px;height:116px}}
+@media(max-width:640px){body[data-view="product"] .editorial-hero:after{display:none}.product-orbit-stage:after{opacity:.26}.launch-v2 .platform-map:before{opacity:.22}}
