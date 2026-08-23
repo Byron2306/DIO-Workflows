@@ -2,50 +2,76 @@
 
 /* Premium DIO ornament layer. Decorative only; content and evidence remain primary. */
 .launch-v2 .launch-products,.launch-v2 .platform-thesis,.launch-v2 .launch-proof,body[data-view="product"] .editorial-section{position:relative}
-.launch-v2 .launch-products:after,.launch-v2 .platform-thesis:after,.launch-v2 .launch-proof:after,body[data-view="product"] .evidence-section:before,body[data-view="product"] .pilot-scope:before{content:"";position:absolute;left:50%;width:min(1040px,82vw);height:90px;transform:translateX(-50%);background:url('dio-eye-divider.webp') center/contain no-repeat;opacity:.22;pointer-events:none;filter:drop-shadow(0 0 18px rgba(217,182,111,.12));z-index:1}
+.launch-v2 .launch-products:after,.launch-v2 .platform-thesis:after,.launch-v2 .launch-proof:after,body[data-view="product"] .evidence-section:before,body[data-view="product"] .pilot-scope:before{content:"";position:absolute;left:50%;width:min(1040px,82vw);height:90px;transform:translateX(-50%);background:url('dio-eye-divider.webp') center/contain no-repeat;opacity:.30;pointer-events:none;filter:drop-shadow(0 0 18px rgba(217,182,111,.16));z-index:1}
 .launch-v2 .launch-products:after,.launch-v2 .platform-thesis:after,.launch-v2 .launch-proof:after{bottom:-46px}
 body[data-view="product"] .evidence-section:before,body[data-view="product"] .pilot-scope:before{top:-44px}
 
+/* Homepage hero hierarchy: machine world is atmosphere, the Eye is identity. */
+.launch-v2 .investor-hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,6,7,.97) 0%,rgba(5,6,7,.86) 42%,rgba(5,6,7,.66) 70%,rgba(5,6,7,.78) 100%),linear-gradient(180deg,rgba(5,6,7,.18),rgba(5,6,7,.78)),url('../launch-hero.webp') 62% center/cover no-repeat;opacity:.72;pointer-events:none;z-index:0;filter:saturate(.72) contrast(1.08)}
+.launch-v2 .investor-hero-grid,.launch-v2 .hero-proof-strip{position:relative;z-index:2}
+.launch-v2 .investor-stage.hero-media{isolation:isolate;background:radial-gradient(circle at center,rgba(217,182,111,.10),transparent 44%);border-color:rgba(217,182,111,.13);box-shadow:none;overflow:visible}
+.launch-v2 .investor-stage.hero-media .hero-media-art,.launch-v2 .investor-stage.hero-media .hero-media-vignette,.launch-v2 .investor-stage.hero-media .hero-seal{opacity:0!important}
+.launch-v2 .investor-stage.hero-media:after{content:"";position:absolute;inset:3%;z-index:3;background:url('dio-eye-premium.webp') center/contain no-repeat;filter:drop-shadow(0 0 28px rgba(217,182,111,.24));animation:dioEyeBreath 8s ease-in-out infinite;pointer-events:none}
+.launch-v2 .investor-stage.hero-media:before{content:"";position:absolute;inset:-3%;z-index:4;background:url('../dio-frame-tracer.svg') center/100% 100% no-repeat;opacity:.68;pointer-events:none;filter:drop-shadow(0 0 18px rgba(217,182,111,.12))}
+.launch-v2 .hero-media-caption{z-index:5;background:linear-gradient(90deg,transparent,rgba(5,6,7,.72) 18%,rgba(5,6,7,.72) 82%,transparent);padding:14px 18px 0;text-align:center}
+.launch-v2 .hero-media-caption small{color:#d1b26f}.launch-v2 .hero-media-caption strong{color:#f5e5bd}
+.hero-brand-eye{filter:drop-shadow(0 0 30px rgba(217,182,111,.25));animation:dioEyeBreath 8s ease-in-out infinite}
+
+/* Reusable animated tracer utility for major framed surfaces. */
+.premium-frame-tracer{position:absolute;inset:0;background:url('../dio-frame-tracer.svg') center/100% 100% no-repeat;pointer-events:none;opacity:.64;filter:drop-shadow(0 0 12px rgba(217,182,111,.11));z-index:8}
+.launch-v2 .platform-map,.product-orbit-stage,.vesper-welcome,.launch-v2 .launch-form{background-image:url('../dio-frame-tracer.svg'),radial-gradient(circle at center,rgba(217,182,111,.075),transparent 44%);background-position:center;background-size:100% 100%,auto;background-repeat:no-repeat}
+
 .launch-v2 .platform-map{overflow:hidden;isolation:isolate}
-.launch-v2 .platform-map:before{content:"";position:absolute;inset:8px;background:url('dio-panel-frame.webp') center/100% 100% no-repeat;opacity:.34;pointer-events:none;z-index:4;filter:drop-shadow(0 0 16px rgba(217,182,111,.10))}
-.launch-v2 .platform-map:after{content:"";position:absolute;inset:5%;background:url('dio-eye-premium.webp') center/66% auto no-repeat;opacity:.055;pointer-events:none;z-index:0;mix-blend-mode:screen}
+.launch-v2 .platform-map:before{content:"";position:absolute;inset:8px;background:url('dio-panel-frame.webp') center/100% 100% no-repeat;opacity:.48;pointer-events:none;z-index:4;filter:drop-shadow(0 0 18px rgba(217,182,111,.14))}
+.launch-v2 .platform-map:after{content:"";position:absolute;inset:5%;background:url('dio-eye-premium.webp') center/68% auto no-repeat;opacity:.09;pointer-events:none;z-index:0;mix-blend-mode:screen;animation:dioEyeBreath 11s ease-in-out infinite}
 .launch-v2 .platform-map>*{position:relative;z-index:2}
 
 .launch-v2 .portfolio-cta{overflow:hidden;isolation:isolate}
-.launch-v2 .portfolio-cta:before{content:"";position:absolute;inset:0;background:url('dio-title-banner.webp') center/100% 100% no-repeat;opacity:.16;pointer-events:none;z-index:0}
+.launch-v2 .portfolio-cta:before{content:"";position:absolute;inset:0;background:url('dio-title-banner.webp') center/100% 100% no-repeat;opacity:.24;pointer-events:none;z-index:0}
 .launch-v2 .portfolio-cta>*{position:relative;z-index:2}
 
-/* Homepage family medallions: premium detail without turning cards into posters. */
+/* Homepage family medallions: large enough to behave like visual anchors. */
 .launch-v2 .launch-product-card{position:relative;overflow:hidden;isolation:isolate}
-.launch-v2 .launch-product-card:after{content:"";position:absolute;right:18px;top:16px;width:68px;height:68px;background:center/contain no-repeat;opacity:.24;pointer-events:none;z-index:0;filter:drop-shadow(0 0 13px rgba(217,182,111,.16))}
+.launch-v2 .launch-product-card:after{content:"";position:absolute;right:22px;top:20px;width:116px;height:116px;background:center/contain no-repeat;opacity:.78;pointer-events:none;z-index:1;filter:drop-shadow(0 0 21px rgba(217,182,111,.20));animation:dioMedallionFloat 7.5s ease-in-out infinite}
+.launch-v2 .launch-product-card:nth-child(even):after{animation-delay:-3.4s}.launch-v2 .launch-product-card:nth-child(3n):after{animation-delay:-5.1s}
 .launch-v2 .launch-product-card>*{position:relative;z-index:2}
 .launch-v2 .launch-product-card:nth-child(1):after{background-image:url('icons/dio-icon-education.webp')}.launch-v2 .launch-product-card:nth-child(2):after{background-image:url('icons/dio-icon-growth.webp')}.launch-v2 .launch-product-card:nth-child(3):after{background-image:url('icons/dio-icon-evidence.webp')}.launch-v2 .launch-product-card:nth-child(4):after{background-image:url('icons/dio-icon-governance.webp')}.launch-v2 .launch-product-card:nth-child(5):after{background-image:url('icons/dio-icon-workflow.webp')}.launch-v2 .launch-product-card:nth-child(6):after{background-image:url('icons/dio-icon-media.webp')}
-.launch-v2 .proof-story{overflow:hidden}.launch-v2 .proof-story:after{content:"";position:absolute;right:-12px;bottom:-18px;width:94px;height:94px;background:center/contain no-repeat;opacity:.07;pointer-events:none}.launch-v2 .proof-story:nth-child(1):after{background-image:url('icons/dio-icon-governance.webp')}.launch-v2 .proof-story:nth-child(2):after{background-image:url('icons/dio-icon-workflow.webp')}.launch-v2 .proof-story:nth-child(3):after{background-image:url('icons/dio-icon-growth.webp')}
+.launch-v2 .proof-story{overflow:hidden}.launch-v2 .proof-story:after{content:"";position:absolute;right:12px;bottom:10px;width:116px;height:116px;background:center/contain no-repeat;opacity:.22;pointer-events:none;filter:drop-shadow(0 0 14px rgba(217,182,111,.10))}.launch-v2 .proof-story:nth-child(1):after{background-image:url('icons/dio-icon-governance.webp')}.launch-v2 .proof-story:nth-child(2):after{background-image:url('icons/dio-icon-workflow.webp')}.launch-v2 .proof-story:nth-child(3):after{background-image:url('icons/dio-icon-growth.webp')}
 
-/* Product hero: premium eye + orbit frame over the existing evidence matrix. */
-body[data-view="product"] .editorial-hero:after{content:"";position:absolute;right:-7%;top:4%;width:min(43vw,650px);height:92%;background:url('dio-orbit-vertical.webp') center/contain no-repeat;opacity:.055;pointer-events:none;mix-blend-mode:screen;filter:drop-shadow(0 0 28px rgba(217,182,111,.08))}
-.product-orbit-stage{isolation:isolate}
-.product-orbit-stage:after{content:"";position:absolute;inset:1.5%;background:url('dio-orbit-frame.webp') center/94% 94% no-repeat;opacity:.42;pointer-events:none;z-index:4;filter:drop-shadow(0 0 18px rgba(217,182,111,.12))}
-.product-orbit-stage .product-orbit-eye{opacity:.42}
-.product-orbit-stage .product-route-icon{z-index:5;width:86px!important;height:86px!important;padding:17px;border:1px solid rgba(241,215,155,.24);border-radius:50%;background:radial-gradient(circle,rgba(217,182,111,.13),rgba(5,6,7,.82) 68%);box-shadow:0 0 0 1px rgba(217,182,111,.07),0 0 26px rgba(217,182,111,.13)}
-.product-orbit-stage .premium-family-medallion{position:absolute;left:50%;top:46%;width:118px;height:118px;object-fit:contain;transform:translate(-50%,-50%);z-index:5;filter:drop-shadow(0 0 22px rgba(217,182,111,.24));transition:transform .35s ease,filter .35s ease}
-.product-orbit-stage:hover .premium-family-medallion{transform:translate(-50%,-50%) scale(1.035);filter:drop-shadow(0 0 30px rgba(217,182,111,.30))}
-.card-orbit .premium-card-medallion{position:relative;z-index:3;width:86px;height:86px;object-fit:contain;filter:drop-shadow(0 0 18px rgba(217,182,111,.18))}
+/* Portfolio index: use the premium Eye and give route glyphs real visual weight. */
+body[data-view="portfolio"] .hero:after{background-image:url('dio-eye-premium.webp')!important;opacity:.58!important;right:1vw!important;top:-54px!important;width:min(43vw,580px)!important;height:min(43vw,580px)!important;filter:drop-shadow(0 0 26px rgba(217,182,111,.18));animation:dioEyeBreath 9s ease-in-out infinite}
+.card-orbit .card-eye{width:190px!important;height:190px!important;opacity:.60!important;filter:drop-shadow(0 0 22px rgba(217,182,111,.15))!important}
+.card-orbit .family-icon{width:82px!important;height:82px!important;color:#f1d79b!important;padding:17px;border:1px solid rgba(241,215,155,.24);border-radius:50%;background:radial-gradient(circle,rgba(217,182,111,.14),rgba(5,6,7,.82) 68%);box-shadow:0 0 0 1px rgba(217,182,111,.08),0 0 25px rgba(217,182,111,.15);filter:drop-shadow(0 0 13px rgba(217,182,111,.15));animation:dioMedallionFloat 8.5s ease-in-out infinite}
+.card-orbit .premium-card-medallion{position:relative;z-index:3;width:108px;height:108px;object-fit:contain;filter:drop-shadow(0 0 22px rgba(217,182,111,.22));animation:dioMedallionFloat 8.5s ease-in-out infinite}
 
+/* Product hero: premium orbit furniture with a moving light trace. */
+body[data-view="product"] .editorial-hero:after{content:"";position:absolute;right:-7%;top:4%;width:min(43vw,650px);height:92%;background:url('dio-orbit-vertical.webp') center/contain no-repeat;opacity:.10;pointer-events:none;mix-blend-mode:screen;filter:drop-shadow(0 0 30px rgba(217,182,111,.10));animation:dioEyeBreath 12s ease-in-out infinite}
+.product-orbit-stage{isolation:isolate;background-image:url('../dio-frame-tracer.svg'),radial-gradient(circle at 50% 48%,rgba(217,182,111,.15),transparent 30%),linear-gradient(145deg,#0d1013,#050607)!important;background-size:100% 100%,auto,auto!important;background-repeat:no-repeat!important}
+.product-orbit-stage:after{content:"";position:absolute;inset:1.5%;background:url('dio-orbit-frame.webp') center/94% 94% no-repeat;opacity:.58;pointer-events:none;z-index:4;filter:drop-shadow(0 0 22px rgba(217,182,111,.16))}
+.product-orbit-stage .product-orbit-eye{opacity:.56!important;filter:drop-shadow(0 0 34px rgba(217,182,111,.20))!important;animation:dioEyeBreath 9s ease-in-out infinite}
+.product-orbit-stage .product-route-icon{z-index:5;width:106px!important;height:106px!important;padding:22px;border:1px solid rgba(241,215,155,.31);border-radius:50%;background:radial-gradient(circle,rgba(217,182,111,.17),rgba(5,6,7,.82) 68%);box-shadow:0 0 0 1px rgba(217,182,111,.08),0 0 34px rgba(217,182,111,.18);animation:dioMedallionFloat 8s ease-in-out infinite}
+.product-orbit-stage .premium-family-medallion{position:absolute;left:50%;top:46%;width:136px;height:136px;object-fit:contain;transform:translate(-50%,-50%);z-index:5;filter:drop-shadow(0 0 26px rgba(217,182,111,.27));animation:dioMedallionFloatCentered 8s ease-in-out infinite}
+.product-orbit-stage:hover .premium-family-medallion{filter:drop-shadow(0 0 34px rgba(217,182,111,.34))}
 body[data-view="product"] .artifact-gallery{position:relative}
 body[data-view="product"] .artifact-card{overflow:hidden}
-body[data-view="product"] .artifact-card:after{content:"";position:absolute;right:-34px;bottom:-38px;width:120px;height:120px;background:url('dio-eye-premium.webp') center/contain no-repeat;opacity:.035;pointer-events:none}
+body[data-view="product"] .artifact-card:after{content:"";position:absolute;right:-20px;bottom:-22px;width:134px;height:134px;background:url('dio-eye-premium.webp') center/contain no-repeat;opacity:.075;pointer-events:none}
 body[data-view="product"] .evidence-ledger,body[data-view="product"] .delivery-flow,body[data-view="product"] .pilot-card{position:relative;z-index:2}
 
-/* Vesper: frame the canonical portrait; never replace her identity with generated composite art. */
+/* Vesper: canonical face, richer institutional frame. Speaking energises the frame itself. */
 .vesper-portrait-wrap{isolation:isolate}
-.vesper-portrait-wrap:after{content:"";position:absolute;left:50%;top:50%;width:134px;height:134px;transform:translate(-50%,-50%);background:url('dio-orbit-frame.webp') center/contain no-repeat;opacity:.46;pointer-events:none;z-index:2;filter:drop-shadow(0 0 14px rgba(217,182,111,.16))}
+.vesper-portrait-wrap:after{content:"";position:absolute;left:50%;top:50%;width:148px;height:148px;transform:translate(-50%,-50%);background:url('dio-orbit-frame.webp') center/contain no-repeat;opacity:.66;pointer-events:none;z-index:2;filter:drop-shadow(0 0 17px rgba(217,182,111,.19));transition:opacity .25s ease,filter .25s ease}
+.vesper-portrait-wrap.is-speaking:after{opacity:1;filter:drop-shadow(0 0 28px rgba(241,215,155,.48));animation:dioFrameSpeak 1.15s ease-in-out infinite}
 .vesper-portrait-wrap .vesper-portrait{z-index:3}
-.vesper-welcome{overflow:hidden;isolation:isolate}
-.vesper-welcome:after{content:"";position:absolute;inset:8%;background:url('dio-eye-premium.webp') center/54% auto no-repeat;opacity:.045;pointer-events:none;z-index:0;mix-blend-mode:screen}
-.vesper-welcome:before{content:"";position:absolute;right:24px;bottom:22px;width:82px;height:82px;background:url('icons/dio-icon-conversation.webp') center/contain no-repeat;opacity:.09;pointer-events:none;z-index:1}
+.vesper-welcome{overflow:hidden;isolation:isolate;background-image:url('../dio-frame-tracer.svg'),linear-gradient(145deg,rgba(14,16,19,.84),rgba(6,7,8,.78))!important;background-size:100% 100%,auto!important;background-repeat:no-repeat!important}
+.vesper-welcome:after{content:"";position:absolute;inset:4%;background:url('dio-eye-premium.webp') center 12%/min(64%,430px) auto no-repeat;opacity:.14;pointer-events:none;z-index:0;mix-blend-mode:screen;filter:drop-shadow(0 0 20px rgba(217,182,111,.12));animation:dioEyeBreath 10s ease-in-out infinite}
+.vesper-welcome:before{content:"";position:absolute;right:24px;bottom:22px;width:108px;height:108px;background:url('icons/dio-icon-conversation.webp') center/contain no-repeat;opacity:.30;pointer-events:none;z-index:1;filter:drop-shadow(0 0 14px rgba(217,182,111,.15));animation:dioMedallionFloat 8s ease-in-out infinite}
 .vesper-welcome>*{position:relative;z-index:2}
 
-@media(prefers-reduced-motion:reduce){.product-orbit-stage .premium-family-medallion{transition:none}}
-@media(max-width:900px){.launch-v2 .launch-products:after,.launch-v2 .platform-thesis:after,.launch-v2 .launch-proof:after{height:64px;bottom:-34px}.product-orbit-stage .premium-family-medallion{width:92px;height:92px}.vesper-portrait-wrap:after{width:116px;height:116px}}
-@media(max-width:640px){body[data-view="product"] .editorial-hero:after{display:none}.product-orbit-stage:after{opacity:.26}.launch-v2 .platform-map:before{opacity:.22}.launch-v2 .launch-product-card:after{width:54px;height:54px;opacity:.18}}
+@keyframes dioEyeBreath{0%,100%{opacity:.78;transform:scale(.985);filter:drop-shadow(0 0 20px rgba(217,182,111,.16))}50%{opacity:1;transform:scale(1.012);filter:drop-shadow(0 0 38px rgba(241,215,155,.28))}}
+@keyframes dioMedallionFloat{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-5px) rotate(.45deg)}}
+@keyframes dioMedallionFloatCentered{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,calc(-50% - 5px)) scale(1.025)}}
+@keyframes dioFrameSpeak{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:.72}50%{transform:translate(-50%,-50%) scale(1.045);opacity:1}}
+
+@media(prefers-reduced-motion:reduce){.launch-v2 .investor-stage.hero-media:after,.launch-v2 .launch-product-card:after,.launch-v2 .platform-map:after,body[data-view="portfolio"] .hero:after,.card-orbit .family-icon,.card-orbit .premium-card-medallion,body[data-view="product"] .editorial-hero:after,.product-orbit-stage .product-orbit-eye,.product-orbit-stage .product-route-icon,.product-orbit-stage .premium-family-medallion,.vesper-welcome:after,.vesper-welcome:before,.vesper-portrait-wrap.is-speaking:after{animation:none!important}.premium-frame-tracer{opacity:.35}}
+@media(max-width:900px){.launch-v2 .launch-products:after,.launch-v2 .platform-thesis:after,.launch-v2 .launch-proof:after{height:64px;bottom:-34px}.launch-v2 .launch-product-card:after{width:92px;height:92px;opacity:.64}.product-orbit-stage .premium-family-medallion{width:110px;height:110px}.vesper-portrait-wrap:after{width:128px;height:128px}}
+@media(max-width:640px){.launch-v2 .investor-hero:before{background-position:70% center;opacity:.56}.launch-v2 .investor-stage.hero-media:before{opacity:.38}.launch-v2 .investor-stage.hero-media:after{inset:8%}.launch-v2 .hero-media-caption{display:none}body[data-view="product"] .editorial-hero:after{display:none}.product-orbit-stage:after{opacity:.34}.launch-v2 .platform-map:before{opacity:.30}.launch-v2 .launch-product-card:after{width:76px;height:76px;opacity:.52}.card-orbit .family-icon{width:70px!important;height:70px!important}.vesper-welcome:after{opacity:.09}}
