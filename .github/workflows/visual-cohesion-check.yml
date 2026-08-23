@@ -35,8 +35,9 @@ jobs:
               if token not in system_svg: raise SystemExit(f'animated system diagram missing: {token}')
 
           vesper = Path('vesper-intake.html').read_text(); vesper_js = Path('vesper-intake.js').read_text()
-          for token in ('assets/dio-visual-system.css','assets/dio-eye-orbit.svg','trust-links','width:84px'):
+          for token in ('assets/dio-visual-system.css','assets/vesper-public.webp','vesper-welcome','vesper-portrait-wrap','trust-links','width:84px'):
               if token not in vesper: raise SystemExit(f'Vesper cohesion token missing: {token}')
+          if 'assets/dio-eye-orbit.svg' in vesper: raise SystemExit('legacy duplicate Vesper Eye returned')
           if 'Structured intake remains available' not in vesper and 'Structured intake remains available' not in vesper_js: raise SystemExit('Vesper graceful structured-intake fallback missing')
           if '#233d68' in vesper or '--blue:#88b8ff' in vesper: raise SystemExit('legacy blue Vesper theme still present')
 
@@ -52,10 +53,10 @@ jobs:
               if 'editorial-art' in page: raise SystemExit(f'{slug}: generic brochure art returned')
 
           index = Path('products/index.html').read_text()
-          if 'theme-color" content="#050607"' not in index: raise SystemExit('portfolio is not on DIO dark theme')
+          if 'theme-color\" content=\"#050607\"' not in index: raise SystemExit('portfolio is not on DIO dark theme')
 
           canonical = Path('privacy/index.html').read_text()
-          for token in ('Google API Services User Data Policy','Limited Use','../terms/','../data-deletion/','rel="canonical"'):
+          for token in ('Google API Services User Data Policy','Limited Use','../terms/','../data-deletion/','rel=\"canonical\"'):
               if token not in canonical: raise SystemExit(f'privacy verification token missing: {token}')
           for filename in ('privacy/index.html','terms/index.html','data-deletion/index.html'):
               text = Path(filename).read_text()
@@ -63,7 +64,7 @@ jobs:
                   if token not in text: raise SystemExit(f'{filename}: trust shell token missing: {token}')
 
           legacy = Path('privacy.html').read_text()
-          if 'rel="canonical"' not in legacy or 'https://dioworkflows.co.za/privacy/' not in legacy or 'url=privacy/' not in legacy: raise SystemExit('legacy privacy alias does not point to canonical policy')
+          if 'rel=\"canonical\"' not in legacy or 'https://dioworkflows.co.za/privacy/' not in legacy or 'url=privacy/' not in legacy: raise SystemExit('legacy privacy alias does not point to canonical policy')
 
           print('DIO_VISUAL_COHESION_VERIFIED')
           PY
