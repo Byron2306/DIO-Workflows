@@ -17,63 +17,53 @@ jobs:
           from pathlib import Path
 
           required_files = [
-              'assets/dio-visual-system.css',
-              'assets/dio-eye-orbit.svg',
-              'assets/dio-product-matrix.svg',
-              'assets/dio-icons.svg',
-              'assets/legal-trust.css',
-              'privacy/index.html',
-              'terms/index.html',
-              'data-deletion/index.html',
+              'assets/dio-visual-system.css','assets/dio-eye-orbit.svg','assets/dio-product-matrix.svg','assets/dio-system-orbit.svg','assets/dio-icons.svg','assets/legal-trust.css',
+              'privacy/index.html','terms/index.html','data-deletion/index.html',
           ]
           for filename in required_files:
-              if not Path(filename).exists():
-                  raise SystemExit(f'missing cohesion asset: {filename}')
+              if not Path(filename).exists(): raise SystemExit(f'missing cohesion asset: {filename}')
 
           shared = Path('assets/dio-visual-system.css').read_text()
-          for token in ('--founder-copy:#eee7dc', '.launch-v2 .about-founder', '.launch-v2 .proof-story', 'product-orbit-stage', 'corner-glow', '--paper:#050607', 'box-shadow:0 0 0 1px rgba(217,182,111'):
-              if token not in shared:
-                  raise SystemExit(f'shared visual contract missing: {token}')
+          for token in ('--founder-copy:#eee7dc','.launch-v2 .about-founder','.launch-v2 .proof-story','product-orbit-stage','corner-glow','--paper:#050607','box-shadow:0 0 0 1px rgba(217,182,111'):
+              if token not in shared: raise SystemExit(f'shared visual contract missing: {token}')
 
-          launch_js = Path('assets/launch-v2.js').read_text()
-          if 'assets/dio-visual-system.css' not in launch_js:
-              raise SystemExit('homepage does not load shared visual system')
+          root = Path('index.html').read_text()
+          for token in ('assets/dio-visual-system.css','assets/dio-system-orbit.svg','corner-glow'):
+              if token not in root: raise SystemExit(f'homepage cohesion token missing: {token}')
+          system_svg = Path('assets/dio-system-orbit.svg').read_text()
+          for token in ('HOMS','SERAPH','SOPHIA','EVIDEX','META','ARDA','VESPER','VAMP','animateMotion'):
+              if token not in system_svg: raise SystemExit(f'animated system diagram missing: {token}')
 
-          vesper = Path('vesper-intake.html').read_text()
-          vesper_js = Path('vesper-intake.js').read_text()
-          for token in ('assets/dio-visual-system.css', 'assets/dio-eye-orbit.svg', 'trust-links', 'width:84px'):
-              if token not in vesper:
-                  raise SystemExit(f'Vesper cohesion token missing: {token}')
-          if 'Structured intake remains available' not in vesper and 'Structured intake remains available' not in vesper_js:
-              raise SystemExit('Vesper graceful structured-intake fallback missing')
-          if '#233d68' in vesper or '--blue:#88b8ff' in vesper:
-              raise SystemExit('legacy blue Vesper theme still present')
+          vesper = Path('vesper-intake.html').read_text(); vesper_js = Path('vesper-intake.js').read_text()
+          for token in ('assets/dio-visual-system.css','assets/dio-eye-orbit.svg','trust-links','width:84px'):
+              if token not in vesper: raise SystemExit(f'Vesper cohesion token missing: {token}')
+          if 'Structured intake remains available' not in vesper and 'Structured intake remains available' not in vesper_js: raise SystemExit('Vesper graceful structured-intake fallback missing')
+          if '#233d68' in vesper or '--blue:#88b8ff' in vesper: raise SystemExit('legacy blue Vesper theme still present')
 
           app = Path('products/app.js').read_text()
-          if 'editorial-art' in app or 'heroAsset' in app:
-              raise SystemExit('generic product hero-image dependency still present')
+          if 'editorial-art' in app or 'heroAsset' in app: raise SystemExit('generic product hero-image dependency still present')
           for token in ('dio-visual-system.css','dio-eye-orbit.svg','dio-product-matrix.svg','dio-icons.svg','product-orbit-stage','corner-glow'):
-              if token not in app:
-                  raise SystemExit(f'product orbital/static visual missing: {token}')
+              if token not in app: raise SystemExit(f'product orbital/static visual missing: {token}')
+
+          for slug in ('homs','vamp','sophia','evidex'):
+              page = Path(f'products/{slug}/index.html').read_text()
+              for token in ('../../assets/dio-visual-system.css','product-orbit-stage','../../assets/dio-eye-orbit.svg','../../assets/dio-product-matrix.svg','corner-glow'):
+                  if token not in page: raise SystemExit(f'{slug}: flagship visual token missing: {token}')
+              if 'editorial-art' in page: raise SystemExit(f'{slug}: generic brochure art returned')
 
           index = Path('products/index.html').read_text()
-          if 'theme-color" content="#050607"' not in index:
-              raise SystemExit('portfolio is not on DIO dark theme')
+          if 'theme-color" content="#050607"' not in index: raise SystemExit('portfolio is not on DIO dark theme')
 
           canonical = Path('privacy/index.html').read_text()
-          for token in ('Google API Services User Data Policy', 'Limited Use', '../terms/', '../data-deletion/', 'rel="canonical"'):
-              if token not in canonical:
-                  raise SystemExit(f'privacy verification token missing: {token}')
-
+          for token in ('Google API Services User Data Policy','Limited Use','../terms/','../data-deletion/','rel="canonical"'):
+              if token not in canonical: raise SystemExit(f'privacy verification token missing: {token}')
           for filename in ('privacy/index.html','terms/index.html','data-deletion/index.html'):
               text = Path(filename).read_text()
-              for token in ('assets/dio-visual-system.css', 'assets/legal-trust.css', 'Privacy', 'Terms', 'Data deletion'):
-                  if token not in text:
-                      raise SystemExit(f'{filename}: trust shell token missing: {token}')
+              for token in ('assets/dio-visual-system.css','assets/legal-trust.css','Privacy','Terms','Data deletion'):
+                  if token not in text: raise SystemExit(f'{filename}: trust shell token missing: {token}')
 
           legacy = Path('privacy.html').read_text()
-          if 'rel="canonical"' not in legacy or 'https://dioworkflows.co.za/privacy/' not in legacy or 'url=privacy/' not in legacy:
-              raise SystemExit('legacy privacy alias does not point to canonical policy')
+          if 'rel="canonical"' not in legacy or 'https://dioworkflows.co.za/privacy/' not in legacy or 'url=privacy/' not in legacy: raise SystemExit('legacy privacy alias does not point to canonical policy')
 
           print('DIO_VISUAL_COHESION_VERIFIED')
           PY
