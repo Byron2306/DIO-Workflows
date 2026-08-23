@@ -47,15 +47,29 @@ jobs:
                   raise SystemExit(f'premium asset unexpectedly small: {filename}')
 
           shared = Path('assets/dio-visual-system.css').read_text(encoding='utf-8')
-          if "@import url('premium/premium.css')" not in shared:
-              raise SystemExit('premium stylesheet is not imported by shared DIO visual system')
+          if "@import url('premium/premium.css')" in shared:
+              raise SystemExit('premium stylesheet must load after the base visual system, not before it via @import')
+          home = Path('index.html').read_text(encoding='utf-8')
+          for alias in ('id="control"','id="contact"'):
+              if alias not in home:
+                  raise SystemExit(f'legacy homepage anchor alias missing: {alias}')
+          if home.index('assets/dio-visual-system.css') > home.index('assets/premium/premium.css'):
+              raise SystemExit('homepage premium stylesheet does not load after the base visual system')
+          vesper = Path('vesper-intake.html').read_text(encoding='utf-8')
+          if vesper.index('assets/dio-visual-system.css') > vesper.index('assets/premium/premium.css'):
+              raise SystemExit('Vesper premium stylesheet does not load after the base visual system')
+          app = Path('products/app.js').read_text(encoding='utf-8')
+          if app.index('assets/dio-visual-system.css') > app.index('assets/premium/premium.css'):
+              raise SystemExit('product premium stylesheet is not appended after the base visual system')
+          if 'premium-card-medallion' not in app or 'premium-family-medallion' not in app:
+              raise SystemExit('product renderer does not emit premium medallions')
 
           premium = Path('assets/premium/premium.css').read_text(encoding='utf-8')
           required_tokens = (
               'dio-eye-premium.webp','dio-orbit-vertical.webp','dio-title-banner.webp',
               'dio-eye-divider.webp','dio-panel-frame.webp','dio-orbit-frame.webp',
               'dio-frame-tracer.svg','launch-hero.webp',
-              '.investor-hero:before','.investor-stage.hero-media:after','.hero-brand-eye',
+              '.investor-hero:before','.investor-stage.hero-media:after','.hero-brand-eye','mix-blend-mode:screen',
               '.launch-product-card:nth-child(1):after','.launch-product-card:nth-child(6):after',
               '.card-orbit .family-icon','.product-orbit-stage','.vesper-portrait-wrap.is-speaking',
               '.vesper-welcome','@keyframes dioEyeBreath','@keyframes dioMedallionFloat',

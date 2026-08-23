@@ -11,7 +11,7 @@ body[data-view="product"] .evidence-section:before,body[data-view="product"] .pi
 .launch-v2 .investor-hero-grid,.launch-v2 .hero-proof-strip{position:relative;z-index:2}
 .launch-v2 .investor-stage.hero-media{isolation:isolate;background:radial-gradient(circle at center,rgba(217,182,111,.10),transparent 44%);border-color:rgba(217,182,111,.13);box-shadow:none;overflow:visible}
 .launch-v2 .investor-stage.hero-media .hero-media-art,.launch-v2 .investor-stage.hero-media .hero-media-vignette,.launch-v2 .investor-stage.hero-media .hero-seal{opacity:0!important}
-.launch-v2 .investor-stage.hero-media:after{content:"";position:absolute;inset:3%;z-index:3;background:url('dio-eye-premium.webp') center/contain no-repeat;filter:drop-shadow(0 0 28px rgba(217,182,111,.24));animation:dioEyeBreath 8s ease-in-out infinite;pointer-events:none}
+.launch-v2 .investor-stage.hero-media:after{content:"";position:absolute;inset:3%;z-index:3;background:url('dio-eye-premium.webp') center/contain no-repeat;mix-blend-mode:screen;filter:drop-shadow(0 0 28px rgba(217,182,111,.24));animation:dioEyeBreath 8s ease-in-out infinite;pointer-events:none}
 .launch-v2 .investor-stage.hero-media:before{content:"";position:absolute;inset:-3%;z-index:4;background:url('../dio-frame-tracer.svg') center/100% 100% no-repeat;opacity:.68;pointer-events:none;filter:drop-shadow(0 0 18px rgba(217,182,111,.12))}
 .launch-v2 .hero-media-caption{z-index:5;background:linear-gradient(90deg,transparent,rgba(5,6,7,.72) 18%,rgba(5,6,7,.72) 82%,transparent);padding:14px 18px 0;text-align:center}
 .launch-v2 .hero-media-caption small{color:#d1b26f}.launch-v2 .hero-media-caption strong{color:#f5e5bd}
@@ -57,15 +57,17 @@ body[data-view="product"] .artifact-card{overflow:hidden}
 body[data-view="product"] .artifact-card:after{content:"";position:absolute;right:-20px;bottom:-22px;width:134px;height:134px;background:url('dio-eye-premium.webp') center/contain no-repeat;opacity:.075;pointer-events:none}
 body[data-view="product"] .evidence-ledger,body[data-view="product"] .delivery-flow,body[data-view="product"] .pilot-card{position:relative;z-index:2}
 
-/* Vesper: canonical face, richer institutional frame. Speaking energises the frame itself. */
+/* Vesper: one institutional Eye system. The ornate frame owns desktop; mobile stays light. */
 .vesper-portrait-wrap{isolation:isolate}
 .vesper-portrait-wrap:after{content:"";position:absolute;left:50%;top:50%;width:148px;height:148px;transform:translate(-50%,-50%);background:url('dio-orbit-frame.webp') center/contain no-repeat;opacity:.66;pointer-events:none;z-index:2;filter:drop-shadow(0 0 17px rgba(217,182,111,.19));transition:opacity .25s ease,filter .25s ease}
 .vesper-portrait-wrap.is-speaking:after{opacity:1;filter:drop-shadow(0 0 28px rgba(241,215,155,.48));animation:dioFrameSpeak 1.15s ease-in-out infinite}
 .vesper-portrait-wrap .vesper-portrait{z-index:3}
-.vesper-welcome{overflow:hidden;isolation:isolate;background-image:url('../dio-frame-tracer.svg'),linear-gradient(145deg,rgba(14,16,19,.84),rgba(6,7,8,.78))!important;background-size:100% 100%,auto!important;background-repeat:no-repeat!important}
-.vesper-welcome:after{content:"";position:absolute;inset:4%;background:url('dio-eye-premium.webp') center 12%/min(64%,430px) auto no-repeat;opacity:.14;pointer-events:none;z-index:0;mix-blend-mode:screen;filter:drop-shadow(0 0 20px rgba(217,182,111,.12));animation:dioEyeBreath 10s ease-in-out infinite}
-.vesper-welcome:before{content:"";position:absolute;right:24px;bottom:22px;width:108px;height:108px;background:url('icons/dio-icon-conversation.webp') center/contain no-repeat;opacity:.30;pointer-events:none;z-index:1;filter:drop-shadow(0 0 14px rgba(217,182,111,.15));animation:dioMedallionFloat 8s ease-in-out infinite}
+.vesper-welcome{position:relative;overflow:hidden;isolation:isolate;padding:118px 72px 62px!important;background:linear-gradient(145deg,rgba(14,16,19,.86),rgba(6,7,8,.82))!important}
+.vesper-welcome:after{content:"";position:absolute;inset:10px;background:url('dio-panel-frame.webp') center/100% 100% no-repeat;opacity:.50;pointer-events:none;z-index:0;filter:drop-shadow(0 0 20px rgba(217,182,111,.14))}
+.vesper-welcome:before{content:"";position:absolute;right:34px;bottom:34px;width:76px;height:76px;background:url('icons/dio-icon-conversation.webp') center/contain no-repeat;opacity:.17;pointer-events:none;z-index:1;filter:drop-shadow(0 0 12px rgba(217,182,111,.12));animation:dioMedallionFloat 8s ease-in-out infinite}
 .vesper-welcome>*{position:relative;z-index:2}
+.vesper-welcome p{max-width:590px!important;margin-top:22px!important}
+.welcome-pills{margin-top:28px!important}
 
 @keyframes dioEyeBreath{0%,100%{opacity:.78;transform:scale(.985);filter:drop-shadow(0 0 20px rgba(217,182,111,.16))}50%{opacity:1;transform:scale(1.012);filter:drop-shadow(0 0 38px rgba(241,215,155,.28))}}
 @keyframes dioMedallionFloat{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-5px) rotate(.45deg)}}
@@ -73,5 +75,7 @@ body[data-view="product"] .evidence-ledger,body[data-view="product"] .delivery-f
 @keyframes dioFrameSpeak{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:.72}50%{transform:translate(-50%,-50%) scale(1.045);opacity:1}}
 
 @media(prefers-reduced-motion:reduce){.launch-v2 .investor-stage.hero-media:after,.launch-v2 .launch-product-card:after,.launch-v2 .platform-map:after,body[data-view="portfolio"] .hero:after,.card-orbit .family-icon,.card-orbit .premium-card-medallion,body[data-view="product"] .editorial-hero:after,.product-orbit-stage .product-orbit-eye,.product-orbit-stage .product-route-icon,.product-orbit-stage .premium-family-medallion,.vesper-welcome:after,.vesper-welcome:before,.vesper-portrait-wrap.is-speaking:after{animation:none!important}.premium-frame-tracer{opacity:.35}}
-@media(max-width:900px){.launch-v2 .launch-products:after,.launch-v2 .platform-thesis:after,.launch-v2 .launch-proof:after{height:64px;bottom:-34px}.launch-v2 .launch-product-card:after{width:92px;height:92px;opacity:.64}.product-orbit-stage .premium-family-medallion{width:110px;height:110px}.vesper-portrait-wrap:after{width:128px;height:128px}}
+@media(max-width:900px){.launch-v2 .launch-products:after,.launch-v2 .platform-thesis:after,.launch-v2 .launch-proof:after{height:64px;bottom:-34px}.launch-v2 .launch-product-card:after{width:92px;height:92px;opacity:.64}.product-orbit-stage .premium-family-medallion{width:110px;height:110px}.vesper-portrait-wrap:after{width:128px;height:128px}.vesper-welcome{padding:104px 34px 46px!important}.vesper-welcome:after{background-image:url('../dio-frame-tracer.svg');opacity:.58;inset:4px}.vesper-welcome:before{left:50%;right:auto;top:20px;bottom:auto;width:70px;height:70px;transform:translateX(-50%);background-image:url('dio-eye-premium.webp');opacity:.58;animation:dioEyeBreath 9s ease-in-out infinite}.vesper-welcome p{max-width:520px!important}.welcome-pills{margin-top:22px!important}}
 @media(max-width:640px){.launch-v2 .investor-hero:before{background-position:70% center;opacity:.56}.launch-v2 .investor-stage.hero-media:before{opacity:.38}.launch-v2 .investor-stage.hero-media:after{inset:8%}.launch-v2 .hero-media-caption{display:none}body[data-view="product"] .editorial-hero:after{display:none}.product-orbit-stage:after{opacity:.34}.launch-v2 .platform-map:before{opacity:.30}.launch-v2 .launch-product-card:after{width:76px;height:76px;opacity:.52}.card-orbit .family-icon{width:70px!important;height:70px!important}.vesper-welcome:after{opacity:.09}}
+
+.legacy-anchor{position:absolute;width:1px;height:1px;overflow:hidden;pointer-events:none}

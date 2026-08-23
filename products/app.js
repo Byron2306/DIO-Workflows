@@ -24,6 +24,18 @@
     'Evidence & Assurance':'shield','Obligations':'route','AI & Digital Trust':'network','High-Risk Review':'shield','Regulated Operations':'authority'
   };
 
+  const PREMIUM_ICON_BY_FAMILY = {
+    'Documents & Rooms':'workflow',
+    'Performance & People':'growth',
+    'Education':'education',
+    'Research & Learning':'evidence',
+    'Evidence & Assurance':'evidence',
+    'Obligations':'workflow',
+    'AI & Digital Trust':'governance',
+    'High-Risk Review':'governance',
+    'Regulated Operations':'partnership'
+  };
+
   const FAMILY_MARKET = {
     'Evidence & Assurance':{accent:'#b99355',dark:'#0a0c0f',soft:'#15181d',kicker:'GRC · audit readiness · evidence automation',value:'Replace evidence archaeology with a traceable first pass: requirements, source material, gaps and review questions in one decision-ready view.'},
     'Obligations':{accent:'#c0a06b',dark:'#0a0c0f',soft:'#17181b',kicker:'obligation intelligence · deadline control · compliance readiness',value:'Turn dense agreements, tenders, permits and policies into a working obligation spine so mandatory requirements and missing proof surface before the deadline.'},
@@ -57,11 +69,20 @@
   const themeStyle = theme => `--accent:${theme.accent};--accent-dark:${theme.dark};--accent-soft:${theme.soft}`;
   const iconId = product => ICON_BY_FAMILY[product.family] || 'network';
   const iconUse = (product, className='family-icon') => `<svg class="${className}" aria-hidden="true"><use href="${rootHref()}assets/dio-icons.svg#${iconId(product)}"></use></svg>`;
+  const premiumIconSrc = product => `${rootHref()}assets/premium/icons/dio-icon-${PREMIUM_ICON_BY_FAMILY[product.family] || 'evidence'}.webp`;
 
   const visualStyles = document.createElement('link');
   visualStyles.rel = 'stylesheet';
   visualStyles.href = `${rootHref()}assets/dio-visual-system.css`;
   document.head.appendChild(visualStyles);
+  const premiumStyles = document.createElement('link');
+  premiumStyles.rel = 'stylesheet';
+  premiumStyles.href = `${rootHref()}assets/premium/premium.css`;
+  document.head.appendChild(premiumStyles);
+
+  document.querySelectorAll('a[href$="#control"]').forEach(link => { link.href = `${rootHref()}#proof`; });
+  document.querySelectorAll('a[href$="#contact"]').forEach(link => { link.href = `${rootHref()}#intake`; });
+  document.querySelectorAll('a[href$="privacy.html"]').forEach(link => { link.href = `${rootHref()}privacy/`; });
 
   function displayFor(product) {
     const explicit = DISPLAY_BY_SLUG[product.slug] || {};
@@ -90,7 +111,7 @@
       grid.innerHTML = rows.length ? rows.map(product => {
         const theme = themeFor(product);
         return `<article class="card corner-glow" style="${themeStyle(theme)}">
-          <div class="card-visual card-orbit"><img class="card-eye" src="${rootHref()}assets/dio-eye-orbit.svg" alt="">${iconUse(product)}<span>${esc(theme.kicker)}</span></div>
+          <div class="card-visual card-orbit"><img class="card-eye" src="${rootHref()}assets/dio-eye-orbit.svg" alt=""><img class="premium-card-medallion" src="${premiumIconSrc(product)}" alt=""><span>${esc(theme.kicker)}</span></div>
           <div class="card-body"><span class="badge dio-pill">Controlled route proof</span><div class="family">${esc(product.family)}</div><h2>${esc(product.headline)}</h2><p class="headline">DIO route · ${esc(product.name)}</p><p class="buyer"><b>Built for:</b> ${esc(product.buyer)}</p><div class="price-line">${esc(priceText(product))}<small>Launch pilot · one bounded case</small></div><div class="card-actions"><a class="button" href="${encodeURIComponent(product.slug)}/">SEE THE OFFER</a><a class="button ghost" href="${intakeHref(product)}">START ↗</a></div></div>
         </article>`;
       }).join('') : '<div class="empty">No product matches that search.</div>';
@@ -127,10 +148,10 @@
 
     root.innerHTML = `
       <section class="editorial-hero"><div class="wrap editorial-hero-grid"><div class="editorial-copy"><div class="breadcrumb"><a href="${portfolioHref()}">38-product portfolio</a><span>/</span>${esc(product.family)}</div><p class="eyebrow">${esc(product.family)}</p><h1>${esc(display.displayName)}</h1><p class="lead">${esc(product.headline)}</p><p class="buyer-line"><span>Built for</span>${esc(product.buyer)}</p><div class="provenance-line">Powered by <strong>${esc(display.poweredBy)}</strong></div><div class="hero-price"><b>${esc(price)}</b><span>Launch pilot · one bounded case · scope confirmed before work begins</span></div><div class="hero-actions"><a class="button" href="${vesperHref(product)}">START WITH VESPER ↗</a><a class="button ghost" href="#evidence">SEE THE EVIDENCE</a></div></div>
-        <figure class="product-orbit-stage corner-glow"><img class="product-matrix" src="${matrixAsset}" alt=""><img class="product-orbit-eye" src="${orbitAsset}" alt="DIO governed product route">${iconUse(product,'product-route-icon')}<span class="orbit-label a">${esc(product.family)}</span><span class="orbit-label b">EVIDENCE-BOUND</span><span class="orbit-label c">BOUNDED PILOT</span><span class="orbit-label d">HUMAN AUTHORITY</span><figcaption><span>DIO PRODUCT ROUTE</span><strong>${esc(product.name)}</strong></figcaption></figure>
+        <figure class="product-orbit-stage corner-glow"><img class="product-matrix" src="${matrixAsset}" alt=""><img class="product-orbit-eye" src="${orbitAsset}" alt="DIO governed product route"><img class="premium-family-medallion" src="${premiumIconSrc(product)}" alt=""><span class="orbit-label a">${esc(product.family)}</span><span class="orbit-label b">EVIDENCE-BOUND</span><span class="orbit-label c">BOUNDED PILOT</span><span class="orbit-label d">HUMAN AUTHORITY</span><figcaption><span>DIO PRODUCT ROUTE</span><strong>${esc(product.name)}</strong></figcaption></figure>
       </div></section>
       <section class="product-proof-strip"><div class="wrap proof-strip-grid"><div><small>Route</small><b>Controlled proof</b></div><div><small>Delivery</small><b>Review-ready</b></div><div><small>Evidence posture</small><b>Hash-bound where applicable</b></div><div><small>Authority</small><b>Human-held</b></div></div></section>
-      <section class="editorial-section" id="artifacts"><div class="wrap"><div class="section-intro"><p class="eyebrow">WHAT YOU ACTUALLY GET</p><h2>Concrete work, not an AI promise.</h2><p>${esc(theme.value)}</p></div><div class="artifact-gallery">${artifacts}</div></div></section>
+      <section class="editorial-section" id="artifacts"><div class="wrap"><div class="section-intro"><div><p class="eyebrow">WHAT YOU ACTUALLY GET</p><h2>Concrete work, not an AI promise.</h2></div><p>${esc(theme.value)}</p></div><div class="artifact-gallery">${artifacts}</div></div></section>
       <section class="editorial-section evidence-section" id="evidence"><div class="wrap evidence-layout"><div class="section-intro"><p class="eyebrow">EVIDENCE, NOT PROMISES</p><h2>Built before it was pitched.</h2><p>Controlled engineering evidence is shown as engineering evidence. Commercial validation is earned from customers.</p></div><div class="evidence-ledger"><article><small>ROUTE PROOF</small><p>${esc(product.proof)}</p></article><article><small>AUTHORITY BOUNDARY</small><p>${esc(product.boundary)}</p></article><article><small>EVIDENCE POSTURE</small><p>Hash-bound receipt where applicable; public presentation is curated rather than a raw internal dump.</p></article><article><small>COMMERCIAL VALIDATION</small><p>Earned from customers, repeat demand and measured delivery — never inferred from controlled proof.</p></article></div></div></section>
       <section class="editorial-section system-section"><div class="wrap"><div class="section-intro compact"><p class="eyebrow">WHAT RUNS UNDERNEATH</p><h2>The outcome is public. The machinery stays backstage.</h2></div><div class="system-pathway">${pathway}</div></div></section>
       <section class="editorial-section flow-section"><div class="wrap"><div class="section-intro compact"><p class="eyebrow">BOUNDED DELIVERY</p><h2>One clear case. One inspectable handoff.</h2></div><div class="delivery-flow"><article><span>01</span><h3>Bring this</h3><ul>${bring}</ul></article><article><span>02</span><h3>DIO does this</h3><p>Runs controlled processing, evidence preparation and the bounded product route while preserving provenance and explicit authority limits.</p></article><article><span>03</span><h3>You receive this</h3><ul>${receive}</ul></article><article><span>04</span><h3>Human decides this</h3><p>${esc(product.boundary)}</p></article></div></div></section>
