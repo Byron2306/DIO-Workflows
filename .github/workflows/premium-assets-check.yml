@@ -3,6 +3,10 @@ name: Validate premium DIO asset integration
 on:
   pull_request:
     paths:
+      - "index.html"
+      - "vesper-intake.html"
+      - "assets/launch-v2.css"
+      - "assets/launch-v2.js"
       - "assets/premium/**"
       - "assets/dio-visual-system.css"
       - ".github/workflows/premium-assets-check.yml"
@@ -13,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Validate premium library and wiring
+      - name: Validate premium library, hero hierarchy and motion wiring
         run: |
           python3 - <<'PY'
           from pathlib import Path
@@ -32,6 +36,7 @@ jobs:
               'assets/premium/icons/dio-icon-workflow.webp': 10000,
               'assets/premium/icons/dio-icon-media.webp': 10000,
               'assets/premium/icons/dio-icon-conversation.webp': 10000,
+              'assets/dio-frame-tracer.svg': 1000,
           }
           for filename, minimum in required.items():
               p = Path(filename)
@@ -45,17 +50,32 @@ jobs:
               raise SystemExit('premium stylesheet is not imported by shared DIO visual system')
 
           premium = Path('assets/premium/premium.css').read_text(encoding='utf-8')
-          tokens = (
+          premium_tokens = (
               'dio-eye-premium.webp','dio-orbit-vertical.webp','dio-title-banner.webp',
               'dio-eye-divider.webp','dio-panel-frame.webp','dio-orbit-frame.webp',
-              'dio-icon-education.webp','dio-icon-growth.webp','dio-icon-evidence.webp',
-              'dio-icon-governance.webp','dio-icon-workflow.webp','dio-icon-media.webp',
-              'dio-icon-conversation.webp','.launch-product-card','.product-orbit-stage',
-              '.vesper-portrait-wrap','.vesper-welcome'
+              'dio-frame-tracer.svg','@keyframes dioEyeBreath','@keyframes dioMedallionFloat',
+              '.launch-product-card','.product-orbit-stage','.vesper-portrait-wrap',
+              '.vesper-portrait-wrap.is-speaking','.premium-frame-tracer'
           )
-          for token in tokens:
+          for token in premium_tokens:
               if token not in premium:
-                  raise SystemExit(f'premium wiring missing: {token}')
+                  raise SystemExit(f'premium motion wiring missing: {token}')
 
-          print('DIO_PREMIUM_ASSET_LIBRARY_VERIFIED')
+          home = Path('index.html').read_text(encoding='utf-8')
+          if 'assets/premium/dio-eye-premium.webp' not in home:
+              raise SystemExit('premium Golden Eye is not foregrounded in the homepage hero')
+          if home.count('premium-card-medallion') < 6:
+              raise SystemExit('six flagship product cards do not expose premium medallions')
+
+          launch = Path('assets/launch-v2.css').read_text(encoding='utf-8')
+          if "url('../assets/launch-hero.webp')" not in launch:
+              raise SystemExit('launch hero is not used as full-bleed atmospheric background')
+          if '.hero-brand-eye' not in launch:
+              raise SystemExit('hero foreground Eye styling is missing')
+
+          vesper = Path('vesper-intake.html').read_text(encoding='utf-8')
+          if 'premium-frame-tracer' not in vesper:
+              raise SystemExit('Vesper frame tracer is not wired into the conversation surface')
+
+          print('DIO_PREMIUM_ASSET_MOTION_VERIFIED')
           PY
