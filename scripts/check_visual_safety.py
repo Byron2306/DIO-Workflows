@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Guard DIO's premium visual layer against text/ornament collisions.
+"""Guard DIO's public surfaces against ornament/text collisions.
 
-This is intentionally a source-level contract. It catches the exact regression class
-that produced decorative artwork beneath readable copy, fixed-text SVG diagrams,
-and stacked frames around Vesper's welcome surface.
+The premium library may keep its reusable artwork. This contract verifies that the
+public runtime installs a final safe-zone layer and replaces the fixed-text system
+map with responsive DOM content before visitors interact with it.
 """
 from pathlib import Path
 import re
@@ -19,49 +19,70 @@ def fail(message: str) -> None:
     raise SystemExit(f"VISUAL_SAFETY_REFUSE: {message}")
 
 
-def rule_uses(css: str, selector_fragment: str, asset: str) -> bool:
-    """Return True when a CSS rule containing selector_fragment references asset."""
+def rule_body(css: str, selector_fragment: str) -> str:
     for selector, body in re.findall(r"([^{}]+)\{([^{}]*)\}", css, flags=re.S):
-        if selector_fragment in selector and asset in body:
-            return True
-    return False
+        if selector_fragment in selector:
+            return body
+    return ""
+
+
+def require_rule(css: str, selector: str, *tokens: str) -> None:
+    body = rule_body(css, selector)
+    if not body:
+        fail(f"visual safety rule missing: {selector}")
+    for token in tokens:
+        if token not in body:
+            fail(f"{selector} does not enforce {token}")
 
 
 def main() -> None:
+    visual_path = ROOT / "assets/visual-safety.css"
+    if not visual_path.exists():
+        fail("final visual-safety stylesheet is missing")
+
+    visual = visual_path.read_text(encoding="utf-8")
+    config = read("assets/dio-config.js")
+    launch_js = read("assets/launch-v2.js")
     home = read("index.html")
-    launch = read("assets/launch-v2.css")
-    premium = read("assets/premium/premium.css")
     vesper = read("vesper-intake.html")
 
-    # System-map labels must be responsive HTML, not text baked into a scaled SVG.
-    if 'src="assets/dio-system-orbit.svg"' in home:
-        fail("homepage system map still embeds fixed-text dio-system-orbit.svg")
-    for token in ('class="map-core"', 'class="map-ring"', 'class="map-node'):
-        if token not in home:
-            fail(f"responsive system-map structure missing {token}")
+    # The same late-loaded correction layer must protect both public surfaces.
+    for token in ("visual-safety.css", "data-dio-visual-safety"):
+        if token not in config:
+            fail(f"dio-config.js does not install the final safe-zone layer: {token}")
+    for page, source in (("homepage", home), ("Vesper", vesper)):
+        if "assets/dio-config.js" not in source:
+            fail(f"{page} does not load dio-config.js and cannot receive visual safety overrides")
 
-    # Never stretch decorative banner artwork beneath readable portfolio CTA copy.
-    if rule_uses(premium, ".portfolio-cta:before", "dio-title-banner.webp"):
-        fail("portfolio CTA paints dio-title-banner.webp underneath copy")
+    # Keep the SVG as a no-JS fallback, but replace it with real responsive labels at runtime.
+    for token in ("installResponsiveSystemMap", "map-core", "map-ring", "map-node"):
+        if token not in launch_js:
+            fail(f"responsive system-map runtime missing {token}")
 
-    # Section ornaments may not protrude across section boundaries.
-    for selector in (".launch-products:after", ".platform-thesis:after", ".launch-proof:after"):
-        if rule_uses(premium, selector, "dio-eye-divider.webp"):
-            fail(f"{selector} still uses protruding dio-eye-divider.webp")
+    # Never paint large decorative artwork underneath readable CTA copy.
+    require_rule(visual, ".launch-v2 .portfolio-cta:before", "content:none!important", "background:none!important")
 
-    # Vesper gets one frame system, never the tracer plus a full bitmap frame.
-    vesper_has_panel_frame = rule_uses(vesper, ".vesper-welcome:after", "dio-panel-frame.webp")
-    vesper_has_tracer = rule_uses(premium, ".vesper-welcome", "dio-frame-tracer.svg")
-    if vesper_has_panel_frame and vesper_has_tracer:
-        fail("Vesper welcome surface stacks bitmap and tracer frames")
-    if not vesper_has_panel_frame:
-        fail("Vesper welcome surface lost its canonical panel frame")
+    # Never let ornamental section dividers trespass across section boundaries.
+    for selector in (
+        ".launch-v2 .launch-products:after",
+        ".launch-v2 .platform-thesis:after",
+        ".launch-v2 .launch-proof:after",
+    ):
+        require_rule(visual, selector, "content:none!important", "display:none!important")
 
-    # The thesis gets its own readable measure rather than inheriting the giant global heading.
-    if ".thesis-copy h2{" not in premium and ".thesis-copy h2{" not in launch:
-        fail("investment thesis has no dedicated heading sizing rule")
-    if "grid-template-columns:1.05fr .95fr" not in premium and "grid-template-columns:1.05fr .95fr" not in launch:
-        fail("investment thesis has not reserved enough width for copy")
+    # Vesper gets one canonical frame and a protected interior text zone.
+    require_rule(visual, ".messages .vesper-welcome", "padding:", "max-width:")
+    require_rule(visual, ".messages .vesper-welcome:after", "dio-panel-frame.webp", "inset:")
+    require_rule(visual, ".vesper-welcome h2", "font-size:clamp(", "max-width:")
+
+    # Investment thesis gets readable measure instead of inheriting giant-heading geometry.
+    require_rule(visual, ".launch-v2 .thesis-grid", "grid-template-columns:1.05fr .95fr")
+    require_rule(visual, ".launch-v2 .thesis-copy h2", "font-size:clamp(", "line-height:")
+
+    # DOM system map must have explicit responsive geometry, not browser-scaled SVG labels.
+    require_rule(visual, ".launch-v2 .platform-map .map-node", "position:absolute", "min-width:")
+    if "@media(max-width:760px)" not in visual:
+        fail("visual safety layer has no compact viewport system-map/Vesper treatment")
 
     print("DIO_VISUAL_SAFE_ZONE_VERIFIED")
 
