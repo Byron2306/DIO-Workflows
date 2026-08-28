@@ -19,3 +19,14 @@ window.DIO_SITE_CONFIG = {
     site_studio: "#intake"
   }
 };
+
+(() => {
+  if (document.querySelector('link[data-dio-visual-safety]')) return;
+  const script = document.currentScript;
+  const href = new URL('visual-safety.css', script?.src || document.baseURI).href;
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = href;
+  link.setAttribute('data-dio-visual-safety', 'true');
+  document.head.appendChild(link);
+})();

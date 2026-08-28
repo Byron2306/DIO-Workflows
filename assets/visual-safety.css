@@ -1,0 +1,77 @@
+/* DIO public visual safe-zone layer.
+   Loaded after the premium library so ornament never competes with readable content. */
+
+/* Text-bearing surfaces are content first. */
+.launch-v2 .portfolio-cta:before{content:none!important;background:none!important;display:none!important}
+.launch-v2 .launch-products:after,.launch-v2 .platform-thesis:after,.launch-v2 .launch-proof:after{content:none!important;display:none!important;background:none!important}
+
+/* Investment thesis: preserve the cinematic scale without forcing accidental line breaks. */
+.launch-v2 .thesis-grid{grid-template-columns:1.05fr .95fr;gap:clamp(42px,5vw,68px);align-items:center}
+.launch-v2 .thesis-copy{max-width:620px}
+.launch-v2 .thesis-copy h2{font-size:clamp(2.75rem,4.3vw,4.55rem);line-height:.98;letter-spacing:-.038em;max-width:610px;text-wrap:balance}
+.launch-v2 .thesis-copy p:not(.eyebrow){max-width:590px}
+
+/* Responsive orchestration map. Labels are real DOM text, not browser-scaled SVG text. */
+.launch-v2 .platform-map{min-height:620px;overflow:hidden;isolation:isolate;background:radial-gradient(circle at 50% 48%,rgba(217,182,111,.13),transparent 25%),linear-gradient(145deg,#0d1013,#050607)!important}
+.launch-v2 .platform-map .map-orbits{position:absolute;inset:6%;z-index:1;pointer-events:none}
+.launch-v2 .platform-map .map-orbit{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border:1px solid rgba(217,182,111,.15);border-radius:50%;box-shadow:0 0 32px rgba(217,182,111,.025)}
+.launch-v2 .platform-map .map-orbit.a{width:66%;height:66%}
+.launch-v2 .platform-map .map-orbit.b{width:48%;height:48%;border-style:dashed;opacity:.72}
+.launch-v2 .platform-map .map-orbit.c{width:86%;height:34%;border-radius:50%}
+.launch-v2 .platform-map .map-orbit.d{width:34%;height:86%;border-radius:50%}
+.launch-v2 .platform-map .map-wire{position:absolute;left:50%;top:50%;width:72%;height:1px;transform-origin:center;background:linear-gradient(90deg,transparent,rgba(217,182,111,.16) 18%,rgba(241,215,155,.34) 50%,rgba(217,182,111,.16) 82%,transparent)}
+.launch-v2 .platform-map .map-wire.w1{transform:translate(-50%,-50%) rotate(0deg)}
+.launch-v2 .platform-map .map-wire.w2{transform:translate(-50%,-50%) rotate(90deg)}
+.launch-v2 .platform-map .map-wire.w3{transform:translate(-50%,-50%) rotate(34deg)}
+.launch-v2 .platform-map .map-wire.w4{transform:translate(-50%,-50%) rotate(-34deg)}
+.launch-v2 .platform-map .map-core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;width:154px;height:116px;border-radius:50%;display:grid;place-content:center;text-align:center;border:1px solid rgba(241,215,155,.48);background:radial-gradient(circle at center,rgba(181,132,57,.22),#0a0c0f 66%);box-shadow:0 0 0 18px rgba(217,182,111,.025),0 0 70px rgba(217,182,111,.18);color:#f3dfb2}
+.launch-v2 .platform-map .map-core strong{font:600 1.85rem/1 Georgia,serif;letter-spacing:.04em}
+.launch-v2 .platform-map .map-core span{display:block;margin-top:8px;font:700 .56rem/1.2 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.16em;color:#8f7c59}
+.launch-v2 .platform-map .map-ring{position:absolute;inset:0;z-index:3}
+.launch-v2 .platform-map .map-node{position:absolute;min-width:148px;padding:12px 15px;text-align:center;border:1px solid rgba(217,182,111,.26);background:rgba(7,9,11,.90);box-shadow:0 12px 30px rgba(0,0,0,.26),0 0 20px rgba(217,182,111,.035);backdrop-filter:blur(10px)}
+.launch-v2 .platform-map .map-node b{display:block;color:#ead19b;font:600 .93rem/1.1 Georgia,serif;letter-spacing:.04em}
+.launch-v2 .platform-map .map-node small{display:block;margin-top:5px;color:#817b71;font-size:.62rem;line-height:1.2;letter-spacing:.035em}
+.launch-v2 .platform-map .map-node.homs{left:8%;top:16%}
+.launch-v2 .platform-map .map-node.seraph{left:50%;top:6%;transform:translateX(-50%)}
+.launch-v2 .platform-map .map-node.sophia{right:8%;top:16%}
+.launch-v2 .platform-map .map-node.vamp{left:3%;top:46%;transform:translateY(-50%)}
+.launch-v2 .platform-map .map-node.evidex{right:3%;top:46%;transform:translateY(-50%)}
+.launch-v2 .platform-map .map-node.vesper{left:8%;bottom:14%}
+.launch-v2 .platform-map .map-node.meta{right:8%;bottom:14%}
+.launch-v2 .platform-map .map-node.arda{left:50%;bottom:5%;transform:translateX(-50%)}
+
+/* Vesper: one frame, one protected content zone. */
+.messages .vesper-welcome{width:min(760px,86%)!important;max-width:760px!important;padding:clamp(74px,7vh,92px) clamp(78px,7vw,96px) clamp(58px,6vh,72px)!important;background:linear-gradient(145deg,rgba(14,16,19,.90),rgba(6,7,8,.88))!important}
+.messages .vesper-welcome:after{content:""!important;position:absolute!important;inset:10px!important;background:url('premium/dio-panel-frame.webp') center/100% 100% no-repeat!important;opacity:.27!important;pointer-events:none!important;z-index:0!important;filter:drop-shadow(0 0 18px rgba(217,182,111,.10))!important}
+.vesper-welcome small{margin-bottom:18px!important}
+.vesper-welcome h2{font-size:clamp(2.35rem,3.55vw,3.65rem)!important;line-height:1.01!important;max-width:570px;margin-inline:auto!important;text-wrap:balance}
+.vesper-welcome h2 em{margin-top:9px!important;font-size:.86em!important;line-height:1.04!important}
+.vesper-welcome p{max-width:540px!important;margin-top:22px!important;line-height:1.52!important}
+.welcome-pills{margin-top:20px!important}
+
+@media(max-width:980px){
+  .launch-v2 .thesis-grid{grid-template-columns:1fr;gap:42px}
+  .launch-v2 .thesis-copy{max-width:760px}
+  .launch-v2 .thesis-copy h2{max-width:720px;font-size:clamp(2.7rem,7vw,4.4rem)}
+  .launch-v2 .platform-map{min-height:590px}
+}
+
+@media(max-width:760px){
+  .launch-v2 .platform-map{min-height:0;padding:22px 14px 28px}
+  .launch-v2 .platform-map .map-orbits{display:none}
+  .launch-v2 .platform-map .map-core{position:relative;left:auto;top:auto;transform:none;width:138px;height:98px;margin:26px auto 22px}
+  .launch-v2 .platform-map .map-ring{position:relative;inset:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;z-index:3}
+  .launch-v2 .platform-map .map-node{position:relative!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;transform:none!important;min-width:0;padding:11px 8px}
+  .launch-v2 .platform-map .map-node b{font-size:.84rem}
+  .launch-v2 .platform-map .map-node small{font-size:.58rem}
+  .messages .vesper-welcome{width:calc(100% - 20px)!important;max-width:680px!important;padding:48px 30px 38px!important}
+  .messages .vesper-welcome:after{inset:5px!important;background:url('premium/dio-panel-frame.webp') center/100% 100% no-repeat!important;opacity:.22!important}
+  .vesper-welcome h2{font-size:clamp(2rem,8vw,2.75rem)!important;max-width:520px}
+  .vesper-welcome p{margin-top:18px!important;font-size:.84rem!important}
+  .welcome-pills{margin-top:16px!important}
+}
+
+@media(max-width:480px){
+  .launch-v2 .platform-map .map-ring{grid-template-columns:1fr}
+  .messages .vesper-welcome{padding:42px 22px 34px!important}
+}

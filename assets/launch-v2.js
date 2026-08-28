@@ -23,6 +23,36 @@
     }));
   }
 
+  const installResponsiveSystemMap = () => {
+    const map = $('.platform-map');
+    if (!map || map.dataset.systemMap === 'responsive-dom') return;
+
+    map.innerHTML = `
+      <div class="map-orbits" aria-hidden="true">
+        <span class="map-orbit a"></span>
+        <span class="map-orbit b"></span>
+        <span class="map-orbit c"></span>
+        <span class="map-orbit d"></span>
+        <span class="map-wire w1"></span>
+        <span class="map-wire w2"></span>
+        <span class="map-wire w3"></span>
+        <span class="map-wire w4"></span>
+      </div>
+      <div class="map-core"><strong>DIO</strong><span>ORCHESTRATION</span></div>
+      <div class="map-ring">
+        <div class="map-node homs"><b>HOMS</b><small>assessment</small></div>
+        <div class="map-node seraph"><b>SERAPH</b><small>challenge &amp; assurance</small></div>
+        <div class="map-node sophia"><b>SOPHIA</b><small>research integrity</small></div>
+        <div class="map-node vamp"><b>VAMP</b><small>achievement evidence</small></div>
+        <div class="map-node evidex"><b>EVIDEX</b><small>evidence assurance</small></div>
+        <div class="map-node vesper"><b>VESPER</b><small>presence &amp; intake</small></div>
+        <div class="map-node meta"><b>META</b><small>governance primitives</small></div>
+        <div class="map-node arda"><b>ARDA</b><small>execution identity</small></div>
+      </div>`;
+    map.dataset.systemMap = 'responsive-dom';
+  };
+  installResponsiveSystemMap();
+
   const social = cfg.social || {};
   $$('[data-social]').forEach(link => {
     const url = social[link.dataset.social];
