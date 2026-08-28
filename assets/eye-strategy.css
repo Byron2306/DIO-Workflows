@@ -1,0 +1,96 @@
+/* DIO Eye motif hierarchy
+   One dominant Eye per major surface. Secondary Eyes are restrained atmospheric marks. */
+
+/* Portfolio hero artwork already contains the Eye. Never overlay a second one. */
+body[data-view="portfolio"] .hero:after{
+  content:none!important;
+  display:none!important;
+  background:none!important;
+}
+
+/* Quiet surfaces may carry one low-contrast Eye watermark. */
+body[data-view="portfolio"] .truth,
+body[data-view="portfolio"] .local-band,
+.launch-v2 .portfolio-cta,
+.launch-v2 .about-founder{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+}
+
+body[data-view="portfolio"] .truth:after,
+body[data-view="portfolio"] .local-band:after,
+.launch-v2 .portfolio-cta:after,
+.launch-v2 .about-founder:after{
+  content:"";
+  position:absolute;
+  pointer-events:none;
+  z-index:0;
+  background:url('premium/dio-eye-premium.webp') center/contain no-repeat;
+  mix-blend-mode:screen;
+  filter:drop-shadow(0 0 24px rgba(217,182,111,.14));
+}
+
+/* Portfolio truth section: a large, quiet institutional watermark. */
+body[data-view="portfolio"] .truth:after{
+  right:clamp(18px,5vw,72px);
+  top:50%;
+  width:clamp(180px,24vw,340px);
+  height:clamp(180px,24vw,340px);
+  transform:translateY(-50%);
+  opacity:.075;
+}
+
+/* Portfolio truth boundary: a tiny seal, not another hero. */
+body[data-view="portfolio"] .local-band:after{
+  right:clamp(14px,2vw,30px);
+  top:50%;
+  width:92px;
+  height:92px;
+  transform:translateY(-50%);
+  opacity:.055;
+}
+
+/* Homepage broader-portfolio CTA: centered atmospheric Eye. */
+.launch-v2 .portfolio-cta:after{
+  left:50%;
+  top:50%;
+  width:min(34vw,350px);
+  height:min(34vw,350px);
+  transform:translate(-50%,-50%);
+  opacity:.052;
+}
+
+/* Homepage founder/about band: small corner seal. */
+.launch-v2 .about-founder:after{
+  right:clamp(18px,4vw,62px);
+  bottom:clamp(16px,4vw,48px);
+  width:clamp(125px,15vw,190px);
+  height:clamp(125px,15vw,190px);
+  opacity:.065;
+}
+
+/* Real content always sits above decorative Eyes. */
+body[data-view="portfolio"] .truth>.wrap,
+body[data-view="portfolio"] .local-band>.wrap,
+.launch-v2 .portfolio-cta>*,
+.launch-v2 .about-founder>*{
+  position:relative;
+  z-index:1;
+}
+
+@media(max-width:700px){
+  body[data-view="portfolio"] .truth:after{
+    right:-30px;
+    width:180px;
+    height:180px;
+    opacity:.05;
+  }
+  body[data-view="portfolio"] .local-band:after{display:none}
+  .launch-v2 .portfolio-cta:after,
+  .launch-v2 .about-founder:after{
+    width:130px;
+    height:130px;
+    opacity:.045;
+  }
+}
