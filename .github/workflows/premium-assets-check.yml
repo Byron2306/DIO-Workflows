@@ -10,6 +10,7 @@ on:
       - "assets/premium/**"
       - "assets/dio-frame-tracer.svg"
       - "assets/dio-visual-system.css"
+      - "scripts/check_visual_safety.py"
       - ".github/workflows/premium-assets-check.yml"
   workflow_dispatch:
 
@@ -89,3 +90,5 @@ jobs:
 
           print('DIO_PREMIUM_ASSET_MOTION_VERIFIED')
           PY
+      - name: Validate visual text safe-zones
+        run: python3 scripts/check_visual_safety.py
