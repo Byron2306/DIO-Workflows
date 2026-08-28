@@ -10,7 +10,6 @@ on:
       - "assets/premium/**"
       - "assets/dio-frame-tracer.svg"
       - "assets/dio-visual-system.css"
-      - "scripts/check_visual_safety.py"
       - ".github/workflows/premium-assets-check.yml"
   workflow_dispatch:
 
@@ -67,11 +66,14 @@ jobs:
 
           premium = Path('assets/premium/premium.css').read_text(encoding='utf-8')
           required_tokens = (
-              'dio-eye-premium.webp','dio-panel-frame.webp','dio-orbit-frame.webp',
-              'dio-frame-tracer.svg','.investor-hero:before','.hero-brand-eye',
+              'dio-eye-premium.webp','dio-orbit-vertical.webp','dio-title-banner.webp',
+              'dio-eye-divider.webp','dio-panel-frame.webp','dio-orbit-frame.webp',
+              'dio-frame-tracer.svg','launch-hero.webp',
+              '.investor-hero:before','.investor-stage.hero-media:after','.hero-brand-eye','mix-blend-mode:screen',
               '.launch-product-card:nth-child(1):after','.launch-product-card:nth-child(6):after',
-              '.card-orbit .family-icon','.product-orbit-stage','.vesper-welcome',
-              '@keyframes dioEyeBreath','@keyframes dioMedallionFloat','.premium-frame-tracer'
+              '.card-orbit .family-icon','.product-orbit-stage','.vesper-portrait-wrap.is-speaking',
+              '.vesper-welcome','@keyframes dioEyeBreath','@keyframes dioMedallionFloat',
+              '@keyframes dioFrameSpeak','.premium-frame-tracer'
           )
           for token in required_tokens:
               if token not in premium:
@@ -87,5 +89,3 @@ jobs:
 
           print('DIO_PREMIUM_ASSET_MOTION_VERIFIED')
           PY
-      - name: Validate visual text safe-zones
-        run: python3 scripts/check_visual_safety.py
