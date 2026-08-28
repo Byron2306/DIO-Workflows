@@ -25,7 +25,7 @@
     map.dataset.systemMap = 'premium-orbital';
   };
 
-  const schedule = () => requestAnimationFrame(() => requestAnimationFrame(installPremiumOrbitalMap));
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', schedule, { once:true });
-  else schedule();
+  const installAfterLaunch = () => requestAnimationFrame(() => requestAnimationFrame(installPremiumOrbitalMap));
+  if (document.readyState === 'complete') installAfterLaunch();
+  else window.addEventListener('load', installAfterLaunch, { once:true });
 })();
