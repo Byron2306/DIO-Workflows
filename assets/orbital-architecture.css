@@ -1,0 +1,110 @@
+/* Premium orbital architecture for the homepage DIO systems map. */
+.launch-v2 .platform-map.platform-orbit-map{
+  min-height:620px;
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  border:1px solid rgba(217,182,111,.18);
+  background:
+    radial-gradient(circle at 50% 49%,rgba(217,182,111,.10),transparent 31%),
+    linear-gradient(145deg,rgba(12,14,17,.98),rgba(4,5,6,.99))!important;
+  box-shadow:0 34px 90px rgba(0,0,0,.30),inset 0 1px 0 rgba(255,255,255,.025);
+}
+.launch-v2 .platform-map.platform-orbit-map:before,
+.launch-v2 .platform-map.platform-orbit-map:after{content:none!important;display:none!important;background:none!important}
+
+.platform-orbit-map .map-premium-ring{
+  position:absolute;left:50%;top:50%;z-index:1;
+  width:94%;height:94%;transform:translate(-50%,-50%);
+  object-fit:contain;opacity:.68;pointer-events:none;
+  filter:drop-shadow(0 0 26px rgba(217,182,111,.16));
+  animation:dioOrbitalBreathe 12s ease-in-out infinite;
+}
+.platform-orbit-map .map-premium-eye{
+  position:absolute;left:50%;top:50%;z-index:1;
+  width:47%;height:47%;transform:translate(-50%,-50%);
+  object-fit:contain;opacity:.20;pointer-events:none;mix-blend-mode:screen;
+  filter:drop-shadow(0 0 34px rgba(241,215,155,.18));
+}
+.platform-orbit-map .map-premium-trace{
+  position:absolute;left:50%;top:50%;z-index:1;width:82%;height:70px;
+  transform-origin:center;object-fit:contain;opacity:.21;pointer-events:none;
+  filter:drop-shadow(0 0 14px rgba(217,182,111,.12));
+}
+.platform-orbit-map .map-premium-trace.t1{transform:translate(-50%,-50%)}
+.platform-orbit-map .map-premium-trace.t2{transform:translate(-50%,-50%) rotate(90deg)}
+.platform-orbit-map .map-premium-trace.t3{transform:translate(-50%,-50%) rotate(45deg);opacity:.12}
+.platform-orbit-map .map-premium-trace.t4{transform:translate(-50%,-50%) rotate(-45deg);opacity:.12}
+
+.platform-orbit-map .map-core-premium{
+  position:absolute;left:50%;top:50%;z-index:5;transform:translate(-50%,-50%);
+  width:138px;height:138px;border-radius:50%;display:grid;place-content:center;text-align:center;
+  border:1px solid rgba(241,215,155,.50);
+  background:radial-gradient(circle at 50% 42%,rgba(202,155,76,.24),rgba(8,9,11,.94) 61%,#050607 100%);
+  box-shadow:0 0 0 10px rgba(217,182,111,.025),0 0 0 1px rgba(255,255,255,.03),0 0 52px rgba(217,182,111,.18);
+}
+.platform-orbit-map .map-core-premium:before{
+  content:"";position:absolute;inset:13px;border-radius:50%;
+  border:1px solid rgba(217,182,111,.17);box-shadow:inset 0 0 24px rgba(217,182,111,.07);
+}
+.platform-orbit-map .map-core-premium strong{
+  position:relative;z-index:2;color:#f1d79b;font:500 1.75rem/1 Georgia,serif;letter-spacing:.045em;
+  text-shadow:0 0 20px rgba(217,182,111,.22);
+}
+.platform-orbit-map .map-core-premium span{
+  position:relative;z-index:2;margin-top:9px;color:#8f7a54;
+  font:700 .53rem/1.2 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.17em;
+}
+
+.platform-orbit-map .map-ring-premium{position:absolute;inset:0;z-index:4}
+.platform-orbit-map .map-node{
+  position:absolute;width:126px;min-width:0;padding:13px 13px 12px;text-align:center;
+  border:0!important;background:rgba(5,6,7,.78)!important;
+  box-shadow:0 12px 30px rgba(0,0,0,.27),0 0 20px rgba(217,182,111,.035)!important;
+  backdrop-filter:blur(7px);isolation:isolate;
+}
+.platform-orbit-map .map-node:before{
+  content:"";position:absolute;inset:-9px;z-index:-1;
+  background:url('premium/dio-gilded-pill-frame.webp') center/100% 100% no-repeat;
+  opacity:.68;pointer-events:none;filter:drop-shadow(0 0 10px rgba(217,182,111,.12));
+}
+.platform-orbit-map .map-node b{
+  display:block;color:#f0d59b;font:600 .88rem/1.05 Georgia,serif;letter-spacing:.055em;
+}
+.platform-orbit-map .map-node small{
+  display:block;margin-top:5px;color:#8c8374;font-size:.55rem;line-height:1.16;letter-spacing:.035em;
+}
+.platform-orbit-map .map-node.homs{left:5%;top:17%}
+.platform-orbit-map .map-node.seraph{left:50%;top:5%;transform:translateX(-50%)}
+.platform-orbit-map .map-node.sophia{right:5%;top:17%}
+.platform-orbit-map .map-node.vamp{left:1.5%;top:50%;transform:translateY(-50%)}
+.platform-orbit-map .map-node.evidex{right:1.5%;top:50%;transform:translateY(-50%)}
+.platform-orbit-map .map-node.vesper{left:5%;bottom:15%}
+.platform-orbit-map .map-node.meta{right:5%;bottom:15%}
+.platform-orbit-map .map-node.arda{left:50%;bottom:4%;transform:translateX(-50%)}
+
+.platform-orbit-map .map-node:after{
+  content:"";position:absolute;width:5px;height:5px;border-radius:50%;background:#e3c375;
+  box-shadow:0 0 13px rgba(241,215,155,.75);pointer-events:none;
+}
+.platform-orbit-map .map-node.homs:after,.platform-orbit-map .map-node.vesper:after{right:-13px;top:50%}
+.platform-orbit-map .map-node.sophia:after,.platform-orbit-map .map-node.meta:after{left:-13px;top:50%}
+.platform-orbit-map .map-node.vamp:after{right:-13px;top:50%}
+.platform-orbit-map .map-node.evidex:after{left:-13px;top:50%}
+.platform-orbit-map .map-node.seraph:after{left:50%;bottom:-13px}
+.platform-orbit-map .map-node.arda:after{left:50%;top:-13px}
+
+@keyframes dioOrbitalBreathe{0%,100%{opacity:.58;filter:drop-shadow(0 0 22px rgba(217,182,111,.13))}50%{opacity:.73;filter:drop-shadow(0 0 34px rgba(241,215,155,.20))}}
+
+@media(max-width:980px){.launch-v2 .platform-map.platform-orbit-map{min-height:590px}}
+@media(max-width:760px){
+  .launch-v2 .platform-map.platform-orbit-map{min-height:0;padding:30px 18px 28px}
+  .platform-orbit-map .map-premium-ring{width:520px;height:520px;opacity:.28}
+  .platform-orbit-map .map-premium-eye,.platform-orbit-map .map-premium-trace{display:none}
+  .platform-orbit-map .map-core-premium{position:relative;left:auto;top:auto;transform:none;width:126px;height:126px;margin:22px auto 28px}
+  .platform-orbit-map .map-ring-premium{position:relative;inset:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+  .platform-orbit-map .map-node{position:relative!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;transform:none!important;width:auto;padding:13px 10px}
+  .platform-orbit-map .map-node:after{display:none}
+}
+@media(max-width:460px){.platform-orbit-map .map-ring-premium{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.platform-orbit-map .map-premium-ring{animation:none}}

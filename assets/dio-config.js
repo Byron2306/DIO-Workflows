@@ -21,12 +21,25 @@ window.DIO_SITE_CONFIG = {
 };
 
 (() => {
-  if (document.querySelector('link[data-dio-visual-safety]')) return;
   const script = document.currentScript;
-  const href = new URL('visual-safety.css', script?.src || document.baseURI).href;
-  const link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.href = href;
-  link.setAttribute('data-dio-visual-safety', 'true');
-  document.head.appendChild(link);
+  const assetUrl = name => new URL(name, script?.src || document.baseURI).href;
+
+  const addStylesheet = (name, marker) => {
+    if (document.querySelector(`link[${marker}]`)) return;
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = assetUrl(name);
+    link.setAttribute(marker, 'true');
+    document.head.appendChild(link);
+  };
+
+  addStylesheet('visual-safety.css', 'data-dio-visual-safety');
+  addStylesheet('orbital-architecture.css', 'data-dio-orbital-architecture');
+
+  if (!document.querySelector('script[data-dio-orbital-architecture]')) {
+    const orbital = document.createElement('script');
+    orbital.src = assetUrl('orbital-architecture.js');
+    orbital.setAttribute('data-dio-orbital-architecture', 'true');
+    document.head.appendChild(orbital);
+  }
 })();
