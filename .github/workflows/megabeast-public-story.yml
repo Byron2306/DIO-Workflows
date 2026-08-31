@@ -1,0 +1,127 @@
+name: Validate DIO megabeast public story
+
+on:
+  push:
+    branches:
+      - agent/dio-megabeast-public-story
+  pull_request:
+    paths:
+      - "index.html"
+      - "assets/megabeast/**"
+      - "assets/media/**"
+      - "products/**"
+      - ".github/workflows/megabeast-public-story.yml"
+
+jobs:
+  megabeast-public-story:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Verify DIO architecture story, 53-product surface and proof links
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          root = Path('index.html').read_text(encoding='utf-8')
+          required_copy = (
+              'governed consequence',
+              'Anything can become anything else except authority',
+              'One governed intelligence architecture',
+              '53 mapped',
+              '159',
+              'Commercial Metabolism',
+              'ATLAS',
+          )
+          for token in required_copy:
+              if token.lower() not in root.lower():
+                  raise SystemExit(f'homepage megabeast story missing: {token}')
+
+          required_sections = (
+              'governed-consequence',
+              'constitutional-laws',
+              'product-factory',
+              'metamorphic-cascade',
+              'portfolio-universe',
+              'commercial-metabolism',
+          )
+          for section_id in required_sections:
+              if f'id="{section_id}"' not in root:
+                  raise SystemExit(f'homepage section missing: {section_id}')
+
+          required_visuals = (
+              'assets/megabeast/governed-consequence.webp',
+              'assets/megabeast/constitutional-laws.webp',
+              'assets/megabeast/product-factory.webp',
+              'assets/megabeast/incarnations-atlas.webp',
+              'assets/megabeast/commercial-metabolism.webp',
+              'assets/megabeast/metamorphic-cascade.webp',
+          )
+          for path in required_visuals:
+              if not Path(path).is_file():
+                  raise SystemExit(f'megabeast visual missing: {path}')
+              if path not in root:
+                  raise SystemExit(f'megabeast visual not wired into homepage: {path}')
+
+          main_film = Path('assets/media/dio-launch-trailer.mp4')
+          if not main_film.is_file() or main_film.stat().st_size < 1_000_000:
+              raise SystemExit('DIO launch trailer missing or invalid')
+          if 'assets/media/dio-launch-trailer.mp4' not in root:
+              raise SystemExit('DIO launch trailer not wired into homepage')
+
+          global_window = "global.window={}; require('./products/catalog.js'); console.log(window.DIO_PRODUCT_CATALOG.length)"
+          PY
+          node - <<'NODE'
+          const fs = require('fs');
+          global.window = {};
+          require('./products/catalog.js');
+          const rows = window.DIO_PRODUCT_CATALOG;
+          if (!Array.isArray(rows) || rows.length !== 53) throw new Error(`expected 53 public products, found ${rows && rows.length}`);
+          const slugs = new Set(rows.map(x => x.slug));
+          if (slugs.size !== 53) throw new Error('53-product catalog contains duplicate slugs');
+          for (const p of rows) {
+            const page = `products/${p.slug}/index.html`;
+            if (!fs.existsSync(page)) throw new Error(`${p.slug}: public route missing`);
+            for (const key of ['slug','name','family','headline','buyer','offer','boundary','proof']) {
+              if (!String(p[key] || '').trim()) throw new Error(`${p.slug}: missing ${key}`);
+            }
+          }
+          console.log('DIO_PUBLIC_PRODUCT_SURFACE_VERIFIED=53');
+          NODE
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+
+          proof_manifest = Path('products/proof/portfolio-proof-catalog.json')
+          if not proof_manifest.is_file():
+              raise SystemExit('portfolio proof catalog missing')
+          data = json.loads(proof_manifest.read_text(encoding='utf-8'))
+          products = data.get('products', [])
+          if len(products) != 53:
+              raise SystemExit(f'expected 53 proof-backed product entries, found {len(products)}')
+          for product in products:
+              artifacts = product.get('artifacts') or []
+              if not artifacts:
+                  raise SystemExit(f"{product.get('slug')}: no public proof artifacts")
+              for artifact in artifacts:
+                  path = Path(artifact['path'])
+                  if not path.is_file():
+                      raise SystemExit(f"{product.get('slug')}: missing artifact {path}")
+
+          homs = Path('assets/media/homs-launch-trailer.mp4')
+          evidex = Path('assets/media/evidex-launch-trailer.mp4')
+          for film in (homs, evidex):
+              if not film.is_file() or film.stat().st_size < 1_000_000:
+                  raise SystemExit(f'product film missing or invalid: {film}')
+          homs_html = Path('products/homs/index.html').read_text(encoding='utf-8')
+          evidex_html = Path('products/evidex/index.html').read_text(encoding='utf-8')
+          if '../../assets/media/homs-launch-trailer.mp4' not in homs_html:
+              raise SystemExit('HOMS trailer not wired into HOMS page')
+          if '../../assets/media/evidex-launch-trailer.mp4' not in evidex_html:
+              raise SystemExit('Evidex trailer not wired into Evidex page')
+
+          print('DIO_MEGABEAST_PUBLIC_STORY_VERIFIED')
+          PY
