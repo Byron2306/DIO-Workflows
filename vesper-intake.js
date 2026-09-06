@@ -200,7 +200,7 @@ async function send(){
         method:"POST",
         body:JSON.stringify({
           conversation_id: conversationId,
-          text,
+          message: text,
           attachments: [],
           incarnation_hint: incarnationHint,
           message_mode: messageMode,
