@@ -1,55 +1,44 @@
 name: Validate public product portfolio
-
 on:
   pull_request:
     paths:
-      - "products/index.html"
-      - "products/app.js"
-      - "products/catalog.js"
+      - "products/**"
       - ".github/workflows/public-portfolio-check.yml"
   workflow_dispatch:
-
 jobs:
   public-portfolio:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Validate public portfolio contract
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Validate 68-route canon-level public portfolio contract
         run: |
           node --check products/app.js
+          node --check products/catalog.js
+          node - <<'NODE'
+          const fs=require('fs');
+          global.window={};require('./products/catalog.js');
+          const rows=window.DIO_PRODUCT_CATALOG;
+          if(rows.length!==68) throw new Error(`expected 68 canon-level routes, got ${rows.length}`);
+          if(new Set(rows.map(p=>p.slug)).size!==68) throw new Error('duplicate slugs');
+          for(const p of rows){
+            if(!fs.existsSync(`products/${p.slug}/index.html`)) throw new Error(`${p.slug}: missing permanent route`);
+            if(!p.headline || !p.buyer || !p.proof || !p.boundary) throw new Error(`${p.slug}: incomplete customer/proof story`);
+          }
+          const internal=rows.filter(p=>p.internal);
+          if(internal.length!==6) throw new Error(`expected 6 internal operating capabilities, got ${internal.length}`);
+          const extensions=rows.filter(p=>p.tier==='canon_extension');
+          if(extensions.length!==15) throw new Error(`expected 15 canon extensions, got ${extensions.length}`);
+          console.log('DIO_PUBLIC_PORTFOLIO_68_VERIFIED');
+          NODE
           python3 - <<'PY'
           from pathlib import Path
-
-          html = Path("products/index.html").read_text(encoding="utf-8")
-          app = Path("products/app.js").read_text(encoding="utf-8")
-
-          required_html = (
-              'data-view="portfolio"',
-              'id="search"',
-              'id="filters"',
-              'id="grid"',
-              'catalog.js',
-              'app.js',
-              '38 controlled offer routes',
-              '53+',
-          )
-          for token in required_html:
-              if token not in html:
-                  raise SystemExit(f"public portfolio missing: {token}")
-
-          forbidden = (
-              'Four products on the shelf',
-              '4 controlled pilots',
-              'only four',
-          )
-          for token in forbidden:
-              if token.lower() in html.lower():
-                  raise SystemExit(f"stale four-product public claim remains: {token}")
-
-          if '<h2>${esc(product.headline)}</h2>' not in app:
-              raise SystemExit('portfolio cards must lead with the buyer problem/outcome headline')
-          if 'DIO route · ${esc(product.name)}' not in app:
-              raise SystemExit('DIO route name must remain visible as provenance, not the sales headline')
-
-          print("DIO_PUBLIC_PORTFOLIO_CUSTOMER_FACING_VERIFIED")
+          html=Path('products/index.html').read_text(encoding='utf-8')
+          for token in ('68 canonical product incarnations','53 base canon + 15 canon extensions','159 / 159 base-canon journeys verified','UNPROVED','id="search"','id="filters"','id="grid"'):
+              if token not in html: raise SystemExit(f'portfolio missing: {token}')
+          for stale in ('38 controlled offer routes','4 controlled pilots','only four'):
+              if stale.lower() in html.lower(): raise SystemExit(f'stale portfolio claim: {stale}')
+          print('DIO_PUBLIC_PORTFOLIO_CUSTOMER_FACING_VERIFIED')
           PY

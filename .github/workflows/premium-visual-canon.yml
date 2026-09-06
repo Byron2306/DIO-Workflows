@@ -1,0 +1,28 @@
+name: Validate premium visual canon
+
+on:
+  pull_request:
+    paths:
+      - "index.html"
+      - "assets/megabeast/**"
+      - "assets/premium/**"
+      - "assets/dio-visual-system.css"
+      - "assets/legal-trust.css"
+      - "products/**"
+      - "privacy/**"
+      - "terms/**"
+      - "data-deletion/**"
+      - "scripts/check_premium_visual_canon.py"
+      - "scripts/check_public_asset_paths.py"
+      - ".github/workflows/premium-visual-canon.yml"
+  workflow_dispatch:
+
+jobs:
+  premium-visual-canon:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify gilded DIO visual language and mobile safe zones
+        run: python3 scripts/check_premium_visual_canon.py
+      - name: Verify every public local asset path resolves
+        run: python3 scripts/check_public_asset_paths.py

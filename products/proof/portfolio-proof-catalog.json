@@ -1,0 +1,1998 @@
+{
+  "schema": "dio.public.portfolio-proof-catalog.v1",
+  "canonical_product_count": 53,
+  "execution_journey_count": 159,
+  "execution_verified_journey_count": 159,
+  "commercial_validation": "UNPROVED",
+  "authority_created": false,
+  "products": [
+    {
+      "slug": "homs-assess",
+      "name": "HOMS Assess",
+      "suite": "Education & Research",
+      "buyer": "Grade 10 Physical Sciences teacher",
+      "buyer_context": "The teacher is preparing a moderation sample before returning Term 3 scripts. The school uses a 50-mark mechanics task and requires comments that learners can understand.",
+      "buyer_job": "Mark this two-learner mechanics sample against my memo and rubric, give criterion-level feedback, and show anything that still needs my judgement.",
+      "exception_case": "Question 7 contains a faint handwritten correction. DIO must flag the ambiguity instead of guessing the learner's intended value.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "final educator authority",
+        "invented learner text"
+      ],
+      "artifacts": [
+        {
+          "name": "LECTURER_REVIEW_SUMMARY.md",
+          "path": "products/proof/artifacts/homs-assess/LECTURER_REVIEW_SUMMARY.md",
+          "bytes": 592,
+          "sha256": "sha256:f5bda89215ce81a1c9f03c37639e521239ebcd63f369389da26442acf7c5e3dc",
+          "suffix": ".md",
+          "proof_relation": "redacted_public_copy_of_customer_facing_artifact_from_controlled_production_run",
+          "source_sha256": "sha256:60729dceb85caaf47e72a6b0dc5cebbd49791e2595a26bdfaed6b8c76289f50f"
+        },
+        {
+          "name": "learner_B_FEEDBACK.txt",
+          "path": "products/proof/artifacts/homs-assess/learner_B_FEEDBACK.txt",
+          "bytes": 3236,
+          "sha256": "sha256:90ccbac2e3a4bb4a3423ac0a08c8415abd409279df04f62f12a7839b8bc129e5",
+          "suffix": ".txt",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "memo.md",
+          "path": "products/proof/artifacts/homs-assess/memo.md",
+          "bytes": 395,
+          "sha256": "sha256:d6f1002f4b3ad0b1894cdaa133eb37a1195c941d54859acb468223a1b0af1418",
+          "suffix": ".md",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "homs-exam",
+      "name": "HOMS Exam",
+      "suite": "Education & Research",
+      "buyer": "Assessment coordinator",
+      "buyer_context": "The coordinator needs a source-based History paper covering nationalism in South Africa, apartheid in the 1940s-1960s, and one essay choice. The paper must balance lower- and higher-order questions.",
+      "buyer_job": "Build a Grade 11 History mid-year examination and memorandum from this scope, weighting and source pack. Keep it at 150 marks and two hours.",
+      "exception_case": "One supplied source extract has no publication date. The examination may use the extract, but must not invent a date or source provenance.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "fabricated source citation",
+        "unapproved curriculum content"
+      ],
+      "artifacts": [
+        {
+          "name": "homs-exam-memorandum-en.docx",
+          "path": "products/proof/artifacts/homs-exam/homs-exam-memorandum-en.docx",
+          "bytes": 39108,
+          "sha256": "sha256:c760c6acae06ebfa7e096e17176d28a1a960d9165f987222ba9fa6d5c917455b",
+          "suffix": ".docx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "homs-exam-paper-en.docx",
+          "path": "products/proof/artifacts/homs-exam/homs-exam-paper-en.docx",
+          "bytes": 39423,
+          "sha256": "sha256:247449fd0126cb7b70d3f7fcb29e0c57935f88bc2a17bed0daeb1386edf465d5",
+          "suffix": ".docx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "homs-exam-paper-en.html",
+          "path": "products/proof/artifacts/homs-exam/homs-exam-paper-en.html",
+          "bytes": 4226,
+          "sha256": "sha256:bf3a1e8e3e75eeb01590c4a232c729333234248e03ddc6a27c44af35e18235f0",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "homs-moderate",
+      "name": "HOMS Moderate",
+      "suite": "Education & Research",
+      "buyer": "External subject moderator",
+      "buyer_context": "A 100-mark first-year Economics assessment has already been drafted by another lecturer and needs independent pre-release moderation.",
+      "buyer_job": "Moderate this Economics paper, memo and blueprint. Check alignment, cognitive spread, mark consistency, ambiguity and whether the memo actually answers the paper.",
+      "exception_case": "The moderator may recommend changes but may not silently rewrite the lecturer's paper and call it approved.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "moderation approval",
+        "invented missing data"
+      ],
+      "artifacts": [
+        {
+          "name": "HOMSMODERATE_REVIEW_PACK.html",
+          "path": "products/proof/artifacts/homs-moderate/HOMSMODERATE_REVIEW_PACK.html",
+          "bytes": 1503,
+          "sha256": "sha256:292301fa25913ead08c632abc8f6c96c25d65d32b555c19cffdf4be657c388c2",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "homs-curriculum",
+      "name": "HOMS Curriculum",
+      "suite": "Education & Research",
+      "buyer": "Curriculum head",
+      "buyer_context": "The network is standardising curriculum plans across four schools for the next academic year.",
+      "buyer_job": "Map our Grade 8 Social Sciences annual plan to the supplied curriculum requirements and identify omissions, duplication and sequencing risks.",
+      "exception_case": "A locally developed enrichment unit is valuable but is not itself evidence that the statutory curriculum requirement is satisfied.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "curriculum authority",
+        "invented statutory requirement"
+      ],
+      "artifacts": [
+        {
+          "name": "CURRICULUM_ALIGNMENT_MATRIX.csv",
+          "path": "products/proof/artifacts/homs-curriculum/CURRICULUM_ALIGNMENT_MATRIX.csv",
+          "bytes": 656,
+          "sha256": "sha256:441b3c2349627809d79c7cbbc39f04601a2a40f30aff3315a6ee54c742c321b2",
+          "suffix": ".csv",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "CURRICULUM_REVIEW.md",
+          "path": "products/proof/artifacts/homs-curriculum/CURRICULUM_REVIEW.md",
+          "bytes": 692,
+          "sha256": "sha256:83897464cc88684945dea9546ab28705227291bea547e54892c66c5c08028604",
+          "suffix": ".md",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "homs-learning-studio",
+      "name": "HOMS Learning Studio",
+      "suite": "Education & Research",
+      "buyer": "Physical Sciences teacher",
+      "buyer_context": "The teacher has a mixed-ability class and needs a coherent pack for motion in one dimension that can be adapted before classroom use.",
+      "buyer_job": "Turn this Grade 10 Term 3 motion topic into a learner guide, worksheet, mini-assessment, educator guide and short companion lesson.",
+      "exception_case": "The teacher does not want advanced calculus or university-level mechanics introduced into the pack.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "automatic classroom release",
+        "out-of-scope curriculum"
+      ],
+      "artifacts": [
+        {
+          "name": "HOMS_G10_T3_MOTION_LEARNER_GUIDE.pdf",
+          "path": "products/proof/artifacts/homs-learning-studio/HOMS_G10_T3_MOTION_LEARNER_GUIDE.pdf",
+          "bytes": 216629,
+          "sha256": "sha256:ac0bad7ff5ffe4224eb590d53363721d799e29f4cf0e54be4f66b394c22cabf3",
+          "suffix": ".pdf",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "HOMS_G10_T3_MOTION_PRACTICAL_ACTIVITY.pdf",
+          "path": "products/proof/artifacts/homs-learning-studio/HOMS_G10_T3_MOTION_PRACTICAL_ACTIVITY.pdf",
+          "bytes": 171269,
+          "sha256": "sha256:45cd1ebea034436ce0ba20531a1f3c280523372c002d99a7314f67519ba5a17b",
+          "suffix": ".pdf",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "HOMS_G10_T3_MOTION_WORKSHEET.pdf",
+          "path": "products/proof/artifacts/homs-learning-studio/HOMS_G10_T3_MOTION_WORKSHEET.pdf",
+          "bytes": 115872,
+          "sha256": "sha256:987b540940930efc969cca282940e5cab747169feabb69e66269938a89068dfb",
+          "suffix": ".pdf",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "homs-accreditation",
+      "name": "HOMS Accreditation",
+      "suite": "Education & Research",
+      "buyer": "Quality assurance manager",
+      "buyer_context": "The private training provider is preparing for an external programme review and wants evidence organised before the authorised signatory submits anything.",
+      "buyer_job": "Prepare an accreditation-readiness evidence pack for Criterion 4 using these programme documents, staff records, assessment policy and internal audit notes.",
+      "exception_case": "DIO must distinguish readiness evidence from an accreditation decision or institutional attestation.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "accreditation granted",
+        "regulator acceptance"
+      ],
+      "artifacts": [
+        {
+          "name": "ACCREDITATION_REVIEW_PACK.html",
+          "path": "products/proof/artifacts/homs-accreditation/ACCREDITATION_REVIEW_PACK.html",
+          "bytes": 2258,
+          "sha256": "sha256:2a3f4eb2e89468bf0fd308fc283ec8131ca1f4f6c14edcf13a9dd07b4ca3b096",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "sophia-review",
+      "name": "Sophia Review",
+      "suite": "Education & Research",
+      "buyer": "Master's candidate",
+      "buyer_context": "The candidate has a 3,200-word draft chapter on self-directed learning and dilemma-based learning and wants diagnostic review, not ghostwriting.",
+      "buyer_job": "Review this literature-review chapter against my research question. Check claim-to-source support, references, argument seams and places where I need to make the scholarly decision myself.",
+      "exception_case": "A supervisor comment in the margin says 'make this sound more certain'. Sophia must not strengthen a claim beyond the evidence.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "ghostwritten chapter",
+        "fabricated citation"
+      ],
+      "artifacts": [
+        {
+          "name": "CLAIM_SOURCE_LEDGER.md",
+          "path": "products/proof/artifacts/sophia-review/CLAIM_SOURCE_LEDGER.md",
+          "bytes": 1055,
+          "sha256": "sha256:f8a27c40ceb8a5279c762a0135cd922be7c8994ad4b3b5bebfb87ee4db283839",
+          "suffix": ".md",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "REFERENCE_AUDIT.md",
+          "path": "products/proof/artifacts/sophia-review/REFERENCE_AUDIT.md",
+          "bytes": 960,
+          "sha256": "sha256:4e0af8d7bb568121e4d164f2aa3b11457373478ba770835ffcf647c6c972a396",
+          "suffix": ".md",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "REVIEWER_COMMENTARY.md",
+          "path": "products/proof/artifacts/sophia-review/REVIEWER_COMMENTARY.md",
+          "bytes": 2085,
+          "sha256": "sha256:6bfd2fe3686ee9f57cf074bcd077b8aa7e435752ec9b0f237745c2bbb020c1d1",
+          "suffix": ".md",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "sophia-research",
+      "name": "Sophia Research",
+      "suite": "Education & Research",
+      "buyer": "Research fellow",
+      "buyer_context": "The fellow is scoping a grant proposal and needs a defensible evidence map before deciding on a study design.",
+      "buyer_job": "Build a source-grounded research brief on AI-supported formative assessment from these seed papers and identify competing claims, evidence gaps and useful next searches.",
+      "exception_case": "The brief may propose search directions but must not pretend the supplied literature proves effectiveness across all education sectors.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "universal effectiveness",
+        "invented study result"
+      ],
+      "artifacts": [
+        {
+          "name": "CLAIM_SOURCE_LEDGER.md",
+          "path": "products/proof/artifacts/sophia-research/CLAIM_SOURCE_LEDGER.md",
+          "bytes": 1069,
+          "sha256": "sha256:1b6e1d55fdd8233d66524c8ecdff96ab53bde2d41badede24503652537ce883a",
+          "suffix": ".md",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "REVIEWER_COMMENTARY.md",
+          "path": "products/proof/artifacts/sophia-research/REVIEWER_COMMENTARY.md",
+          "bytes": 2141,
+          "sha256": "sha256:cc745d4c46343f71f6bc5cdc8af679de50073862438a542d49d865753d6a7230",
+          "suffix": ".md",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "SOPHIARESEARCH_REVIEW_PACK.html",
+          "path": "products/proof/artifacts/sophia-research/SOPHIARESEARCH_REVIEW_PACK.html",
+          "bytes": 1489,
+          "sha256": "sha256:1f6e0b0c7044e8dc5524e8f98e19a689202675b3e333c4fd907f4f024c6a0c5e",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "sophia-supervisor",
+      "name": "Sophia Supervisor",
+      "suite": "Education & Research",
+      "buyer": "PhD supervisor",
+      "buyer_context": "The supervisor wants to reduce repetitive technical feedback while preserving the supervisory relationship and candidate authorship.",
+      "buyer_job": "Prepare a supervision review pack for this chapter and my prior comments. Group recurring issues, unresolved evidence questions and decisions I should discuss with the candidate.",
+      "exception_case": "The system may organise and surface issues but may not issue a pass/fail doctoral judgement or write replacement thesis prose as the candidate.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "doctoral progress decision",
+        "candidate authorship replacement"
+      ],
+      "artifacts": [
+        {
+          "name": "REFERENCE_AUDIT.md",
+          "path": "products/proof/artifacts/sophia-supervisor/REFERENCE_AUDIT.md",
+          "bytes": 960,
+          "sha256": "sha256:4e0af8d7bb568121e4d164f2aa3b11457373478ba770835ffcf647c6c972a396",
+          "suffix": ".md",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "REVIEWER_COMMENTARY.md",
+          "path": "products/proof/artifacts/sophia-supervisor/REVIEWER_COMMENTARY.md",
+          "bytes": 1806,
+          "sha256": "sha256:3b8bae11a7836296660e917b8b606f6d909ee2d827d22f4442a62c40a5a08074",
+          "suffix": ".md",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "SOPHIASUPERVISOR_REVIEW_PACK.html",
+          "path": "products/proof/artifacts/sophia-supervisor/SOPHIASUPERVISOR_REVIEW_PACK.html",
+          "bytes": 1520,
+          "sha256": "sha256:fdb222546639cfe278a32e6fbea614bb2129ea2ac0db6ebe14d806372969a56a",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "sophia-integrity",
+      "name": "Sophia Integrity",
+      "suite": "Education & Research",
+      "buyer": "Journal managing editor",
+      "buyer_context": "The journal wants an integrity screen that assists editors without making allegations of misconduct.",
+      "buyer_job": "Audit this submitted manuscript for claim-source integrity, reference anomalies and unsupported certainty before I send it to peer review.",
+      "exception_case": "Integrity findings must be framed as review findings requiring human investigation, not accusations of fraud or plagiarism.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "misconduct finding",
+        "plagiarism conviction"
+      ],
+      "artifacts": [
+        {
+          "name": "REFERENCE_AUDIT.md",
+          "path": "products/proof/artifacts/sophia-integrity/REFERENCE_AUDIT.md",
+          "bytes": 960,
+          "sha256": "sha256:4e0af8d7bb568121e4d164f2aa3b11457373478ba770835ffcf647c6c972a396",
+          "suffix": ".md",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "REVIEWER_COMMENTARY.md",
+          "path": "products/proof/artifacts/sophia-integrity/REVIEWER_COMMENTARY.md",
+          "bytes": 2308,
+          "sha256": "sha256:29a3b1a8d7333f392f3cebcc7494bda9c6021ba2d3c1c64d5c1d4df159cee60f",
+          "suffix": ".md",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "SOPHIAINTEGRITY_REVIEW_PACK.html",
+          "path": "products/proof/artifacts/sophia-integrity/SOPHIAINTEGRITY_REVIEW_PACK.html",
+          "bytes": 1489,
+          "sha256": "sha256:247e5f9c47a93bdb58bd68c35d82e03d83a709d4573612ceea0e234874308b16",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "sophia-tutor",
+      "name": "Sophia Tutor",
+      "suite": "Education & Research",
+      "buyer": "Second-year university student",
+      "buyer_context": "The student has an upcoming tutorial and a separately identified graded assignment that must remain their own work.",
+      "buyer_job": "Help me understand opportunity cost and comparative advantage from these course notes, then give me practice questions and feedback prompts without doing my graded assignment for me.",
+      "exception_case": "DIO must teach and create fresh practice but refuse to provide a submission-ready answer to the graded assignment.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "graded assignment answer",
+        "false course authority"
+      ],
+      "artifacts": [
+        {
+          "name": "SOPHIATUTOR_REVIEW_PACK.html",
+          "path": "products/proof/artifacts/sophia-tutor/SOPHIATUTOR_REVIEW_PACK.html",
+          "bytes": 1472,
+          "sha256": "sha256:54660eb96422eaed15a71e385ea97b7395f36ca06d04d5745e63a7b9372bbd0a",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "vamp-performance",
+      "name": "VAMP Performance",
+      "suite": "Enterprise Operations",
+      "buyer": "Academic staff member",
+      "buyer_context": "The staff member is preparing for a formal performance conversation and has evidence across projects, teaching, research and service.",
+      "buyer_job": "Build my 2026 mid-year performance evidence snapshot from these objectives and records. Show accepted evidence, candidates and gaps. Do not rate me.",
+      "exception_case": "A congratulatory email calls the employee 'outstanding'. It is contextual evidence, not authority for a performance rating.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "employee rating",
+        "employment decision"
+      ],
+      "artifacts": [
+        {
+          "name": "INVOICE.docx",
+          "path": "products/proof/artifacts/vamp-performance/INVOICE.docx",
+          "bytes": 37026,
+          "sha256": "sha256:1986bb9d5566d201921567f4f4295aa464ea7e8e0ee60c929385ac419701b942",
+          "suffix": ".docx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "evidence_table.xlsx",
+          "path": "products/proof/artifacts/vamp-performance/evidence_table.xlsx",
+          "bytes": 4784,
+          "sha256": "sha256:2df2894df3376d3083eb1ed19de67f3014a3642bfe18eccd4bdd9893549045b0",
+          "suffix": ".xlsx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "executive_summary.docx",
+          "path": "products/proof/artifacts/vamp-performance/executive_summary.docx",
+          "bytes": 37148,
+          "sha256": "sha256:ac88bf1f5a5b0bccb255e21d5d038be4eca24f7f2243a811c9c0ff3dbf8de2f1",
+          "suffix": ".docx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "promotionproof",
+      "name": "PromotionProof",
+      "suite": "Enterprise Operations",
+      "buyer": "Senior lecturer applying for promotion",
+      "buyer_context": "The applicant is preparing a dossier for a human promotions committee and wants no prediction of the committee outcome.",
+      "buyer_job": "Map my promotion dossier against the supplied associate-professor criteria and show what is evidenced, weak, missing or contradictory.",
+      "exception_case": "DIO must preserve the two-publication discrepancy rather than selecting the more favourable number.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "promotion recommendation",
+        "promotion probability"
+      ],
+      "artifacts": [
+        {
+          "name": "PROMOTIONPROOF_REVIEW_PACK.html",
+          "path": "products/proof/artifacts/promotionproof/PROMOTIONPROOF_REVIEW_PACK.html",
+          "bytes": 1550,
+          "sha256": "sha256:9f0ca2202c2defa30474d9b04961c3a192111fe84c5c9f591b57e85f362486f4",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "evidence_table.xlsx",
+          "path": "products/proof/artifacts/promotionproof/evidence_table.xlsx",
+          "bytes": 4784,
+          "sha256": "sha256:bf4a26fd9a3a035b0f74d810f105e4d15fa897e5e5bbf83ebe0e113f9f40608d",
+          "suffix": ".xlsx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "executive_summary.docx",
+          "path": "products/proof/artifacts/promotionproof/executive_summary.docx",
+          "bytes": 37146,
+          "sha256": "sha256:4dca3cf782d6e3ef978fb9e474110e39ffa44e8e96320533a79ae45dba94d590",
+          "suffix": ".docx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "cpdproof",
+      "name": "CPDProof",
+      "suite": "Enterprise Operations",
+      "buyer": "Registered professional",
+      "buyer_context": "The professional has certificates, webinar emails and a handwritten activity log covering the current cycle.",
+      "buyer_job": "Reconcile my CPD log against the professional body's annual requirements and prepare the evidence pack for my own review.",
+      "exception_case": "The system must not award CPD points where the source does not establish them.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "CPD compliance certified",
+        "invented points"
+      ],
+      "artifacts": [
+        {
+          "name": "CPDPROOF_REVIEW_PACK.html",
+          "path": "products/proof/artifacts/cpdproof/CPDPROOF_REVIEW_PACK.html",
+          "bytes": 1455,
+          "sha256": "sha256:402fcc3a9a6b3cfda43354b8b09cf45b9c1d88f9d407e967c4ed6fc68c1331a9",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "evidence_table.xlsx",
+          "path": "products/proof/artifacts/cpdproof/evidence_table.xlsx",
+          "bytes": 4784,
+          "sha256": "sha256:8dfc4607aa8c271f9467df26e84c70d62c4e9549fe642095d3668aa51de64a08",
+          "suffix": ".xlsx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "executive_summary.docx",
+          "path": "products/proof/artifacts/cpdproof/executive_summary.docx",
+          "bytes": 37140,
+          "sha256": "sha256:ee55ddcc6e4daf5fbbc76a5d207751f111c16a700974f56ff07c16cee936a411",
+          "suffix": ".docx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "projectproof",
+      "name": "ProjectProof",
+      "suite": "Enterprise Operations",
+      "buyer": "Programme manager",
+      "buyer_context": "A funder steering committee wants a concise, traceable view before the quarterly meeting.",
+      "buyer_job": "Turn this project charter, milestone tracker, RAID log and deliverables folder into a project proof pack showing status evidence and unresolved claims.",
+      "exception_case": "Completion status must follow evidence, not the optimistic dashboard label alone.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "funder acceptance",
+        "invented milestone approval"
+      ],
+      "artifacts": [
+        {
+          "name": "PROJECTPROOF_REVIEW_PACK.html",
+          "path": "products/proof/artifacts/projectproof/PROJECTPROOF_REVIEW_PACK.html",
+          "bytes": 1363,
+          "sha256": "sha256:aeec80384d68f9e597a659f5adc3251db925126eb63db99d8c9dd38a12e6735b",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "impactproof",
+      "name": "ImpactProof",
+      "suite": "Public & Programme Ops",
+      "buyer": "Monitoring and evaluation manager",
+      "buyer_context": "The NGO is preparing an annual impact report for donors.",
+      "buyer_job": "Map these outcome indicators to the supplied monitoring evidence and prepare an impact evidence pack without overstating causality.",
+      "exception_case": "DIO may report observed outcomes and evidence coverage but must not claim the programme caused all observed employment changes.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "causal impact proven",
+        "invented beneficiaries"
+      ],
+      "artifacts": [
+        {
+          "name": "IMPACTPROOF_REVIEW_PACK.html",
+          "path": "products/proof/artifacts/impactproof/IMPACTPROOF_REVIEW_PACK.html",
+          "bytes": 1513,
+          "sha256": "sha256:a93e101796fc90ea246319f262f36b09d7d35c99d8167e84da6fe2ecf9da6af2",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "tenderproof",
+      "name": "TenderProof",
+      "suite": "Public & Programme Ops",
+      "buyer": "Bid manager",
+      "buyer_context": "The company is responding to municipal RFP INFRA-26-041 for a three-year maintenance contract.",
+      "buyer_job": "Build a tender compliance and evidence pack from this RFP, company documents and technical response. Flag every mandatory gap before submission.",
+      "exception_case": "The system must not declare the bid eligible or submit it; the missing third signed reference remains material.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "bid eligible",
+        "tender submitted"
+      ],
+      "artifacts": [
+        {
+          "name": "EVIDENCE_PACK.docx",
+          "path": "products/proof/artifacts/tenderproof/EVIDENCE_PACK.docx",
+          "bytes": 2582,
+          "sha256": "sha256:c6c0cf9440db8469bc64e81018908271e568d1b91419bf9ea7f23c06b6791d7d",
+          "suffix": ".docx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "EVIDENCE_PACK.html",
+          "path": "products/proof/artifacts/tenderproof/EVIDENCE_PACK.html",
+          "bytes": 19065,
+          "sha256": "sha256:86676c5e076dad54159cfb38b99df28542eb9c55410e057b5c9298bd08fcb298",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "EVIDENCE_PACK.pdf",
+          "path": "products/proof/artifacts/tenderproof/EVIDENCE_PACK.pdf",
+          "bytes": 7267,
+          "sha256": "sha256:a58fce1c093835763fedb3e1da883f55f76b39d82dd4fd01714cf6cf6ced88fd",
+          "suffix": ".pdf",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "grantproof",
+      "name": "GrantProof",
+      "suite": "Public & Programme Ops",
+      "buyer": "Grants manager",
+      "buyer_context": "The NGO is applying to the Ubuntu Education Fund 2026 call for a R2.4 million literacy programme.",
+      "buyer_job": "Turn this funding call, proposal draft, budget and organisational evidence into a requirement-and-evidence readiness pack.",
+      "exception_case": "DIO must not claim eligibility or funder acceptance and must flag the missing second audited year.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "grant eligible",
+        "grant award likely"
+      ],
+      "artifacts": [
+        {
+          "name": "EVIDENCE_PACK.docx",
+          "path": "products/proof/artifacts/grantproof/EVIDENCE_PACK.docx",
+          "bytes": 2576,
+          "sha256": "sha256:153cf9b395ed0af31f9e7ee46d31249460f4c7a62bd5c72064139423dd4c3935",
+          "suffix": ".docx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "EVIDENCE_PACK.html",
+          "path": "products/proof/artifacts/grantproof/EVIDENCE_PACK.html",
+          "bytes": 19137,
+          "sha256": "sha256:0c03dfe694c644d363d6fcf34dc04951c5ce07f1ccf86a7eaaf2344dc932dfca",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "EVIDENCE_PACK.pdf",
+          "path": "products/proof/artifacts/grantproof/EVIDENCE_PACK.pdf",
+          "bytes": 7267,
+          "sha256": "sha256:eb46607b7fe469d837e97bc431fc7c18950ff998983198d3afc2d9ed2e3f3487",
+          "suffix": ".pdf",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "donorproof",
+      "name": "DonorProof",
+      "suite": "Public & Programme Ops",
+      "buyer": "Donor reporting manager",
+      "buyer_context": "The programme is reporting to an international donor for January-June 2026.",
+      "buyer_job": "Prepare our semi-annual donor evidence pack from the agreement, logframe, expenditure references and activity records.",
+      "exception_case": "The 37/41 discrepancy must remain visible and no donor representation may be released automatically.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "donor accepted",
+        "41 sites proven"
+      ],
+      "artifacts": [
+        {
+          "name": "DONORPROOF_REVIEW_PACK.html",
+          "path": "products/proof/artifacts/donorproof/DONORPROOF_REVIEW_PACK.html",
+          "bytes": 1500,
+          "sha256": "sha256:3a2a5b69bd692ea0cbd26481230b5ff63ad91bf5462369381b5d2cfd5a5c4fc3",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "programmeproof",
+      "name": "ProgrammeProof",
+      "suite": "Public & Programme Ops",
+      "buyer": "Programme assurance lead",
+      "buyer_context": "The office is preparing a governance committee review for a multi-year skills programme.",
+      "buyer_job": "Create a programme assurance evidence pack from this business case, milestones, benefits register, budget and risk records.",
+      "exception_case": "DIO must not convert an amber milestone into completion or predict whether the governance committee will continue funding.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "programme approved",
+        "future benefit achieved"
+      ],
+      "artifacts": [
+        {
+          "name": "PROGRAMMEPROOF_REVIEW_PACK.html",
+          "path": "products/proof/artifacts/programmeproof/PROGRAMMEPROOF_REVIEW_PACK.html",
+          "bytes": 1421,
+          "sha256": "sha256:bfc9ba182b82735e511db6e85b839190fd0168d2da7d279dfcbfad46372320e1",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "dio-regops",
+      "name": "DIO RegOps",
+      "suite": "Public & Programme Ops",
+      "buyer": "Regulatory operations manager",
+      "buyer_context": "The company wants operational prerequisites separated from professional legal interpretation.",
+      "buyer_job": "Build a regulatory-operations readiness view from this obligation register, filing calendar, policy evidence and ownership records.",
+      "exception_case": "An operational readiness state is not legal clearance and does not create filing authority.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "legally cleared",
+        "filing submitted"
+      ],
+      "artifacts": [
+        {
+          "name": "REGOPS_READINESS_PACK.html",
+          "path": "products/proof/artifacts/dio-regops/REGOPS_READINESS_PACK.html",
+          "bytes": 2190,
+          "sha256": "sha256:d3ea477411bf402f5a0fcae3100d8352bee2aaa0c71c44de65d14829e1fc5dea",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "permitproof",
+      "name": "PermitProof",
+      "suite": "Public & Programme Ops",
+      "buyer": "Environmental permitting coordinator",
+      "buyer_context": "The developer is preparing a controlled application package for a small solar facility.",
+      "buyer_job": "Turn this permit guidance, application form, site plan and technical evidence into a permit-readiness pack with missing items and deadlines.",
+      "exception_case": "Unsigned consent must remain unsatisfied and DIO may not predict or issue a permit decision.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "permit granted",
+        "application submitted"
+      ],
+      "artifacts": [
+        {
+          "name": "EVIDENCE_PACK.docx",
+          "path": "products/proof/artifacts/permitproof/EVIDENCE_PACK.docx",
+          "bytes": 2547,
+          "sha256": "sha256:3143706b06c47d9bd8427924cb704bb56401bda617c1bb0e93fd0dadf4c69bf8",
+          "suffix": ".docx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "EVIDENCE_PACK.html",
+          "path": "products/proof/artifacts/permitproof/EVIDENCE_PACK.html",
+          "bytes": 19106,
+          "sha256": "sha256:d91e6be6438eb6da90f13d6bbbdab856a4cc3f9377284943a8e1c0f046fe5e19",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "EVIDENCE_PACK.pdf",
+          "path": "products/proof/artifacts/permitproof/EVIDENCE_PACK.pdf",
+          "bytes": 7267,
+          "sha256": "sha256:ecd42e6c01748cf1edd553ccaa180550c8d03c771660dfd1d7b0cecffa0c1e0d",
+          "suffix": ".pdf",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "evidex-evidenceops",
+      "name": "Evidex EvidenceOps",
+      "suite": "Evidence & Assurance",
+      "buyer": "Grant reporting lead",
+      "buyer_context": "The reporting lead has narrative drafts, monitoring sheets, photographs, invoices and email confirmations from three workstreams.",
+      "buyer_job": "Turn this messy reporting folder into a claim-to-evidence pack with provenance, gaps and contradictions ready for my review.",
+      "exception_case": "The pack must show the 14-versus-12 evidence gap instead of silently reconciling it.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "donor submission",
+        "invented evidence"
+      ],
+      "artifacts": [
+        {
+          "name": "INVOICE.docx",
+          "path": "products/proof/artifacts/evidex-evidenceops/INVOICE.docx",
+          "bytes": 37054,
+          "sha256": "sha256:d2eaedea71fa33f950c9228f73d74c71a80a9b96183417b2c0b029aa1575b972",
+          "suffix": ".docx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "executive_summary.docx",
+          "path": "products/proof/artifacts/evidex-evidenceops/executive_summary.docx",
+          "bytes": 37507,
+          "sha256": "sha256:ea36830362a828ef11c824a276a4f440df7849f8aa669aa7270c548e9df3a7d2",
+          "suffix": ".docx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "narrative_justification.docx",
+          "path": "products/proof/artifacts/evidex-evidenceops/narrative_justification.docx",
+          "bytes": 37384,
+          "sha256": "sha256:7253b51af7d8e248e5af3aecb09056b984a80ff3b71dd815ee9cdf0f91acd771",
+          "suffix": ".docx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "auditproof",
+      "name": "AuditProof",
+      "suite": "Evidence & Assurance",
+      "buyer": "Internal audit manager",
+      "buyer_context": "The audit team is assembling PBC material before the scheduled audit fieldwork.",
+      "buyer_job": "Prepare the evidence-readiness pack for the access-control audit from this control matrix, samples and policy evidence.",
+      "exception_case": "DIO may identify exceptions but may not issue an audit opinion or rate control effectiveness as an auditor.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "audit opinion",
+        "control effective certification"
+      ],
+      "artifacts": [
+        {
+          "name": "AUDITPROOF_REVIEW_PACK.html",
+          "path": "products/proof/artifacts/auditproof/AUDITPROOF_REVIEW_PACK.html",
+          "bytes": 1075,
+          "sha256": "sha256:42c72fdf2fe731b4a5da49901ac2a16f6f17385e4eb0cea22acd55e1428dd8b0",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "vendorproof",
+      "name": "VendorProof",
+      "suite": "Evidence & Assurance",
+      "buyer": "Third-party risk analyst",
+      "buyer_context": "The institution is reviewing a cloud payroll supplier before the human vendor-risk committee meets.",
+      "buyer_job": "Review this vendor questionnaire and evidence bundle, map evidence to requirements, and list stale, contradictory or unanswered items.",
+      "exception_case": "The system must preserve the certification expiry contradiction and cannot approve or reject the supplier.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "vendor approved",
+        "vendor risk score"
+      ],
+      "artifacts": [
+        {
+          "name": "VENDORPROOF_REVIEW_PACK.html",
+          "path": "products/proof/artifacts/vendorproof/VENDORPROOF_REVIEW_PACK.html",
+          "bytes": 1428,
+          "sha256": "sha256:0ee600836d048c3828e5a9ed512d69306f4dde0f32e8007d0c183ad880d212c8",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "qualityproof",
+      "name": "QualityProof",
+      "suite": "Evidence & Assurance",
+      "buyer": "Quality manager",
+      "buyer_context": "The manufacturer is preparing a monthly quality review, not a regulatory certification.",
+      "buyer_job": "Map this SOP, NCR register, CAPA evidence and internal-audit results into a quality evidence pack for management review.",
+      "exception_case": "The pack must preserve incomplete retraining and may not certify product or QMS compliance.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "quality certified",
+        "CAPA closed"
+      ],
+      "artifacts": [
+        {
+          "name": "QUALITYPROOF_REVIEW_PACK.html",
+          "path": "products/proof/artifacts/qualityproof/QUALITYPROOF_REVIEW_PACK.html",
+          "bytes": 1386,
+          "sha256": "sha256:e2c925e20c912ff40b813a0b1e6d5fc7d001902c47f1cc0204b23b9eca66e06e",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "certificationproof",
+      "name": "CertificationProof",
+      "suite": "Evidence & Assurance",
+      "buyer": "Compliance coordinator",
+      "buyer_context": "The organisation is preparing for an external ISO-aligned certification-readiness assessment.",
+      "buyer_job": "Prepare a certification-readiness map against this supplied standard checklist and our current policies, audits and corrective-action evidence.",
+      "exception_case": "DIO supports readiness only. It may not state that the organisation is certified or compliant with the standard.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "certified",
+        "compliant with ISO"
+      ],
+      "artifacts": [
+        {
+          "name": "CERTIFICATIONPROOF_REVIEW_PACK.html",
+          "path": "products/proof/artifacts/certificationproof/CERTIFICATIONPROOF_REVIEW_PACK.html",
+          "bytes": 1422,
+          "sha256": "sha256:4930980d59472d6858d5346beeff2ef21b7a3a53f36794dccde96d67ad3e8bd6",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "policyproof",
+      "name": "PolicyProof",
+      "suite": "Evidence & Assurance",
+      "buyer": "Policy owner",
+      "buyer_context": "The agency is updating retention rules after an internal review.",
+      "buyer_job": "Turn this revised information-retention policy and requirement set into an obligation, evidence and approval map before governance review.",
+      "exception_case": "The draft change is not effective policy until the authorised governance process completes.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "policy approved",
+        "legal requirement determined"
+      ],
+      "artifacts": [
+        {
+          "name": "EVIDENCE_PACK.docx",
+          "path": "products/proof/artifacts/policyproof/EVIDENCE_PACK.docx",
+          "bytes": 2430,
+          "sha256": "sha256:2e60a748774c94df473917c64514be49c6af7e8fdbbe5a2d621a6352d8657334",
+          "suffix": ".docx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "EVIDENCE_PACK.html",
+          "path": "products/proof/artifacts/policyproof/EVIDENCE_PACK.html",
+          "bytes": 15729,
+          "sha256": "sha256:16dbc09eb4f245bb79af3f51882352a1193bcefa7101cacebaafaf072a05a0ea",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "EVIDENCE_PACK.pdf",
+          "path": "products/proof/artifacts/policyproof/EVIDENCE_PACK.pdf",
+          "bytes": 7267,
+          "sha256": "sha256:0f7587e15008c6ba30a89f3aa3218e1e623454fea14fa126e3bdeec0b1fe8a09",
+          "suffix": ".pdf",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "contractproof",
+      "name": "ContractProof",
+      "suite": "Evidence & Assurance",
+      "buyer": "Contract manager",
+      "buyer_context": "The company is reviewing a facilities contract before a quarterly client meeting.",
+      "buyer_job": "Extract obligations, deadlines and evidence from this service contract, amendment and performance correspondence, then prepare the review pack and draft-only next-step communication.",
+      "exception_case": "DIO must not decide legal breach, waive rights, or send the customer communication automatically.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "contract breached",
+        "waiver",
+        "message sent"
+      ],
+      "artifacts": [
+        {
+          "name": "EVIDENCE_PACK.docx",
+          "path": "products/proof/artifacts/contractproof/EVIDENCE_PACK.docx",
+          "bytes": 3565,
+          "sha256": "sha256:23e74cd4e2b68259e5f9a0857330b14f7f0b1a38e4b9c24ff0e29eae0dd80eb8",
+          "suffix": ".docx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "EVIDENCE_PACK.html",
+          "path": "products/proof/artifacts/contractproof/EVIDENCE_PACK.html",
+          "bytes": 7678,
+          "sha256": "sha256:8d64f117d888ad19fd7103cd783b5c728e47b494c92c0ac2c499117abd8c048f",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "EVIDENCE_PACK.pdf",
+          "path": "products/proof/artifacts/contractproof/EVIDENCE_PACK.pdf",
+          "bytes": 45278,
+          "sha256": "sha256:108d6f2ed94b2063a1197d3ef3331d9c687996985bb6f82e59d8c017f575c906",
+          "suffix": ".pdf",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "diligenceroom",
+      "name": "DiligenceRoom",
+      "suite": "Evidence & Assurance",
+      "buyer": "Investment associate",
+      "buyer_context": "The team is reviewing a minority investment in a logistics software company.",
+      "buyer_job": "Index this diligence folder, map key claims to evidence and build an open-question register for our investment committee team.",
+      "exception_case": "DIO must not produce an investment recommendation or choose which revenue figure is true without reconciliation.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "invest recommendation",
+        "valuation conclusion"
+      ],
+      "artifacts": [
+        {
+          "name": "DILIGENCEROOM_REVIEW_PACK.html",
+          "path": "products/proof/artifacts/diligenceroom/DILIGENCEROOM_REVIEW_PACK.html",
+          "bytes": 1107,
+          "sha256": "sha256:97fedf50179a649418399ac6842bd1ad86a7e3917f6a46fd06687ca4ac41ef76",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "assuranceroom",
+      "name": "AssuranceRoom",
+      "suite": "Evidence & Assurance",
+      "buyer": "Head of assurance",
+      "buyer_context": "The team needs a reusable evidence room for quarterly operational assurance.",
+      "buyer_job": "Assemble this control evidence, prior findings and remediation records into an assurance room with explicit gaps and human decisions.",
+      "exception_case": "A closed ticket is not equivalent to independent assurance that remediation is effective.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "assurance opinion",
+        "control effectiveness certified"
+      ],
+      "artifacts": [
+        {
+          "name": "ASSURANCEROOM_REVIEW_PACK.html",
+          "path": "products/proof/artifacts/assuranceroom/ASSURANCEROOM_REVIEW_PACK.html",
+          "bytes": 1431,
+          "sha256": "sha256:ff5c3012088336c5c35079199edbeba63bb5cb5bdacc8abcb4a4c2ec2899f66e",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "dora-vendor-assurance",
+      "name": "DORA Vendor Assurance",
+      "suite": "Evidence & Assurance",
+      "buyer": "ICT third-party risk manager",
+      "buyer_context": "The bank is reviewing a critical cloud-service provider and needs evidence organised for legal/compliance review.",
+      "buyer_job": "Prepare a DORA-oriented vendor assurance readiness pack from this ICT contract, due diligence, SLA, resilience testing and subcontractor evidence.",
+      "exception_case": "The output is readiness evidence only and must not assert DORA compliance or legal sufficiency.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "DORA compliant",
+        "legal sufficiency"
+      ],
+      "artifacts": [
+        {
+          "name": "DORAVENDORASSURANCE_REVIEW_PACK.html",
+          "path": "products/proof/artifacts/dora-vendor-assurance/DORAVENDORASSURANCE_REVIEW_PACK.html",
+          "bytes": 1396,
+          "sha256": "sha256:2c5420f79a89fcddd2436cf7069344ee2d328447f14b63dab2af14f012c6b9f7",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "dio-ai-assurance",
+      "name": "DIO AI Assurance",
+      "suite": "AI & Digital Trust",
+      "buyer": "AI governance lead",
+      "buyer_context": "The bank wants one bounded system reviewed before its quarterly AI governance meeting.",
+      "buyer_job": "Build an AI assurance evidence pack for our customer-service summarisation system from this inventory, model documentation, risk assessment, approvals and monitoring records.",
+      "exception_case": "DIO must surface stale evaluation after the model change and may not certify regulatory compliance or approve the model.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "model approved",
+        "AI compliant"
+      ],
+      "artifacts": [
+        {
+          "name": "AI_TRUST_DOSSIER.docx",
+          "path": "products/proof/artifacts/dio-ai-assurance/AI_TRUST_DOSSIER.docx",
+          "bytes": 1543,
+          "sha256": "sha256:bebaae81a2296af5fe09ead1bf1ae14ea98f48b3d18f58392777228bdd4cff92",
+          "suffix": ".docx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "AI_TRUST_DOSSIER.html",
+          "path": "products/proof/artifacts/dio-ai-assurance/AI_TRUST_DOSSIER.html",
+          "bytes": 3116,
+          "sha256": "sha256:8405c4bbc7c478fac2191448fb88b5a1060e4a249ed51de3c5556cd3ff6b105f",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "AI_TRUST_DOSSIER.pdf",
+          "path": "products/proof/artifacts/dio-ai-assurance/AI_TRUST_DOSSIER.pdf",
+          "bytes": 3583,
+          "sha256": "sha256:0769b4b341383478a7afe7693845814951b0537f574c897f979a7575e0d8ff66",
+          "suffix": ".pdf",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "modelproof",
+      "name": "ModelProof",
+      "suite": "AI & Digital Trust",
+      "buyer": "Model risk analyst",
+      "buyer_context": "The analyst is preparing an independent model-risk review for a credit-support model.",
+      "buyer_job": "Map this model documentation, validation results, data lineage and limitation register into a model evidence review pack.",
+      "exception_case": "The system may identify evidence and challenges but must not approve model use or accept residual risk.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "model approved",
+        "risk accepted"
+      ],
+      "artifacts": [
+        {
+          "name": "MODELPROOF_REVIEW_PACK.html",
+          "path": "products/proof/artifacts/modelproof/MODELPROOF_REVIEW_PACK.html",
+          "bytes": 1395,
+          "sha256": "sha256:3d4a8ca60ebccd82bbaef6145a9b89f4b8549092addc4bf7da27bac220cc1513",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "agent-authority",
+      "name": "Agent Authority",
+      "suite": "AI & Digital Trust",
+      "buyer": "Enterprise AI platform owner",
+      "buyer_context": "The platform owner is testing authority boundaries before enabling any external action.",
+      "buyer_job": "Review this claims-assistant agent's tools, scopes and escalation rules. Show which proposed actions are inside authority and which must be refused or escalated.",
+      "exception_case": "DIO must treat retrieved instructions as untrusted and refuse external send/payment actions without explicit authority.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "capability lease granted",
+        "email sent",
+        "claim paid"
+      ],
+      "artifacts": [
+        {
+          "name": "AI_TRUST_DOSSIER.docx",
+          "path": "products/proof/artifacts/agent-authority/AI_TRUST_DOSSIER.docx",
+          "bytes": 1491,
+          "sha256": "sha256:5eb8988f1398b67575ffa3e9a614a3fd30da1542711a1c0379de41d758af81f6",
+          "suffix": ".docx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "AI_TRUST_DOSSIER.html",
+          "path": "products/proof/artifacts/agent-authority/AI_TRUST_DOSSIER.html",
+          "bytes": 2935,
+          "sha256": "sha256:01591e31687a27e15d2080196beab662d529b27f20ea01645035f8cec6ef3111",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "AI_TRUST_DOSSIER.pdf",
+          "path": "products/proof/artifacts/agent-authority/AI_TRUST_DOSSIER.pdf",
+          "bytes": 3612,
+          "sha256": "sha256:82595f3a681e2c67e6ff67302ffea7f0aed1ff6c99a391c667f0db666a3c9a86",
+          "suffix": ".pdf",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "releaseproof",
+      "name": "ReleaseProof",
+      "suite": "AI & Digital Trust",
+      "buyer": "Release manager",
+      "buyer_context": "The team is preparing a production release but human release authority must remain separate.",
+      "buyer_job": "Build a release-evidence gate for version 6.8.0 from these tests, security scans, change approvals and rollback notes.",
+      "exception_case": "Passing tests do not create production release authority while CAB approval is pending.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "release approved",
+        "production deployment executed"
+      ],
+      "artifacts": [
+        {
+          "name": "RELEASEPROOF_REVIEW_PACK.html",
+          "path": "products/proof/artifacts/releaseproof/RELEASEPROOF_REVIEW_PACK.html",
+          "bytes": 1388,
+          "sha256": "sha256:8d8f4c37212c8287cdba9db45ce32b9840ad54184c52a18483cf7cb4f0a41643",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "changeproof",
+      "name": "ChangeProof",
+      "suite": "AI & Digital Trust",
+      "buyer": "AI change manager",
+      "buyer_context": "The team changed its summarisation provider and prompt template and wants reevaluation evidence before promotion.",
+      "buyer_job": "Compare the current AI service against the approved baseline and prepare a change-assurance pack covering model, prompt, policy, connector and evaluation drift.",
+      "exception_case": "DIO must mark evaluation stale and may not approve promotion or residual risk.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "change approved",
+        "promotion authorised"
+      ],
+      "artifacts": [
+        {
+          "name": "AI_TRUST_DOSSIER.docx",
+          "path": "products/proof/artifacts/changeproof/AI_TRUST_DOSSIER.docx",
+          "bytes": 1550,
+          "sha256": "sha256:813966a07d7b6ef5b64131b0c469e4f1d6586fcdd2adf210e15aa326df49ba37",
+          "suffix": ".docx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "AI_TRUST_DOSSIER.html",
+          "path": "products/proof/artifacts/changeproof/AI_TRUST_DOSSIER.html",
+          "bytes": 3124,
+          "sha256": "sha256:3e8972fa24f573af1a828122fd32e557022d33d75b019089ef9f0fd5ce650795",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "AI_TRUST_DOSSIER.pdf",
+          "path": "products/proof/artifacts/changeproof/AI_TRUST_DOSSIER.pdf",
+          "bytes": 3592,
+          "sha256": "sha256:8d22b2bcea981b67a3891162eb60551d5b196b2747dc0a6bdf1b38382554b647",
+          "suffix": ".pdf",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "ai-incidentroom",
+      "name": "AI IncidentRoom",
+      "suite": "AI & Digital Trust",
+      "buyer": "AI operations incident lead",
+      "buyer_context": "A recommendation service produced anomalous product rankings for approximately 42 minutes.",
+      "buyer_job": "Assemble an incident dossier for this recommendation-system event from logs, model changes, customer-impact notes and response actions.",
+      "exception_case": "The dossier must distinguish observed timeline from causal hypothesis and cannot declare the incident resolved for governance purposes.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "root cause proven",
+        "incident closed"
+      ],
+      "artifacts": [
+        {
+          "name": "AIINCIDENTROOM_REVIEW_PACK.html",
+          "path": "products/proof/artifacts/ai-incidentroom/AIINCIDENTROOM_REVIEW_PACK.html",
+          "bytes": 1422,
+          "sha256": "sha256:177ad8196b27193dba3d22428b2f74a22643622dd2b908049fe363a9a661ffe9",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "criticalai-assurance",
+      "name": "CriticalAI Assurance",
+      "suite": "AI & Digital Trust",
+      "buyer": "Safety assurance manager",
+      "buyer_context": "The system assists operators near industrial machinery; it does not autonomously stop machinery.",
+      "buyer_job": "Prepare a high-risk AI assurance review pack for this machine-vision safety aid from hazard analysis, control evidence, validation and escalation rules.",
+      "exception_case": "DIO must surface the validation miss and cannot certify safety, accept risk or authorise deployment.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "safe to deploy",
+        "risk accepted"
+      ],
+      "artifacts": [
+        {
+          "name": "CRITICALAIASSURANCE_REVIEW_PACK.html",
+          "path": "products/proof/artifacts/criticalai-assurance/CRITICALAIASSURANCE_REVIEW_PACK.html",
+          "bytes": 1436,
+          "sha256": "sha256:77ead755f14c3e9ef0ecc3edc44c4a9b54dc15dff54f56f1bfc49a827702d14c",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "cyberassurance",
+      "name": "CyberAssurance",
+      "suite": "AI & Digital Trust",
+      "buyer": "Information security manager",
+      "buyer_context": "The manager is preparing a quarterly executive security and assurance review.",
+      "buyer_job": "Map this architecture, control matrix, vulnerability scans, access reviews and risk register into a cyber assurance evidence pack.",
+      "exception_case": "DIO can report evidence and exceptions but cannot certify security or accept cyber risk.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "secure certified",
+        "risk accepted"
+      ],
+      "artifacts": [
+        {
+          "name": "CYBERASSURANCE_REVIEW_PACK.html",
+          "path": "products/proof/artifacts/cyberassurance/CYBERASSURANCE_REVIEW_PACK.html",
+          "bytes": 1415,
+          "sha256": "sha256:5bfaaa3239fccdf526be92c7626a4d8824ae2662d8c6aae5d6b1cf47c6b89273",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "controldrift",
+      "name": "ControlDrift",
+      "suite": "AI & Digital Trust",
+      "buyer": "Control owner",
+      "buyer_context": "The payment operations team suspects configuration drift after two emergency changes.",
+      "buyer_job": "Compare this month's control configuration and evidence against our approved baseline and show drift, missing evidence and required review.",
+      "exception_case": "The system must not normalise the exception into the baseline or declare the control ineffective as an audit conclusion.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "control effective",
+        "exception approved"
+      ],
+      "artifacts": [
+        {
+          "name": "CONTROLDRIFT_REVIEW_PACK.html",
+          "path": "products/proof/artifacts/controldrift/CONTROLDRIFT_REVIEW_PACK.html",
+          "bytes": 1491,
+          "sha256": "sha256:c13a2780262ac72e681596d11f2255a1e30df2e87d949c22f44460c55611b7db",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "suppliercyberproof",
+      "name": "SupplierCyberProof",
+      "suite": "AI & Digital Trust",
+      "buyer": "Procurement security analyst",
+      "buyer_context": "The organisation is assessing a SaaS scheduling supplier before procurement approval.",
+      "buyer_job": "Review this supplier security questionnaire and technical evidence against our cyber requirements and list unresolved risks for the committee.",
+      "exception_case": "DIO must not score or approve the supplier and must retain the backup-encryption evidence gap.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "supplier approved",
+        "cyber score"
+      ],
+      "artifacts": [
+        {
+          "name": "SUPPLIERCYBERPROOF_REVIEW_PACK.html",
+          "path": "products/proof/artifacts/suppliercyberproof/SUPPLIERCYBERPROOF_REVIEW_PACK.html",
+          "bytes": 1435,
+          "sha256": "sha256:8bece3bbea059668723cbd50aa5d510042be3856c52ca0cd5f1424a48e9628d9",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "incidentproof",
+      "name": "IncidentProof",
+      "suite": "AI & Digital Trust",
+      "buyer": "Operational incident manager",
+      "buyer_context": "A customer portal outage occurred during a database maintenance window.",
+      "buyer_job": "Create a source-grounded incident proof pack from these logs, tickets, timeline notes and communications.",
+      "exception_case": "The incident pack must not promote the engineer's hypothesis into confirmed root cause without supporting evidence.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "root cause confirmed",
+        "incident formally closed"
+      ],
+      "artifacts": [
+        {
+          "name": "INCIDENTPROOF_REVIEW_PACK.html",
+          "path": "products/proof/artifacts/incidentproof/INCIDENTPROOF_REVIEW_PACK.html",
+          "bytes": 1406,
+          "sha256": "sha256:90e8e28bf59d42ec8375a5f602248cb530d2c5a0fe4abb71b02ef74800e81010",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "document-studio-edit",
+      "name": "Document Studio Edit",
+      "suite": "Demand & Presence",
+      "buyer": "Consulting director",
+      "buyer_context": "The source is a 1,700-word operational review drafted by several contributors.",
+      "buyer_job": "Technically edit this board report for clarity, consistency and professional presentation while preserving the facts, terminology and meaning. Give me a clean copy and visible change trail.",
+      "exception_case": "Editing may improve language and structure but may not silently change financial facts or attributed quotations.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "invented fact",
+        "changed quotation"
+      ],
+      "artifacts": [
+        {
+          "name": "CLEAN_EDITED_COPY.docx",
+          "path": "products/proof/artifacts/document-studio-edit/CLEAN_EDITED_COPY.docx",
+          "bytes": 37148,
+          "sha256": "sha256:68c422e56f410c9d010bc5b841d15edf4b67e3a1151523ac93c04932d4d54fe6",
+          "suffix": ".docx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "REDLINE_REVIEW_COPY.docx",
+          "path": "products/proof/artifacts/document-studio-edit/REDLINE_REVIEW_COPY.docx",
+          "bytes": 37750,
+          "sha256": "sha256:8e6d1e20a299ec45b01be9b94dd78c6ac3fd15ca89a2bf9313b0f302530c6926",
+          "suffix": ".docx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "lingua-pro-document-studio-edit-english.docx",
+          "path": "products/proof/artifacts/document-studio-edit/lingua-pro-document-studio-edit-english.docx",
+          "bytes": 38761,
+          "sha256": "sha256:1a47c209cb04806a95318044dc69633853169f4acdb185164a1b3232648851a9",
+          "suffix": ".docx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "document-studio-localize",
+      "name": "Document Studio Localize",
+      "suite": "Demand & Presence",
+      "buyer": "Communications manager",
+      "buyer_context": "The note explains clinic appointment procedures and contains several protected programme names.",
+      "buyer_job": "Localise this public information note from English to Afrikaans using the approved terminology list, and produce a bilingual review copy plus QA trail.",
+      "exception_case": "The localized version remains subject to proficient human language review before release.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "certified translation",
+        "changed protected token"
+      ],
+      "artifacts": [
+        {
+          "name": "BILINGUAL_REVIEW_COPY.docx",
+          "path": "products/proof/artifacts/document-studio-localize/BILINGUAL_REVIEW_COPY.docx",
+          "bytes": 37755,
+          "sha256": "sha256:ae6584b1d1f91d62eebfe673b9a9c4dcfb941d368cb129b5ec39460de1228e3b",
+          "suffix": ".docx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "lingua-pro-document-studio-localize-afrikaans.docx",
+          "path": "products/proof/artifacts/document-studio-localize/lingua-pro-document-studio-localize-afrikaans.docx",
+          "bytes": 38765,
+          "sha256": "sha256:5c65720e2fd60046cd62c08aa08239297f8c3b8385a6853d76af2bb42e66276d",
+          "suffix": ".docx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "lingua-pro-document-studio-localize-english.docx",
+          "path": "products/proof/artifacts/document-studio-localize/lingua-pro-document-studio-localize-english.docx",
+          "bytes": 38750,
+          "sha256": "sha256:4b86c26ccc2488ef284a35359f07e03b561b713e6d6bdfd22e41b2493d95ebb6",
+          "suffix": ".docx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "document-studio-publish",
+      "name": "Document Studio Publish",
+      "suite": "Demand & Presence",
+      "buyer": "Research office editor",
+      "buyer_context": "The content has already passed substantive approval; the task is controlled formatting and publication preparation.",
+      "buyer_job": "Prepare this approved research brief for publication in DOCX, PDF and HTML using our professional style profile. Preserve the approved wording.",
+      "exception_case": "Publication-ready files do not mean DIO may publish them externally.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "external publication",
+        "invented DOI"
+      ],
+      "artifacts": [
+        {
+          "name": "CLEAN_EDITED_COPY.docx",
+          "path": "products/proof/artifacts/document-studio-publish/CLEAN_EDITED_COPY.docx",
+          "bytes": 37129,
+          "sha256": "sha256:43985be30f9e672b8700c019970ab1ddb3257419d9ec06acaaefd5350400df62",
+          "suffix": ".docx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "REDLINE_REVIEW_COPY.docx",
+          "path": "products/proof/artifacts/document-studio-publish/REDLINE_REVIEW_COPY.docx",
+          "bytes": 37640,
+          "sha256": "sha256:97178d25ea7a53d0456ed87b3830b15b0f51065aa3883581a6776025b5a63b61",
+          "suffix": ".docx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "lingua-pro-document-studio-publish-english.docx",
+          "path": "products/proof/artifacts/document-studio-publish/lingua-pro-document-studio-publish-english.docx",
+          "bytes": 38735,
+          "sha256": "sha256:265864673026b460c7d440cfac06466c92bdc4eba92e307bce9bfd3e4264e161",
+          "suffix": ".docx",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "accessible-publish",
+      "name": "Accessible Publish",
+      "suite": "Demand & Presence",
+      "buyer": "Accessibility coordinator",
+      "buyer_context": "The organisation needs a screen-reader-friendly PDF/HTML preparation pass before human accessibility review.",
+      "buyer_job": "Prepare an accessible publication version of this approved policy guide and provide the accessibility QA findings.",
+      "exception_case": "DIO may prepare and flag accessibility issues but may not claim formal WCAG/PDF-UA certification without the required authority and testing.",
+      "status": "INTERNAL_PRODUCTION_READY",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "accessibility certified",
+        "WCAG compliant"
+      ],
+      "artifacts": [
+        {
+          "name": "ACCESSIBLE_PUBLICATION.html",
+          "path": "products/proof/artifacts/accessible-publish/ACCESSIBLE_PUBLICATION.html",
+          "bytes": 1590,
+          "sha256": "sha256:8461617db9b4bdeb48ffc84bd1876023839bb7345c72d6f86576858c5ac403ef",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "dossierops",
+      "name": "DossierOps",
+      "suite": "Demand & Presence",
+      "buyer": "Legal operations manager",
+      "buyer_context": "The folder contains correspondence, a signed agreement, meeting notes, spreadsheets and draft working papers.",
+      "buyer_job": "Turn this mixed case folder into an indexed dossier with provenance, document classes, gaps and an open-question register for counsel review.",
+      "exception_case": "DossierOps must distinguish signed records from drafts and cannot give legal conclusions about enforceability.",
+      "status": "NEEDS_SELLABILITY_GRADE",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "legal conclusion",
+        "unsigned amendment treated as executed"
+      ],
+      "artifacts": [
+        {
+          "name": "CUSTOMER-WORKPAPER.md",
+          "path": "products/proof/artifacts/dossierops/CUSTOMER-WORKPAPER.md",
+          "bytes": 407,
+          "sha256": "sha256:df128bbfd46a596666addbdfc3faa6a9e60d0555aa51974eb04e6269a9096d50",
+          "suffix": ".md",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "DOSSIEROPS_CONTROLLED_DOSSIER.zip",
+          "path": "products/proof/artifacts/dossierops/DOSSIEROPS_CONTROLLED_DOSSIER.zip",
+          "bytes": 5197,
+          "sha256": "sha256:5b3fa8acc7da80f04c27ab73b182d14dcd082112616351c19d42a5848a99ea1b",
+          "suffix": ".zip",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "DOSSIEROPS_DOSSIER_INDEX.html",
+          "path": "products/proof/artifacts/dossierops/DOSSIEROPS_DOSSIER_INDEX.html",
+          "bytes": 988,
+          "sha256": "sha256:7adaaf664470f21c9d82d2d92dc299747921bd88d6e2040a775e445aa0947adf",
+          "suffix": ".html",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "market-radar",
+      "name": "Market Radar",
+      "suite": "Demand & Presence",
+      "buyer": "Founder",
+      "buyer_context": "The founder is exploring whether DIO's evidence workflow could be positioned for compliance-heavy SMEs.",
+      "buyer_job": "Scan the current market around evidence-management tools for small professional firms in South Africa and give me a source-bound signal brief, not a demand fairy tale.",
+      "exception_case": "Observed web or market signals must remain observations; absence of evidence is not evidence of demand.",
+      "status": "INTERNAL_PRODUCTION_READY",
+      "engineering_status": "REFUSE_NO_CUSTOMER_SURFACE",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "market demand proven",
+        "best market proven"
+      ],
+      "artifacts": [
+        {
+          "name": "Market Radar controlled execution proof",
+          "path": "products/proof/public-production-proof.html#market-radar",
+          "bytes": 0,
+          "sha256": "",
+          "suffix": ".html",
+          "proof_relation": "receipt_bound_public_proof_view_no_curated_native_artifact"
+        }
+      ]
+    },
+    {
+      "slug": "opportunity-foundry",
+      "name": "Opportunity Foundry",
+      "suite": "Demand & Presence",
+      "buyer": "Commercial strategy lead",
+      "buyer_context": "The team wants to choose what to test next without promoting an ATLAS candidate into a product by enthusiasm alone.",
+      "buyer_job": "Use this source-bound market brief plus our actual capability boundaries to rank three opportunity hypotheses and define the cheapest honest test for each.",
+      "exception_case": "Ranked opportunity is a hypothesis, not product-market fit or permission to create a new executor.",
+      "status": "INTERNAL_PRODUCTION_READY",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "market validated",
+        "capability created"
+      ],
+      "artifacts": [
+        {
+          "name": "OPPORTUNITY_FOUNDRY_BRIEF.md",
+          "path": "products/proof/artifacts/opportunity-foundry/OPPORTUNITY_FOUNDRY_BRIEF.md",
+          "bytes": 627,
+          "sha256": "sha256:3b06d09130df90917b4b54c64093459a0b873399255af17d43254527acc9ea58",
+          "suffix": ".md",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "offer-lab",
+      "name": "Offer Lab",
+      "suite": "Demand & Presence",
+      "buyer": "Product lead",
+      "buyer_context": "The team wants a sellable experiment without pretending willingness to pay has been observed.",
+      "buyer_job": "Turn this evidence-backed capability and target-buyer hypothesis into a bounded pilot offer with allowed claims, prohibited claims, scope, inputs, outputs and price-test options.",
+      "exception_case": "The offer may be commercially clear but must not claim demand, customer value or verified willingness to pay.",
+      "status": "INTERNAL_PRODUCTION_READY",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "customers want this",
+        "willingness to pay proven"
+      ],
+      "artifacts": [
+        {
+          "name": "BOUNDED_OFFER.md",
+          "path": "products/proof/artifacts/offer-lab/BOUNDED_OFFER.md",
+          "bytes": 478,
+          "sha256": "sha256:2f540a99ccb187dc700f5d588f35ed7fcec57c6cafc198ba1a0a2f47a7eccf2f",
+          "suffix": ".md",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "campaign-lab",
+      "name": "Campaign Lab",
+      "suite": "Demand & Presence",
+      "buyer": "Marketing operator",
+      "buyer_context": "This is a production-quality internal campaign run for a proof-backed pilot offer.",
+      "buyer_job": "Build the complete campaign from this bounded offer and semantic brief: channel copy, visual story, Gamma deck, local Piper narration, music-bound vertical reel and widescreen explainer. Keep publication and spend held.",
+      "exception_case": "Campaign generation proves production capability, not market demand. Publication and paid media require separate authority.",
+      "status": "INTERNAL_PRODUCTION_READY",
+      "engineering_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "campaign published",
+        "ad spend authorised",
+        "demand proven"
+      ],
+      "artifacts": [
+        {
+          "name": "portrait_1080x1350.jpg",
+          "path": "products/proof/artifacts/campaign-lab/portrait_1080x1350.jpg",
+          "bytes": 448120,
+          "sha256": "sha256:721f05f6cef3cf2614696f68e0984d480f5cf36c0a0415e7d4d2dd8726c7edfd",
+          "suffix": ".jpg",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "vertical_1080x1920.jpg",
+          "path": "products/proof/artifacts/campaign-lab/vertical_1080x1920.jpg",
+          "bytes": 538158,
+          "sha256": "sha256:9ee0830a0c2474b9ae6de5da65ee4b15409a90299ac0e13e62ae075c60f9e528",
+          "suffix": ".jpg",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        },
+        {
+          "name": "vertical_short_01_hook.jpg",
+          "path": "products/proof/artifacts/campaign-lab/vertical_short_01_hook.jpg",
+          "bytes": 374214,
+          "sha256": "sha256:6383bb589468f160e13f95a7e34f3ee0704f36e230e09cee9a8d957c66ab7a2d",
+          "suffix": ".jpg",
+          "proof_relation": "customer_facing_artifact_from_controlled_production_run"
+        }
+      ]
+    },
+    {
+      "slug": "vesper-desk",
+      "name": "Vesper Desk",
+      "suite": "Demand & Presence",
+      "buyer": "Operations coordinator",
+      "buyer_context": "The coordinator is triaging an inbound request asking for a contract obligations pack before a Thursday review meeting.",
+      "buyer_job": "I have a messy client email, two attachments and a deadline note. Route it to the right DIO product, preserve the context, and prepare the next-step draft without sending anything.",
+      "exception_case": "Vesper may classify, route and draft, but must not send the acknowledgement or widen downstream authority automatically.",
+      "status": "INTERNAL_PRODUCTION_READY",
+      "engineering_status": "REFUSE_NO_CUSTOMER_SURFACE",
+      "commercial_validation": "UNPROVED",
+      "execution_variants": 3,
+      "execution_variant_count": 3,
+      "authority_created": false,
+      "external_effects": false,
+      "prohibited_outcomes": [
+        "email sent",
+        "external action executed"
+      ],
+      "artifacts": [
+        {
+          "name": "Vesper Desk controlled execution proof",
+          "path": "products/proof/public-production-proof.html#vesper-desk",
+          "bytes": 0,
+          "sha256": "",
+          "suffix": ".html",
+          "proof_relation": "receipt_bound_public_proof_view_no_curated_native_artifact"
+        }
+      ]
+    }
+  ],
+  "bundled_customer_artifact_count": 100,
+  "artifact_source_receipt": "DIO_PORTFOLIO_SUITE_SITE_BUILT_FROM_EVIDENCE"
+}

@@ -23,7 +23,8 @@ jobs:
           from pathlib import Path
 
           required_assets = {
-              "assets/launch-hero.webp": 20000,
+              "assets/dio-sigil.webp": 20000,
+              "assets/megabeast/governed-consequence.webp": 50000,
               "assets/vesper-public.webp": 20000,
           }
           for name, minimum in required_assets.items():
@@ -38,12 +39,12 @@ jobs:
           chat_js = Path("vesper-intake.js").read_text(encoding="utf-8")
           css = Path("assets/launch-v2.css").read_text(encoding="utf-8")
 
-          for token in ('assets/launch-hero.webp', 'hero-media-art', 'hero-seal'):
-              if token not in root and token not in css:
-                  raise SystemExit(f"M01 wiring missing: {token}")
+          for token in ('mega-hero', 'mega-hero-seal', 'assets/dio-sigil.webp', 'assets/megabeast/governed-consequence.webp'):
+              if token not in root:
+                  raise SystemExit(f"Megabeast hero wiring missing: {token}")
 
-          if 'assets/vesper-public.webp' not in chat_html:
-              raise SystemExit("Vesper public portrait not wired into chat shell")
+          if 'assets/premium/dio-vesper-vertical.webp' not in chat_html:
+              raise SystemExit("Vesper premium portrait not wired into chat shell")
           if 'assets/vesper-public.webp' not in chat_js:
               raise SystemExit("Vesper public portrait not wired into message avatars")
           if 'PORTRAIT PENDING' in chat_html or 'PORTRAIT PENDING' in chat_js:

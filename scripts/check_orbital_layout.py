@@ -12,7 +12,7 @@ required_visual = (
     "background:url('premium/dio-gilded-orbit-ring.webp')",
 )
 required_shared = (
-    "body[data-view=\"product\"] .editorial-hero:after{content:none!important",
+    "body:is([data-view=\"product\"],[data-view=\"flagship\"]) .editorial-hero:after{content:none!important",
     ".editorial-hero-grid:after",
     "background:url('premium/dio-gilded-orbit-ring.webp')",
     ".product-orbit-stage{position:relative;z-index:2!important",

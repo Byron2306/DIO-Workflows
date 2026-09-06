@@ -1,0 +1,1060 @@
+{
+  "acceptance_token": "DIO_PORTFOLIO_PRODUCTION_READINESS_MEASURED",
+  "authority_created": false,
+  "buyer_facing_surface_count": 51,
+  "buyer_needs_sellability_grade_count": 47,
+  "buyer_production_ready_count": 4,
+  "buyer_refuse_count": 0,
+  "canonical_buyer_needs_sellability_grade_count": 47,
+  "canonical_buyer_production_ready_count": 0,
+  "claim_boundary": "Portfolio production readiness is evidence-scoped. Buyer-facing production-ready status requires controlled execution, a governed substantial customer surface, and an explicit sellability/ProductGrade proof for that surface. Internal operating capabilities are judged on controlled execution and authority safety, not storefront sellability. Commercial validation, willingness to pay, ROI, autonomous external release and market scale remain separate claims.",
+  "commercial_validation": "UNPROVED",
+  "external_effects": false,
+  "family_sellability_backlog": [
+    {
+      "count": 14,
+      "family": "evidence_assurance_deliverable",
+      "products": [
+        "Evidex EvidenceOps",
+        "AuditProof",
+        "VendorProof",
+        "TenderProof",
+        "GrantProof",
+        "QualityProof",
+        "CertificationProof",
+        "PolicyProof",
+        "ContractProof",
+        "DiligenceRoom",
+        "AssuranceRoom",
+        "DORA Vendor Assurance",
+        "DIO RegOps",
+        "PermitProof"
+      ],
+      "surface_label": "evidence and assurance deliverable"
+    },
+    {
+      "count": 11,
+      "family": "ai_assurance_deliverable",
+      "products": [
+        "DIO AI Assurance",
+        "ModelProof",
+        "Agent Authority",
+        "ReleaseProof",
+        "ChangeProof",
+        "AI IncidentRoom",
+        "CriticalAI Assurance",
+        "CyberAssurance",
+        "ControlDrift",
+        "SupplierCyberProof",
+        "IncidentProof"
+      ],
+      "surface_label": "AI and digital assurance deliverable"
+    },
+    {
+      "count": 7,
+      "family": "performance_evidence_deliverable",
+      "products": [
+        "VAMP Performance",
+        "PromotionProof",
+        "CPDProof",
+        "ProjectProof",
+        "ImpactProof",
+        "DonorProof",
+        "ProgrammeProof"
+      ],
+      "surface_label": "performance evidence deliverable"
+    },
+    {
+      "count": 6,
+      "family": "education_deliverable",
+      "products": [
+        "HOMS Assess",
+        "HOMS Exam",
+        "HOMS Moderate",
+        "HOMS Curriculum",
+        "HOMS Learning Studio",
+        "HOMS Accreditation"
+      ],
+      "surface_label": "education deliverable"
+    },
+    {
+      "count": 5,
+      "family": "academic_review_deliverable",
+      "products": [
+        "Sophia Review",
+        "Sophia Research",
+        "Sophia Supervisor",
+        "Sophia Integrity",
+        "Sophia Tutor"
+      ],
+      "surface_label": "academic review deliverable"
+    },
+    {
+      "count": 4,
+      "family": "document_deliverable",
+      "products": [
+        "Document Studio Edit",
+        "Document Studio Localize",
+        "Document Studio Publish",
+        "DossierOps"
+      ],
+      "surface_label": "professional document deliverable"
+    }
+  ],
+  "input_evidence": {
+    "canonical_sellability_receipt_present": false,
+    "customer_surface_receipt_fingerprint": "sha256:bd6ede6f166e9082a74f5d8af3c48a4574b7d8445ba27e825e4ce66afff89b5e",
+    "studio_sellability_portfolio_fingerprint": "sha256:9c9285557b05117fb5c9d3950493441e00861014bd7c11b51fc2ff3079d85001"
+  },
+  "internal_capability_count": 6,
+  "internal_production_ready_count": 6,
+  "internal_refuse_count": 0,
+  "portfolio_production_ready": false,
+  "receipt_fingerprint": "sha256:40cbe3dba04e99e9132bc403824bcdcb281d31c82085da19e4c57eb4817ec09a",
+  "rows": {
+    "AI IncidentRoom": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "Seraph + META",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "AI & Digital Trust",
+      "surface_id": "AI IncidentRoom",
+      "surface_policy_id": "ai_assurance_deliverable"
+    },
+    "Accessible Publish": {
+      "authority_created": false,
+      "category": "internal_operating_capability",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "Format Core",
+      "production_readiness_status": "INTERNAL_PRODUCTION_READY",
+      "sellability_status": null,
+      "suite": "Demand & Presence",
+      "surface_id": "Accessible Publish",
+      "surface_policy_id": "document_deliverable"
+    },
+    "Agent Authority": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "META Authority",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "AI & Digital Trust",
+      "surface_id": "Agent Authority",
+      "surface_policy_id": "ai_assurance_deliverable"
+    },
+    "AssuranceRoom": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "META Room",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Evidence & Assurance",
+      "surface_id": "AssuranceRoom",
+      "surface_policy_id": "evidence_assurance_deliverable"
+    },
+    "AuditProof": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "META",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Evidence & Assurance",
+      "surface_id": "AuditProof",
+      "surface_policy_id": "evidence_assurance_deliverable"
+    },
+    "CPDProof": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "VAMP",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Enterprise Operations",
+      "surface_id": "CPDProof",
+      "surface_policy_id": "performance_evidence_deliverable"
+    },
+    "Campaign Lab": {
+      "authority_created": false,
+      "category": "internal_operating_capability",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "NicheFoundry + Hivenance",
+      "production_readiness_status": "INTERNAL_PRODUCTION_READY",
+      "sellability_status": null,
+      "suite": "Demand & Presence",
+      "surface_id": "Campaign Lab",
+      "surface_policy_id": "market_deliverable"
+    },
+    "CertificationProof": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "META",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Evidence & Assurance",
+      "surface_id": "CertificationProof",
+      "surface_policy_id": "evidence_assurance_deliverable"
+    },
+    "ChangeProof": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "BEAST + META",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "AI & Digital Trust",
+      "surface_id": "ChangeProof",
+      "surface_policy_id": "ai_assurance_deliverable"
+    },
+    "ContractProof": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "META",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Evidence & Assurance",
+      "surface_id": "ContractProof",
+      "surface_policy_id": "evidence_assurance_deliverable"
+    },
+    "ControlDrift": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "META Assurance",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "AI & Digital Trust",
+      "surface_id": "ControlDrift",
+      "surface_policy_id": "ai_assurance_deliverable"
+    },
+    "CriticalAI Assurance": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "BEAST + Seraph + ARDA",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "AI & Digital Trust",
+      "surface_id": "CriticalAI Assurance",
+      "surface_policy_id": "ai_assurance_deliverable"
+    },
+    "CyberAssurance": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "Seraph + META",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "AI & Digital Trust",
+      "surface_id": "CyberAssurance",
+      "surface_policy_id": "ai_assurance_deliverable"
+    },
+    "DIO AI Assurance": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "META + BEAST + Seraph",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "AI & Digital Trust",
+      "surface_id": "DIO AI Assurance",
+      "surface_policy_id": "ai_assurance_deliverable"
+    },
+    "DIO RegOps": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "Legalis + META",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Public & Programme Ops",
+      "surface_id": "DIO RegOps",
+      "surface_policy_id": "evidence_assurance_deliverable"
+    },
+    "DORA Vendor Assurance": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "VendorProof + Legalis",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Evidence & Assurance",
+      "surface_id": "DORA Vendor Assurance",
+      "surface_policy_id": "evidence_assurance_deliverable"
+    },
+    "DiligenceRoom": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "META Room",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Evidence & Assurance",
+      "surface_id": "DiligenceRoom",
+      "surface_policy_id": "evidence_assurance_deliverable"
+    },
+    "Document Studio Edit": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "Document Studio",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Demand & Presence",
+      "surface_id": "Document Studio Edit",
+      "surface_policy_id": "document_deliverable"
+    },
+    "Document Studio Localize": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "Document Studio + Lingua",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Demand & Presence",
+      "surface_id": "Document Studio Localize",
+      "surface_policy_id": "document_deliverable"
+    },
+    "Document Studio Publish": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "Format Core",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Demand & Presence",
+      "surface_id": "Document Studio Publish",
+      "surface_policy_id": "document_deliverable"
+    },
+    "DonorProof": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "VAMP + Evidex",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Public & Programme Ops",
+      "surface_id": "DonorProof",
+      "surface_policy_id": "performance_evidence_deliverable"
+    },
+    "DossierOps": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "Document Studio + Room",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Demand & Presence",
+      "surface_id": "DossierOps",
+      "surface_policy_id": "document_deliverable"
+    },
+    "Evidex EvidenceOps": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "Evidex",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Evidence & Assurance",
+      "surface_id": "Evidex EvidenceOps",
+      "surface_policy_id": "evidence_assurance_deliverable"
+    },
+    "GrantProof": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "META",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Public & Programme Ops",
+      "surface_id": "GrantProof",
+      "surface_policy_id": "evidence_assurance_deliverable"
+    },
+    "HOMS Accreditation": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "HOMS + META",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Education & Research",
+      "surface_id": "HOMS Accreditation",
+      "surface_policy_id": "education_deliverable"
+    },
+    "HOMS Assess": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "HOMS",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Education & Research",
+      "surface_id": "HOMS Assess",
+      "surface_policy_id": "education_deliverable"
+    },
+    "HOMS Curriculum": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "HOMS",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Education & Research",
+      "surface_id": "HOMS Curriculum",
+      "surface_policy_id": "education_deliverable"
+    },
+    "HOMS Exam": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "HOMS",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Education & Research",
+      "surface_id": "HOMS Exam",
+      "surface_policy_id": "education_deliverable"
+    },
+    "HOMS Learning Studio": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "HOMS",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Education & Research",
+      "surface_id": "HOMS Learning Studio",
+      "surface_policy_id": "education_deliverable"
+    },
+    "HOMS Moderate": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "HOMS",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Education & Research",
+      "surface_id": "HOMS Moderate",
+      "surface_policy_id": "education_deliverable"
+    },
+    "ImpactProof": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "VAMP",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Public & Programme Ops",
+      "surface_id": "ImpactProof",
+      "surface_policy_id": "performance_evidence_deliverable"
+    },
+    "IncidentProof": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "Seraph + META",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "AI & Digital Trust",
+      "surface_id": "IncidentProof",
+      "surface_policy_id": "ai_assurance_deliverable"
+    },
+    "Market Radar": {
+      "authority_created": false,
+      "category": "internal_operating_capability",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [],
+      "engineering_surface_status": "REFUSE_NO_CUSTOMER_SURFACE",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "NicheFoundry + Hivenance",
+      "production_readiness_status": "INTERNAL_PRODUCTION_READY",
+      "sellability_status": null,
+      "suite": "Demand & Presence",
+      "surface_id": "Market Radar",
+      "surface_policy_id": "market_deliverable"
+    },
+    "ModelProof": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "BEAST + META",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "AI & Digital Trust",
+      "surface_id": "ModelProof",
+      "surface_policy_id": "ai_assurance_deliverable"
+    },
+    "Offer Lab": {
+      "authority_created": false,
+      "category": "internal_operating_capability",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "NicheFoundry + Hivenance",
+      "production_readiness_status": "INTERNAL_PRODUCTION_READY",
+      "sellability_status": null,
+      "suite": "Demand & Presence",
+      "surface_id": "Offer Lab",
+      "surface_policy_id": "market_deliverable"
+    },
+    "Opportunity Foundry": {
+      "authority_created": false,
+      "category": "internal_operating_capability",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "NicheFoundry + Hivenance",
+      "production_readiness_status": "INTERNAL_PRODUCTION_READY",
+      "sellability_status": null,
+      "suite": "Demand & Presence",
+      "surface_id": "Opportunity Foundry",
+      "surface_policy_id": "market_deliverable"
+    },
+    "PermitProof": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "Legalis + META",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Public & Programme Ops",
+      "surface_id": "PermitProof",
+      "surface_policy_id": "evidence_assurance_deliverable"
+    },
+    "PolicyProof": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "META",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Evidence & Assurance",
+      "surface_id": "PolicyProof",
+      "surface_policy_id": "evidence_assurance_deliverable"
+    },
+    "ProgrammeProof": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "VAMP + META",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Public & Programme Ops",
+      "surface_id": "ProgrammeProof",
+      "surface_policy_id": "performance_evidence_deliverable"
+    },
+    "ProjectProof": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "VAMP",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Enterprise Operations",
+      "surface_id": "ProjectProof",
+      "surface_policy_id": "performance_evidence_deliverable"
+    },
+    "PromotionProof": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "VAMP",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Enterprise Operations",
+      "surface_id": "PromotionProof",
+      "surface_policy_id": "performance_evidence_deliverable"
+    },
+    "QualityProof": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "META",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Evidence & Assurance",
+      "surface_id": "QualityProof",
+      "surface_policy_id": "evidence_assurance_deliverable"
+    },
+    "ReleaseProof": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "BEAST + META",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "AI & Digital Trust",
+      "surface_id": "ReleaseProof",
+      "surface_policy_id": "ai_assurance_deliverable"
+    },
+    "Sophia Integrity": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "Sophia + META",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Education & Research",
+      "surface_id": "Sophia Integrity",
+      "surface_policy_id": "academic_review_deliverable"
+    },
+    "Sophia Research": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "Sophia",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Education & Research",
+      "surface_id": "Sophia Research",
+      "surface_policy_id": "academic_review_deliverable"
+    },
+    "Sophia Review": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "Sophia",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Education & Research",
+      "surface_id": "Sophia Review",
+      "surface_policy_id": "academic_review_deliverable"
+    },
+    "Sophia Supervisor": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "Sophia",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Education & Research",
+      "surface_id": "Sophia Supervisor",
+      "surface_policy_id": "academic_review_deliverable"
+    },
+    "Sophia Tutor": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "Sophia",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Education & Research",
+      "surface_id": "Sophia Tutor",
+      "surface_policy_id": "academic_review_deliverable"
+    },
+    "SupplierCyberProof": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "VendorProof + Seraph",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "AI & Digital Trust",
+      "surface_id": "SupplierCyberProof",
+      "surface_policy_id": "ai_assurance_deliverable"
+    },
+    "TenderProof": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "META",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Public & Programme Ops",
+      "surface_id": "TenderProof",
+      "surface_policy_id": "evidence_assurance_deliverable"
+    },
+    "VAMP Performance": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "VAMP",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Enterprise Operations",
+      "surface_id": "VAMP Performance",
+      "surface_policy_id": "performance_evidence_deliverable"
+    },
+    "VendorProof": {
+      "authority_created": false,
+      "category": "buyer_facing_canonical",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [
+        "NO_CANONICAL_SELLABILITY_RECEIPT"
+      ],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "META",
+      "production_readiness_status": "NEEDS_SELLABILITY_GRADE",
+      "sellability_status": null,
+      "suite": "Evidence & Assurance",
+      "surface_id": "VendorProof",
+      "surface_policy_id": "evidence_assurance_deliverable"
+    },
+    "Vesper Desk": {
+      "authority_created": false,
+      "category": "internal_operating_capability",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [],
+      "engineering_surface_status": "REFUSE_NO_CUSTOMER_SURFACE",
+      "external_effects": false,
+      "pipeline_state": "PASS",
+      "primary_family": "Vesper",
+      "production_readiness_status": "INTERNAL_PRODUCTION_READY",
+      "sellability_status": null,
+      "suite": "Demand & Presence",
+      "surface_id": "Vesper Desk",
+      "surface_policy_id": "operator_desk_deliverable"
+    },
+    "article_publication_studio": {
+      "authority_created": false,
+      "category": "buyer_facing_studio",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "product_grade_score": 100,
+      "product_grade_status": "PRODUCT_GRADE_VERIFIED",
+      "production_readiness_status": "BUYER_PRODUCTION_READY_BOUNDED",
+      "sellability_status": "PRODUCT_SELLABILITY_VERIFIED",
+      "surface_id": "article_publication_studio"
+    },
+    "finance_readiness_studio": {
+      "authority_created": false,
+      "category": "buyer_facing_studio",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "product_grade_score": 100,
+      "product_grade_status": "PRODUCT_GRADE_VERIFIED",
+      "production_readiness_status": "BUYER_PRODUCTION_READY_BOUNDED",
+      "sellability_status": "PRODUCT_SELLABILITY_VERIFIED",
+      "surface_id": "finance_readiness_studio"
+    },
+    "professional_correspondence_studio": {
+      "authority_created": false,
+      "category": "buyer_facing_studio",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "product_grade_score": 100,
+      "product_grade_status": "PRODUCT_GRADE_VERIFIED",
+      "production_readiness_status": "BUYER_PRODUCTION_READY_BOUNDED",
+      "sellability_status": "PRODUCT_SELLABILITY_VERIFIED",
+      "surface_id": "professional_correspondence_studio"
+    },
+    "site_studio": {
+      "authority_created": false,
+      "category": "buyer_facing_studio",
+      "commercial_validation": "UNPROVED",
+      "critical_blockers": [],
+      "engineering_surface_status": "ENGINEERING_READY_NEEDS_BUYER_REVIEW",
+      "external_effects": false,
+      "product_grade_score": 100,
+      "product_grade_status": "PRODUCT_GRADE_VERIFIED",
+      "production_readiness_status": "BUYER_PRODUCTION_READY_BOUNDED",
+      "sellability_status": "PRODUCT_SELLABILITY_VERIFIED",
+      "surface_id": "site_studio"
+    }
+  },
+  "schema": "dio.portfolio.production_readiness_receipt.v1",
+  "studio_sellability_verified_count": 4,
+  "surface_count": 57
+}

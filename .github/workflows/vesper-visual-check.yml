@@ -1,19 +1,21 @@
-name: Validate Vesper speaking state
+name: Validate Vesper public web bridge
 
 on:
   pull_request:
     paths:
       - "vesper-intake.html"
       - "vesper-intake.js"
+      - "assets/dio-config.js"
+      - "assets/final-polish.css"
       - ".github/workflows/vesper-visual-check.yml"
   workflow_dispatch:
 
 jobs:
-  vesper-speaking-state:
+  vesper-public-web:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Validate speaking halo contract
+      - name: Validate public web contract and speaking state
         run: |
           node --check vesper-intake.js
           python3 - <<'PY'
@@ -21,29 +23,43 @@ jobs:
 
           html = Path("vesper-intake.html").read_text(encoding="utf-8")
           js = Path("vesper-intake.js").read_text(encoding="utf-8")
+          config = Path("assets/dio-config.js").read_text(encoding="utf-8")
 
-          required_html = (
+          for token in (
               'id="vesperPortraitWrap"',
-              'class="vesper-portrait-wrap"',
+              'class="vesper-sidebar-presence"',
               '@keyframes vesperPulse',
               'prefers-reduced-motion:reduce',
-          )
-          required_js = (
+              'id="message" maxlength="4000"',
+              'assets/final-polish.css',
+          ):
+              if token not in html:
+                  raise SystemExit(f"Vesper HTML/CSS contract missing: {token}")
+
+          if '.vesper-sidebar-presence.is-speaking::before' not in html and '.vesper-sidebar-presence.is-speaking:before' not in html:
+              raise SystemExit('Vesper speaking presence pseudo-element contract missing')
+
+          for retired in ('/api/vesper/chat/session','/api/vesper/chat/message','/api/vesper/chat/products'):
+              if retired in js:
+                  raise SystemExit(f"retired Vesper chat contract returned: {retired}")
+
+          for token in (
               'function pulseVesper',
               'classList.add("is-speaking")',
               'classList.remove("is-speaking")',
-              'renderSession(body.session);',
+              '/api/vesper/web/session',
+              '/api/vesper/web/message',
+              '/api/vesper/web/replies',
+              'X-Vesper-Session-Token',
+              'messageMode = "text"',
+              'message_mode: messageMode',
               'pulseVesper();',
-          )
-
-          for token in required_html:
-              if token not in html:
-                  raise SystemExit(f"Vesper speaking halo missing HTML/CSS contract: {token}")
-          if '.vesper-portrait-wrap.is-speaking::before' not in html and '.vesper-portrait-wrap.is-speaking:before' not in html:
-              raise SystemExit('Vesper speaking halo pseudo-element contract missing')
-          for token in required_js:
+          ):
               if token not in js:
-                  raise SystemExit(f"Vesper speaking halo missing JS contract: {token}")
+                  raise SystemExit(f"Vesper public web contract missing: {token}")
 
-          print("VESPER_SPEAKING_HALO_VERIFIED")
+          if 'vesperPresenceApiOrigin' not in config or 'dio-presence-gateway-public.dio-workflows.workers.dev' not in config:
+              raise SystemExit('Vesper public presence API origin missing')
+
+          print("VESPER_PUBLIC_WEB_BRIDGE_VERIFIED")
           PY

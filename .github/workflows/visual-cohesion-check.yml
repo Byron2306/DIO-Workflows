@@ -28,27 +28,28 @@ jobs:
               if token not in shared: raise SystemExit(f'shared visual contract missing: {token}')
 
           root = Path('index.html').read_text()
-          for token in ('assets/dio-visual-system.css','assets/dio-system-orbit.svg','corner-glow'):
+          for token in ('assets/dio-visual-system.css','assets/megabeast/governed-consequence.webp','assets/megabeast/megabeast.css','corner-glow'):
               if token not in root: raise SystemExit(f'homepage cohesion token missing: {token}')
           system_svg = Path('assets/dio-system-orbit.svg').read_text()
           for token in ('HOMS','SERAPH','SOPHIA','EVIDEX','META','ARDA','VESPER','VAMP','animateMotion'):
               if token not in system_svg: raise SystemExit(f'animated system diagram missing: {token}')
 
           vesper = Path('vesper-intake.html').read_text(); vesper_js = Path('vesper-intake.js').read_text()
-          for token in ('assets/dio-visual-system.css','assets/vesper-public.webp','vesper-welcome','vesper-portrait-wrap','trust-links','width:84px'):
+          for token in ('assets/dio-visual-system.css','assets/premium/dio-vesper-vertical.webp','vesper-welcome','vesper-sidebar-presence','trust-links'):
               if token not in vesper: raise SystemExit(f'Vesper cohesion token missing: {token}')
+          if 'assets/vesper-public.webp' not in vesper_js: raise SystemExit('Vesper message-avatar portrait wiring missing')
           if 'assets/dio-eye-orbit.svg' in vesper: raise SystemExit('legacy duplicate Vesper Eye returned')
           if 'Structured intake remains available' not in vesper and 'Structured intake remains available' not in vesper_js: raise SystemExit('Vesper graceful structured-intake fallback missing')
           if '#233d68' in vesper or '--blue:#88b8ff' in vesper: raise SystemExit('legacy blue Vesper theme still present')
 
           app = Path('products/app.js').read_text()
           if 'editorial-art' in app or 'heroAsset' in app: raise SystemExit('generic product hero-image dependency still present')
-          for token in ('dio-visual-system.css','dio-eye-orbit.svg','dio-product-matrix.svg','dio-icons.svg','product-orbit-stage','corner-glow'):
+          for token in ('dio-visual-system.css','premium/premium.css','premium/dio-eye-premium.webp','dio-product-matrix.svg','premium-card-medallion','product-orbit-stage','corner-glow'):
               if token not in app: raise SystemExit(f'product orbital/static visual missing: {token}')
 
           for slug in ('homs','vamp','sophia','evidex'):
               page = Path(f'products/{slug}/index.html').read_text()
-              for token in ('../../assets/dio-visual-system.css','product-orbit-stage','../../assets/dio-eye-orbit.svg','../../assets/dio-product-matrix.svg','corner-glow'):
+              for token in ('../../assets/dio-visual-system.css','product-orbit-stage','../../assets/premium/dio-eye-premium.webp','../../assets/dio-product-matrix.svg','corner-glow'):
                   if token not in page: raise SystemExit(f'{slug}: flagship visual token missing: {token}')
               if 'editorial-art' in page: raise SystemExit(f'{slug}: generic brochure art returned')
 

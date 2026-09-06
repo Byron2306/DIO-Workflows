@@ -1,0 +1,48 @@
+============================================================
+ASSESSMENT FEEDBACK
+============================================================
+
+Total Score: 0.59
+
+OVERALL FEEDBACK:
+The submission demonstrates a good grasp of scalar versus vector concepts (Q3) but struggles with proper presentation of units and direction in calculations (Q5) and adhering to marking conventions regarding illegible values (Q7). Strength lies in conceptual distinction; areas for improvement include attention to units, explicit direction, and following instructions about ambiguous data.
+
+STRENGTHS:
+  + Clear differentiation between scalar distance and vector displacement with correct use of direction.
+  + Correct application of the kinematic formula and substitution of values.
+
+AREAS FOR IMPROVEMENT:
+  - Always include appropriate units in final answers and intermediate steps.
+  - Explicitly state direction for vector quantities (e.g., '14 m/s west') rather than relying solely on sign conventions.
+  - Refrain from inferring values from unclear learner work; instead, flag ambiguity for the educator.
+
+DETAILED CRITERIA SCORES:
+
+  Q3: Distinguish scalar distance from vector displacement; use direction for displacement.:
+    Level: Excellent
+    Score: 0.42
+    Feedback: The learner correctly distinguished scalar distance (25 m, no direction) from vector displacement (15 m east, includes direction). This shows a solid understanding of the difference between scalar and vector quantities and the importance of direction for displacement. The answer is specific and well-supported.
+
+  Q5: 1 formula, 1 substitution, 1 correct final value with unit and direction.:
+    Level: Satisfactory
+    Score: 0.12
+    Feedback: The learner correctly identified the formula v = u + at and substituted values (u=+2, a=+3, t=4) to obtain v=14. However, the final answer lacks both units and an explicit direction statement. While the sign (+) implies west given the chosen convention, the omission of units and unclear direction prevents full credit.
+
+  Q7: Do not infer illegible learner values; refer ambiguity to educator.:
+    Level: Needs Improvement
+    Score: 0.05
+    Feedback: The learner provided a numeric answer for acceleration (-1.5) without any units and appears to have inferred a value from potentially illegible content. This violates the instruction to not infer illegible learner values and to refer ambiguity to the educator. Including units and avoiding inference are essential for accurate marking.
+
+ANNOTATIONS:
+
+  [1] (PRAISE)
+      Excellent demonstration of distinguishing scalar (distance) from vector (displacement) by including direction only for displacement.
+      Re: "distance = 25 m; displacement = 15 m east...."
+
+  [2] (SUGGESTION)
+      Correct formula and substitution, but missing units (m/s) and explicit direction statement reduces clarity and completeness.
+      Re: "choose west positive; u = +2, a = +3, t = 4, so v = 14. Units omitted in working and final line...."
+
+  [3] (CORRECTION)
+      Providing a numeric answer without units and potentially inferring from illegible content violates marking guidelines; should include units and avoid inference.
+      Re: "acceleration answer = -1.5 with no unit...."

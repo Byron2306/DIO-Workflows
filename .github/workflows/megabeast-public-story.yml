@@ -1,0 +1,126 @@
+name: Validate DIO megabeast public story
+
+on:
+  push:
+    branches:
+      - agent/dio-megabeast-public-story
+  pull_request:
+    paths:
+      - "index.html"
+      - "assets/megabeast/**"
+      - ".github/workflows/pages.yml"
+      - "products/**"
+      - ".github/workflows/megabeast-public-story.yml"
+
+jobs:
+  megabeast-public-story:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Verify architecture, 68-product surface, base-canon proof links and launch films
+        run: |
+          node --check products/app.js
+          node --check products/catalog.js
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+
+          root=Path('index.html').read_text(encoding='utf-8')
+          for token in (
+              'governed consequence',
+              'Anything can become anything else except authority',
+              'One organism. Many commercial forms.',
+              '68 canon-level',
+              '159 / 159',
+              'Commercial Metabolism',
+              'ATLAS',
+              'https://www.youtube-nocookie.com/embed/U-z_eygFHWw',
+          ):
+              if token.lower() not in root.lower():
+                  raise SystemExit(f'homepage megabeast story missing: {token}')
+
+          for section_id in ('governed-consequence','constitutional-laws','product-factory','metamorphic-cascade','portfolio-universe','commercial-metabolism'):
+              if f'id="{section_id}"' not in root:
+                  raise SystemExit(f'homepage section missing: {section_id}')
+
+          for path in (
+              'assets/megabeast/governed-consequence.webp',
+              'assets/megabeast/constitutional-laws.webp',
+              'assets/megabeast/product-factory.webp',
+              'assets/megabeast/incarnations-atlas.webp',
+              'assets/megabeast/commercial-metabolism.webp',
+              'assets/megabeast/metamorphic-cascade.webp',
+              'assets/megabeast/studio-constellation.webp',
+          ):
+              if not Path(path).is_file() or Path(path).stat().st_size < 1000:
+                  raise SystemExit(f'megabeast visual missing: {path}')
+              if path not in root:
+                  raise SystemExit(f'megabeast visual not wired: {path}')
+
+          for receipt in (
+              'products/proof/receipts/PORTFOLIO_SUITE_SITE_RECEIPT.json',
+              'products/proof/receipts/PROFESSIONAL_EVIDENCE_53_X3_RECEIPT.json',
+              'products/proof/receipts/PORTFOLIO_PRODUCTION_READINESS_RECEIPT.json',
+          ):
+              if not Path(receipt).is_file() or receipt not in root:
+                  raise SystemExit(f'public proof receipt missing or unlinked: {receipt}')
+          proof=json.loads(Path('products/proof/portfolio-proof-catalog.json').read_text(encoding='utf-8'))
+          rows=proof.get('products',[])
+          if proof.get('bundled_customer_artifact_count') != 100:
+              raise SystemExit(f"expected 100 curated customer artifacts, got {proof.get('bundled_customer_artifact_count')}")
+          native_files=[p for p in Path('products/proof/artifacts').rglob('*') if p.is_file()]
+          if len(native_files) != 100:
+              raise SystemExit(f'expected 100 copied production artifacts, got {len(native_files)}')
+          if len(rows)!=53:
+              raise SystemExit(f'expected 53 proof entries, got {len(rows)}')
+          for p in rows:
+              if p.get('commercial_validation')!='UNPROVED':
+                  raise SystemExit(f"{p.get('slug')}: commercial truth inflated")
+              if p.get('execution_variants')!=3 or p.get('execution_variant_count')!=3:
+                  raise SystemExit(f"{p.get('slug')}: 3/3 execution proof missing")
+              if p.get('authority_created') is not False:
+                  raise SystemExit(f"{p.get('slug')}: authority boundary drifted")
+              artifacts=p.get('artifacts') or []
+              if not artifacts:
+                  raise SystemExit(f"{p.get('slug')}: no public proof artifact")
+              for a in artifacts:
+                  if not Path(a['path'].split('#',1)[0]).is_file():
+                      raise SystemExit(f"{p.get('slug')}: missing {a['path']}")
+
+          homs=Path('products/homs/index.html').read_text(encoding='utf-8')
+          evidex=Path('products/evidex/index.html').read_text(encoding='utf-8')
+          if 'https://www.youtube-nocookie.com/embed/nbwAAprx6RY' not in homs:
+              raise SystemExit('HOMS YouTube launch film missing')
+          if 'https://www.youtube-nocookie.com/embed/h9QOiyaMJeM' not in evidex:
+              raise SystemExit('Evidex YouTube launch film missing')
+          if 'loading="lazy"' not in root or 'loading="lazy"' not in homs or 'loading="lazy"' not in evidex:
+              raise SystemExit('launch films must lazy-load')
+
+          for path in list(Path('products/proof').rglob('*'))+[Path('index.html'),Path('products/app.js')]:
+              if not path.is_file(): continue
+              if path.suffix.lower() not in {'.html','.md','.txt','.json','.js','.css'}: continue
+              text=path.read_text(encoding='utf-8',errors='ignore')
+              for forbidden in ('/home/byron/','/tmp/dio','dio_workflows@outlook.com','BEGIN PRIVATE KEY'):
+                  if forbidden in text:
+                      raise SystemExit(f'public-safe proof leak in {path}: {forbidden}')
+
+          print('DIO_MEGABEAST_PUBLIC_STORY_VERIFIED')
+          PY
+          node - <<'NODE'
+          const fs=require('fs');
+          global.window={};
+          require('./products/catalog.js');
+          const rows=window.DIO_PRODUCT_CATALOG;
+          if(!Array.isArray(rows)||rows.length!==68) throw new Error(`expected 68 public products, got ${rows&&rows.length}`);
+          if(new Set(rows.map(x=>x.slug)).size!==68) throw new Error('product slugs are not unique');
+          for(const p of rows){
+            if(!fs.existsSync(`products/${p.slug}/index.html`)) throw new Error(`${p.slug}: route missing`);
+            for(const key of ['slug','name','family','headline','buyer','offer','boundary','proof']) if(!String(p[key]||'').trim()) throw new Error(`${p.slug}: missing ${key}`);
+          }
+          const extensions=rows.filter(p=>p.tier==='canon_extension');
+          if(extensions.length!==15) throw new Error(`expected 15 canon extensions, got ${extensions.length}`);
+          console.log('DIO_PUBLIC_PRODUCT_SURFACE_VERIFIED=68');
+          NODE

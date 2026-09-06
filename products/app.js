@@ -1,190 +1,126 @@
 (() => {
   const catalog = window.DIO_PRODUCT_CATALOG || [];
-  const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
-
-  const PRICE_BY_FAMILY = {
-    'Documents & Rooms':4900,
-    'Performance & People':4900,
-    'Education':5900,
-    'Research & Learning':5900,
-    'Evidence & Assurance':7900,
-    'Obligations':8900,
-    'AI & Digital Trust':12900,
-    'High-Risk Review':12900,
-    'Regulated Operations':14900
-  };
-
-  const INGRESS_BY_FAMILY = {
-    'Documents & Rooms':'document_studio','Performance & People':'vamp','Education':'homs','Research & Learning':'sophia',
-    'Evidence & Assurance':'evidex','Obligations':'evidex','AI & Digital Trust':'evidex','High-Risk Review':'evidex','Regulated Operations':'evidex'
-  };
-
-  const ICON_BY_FAMILY = {
-    'Documents & Rooms':'document','Performance & People':'performance','Education':'document','Research & Learning':'research',
-    'Evidence & Assurance':'shield','Obligations':'route','AI & Digital Trust':'network','High-Risk Review':'shield','Regulated Operations':'authority'
-  };
-
-  const PREMIUM_ICON_BY_FAMILY = {
-    'Documents & Rooms':'workflow',
-    'Performance & People':'growth',
-    'Education':'education',
-    'Research & Learning':'evidence',
-    'Evidence & Assurance':'governance',
-    'Obligations':'workflow',
-    'AI & Digital Trust':'governance',
-    'High-Risk Review':'governance',
-    'Regulated Operations':'partnership'
-  };
-
-  const HERO_BY_FAMILY = {
-    'Education':'dio-hero-homs-2026.webp',
-    'Performance & People':'dio-hero-vamp-2026.webp',
-    'Research & Learning':'dio-hero-sophia-2026.webp',
-    'Evidence & Assurance':'dio-hero-evidex-2026.webp',
-    'Obligations':'dio-hero-evidex-2026.webp',
-    'AI & Digital Trust':'dio-hero-product-2026.webp',
-    'High-Risk Review':'dio-hero-product-2026.webp',
-    'Regulated Operations':'dio-hero-product-2026.webp',
-    'Documents & Rooms':'dio-hero-product-2026.webp'
-  };
-
-  const FAMILY_MARKET = {
-    'Evidence & Assurance':{accent:'#b99355',dark:'#0a0c0f',soft:'#15181d',kicker:'GRC · audit readiness · evidence automation',value:'Replace evidence archaeology with a traceable first pass: requirements, source material, gaps and review questions in one decision-ready view.'},
-    'Obligations':{accent:'#c0a06b',dark:'#0a0c0f',soft:'#17181b',kicker:'obligation intelligence · deadline control · compliance readiness',value:'Turn dense agreements, tenders, permits and policies into a working obligation spine so mandatory requirements and missing proof surface before the deadline.'},
-    'Documents & Rooms':{accent:'#b7a778',dark:'#0a0c0f',soft:'#15181b',kicker:'controlled documents · review rooms · provenance',value:'Move from scattered files to a governed review package with visible lineage, cleaner hand-offs and fewer document-control surprises.'},
-    'Performance & People':{accent:'#c5a16e',dark:'#0a0c0f',soft:'#191719',kicker:'performance evidence · career proof · human review',value:'Prepare the evidence before the review meeting. Map achievements to criteria, expose missing proof and keep the employment judgment with the people authorised to make it.'},
-    'Education':{accent:'#c3a65f',dark:'#0a0c0f',soft:'#171914',kicker:'assessment intelligence · curriculum provenance · quality readiness',value:'Reduce assessment and programme-review admin while keeping educator and institutional authority explicit. Review-ready artifacts arrive with the evidence trail attached.'},
-    'Research & Learning':{accent:'#c0ab7b',dark:'#0a0c0f',soft:'#18151b',kicker:'research intelligence · source provenance · authorship protection',value:'Strengthen source, citation and review workflows without blurring authorship. Give supervisors and researchers a cleaner technical first pass with traceable evidence.'},
-    'AI & Digital Trust':{accent:'#c4ab73',dark:'#0a0c0f',soft:'#14191d',kicker:'AI governance · model risk · agent authority · auditability',value:'Make AI decisions challengeable. Bind identity, controls, evaluations, changes and authority into an inspectable trail before confidence becomes policy by accident.'},
-    'High-Risk Review':{accent:'#bd9763',dark:'#0a0c0f',soft:'#1b1614',kicker:'risk intelligence · control evidence · human escalation',value:'Create a governed review room for high-stakes evidence without pretending software has the missing professional or regulatory authority. Surface gaps early and escalate visibly.'},
-    'Regulated Operations':{accent:'#b7a36d',dark:'#0a0c0f',soft:'#171914',kicker:'regulatory operations · prerequisite control · evidence readiness',value:'Know what is missing before the regulator-facing step. Track prerequisites, evidence, deadlines and professional escalation without confusing readiness with legal clearance.'}
-  };
-
-  const DEFAULT_THEME = {accent:'#d9b66f',dark:'#0a0c0f',soft:'#15171a',kicker:'governed workflow intelligence · decision-grade evidence',value:'Prepare a traceable first pass that reduces review drag while keeping consequential authority with the people who own it.'};
-
-  const DISPLAY_BY_SLUG = {
-    'homs-moderate':{displayName:'Assessment Moderation Studio',poweredBy:'HOMS',pathway:['Vesper','HOMS','Evidex','Human review']},
-    'homs-curriculum':{displayName:'Curriculum Provenance Studio',poweredBy:'HOMS',pathway:['Vesper','HOMS','Evidex','Human review']},
-    'homs-accreditation':{displayName:'Accreditation Readiness Studio',poweredBy:'HOMS',pathway:['Vesper','HOMS','Evidex','Human review']},
-    'sophia-integrity':{displayName:'Research Integrity Studio',poweredBy:'Sophia',pathway:['Vesper','Sophia','Evidex','Seraph','Human review']},
-    'sophia-research':{displayName:'Research Evidence Studio',poweredBy:'Sophia',pathway:['Vesper','Sophia','Evidex','Seraph','Human review']},
-    'programmeproof':{displayName:'Programme Assurance',poweredBy:'VAMP + META',pathway:['Vesper','VAMP','META','Evidex','Human review']},
-    'auditproof':{displayName:'Audit Evidence Studio',poweredBy:'Evidex',pathway:['Vesper','Evidex','Human review']},
-    'promotionproof':{displayName:'Performance Evidence Studio',poweredBy:'VAMP',pathway:['Vesper','VAMP','Evidex','Human review']}
-  };
-
-  const priceFor = product => PRICE_BY_FAMILY[product.family] || 7900;
-  const priceText = product => `R ${priceFor(product).toLocaleString('en-ZA')} ZAR`;
+  const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const rootHref = () => document.body.dataset.product ? '../../' : '../';
   const portfolioHref = () => document.body.dataset.product ? '../' : './';
-  const themeFor = product => FAMILY_MARKET[product.family] || DEFAULT_THEME;
-  const themeStyle = theme => `--accent:${theme.accent};--accent-dark:${theme.dark};--accent-soft:${theme.soft}`;
-  const iconId = product => ICON_BY_FAMILY[product.family] || 'network';
-  const iconUse = (product, className='family-icon') => `<svg class="${className}" aria-hidden="true"><use href="${rootHref()}assets/dio-icons.svg#${iconId(product)}"></use></svg>`;
-  const premiumIconSrc = product => `${rootHref()}assets/premium/icons/dio-icon-${PREMIUM_ICON_BY_FAMILY[product.family] || 'evidence'}.webp`;
-  const heroSrc = product => `${rootHref()}assets/premium/${HERO_BY_FAMILY[product.family] || 'dio-hero-product-2026.webp'}`;
+  const money = value => value ? `R ${Number(value).toLocaleString('en-ZA')} ZAR` : 'Scoped through Vesper';
+  const familyThemes = {
+    'Education & Research': ['#c3a65f','education','learning, assessment and scholarly evidence'],
+    'Enterprise Operations': ['#c5a16e','growth','performance, operations and organisational evidence'],
+    'Public & Programme Ops': ['#bea06a','partnership','programme, grant and regulated operations'],
+    'Evidence & Assurance': ['#b99355','governance','evidence, provenance and review readiness'],
+    'AI & Digital Trust': ['#c4ab73','governance','AI governance, model risk and authority'],
+    'Demand & Presence': ['#b7a778','workflow','documents, market intelligence and presence'],
+    'Demand Presence': ['#b7a778','workflow','market offers, launch experiments and presence'],
+    'Design & Publication': ['#c4a871','media','publication, briefing and accessible site production'],
+    'Legal & Commercial Ops': ['#b99157','governance','contract, regulatory and commercial readiness'],
+    'Finance & Funding': ['#c2a165','growth','finance, funding and investor readiness']
+  };
+  const themeFor = product => familyThemes[product.family] || ['#d9b66f','evidence','governed intelligence'];
+  const vesperHref = product => `${rootHref()}vesper-intake.html?incarnation=${encodeURIComponent(product.slug)}`;
+  const intakeHref = product => {
+    const q=new URLSearchParams({product:product.ingress||'evidex',class:product.slug,offer:product.offer});
+    if(product.price) q.set('price',String(product.price));
+    return `${rootHref()}?${q.toString()}#contact`;
+  };
+  const proofHref = artifact => `${rootHref()}${artifact.path}`;
+  const isExtension = p => p.tier === 'canon_extension';
+  const statusLabel = p => isExtension(p) ? 'Canon extension · receipt-bound candidate' : (p.internal ? 'Internal production instrument' : (p.status === 'BUYER_PRODUCTION_READY_BOUNDED' ? 'Buyer production ready · bounded' : 'Engineering ready · sellability grade pending'));
+  const executionLabel = p => isExtension(p) ? 'Receipt-bound candidate' : `${p.verifiedVariantCount}/${p.variantCount} verified`;
+  const orbitExecutionLabel = p => isExtension(p) ? 'CANON EXTENSION' : '3 / 3 VERIFIED';
 
-  const visualStyles = document.createElement('link');
-  visualStyles.rel = 'stylesheet';
-  visualStyles.href = `${rootHref()}assets/dio-visual-system.css`;
+  const visualStyles=document.createElement('link');
+  visualStyles.rel='stylesheet';
+  visualStyles.href=`${rootHref()}assets/dio-visual-system.css`;
   document.head.appendChild(visualStyles);
-  const premiumStyles = document.createElement('link');
-  premiumStyles.rel = 'stylesheet';
-  premiumStyles.href = `${rootHref()}assets/premium/premium.css`;
+  const premiumStyles=document.createElement('link');
+  premiumStyles.rel='stylesheet';
+  premiumStyles.href=`${rootHref()}assets/premium/premium.css`;
   document.head.appendChild(premiumStyles);
 
-  function upgradeDioBrand(label = 'WORKFLOWS') {
-    const brand = document.querySelector('.nav .brand');
-    if (!brand) return;
+  const proofStyles=document.createElement('link');
+  proofStyles.rel='stylesheet';
+  proofStyles.href=`${rootHref()}products/proof-layer.css`;
+  document.head.appendChild(proofStyles);
+
+  function upgradeBrand(label) {
+    const brand=document.querySelector('.nav .brand');
+    if(!brand) return;
     brand.classList.add('brand-dio');
-    brand.innerHTML = `<img class="brand-sigil" src="${rootHref()}assets/dio-favicon.png" alt=""><img class="brand-wordmark" src="${rootHref()}assets/dio-wordmark.svg" alt="DIO"><span>${esc(label)}</span>`;
+    brand.innerHTML=`<img class="brand-sigil" src="${rootHref()}assets/dio-favicon.png" alt=""><img class="brand-wordmark" src="${rootHref()}assets/dio-wordmark.svg" alt="DIO"><span>${esc(label)}</span>`;
+  }
+  if(document.body.dataset.view==='portfolio') upgradeBrand('PRODUCT PORTFOLIO');
+  if(document.body.dataset.view==='product') upgradeBrand('WORKFLOWS');
+
+  async function loadProof() {
+    try {
+      const response=await fetch(`${rootHref()}products/proof/portfolio-proof-catalog.json`, {cache:'no-cache'});
+      if(!response.ok) throw new Error(`proof catalog ${response.status}`);
+      return await response.json();
+    } catch (error) {
+      console.warn('DIO public proof catalog unavailable', error);
+      return {products:[]};
+    }
   }
 
-  if (document.body.dataset.view === 'product') upgradeDioBrand('WORKFLOWS');
-  if (document.body.dataset.view === 'portfolio') upgradeDioBrand('PRODUCT PORTFOLIO');
-
-  document.querySelectorAll('a[href$="#control"]').forEach(link => { link.href = `${rootHref()}#proof`; });
-  document.querySelectorAll('a[href$="#contact"]').forEach(link => { link.href = `${rootHref()}#intake`; });
-  document.querySelectorAll('a[href$="privacy.html"]').forEach(link => { link.href = `${rootHref()}privacy/`; });
-  document.querySelectorAll('.navlinks a').forEach(link => {
-    if (link.textContent.trim().toUpperCase() === 'CONTROL') link.textContent = 'EVIDENCE';
-  });
-
-  function displayFor(product) {
-    const explicit = DISPLAY_BY_SLUG[product.slug] || {};
-    return {displayName:explicit.displayName || product.headline || product.name,poweredBy:explicit.poweredBy || product.name,pathway:explicit.pathway || ['Vesper','DIO','Human review']};
-  }
-
-  function vesperHref(product) { return `${rootHref()}vesper-intake.html?incarnation=${encodeURIComponent(product.slug)}`; }
-
-  const intakeHref = product => {
-    const query = new URLSearchParams({product:INGRESS_BY_FAMILY[product.family] || 'evidex',class:product.slug,offer:product.offer,price:String(priceFor(product))});
-    return `${rootHref()}?${query.toString()}#contact`;
-  };
-
-  const families = ['All', ...new Set(catalog.map(product => product.family))];
-
-  if (document.body.dataset.view === 'portfolio') {
-    const grid = document.querySelector('#grid');
-    const search = document.querySelector('#search');
-    const filters = document.querySelector('#filters');
-    let active = 'All';
-    filters.innerHTML = families.map(family => `<button class="filter${family === 'All' ? ' active' : ''}" data-family="${esc(family)}">${esc(family)}</button>`).join('');
-
-    const render = () => {
-      const query = (search.value || '').trim().toLowerCase();
-      const rows = catalog.filter(product => (active === 'All' || product.family === active) && (!query || [product.name,product.headline,product.buyer,product.offer,product.family,themeFor(product).kicker].join(' ').toLowerCase().includes(query)));
-      grid.innerHTML = rows.length ? rows.map(product => {
-        const theme = themeFor(product);
-        return `<article class="card corner-glow" style="${themeStyle(theme)}">
-          <div class="card-visual card-orbit"><img class="card-eye" src="${rootHref()}assets/dio-eye-orbit.svg" alt=""><img class="premium-card-medallion" src="${premiumIconSrc(product)}" alt=""><span>${esc(theme.kicker)}</span></div>
-          <div class="card-body"><span class="badge dio-pill">Controlled route proof</span><div class="family">${esc(product.family)}</div><h2>${esc(product.headline)}</h2><p class="headline">DIO route · ${esc(product.name)}</p><p class="buyer"><b>Built for:</b> ${esc(product.buyer)}</p><div class="price-line">${esc(priceText(product))}<small>Launch pilot · one bounded case</small></div><div class="card-actions"><a class="button" href="${encodeURIComponent(product.slug)}/">SEE THE OFFER</a><a class="button ghost" href="${intakeHref(product)}">START ↗</a></div></div>
+  if(document.body.dataset.view==='portfolio') {
+    const grid=document.querySelector('#grid'), search=document.querySelector('#search'), filters=document.querySelector('#filters');
+    const families=['All',...new Set(catalog.map(p=>p.family))];
+    let active='All';
+    filters.innerHTML=families.map(f=>`<button class="filter${f==='All'?' active':''}" data-family="${esc(f)}">${esc(f)}</button>`).join('');
+    const render=()=>{
+      const query=(search.value||'').trim().toLowerCase();
+      const rows=catalog.filter(p=>(active==='All'||p.family===active)&&(!query||[p.name,p.headline,p.buyer,p.family,p.primaryFamily].join(' ').toLowerCase().includes(query)));
+      grid.innerHTML=rows.map(p=>{
+        const [accent,icon,kicker]=themeFor(p);
+        return `<article class="card corner-glow" style="--accent:${accent}">
+          <div class="card-visual card-orbit"><img class="card-eye" src="${rootHref()}assets/premium/dio-eye-premium.webp" alt=""><img class="premium-card-medallion" src="${rootHref()}assets/premium/icons/dio-icon-${icon}.webp" onerror="this.onerror=null;this.src='${rootHref()}assets/premium/dio-eye-premium.webp'" alt=""><span>${esc(kicker)}</span></div>
+          <div class="card-body">${isExtension(p)?'<span class="canon-extension-label">CANON EXTENSION</span>':''}<span class="badge dio-pill">${esc(statusLabel(p))}</span><div class="family">${esc(p.family)}</div><h2>${esc(p.name)}</h2><p class="headline">${esc(p.headline)}</p><p class="buyer"><b>For:</b> ${esc(p.buyer)}</p><div class="price-line">${esc(money(p.price))}<small>${p.internal?'Not a direct retail claim':'One bounded case · scope confirmed first'}</small></div><div class="card-actions"><a class="button" href="${encodeURIComponent(p.slug)}/">${isExtension(p)?'OPEN PRODUCT':'SEE THE PROOF'}</a><a class="button ghost" href="${vesperHref(p)}">ASK VESPER ↗</a></div></div>
         </article>`;
-      }).join('') : '<div class="empty">No product matches that search.</div>';
+      }).join('') || '<div class="empty">No product matches that search.</div>';
     };
-    filters.addEventListener('click', event => { const button=event.target.closest('[data-family]'); if(!button)return; active=button.dataset.family; filters.querySelectorAll('.filter').forEach(node=>node.classList.toggle('active',node===button)); render(); });
-    search.addEventListener('input', render); render();
+    filters.addEventListener('click',e=>{const b=e.target.closest('[data-family]');if(!b)return;active=b.dataset.family;filters.querySelectorAll('.filter').forEach(x=>x.classList.toggle('active',x===b));render();});
+    search.addEventListener('input',render);render();
   }
 
-  if (document.body.dataset.view === 'product') {
-    const slug = document.body.dataset.product || new URLSearchParams(location.search).get('product');
-    const product = catalog.find(item => item.slug === slug);
-    const root = document.querySelector('#product');
-    if (!product) { root.innerHTML = `<div class="wrap producthero"><h1>Product not found.</h1><p><a class="button" href="${portfolioHref()}">Return to the 38-product portfolio</a></p></div>`; return; }
+  if(document.body.dataset.view==='product') {
+    const slug=document.body.dataset.product || location.pathname.split('/').filter(Boolean).pop();
+    const product=catalog.find(p=>p.slug===slug);
+    const root=document.querySelector('#product');
+    if(!product){root.innerHTML=`<div class="wrap producthero"><h1>Product not found.</h1><p><a class="button" href="${portfolioHref()}">Return to the 68-product portfolio</a></p></div>`;return;}
+    const [accent,icon,kicker]=themeFor(product);
+    document.documentElement.style.setProperty('--accent',accent);
+    document.title=`${product.name} | DIO Workflows`;
+    const meta=document.querySelector('meta[name="description"]');
+    if(meta) meta.setAttribute('content',`${product.headline} Controlled production proof, explicit authority boundaries, and commercial validation labelled ${product.commercialValidation}.`);
+    const topCta=document.querySelector('.navlinks .cta'); if(topCta){topCta.href=vesperHref(product);topCta.textContent='START WITH VESPER';}
+    document.querySelectorAll('.navlinks a').forEach(a=>{if(/38 PILOTS|CONTROL/.test(a.textContent)) a.textContent=a.textContent.includes('CONTROL')?'EVIDENCE':'68 PRODUCTS';});
+    const proofDataPromise=loadProof();
+    root.innerHTML=`<section class="editorial-hero"><div class="wrap editorial-hero-grid"><div class="editorial-copy">
+      <div class="breadcrumb"><a href="${portfolioHref()}">68-product portfolio</a><span>/</span>${esc(product.family)}</div>
+      <p class="eyebrow">${esc(product.family)}</p><h1>${esc(product.name)}</h1><p class="lead">${esc(product.headline)}</p>
+      <p class="buyer-line"><span>For</span>${esc(product.buyer)}</p><div class="provenance-line">Primary machinery <strong>${esc(product.primaryFamily)}</strong></div>
+      <div class="hero-price"><b>${esc(money(product.price))}</b><span>${isExtension(product)?'Canon-level product extension · receipt-bound candidate · commercial validation unproved':(product.internal?'Internal operating capability · exposed publicly as proof, not as customer validation':'Launch pilot · one bounded case · scope confirmed before work begins')}</span></div>
+      <div class="hero-actions"><a class="button" href="#production-proof">OPEN THE PROOF ↓</a><a class="button ghost" href="${vesperHref(product)}">ASK VESPER ↗</a></div>
+      </div><figure class="product-orbit-stage corner-glow"><img class="product-matrix" src="${rootHref()}assets/dio-product-matrix.svg" alt=""><img class="product-orbit-eye" src="${rootHref()}assets/premium/dio-eye-premium.webp" alt="DIO governed product route"><img class="premium-family-medallion" src="${rootHref()}assets/premium/icons/dio-icon-${icon}.webp" onerror="this.onerror=null;this.src='${rootHref()}assets/premium/dio-eye-premium.webp'" alt=""><span class="route-word" data-length="long">${esc(product.primaryFamily.toUpperCase())}</span><span class="orbit-label a">${esc(orbitExecutionLabel(product))}</span><span class="orbit-label b">EVIDENCE-BOUND</span><span class="orbit-label c">COMMERCIAL ${esc(product.commercialValidation)}</span><span class="orbit-label d">AUTHORITY HELD</span><figcaption><span>DIO INCARNATION</span><strong>${esc(product.name)}</strong></figcaption></figure></div></section>
+      <section class="product-proof-strip"><div class="wrap proof-strip-grid"><div><small>Execution / evidence state</small><b>${esc(executionLabel(product))}</b></div><div><small>Readiness</small><b>${esc(statusLabel(product))}</b></div><div><small>COMMERCIAL VALIDATION</small><b>${esc(product.commercialValidation)}</b></div><div><small>Authority created</small><b>NO</b></div></div></section>
+      <section class="editorial-section" id="production-proof"><div class="wrap"><div class="section-intro"><div><p class="eyebrow">PRODUCTION PROOF</p><h2>The job, the exception, the artifact.</h2></div><p>${esc(product.buyerContext)}</p></div><div id="live-proof" class="live-proof-grid"><article class="artifact-card corner-glow"><div class="artifact-index">…</div><div><small>LOADING PUBLIC PROOF</small><h3>Binding artifact to receipt.</h3></div></article></div></div></section>
+      <section class="editorial-section evidence-section" id="evidence"><div class="wrap evidence-layout"><div class="section-intro"><p class="eyebrow">TRUTH BOUNDARY</p><h2>What this proves, and what it does not.</h2><p>Controlled execution evidence is engineering evidence. Commercial validation is earned outside the system.</p></div><div class="evidence-ledger"><article><small>CONTROLLED ROUTE</small><p>${esc(product.proof)}</p></article><article><small>EXCEPTION CASE</small><p>${esc(product.exceptionCase)}</p></article><article><small>AUTHORITY BOUNDARY</small><p>${esc(product.boundary)}</p></article><article><small>SELLABILITY / READINESS</small><p>${esc(product.status)} · ${esc(product.engineeringStatus)}</p></article></div></div></section>
+      <section class="editorial-section flow-section"><div class="wrap"><div class="section-intro compact"><p class="eyebrow">BOUNDED DELIVERY</p><h2>Bring authorised context. Receive inspectable work. Keep the decision.</h2></div><div class="delivery-flow"><article><span>01</span><h3>Bring this</h3><ul>${product.bring.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></article><article><span>02</span><h3>DIO does this</h3><p>Runs the governed product route, records the controlled execution, and keeps evidence and authority separate.</p></article><article><span>03</span><h3>You receive this</h3><ul>${product.deliverables.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></article><article><span>04</span><h3>Human decides this</h3><p>${esc(product.boundary)}</p></article></div></div></section>
+      <section class="vesper-conversion"><div class="wrap vesper-conversion-grid"><div class="vesper-portrait-frame"><div class="vesper-bloom"></div><img src="${rootHref()}assets/vesper-public.webp" alt="Vesper, AI · DIO Presence Core"></div><div><p class="eyebrow">AI · DIO PRESENCE CORE</p><h2>Tell me what you are trying to achieve.</h2><p>Vesper opens with ${esc(product.name)} context attached and routes the conversation into the governed handoff.</p><div class="hero-actions"><a class="button" href="${vesperHref(product)}">START WITH VESPER ↗</a><a class="button ghost" href="${intakeHref(product)}">STRUCTURED INTAKE</a></div></div></div></section>`;
 
-    const theme = themeFor(product), display = displayFor(product), price = priceText(product);
-    const vesperPortrait = `${rootHref()}assets/vesper-public.webp`;
-    const orbitAsset = `${rootHref()}assets/dio-eye-orbit.svg`;
-    const matrixAsset = `${rootHref()}assets/dio-product-matrix.svg`;
-    document.documentElement.style.setProperty('--accent', theme.accent);
-    document.documentElement.style.setProperty('--accent-dark', theme.dark);
-    document.documentElement.style.setProperty('--accent-soft', theme.soft);
-    document.documentElement.style.setProperty('--product-hero-bg', `url('${heroSrc(product)}')`);
-    document.title = `${display.displayName} | DIO Workflows`;
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute('content', `${product.headline} ${product.offer} from ${price} for one bounded, human-reviewed case.`);
-
-    if (document.body.dataset.product && !document.querySelector('link[rel="canonical"]')) { const canonical=document.createElement('link'); canonical.rel='canonical'; canonical.href=`https://dioworkflows.co.za/products/${encodeURIComponent(product.slug)}/`; document.head.appendChild(canonical); }
-    const topCta = document.querySelector('.navlinks .cta'); if(topCta){topCta.href=vesperHref(product);topCta.textContent='START WITH VESPER';}
-    document.querySelectorAll('a[href^="mail' + 'to:"]').forEach(link => { link.href=intakeHref(product); if(link.closest('footer')) link.textContent='Governed intake'; });
-
-    const artifacts = product.deliverables.map((deliverable,index)=>`<article class="artifact-card corner-glow"><div class="artifact-index">0${index+1}</div><div><small>REVIEW-READY DELIVERABLE</small><h3>${esc(deliverable)}</h3><p>Prepared as part of the bounded pilot and returned for authorised human review.</p></div></article>`).join('');
-    const pathway = display.pathway.map((node,index)=>`<div class="pathway-node"><small>${String(index+1).padStart(2,'0')}</small><b>${esc(node)}</b></div>`).join('<span class="pathway-arrow" aria-hidden="true">→</span>');
-    const bring = product.bring.map(item=>`<li>${esc(item)}</li>`).join('');
-    const receive = product.deliverables.map(item=>`<li>${esc(item)}</li>`).join('');
-    const routeLabel = display.poweredBy.toUpperCase();
-    const routeLength = routeLabel.length > 14 ? 'xlong' : routeLabel.length > 8 ? 'long' : 'short';
-
-    root.innerHTML = `
-      <section class="editorial-hero"><div class="wrap editorial-hero-grid"><div class="editorial-copy"><div class="breadcrumb"><a href="${portfolioHref()}">38-product portfolio</a><span>/</span>${esc(product.family)}</div><p class="eyebrow">${esc(product.family)}</p><h1>${esc(display.displayName)}</h1><p class="lead">${esc(product.headline)}</p><p class="buyer-line"><span>Built for</span>${esc(product.buyer)}</p><div class="provenance-line">Powered by <strong>${esc(display.poweredBy)}</strong></div><div class="hero-price"><b>${esc(price)}</b><span>Launch pilot · one bounded case · scope confirmed before work begins</span></div><div class="hero-actions"><a class="button" href="${vesperHref(product)}">START WITH VESPER ↗</a><a class="button ghost" href="#evidence">SEE THE EVIDENCE</a></div></div>
-        <figure class="product-orbit-stage corner-glow"><img class="product-matrix" src="${matrixAsset}" alt=""><img class="product-orbit-eye" src="${orbitAsset}" alt="DIO governed product route"><img class="premium-family-medallion" src="${premiumIconSrc(product)}" alt=""><span class="route-word" data-length="${routeLength}">${esc(routeLabel)}</span><span class="orbit-label a">${esc(product.family)}</span><span class="orbit-label b">EVIDENCE-BOUND</span><span class="orbit-label c">BOUNDED PILOT</span><span class="orbit-label d">HUMAN AUTHORITY</span><figcaption><span>DIO PRODUCT ROUTE</span><strong>${esc(product.name)}</strong></figcaption></figure>
-      </div></section>
-      <section class="product-proof-strip"><div class="wrap proof-strip-grid"><div><small>Route</small><b>Controlled proof</b></div><div><small>Delivery</small><b>Review-ready</b></div><div><small>Evidence posture</small><b>Hash-bound where applicable</b></div><div><small>Authority</small><b>Human-held</b></div></div></section>
-      <section class="editorial-section" id="artifacts"><div class="wrap"><div class="section-intro"><div><p class="eyebrow">WHAT YOU ACTUALLY GET</p><h2>Concrete work, not an AI promise.</h2></div><p>${esc(theme.value)}</p></div><div class="artifact-gallery">${artifacts}</div></div></section>
-      <section class="editorial-section evidence-section" id="evidence"><div class="wrap evidence-layout"><div class="section-intro"><p class="eyebrow">EVIDENCE, NOT PROMISES</p><h2>Built before it was pitched.</h2><p>Controlled engineering evidence is shown as engineering evidence. Commercial validation is earned from customers.</p></div><div class="evidence-ledger"><article><small>ROUTE PROOF</small><p>${esc(product.proof)}</p></article><article><small>AUTHORITY BOUNDARY</small><p>${esc(product.boundary)}</p></article><article><small>EVIDENCE POSTURE</small><p>Hash-bound receipt where applicable; public presentation is curated rather than a raw internal dump.</p></article><article><small>COMMERCIAL VALIDATION</small><p>Earned from customers, repeat demand and measured delivery — never inferred from controlled proof.</p></article></div></div></section>
-      <section class="editorial-section system-section"><div class="wrap"><div class="section-intro compact"><p class="eyebrow">WHAT RUNS UNDERNEATH</p><h2>The outcome is public. The machinery stays backstage.</h2></div><div class="system-pathway">${pathway}</div></div></section>
-      <section class="editorial-section flow-section"><div class="wrap"><div class="section-intro compact"><p class="eyebrow">BOUNDED DELIVERY</p><h2>One clear case. One inspectable handoff.</h2></div><div class="delivery-flow"><article><span>01</span><h3>Bring this</h3><ul>${bring}</ul></article><article><span>02</span><h3>DIO does this</h3><p>Runs controlled processing, evidence preparation and the bounded product route while preserving provenance and explicit authority limits.</p></article><article><span>03</span><h3>You receive this</h3><ul>${receive}</ul></article><article><span>04</span><h3>Human decides this</h3><p>${esc(product.boundary)}</p></article></div></div></section>
-      <section class="editorial-section pilot-scope"><div class="wrap pilot-grid"><div><p class="eyebrow">PILOT SCOPE</p><h2>Start small enough to measure.</h2><p>Bring one bounded, authorised case. Larger datasets, recurring operations, custom integrations and third-party costs are scoped separately before work begins.</p></div><div class="pilot-card corner-glow"><small>LAUNCH PILOT</small><strong>${esc(price)}</strong><span>One bounded case</span><span>Scope confirmed first</span><span>Review-ready delivery</span><span>Human-held release</span><a class="button" href="${vesperHref(product)}">TALK TO VESPER ↗</a><a class="text-link" href="${intakeHref(product)}">Use structured intake instead</a></div></div></section>
-      <section class="vesper-conversion"><div class="wrap vesper-conversion-grid"><div class="vesper-portrait-frame"><div class="vesper-bloom" aria-hidden="true"></div><img src="${vesperPortrait}" alt="Vesper, AI · DIO Presence Core"></div><div><p class="eyebrow">AI · DIO PRESENCE CORE</p><h2>Tell me what you're trying to achieve.</h2><p>Vesper already has this product context. Start with the real problem and she will route the conversation into the governed DIO handoff.</p><div class="hero-actions"><a class="button" href="${vesperHref(product)}">START WITH VESPER ↗</a><a class="button ghost" href="${intakeHref(product)}">STRUCTURED INTAKE</a></div></div></div></section>`;
+    proofDataPromise.then(data=>{
+      const entry=(data.products||[]).find(p=>p.slug===product.slug);
+      const target=document.querySelector('#live-proof');
+      if(!target) return;
+      if(!entry){
+        if(isExtension(product)){
+          target.innerHTML=`<article class="proof-job-card canon-extension-proof"><small>CANON EXTENSION</small><h3>Receipt-bound product proof candidate.</h3><p>${esc(product.proof)}</p><p><b>Current boundary:</b> The historic 159-journey corpus applies to the 53 base-canon routes. This extension is displayed at canon level without being backfilled into that older gauntlet.</p></article><article class="proof-state-card"><small>COMMERCIAL VALIDATION</small><strong>UNPROVED</strong><span>proof candidate ≠ market validation</span><p>Authority created: <b>NO</b><br>External effects: <b>NO</b></p></article>`;
+        }
+        return;
+      }
+      const artifactCards=(entry.artifacts||[]).map((a,i)=>`<article class="proof-artifact-card corner-glow"><div><small>REAL CONTROLLED ARTIFACT · ${String(i+1).padStart(2,'0')}</small><h3>${esc(a.name)}</h3><p>${esc(a.proof_relation==='public_preview_of_native_artifact'?'Public preview derived from the native production artifact.':'Customer-facing artifact from the controlled production run.')}</p><code>${esc(a.sha256||'hash recorded')}</code></div><a class="button" href="${proofHref(a)}" target="_blank" rel="noopener">OPEN / DOWNLOAD ↗</a></article>`).join('');
+      target.innerHTML=`<article class="proof-job-card"><small>BUYER JOB</small><h3>${esc(entry.buyer_job)}</h3><p><b>Context:</b> ${esc(entry.buyer_context)}</p><p><b>Adversarial / messy case:</b> ${esc(entry.exception_case)}</p></article>${artifactCards}<article class="proof-state-card"><small>CONTROLLED EXECUTION</small><strong>${entry.execution_variants}/${entry.execution_variant_count}</strong><span>normal · messy · adversarial</span><p>Authority created: <b>${entry.authority_created?'YES':'NO'}</b><br>External effects: <b>${entry.external_effects?'YES':'NO'}</b><br>Commercial validation: <b>${esc(entry.commercial_validation)}</b></p></article>`;
+    });
   }
 })();

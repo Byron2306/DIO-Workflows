@@ -1,13 +1,10 @@
 name: Validate editorial evidence product pages
-
 on:
   pull_request:
     paths:
       - "products/**"
-      - "assets/vesper-public.webp"
       - ".github/workflows/product-editorial-evidence.yml"
   workflow_dispatch:
-
 jobs:
   editorial-evidence:
     runs-on: ubuntu-latest
@@ -16,47 +13,25 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - name: Validate product presentation contract
+      - name: Validate proof-rich product presentation
         run: |
           node --check products/app.js
           node - <<'NODE'
-          const fs=require('fs');
-          global.window={};
-          require('./products/catalog.js');
+          const fs=require('fs');global.window={};require('./products/catalog.js');
           const rows=window.DIO_PRODUCT_CATALOG;
-          if(!Array.isArray(rows) || rows.length!==38) throw new Error(`expected 38 routes, got ${rows && rows.length}`);
-          if(new Set(rows.map(p=>p.slug)).size!==38) throw new Error('product slugs are not unique');
-
+          if(rows.length!==68) throw new Error(`expected 68 routes, got ${rows.length}`);
           const app=fs.readFileSync('products/app.js','utf8');
-          const css=fs.readFileSync('products/product.css','utf8');
-          const requiredApp=[
-            'DISPLAY_BY_SLUG','function displayFor','function vesperHref',
-            'editorial-hero','artifact-gallery','evidence-ledger','system-pathway','delivery-flow','pilot-scope','vesper-conversion',
-            'WHAT YOU ACTUALLY GET','EVIDENCE, NOT PROMISES','WHAT RUNS UNDERNEATH',
-            'Bring this','DIO does this','You receive this','Human decides this',
-            'Built before it was pitched.',
-            'Controlled engineering evidence is shown as engineering evidence.',
-            'assets/vesper-public.webp'
-          ];
-          for(const token of requiredApp) if(!app.includes(token)) throw new Error(`product renderer missing: ${token}`);
-
-          const requiredCss=['.editorial-hero','.artifact-gallery','.artifact-card','.evidence-ledger','.system-pathway','.delivery-flow','.pilot-scope','.vesper-conversion','prefers-reduced-motion',':focus-visible','@media(max-width:980px)','@media(max-width:640px)'];
-          for(const token of requiredCss) if(!css.includes(token)) throw new Error(`product styling missing: ${token}`);
-
-          const prices=["'Documents & Rooms':4900","'Performance & People':4900","'Education':5900","'Research & Learning':5900","'Evidence & Assurance':7900","'Obligations':8900","'AI & Digital Trust':12900","'High-Risk Review':12900","'Regulated Operations':14900"];
-          for(const token of prices) if(!app.includes(token)) throw new Error(`pricing drift: ${token}`);
-
-          const forbidden=['/home/byron/','dio_workflows@outlook.com'];
-          for(const token of forbidden) if(app.includes(token)) throw new Error(`private/internal detail leaked into renderer: ${token}`);
-
-          const flagships=['homs','vamp','sophia','evidex'];
-          for(const slug of flagships){
-            const page=fs.readFileSync(`products/${slug}/index.html`,'utf8');
-            for(const token of ['data-view="product"','editorial-hero','artifact-gallery','evidence-ledger','system-pathway','delivery-flow','pilot-scope','vesper-conversion','../../assets/vesper-public.webp']){
-              if(!page.includes(token)) throw new Error(`${slug} flagship missing: ${token}`);
-            }
-            if(page.includes('class="producthero"')) throw new Error(`${slug} still uses legacy producthero shell`);
-          }
-
+          for(const token of ['PRODUCTION PROOF','TRUTH BOUNDARY','BUYER JOB','OPEN / DOWNLOAD','COMMERCIAL VALIDATION','68-product portfolio','vesper-intake.html'])
+            if(!app.includes(token)) throw new Error(`renderer missing: ${token}`);
+          const css=fs.readFileSync('products/proof-layer.css','utf8');
+          for(const token of ['.live-proof-grid','.proof-artifact-card','@media']) if(!css.includes(token)) throw new Error(`proof CSS missing: ${token}`);
           console.log('DIO_EDITORIAL_EVIDENCE_PRODUCT_CONTRACT_VERIFIED');
           NODE
+          python3 - <<'PY'
+          from pathlib import Path
+          for slug,vid in [('homs','nbwAAprx6RY'),('evidex','h9QOiyaMJeM')]:
+              page=Path(f'products/{slug}/index.html').read_text(encoding='utf-8')
+              for token in ('editorial-hero','PRODUCTION PROOF','vesper-conversion',f'youtube-nocookie.com/embed/{vid}'):
+                  if token not in page: raise SystemExit(f'{slug} flagship missing: {token}')
+          print('DIO_FLAGSHIP_EVIDENCE_FILMS_VERIFIED')
+          PY

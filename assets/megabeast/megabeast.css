@@ -1,0 +1,62 @@
+
+:root{--mega-gold:#d6b36c;--mega-ink:#060708;--mega-panel:#0d0f12}
+.mega-section{position:relative;padding:94px 0;background:#07090b;border-top:1px solid rgba(214,179,108,.12)}
+.mega-section.alt{background:#0b0d10}.mega-grid{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.35fr);gap:54px;align-items:center}
+.mega-grid.reverse{grid-template-columns:minmax(0,1.35fr) minmax(0,.82fr)}
+.mega-grid.reverse .mega-copy{order:2}.mega-grid.reverse .mega-visual{order:1}
+.mega-copy h2{font-size:clamp(2.2rem,4.2vw,4.6rem);line-height:.98;margin:.2em 0 .4em;letter-spacing:-.035em}
+.mega-copy p{font-size:1.04rem;line-height:1.75;color:#b8bcc3;max-width:64ch}
+.mega-visual{position:relative;border:1px solid rgba(214,179,108,.25);background:#030405;padding:10px;box-shadow:0 24px 80px rgba(0,0,0,.42)}
+.mega-visual img{display:block;width:100%;height:auto}
+.mega-caption{display:flex;justify-content:space-between;gap:16px;padding:12px 6px 2px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#8e9299}
+.doctrine{margin-top:22px;border-left:2px solid var(--mega-gold);padding:12px 0 12px 18px;color:#e8d4a6!important;font-family:Georgia,serif;font-size:1.18rem!important}
+.law-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:24px 0}.law-grid span{border:1px solid rgba(214,179,108,.16);padding:10px 12px;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:#c8cbd0;background:rgba(255,255,255,.02)}
+.truth-ribbon{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:28px;background:rgba(214,179,108,.18);border:1px solid rgba(214,179,108,.18)}
+.truth-ribbon div{padding:16px;background:#0b0d10}.truth-ribbon small{display:block;color:#878c94;text-transform:uppercase;letter-spacing:.12em;font-size:.64rem;margin-bottom:5px}.truth-ribbon b{font-size:.9rem;color:#e4e6e8}
+.film-section{padding:76px 0;background:radial-gradient(circle at 50% 0,rgba(193,152,79,.12),transparent 46%),#050607;border-top:1px solid rgba(214,179,108,.18)}
+.film-shell{max-width:1120px;margin:30px auto 0;border:1px solid rgba(214,179,108,.26);padding:10px;background:#020303;box-shadow:0 28px 90px rgba(0,0,0,.5)}
+.film-frame{position:relative;aspect-ratio:16/9;overflow:hidden;background:#000}.film-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.film-head{text-align:center;max-width:760px;margin:0 auto}.film-head h2{font-size:clamp(2.3rem,5vw,5rem);line-height:.98;margin:.2em 0}.film-head p{color:#b8bcc3;line-height:1.7}
+.mega-hero-note{max-width:820px;margin:24px 0 0;padding:18px 20px;border:1px solid rgba(214,179,108,.18);background:rgba(0,0,0,.24);font-family:Georgia,serif;color:#dec48b;font-size:1.05rem}
+.mega-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
+.mega-kicker{color:#d7b66f;letter-spacing:.16em;text-transform:uppercase;font-size:.72rem;font-weight:700}
+.mega-stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:40px;border:1px solid rgba(214,179,108,.18)}
+.mega-stats>div{padding:20px;border-right:1px solid rgba(214,179,108,.14)}.mega-stats>div:last-child{border-right:0}.mega-stats strong{display:block;font-family:Georgia,serif;font-size:2rem;color:#e2c27b}.mega-stats span{color:#92979f;font-size:.78rem}
+.mega-hero{padding:150px 0 72px;background:radial-gradient(circle at 78% 20%,rgba(200,157,77,.13),transparent 34%),#050607}
+.mega-hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}.mega-hero h1{font-size:clamp(3.2rem,7vw,7.5rem);line-height:.88;letter-spacing:-.055em;margin:.18em 0}.mega-hero h1 em{font-weight:400;color:#d2ae67}.mega-hero .hero-lede{font-size:1.12rem;line-height:1.75;color:#bec2c8;max-width:68ch}
+.mega-hero-seal{display:grid;place-items:center;min-height:480px;position:relative}.mega-hero-seal:before{content:"";position:absolute;width:75%;aspect-ratio:1;border:1px solid rgba(214,179,108,.2);border-radius:50%;box-shadow:0 0 120px rgba(190,146,65,.08)}.mega-hero-seal img{width:min(420px,88%);position:relative;filter:drop-shadow(0 20px 40px rgba(0,0,0,.7))}
+.product-bridge{padding:90px 0;background:#0a0c0f}.product-bridge-head{display:grid;grid-template-columns:1fr .8fr;gap:40px;margin-bottom:34px}.product-bridge-head h2{font-size:clamp(2.4rem,4vw,4.8rem);line-height:1;margin:.2em 0}.product-bridge-head p{color:#b6bac1;line-height:1.7}
+.mega-card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.mega-card{padding:28px;border:1px solid rgba(214,179,108,.17);background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.012))}.mega-card small{color:#d7b66f;letter-spacing:.12em}.mega-card h3{font-size:1.45rem;margin:.6em 0}.mega-card p{color:#aeb2b9;line-height:1.6}.mega-card a{color:#dec17b;text-decoration:none}
+@media(max-width:900px){.mega-grid,.mega-grid.reverse,.mega-hero-grid,.product-bridge-head{grid-template-columns:1fr}.mega-grid.reverse .mega-copy,.mega-grid.reverse .mega-visual{order:initial}.mega-stats,.truth-ribbon{grid-template-columns:1fr 1fr}.mega-card-grid{grid-template-columns:1fr}.mega-hero-seal{min-height:300px}.mega-section{padding:68px 0}.law-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.mega-stats,.truth-ribbon{grid-template-columns:1fr}.mega-hero{padding-top:118px}.mega-hero h1{font-size:3rem}}
+@media(prefers-reduced-motion:reduce){.mega-section *,.film-section *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+.proof-receipts{margin-top:22px;flex-wrap:wrap}.proof-receipts .btn{font-size:.68rem}
+
+/* Premium Visual Canon Restoration · 2026-09-01
+   New Megabeast storytelling, original DIO ceremonial skin. */
+.mega-section>.page{width:min(1320px,calc(100% - 2*var(--pad)))}
+.mega-grid{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.55fr);gap:clamp(38px,4.2vw,58px);align-items:center}
+.mega-grid.reverse{grid-template-columns:minmax(0,1.55fr) minmax(0,.7fr)}
+.mega-section{overflow:hidden;background:radial-gradient(circle at 82% 18%,rgba(214,179,108,.055),transparent 28%),linear-gradient(180deg,#07090b,#050607)}
+.mega-section.alt{background:radial-gradient(circle at 16% 24%,rgba(214,179,108,.05),transparent 26%),linear-gradient(180deg,#0b0d10,#07090b)}
+.mega-section:after{content:"";position:absolute;left:50%;bottom:-24px;width:min(430px,48vw);height:96px;transform:translateX(-50%);background:url('../premium/dio-eye-divider.webp') center/contain no-repeat;opacity:.32;pointer-events:none;filter:drop-shadow(0 0 18px rgba(217,182,111,.12))}
+.mega-copy h2,.film-head h2,.product-bridge-head h2,.mega-hero h1,.mega-card h3{font-family:'Noto Serif Display','Noto Serif',Georgia,'Times New Roman',serif;color:#f0e6d4;text-wrap:balance}
+.mega-copy h2{font-weight:500;text-shadow:0 1px 24px rgba(217,182,111,.055)}
+.mega-copy h2 strong,.mega-copy h2 em,.film-head h2 em,.product-bridge-head h2 em,.mega-hero h1 em{color:#d9b66f}
+.mega-kicker{color:#e2c27b;text-shadow:0 0 18px rgba(217,182,111,.16)}
+.mega-visual{isolation:isolate;padding:14px;border-color:rgba(241,215,155,.34);background:radial-gradient(circle at 50% 50%,rgba(217,182,111,.055),transparent 58%),#030405;box-shadow:0 0 0 1px rgba(217,182,111,.06),0 32px 96px rgba(0,0,0,.5),0 0 38px rgba(217,182,111,.04)}
+.mega-visual:before{content:"";position:absolute;inset:3px;z-index:3;background:url('../premium/dio-gilded-panel-frame.webp') center/100% 100% no-repeat;opacity:.36;pointer-events:none;filter:drop-shadow(0 0 18px rgba(217,182,111,.16))}
+.mega-visual img{position:relative;z-index:1;width:100%;filter:saturate(1.05) contrast(1.025) brightness(1.03)}
+.mega-caption{position:relative;z-index:4;margin-top:4px;padding:13px 10px 4px;border-top:1px solid rgba(217,182,111,.17);color:#b8a47c}
+.mega-caption span:last-child{color:#e1c37e}
+.doctrine{border-left-color:#e0bd72;background:linear-gradient(90deg,rgba(217,182,111,.055),transparent);padding-right:12px;text-shadow:0 0 16px rgba(217,182,111,.06)}
+.truth-ribbon,.mega-stats{box-shadow:0 0 0 1px rgba(217,182,111,.035),0 18px 48px rgba(0,0,0,.18)}
+.mega-card{position:relative;isolation:isolate;overflow:hidden;border-color:rgba(217,182,111,.23);background:linear-gradient(160deg,rgba(217,182,111,.035),rgba(7,9,11,.94) 46%)}
+.mega-card:before{content:"";position:absolute;inset:3px;z-index:-1;background:url('../premium/dio-gilded-card-frame.webp') center/100% 100% no-repeat;opacity:.20;pointer-events:none}
+.film-shell{position:relative;isolation:isolate;border-color:rgba(241,215,155,.38);box-shadow:0 0 0 1px rgba(217,182,111,.06),0 34px 100px rgba(0,0,0,.56)}
+.film-shell:after{content:"";position:absolute;inset:3px;z-index:3;background:url('../premium/dio-panel-frame.webp') center/100% 100% no-repeat;opacity:.24;pointer-events:none}
+.mega-hero-seal:after{content:"";position:absolute;width:92%;aspect-ratio:1;background:url('../premium/dio-gilded-orbit-ring.webp') center/contain no-repeat;opacity:.23;filter:drop-shadow(0 0 36px rgba(217,182,111,.13));pointer-events:none}
+.mega-hero-seal img{z-index:2}
+@media(max-width:900px){.mega-grid,.mega-grid.reverse{grid-template-columns:1fr}.mega-section>.page{width:min(100% - 36px,860px)}.mega-visual{width:min(100%,820px);margin-inline:auto}.mega-section:after{width:min(360px,70vw)}}
+@media(max-width:560px){.mega-section>.page{width:calc(100% - 28px)}.mega-visual{padding:8px}.mega-visual:before{opacity:.27}.mega-caption{font-size:.62rem;line-height:1.35}.mega-copy h2,.film-head h2,.product-bridge-head h2{font-size:clamp(2.25rem,10vw,3.5rem);line-height:.96}.mega-section:after{opacity:.24}}

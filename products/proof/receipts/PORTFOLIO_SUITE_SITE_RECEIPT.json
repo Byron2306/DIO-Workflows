@@ -1,0 +1,559 @@
+{
+  "acceptance_token": "DIO_PORTFOLIO_SUITE_SITE_BUILT_FROM_EVIDENCE",
+  "all_canonical_execution_verified": true,
+  "all_visible_statuses_receipt_bound": true,
+  "authority_created": false,
+  "bundled_customer_artifact_count": 100,
+  "bundled_customer_artifact_hashes": [
+    {
+      "path": "artifacts/accessible-publish/ACCESSIBLE_PUBLICATION.html",
+      "sha256": "sha256:8461617db9b4bdeb48ffc84bd1876023839bb7345c72d6f86576858c5ac403ef"
+    },
+    {
+      "path": "artifacts/agent-authority/AI_TRUST_DOSSIER.docx",
+      "sha256": "sha256:5eb8988f1398b67575ffa3e9a614a3fd30da1542711a1c0379de41d758af81f6"
+    },
+    {
+      "path": "artifacts/agent-authority/AI_TRUST_DOSSIER.html",
+      "sha256": "sha256:01591e31687a27e15d2080196beab662d529b27f20ea01645035f8cec6ef3111"
+    },
+    {
+      "path": "artifacts/agent-authority/AI_TRUST_DOSSIER.pdf",
+      "sha256": "sha256:82595f3a681e2c67e6ff67302ffea7f0aed1ff6c99a391c667f0db666a3c9a86"
+    },
+    {
+      "path": "artifacts/ai-incidentroom/AIINCIDENTROOM_REVIEW_PACK.html",
+      "sha256": "sha256:177ad8196b27193dba3d22428b2f74a22643622dd2b908049fe363a9a661ffe9"
+    },
+    {
+      "path": "artifacts/assuranceroom/ASSURANCEROOM_REVIEW_PACK.html",
+      "sha256": "sha256:ff5c3012088336c5c35079199edbeba63bb5cb5bdacc8abcb4a4c2ec2899f66e"
+    },
+    {
+      "path": "artifacts/auditproof/AUDITPROOF_REVIEW_PACK.html",
+      "sha256": "sha256:42c72fdf2fe731b4a5da49901ac2a16f6f17385e4eb0cea22acd55e1428dd8b0"
+    },
+    {
+      "path": "artifacts/campaign-lab/portrait_1080x1350.jpg",
+      "sha256": "sha256:721f05f6cef3cf2614696f68e0984d480f5cf36c0a0415e7d4d2dd8726c7edfd"
+    },
+    {
+      "path": "artifacts/campaign-lab/vertical_1080x1920.jpg",
+      "sha256": "sha256:9ee0830a0c2474b9ae6de5da65ee4b15409a90299ac0e13e62ae075c60f9e528"
+    },
+    {
+      "path": "artifacts/campaign-lab/vertical_short_01_hook.jpg",
+      "sha256": "sha256:6383bb589468f160e13f95a7e34f3ee0704f36e230e09cee9a8d957c66ab7a2d"
+    },
+    {
+      "path": "artifacts/certificationproof/CERTIFICATIONPROOF_REVIEW_PACK.html",
+      "sha256": "sha256:4930980d59472d6858d5346beeff2ef21b7a3a53f36794dccde96d67ad3e8bd6"
+    },
+    {
+      "path": "artifacts/changeproof/AI_TRUST_DOSSIER.docx",
+      "sha256": "sha256:813966a07d7b6ef5b64131b0c469e4f1d6586fcdd2adf210e15aa326df49ba37"
+    },
+    {
+      "path": "artifacts/changeproof/AI_TRUST_DOSSIER.html",
+      "sha256": "sha256:3e8972fa24f573af1a828122fd32e557022d33d75b019089ef9f0fd5ce650795"
+    },
+    {
+      "path": "artifacts/changeproof/AI_TRUST_DOSSIER.pdf",
+      "sha256": "sha256:8d22b2bcea981b67a3891162eb60551d5b196b2747dc0a6bdf1b38382554b647"
+    },
+    {
+      "path": "artifacts/contractproof/EVIDENCE_PACK.docx",
+      "sha256": "sha256:23e74cd4e2b68259e5f9a0857330b14f7f0b1a38e4b9c24ff0e29eae0dd80eb8"
+    },
+    {
+      "path": "artifacts/contractproof/EVIDENCE_PACK.html",
+      "sha256": "sha256:8d64f117d888ad19fd7103cd783b5c728e47b494c92c0ac2c499117abd8c048f"
+    },
+    {
+      "path": "artifacts/contractproof/EVIDENCE_PACK.pdf",
+      "sha256": "sha256:108d6f2ed94b2063a1197d3ef3331d9c687996985bb6f82e59d8c017f575c906"
+    },
+    {
+      "path": "artifacts/controldrift/CONTROLDRIFT_REVIEW_PACK.html",
+      "sha256": "sha256:c13a2780262ac72e681596d11f2255a1e30df2e87d949c22f44460c55611b7db"
+    },
+    {
+      "path": "artifacts/cpdproof/CPDPROOF_REVIEW_PACK.html",
+      "sha256": "sha256:402fcc3a9a6b3cfda43354b8b09cf45b9c1d88f9d407e967c4ed6fc68c1331a9"
+    },
+    {
+      "path": "artifacts/cpdproof/evidence_table.xlsx",
+      "sha256": "sha256:8dfc4607aa8c271f9467df26e84c70d62c4e9549fe642095d3668aa51de64a08"
+    },
+    {
+      "path": "artifacts/cpdproof/executive_summary.docx",
+      "sha256": "sha256:ee55ddcc6e4daf5fbbc76a5d207751f111c16a700974f56ff07c16cee936a411"
+    },
+    {
+      "path": "artifacts/criticalai-assurance/CRITICALAIASSURANCE_REVIEW_PACK.html",
+      "sha256": "sha256:77ead755f14c3e9ef0ecc3edc44c4a9b54dc15dff54f56f1bfc49a827702d14c"
+    },
+    {
+      "path": "artifacts/cyberassurance/CYBERASSURANCE_REVIEW_PACK.html",
+      "sha256": "sha256:5bfaaa3239fccdf526be92c7626a4d8824ae2662d8c6aae5d6b1cf47c6b89273"
+    },
+    {
+      "path": "artifacts/diligenceroom/DILIGENCEROOM_REVIEW_PACK.html",
+      "sha256": "sha256:97fedf50179a649418399ac6842bd1ad86a7e3917f6a46fd06687ca4ac41ef76"
+    },
+    {
+      "path": "artifacts/dio-ai-assurance/AI_TRUST_DOSSIER.docx",
+      "sha256": "sha256:bebaae81a2296af5fe09ead1bf1ae14ea98f48b3d18f58392777228bdd4cff92"
+    },
+    {
+      "path": "artifacts/dio-ai-assurance/AI_TRUST_DOSSIER.html",
+      "sha256": "sha256:8405c4bbc7c478fac2191448fb88b5a1060e4a249ed51de3c5556cd3ff6b105f"
+    },
+    {
+      "path": "artifacts/dio-ai-assurance/AI_TRUST_DOSSIER.pdf",
+      "sha256": "sha256:0769b4b341383478a7afe7693845814951b0537f574c897f979a7575e0d8ff66"
+    },
+    {
+      "path": "artifacts/dio-regops/REGOPS_READINESS_PACK.html",
+      "sha256": "sha256:d3ea477411bf402f5a0fcae3100d8352bee2aaa0c71c44de65d14829e1fc5dea"
+    },
+    {
+      "path": "artifacts/document-studio-edit/CLEAN_EDITED_COPY.docx",
+      "sha256": "sha256:68c422e56f410c9d010bc5b841d15edf4b67e3a1151523ac93c04932d4d54fe6"
+    },
+    {
+      "path": "artifacts/document-studio-edit/REDLINE_REVIEW_COPY.docx",
+      "sha256": "sha256:8e6d1e20a299ec45b01be9b94dd78c6ac3fd15ca89a2bf9313b0f302530c6926"
+    },
+    {
+      "path": "artifacts/document-studio-edit/lingua-pro-document-studio-edit-english.docx",
+      "sha256": "sha256:1a47c209cb04806a95318044dc69633853169f4acdb185164a1b3232648851a9"
+    },
+    {
+      "path": "artifacts/document-studio-localize/BILINGUAL_REVIEW_COPY.docx",
+      "sha256": "sha256:ae6584b1d1f91d62eebfe673b9a9c4dcfb941d368cb129b5ec39460de1228e3b"
+    },
+    {
+      "path": "artifacts/document-studio-localize/lingua-pro-document-studio-localize-afrikaans.docx",
+      "sha256": "sha256:5c65720e2fd60046cd62c08aa08239297f8c3b8385a6853d76af2bb42e66276d"
+    },
+    {
+      "path": "artifacts/document-studio-localize/lingua-pro-document-studio-localize-english.docx",
+      "sha256": "sha256:4b86c26ccc2488ef284a35359f07e03b561b713e6d6bdfd22e41b2493d95ebb6"
+    },
+    {
+      "path": "artifacts/document-studio-publish/CLEAN_EDITED_COPY.docx",
+      "sha256": "sha256:43985be30f9e672b8700c019970ab1ddb3257419d9ec06acaaefd5350400df62"
+    },
+    {
+      "path": "artifacts/document-studio-publish/REDLINE_REVIEW_COPY.docx",
+      "sha256": "sha256:97178d25ea7a53d0456ed87b3830b15b0f51065aa3883581a6776025b5a63b61"
+    },
+    {
+      "path": "artifacts/document-studio-publish/lingua-pro-document-studio-publish-english.docx",
+      "sha256": "sha256:265864673026b460c7d440cfac06466c92bdc4eba92e307bce9bfd3e4264e161"
+    },
+    {
+      "path": "artifacts/donorproof/DONORPROOF_REVIEW_PACK.html",
+      "sha256": "sha256:3a2a5b69bd692ea0cbd26481230b5ff63ad91bf5462369381b5d2cfd5a5c4fc3"
+    },
+    {
+      "path": "artifacts/dora-vendor-assurance/DORAVENDORASSURANCE_REVIEW_PACK.html",
+      "sha256": "sha256:2c5420f79a89fcddd2436cf7069344ee2d328447f14b63dab2af14f012c6b9f7"
+    },
+    {
+      "path": "artifacts/dossierops/CUSTOMER-WORKPAPER.md",
+      "sha256": "sha256:df128bbfd46a596666addbdfc3faa6a9e60d0555aa51974eb04e6269a9096d50"
+    },
+    {
+      "path": "artifacts/dossierops/DOSSIEROPS_CONTROLLED_DOSSIER.zip",
+      "sha256": "sha256:5b3fa8acc7da80f04c27ab73b182d14dcd082112616351c19d42a5848a99ea1b"
+    },
+    {
+      "path": "artifacts/dossierops/DOSSIEROPS_DOSSIER_INDEX.html",
+      "sha256": "sha256:7adaaf664470f21c9d82d2d92dc299747921bd88d6e2040a775e445aa0947adf"
+    },
+    {
+      "path": "artifacts/evidex-evidenceops/INVOICE.docx",
+      "sha256": "sha256:d2eaedea71fa33f950c9228f73d74c71a80a9b96183417b2c0b029aa1575b972"
+    },
+    {
+      "path": "artifacts/evidex-evidenceops/executive_summary.docx",
+      "sha256": "sha256:ea36830362a828ef11c824a276a4f440df7849f8aa669aa7270c548e9df3a7d2"
+    },
+    {
+      "path": "artifacts/evidex-evidenceops/narrative_justification.docx",
+      "sha256": "sha256:7253b51af7d8e248e5af3aecb09056b984a80ff3b71dd815ee9cdf0f91acd771"
+    },
+    {
+      "path": "artifacts/grantproof/EVIDENCE_PACK.docx",
+      "sha256": "sha256:153cf9b395ed0af31f9e7ee46d31249460f4c7a62bd5c72064139423dd4c3935"
+    },
+    {
+      "path": "artifacts/grantproof/EVIDENCE_PACK.html",
+      "sha256": "sha256:0c03dfe694c644d363d6fcf34dc04951c5ce07f1ccf86a7eaaf2344dc932dfca"
+    },
+    {
+      "path": "artifacts/grantproof/EVIDENCE_PACK.pdf",
+      "sha256": "sha256:eb46607b7fe469d837e97bc431fc7c18950ff998983198d3afc2d9ed2e3f3487"
+    },
+    {
+      "path": "artifacts/homs-accreditation/ACCREDITATION_REVIEW_PACK.html",
+      "sha256": "sha256:2a3f4eb2e89468bf0fd308fc283ec8131ca1f4f6c14edcf13a9dd07b4ca3b096"
+    },
+    {
+      "path": "artifacts/homs-assess/LECTURER_REVIEW_SUMMARY.md",
+      "sha256": "sha256:60729dceb85caaf47e72a6b0dc5cebbd49791e2595a26bdfaed6b8c76289f50f"
+    },
+    {
+      "path": "artifacts/homs-assess/learner_B_FEEDBACK.txt",
+      "sha256": "sha256:90ccbac2e3a4bb4a3423ac0a08c8415abd409279df04f62f12a7839b8bc129e5"
+    },
+    {
+      "path": "artifacts/homs-assess/memo.md",
+      "sha256": "sha256:d6f1002f4b3ad0b1894cdaa133eb37a1195c941d54859acb468223a1b0af1418"
+    },
+    {
+      "path": "artifacts/homs-curriculum/CURRICULUM_ALIGNMENT_MATRIX.csv",
+      "sha256": "sha256:441b3c2349627809d79c7cbbc39f04601a2a40f30aff3315a6ee54c742c321b2"
+    },
+    {
+      "path": "artifacts/homs-curriculum/CURRICULUM_REVIEW.md",
+      "sha256": "sha256:83897464cc88684945dea9546ab28705227291bea547e54892c66c5c08028604"
+    },
+    {
+      "path": "artifacts/homs-exam/homs-exam-memorandum-en.docx",
+      "sha256": "sha256:c760c6acae06ebfa7e096e17176d28a1a960d9165f987222ba9fa6d5c917455b"
+    },
+    {
+      "path": "artifacts/homs-exam/homs-exam-paper-en.docx",
+      "sha256": "sha256:247449fd0126cb7b70d3f7fcb29e0c57935f88bc2a17bed0daeb1386edf465d5"
+    },
+    {
+      "path": "artifacts/homs-exam/homs-exam-paper-en.html",
+      "sha256": "sha256:bf3a1e8e3e75eeb01590c4a232c729333234248e03ddc6a27c44af35e18235f0"
+    },
+    {
+      "path": "artifacts/homs-learning-studio/HOMS_G10_T3_MOTION_LEARNER_GUIDE.pdf",
+      "sha256": "sha256:ac0bad7ff5ffe4224eb590d53363721d799e29f4cf0e54be4f66b394c22cabf3"
+    },
+    {
+      "path": "artifacts/homs-learning-studio/HOMS_G10_T3_MOTION_PRACTICAL_ACTIVITY.pdf",
+      "sha256": "sha256:45cd1ebea034436ce0ba20531a1f3c280523372c002d99a7314f67519ba5a17b"
+    },
+    {
+      "path": "artifacts/homs-learning-studio/HOMS_G10_T3_MOTION_WORKSHEET.pdf",
+      "sha256": "sha256:987b540940930efc969cca282940e5cab747169feabb69e66269938a89068dfb"
+    },
+    {
+      "path": "artifacts/homs-moderate/HOMSMODERATE_REVIEW_PACK.html",
+      "sha256": "sha256:292301fa25913ead08c632abc8f6c96c25d65d32b555c19cffdf4be657c388c2"
+    },
+    {
+      "path": "artifacts/impactproof/IMPACTPROOF_REVIEW_PACK.html",
+      "sha256": "sha256:a93e101796fc90ea246319f262f36b09d7d35c99d8167e84da6fe2ecf9da6af2"
+    },
+    {
+      "path": "artifacts/incidentproof/INCIDENTPROOF_REVIEW_PACK.html",
+      "sha256": "sha256:90e8e28bf59d42ec8375a5f602248cb530d2c5a0fe4abb71b02ef74800e81010"
+    },
+    {
+      "path": "artifacts/modelproof/MODELPROOF_REVIEW_PACK.html",
+      "sha256": "sha256:3d4a8ca60ebccd82bbaef6145a9b89f4b8549092addc4bf7da27bac220cc1513"
+    },
+    {
+      "path": "artifacts/offer-lab/BOUNDED_OFFER.md",
+      "sha256": "sha256:2f540a99ccb187dc700f5d588f35ed7fcec57c6cafc198ba1a0a2f47a7eccf2f"
+    },
+    {
+      "path": "artifacts/opportunity-foundry/OPPORTUNITY_FOUNDRY_BRIEF.md",
+      "sha256": "sha256:3b06d09130df90917b4b54c64093459a0b873399255af17d43254527acc9ea58"
+    },
+    {
+      "path": "artifacts/permitproof/EVIDENCE_PACK.docx",
+      "sha256": "sha256:3143706b06c47d9bd8427924cb704bb56401bda617c1bb0e93fd0dadf4c69bf8"
+    },
+    {
+      "path": "artifacts/permitproof/EVIDENCE_PACK.html",
+      "sha256": "sha256:d91e6be6438eb6da90f13d6bbbdab856a4cc3f9377284943a8e1c0f046fe5e19"
+    },
+    {
+      "path": "artifacts/permitproof/EVIDENCE_PACK.pdf",
+      "sha256": "sha256:ecd42e6c01748cf1edd553ccaa180550c8d03c771660dfd1d7b0cecffa0c1e0d"
+    },
+    {
+      "path": "artifacts/policyproof/EVIDENCE_PACK.docx",
+      "sha256": "sha256:2e60a748774c94df473917c64514be49c6af7e8fdbbe5a2d621a6352d8657334"
+    },
+    {
+      "path": "artifacts/policyproof/EVIDENCE_PACK.html",
+      "sha256": "sha256:16dbc09eb4f245bb79af3f51882352a1193bcefa7101cacebaafaf072a05a0ea"
+    },
+    {
+      "path": "artifacts/policyproof/EVIDENCE_PACK.pdf",
+      "sha256": "sha256:0f7587e15008c6ba30a89f3aa3218e1e623454fea14fa126e3bdeec0b1fe8a09"
+    },
+    {
+      "path": "artifacts/programmeproof/PROGRAMMEPROOF_REVIEW_PACK.html",
+      "sha256": "sha256:bfc9ba182b82735e511db6e85b839190fd0168d2da7d279dfcbfad46372320e1"
+    },
+    {
+      "path": "artifacts/projectproof/PROJECTPROOF_REVIEW_PACK.html",
+      "sha256": "sha256:aeec80384d68f9e597a659f5adc3251db925126eb63db99d8c9dd38a12e6735b"
+    },
+    {
+      "path": "artifacts/promotionproof/PROMOTIONPROOF_REVIEW_PACK.html",
+      "sha256": "sha256:9f0ca2202c2defa30474d9b04961c3a192111fe84c5c9f591b57e85f362486f4"
+    },
+    {
+      "path": "artifacts/promotionproof/evidence_table.xlsx",
+      "sha256": "sha256:bf4a26fd9a3a035b0f74d810f105e4d15fa897e5e5bbf83ebe0e113f9f40608d"
+    },
+    {
+      "path": "artifacts/promotionproof/executive_summary.docx",
+      "sha256": "sha256:4dca3cf782d6e3ef978fb9e474110e39ffa44e8e96320533a79ae45dba94d590"
+    },
+    {
+      "path": "artifacts/qualityproof/QUALITYPROOF_REVIEW_PACK.html",
+      "sha256": "sha256:e2c925e20c912ff40b813a0b1e6d5fc7d001902c47f1cc0204b23b9eca66e06e"
+    },
+    {
+      "path": "artifacts/releaseproof/RELEASEPROOF_REVIEW_PACK.html",
+      "sha256": "sha256:8d8f4c37212c8287cdba9db45ce32b9840ad54184c52a18483cf7cb4f0a41643"
+    },
+    {
+      "path": "artifacts/sophia-integrity/REFERENCE_AUDIT.md",
+      "sha256": "sha256:4e0af8d7bb568121e4d164f2aa3b11457373478ba770835ffcf647c6c972a396"
+    },
+    {
+      "path": "artifacts/sophia-integrity/REVIEWER_COMMENTARY.md",
+      "sha256": "sha256:29a3b1a8d7333f392f3cebcc7494bda9c6021ba2d3c1c64d5c1d4df159cee60f"
+    },
+    {
+      "path": "artifacts/sophia-integrity/SOPHIAINTEGRITY_REVIEW_PACK.html",
+      "sha256": "sha256:247e5f9c47a93bdb58bd68c35d82e03d83a709d4573612ceea0e234874308b16"
+    },
+    {
+      "path": "artifacts/sophia-research/CLAIM_SOURCE_LEDGER.md",
+      "sha256": "sha256:1b6e1d55fdd8233d66524c8ecdff96ab53bde2d41badede24503652537ce883a"
+    },
+    {
+      "path": "artifacts/sophia-research/REVIEWER_COMMENTARY.md",
+      "sha256": "sha256:cc745d4c46343f71f6bc5cdc8af679de50073862438a542d49d865753d6a7230"
+    },
+    {
+      "path": "artifacts/sophia-research/SOPHIARESEARCH_REVIEW_PACK.html",
+      "sha256": "sha256:1f6e0b0c7044e8dc5524e8f98e19a689202675b3e333c4fd907f4f024c6a0c5e"
+    },
+    {
+      "path": "artifacts/sophia-review/CLAIM_SOURCE_LEDGER.md",
+      "sha256": "sha256:f8a27c40ceb8a5279c762a0135cd922be7c8994ad4b3b5bebfb87ee4db283839"
+    },
+    {
+      "path": "artifacts/sophia-review/REFERENCE_AUDIT.md",
+      "sha256": "sha256:4e0af8d7bb568121e4d164f2aa3b11457373478ba770835ffcf647c6c972a396"
+    },
+    {
+      "path": "artifacts/sophia-review/REVIEWER_COMMENTARY.md",
+      "sha256": "sha256:6bfd2fe3686ee9f57cf074bcd077b8aa7e435752ec9b0f237745c2bbb020c1d1"
+    },
+    {
+      "path": "artifacts/sophia-supervisor/REFERENCE_AUDIT.md",
+      "sha256": "sha256:4e0af8d7bb568121e4d164f2aa3b11457373478ba770835ffcf647c6c972a396"
+    },
+    {
+      "path": "artifacts/sophia-supervisor/REVIEWER_COMMENTARY.md",
+      "sha256": "sha256:3b8bae11a7836296660e917b8b606f6d909ee2d827d22f4442a62c40a5a08074"
+    },
+    {
+      "path": "artifacts/sophia-supervisor/SOPHIASUPERVISOR_REVIEW_PACK.html",
+      "sha256": "sha256:fdb222546639cfe278a32e6fbea614bb2129ea2ac0db6ebe14d806372969a56a"
+    },
+    {
+      "path": "artifacts/sophia-tutor/SOPHIATUTOR_REVIEW_PACK.html",
+      "sha256": "sha256:54660eb96422eaed15a71e385ea97b7395f36ca06d04d5745e63a7b9372bbd0a"
+    },
+    {
+      "path": "artifacts/suppliercyberproof/SUPPLIERCYBERPROOF_REVIEW_PACK.html",
+      "sha256": "sha256:8bece3bbea059668723cbd50aa5d510042be3856c52ca0cd5f1424a48e9628d9"
+    },
+    {
+      "path": "artifacts/tenderproof/EVIDENCE_PACK.docx",
+      "sha256": "sha256:c6c0cf9440db8469bc64e81018908271e568d1b91419bf9ea7f23c06b6791d7d"
+    },
+    {
+      "path": "artifacts/tenderproof/EVIDENCE_PACK.html",
+      "sha256": "sha256:86676c5e076dad54159cfb38b99df28542eb9c55410e057b5c9298bd08fcb298"
+    },
+    {
+      "path": "artifacts/tenderproof/EVIDENCE_PACK.pdf",
+      "sha256": "sha256:a58fce1c093835763fedb3e1da883f55f76b39d82dd4fd01714cf6cf6ced88fd"
+    },
+    {
+      "path": "artifacts/vamp-performance/INVOICE.docx",
+      "sha256": "sha256:1986bb9d5566d201921567f4f4295aa464ea7e8e0ee60c929385ac419701b942"
+    },
+    {
+      "path": "artifacts/vamp-performance/evidence_table.xlsx",
+      "sha256": "sha256:2df2894df3376d3083eb1ed19de67f3014a3642bfe18eccd4bdd9893549045b0"
+    },
+    {
+      "path": "artifacts/vamp-performance/executive_summary.docx",
+      "sha256": "sha256:ac88bf1f5a5b0bccb255e21d5d038be4eca24f7f2243a811c9c0ff3dbf8de2f1"
+    },
+    {
+      "path": "artifacts/vendorproof/VENDORPROOF_REVIEW_PACK.html",
+      "sha256": "sha256:0ee600836d048c3828e5a9ed512d69306f4dde0f32e8007d0c183ad880d212c8"
+    }
+  ],
+  "canonical_product_count": 53,
+  "claim_boundary": "Portfolio Suite Studio is a deterministic website projection of ATLAS suite membership and DIO evidence receipts. It may display execution, engineering, sellability and bounded production-readiness states exactly as proven by those receipts. It must not promote execution proof into buyer sellability, commercial validation, willingness to pay, ROI, autonomous release or market-scale claims.",
+  "commercial_validation": "UNPROVED",
+  "execution_verified_journey_count": 159,
+  "external_effects": false,
+  "format_core_visual_asset_count": 48,
+  "format_core_visual_composition": "PASS",
+  "human_release": "NEEDS_YOU",
+  "input_evidence_snapshots": [
+    {
+      "bytes": 116055,
+      "path": "proof/input_evidence/PROFESSIONAL_EVIDENCE_53_X3_RECEIPT.json",
+      "sha256": "sha256:89731b2318160573e338b4d66d5a0b0368ee5ee17f9afb060e51d1f42f9f07fc"
+    },
+    {
+      "bytes": 478683,
+      "path": "proof/input_evidence/PORTFOLIO_CUSTOMER_SURFACE_GAUNTLET_RECEIPT.json",
+      "sha256": "sha256:1548609e6cb97771e757524999e92b0dc11e49e70e381804e1d87cb5585d199a"
+    },
+    {
+      "bytes": 39900,
+      "path": "proof/input_evidence/PORTFOLIO_PRODUCTION_READINESS_RECEIPT.json",
+      "sha256": "sha256:05fd2cf44571cc1a96e4148bdb3357957424b41b8c5d47bdbff90ef6dbf20464"
+    }
+  ],
+  "model_fingerprint": "sha256:f26c6a61c3976a047c4771fe6d86bd245206425ccbbee960968efeeeb730c093",
+  "page_assets": [
+    {
+      "path": "suites/education-research/index.html",
+      "sha256": "sha256:971bdd0d80dba6a1a8e6bec8ce48a437c0ad2c74bbdf171e6a87ed006773676b"
+    },
+    {
+      "path": "suites/enterprise-operations/index.html",
+      "sha256": "sha256:b54fdcb8e44399539b1c33e21fd49955e1ffd8210bf315dbc1b778f8afc0e497"
+    },
+    {
+      "path": "suites/public-programme-ops/index.html",
+      "sha256": "sha256:682d58aed8abd6a892f16717ebcc87c6d491ac754ae73dca7182ca1b127465ae"
+    },
+    {
+      "path": "suites/evidence-assurance/index.html",
+      "sha256": "sha256:383aac284ffa1d562033084a9e15a6c47820f013ae7679d93cccd96d070dc47a"
+    },
+    {
+      "path": "suites/ai-digital-trust/index.html",
+      "sha256": "sha256:e7d468303a3c1fd6eae34afcbda86293beb3a4c08755a3f7b3c1a5ab307eda9e"
+    },
+    {
+      "path": "suites/demand-presence/index.html",
+      "sha256": "sha256:cdb66fedbd285915a50006e5eebb80daca9c66924b023bf5191b62ace005b64c"
+    },
+    {
+      "path": "index.html",
+      "sha256": "sha256:5a6181f14e7f938bd1a5e9bf0599b2c9dcb4df10c2cc93adcf93ef9ad252d69b"
+    },
+    {
+      "path": "styles.css",
+      "sha256": "sha256:b0036bfea4d4667d340987faa6191f988f13df80631770753971871c22533f9b"
+    }
+  ],
+  "page_count": 7,
+  "portfolio_production_ready": false,
+  "publication": "REFUSE",
+  "receipt_fingerprint": "sha256:8cf5d17eae713eab076446e7b58508b99f32a604816195cd11afcb72153ce919",
+  "schema": "dio.portfolio.suite_site_receipt.v1",
+  "site_semantic_authority": "DIO_SITE_STUDIO",
+  "site_studio_suite_visual_receipts": [
+    {
+      "art_direction": "proof/site_studio/education-research/DOCUMENT_STUDIO_SITE_ART_DIRECTION.json",
+      "compositor_fingerprint": "sha256:331c766187c134eef7130d7c9b6fec7354ae66045ed96384ff6774ca17d5ac4c",
+      "compositor_receipt": "proof/site_studio/education-research/FORMAT_CORE_SITE_VISUAL_COMPOSITOR_RECEIPT.json",
+      "format_core_visual_composition": "PASS",
+      "geometry_authority": "DIO_FORMAT_CORE",
+      "publication": "REFUSE",
+      "scene_count": 8,
+      "site_semantic_authority": "DIO_SITE_STUDIO",
+      "story": "proof/site_studio/education-research/SITE_STORY_ARCHITECTURE.json",
+      "suite": "Education & Research"
+    },
+    {
+      "art_direction": "proof/site_studio/enterprise-operations/DOCUMENT_STUDIO_SITE_ART_DIRECTION.json",
+      "compositor_fingerprint": "sha256:df170e26ead54824d9e3017e62a1d55c4f55c5569a6afdda4de3a1305e27a333",
+      "compositor_receipt": "proof/site_studio/enterprise-operations/FORMAT_CORE_SITE_VISUAL_COMPOSITOR_RECEIPT.json",
+      "format_core_visual_composition": "PASS",
+      "geometry_authority": "DIO_FORMAT_CORE",
+      "publication": "REFUSE",
+      "scene_count": 8,
+      "site_semantic_authority": "DIO_SITE_STUDIO",
+      "story": "proof/site_studio/enterprise-operations/SITE_STORY_ARCHITECTURE.json",
+      "suite": "Enterprise Operations"
+    },
+    {
+      "art_direction": "proof/site_studio/public-programme-ops/DOCUMENT_STUDIO_SITE_ART_DIRECTION.json",
+      "compositor_fingerprint": "sha256:cb6d0397624203ff31821637dd73f5f1c91da70f92d86ace5fa94b8f1d92f822",
+      "compositor_receipt": "proof/site_studio/public-programme-ops/FORMAT_CORE_SITE_VISUAL_COMPOSITOR_RECEIPT.json",
+      "format_core_visual_composition": "PASS",
+      "geometry_authority": "DIO_FORMAT_CORE",
+      "publication": "REFUSE",
+      "scene_count": 8,
+      "site_semantic_authority": "DIO_SITE_STUDIO",
+      "story": "proof/site_studio/public-programme-ops/SITE_STORY_ARCHITECTURE.json",
+      "suite": "Public & Programme Ops"
+    },
+    {
+      "art_direction": "proof/site_studio/evidence-assurance/DOCUMENT_STUDIO_SITE_ART_DIRECTION.json",
+      "compositor_fingerprint": "sha256:3f9624bd0f535a018cecfdd6a7e588ca81a975a1ad484641ae271f097447a5aa",
+      "compositor_receipt": "proof/site_studio/evidence-assurance/FORMAT_CORE_SITE_VISUAL_COMPOSITOR_RECEIPT.json",
+      "format_core_visual_composition": "PASS",
+      "geometry_authority": "DIO_FORMAT_CORE",
+      "publication": "REFUSE",
+      "scene_count": 8,
+      "site_semantic_authority": "DIO_SITE_STUDIO",
+      "story": "proof/site_studio/evidence-assurance/SITE_STORY_ARCHITECTURE.json",
+      "suite": "Evidence & Assurance"
+    },
+    {
+      "art_direction": "proof/site_studio/ai-digital-trust/DOCUMENT_STUDIO_SITE_ART_DIRECTION.json",
+      "compositor_fingerprint": "sha256:97e7d4209454e34ffc8e8c8639147e9ea2d6e495fc4e51b638f3397614412ab8",
+      "compositor_receipt": "proof/site_studio/ai-digital-trust/FORMAT_CORE_SITE_VISUAL_COMPOSITOR_RECEIPT.json",
+      "format_core_visual_composition": "PASS",
+      "geometry_authority": "DIO_FORMAT_CORE",
+      "publication": "REFUSE",
+      "scene_count": 8,
+      "site_semantic_authority": "DIO_SITE_STUDIO",
+      "story": "proof/site_studio/ai-digital-trust/SITE_STORY_ARCHITECTURE.json",
+      "suite": "AI & Digital Trust"
+    },
+    {
+      "art_direction": "proof/site_studio/demand-presence/DOCUMENT_STUDIO_SITE_ART_DIRECTION.json",
+      "compositor_fingerprint": "sha256:10e3b1ec9ebb081d76aa3b4b3629c70a0b7768bd686a086755a39b10f8b1d7f4",
+      "compositor_receipt": "proof/site_studio/demand-presence/FORMAT_CORE_SITE_VISUAL_COMPOSITOR_RECEIPT.json",
+      "format_core_visual_composition": "PASS",
+      "geometry_authority": "DIO_FORMAT_CORE",
+      "publication": "REFUSE",
+      "scene_count": 8,
+      "site_semantic_authority": "DIO_SITE_STUDIO",
+      "story": "proof/site_studio/demand-presence/SITE_STORY_ARCHITECTURE.json",
+      "suite": "Demand & Presence"
+    }
+  ],
+  "suite_count": 6,
+  "suite_states": {
+    "AI & Digital Trust": "ENGINEERING_VERIFIED_NEEDS_SELLABILITY",
+    "Demand & Presence": "ENGINEERING_VERIFIED_NEEDS_SELLABILITY",
+    "Education & Research": "ENGINEERING_VERIFIED_NEEDS_SELLABILITY",
+    "Enterprise Operations": "ENGINEERING_VERIFIED_NEEDS_SELLABILITY",
+    "Evidence & Assurance": "ENGINEERING_VERIFIED_NEEDS_SELLABILITY",
+    "Public & Programme Ops": "ENGINEERING_VERIFIED_NEEDS_SELLABILITY"
+  },
+  "visual_geometry_authority": "DIO_FORMAT_CORE"
+}

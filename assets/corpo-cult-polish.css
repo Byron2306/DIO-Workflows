@@ -1,0 +1,115 @@
+/* DIO CORPO-CULT THOROUGH POLISH · 2026-09-06
+   Additive final visual pass. Existing architecture and behaviour remain authoritative. */
+:root{
+  --cult-obsidian:#070809;
+  --cult-obsidian-2:#0b0c0e;
+  --cult-panel:#11100e;
+  --cult-bronze:#8f6b35;
+  --cult-gold:#d9b66f;
+  --cult-gold-hi:#f1d49a;
+  --cult-parchment:#d8ccb8;
+  --cult-muted:#a99c89;
+  --cult-line:rgba(217,182,111,.22);
+}
+
+/* HOME EYE: use the transparent emblem as the living central seal. */
+.launch-v2 .mega-hero-seal{min-height:520px!important;display:grid!important;place-items:center!important;isolation:isolate}
+.launch-v2 .mega-hero-seal::before{content:"";position:absolute;width:min(48vw,560px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(217,182,111,.16),rgba(217,182,111,.04) 38%,transparent 69%);filter:blur(18px);pointer-events:none}
+.launch-v2 .mega-hero-seal img{position:relative;z-index:2;width:min(84%,510px)!important;height:auto!important;object-fit:contain!important;filter:drop-shadow(0 0 22px rgba(241,212,154,.32)) drop-shadow(0 28px 70px rgba(0,0,0,.68))!important}
+
+/* WIDER EDITORIAL COLUMNS: stop large headings being crushed into narrow rails. */
+.launch-v2 .mega-grid,.launch-v2 .mega-grid.reverse{grid-template-columns:minmax(460px,.92fr) minmax(0,1.08fr)!important;gap:clamp(44px,4.6vw,76px)!important}
+.launch-v2 .mega-grid.reverse{grid-template-columns:minmax(0,1.08fr) minmax(460px,.92fr)!important}
+.launch-v2 .mega-copy{max-width:760px!important;padding:clamp(30px,2.8vw,44px)!important}
+.launch-v2 .mega-copy h2{font-size:clamp(2.85rem,4.2vw,4.9rem)!important;line-height:.98!important;letter-spacing:-.038em!important;text-wrap:balance}
+.launch-v2 .product-bridge-head{grid-template-columns:minmax(0,1.25fr) minmax(360px,.75fr)!important;gap:clamp(36px,4vw,64px)!important}
+.launch-v2 .product-bridge-head h2{max-width:980px!important;text-wrap:balance}
+.launch-v2 .suite-explainer-head{grid-template-columns:minmax(0,1.25fr) minmax(360px,.75fr)!important;gap:clamp(36px,4vw,64px)!important;align-items:end}
+.launch-v2 .suite-explainer-head h2{max-width:980px!important;text-wrap:balance}
+.launch-v2 .film-head{max-width:1050px!important}
+.launch-v2 .film-head h2{max-width:900px!important;text-wrap:balance}
+
+/* THE LIGHT BEIGE LEAKS ARE GONE. Everything remains inside the obsidian/bronze ritual palette. */
+.launch-v2 .suite-explainers{position:relative;padding:108px 0!important;color:var(--cult-parchment)!important;background:linear-gradient(180deg,rgba(9,10,11,.96),rgba(5,6,7,.99))!important;overflow:hidden;isolation:isolate}
+.launch-v2 .suite-explainers::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(5,6,7,.92),rgba(5,6,7,.58) 50%,rgba(5,6,7,.82)),url('polish/chapter-explainers.webp') center/cover no-repeat!important;opacity:.78!important;filter:saturate(.88) contrast(1.08) brightness(.72)}
+.launch-v2 .suite-explainers::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 20% 12%,rgba(217,182,111,.12),transparent 30%),linear-gradient(180deg,transparent,rgba(5,6,7,.62))}
+.launch-v2 .suite-explainer-head .mega-kicker{color:var(--cult-gold-hi)!important}
+.launch-v2 .suite-explainer-head h2{color:#f5ead7!important;text-shadow:0 4px 32px rgba(0,0,0,.62)!important}
+.launch-v2 .suite-explainer-head p{color:#cfc3b0!important;line-height:1.72!important}
+.launch-v2 .family-explainer{background:#0b0c0e!important;border:1px solid var(--cult-line)!important;box-shadow:0 24px 74px rgba(0,0,0,.42)!important}
+.launch-v2 .family-explainer figure{background:#050607!important}
+.launch-v2 .family-explainer-copy{background:linear-gradient(145deg,rgba(22,19,15,.98),rgba(8,9,10,.99))!important}
+.launch-v2 .family-explainer-copy small{color:#b89a64!important}
+.launch-v2 .family-explainer-copy h3{color:#f0dfbd!important}
+.launch-v2 .family-explainer-copy p{color:#bfb4a2!important}
+.launch-v2 .family-explainer-copy a{color:#e3bf78!important}
+
+/* Founder/about section was the other major paper-colour rupture. Keep the content, change the atmosphere. */
+.launch-v2 .about-founder{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(180deg,#08090a,#050607)!important;color:#ede2cf!important}
+.launch-v2 .about-founder::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(5,6,7,.96),rgba(5,6,7,.70) 54%,rgba(5,6,7,.52)),url('polish/chapter-about.webp') 70% center/cover no-repeat;opacity:.78;filter:saturate(.82) brightness(.68)}
+.launch-v2 .about-founder::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 72% 20%,rgba(217,182,111,.10),transparent 32%),linear-gradient(180deg,transparent,rgba(5,6,7,.72))}
+.launch-v2 .about-copy{position:relative;z-index:2;background:linear-gradient(145deg,rgba(20,18,15,.90),rgba(7,8,9,.84));border:1px solid rgba(217,182,111,.16);padding:clamp(28px,3vw,44px);backdrop-filter:blur(8px)}
+.launch-v2 .about-copy h2{color:#f2e6d2!important;text-shadow:0 3px 26px rgba(0,0,0,.46)!important}
+.launch-v2 .about-copy p:not(.eyebrow){color:#cbbfab!important}
+.launch-v2 .about-actions a{background:rgba(13,14,15,.78)!important;color:#e4d7c0!important;border-color:rgba(217,182,111,.19)!important}
+
+/* New uploaded hero banners become chapter atmosphere, not pasted tiles. */
+.launch-v2 #governed-consequence{--chapter-hero:url('polish/chapter-governance.webp')}
+.launch-v2 #constitutional-laws{--chapter-hero:url('polish/chapter-constitution.webp')}
+.launch-v2 #product-factory{--chapter-hero:url('polish/chapter-product-factory.webp')}
+.launch-v2 #portfolio-universe{--chapter-hero:url('polish/chapter-portfolio.webp')}
+.launch-v2 #studios{--chapter-hero:url('polish/chapter-studios.webp')}
+.launch-v2 #commercial-metabolism{--chapter-hero:url('polish/chapter-market.webp')}
+.launch-v2 .mega-section[data-atmosphere]::before{opacity:.72!important;filter:saturate(.94) contrast(1.06) brightness(.82)!important}
+.launch-v2 .mega-section.alt[data-atmosphere]::before{opacity:.68!important}
+
+/* Give the product bridge a faint architectural field while preserving its six-card structure. */
+.launch-v2 .product-bridge{position:relative;isolation:isolate;overflow:hidden}
+.launch-v2 .product-bridge::after{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(180deg,rgba(5,6,7,.80),rgba(5,6,7,.98)),url('polish/chapter-product-factory.webp') 50% center/cover no-repeat;opacity:.32;filter:saturate(.8) brightness(.58)}
+
+/* Suite workflow explanations remain dark and cinematic. */
+body:is([data-view="flagship"],[data-view="product"]) .family-workflow-section{position:relative;isolation:isolate;padding:96px 0!important;background:linear-gradient(180deg,#090a0b,#060708)!important;color:#eee3d0!important;overflow:hidden}
+body:is([data-view="flagship"],[data-view="product"]) .family-workflow-section::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 18% 20%,rgba(217,182,111,.08),transparent 30%),linear-gradient(90deg,rgba(5,6,7,.92),rgba(5,6,7,.70),rgba(5,6,7,.92))}
+body:is([data-view="flagship"],[data-view="product"]) .family-workflow-grid{grid-template-columns:minmax(360px,.82fr) minmax(0,1.18fr)!important;gap:clamp(42px,4.5vw,72px)!important}
+body:is([data-view="flagship"],[data-view="product"]) .family-workflow-copy .eyebrow{color:#b89a64!important}
+body:is([data-view="flagship"],[data-view="product"]) .family-workflow-copy h2{color:#f3e5cf!important;line-height:1!important;text-wrap:balance}
+body:is([data-view="flagship"],[data-view="product"]) .family-workflow-copy p{color:#c4b8a6!important}
+body:is([data-view="flagship"],[data-view="product"]) .family-workflow-note{color:#a99b87!important;border-left-color:rgba(217,182,111,.44)!important}
+body:is([data-view="flagship"],[data-view="product"]) .family-workflow-figure{border-color:rgba(217,182,111,.19)!important;box-shadow:0 28px 76px rgba(0,0,0,.45)!important}
+
+/* Updated family atmosphere uses the new uploaded banners. */
+body:is([data-view="flagship"],[data-view="product"])[data-product="homs"]{--family-hero-a:url('polish/suite-homs-a.webp');--family-hero-b:url('polish/suite-homs-b.webp')}
+body:is([data-view="flagship"],[data-view="product"])[data-product="evidex"]{--family-hero-a:url('polish/suite-evidex-a.webp');--family-hero-b:url('polish/suite-evidex-b.webp')}
+body:is([data-view="flagship"],[data-view="product"])[data-product="sophia"]{--family-hero-a:url('polish/suite-sophia-a.webp');--family-hero-b:url('polish/suite-sophia-b.webp')}
+body:is([data-view="flagship"],[data-view="product"])[data-product="vamp"]{--family-hero-a:url('polish/suite-vamp-a.webp');--family-hero-b:url('polish/suite-vamp-b.webp')}
+body:is([data-view="flagship"],[data-view="product"])[data-product="document-studio"]{--family-hero-a:url('polish/suite-document-a.webp');--family-hero-b:url('polish/suite-document-b.webp')}
+body:is([data-view="flagship"],[data-view="product"])[data-product="vesper"]{--family-hero-a:url('polish/suite-vesper-a.webp')}
+body:is([data-view="flagship"],[data-view="product"]) .editorial-hero-grid{grid-template-columns:minmax(0,1.12fr) minmax(360px,.88fr)!important;gap:clamp(42px,4.8vw,76px)!important}
+body:is([data-view="flagship"],[data-view="product"]) .editorial-copy h1{max-width:940px!important;text-wrap:balance}
+body:is([data-view="flagship"],[data-view="product"]) .section-intro{grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr)!important;gap:clamp(38px,4.2vw,66px)!important}
+body:is([data-view="flagship"],[data-view="product"]) .section-intro h2{max-width:920px!important;text-wrap:balance}
+body:is([data-view="flagship"],[data-view="product"]) .evidence-layout{grid-template-columns:minmax(360px,.92fr) minmax(0,1.08fr)!important;gap:clamp(42px,4.8vw,74px)!important}
+
+/* Fine QA: text and cards stay readable over richer art. */
+.launch-v2 .mega-copy,.launch-v2 .cinematic-product-copy{backdrop-filter:blur(10px)}
+.launch-v2 .mega-caption{background:linear-gradient(180deg,rgba(7,8,9,.64),rgba(7,8,9,.96))!important}
+.launch-v2 .suite-proofline{color:#b4a690!important}
+
+@media(max-width:1180px){
+  .launch-v2 .mega-grid,.launch-v2 .mega-grid.reverse{grid-template-columns:minmax(390px,.94fr) minmax(0,1.06fr)!important;gap:38px!important}
+  .launch-v2 .product-bridge-head,.launch-v2 .suite-explainer-head{grid-template-columns:1fr!important;gap:20px!important}
+  body:is([data-view="flagship"],[data-view="product"]) .editorial-hero-grid{grid-template-columns:1fr!important}
+}
+@media(max-width:900px){
+  .launch-v2 .mega-grid,.launch-v2 .mega-grid.reverse{grid-template-columns:1fr!important}
+  .launch-v2 .mega-copy{max-width:none!important}
+  .launch-v2 .mega-hero-seal{min-height:360px!important}
+  .launch-v2 .mega-hero-seal img{width:min(74vw,430px)!important}
+  body:is([data-view="flagship"],[data-view="product"]) .family-workflow-grid,body:is([data-view="flagship"],[data-view="product"]) .section-intro,body:is([data-view="flagship"],[data-view="product"]) .evidence-layout{grid-template-columns:1fr!important}
+}
+@media(max-width:640px){
+  .launch-v2 .mega-copy h2{font-size:clamp(2.25rem,10vw,3.35rem)!important}
+  .launch-v2 .suite-explainers{padding:74px 0!important}
+  .launch-v2 .about-copy{padding:24px 20px}
+  body:is([data-view="flagship"],[data-view="product"]) .family-workflow-section{padding:72px 0!important}
+}
