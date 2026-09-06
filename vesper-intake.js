@@ -22,6 +22,22 @@ function shortText(value,limit=140){
   const text = escapeText(value).replace(/\s+/g," ").trim();
   return text.length > limit ? `${text.slice(0,limit - 1)}…` : text;
 }
+function resolveIncarnationHint(hint,options){
+  const raw = escapeText(hint).trim();
+  if (!raw) return "";
+  const aliases = {
+    dio_workflows: "DIO AI Assurance",
+    evidex: "Evidex EvidenceOps",
+    homs: "HOMS Assess",
+    programmeproof: "ProgrammeProof",
+    site_studio: "Offer Lab",
+    "site-studio": "Offer Lab",
+    sophia: "Sophia Review",
+    vamp: "VAMP Performance"
+  };
+  const wanted = aliases[raw.toLowerCase()] || raw;
+  return options.find(option => option.value === wanted)?.value || "";
+}
 function pulseVesper(duration = 1600){
   if (!vesperPortraitWrap) return;
   vesperPortraitWrap.classList.add("is-speaking");
@@ -116,7 +132,8 @@ async function loadProducts(){
     const option = document.createElement("option"); option.value = incarnation; option.textContent = incarnation; product.appendChild(option);
   }
   const hinted = params.get("incarnation") || params.get("product") || "";
-  if (hinted && [...product.options].some(option => option.value === hinted)) product.value = hinted;
+  const resolved = resolveIncarnationHint(hinted,[...product.options]);
+  if (resolved) product.value = resolved;
 }
 async function startSession(){
   if (sessionReady) return;
