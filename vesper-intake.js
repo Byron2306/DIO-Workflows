@@ -4,15 +4,24 @@ const $ = selector => document.querySelector(selector);
 const messages = $("#messages"), product = $("#product"), nameInput = $("#name"), emailInput = $("#email"), orgInput = $("#organisation");
 const messageInput = $("#message"), filesInput = $("#files"), fileCount = $("#fileCount"), sendButton = $("#send"), notice = $("#notice");
 const routeState = $("#routeState"), routeCandidates = $("#routeCandidates");
+const attentionBox = $("#attentionBox"), attentionCount = $("#attentionCount"), attentionList = $("#attentionList"), attentionWorkbench = $("#attentionWorkbench"), attentionOutlook = $("#attentionOutlook");
 const vesperPortraitWrap = $("#vesperPortraitWrap");
 const params = new URLSearchParams(location.search);
 const cfg = window.DIO_SITE_CONFIG || {};
-const apiOrigin = params.get("api") || cfg.vesperApiOrigin || (location.port === "8765" ? "http://127.0.0.1:8770" : location.origin);
+const productionHost = /(^|\.)dioworkflows\.co\.za$/i.test(location.hostname);
+const localOperatorApi = "http://127.0.0.1:8771";
+const configuredApi = cfg.vesperApiOrigin || "";
+const configuredApiIsIntakeOnly = /dio-edge-gateway/i.test(configuredApi);
+const apiOrigin = params.get("api") || localStorage.getItem("DIO_VESPER_API_ORIGIN") || (productionHost || configuredApiIsIntakeOnly || location.port === "8765" ? localOperatorApi : (configuredApi || location.origin));
 let conversationId = null;
 let sessionReady = false;
 
 function endpoint(path){ return `${apiOrigin}${path}`; }
 function escapeText(value){ return String(value ?? ""); }
+function shortText(value,limit=140){
+  const text = escapeText(value).replace(/\s+/g," ").trim();
+  return text.length > limit ? `${text.slice(0,limit - 1)}…` : text;
+}
 function pulseVesper(duration = 1600){
   if (!vesperPortraitWrap) return;
   vesperPortraitWrap.classList.add("is-speaking");
@@ -58,6 +67,48 @@ async function jsonFetch(path, options={}){
   const body = await response.json();
   if (!response.ok) throw new Error(body.message || body.error || `HTTP ${response.status}`);
   return body;
+}
+function attentionNode(row){
+  const outlook = row.outlook_bot || {};
+  const link = document.createElement("a");
+  link.className = "attention-item";
+  link.href = row.workbench_url || "http://127.0.0.1:8765/dashboard/business.html#approvals";
+  link.target = "_blank";
+  link.rel = "noopener";
+  const title = document.createElement("strong");
+  title.textContent = shortText(row.title || row.entity_id || row.attention_id,90);
+  const meta = document.createElement("span");
+  meta.className = "attention-meta";
+  const route = row.route || row.lane || "route";
+  const job = row.job_id || row.entity_id || "";
+  meta.textContent = `${route}${job ? ` · ${job}` : ""}${outlook.draft_ready ? " · Outlook ready" : ""}`;
+  const detail = document.createElement("span");
+  detail.textContent = shortText(row.detail || row.reason || "Operator decision required",155);
+  link.append(title,meta,detail);
+  return link;
+}
+async function loadAttention(){
+  if (!attentionBox) return;
+  try{
+    const body = await jsonFetch("/api/vesper/attention");
+    const items = (body.items || []).filter(row => ["critical","action"].includes(row.severity)).slice(0,4);
+    attentionBox.hidden = false;
+    attentionWorkbench.href = body.local_workbench_url || attentionWorkbench.href;
+    attentionOutlook.href = body.outlook_bot_url || attentionOutlook.href;
+    if (!items.length){
+      attentionCount.textContent = "clear";
+      attentionList.innerHTML = '<div class="attention-empty">No route or job needs you right now.</div>';
+      return;
+    }
+    attentionCount.textContent = `${body.summary?.route_or_job_attention ?? items.length} waiting`;
+    attentionList.replaceChildren(...items.map(attentionNode));
+  }catch(error){
+    if (productionHost){
+      attentionBox.hidden = false;
+      attentionCount.textContent = "local bridge offline";
+      attentionList.innerHTML = '<div class="attention-empty">Start the local Vesper service to see operator routes and Outlook drafts.</div>';
+    }
+  }
 }
 async function loadProducts(){
   const body = await jsonFetch("/api/vesper/chat/products");
@@ -125,7 +176,7 @@ messageInput.addEventListener("keydown",event=>{ if (event.key === "Enter" && !e
 product.addEventListener("change",()=>{ if (!sessionReady) return; notice.textContent = "Product context changed after the conversation started. Start a fresh page session to bind a different exact product context."; notice.classList.add("error"); });
 
 (async()=>{
-  try{ await loadProducts(); await startSession(); }
+  try{ await Promise.all([loadProducts(), loadAttention()]); await startSession(); }
   catch(error){
     console.warn("Vesper live route unavailable", error);
     notice.textContent = "Live chat may be unavailable right now. Structured intake remains available on the DIO home page.";
