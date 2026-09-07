@@ -21,7 +21,7 @@ jobs:
           const rows=window.DIO_PRODUCT_CATALOG;
           if(rows.length!==68) throw new Error(`expected 68 routes, got ${rows.length}`);
           const app=fs.readFileSync('products/app.js','utf8');
-          for(const token of ['PRODUCTION PROOF','TRUTH BOUNDARY','BUYER JOB','OPEN / DOWNLOAD','COMMERCIAL VALIDATION','68-product portfolio','vesper-intake.html'])
+          for(const token of ['PRODUCTION PROOF','TRUTH BOUNDARY','BUYER JOB','OPEN / DOWNLOAD','MARKET VALIDATION','68-product portfolio','vesper-intake.html'])
             if(!app.includes(token)) throw new Error(`renderer missing: ${token}`);
           const css=fs.readFileSync('products/proof-layer.css','utf8');
           for(const token of ['.live-proof-grid','.proof-artifact-card','@media']) if(!css.includes(token)) throw new Error(`proof CSS missing: ${token}`);
