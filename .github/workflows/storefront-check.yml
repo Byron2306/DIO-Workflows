@@ -28,8 +28,10 @@ jobs:
           for filename in ('index.html','vesper-intake.html','products/index.html'):
               parser=HTMLParser();parser.feed(Path(filename).read_text(encoding='utf-8'));parser.close()
           root=Path('index.html').read_text(encoding='utf-8')
-          for token in ('launchIntakeForm','data-vesper-link','68','53 base canon + 15 canon extensions','159 / 159','governed consequence'):
+          for token in ('launchIntakeForm','data-vesper-link','68','53 base canon + 15 canon extensions','68 / 68','204 / 204','ProductGrade','governed consequence'):
               if token not in root: raise SystemExit(f'launch skeleton missing: {token}')
+          if '<strong>UNPROVED</strong>' in root:
+              raise SystemExit('homepage still presents UNPROVED as a headline product status')
           config=Path('assets/dio-config.js').read_text(encoding='utf-8')
           for url in ('https://www.instagram.com/dio_workflows/','https://www.facebook.com/profile.php?id=61593271043069','https://www.linkedin.com/company/139354569/','https://www.youtube.com/channel/UCc916iuoPLseg05t5J5leaQ'):
               if url not in config: raise SystemExit(f'social route missing: {url}')
@@ -56,7 +58,7 @@ jobs:
             if(p.verifiedVariantCount!==3||p.variantCount!==3) throw new Error(`${p.slug}: base-canon 3/3 proof missing`);
           }
           for(const p of extensions){
-            if(p.status!=='CANON_EXTENSION_PROOF_CANDIDATE') throw new Error(`${p.slug}: canon extension status drifted`);
+            if(p.status!=='CANON_EXTENSION_PROOF_CANDIDATE') throw new Error(`${p.slug}: source catalog extension status drifted before renderer promotion`);
           }
           console.log('COMMERCIAL_STORE_FRONT_READY products=68 base=53 extensions=15');
           NODE
