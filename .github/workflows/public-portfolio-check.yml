@@ -36,9 +36,9 @@ jobs:
           python3 - <<'PY'
           from pathlib import Path
           html=Path('products/index.html').read_text(encoding='utf-8')
-          for token in ('68 canonical product incarnations','53 base canon + 15 canon extensions','159 / 159 base-canon journeys verified','UNPROVED','id="search"','id="filters"','id="grid"'):
+          for token in ('68 canonical product incarnations','53 base canon + 15 canon extensions','68 / 68 ProductGrade verified','204 / 204 controlled journeys verified','Market validation remains separate','id="search"','id="filters"','id="grid"'):
               if token not in html: raise SystemExit(f'portfolio missing: {token}')
-          for stale in ('38 controlled offer routes','4 controlled pilots','only four'):
+          for stale in ('receipt-bound product proof candidates','159 / 159 base-canon journeys verified','<b>UNPROVED</b>','38 controlled offer routes','4 controlled pilots','only four'):
               if stale.lower() in html.lower(): raise SystemExit(f'stale portfolio claim: {stale}')
-          print('DIO_PUBLIC_PORTFOLIO_CUSTOMER_FACING_VERIFIED')
+          print('DIO_PUBLIC_PORTFOLIO_68X3_PRODUCTGRADE_VERIFIED')
           PY

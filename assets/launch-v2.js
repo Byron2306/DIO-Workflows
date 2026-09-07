@@ -53,6 +53,34 @@
   };
   installResponsiveSystemMap();
 
+  const installProductGradeTruth = () => {
+    const stats = $('.mega-stats');
+    if (stats) {
+      stats.innerHTML = `<div><strong>68 / 68</strong><span>canon-level products ProductGrade verified</span></div><div><strong>204 / 204</strong><span>controlled journeys verified · 159 base + 45 extensions</span></div><div><strong>3×</strong><span>normal · messy · adversarial proof variants</span></div><div><strong>AUTHORITY HELD</strong><span>market validation remains separate from engineering proof</span></div>`;
+    }
+
+    const universeCopy = $('#portfolio-universe .mega-copy');
+    if (universeCopy) {
+      const paragraphs = $$('p:not(.mega-kicker):not(.doctrine)', universeCopy);
+      if (paragraphs[0]) paragraphs[0].textContent = 'The current portfolio holds 53 base-canon routes plus 15 canon extensions. All 68 have cleared ProductGrade across 204/204 controlled journeys: 159 historical base-canon journeys plus 45 canon-extension journeys. ATLAS goes further by reasoning over domain, job morphology and verified capability to generate places the organism might become useful next.';
+    }
+
+    const proofIntro = $('#proof .launch-section-head > p');
+    if (proofIntro) proofIntro.textContent = 'The historical 53-product gauntlet records 159 controlled base-canon journeys. The 15 canon extensions subsequently cleared another 45 ProductGrade journeys, bringing current portfolio proof to 68/68 products and 204/204 controlled journeys. Those receipts prove controlled execution. They do not counterfeit willingness to pay, customer value or repeatability.';
+
+    const proofCards = $$('#proof .proof-story');
+    if (proofCards[0]) {
+      const title = $('h3', proofCards[0]);
+      const body = $('p', proofCards[0]);
+      if (title) title.textContent = '204 / 204 verified';
+      if (body) body.textContent = 'All 68 canon-level routes cleared their controlled ProductGrade journeys: 159 historical base-canon journeys plus 45 extension journeys.';
+    }
+
+    const proofBoundary = $('#proof .proof-callout span');
+    if (proofBoundary) proofBoundary.textContent = 'Engineering evidence is labelled as engineering evidence. Human authority remains human. ProductGrade is verified across all 68 canon-level routes; market validation remains separate and must still be established in the world.';
+  };
+  installProductGradeTruth();
+
   const social = cfg.social || {};
   $$('[data-social]').forEach(link => {
     const url = social[link.dataset.social];
