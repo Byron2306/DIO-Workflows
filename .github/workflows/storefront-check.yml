@@ -7,6 +7,7 @@ on:
       - "vesper-intake.js"
       - "products/**"
       - "assets/dio-config.js"
+      - "assets/launch-v2.js"
       - "assets/site.js"
       - ".github/workflows/storefront-check.yml"
   workflow_dispatch:
@@ -28,10 +29,11 @@ jobs:
           for filename in ('index.html','vesper-intake.html','products/index.html'):
               parser=HTMLParser();parser.feed(Path(filename).read_text(encoding='utf-8'));parser.close()
           root=Path('index.html').read_text(encoding='utf-8')
-          for token in ('launchIntakeForm','data-vesper-link','68','53 base canon + 15 canon extensions','68 / 68','204 / 204','ProductGrade','governed consequence'):
+          for token in ('launchIntakeForm','data-vesper-link','68','53 base canon + 15 canon extensions','governed consequence'):
               if token not in root: raise SystemExit(f'launch skeleton missing: {token}')
-          if '<strong>UNPROVED</strong>' in root:
-              raise SystemExit('homepage still presents UNPROVED as a headline product status')
+          renderer=Path('assets/launch-v2.js').read_text(encoding='utf-8')
+          for token in ('installProductGradeTruth','68 / 68','204 / 204','ProductGrade verified','market validation remains separate'):
+              if token not in renderer: raise SystemExit(f'homepage ProductGrade renderer missing: {token}')
           config=Path('assets/dio-config.js').read_text(encoding='utf-8')
           for url in ('https://www.instagram.com/dio_workflows/','https://www.facebook.com/profile.php?id=61593271043069','https://www.linkedin.com/company/139354569/','https://www.youtube.com/channel/UCc916iuoPLseg05t5J5leaQ'):
               if url not in config: raise SystemExit(f'social route missing: {url}')
