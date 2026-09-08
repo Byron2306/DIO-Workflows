@@ -1,0 +1,21 @@
+{
+  "authority_created": false,
+  "composition_execution": "PASS",
+  "external_effects": false,
+  "external_publication": "REFUSE",
+  "external_send": "REFUSE",
+  "human_gate": "NEEDS_YOU",
+  "media_spend": "REFUSE",
+  "native_execution_fingerprint": "sha256:494f9dafc80d6c9b2677792d299f40a799327a23c2c9f88d27bd04434661f8e1",
+  "native_multi_organ_execution": "PASS",
+  "native_organ_count": 4,
+  "new_engine_created": false,
+  "organ_execution_truth": "NATIVE_MULTI_ORGAN_EXECUTION_PROVED_WITH_AUXILIARY_GAPS",
+  "partial_organ_count": 4,
+  "payment": "REFUSE",
+  "proof_fingerprint": "sha256:8fc5cd87a4ba2f9d716cee57f1fb11ab10b2a828562300fca54134b3c7e7882f",
+  "schema": "dio.studio_native_execution_receipt.v1",
+  "source_bound_only_count": 0,
+  "studio_id": "finance_readiness_studio",
+  "studio_name": "DIO Finance Readiness Studio"
+}

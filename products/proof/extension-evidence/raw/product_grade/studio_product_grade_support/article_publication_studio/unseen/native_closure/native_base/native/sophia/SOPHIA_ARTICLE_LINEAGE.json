@@ -1,0 +1,79 @@
+{
+  "audit_fingerprint": "sha256:4cce9bc8a0a07b32fc79de77d93f70e5d83fd2543c13ea1e283b703d2f627115",
+  "authority_created": false,
+  "capabilities_executed": [
+    "source.reference.audit",
+    "claim.lineage.audit"
+  ],
+  "claim_lineage_audit": "PASS",
+  "claims": [
+    {
+      "claim_id": "CL-01",
+      "epistemic_state": "SUPPORTED",
+      "evidence_ids": [
+        "SRC-01"
+      ],
+      "fingerprint": "sha256:0983fc8dc3dc4a6b1172f590b42d095c02954e21a0930711a0f0ce3ac1c6b938",
+      "source_lineage_valid": true,
+      "text": "Structured audit trails make later editorial correction easier to reconstruct."
+    },
+    {
+      "claim_id": "CL-02",
+      "epistemic_state": "SUPPORTED",
+      "evidence_ids": [
+        "SRC-01",
+        "SRC-02"
+      ],
+      "fingerprint": "sha256:ee3b1a97931375accd6d03f77415b15a5cec10147d6a25f8154a090ec884837c",
+      "source_lineage_valid": true,
+      "text": "Rapid drafting increases the importance of keeping evidence relationships inspectable during revision."
+    },
+    {
+      "claim_id": "CL-03",
+      "epistemic_state": "SUPPORTED",
+      "evidence_ids": [
+        "SRC-02"
+      ],
+      "fingerprint": "sha256:72c19ed81a9c841c7af77577f5a61858cd1594682302d88b98d7c77a1cc58030",
+      "source_lineage_valid": true,
+      "text": "Release authority remains distinct from production quality."
+    },
+    {
+      "claim_id": "CL-04",
+      "epistemic_state": "REFUSE",
+      "evidence_ids": [],
+      "fingerprint": "sha256:c67dad5d403959bbc08da079ed9461813ae164b6b6f1444f1927493fb13f1ce2",
+      "source_lineage_valid": true,
+      "text": "Audit trails guarantee factual accuracy."
+    }
+  ],
+  "fabricated_quotation_authority": "REFUSE",
+  "fabricated_source_authority": "REFUSE",
+  "publication_authority": "REFUSE",
+  "references": [
+    {
+      "citation": "Mokoena, T. (2024). Evidence lineage in professional decision systems. Journal of Applied Governance, 12(2), 44-61.",
+      "fingerprint": "sha256:386150fdc1fc25bddb40d3661e19a951283cc165bb43e905691d125874189211",
+      "reference_key": "mokoena:2024",
+      "source_id": "SRC-01",
+      "supports": [
+        "CL-01",
+        "CL-02"
+      ]
+    },
+    {
+      "citation": "Naidoo, P. (2025). Human authority in AI-assisted professional workflows. Review of Digital Practice, 8(1), 15-29.",
+      "fingerprint": "sha256:67a46a2bb3d508c2860de9ff0fc2370b8d99895d879d5ec97dbcfdc3877d3bfa",
+      "reference_key": "naidoo:2025",
+      "source_id": "SRC-02",
+      "supports": [
+        "CL-02",
+        "CL-03"
+      ]
+    }
+  ],
+  "schema": "dio.sophia_article_lineage_audit.v1",
+  "source_engine": "sophia",
+  "source_reference_audit": "PASS",
+  "studio_id": "article_publication_studio"
+}

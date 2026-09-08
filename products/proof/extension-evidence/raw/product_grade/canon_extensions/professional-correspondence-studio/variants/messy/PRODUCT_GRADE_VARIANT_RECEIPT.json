@@ -1,0 +1,61 @@
+{
+  "adversarial_boundary_held": null,
+  "adversarial_expected_boundary": null,
+  "adversarial_pressure": null,
+  "anchor_present": true,
+  "authority_created": false,
+  "beast_artifact_checks": {
+    "checks": [
+      {
+        "evidence": {
+          "languages": {
+            "html": 1
+          }
+        },
+        "name": "language_inventory",
+        "status": "passed",
+        "summary": "Detected 1 language/artifact family(ies)"
+      },
+      {
+        "evidence": {
+          "errors": [],
+          "files_checked": 1
+        },
+        "name": "html_syntax",
+        "status": "passed",
+        "summary": "Parsed 1 HTML file(s)"
+      },
+      {
+        "evidence": {},
+        "name": "javascript_syntax",
+        "status": "skipped",
+        "summary": "No JavaScript files found"
+      }
+    ],
+    "failed_count": 0,
+    "mechanical_pass": true,
+    "quality_cascade_source_sha256": "f5f4e897510234905e1c40f5fd55a448c991308657e74f3dfadd50303d4e4737",
+    "schema": "dio.beast.product_grade_artifact_checks.v1",
+    "source": "EdgeK-BEAST/app/kernel/data_processing/quality_cascade.py",
+    "workspace": "/home/runner/work/DIO-Full-Audit/DIO-Full-Audit/state/product_grade/canon_extensions/professional-correspondence-studio/variants/messy/customer_delivery"
+  },
+  "beast_mechanical_pass": true,
+  "critical_blockers": [],
+  "customer_artifact": "state/product_grade/canon_extensions/professional-correspondence-studio/variants/messy/customer_delivery/index.html",
+  "customer_artifact_sha256": "3ee1dc606092d533b9c125e817f7e5a882f1c7be439a471670b11596ef607e47",
+  "expected_anchor": "Correspondence studio missing attachment case",
+  "external_effects": false,
+  "forbidden_claim_hits": [],
+  "human_boundary_present": true,
+  "lingua_object_id": "DIO-PG-PROFESSIONAL_CORRESPONDENCE_STUDIO-MESSY",
+  "lingua_registration_fingerprint": "sha256:f59121b43adaf17801ac11ccf6d84bd91956644c41cbfcf7b2bba209e93eaad8",
+  "lingua_registration_schema": "dio.lingua.product_registration_receipt.v1",
+  "lingua_semantic_custody": true,
+  "lingua_source_document_hash": "sha256:fd7067b442a30ffe12adc0df4f2f3c213736a903763e187ad6f0a2b4db7054be",
+  "passed": true,
+  "receipt_fingerprint": "sha256:cae4f98b36f43318ead7c4957a83fdbed5b8d0c1fa4a72289da4a882f2b1ce46",
+  "schema": "dio.product_grade.canon_extension_native_variant.v1",
+  "semantic_unit_count": 11,
+  "slug": "professional-correspondence-studio",
+  "variant": "messy"
+}

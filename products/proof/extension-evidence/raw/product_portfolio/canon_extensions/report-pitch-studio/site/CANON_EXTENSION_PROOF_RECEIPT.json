@@ -1,0 +1,19 @@
+{
+  "authority_created": false,
+  "canon_id": "CANON-EXT-REPORT_PITCH_STUDIO",
+  "claim_boundary": "For canon materialization receipts, this seal requires the source receipt to bind the exact current artifact SHA-256. Legacy historical generation receipts remain readable for compatibility but are not used by the current canon-extension production workflow. This seal does not create ProductGrade, buyer demand, payment, legal approval, publication authority or commercial validation.",
+  "commercial_validation": "UNPROVED",
+  "current_artifact_sha256": "3a1a5823c1581e41dfd90edb093aa510a7edc503a596262c03afb114aa69b37a",
+  "external_effects": false,
+  "name": "Report & Pitch Studio",
+  "primary_artifact": "state/product_portfolio/canon_extensions/report-pitch-studio/site/index.html",
+  "receipt_fingerprint": "sha256:2e4987f0bc89c9cab27fdb8475cdc3834d381622f8b5a902a15a65d62a1fa629",
+  "schema": "dio.canon_extension.proof_seal.v1",
+  "slug": "report-pitch-studio",
+  "source_generation_receipt": "state/product_portfolio/canon_extensions/report-pitch-studio/site/CANON_EXTENSION_MATERIALIZATION_RECEIPT.json",
+  "source_generation_receipt_schema": "dio.canon_extension.materialization_receipt.v1",
+  "source_generation_receipt_sha256": "f64de16adf2b190be4f99127ae39b671e1376910ace253f577555f0a78de11cd",
+  "source_receipt_artifact_bound": true,
+  "status": "PASS",
+  "strict_materialization_binding": true
+}

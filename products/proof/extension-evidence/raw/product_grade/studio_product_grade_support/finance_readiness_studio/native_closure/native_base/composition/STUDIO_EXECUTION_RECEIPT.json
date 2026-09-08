@@ -1,0 +1,21 @@
+{
+  "artifact_count": 9,
+  "authority_boundary": "PASS",
+  "authority_created": false,
+  "capability_binding": "PASS",
+  "controlled_artifact_generation": "PASS",
+  "external_effects": false,
+  "external_publication": "REFUSE",
+  "external_send": "REFUSE",
+  "human_gate": "NEEDS_YOU",
+  "job_resolution": "PASS",
+  "media_spend": "REFUSE",
+  "organ_execution_truth": "SOURCE_BOUND_ONLY_EXCEPT_VESPER_ROUTE_EXECUTED",
+  "payment": "REFUSE",
+  "proof_fingerprint": "sha256:d671b8fe68791444c5ca1d0934db3afdf69c5f8c28eb830897e782a25a20b6c6",
+  "schema": "dio.professional_intelligence_studio_execution_receipt.v1",
+  "studio_fingerprint": "sha256:0dc6152c7a4beb39a2aedb03fa4d27be8ac53e333e5b88b0a314678312f0b139",
+  "studio_id": "finance_readiness_studio",
+  "studio_name": "DIO Finance Readiness Studio",
+  "vesper_routing": "PASS"
+}

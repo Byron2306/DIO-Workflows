@@ -1,0 +1,16 @@
+{
+  "artifact_type": "correspondence_studio_controlled_draft",
+  "authority_created": false,
+  "channel": "studio_harvest",
+  "external_action_executed": false,
+  "object_id": "PROFESSIONAL_CORRESPONDENCE_STUDIO-COMM-32C1FB758B80C33A64B9",
+  "owner": "professional_correspondence_studio",
+  "publication_authorized": false,
+  "schema": "dio.lingua.communication_receipt.v1",
+  "semantic_lineage_created": true,
+  "send_authorized": false,
+  "source_document_hash": "sha256:934d981d4326fc4ed83c3439199ebbecbf5aca6b8cafc6f2a01527a7766ee811",
+  "source_language": "English",
+  "target_language": "English",
+  "translation_state": "source_language"
+}

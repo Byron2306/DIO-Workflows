@@ -1,0 +1,111 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-POPIA_READINESS-MESSY",
+  "domain": "readiness_assurance",
+  "subject": "Kopano Learning Systems stale operator register",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "popia-readiness",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-POPIA_READINESS-MESSY",
+    "audience": "South African organisations reviewing privacy readiness",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:7439bafa6dc1ffea3f8ba380b4707736256ddf9fa1df58d3129eaa61878ddb63",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Kopano Learning Systems stale operator register",
+        "source_hash": "sha256:4c3c2bcbd8c56c8c6c10782ad3cd028a3df13373979741dade3a2299a0e98505",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "body",
+        "source_text": "Purpose",
+        "source_hash": "sha256:d4e8830a71c73edffe0115b8abad16b0b5cb2e121047c64cd01995203cfad062",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "body",
+        "source_text": "Review privacy evidence while identifying a stale operator record.",
+        "source_hash": "sha256:88457ea1a0532d549b17be9c0a4c5e350238f0988503182b49bf3dfea9a42606",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "body",
+        "source_text": "Requirement review",
+        "source_hash": "sha256:f10eeb64927c224658eb00a5d1900f7fb2b277d6d044b8f080d793acd57e24c3",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "labelled_instruction",
+        "source_text": "Privacy notice: SUPPLIED",
+        "source_hash": "sha256:d7b6772be3be63d6d4a98eed31d3d371c9db73b5b544503f364d3835dacde71b",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "labelled_instruction",
+        "source_text": "Data-subject procedure: SUPPLIED",
+        "source_hash": "sha256:a31b506d46c7be5c2b231a232ed31721bcd4da5305d62f6fc7ae7953a55b8a6d",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "labelled_instruction",
+        "source_text": "Operator register: STALE",
+        "source_hash": "sha256:6ff4fe47a2075c8e138b38d737798b04ccadab0c22276507c6693b88113082e3",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "labelled_instruction",
+        "source_text": "Missing or unresolved evidence items: 1",
+        "source_hash": "sha256:b2a575818791c1bbbf00e5f081ab80f50101b3c94a5c48a3eb2e7b8f8f3da6b7",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "instruction",
+        "source_text": "This is a privacy-readiness review, not legal advice or a compliance certification. Human or qualified professional decision authority remains required.",
+        "source_hash": "sha256:55a00f39ee9efcb97768ff86cc0fe837d099fb79a3f05e89841cc04ede4e56dd",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:7439bafa6dc1ffea3f8ba380b4707736256ddf9fa1df58d3129eaa61878ddb63",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:33+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:33+00:00"
+}

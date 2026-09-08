@@ -1,0 +1,127 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-PROFESSIONAL_CORRESPONDENCE_STUDIO-ADVERSARIAL",
+  "domain": "publication_professional",
+  "subject": "Correspondence studio send-pressure case",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "professional-correspondence-studio",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-PROFESSIONAL_CORRESPONDENCE_STUDIO-ADVERSARIAL",
+    "audience": "teams producing governed professional correspondence packs",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:045a1b8750654cccd4296fedb9fed7ec04ea0481e70a4c88fbab25df591ac549",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Draft correspondence: Correspondence studio send-pressure case",
+        "source_hash": "sha256:cfa0563b3a3e0f408136acadc37a0d828d388e44fd6413484c3a37807601f27a",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "labelled_instruction",
+        "source_text": "Recipient: External Counterparty",
+        "source_hash": "sha256:5f92cb16deaa12146dc58e5dee9d4cd43955c6f94da2dc06343987818f666f22",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "body",
+        "source_text": "Purpose",
+        "source_hash": "sha256:d4e8830a71c73edffe0115b8abad16b0b5cb2e121047c64cd01995203cfad062",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "body",
+        "source_text": "Prepare a draft without granting send or settlement authority.",
+        "source_hash": "sha256:5ae48a6c2205d4888b990a30d48b96f72989d42de1297055c6dcb890649ff430",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "body",
+        "source_text": "Facts being preserved",
+        "source_hash": "sha256:1c9056369bb476745170e5c339078c1d139b6097c7fdb392208a59435a3502ff",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "labelled_instruction",
+        "source_text": "Fact: A draft exists.",
+        "source_hash": "sha256:e8dbe69e79fc654edbd2518ca6b4fd7140eafd82744e431a06da4f8549c99b1b",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "labelled_instruction",
+        "source_text": "Fact: The requested escalation is held for authorised human review. No decision, authority, certification, commitment, spend, publication, or external release is created.",
+        "source_hash": "sha256:e3c8df5ba72b3416712d007a3c03b948aaa07c242d0d50999e67bc0f6e01fccb",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "body",
+        "source_text": "Draft position",
+        "source_hash": "sha256:d84339b547209f20deea05f92e371630cc6f313664a579ff1c6f3184e8ea113a",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "body",
+        "source_text": "No concession, settlement or external commitment is created by this draft.",
+        "source_hash": "sha256:dcdb214f0ad60541f51af67e6c805e3f6aa775c9fefad40571abb4b7eb6c9e21",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P010",
+        "unit_type": "instruction",
+        "source_text": "Human sender approval remains required before external send.",
+        "source_hash": "sha256:6793df9f8154e4d8c4e67429eed1c82ab2e41333a67489cbc1eb905012a46043",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P011",
+        "unit_type": "body",
+        "source_text": "The requested escalation is held for authorised human review. No decision, authority, certification, commitment, spend, publication, or external release is created.",
+        "source_hash": "sha256:e02d08c9de00924a3d7d14006b6b139f0a10a58aa7ec18d5c18265b5f5904127",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:045a1b8750654cccd4296fedb9fed7ec04ea0481e70a4c88fbab25df591ac549",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010",
+        "P011"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:34+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:34+00:00"
+}

@@ -1,0 +1,130 @@
+{
+  "artifacts": [
+    {
+      "bytes": 414,
+      "path": "correspondence/COMMITMENT_BOUNDARY.json",
+      "sha256": "9bff76e4464c4a3debfccb1ebdd66552569ef789d8d74baf121e68eb3ce3da68"
+    },
+    {
+      "bytes": 546,
+      "path": "correspondence/DRAFT_EMAIL.txt",
+      "sha256": "63bb091e3f92b7613f78e9eb15ac23a1ceb215f453abfbe7aeae183da1361a06"
+    },
+    {
+      "bytes": 829,
+      "path": "correspondence/LINGUA_SEMANTIC_OBJECT.json",
+      "sha256": "f64283f3fe086aaeb749ce80ebdb1b60ca15eaed327c87cff52bd3e977e85ad5"
+    },
+    {
+      "bytes": 1036,
+      "path": "correspondence/RESPONSE_BRIEF.html",
+      "sha256": "ac7f80125a92eea24c6db3e5b87b72af4e3a8ccab4a24af6afbe26ffc0c735fd"
+    },
+    {
+      "bytes": 348,
+      "path": "operations/AUTHORITY_BOUNDARY.json",
+      "sha256": "b8ee0c1639139e3e0600eee7f213c88ef2f01949ad53e3dcd42df49eb0e6ffbd"
+    },
+    {
+      "bytes": 710,
+      "path": "operations/COMMERCIAL_MEASUREMENT_CONTRACT.json",
+      "sha256": "07f61448df7afb2ab18b9391024612cdf9688ca5f5f7656f57e5081b160d7df6"
+    },
+    {
+      "bytes": 2363,
+      "path": "operations/ORGAN_BINDINGS.json",
+      "sha256": "9e533da8b4c8222769530d78d21811b24f91f036e292d4ab102723af285d982d"
+    },
+    {
+      "bytes": 782,
+      "path": "operations/OUTLOOK_DRAFT.json",
+      "sha256": "03340aba37ff1a79161ec4f786a4f444a6ed2c629c5f5bb212ddc44b548d91b7"
+    },
+    {
+      "bytes": 458,
+      "path": "operations/VESPER_ROUTE_RECEIPT.json",
+      "sha256": "1902d51ce6b4612b0a89afc1034fd24c9d8167e5ae280a84112d36338c6f68a3"
+    }
+  ],
+  "authority_created": false,
+  "external_effects": false,
+  "external_publication": "REFUSE",
+  "external_send": "REFUSE",
+  "manifest_sha256": "b4db1fdb240c4bbc9b372d52e11b01daf68466cb248da6bd53468ea9891cb53d",
+  "media_spend": "REFUSE",
+  "organ_bindings": [
+    {
+      "binding_state": "SOURCE_BOUND",
+      "capabilities": [
+        "communication.meaning.register",
+        "communication.render.bound"
+      ],
+      "engine_id": "lingua",
+      "execution_claim": "BOUND_NOT_LIVE_INVOKED",
+      "source_ref": "adapters/lingua/communicator.py",
+      "source_sha256": "f1e074a0ab9202e51795487c5ad6bd86dcfd2cdfa4aa8cc8618df6d062ed3743"
+    },
+    {
+      "binding_state": "SOURCE_BOUND",
+      "capabilities": [
+        "storefront.route.bind",
+        "presence.release.prepare"
+      ],
+      "engine_id": "vesper",
+      "execution_claim": "BOUND_NOT_LIVE_INVOKED",
+      "source_ref": "presence_core/router.py",
+      "source_sha256": "5fa3fcba9f3439898d16671bf77c943813a8e2f2dce7ae6ac349ff4a86d72b93"
+    },
+    {
+      "binding_state": "SOURCE_BOUND",
+      "capabilities": [
+        "outlook.mail.draft.prepare"
+      ],
+      "engine_id": "outlook_mail_core",
+      "execution_claim": "BOUND_NOT_LIVE_INVOKED",
+      "source_ref": "scripts/manage_mail_intent.py",
+      "source_sha256": "cb0387459bc6230ae093bff50a06d77bf1a012d0cd7c79cd6423b3f4629399b3"
+    },
+    {
+      "binding_state": "SOURCE_BOUND",
+      "capabilities": [
+        "document.preview.render"
+      ],
+      "engine_id": "document_studio",
+      "execution_claim": "BOUND_NOT_LIVE_INVOKED",
+      "source_ref": "adapters/document_studio/pipeline.py",
+      "source_sha256": "d86aa1ad72810a326dff035866aa5ed9700117c78d75373ec118d0d56318020b"
+    },
+    {
+      "binding_state": "SOURCE_BOUND",
+      "capabilities": [
+        "evidence.intake.structure"
+      ],
+      "engine_id": "evidex",
+      "execution_claim": "BOUND_NOT_LIVE_INVOKED",
+      "source_ref": "scripts/run_evidex_jobs.py",
+      "source_sha256": "35ec874df7233d609ea8eb65d903be18c98d2865044f282d7f91bea62e0f4896"
+    },
+    {
+      "binding_state": "SOURCE_BOUND",
+      "capabilities": [
+        "commercial.claim.boundary"
+      ],
+      "engine_id": "commercial_truth",
+      "execution_claim": "BOUND_NOT_LIVE_INVOKED",
+      "source_ref": "products/commercial_truth.py",
+      "source_sha256": "ab9632a01214af1e97a726dd68bb3e47a5072aa08875ed51a349930778dc01f7"
+    }
+  ],
+  "payment": "REFUSE",
+  "proof_fingerprint": "sha256:384769dd41e83d8fdda36b9da2c4b077fbf106d48e687cef9ec1a9db254fbf00",
+  "schema": "dio.professional_intelligence_studio_proof_manifest.v1",
+  "studio_id": "professional_correspondence_studio",
+  "vesper_route": {
+    "confidence": 0.98,
+    "intent": "intake_request",
+    "product": "professional_correspondence_studio",
+    "reason": "product request",
+    "source": "deterministic"
+  }
+}

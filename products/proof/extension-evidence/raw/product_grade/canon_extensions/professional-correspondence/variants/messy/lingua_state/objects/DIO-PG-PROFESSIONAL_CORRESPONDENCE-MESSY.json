@@ -1,0 +1,127 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-PROFESSIONAL_CORRESPONDENCE-MESSY",
+  "domain": "publication_professional",
+  "subject": "CV-29 correspondence with conflicting delivery dates",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "professional-correspondence",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-PROFESSIONAL_CORRESPONDENCE-MESSY",
+    "audience": "business operators drafting controlled customer replies",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:20c3d3a06807c848f31ef2ed690a6f8e8996ee6f9470d190686341f1c4967659",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Draft correspondence: CV-29 correspondence with conflicting delivery dates",
+        "source_hash": "sha256:be644eac6197d09717fb805d786e966c3f2a1a049293cbe1b84bc9144057febd",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "labelled_instruction",
+        "source_text": "Recipient: Kopano Logistics",
+        "source_hash": "sha256:0b6132d001c88c12ee7bb351a0f4d1586b049034c752f0fb563863d7a8e0fa68",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "body",
+        "source_text": "Purpose",
+        "source_hash": "sha256:d4e8830a71c73edffe0115b8abad16b0b5cb2e121047c64cd01995203cfad062",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "body",
+        "source_text": "Draft a reply that exposes conflicting delivery records instead of choosing one silently.",
+        "source_hash": "sha256:1b0f93ec6ed163e89c47fc5e0ecd49780523172bbe5537f519ab60461dc817c0",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "body",
+        "source_text": "Facts being preserved",
+        "source_hash": "sha256:1c9056369bb476745170e5c339078c1d139b6097c7fdb392208a59435a3502ff",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "labelled_instruction",
+        "source_text": "Fact: Variation CV-29 is under review.",
+        "source_hash": "sha256:f262786d1a531ffb766edd43ead0ae7bcddb2099e62ce8cf9170107826262bf7",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "labelled_instruction",
+        "source_text": "Fact: Two delivery records disagree on the completion date.",
+        "source_hash": "sha256:a968ea64a9a9f3363c848041487846c1e9b1d7fb54641eac0766bd7489795fbe",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "labelled_instruction",
+        "source_text": "Fact: No concession is authorised.",
+        "source_hash": "sha256:442e8da7218ebe3c0f70dfc6610c8accfbe292feac3572ca50d9e4cb50a3ebcc",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "body",
+        "source_text": "Draft position",
+        "source_hash": "sha256:d84339b547209f20deea05f92e371630cc6f313664a579ff1c6f3184e8ea113a",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P010",
+        "unit_type": "body",
+        "source_text": "No concession, settlement or external commitment is created by this draft.",
+        "source_hash": "sha256:dcdb214f0ad60541f51af67e6c805e3f6aa775c9fefad40571abb4b7eb6c9e21",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P011",
+        "unit_type": "instruction",
+        "source_text": "Human sender approval remains required before external send.",
+        "source_hash": "sha256:6793df9f8154e4d8c4e67429eed1c82ab2e41333a67489cbc1eb905012a46043",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:20c3d3a06807c848f31ef2ed690a6f8e8996ee6f9470d190686341f1c4967659",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010",
+        "P011"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:33+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:33+00:00"
+}

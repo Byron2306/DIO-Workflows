@@ -1,0 +1,58 @@
+{
+  "artifacts": [
+    {
+      "bytes": 664,
+      "path": "native/commercial_truth/COMMERCIAL_TRUTH_EVALUATION.json",
+      "sha256": "f16d806d41e08a83fb86960c940d0584b124dcebfd83c8bc256b4fc2e866c729"
+    },
+    {
+      "bytes": 2561,
+      "path": "native/document_studio/CONTROLLED_PREVIEW.html",
+      "sha256": "da46268536d8e026d7dac21b1cf099c61665d0f5a061478e7a7c1c325701875f"
+    },
+    {
+      "bytes": 974,
+      "path": "native/document_studio/FORMAT_CORE_NORMALIZED_RECEIPT.json",
+      "sha256": "0f74c27db3345ff6fce0e132637970ec5a3f6a1d30057ef4424f40c8ba205083"
+    },
+    {
+      "bytes": 2102,
+      "path": "native/evidex/EVIDEX_NATIVE_ADAPTER_RECEIPT.json",
+      "sha256": "6dbf1f759e1f3eaa4ba376efd400c2b74965b8a0f864afc2d1c725ce0e9301d0"
+    },
+    {
+      "bytes": 591,
+      "path": "native/lingua/LINGUA_NATIVE_RECEIPT.json",
+      "sha256": "f1464c7976e6757fd527f635a061c8158e6f258d77bff4aeec652042d613b742"
+    },
+    {
+      "bytes": 1093,
+      "path": "native/market_command/MARKET_COMMAND_NATIVE_RECEIPT.json",
+      "sha256": "794581af03d2e15466337a7572226597b94bab1014a1d00bd02c161bbda82dd6"
+    },
+    {
+      "bytes": 542,
+      "path": "native/nichefoundry/NICHEFOUNDRY_NATIVE_COPY.json",
+      "sha256": "a641f310f9367de9c3484c139782c0a0e403b8e18e4d3ac696572c57958ef3e5"
+    },
+    {
+      "bytes": 3659,
+      "path": "NATIVE_ORGAN_EXECUTION_LEDGER.json",
+      "sha256": "95732e06491fdee090d6fda8fe4454eb2b001ac771653760f89b6f86e7e06471"
+    }
+  ],
+  "authority_created": false,
+  "composition_proof_fingerprint": "sha256:58e7206913133296b4a9d6c1f8c0e6c5a0be4f313a7bc3771b15273e322612e7",
+  "external_effects": false,
+  "external_publication": "REFUSE",
+  "external_send": "REFUSE",
+  "media_spend": "REFUSE",
+  "native_organ_count": 2,
+  "organ_execution_truth": "NATIVE_MULTI_ORGAN_EXECUTION_PROVED_WITH_AUXILIARY_GAPS",
+  "partial_organ_count": 5,
+  "payment": "REFUSE",
+  "proof_fingerprint": "sha256:da15aa94ce4b38bdf567e8871186010720d6561a2f408a2047c64d86e9c073f5",
+  "schema": "dio.studio_native_execution_proof_manifest.v1",
+  "source_bound_only_count": 0,
+  "studio_id": "site_studio"
+}

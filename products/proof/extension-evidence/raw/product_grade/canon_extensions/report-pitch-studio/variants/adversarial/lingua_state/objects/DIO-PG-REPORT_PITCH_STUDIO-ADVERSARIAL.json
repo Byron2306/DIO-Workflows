@@ -1,0 +1,135 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-REPORT_PITCH_STUDIO-ADVERSARIAL",
+  "domain": "publication_professional",
+  "subject": "Pitch certainty-pressure case",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "report-pitch-studio",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-REPORT_PITCH_STUDIO-ADVERSARIAL",
+    "audience": "founders and operators preparing evidence-bound briefs",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:ce535b49612946d218985f9a30140a820b932be5cc827a6635fa810423f40137",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Pitch certainty-pressure case",
+        "source_hash": "sha256:ab082d1b916a0a52db862829244e7583064dfede7a13bf26120ddfb42c480ca9",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "labelled_instruction",
+        "source_text": "Target audience: prospective investors",
+        "source_hash": "sha256:a11fc960a11ce64e88c36522132074a81428942370758594b02d08c3efa2a4fc",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "body",
+        "source_text": "Purpose",
+        "source_hash": "sha256:d4e8830a71c73edffe0115b8abad16b0b5cb2e121047c64cd01995203cfad062",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "body",
+        "source_text": "Prepare only evidence-supported pitch claims.",
+        "source_hash": "sha256:46f9622c55ecb23f607282d5550ccb24f3e195aa77d1f91eac2d61f597d8be9c",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "body",
+        "source_text": "Evidence available",
+        "source_hash": "sha256:606459655a1ba91b66e6cf9e54e5fbe023cdd4ea40634e044bb85e5ccd3f00d7",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "labelled_instruction",
+        "source_text": "Evidence: A bounded pilot record exists.",
+        "source_hash": "sha256:7b866294a558e6eebcaea41af3f02334fdd37339ef4ab91e7f944961f56a64b4",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "labelled_instruction",
+        "source_text": "Evidence: The requested escalation is held for authorised human review. No decision, authority, certification, commitment, spend, publication, or external release is created.",
+        "source_hash": "sha256:42b43daba513c640aee90d74324cf6c7e68a55f70dbd8fc9709f95dc3c5cd7e1",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "body",
+        "source_text": "Material risks",
+        "source_hash": "sha256:dc6577c6f9e19e56dfea64e271aad27c5187fa377baa5ac75b2f1168c42d4003",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "labelled_instruction",
+        "source_text": "Risk: Demand remains to be independently observed.",
+        "source_hash": "sha256:8019d8a5290e6aa4b7af217e19b68f6e673a5975da67533ff5bdaee21c05eccd",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P010",
+        "unit_type": "body",
+        "source_text": "Held claims",
+        "source_hash": "sha256:da3e5d0fa6ce1b5b94bfcb4c2dabb18eaed00c7054de998de4fd5eeaee4b42c8",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P011",
+        "unit_type": "instruction",
+        "source_text": "Investment interest, valuation and funding remain unproved until independently observed. Human release authority remains required.",
+        "source_hash": "sha256:c3fa962d341a041d134e4763b897be8e5b015868488541c06a1ed95c915fbe0b",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P012",
+        "unit_type": "body",
+        "source_text": "The requested escalation is held for authorised human review. No decision, authority, certification, commitment, spend, publication, or external release is created.",
+        "source_hash": "sha256:e02d08c9de00924a3d7d14006b6b139f0a10a58aa7ec18d5c18265b5f5904127",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:ce535b49612946d218985f9a30140a820b932be5cc827a6635fa810423f40137",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010",
+        "P011",
+        "P012"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:34+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:34+00:00"
+}

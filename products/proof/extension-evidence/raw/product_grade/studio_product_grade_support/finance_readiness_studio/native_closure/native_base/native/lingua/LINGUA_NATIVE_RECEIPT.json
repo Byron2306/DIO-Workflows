@@ -1,0 +1,16 @@
+{
+  "artifact_type": "finance_readiness_studio_controlled_draft",
+  "authority_created": false,
+  "channel": "studio_harvest",
+  "external_action_executed": false,
+  "object_id": "FINANCE_READINESS_STUDIO-COMM-4AC5A563AD16CC0AF8DF",
+  "owner": "finance_readiness_studio",
+  "publication_authorized": false,
+  "schema": "dio.lingua.communication_receipt.v1",
+  "semantic_lineage_created": true,
+  "send_authorized": false,
+  "source_document_hash": "sha256:cfcb65d4a13cb5348ffd103e6df5be0a028ee3ac4ee45aef77f9a11e2977b67a",
+  "source_language": "English",
+  "target_language": "English",
+  "translation_state": "source_language"
+}

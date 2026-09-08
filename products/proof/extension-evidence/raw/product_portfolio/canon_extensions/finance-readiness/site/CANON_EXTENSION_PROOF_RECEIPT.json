@@ -1,0 +1,19 @@
+{
+  "authority_created": false,
+  "canon_id": "CANON-EXT-FINANCE_READINESS",
+  "claim_boundary": "For canon materialization receipts, this seal requires the source receipt to bind the exact current artifact SHA-256. Legacy historical generation receipts remain readable for compatibility but are not used by the current canon-extension production workflow. This seal does not create ProductGrade, buyer demand, payment, legal approval, publication authority or commercial validation.",
+  "commercial_validation": "UNPROVED",
+  "current_artifact_sha256": "7c3ed846b9809f49d57cc0d4597bf00f0d74135cf466ab98c73eb98f5f9730db",
+  "external_effects": false,
+  "name": "Finance Readiness",
+  "primary_artifact": "state/product_portfolio/canon_extensions/finance-readiness/site/index.html",
+  "receipt_fingerprint": "sha256:6f027bd64f820c7d8d09400cfeeb87213256893d1a9b2e8a96a5a4967cf1ac50",
+  "schema": "dio.canon_extension.proof_seal.v1",
+  "slug": "finance-readiness",
+  "source_generation_receipt": "state/product_portfolio/canon_extensions/finance-readiness/site/CANON_EXTENSION_MATERIALIZATION_RECEIPT.json",
+  "source_generation_receipt_schema": "dio.canon_extension.materialization_receipt.v1",
+  "source_generation_receipt_sha256": "3a1571ef7826db3e13dc71c24a4dacfaa8cf77083e8d0d67403f4f07988b0c4e",
+  "source_receipt_artifact_bound": true,
+  "status": "PASS",
+  "strict_materialization_binding": true
+}

@@ -1,0 +1,24 @@
+{
+  "buyer": "South African environmental consultancy",
+  "customer_job": "I need a professional website for a South African research consultancy.",
+  "human_gate": "NEEDS_YOU",
+  "positioning": {
+    "buyer_problem": "Field and environmental evidence is often fragmented across teams, spreadsheets and reports.",
+    "category": "environmental analytics",
+    "desired_outcome": "A clear public presence that shows how environmental evidence becomes practical decisions.",
+    "forbidden_claims": [
+      "guaranteed research outcomes",
+      "fabricated clients",
+      "fabricated testimonials",
+      "automatic publication"
+    ]
+  },
+  "publication": "REFUSE",
+  "required_sections": [
+    "Research strategy",
+    "Evidence synthesis",
+    "Decision communication"
+  ],
+  "schema": "dio.site_studio_composition_plan.v1",
+  "studio_id": "site_studio"
+}

@@ -1,0 +1,41 @@
+{
+  "all_declared_capabilities_executed": true,
+  "artifacts": [
+    {
+      "bytes": 2019,
+      "path": "closure/commercial_truth/COMMERCIAL_TRUTH_STUDIO.json",
+      "sha256": "44eab450b8481975cd82cd0ceb31677f079b970db468a7520c6d2afbe5c7a56c"
+    },
+    {
+      "bytes": 1974,
+      "path": "closure/evidex/EVIDEX_STUDIO_INTAKE.json",
+      "sha256": "fd61a43742a67079fb39c3cf2ac1140cddc08981cb9391b45795a832b47d5685"
+    },
+    {
+      "bytes": 532,
+      "path": "closure/presence/PRESENCE_STUDIO_RELEASE.json",
+      "sha256": "e28ecf716abd57d5e909821a785615be548a41ac8af636e3e5f4bb64abc93897"
+    },
+    {
+      "bytes": 3408,
+      "path": "NATIVE_CAPABILITY_CLOSURE_LEDGER.json",
+      "sha256": "5506e29173447ae5d727a1459543e53c155952fc0546f469eb3535884298ecb3"
+    }
+  ],
+  "authority_created": false,
+  "base_native_execution_fingerprint": "sha256:3443afe86d7241f1987cc819b9a2293801d6e0ef33a7fa8d1510c1559e88b214",
+  "base_proof_fingerprint": "sha256:74e7d07856ab8cf427c8b7abfb43534afc875bffe13929b6f8ff595bfecd6090",
+  "external_effects": false,
+  "external_publication": "REFUSE",
+  "external_send": "REFUSE",
+  "media_spend": "REFUSE",
+  "native_organ_count": 6,
+  "new_engine_created": false,
+  "organ_execution_truth": "NATIVE_MULTI_ORGAN_EXECUTION_PROVED",
+  "partial_organ_count": 0,
+  "payment": "REFUSE",
+  "proof_fingerprint": "sha256:d8d0fbc19793621f72fc6f0b32152dd9d26eb701a5eb9a1b30ab7a3eefc9d055",
+  "schema": "dio.studio_native_closure_proof_manifest.v1",
+  "source_bound_only_count": 0,
+  "studio_id": "professional_correspondence_studio"
+}

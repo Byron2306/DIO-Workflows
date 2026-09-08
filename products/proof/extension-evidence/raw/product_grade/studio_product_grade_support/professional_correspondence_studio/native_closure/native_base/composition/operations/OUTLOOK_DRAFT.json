@@ -1,0 +1,10 @@
+{
+  "body": "Dear Client,\nThank you for raising your concern regarding the invoice.\nWe have noted the points you have raised and will review the relevant scope, records and billing basis before responding on the substance of the dispute.\nAt this stage, this acknowledgement does not amend the invoice, concede liability, waive any rights, or create a settlement or refund commitment.\nOnce the review is complete, an authorised person will respond with the appropriate next step.\nKind regards,\nProfessional Services Team",
+  "external_send": "REFUSE",
+  "schema": "dio.outlook_draft_projection.v1",
+  "source_engine": "outlook_mail_core",
+  "state": "DRAFT_ONLY",
+  "studio_id": "professional_correspondence_studio",
+  "subject": "Re: Invoice query and review",
+  "to": null
+}

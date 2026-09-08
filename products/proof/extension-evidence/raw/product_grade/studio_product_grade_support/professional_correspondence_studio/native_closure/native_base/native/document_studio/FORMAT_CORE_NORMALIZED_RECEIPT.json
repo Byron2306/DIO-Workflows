@@ -1,0 +1,33 @@
+{
+  "authority_created": false,
+  "delivery_profile": "editable_review",
+  "delivery_profile_hash": "6edd3459fdf23d7ce62d5bf1ed48796f132f98e2ec25273a777c02aa84b0ece8",
+  "object_id": "STUDIO-PROFESSIONAL_CORRESPONDENCE_STUDIO",
+  "outputs": [
+    {
+      "bytes": 2507,
+      "channel": "html",
+      "sha256": "371ffaebfa672bda9938b4f9cff216298d43e9a467f3e6303064d3b15be2457f"
+    }
+  ],
+  "publication_authorized": false,
+  "qa": {
+    "errors": [],
+    "passed": true,
+    "semantic_completeness": {
+      "html": {
+        "expected_strings": 8,
+        "missing": [],
+        "missing_count": 0
+      }
+    },
+    "warnings": []
+  },
+  "release_mode": false,
+  "schema": "dio.format_core.receipt.v1",
+  "semantic_blocks": 8,
+  "semantic_source_hash": "68d7b228b4336b1519e9741f658a38c206044ee0ff320394934caf5b3ce25189",
+  "status": "rendered_review_candidate",
+  "style_profile": "dio_professional",
+  "style_profile_hash": "f08f383c90917a43a2f70439657fe368302ac1a623a61656cf7443c3bfad23e5"
+}

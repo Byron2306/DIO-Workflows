@@ -1,0 +1,21 @@
+{
+  "artifact_count": 9,
+  "authority_boundary": "PASS",
+  "authority_created": false,
+  "capability_binding": "PASS",
+  "controlled_artifact_generation": "PASS",
+  "external_effects": false,
+  "external_publication": "REFUSE",
+  "external_send": "REFUSE",
+  "human_gate": "NEEDS_YOU",
+  "job_resolution": "PASS",
+  "media_spend": "REFUSE",
+  "organ_execution_truth": "SOURCE_BOUND_ONLY_EXCEPT_VESPER_ROUTE_EXECUTED",
+  "payment": "REFUSE",
+  "proof_fingerprint": "sha256:d8995a61507a49ed370b7af7fb6d190bf865150fcaf0d6eba5dfd779661fac79",
+  "schema": "dio.professional_intelligence_studio_execution_receipt.v1",
+  "studio_fingerprint": "sha256:aa2202e2c15caa8eae3e41e55e0b8db4c4a0f5b08b2addc187d85248e4a00d99",
+  "studio_id": "site_studio",
+  "studio_name": "DIO Site Studio",
+  "vesper_routing": "PASS"
+}

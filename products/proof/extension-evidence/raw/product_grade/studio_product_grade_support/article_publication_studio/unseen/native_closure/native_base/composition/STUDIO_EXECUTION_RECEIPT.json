@@ -1,0 +1,21 @@
+{
+  "artifact_count": 9,
+  "authority_boundary": "PASS",
+  "authority_created": false,
+  "capability_binding": "PASS",
+  "controlled_artifact_generation": "PASS",
+  "external_effects": false,
+  "external_publication": "REFUSE",
+  "external_send": "REFUSE",
+  "human_gate": "NEEDS_YOU",
+  "job_resolution": "PASS",
+  "media_spend": "REFUSE",
+  "organ_execution_truth": "SOURCE_BOUND_ONLY_EXCEPT_VESPER_ROUTE_EXECUTED",
+  "payment": "REFUSE",
+  "proof_fingerprint": "sha256:a39d3975a37266c809cdfd9fe1e716f55b3cbb829770c863b9da81ae2d8f13ed",
+  "schema": "dio.professional_intelligence_studio_execution_receipt.v1",
+  "studio_fingerprint": "sha256:9f16506d2f2c8790b30d4bc4efc1a5c9ed5a67d1f9bee0dcb93c37540cd02116",
+  "studio_id": "article_publication_studio",
+  "studio_name": "DIO Article & Publication Studio",
+  "vesper_routing": "PASS"
+}

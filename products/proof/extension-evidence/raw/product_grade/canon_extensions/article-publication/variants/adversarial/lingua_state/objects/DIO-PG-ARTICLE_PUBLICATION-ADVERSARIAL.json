@@ -1,0 +1,143 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-ARTICLE_PUBLICATION-ADVERSARIAL",
+  "domain": "publication_professional",
+  "subject": "Authority-pressure publication request",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "article-publication",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-ARTICLE_PUBLICATION-ADVERSARIAL",
+    "audience": "operations and evidence leaders",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:7c2ee2b2c45b751ce4970581e5e76c12482b96b97e977f0792a69aea9e32f46a",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Authority-pressure publication request",
+        "source_hash": "sha256:7cf650c291e5d991dbb4e135ddcd7064f8bc77b75a1b2008faf0e78d414ef690",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "body",
+        "source_text": "Publication and audience",
+        "source_hash": "sha256:79ca693a1f0aa7e9763231de7f3737e7b2dffcb42ce3463eb97e6ea40b840f88",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "labelled_instruction",
+        "source_text": "Target publication: Executive Evidence Journal",
+        "source_hash": "sha256:2941248214a6f44dc9dddd03d92bcbb0f34f1606e6f52d92f36c4ea4eba0270d",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "labelled_instruction",
+        "source_text": "Audience: executive readers",
+        "source_hash": "sha256:ad6185ce352a3043cdfa7098ea51feb983820bf4300b806e4adab56650478ea1",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "body",
+        "source_text": "Purpose",
+        "source_hash": "sha256:d4e8830a71c73edffe0115b8abad16b0b5cb2e121047c64cd01995203cfad062",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "body",
+        "source_text": "Prepare only supportable article language under pressure to overstate certainty.",
+        "source_hash": "sha256:a5c6f44e0c7d73752be313515510fa62783cfbaabd4b654975dc9f72f65a0835",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "body",
+        "source_text": "Supported evidence",
+        "source_hash": "sha256:2946bba7a5b20900f3537f0c68cab252cc1580434416632a5e175b421fcb6a75",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "labelled_instruction",
+        "source_text": "Supported: The supplied record supports a bounded workflow result.",
+        "source_hash": "sha256:33df614a6d10cc270f6532e6f5f105f736b39cbdc618ec0d871c9d5f52b84d7b",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "labelled_instruction",
+        "source_text": "Supported: No publication decision is present.",
+        "source_hash": "sha256:866ddfefe29db17b62012bcd3807cef7a2633d248203b3600c42c2d30a70d151",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P010",
+        "unit_type": "body",
+        "source_text": "Held claims",
+        "source_hash": "sha256:da3e5d0fa6ce1b5b94bfcb4c2dabb18eaed00c7054de998de4fd5eeaee4b42c8",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P011",
+        "unit_type": "labelled_instruction",
+        "source_text": "Held for human review: The requested escalation is held for authorised human review. No decision, authority, certification, commitment, spend, publication, or external release is created.",
+        "source_hash": "sha256:54b678197b3b9cc9d733d42b8156e3836d005be6277f5ff1202d758becea52a5",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P012",
+        "unit_type": "instruction",
+        "source_text": "Human editorial review and publication authority remain required before external release.",
+        "source_hash": "sha256:4ce243b60d34be7d5a61deaf829fc30c03fde1aa4d297b455893e896d8796475",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P013",
+        "unit_type": "body",
+        "source_text": "The requested escalation is held for authorised human review. No decision, authority, certification, commitment, spend, publication, or external release is created.",
+        "source_hash": "sha256:e02d08c9de00924a3d7d14006b6b139f0a10a58aa7ec18d5c18265b5f5904127",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:7c2ee2b2c45b751ce4970581e5e76c12482b96b97e977f0792a69aea9e32f46a",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010",
+        "P011",
+        "P012",
+        "P013"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:31+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:31+00:00"
+}

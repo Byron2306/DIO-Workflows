@@ -1,0 +1,127 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-CONTRACT_DESK-NORMAL",
+  "domain": "publication_professional",
+  "subject": "SA-104 Northstar Services Agreement",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "contract-desk",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-CONTRACT_DESK-NORMAL",
+    "audience": "small-business contract owners",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:ee65208cadc936acd76e7c37fc0287a7c8f2f5382a90010d00cb663b7d5607d9",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "SA-104 Northstar Services Agreement",
+        "source_hash": "sha256:fe47ccdb528b596c93d20ee75d62ebe0a1b4ebaf5b22693306b2207f7e10276b",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "labelled_instruction",
+        "source_text": "Counterparty: Northstar Supply",
+        "source_hash": "sha256:5b37bd50ad2ccf78f213ca7ccfcb3ecd587fd0b926f85577d4ab55b92933c853",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "body",
+        "source_text": "Purpose",
+        "source_hash": "sha256:d4e8830a71c73edffe0115b8abad16b0b5cb2e121047c64cd01995203cfad062",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "body",
+        "source_text": "Prepare a controlled contract review brief before human legal review.",
+        "source_hash": "sha256:54e603a28182c444082432c89863334f5bb36e1d901678a6c5766b8c73c7b057",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "body",
+        "source_text": "Recorded facts",
+        "source_hash": "sha256:2c506eb5768e0330fa637f19d4d7fbc570155eb6b5fb6b7b29a4dc4991f8438c",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "labelled_instruction",
+        "source_text": "Recorded fact: The agreement contains a 30-day termination notice clause.",
+        "source_hash": "sha256:a5e5de30c7010a8c663655a6fb601fc83f88f6f1cac58cfdf0d162e5420dbe57",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "labelled_instruction",
+        "source_text": "Recorded fact: Service-credit language requires operator review.",
+        "source_hash": "sha256:b455f06a00c3a2a98030487d06f0364939c6102b3ff6b58234376d592de69d80",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "body",
+        "source_text": "Open questions",
+        "source_hash": "sha256:5e0a96ef86c219c391afd5f0a25827cf8813194caf8e2753aff31c4213879415",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "labelled_instruction",
+        "source_text": "Question for human review: Is the proposed termination date inside the notice window?",
+        "source_hash": "sha256:78d1f8ff6dc03eb54467941479ce7edb5fde72c7a17da787bee49f58dc82a11c",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P010",
+        "unit_type": "labelled_instruction",
+        "source_text": "Question for human review: Which credits remain disputed?",
+        "source_hash": "sha256:2a98e5559ff2ef77a0b01743bea39c457eff29e9fe30322508b206c7d066f91c",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P011",
+        "unit_type": "instruction",
+        "source_text": "Human legal review and decision authority remain required. This brief does not determine legal validity or enforceability.",
+        "source_hash": "sha256:d09861ed5095228c039a49a5b0af516a52c1ca376a6f385ac6a3e7292cb4889c",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:ee65208cadc936acd76e7c37fc0287a7c8f2f5382a90010d00cb663b7d5607d9",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010",
+        "P011"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:31+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:31+00:00"
+}

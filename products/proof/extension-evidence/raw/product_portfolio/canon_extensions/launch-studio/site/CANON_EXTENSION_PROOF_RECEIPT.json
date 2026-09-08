@@ -1,0 +1,19 @@
+{
+  "authority_created": false,
+  "canon_id": "CANON-EXT-LAUNCH_STUDIO",
+  "claim_boundary": "For canon materialization receipts, this seal requires the source receipt to bind the exact current artifact SHA-256. Legacy historical generation receipts remain readable for compatibility but are not used by the current canon-extension production workflow. This seal does not create ProductGrade, buyer demand, payment, legal approval, publication authority or commercial validation.",
+  "commercial_validation": "UNPROVED",
+  "current_artifact_sha256": "c094be7437d0b46b5cd89096f8880d9b1d60705f85708654773bfb0470ffda00",
+  "external_effects": false,
+  "name": "Launch Studio",
+  "primary_artifact": "state/product_portfolio/canon_extensions/launch-studio/site/index.html",
+  "receipt_fingerprint": "sha256:f2eb476b3aea9b895e6ea26f60611beca7a16fdeb16c271b74a4ff3568e4a0c5",
+  "schema": "dio.canon_extension.proof_seal.v1",
+  "slug": "launch-studio",
+  "source_generation_receipt": "state/product_portfolio/canon_extensions/launch-studio/site/CANON_EXTENSION_MATERIALIZATION_RECEIPT.json",
+  "source_generation_receipt_schema": "dio.canon_extension.materialization_receipt.v1",
+  "source_generation_receipt_sha256": "5a8351060c74d68910a149b15c499ec3af5689b3aa5a36eeaf8202454d1c9af0",
+  "source_receipt_artifact_bound": true,
+  "status": "PASS",
+  "strict_materialization_binding": true
+}

@@ -1,0 +1,21 @@
+{
+  "all_declared_capabilities_executed": true,
+  "authority_created": false,
+  "external_effects": false,
+  "external_publication": "REFUSE",
+  "external_send": "REFUSE",
+  "human_gate": "NEEDS_YOU",
+  "media_spend": "REFUSE",
+  "native_capability_closure": "PASS",
+  "native_closure_fingerprint": "sha256:bf09e325cd9950e80a463cd0e0a0a82e522217b7968b1a2246e2412d11b1d3df",
+  "native_organ_count": 7,
+  "new_engine_created": false,
+  "organ_execution_truth": "NATIVE_MULTI_ORGAN_EXECUTION_PROVED",
+  "partial_organ_count": 0,
+  "payment": "REFUSE",
+  "proof_fingerprint": "sha256:2bed74f5ce0020fa92672045599d5a3cd2ec708194a1418471c0db664f84813c",
+  "schema": "dio.studio_native_closure_receipt.v1",
+  "source_bound_only_count": 0,
+  "studio_id": "site_studio",
+  "studio_name": "DIO Site Studio"
+}

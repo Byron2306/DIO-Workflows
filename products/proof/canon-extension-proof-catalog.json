@@ -1,0 +1,1398 @@
+{
+  "authority_created": false,
+  "base_canon_execution_journey_count": 159,
+  "base_canon_product_count": 53,
+  "canon_extension_count": 15,
+  "combined_canonical_product_count": 68,
+  "combined_execution_journey_count": 204,
+  "combined_execution_verified_journey_count": 204,
+  "commercial_validation": "UNPROVED",
+  "evidence_manifest": "products/proof/extension-evidence/evidence-manifest.json",
+  "execution_journey_count": 45,
+  "execution_verified_journey_count": 45,
+  "external_effects": false,
+  "full_evidence_bundle": {
+    "file_count": 455,
+    "path": "products/proof/extension-evidence/dio-canon-68x3-productgrade-evidence.zip",
+    "sha256": "sha256:cd49538d3a6eece75cbb8b4a3458269a21c84f9da5760e1b3e4f92b76e096ed1"
+  },
+  "products": [
+    {
+      "artifacts": [
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 1098,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "NORMAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/article-publication/variants/normal/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:a55c9f12cf9af52b621e80127d3b680985e98d50ee16eaa0bd92eb87f05dc4ed",
+          "suffix": ".html",
+          "variant": "normal"
+        },
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 1126,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "MESSY BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/article-publication/variants/messy/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:34bc17d1950f1006bc693fe8edbdacd3ba8c79b9e0f010f502c8bdec6b270010",
+          "suffix": ".html",
+          "variant": "messy"
+        },
+        {
+          "adversarial_boundary_held": true,
+          "beast_mechanical_pass": true,
+          "bytes": 1389,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "ADVERSARIAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/article-publication/variants/adversarial/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:9178de234c295597b73c1013dd496cbc48122c02c1ddcee790fd01ea7cdfb312",
+          "suffix": ".html",
+          "variant": "adversarial"
+        }
+      ],
+      "authority_created": false,
+      "claim_boundary": "Native canon-extension ProductGrade verifies normal, messy, and adversarial buyer-artifact execution, Lingua semantic custody, BEAST mechanical integrity, explicit authority boundaries, distinct variant generalisation, and current provenance binding. It does not prove buyer demand, payment, legal approval, publication authority, investment interest, funding approval, or market performance.",
+      "commercial_validation": "UNPROVED",
+      "evidence_receipts": [
+        {
+          "kind": "product_grade",
+          "name": "ProductGrade receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/article-publication/PRODUCT_GRADE_RECEIPT.json",
+          "sha256": "sha256:6b3d26b8e89a1d06b1be98708e9571a87226184fe6b78bc6b860fbc54dc898bc"
+        },
+        {
+          "kind": "variant_normal",
+          "name": "Normal variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/article-publication/variants/normal/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:5e714c250d63c3c373600c75fd6480a47f4ea457c2b85eb9ff22dd61b18bc6e5"
+        },
+        {
+          "kind": "variant_messy",
+          "name": "Messy variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/article-publication/variants/messy/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:2c77f0eb6f3a98ec44309d91414a33f4c054fa1b80626b4177b61bbff987c09f"
+        },
+        {
+          "kind": "variant_adversarial",
+          "name": "Adversarial variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/article-publication/variants/adversarial/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:fc0dc858ead148b2cb11db5d3d7742e7d708fed9f1edbf42a79f72a601c7349e"
+        },
+        {
+          "kind": "materialization",
+          "name": "Materialization",
+          "path": "products/proof/extension-evidence/raw/product_portfolio/canon_extensions/article-publication/site/CANON_EXTENSION_MATERIALIZATION_RECEIPT.json",
+          "sha256": "sha256:0e0eded07970ce6665b24e12bf34ddc9d834c3733fd214f4435294da8d4ac980"
+        },
+        {
+          "kind": "provenance_seal",
+          "name": "Provenance Seal",
+          "path": "products/proof/extension-evidence/raw/product_portfolio/canon_extensions/article-publication/site/CANON_EXTENSION_PROOF_RECEIPT.json",
+          "sha256": "sha256:e0f9582b6152b8cbf02eb39f693fb5ff4bbb1303f755f24f69f531f162d00b47"
+        }
+      ],
+      "execution_variant_count": 3,
+      "execution_variants": 3,
+      "external_effects": false,
+      "name": "Article Publication",
+      "proof_kind": "receipt_bound",
+      "proof_status": "CANON_EXTENSION_PROOF_VERIFIED",
+      "slug": "article-publication",
+      "status": "PRODUCT_GRADE_VERIFIED",
+      "verified_variant_count": 3
+    },
+    {
+      "artifacts": [
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 1068,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "NORMAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/article-publication-studio/variants/normal/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:f0f8f9639ef79b8c728f0eace9f178ff96bdd272f2b626685279c5ca0650c60d",
+          "suffix": ".html",
+          "variant": "normal"
+        },
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 1083,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "MESSY BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/article-publication-studio/variants/messy/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:d5c971f0e676bb06c1c84e199379cbe5dea9537f06253096e10f8058c423af4c",
+          "suffix": ".html",
+          "variant": "messy"
+        },
+        {
+          "adversarial_boundary_held": true,
+          "beast_mechanical_pass": true,
+          "bytes": 1362,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "ADVERSARIAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/article-publication-studio/variants/adversarial/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:2ad0edd1e11153cf301b6311ecc0bb5ac4474e5566bdfd035e057bf5aa222535",
+          "suffix": ".html",
+          "variant": "adversarial"
+        }
+      ],
+      "authority_created": false,
+      "claim_boundary": "Native canon-extension ProductGrade verifies normal, messy, and adversarial buyer-artifact execution, Lingua semantic custody, BEAST mechanical integrity, explicit authority boundaries, distinct variant generalisation, and current provenance binding. It does not prove buyer demand, payment, legal approval, publication authority, investment interest, funding approval, or market performance.",
+      "commercial_validation": "UNPROVED",
+      "evidence_receipts": [
+        {
+          "kind": "product_grade",
+          "name": "ProductGrade receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/article-publication-studio/PRODUCT_GRADE_RECEIPT.json",
+          "sha256": "sha256:a44e3a5739186e7265e04aaf41d09a8b2c3d16ea3fa4bcd84ef8969f4bda1b48"
+        },
+        {
+          "kind": "variant_normal",
+          "name": "Normal variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/article-publication-studio/variants/normal/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:29e44a2d79d1a0583546ea05a58d0973f62d26270147fc74f1f539ee3bf83d2f"
+        },
+        {
+          "kind": "variant_messy",
+          "name": "Messy variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/article-publication-studio/variants/messy/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:52368404f022ce58e4c31501152ca3721038f7ae2647302b13797c4e412ff741"
+        },
+        {
+          "kind": "variant_adversarial",
+          "name": "Adversarial variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/article-publication-studio/variants/adversarial/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:f313994766512d7154c5dbb9ee848c1bb2a92f7712a442ab80f40eaf2cf7de51"
+        },
+        {
+          "kind": "upstream_studio_product_grade",
+          "name": "Upstream Studio ProductGrade receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/studio_product_grade_support/article_publication_studio/PRODUCT_GRADE_RECEIPT.json",
+          "sha256": "sha256:e59765f862abd9965fda9198f4710c44289a1ec8e62db1b2336895d9e5f5321b"
+        }
+      ],
+      "execution_variant_count": 3,
+      "execution_variants": 3,
+      "external_effects": false,
+      "name": "Article Publication Studio",
+      "proof_kind": "studio_product_grade",
+      "proof_status": "CANON_EXTENSION_PROOF_VERIFIED",
+      "slug": "article-publication-studio",
+      "status": "PRODUCT_GRADE_VERIFIED",
+      "verified_variant_count": 3
+    },
+    {
+      "artifacts": [
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 1132,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "NORMAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/contract-desk/variants/normal/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:57a83be3e55bf2d4d00de290759a2b05050fd9e364789ea5c8cdf7469ebb2901",
+          "suffix": ".html",
+          "variant": "normal"
+        },
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 1099,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "MESSY BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/contract-desk/variants/messy/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:d2b80371938ce42a092010198aed374599c96905032a3646f6233adacb6de9a4",
+          "suffix": ".html",
+          "variant": "messy"
+        },
+        {
+          "adversarial_boundary_held": true,
+          "beast_mechanical_pass": true,
+          "bytes": 1314,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "ADVERSARIAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/contract-desk/variants/adversarial/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:ab0888cd509fff3bfc7d1af06da1357605bf20a0312611c9e729069ef7270ebf",
+          "suffix": ".html",
+          "variant": "adversarial"
+        }
+      ],
+      "authority_created": false,
+      "claim_boundary": "Native canon-extension ProductGrade verifies normal, messy, and adversarial buyer-artifact execution, Lingua semantic custody, BEAST mechanical integrity, explicit authority boundaries, distinct variant generalisation, and current provenance binding. It does not prove buyer demand, payment, legal approval, publication authority, investment interest, funding approval, or market performance.",
+      "commercial_validation": "UNPROVED",
+      "evidence_receipts": [
+        {
+          "kind": "product_grade",
+          "name": "ProductGrade receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/contract-desk/PRODUCT_GRADE_RECEIPT.json",
+          "sha256": "sha256:e496c1cdc6fb033df1cd4f1d36d381f36d6419f11bc97c2fb85eee53df10d4d3"
+        },
+        {
+          "kind": "variant_normal",
+          "name": "Normal variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/contract-desk/variants/normal/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:631a72e8eb2f1b79de93f9f649fbbce076735bcaadc3283f49c197bbb8391a95"
+        },
+        {
+          "kind": "variant_messy",
+          "name": "Messy variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/contract-desk/variants/messy/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:98791a524b86136bc521b7a2d883d2becf545054c1ade66d657ceec1c2ef6748"
+        },
+        {
+          "kind": "variant_adversarial",
+          "name": "Adversarial variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/contract-desk/variants/adversarial/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:b190a8a1be09abb8fe8825931298d16a193304be3d8d7c2e43fc0adf24185f49"
+        },
+        {
+          "kind": "materialization",
+          "name": "Materialization",
+          "path": "products/proof/extension-evidence/raw/product_portfolio/canon_extensions/contract-desk/site/CANON_EXTENSION_MATERIALIZATION_RECEIPT.json",
+          "sha256": "sha256:f304ba55bc61a45248b0cf49e3a2406497c4a5e4ebb32ca73c3ea5e92c8c8016"
+        },
+        {
+          "kind": "provenance_seal",
+          "name": "Provenance Seal",
+          "path": "products/proof/extension-evidence/raw/product_portfolio/canon_extensions/contract-desk/site/CANON_EXTENSION_PROOF_RECEIPT.json",
+          "sha256": "sha256:70f2ef82becc0f17edb15a99c96eee327cd8346351b2753d4f14848026e82627"
+        }
+      ],
+      "execution_variant_count": 3,
+      "execution_variants": 3,
+      "external_effects": false,
+      "name": "Contract Desk",
+      "proof_kind": "receipt_bound",
+      "proof_status": "CANON_EXTENSION_PROOF_VERIFIED",
+      "slug": "contract-desk",
+      "status": "PRODUCT_GRADE_VERIFIED",
+      "verified_variant_count": 3
+    },
+    {
+      "artifacts": [
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 912,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "NORMAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/corporate-readiness/variants/normal/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:cec54f92034a9e0d2d4d17dc1cb7ee57b43429c88483a721a056062a07d6ae74",
+          "suffix": ".html",
+          "variant": "normal"
+        },
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 922,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "MESSY BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/corporate-readiness/variants/messy/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:06398dc39ba58fc78a2c95dc7c8d648dad8877047f6cef2d8eb361181f62a682",
+          "suffix": ".html",
+          "variant": "messy"
+        },
+        {
+          "adversarial_boundary_held": true,
+          "beast_mechanical_pass": true,
+          "bytes": 1235,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "ADVERSARIAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/corporate-readiness/variants/adversarial/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:99439a9fc14859c0517a54255de667ebb46309dae6331d3072c7805298a79ec1",
+          "suffix": ".html",
+          "variant": "adversarial"
+        }
+      ],
+      "authority_created": false,
+      "claim_boundary": "Native canon-extension ProductGrade verifies normal, messy, and adversarial buyer-artifact execution, Lingua semantic custody, BEAST mechanical integrity, explicit authority boundaries, distinct variant generalisation, and current provenance binding. It does not prove buyer demand, payment, legal approval, publication authority, investment interest, funding approval, or market performance.",
+      "commercial_validation": "UNPROVED",
+      "evidence_receipts": [
+        {
+          "kind": "product_grade",
+          "name": "ProductGrade receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/corporate-readiness/PRODUCT_GRADE_RECEIPT.json",
+          "sha256": "sha256:87716f52c0d30d460a08242c16d64f20900d292f14858cdb36047b9ffe12d8c3"
+        },
+        {
+          "kind": "variant_normal",
+          "name": "Normal variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/corporate-readiness/variants/normal/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:997f2715a4c148ceafcf023fca61db7c6c1e376e9f36024ba54811f9c5301034"
+        },
+        {
+          "kind": "variant_messy",
+          "name": "Messy variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/corporate-readiness/variants/messy/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:b96877db484544ce79ca88e041f74a6cbbafad5d99cce9c5b882d793ed140357"
+        },
+        {
+          "kind": "variant_adversarial",
+          "name": "Adversarial variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/corporate-readiness/variants/adversarial/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:9d3087e54aa5524b04bad469a1dc23be31632c2b9fffefbb598fb51e34e1653a"
+        },
+        {
+          "kind": "materialization",
+          "name": "Materialization",
+          "path": "products/proof/extension-evidence/raw/product_portfolio/canon_extensions/corporate-readiness/site/CANON_EXTENSION_MATERIALIZATION_RECEIPT.json",
+          "sha256": "sha256:c642542182c0bc9cf5017dbd14ab2473a3d511b0299010d9049f95e9a8e0f6d0"
+        },
+        {
+          "kind": "provenance_seal",
+          "name": "Provenance Seal",
+          "path": "products/proof/extension-evidence/raw/product_portfolio/canon_extensions/corporate-readiness/site/CANON_EXTENSION_PROOF_RECEIPT.json",
+          "sha256": "sha256:9b217996aac33901ddfebd6c7083ec4356a7d4b5f26a54ae77a3e79b56f66de8"
+        }
+      ],
+      "execution_variant_count": 3,
+      "execution_variants": 3,
+      "external_effects": false,
+      "name": "Corporate Readiness",
+      "proof_kind": "receipt_bound",
+      "proof_status": "CANON_EXTENSION_PROOF_VERIFIED",
+      "slug": "corporate-readiness",
+      "status": "PRODUCT_GRADE_VERIFIED",
+      "verified_variant_count": 3
+    },
+    {
+      "artifacts": [
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 1052,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "NORMAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/entrepreneurproof/variants/normal/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:79c921d5cb69f6a2eef9ecb4722cf016221820f9738a3b551059fc0bacf477f6",
+          "suffix": ".html",
+          "variant": "normal"
+        },
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 1047,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "MESSY BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/entrepreneurproof/variants/messy/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:67740ec1f67a8a46dfaa1f77759729a641bb2a982e98c9bcb96b257b447bbf57",
+          "suffix": ".html",
+          "variant": "messy"
+        },
+        {
+          "adversarial_boundary_held": true,
+          "beast_mechanical_pass": true,
+          "bytes": 1269,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "ADVERSARIAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/entrepreneurproof/variants/adversarial/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:2ff305f4d92dfa134552b1597edd057aa7b45a4dd8d3bab13c5bbf8e716ad226",
+          "suffix": ".html",
+          "variant": "adversarial"
+        }
+      ],
+      "authority_created": false,
+      "claim_boundary": "Native canon-extension ProductGrade verifies normal, messy, and adversarial buyer-artifact execution, Lingua semantic custody, BEAST mechanical integrity, explicit authority boundaries, distinct variant generalisation, and current provenance binding. It does not prove buyer demand, payment, legal approval, publication authority, investment interest, funding approval, or market performance.",
+      "commercial_validation": "UNPROVED",
+      "evidence_receipts": [
+        {
+          "kind": "product_grade",
+          "name": "ProductGrade receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/entrepreneurproof/PRODUCT_GRADE_RECEIPT.json",
+          "sha256": "sha256:ba6737067b6c0b7f63b466387a3f88f317113001cad1eb7739306a189f7989b2"
+        },
+        {
+          "kind": "variant_normal",
+          "name": "Normal variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/entrepreneurproof/variants/normal/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:38833c977df4026e99bf1a1cd9352b13f820ac7f3451232dd30086f02c8aa2d0"
+        },
+        {
+          "kind": "variant_messy",
+          "name": "Messy variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/entrepreneurproof/variants/messy/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:033f69f574014731cd26955f68f29f88d96ebc9626fc7a269dd1d0ed1afbc05c"
+        },
+        {
+          "kind": "variant_adversarial",
+          "name": "Adversarial variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/entrepreneurproof/variants/adversarial/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:bc830c14519283ee696d5e707330c6d7348625c782ddcbdf6d25e400bed19c58"
+        },
+        {
+          "kind": "materialization",
+          "name": "Materialization",
+          "path": "products/proof/extension-evidence/raw/product_portfolio/canon_extensions/entrepreneurproof/site/CANON_EXTENSION_MATERIALIZATION_RECEIPT.json",
+          "sha256": "sha256:8a7f3245ae74cac0a2abaffca09e355ba976dba7ee1038687b53d2ec0ba269a3"
+        },
+        {
+          "kind": "provenance_seal",
+          "name": "Provenance Seal",
+          "path": "products/proof/extension-evidence/raw/product_portfolio/canon_extensions/entrepreneurproof/site/CANON_EXTENSION_PROOF_RECEIPT.json",
+          "sha256": "sha256:40e452601a5f7130f383ee9ab015201f8bb3e7e4210df96d1fac10c7ce0251ff"
+        }
+      ],
+      "execution_variant_count": 3,
+      "execution_variants": 3,
+      "external_effects": false,
+      "name": "EntrepreneurProof",
+      "proof_kind": "receipt_bound",
+      "proof_status": "CANON_EXTENSION_PROOF_VERIFIED",
+      "slug": "entrepreneurproof",
+      "status": "PRODUCT_GRADE_VERIFIED",
+      "verified_variant_count": 3
+    },
+    {
+      "artifacts": [
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 924,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "NORMAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/finance-readiness/variants/normal/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:f633ee7fd19f703a30e46dd1dda7dea7b00cf66fcd98e56c0d35d9dd6b604d84",
+          "suffix": ".html",
+          "variant": "normal"
+        },
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 931,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "MESSY BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/finance-readiness/variants/messy/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:8369bd6eb24228715b22dc24b30d4a0d3962f8cbaf7d9418f2768234789b4026",
+          "suffix": ".html",
+          "variant": "messy"
+        },
+        {
+          "adversarial_boundary_held": true,
+          "beast_mechanical_pass": true,
+          "bytes": 1233,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "ADVERSARIAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/finance-readiness/variants/adversarial/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:6bd281d4f4102eb9ff32620620af1ec40c7b3a21ab5b18b5cf4699992795a514",
+          "suffix": ".html",
+          "variant": "adversarial"
+        }
+      ],
+      "authority_created": false,
+      "claim_boundary": "Native canon-extension ProductGrade verifies normal, messy, and adversarial buyer-artifact execution, Lingua semantic custody, BEAST mechanical integrity, explicit authority boundaries, distinct variant generalisation, and current provenance binding. It does not prove buyer demand, payment, legal approval, publication authority, investment interest, funding approval, or market performance.",
+      "commercial_validation": "UNPROVED",
+      "evidence_receipts": [
+        {
+          "kind": "product_grade",
+          "name": "ProductGrade receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/finance-readiness/PRODUCT_GRADE_RECEIPT.json",
+          "sha256": "sha256:399d377073a93c95563a685d3c3947bfa0144c82ab16378018ea6a4e958c0f5a"
+        },
+        {
+          "kind": "variant_normal",
+          "name": "Normal variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/finance-readiness/variants/normal/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:4ce6fe99e0485950f6b1c029c0f5f2a9d13c2b381f6d94235481b48d4049feeb"
+        },
+        {
+          "kind": "variant_messy",
+          "name": "Messy variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/finance-readiness/variants/messy/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:b8bb429b6c0ec828040c14a2fecca204d148ad5f416afb4278c058d300211659"
+        },
+        {
+          "kind": "variant_adversarial",
+          "name": "Adversarial variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/finance-readiness/variants/adversarial/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:dace35e69ee51ca1acfc43c8188b4ddadb202ccdd3a29afbd9dce44795379d1a"
+        },
+        {
+          "kind": "materialization",
+          "name": "Materialization",
+          "path": "products/proof/extension-evidence/raw/product_portfolio/canon_extensions/finance-readiness/site/CANON_EXTENSION_MATERIALIZATION_RECEIPT.json",
+          "sha256": "sha256:3a1571ef7826db3e13dc71c24a4dacfaa8cf77083e8d0d67403f4f07988b0c4e"
+        },
+        {
+          "kind": "provenance_seal",
+          "name": "Provenance Seal",
+          "path": "products/proof/extension-evidence/raw/product_portfolio/canon_extensions/finance-readiness/site/CANON_EXTENSION_PROOF_RECEIPT.json",
+          "sha256": "sha256:4354bc94fee70a47564332e8318c0f5b22a764055e442cfa693a3d8d3ade7250"
+        }
+      ],
+      "execution_variant_count": 3,
+      "execution_variants": 3,
+      "external_effects": false,
+      "name": "Finance Readiness",
+      "proof_kind": "receipt_bound",
+      "proof_status": "CANON_EXTENSION_PROOF_VERIFIED",
+      "slug": "finance-readiness",
+      "status": "PRODUCT_GRADE_VERIFIED",
+      "verified_variant_count": 3
+    },
+    {
+      "artifacts": [
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 905,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "NORMAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/finance-readiness-studio/variants/normal/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:fa126ba83e8e3a9ab103dea2f3bb3fd6c7164819eb4f69d01ecef7bdcf8f0cdb",
+          "suffix": ".html",
+          "variant": "normal"
+        },
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 939,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "MESSY BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/finance-readiness-studio/variants/messy/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:c743c783bc14d87a387fc9676e73c215a20c8f8d0e49019bf6cefe391cd48be2",
+          "suffix": ".html",
+          "variant": "messy"
+        },
+        {
+          "adversarial_boundary_held": true,
+          "beast_mechanical_pass": true,
+          "bytes": 1250,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "ADVERSARIAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/finance-readiness-studio/variants/adversarial/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:0439509bb217b11488dec0b3c9b7c86b8e83175397a789363172a2f8b52b46fe",
+          "suffix": ".html",
+          "variant": "adversarial"
+        }
+      ],
+      "authority_created": false,
+      "claim_boundary": "Native canon-extension ProductGrade verifies normal, messy, and adversarial buyer-artifact execution, Lingua semantic custody, BEAST mechanical integrity, explicit authority boundaries, distinct variant generalisation, and current provenance binding. It does not prove buyer demand, payment, legal approval, publication authority, investment interest, funding approval, or market performance.",
+      "commercial_validation": "UNPROVED",
+      "evidence_receipts": [
+        {
+          "kind": "product_grade",
+          "name": "ProductGrade receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/finance-readiness-studio/PRODUCT_GRADE_RECEIPT.json",
+          "sha256": "sha256:43d24ea9887d8c8deca81650b8fe90e0608b82f329361dd2e1f0fbe367a09235"
+        },
+        {
+          "kind": "variant_normal",
+          "name": "Normal variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/finance-readiness-studio/variants/normal/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:4d4783cbf192a2fa0b6aee93e6dc056979a5ae711e0a49b0ef050fa2a1df90f1"
+        },
+        {
+          "kind": "variant_messy",
+          "name": "Messy variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/finance-readiness-studio/variants/messy/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:07fcb8ebd69bb4509872196ae68ec861509910f119342eb1349df26963c36883"
+        },
+        {
+          "kind": "variant_adversarial",
+          "name": "Adversarial variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/finance-readiness-studio/variants/adversarial/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:39205d81f65e23a03c9ba065ed3a110028d4905acef8cb4d5af9e2d0f1e25dcd"
+        },
+        {
+          "kind": "upstream_studio_product_grade",
+          "name": "Upstream Studio ProductGrade receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/studio_product_grade_support/finance_readiness_studio/PRODUCT_GRADE_RECEIPT.json",
+          "sha256": "sha256:c802e889875c71d50e56c67eb1bf323a1344f01f5d97b54aa68e85711107dbee"
+        }
+      ],
+      "execution_variant_count": 3,
+      "execution_variants": 3,
+      "external_effects": false,
+      "name": "Finance Readiness Studio",
+      "proof_kind": "studio_product_grade",
+      "proof_status": "CANON_EXTENSION_PROOF_VERIFIED",
+      "slug": "finance-readiness-studio",
+      "status": "PRODUCT_GRADE_VERIFIED",
+      "verified_variant_count": 3
+    },
+    {
+      "artifacts": [
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 1005,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "NORMAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/fundingfinder/variants/normal/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:68e49515fb52dd713214fa17f5d4ad0af8ac76042d19bcc1fef6bc3229f852a6",
+          "suffix": ".html",
+          "variant": "normal"
+        },
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 1046,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "MESSY BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/fundingfinder/variants/messy/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:b3af5f60619f0db5265c69436b198c06c15ae7d514e3698aa6a19cb3173e7c6a",
+          "suffix": ".html",
+          "variant": "messy"
+        },
+        {
+          "adversarial_boundary_held": true,
+          "beast_mechanical_pass": true,
+          "bytes": 1267,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "ADVERSARIAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/fundingfinder/variants/adversarial/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:29b5fb13d4349e50aa729822d1e1457eedd5fbddde46204c946f1cac600963d9",
+          "suffix": ".html",
+          "variant": "adversarial"
+        }
+      ],
+      "authority_created": false,
+      "claim_boundary": "Native canon-extension ProductGrade verifies normal, messy, and adversarial buyer-artifact execution, Lingua semantic custody, BEAST mechanical integrity, explicit authority boundaries, distinct variant generalisation, and current provenance binding. It does not prove buyer demand, payment, legal approval, publication authority, investment interest, funding approval, or market performance.",
+      "commercial_validation": "UNPROVED",
+      "evidence_receipts": [
+        {
+          "kind": "product_grade",
+          "name": "ProductGrade receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/fundingfinder/PRODUCT_GRADE_RECEIPT.json",
+          "sha256": "sha256:0f0f0c45700923abc41a790870cfead777248717a740ff85ec7514cd986301b0"
+        },
+        {
+          "kind": "variant_normal",
+          "name": "Normal variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/fundingfinder/variants/normal/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:06d51209b5b1d6b7640bdeb608c09fbd315415d642a12f9680c403734d21acf6"
+        },
+        {
+          "kind": "variant_messy",
+          "name": "Messy variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/fundingfinder/variants/messy/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:59322805eff64b1f68fad05f17cb06d74236231f69d998fe38c80be80a60235b"
+        },
+        {
+          "kind": "variant_adversarial",
+          "name": "Adversarial variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/fundingfinder/variants/adversarial/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:60997d4ca8e454c33a259d165178e3e6f32fc12afce9ab822a9c9a92a332f7fe"
+        },
+        {
+          "kind": "materialization",
+          "name": "Materialization",
+          "path": "products/proof/extension-evidence/raw/product_portfolio/canon_extensions/fundingfinder/site/CANON_EXTENSION_MATERIALIZATION_RECEIPT.json",
+          "sha256": "sha256:647bcd8b07ce0648eb67a53823dcb2907ea51b4568fa86d3e9717fb52f8e5129"
+        },
+        {
+          "kind": "provenance_seal",
+          "name": "Provenance Seal",
+          "path": "products/proof/extension-evidence/raw/product_portfolio/canon_extensions/fundingfinder/site/CANON_EXTENSION_PROOF_RECEIPT.json",
+          "sha256": "sha256:b33d324fb413609c783aefbdb850cd5c18cd553c5652d8e569d92f5d395caeea"
+        }
+      ],
+      "execution_variant_count": 3,
+      "execution_variants": 3,
+      "external_effects": false,
+      "name": "FundingFinder",
+      "proof_kind": "receipt_bound",
+      "proof_status": "CANON_EXTENSION_PROOF_VERIFIED",
+      "slug": "fundingfinder",
+      "status": "PRODUCT_GRADE_VERIFIED",
+      "verified_variant_count": 3
+    },
+    {
+      "artifacts": [
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 1009,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "NORMAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/investorproof/variants/normal/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:fec5f2b62392dbec74faf55e90135b9a30c50336fd016db86f091ca39d6d92c8",
+          "suffix": ".html",
+          "variant": "normal"
+        },
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 1055,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "MESSY BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/investorproof/variants/messy/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:caf293d534c563d3b69bb56141969dd77bd65e425862ff88888246c512cb482f",
+          "suffix": ".html",
+          "variant": "messy"
+        },
+        {
+          "adversarial_boundary_held": true,
+          "beast_mechanical_pass": true,
+          "bytes": 1284,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "ADVERSARIAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/investorproof/variants/adversarial/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:2e1e16c46245faf4aa8b3c84b42851f5f2dfbb7b958e62cd81af8f7651cf663d",
+          "suffix": ".html",
+          "variant": "adversarial"
+        }
+      ],
+      "authority_created": false,
+      "claim_boundary": "Native canon-extension ProductGrade verifies normal, messy, and adversarial buyer-artifact execution, Lingua semantic custody, BEAST mechanical integrity, explicit authority boundaries, distinct variant generalisation, and current provenance binding. It does not prove buyer demand, payment, legal approval, publication authority, investment interest, funding approval, or market performance.",
+      "commercial_validation": "UNPROVED",
+      "evidence_receipts": [
+        {
+          "kind": "product_grade",
+          "name": "ProductGrade receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/investorproof/PRODUCT_GRADE_RECEIPT.json",
+          "sha256": "sha256:07879452e79387b07ad9241ebd7f53849362c3f70a4611196955d79e1ee54557"
+        },
+        {
+          "kind": "variant_normal",
+          "name": "Normal variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/investorproof/variants/normal/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:06756cadc6e544afc783ee383e1da802633f63bcd2b1e396a6c6542c914651e7"
+        },
+        {
+          "kind": "variant_messy",
+          "name": "Messy variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/investorproof/variants/messy/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:564dedca0e243c5ac61d421a1717ce853bf00d157be4621155f88cba0d2a1705"
+        },
+        {
+          "kind": "variant_adversarial",
+          "name": "Adversarial variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/investorproof/variants/adversarial/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:991ae46e8a51e4549bd3098c2e436afccb57ea29793c625a1d7994ebed60d1e5"
+        },
+        {
+          "kind": "materialization",
+          "name": "Materialization",
+          "path": "products/proof/extension-evidence/raw/product_portfolio/canon_extensions/investorproof/site/CANON_EXTENSION_MATERIALIZATION_RECEIPT.json",
+          "sha256": "sha256:34789252b3c4ec54b40d51ac05ea7c9b5383a4deef49706f1eefe8fd1c9ccc3b"
+        },
+        {
+          "kind": "provenance_seal",
+          "name": "Provenance Seal",
+          "path": "products/proof/extension-evidence/raw/product_portfolio/canon_extensions/investorproof/site/CANON_EXTENSION_PROOF_RECEIPT.json",
+          "sha256": "sha256:da00c5c89cd7d9d33e156a81d248fa88fac3161cddba9d85411985e85c318ea1"
+        }
+      ],
+      "execution_variant_count": 3,
+      "execution_variants": 3,
+      "external_effects": false,
+      "name": "InvestorProof",
+      "proof_kind": "receipt_bound",
+      "proof_status": "CANON_EXTENSION_PROOF_VERIFIED",
+      "slug": "investorproof",
+      "status": "PRODUCT_GRADE_VERIFIED",
+      "verified_variant_count": 3
+    },
+    {
+      "artifacts": [
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 1006,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "NORMAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/launch-studio/variants/normal/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:8367ca72603c72086ba05ed8533351edd5d24f2ebcb5d4bda8680c1bc2fd002d",
+          "suffix": ".html",
+          "variant": "normal"
+        },
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 1021,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "MESSY BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/launch-studio/variants/messy/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:9c7f1f03bc9783d539016c682a1a4f1e74295784c130f31c3b4613c7a9362901",
+          "suffix": ".html",
+          "variant": "messy"
+        },
+        {
+          "adversarial_boundary_held": true,
+          "beast_mechanical_pass": true,
+          "bytes": 1165,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "ADVERSARIAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/launch-studio/variants/adversarial/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:54642eb566b5a54869417cc76df14b02e377bb3ea5eed1dfabc127a957e0a84c",
+          "suffix": ".html",
+          "variant": "adversarial"
+        }
+      ],
+      "authority_created": false,
+      "claim_boundary": "Native canon-extension ProductGrade verifies normal, messy, and adversarial buyer-artifact execution, Lingua semantic custody, BEAST mechanical integrity, explicit authority boundaries, distinct variant generalisation, and current provenance binding. It does not prove buyer demand, payment, legal approval, publication authority, investment interest, funding approval, or market performance.",
+      "commercial_validation": "UNPROVED",
+      "evidence_receipts": [
+        {
+          "kind": "product_grade",
+          "name": "ProductGrade receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/launch-studio/PRODUCT_GRADE_RECEIPT.json",
+          "sha256": "sha256:8546e216736b8821030269a92e78e1cceca2e5838321f83424b12ffcf095aea4"
+        },
+        {
+          "kind": "variant_normal",
+          "name": "Normal variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/launch-studio/variants/normal/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:2becf974d76dbb4fcd3b115e239f326f5fbf481887808a001a7ab7cbe9db1078"
+        },
+        {
+          "kind": "variant_messy",
+          "name": "Messy variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/launch-studio/variants/messy/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:3c1ebdfbe29d679613e05dc75a9738ef5646f9962b4901af8aff850a226fa8eb"
+        },
+        {
+          "kind": "variant_adversarial",
+          "name": "Adversarial variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/launch-studio/variants/adversarial/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:faa5ca2642e5c01330c20bf15361f602f9fe6e7a6302ea00dea796648543463a"
+        },
+        {
+          "kind": "materialization",
+          "name": "Materialization",
+          "path": "products/proof/extension-evidence/raw/product_portfolio/canon_extensions/launch-studio/site/CANON_EXTENSION_MATERIALIZATION_RECEIPT.json",
+          "sha256": "sha256:5a8351060c74d68910a149b15c499ec3af5689b3aa5a36eeaf8202454d1c9af0"
+        },
+        {
+          "kind": "provenance_seal",
+          "name": "Provenance Seal",
+          "path": "products/proof/extension-evidence/raw/product_portfolio/canon_extensions/launch-studio/site/CANON_EXTENSION_PROOF_RECEIPT.json",
+          "sha256": "sha256:ef972057082c1d0db6f8bd59f13ac330cdb109fdd8dfb29ddab2108257d9e61a"
+        }
+      ],
+      "execution_variant_count": 3,
+      "execution_variants": 3,
+      "external_effects": false,
+      "name": "Launch Studio",
+      "proof_kind": "receipt_bound",
+      "proof_status": "CANON_EXTENSION_PROOF_VERIFIED",
+      "slug": "launch-studio",
+      "status": "PRODUCT_GRADE_VERIFIED",
+      "verified_variant_count": 3
+    },
+    {
+      "artifacts": [
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 941,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "NORMAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/popia-readiness/variants/normal/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:27e88a73070b9dba0c2174cc7527d2ff40f5e89698fac17fbef8d834141f4a0a",
+          "suffix": ".html",
+          "variant": "normal"
+        },
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 955,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "MESSY BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/popia-readiness/variants/messy/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:e5a5dbbf0d87f260cb6ccf6965e6faa9072fa7d66db7e6767d11742adb53a46a",
+          "suffix": ".html",
+          "variant": "messy"
+        },
+        {
+          "adversarial_boundary_held": true,
+          "beast_mechanical_pass": true,
+          "bytes": 1273,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "ADVERSARIAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/popia-readiness/variants/adversarial/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:6b56a41336ad3131615918b37591e54ede0cac9d3a4d14293b0ccb2bdbfa142a",
+          "suffix": ".html",
+          "variant": "adversarial"
+        }
+      ],
+      "authority_created": false,
+      "claim_boundary": "Native canon-extension ProductGrade verifies normal, messy, and adversarial buyer-artifact execution, Lingua semantic custody, BEAST mechanical integrity, explicit authority boundaries, distinct variant generalisation, and current provenance binding. It does not prove buyer demand, payment, legal approval, publication authority, investment interest, funding approval, or market performance.",
+      "commercial_validation": "UNPROVED",
+      "evidence_receipts": [
+        {
+          "kind": "product_grade",
+          "name": "ProductGrade receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/popia-readiness/PRODUCT_GRADE_RECEIPT.json",
+          "sha256": "sha256:b9d133d234c109de5719d74b6fb7a4b33d8ff5ee0e8abcf23f67768bad0ab37d"
+        },
+        {
+          "kind": "variant_normal",
+          "name": "Normal variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/popia-readiness/variants/normal/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:7e3656d4f532f7a30062b4b3c62dd4d456f46939ccefdfd233836d2d5f47b408"
+        },
+        {
+          "kind": "variant_messy",
+          "name": "Messy variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/popia-readiness/variants/messy/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:4187953e3919622f361decc2c03c95ad11e122e1d51e8f211196af23452a2e5f"
+        },
+        {
+          "kind": "variant_adversarial",
+          "name": "Adversarial variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/popia-readiness/variants/adversarial/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:d15119ad3930797e27790be24109d58003254794ec96d7753bed03cc6ca5c74c"
+        },
+        {
+          "kind": "materialization",
+          "name": "Materialization",
+          "path": "products/proof/extension-evidence/raw/product_portfolio/canon_extensions/popia-readiness/site/CANON_EXTENSION_MATERIALIZATION_RECEIPT.json",
+          "sha256": "sha256:df380093c3d764eaaa4b8272ed1e715e9d37b9998017726604d863e33ea009a1"
+        },
+        {
+          "kind": "provenance_seal",
+          "name": "Provenance Seal",
+          "path": "products/proof/extension-evidence/raw/product_portfolio/canon_extensions/popia-readiness/site/CANON_EXTENSION_PROOF_RECEIPT.json",
+          "sha256": "sha256:6faf1301095a1de5f3661951bd8d1133bb57ff97352decc1d0d79675ab2210f4"
+        }
+      ],
+      "execution_variant_count": 3,
+      "execution_variants": 3,
+      "external_effects": false,
+      "name": "POPIA Readiness",
+      "proof_kind": "receipt_bound",
+      "proof_status": "CANON_EXTENSION_PROOF_VERIFIED",
+      "slug": "popia-readiness",
+      "status": "PRODUCT_GRADE_VERIFIED",
+      "verified_variant_count": 3
+    },
+    {
+      "artifacts": [
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 1022,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "NORMAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/professional-correspondence/variants/normal/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:0a259fdf09907b2c6b409f153d13cd272e2560c5731e7d0e091af77016d03ec5",
+          "suffix": ".html",
+          "variant": "normal"
+        },
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 1073,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "MESSY BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/professional-correspondence/variants/messy/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:93b18ba34f4cf55429b45c7cf6d73f2c11f192edcef792ce7811eea3b35c74c3",
+          "suffix": ".html",
+          "variant": "messy"
+        },
+        {
+          "adversarial_boundary_held": true,
+          "beast_mechanical_pass": true,
+          "bytes": 1289,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "ADVERSARIAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/professional-correspondence/variants/adversarial/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:948e211c9dba525b940c7c88c262314f42b38b90e4ace8a6a9226bd1388cf389",
+          "suffix": ".html",
+          "variant": "adversarial"
+        }
+      ],
+      "authority_created": false,
+      "claim_boundary": "Native canon-extension ProductGrade verifies normal, messy, and adversarial buyer-artifact execution, Lingua semantic custody, BEAST mechanical integrity, explicit authority boundaries, distinct variant generalisation, and current provenance binding. It does not prove buyer demand, payment, legal approval, publication authority, investment interest, funding approval, or market performance.",
+      "commercial_validation": "UNPROVED",
+      "evidence_receipts": [
+        {
+          "kind": "product_grade",
+          "name": "ProductGrade receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/professional-correspondence/PRODUCT_GRADE_RECEIPT.json",
+          "sha256": "sha256:231a8dfe72c1a54e30c032046b1678bc7bcd98a67302a78d73f98998dbfb1279"
+        },
+        {
+          "kind": "variant_normal",
+          "name": "Normal variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/professional-correspondence/variants/normal/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:678a8455c5d76dd622603df0bb134fb232b97bcd7ad6ee5e36812d7d9f37bcd6"
+        },
+        {
+          "kind": "variant_messy",
+          "name": "Messy variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/professional-correspondence/variants/messy/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:33a7afcab819fac865adcfcc265a7266293f6258662cc83973fa50f5bced5149"
+        },
+        {
+          "kind": "variant_adversarial",
+          "name": "Adversarial variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/professional-correspondence/variants/adversarial/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:1c7d100c7ee2e225981fca289fcf9eddc9a3f29b25d8baa4b07127ded5762aaf"
+        },
+        {
+          "kind": "materialization",
+          "name": "Materialization",
+          "path": "products/proof/extension-evidence/raw/product_portfolio/canon_extensions/professional-correspondence/site/CANON_EXTENSION_MATERIALIZATION_RECEIPT.json",
+          "sha256": "sha256:d8bc8f1e13ae1b2f77955ce78a1b87b0e356dd195a254fe0eb8b077dfeaf06c0"
+        },
+        {
+          "kind": "provenance_seal",
+          "name": "Provenance Seal",
+          "path": "products/proof/extension-evidence/raw/product_portfolio/canon_extensions/professional-correspondence/site/CANON_EXTENSION_PROOF_RECEIPT.json",
+          "sha256": "sha256:5ed0c8d4d6cae345145897cb0da6b0af993eb384095a64a2c7946d72825de19d"
+        }
+      ],
+      "execution_variant_count": 3,
+      "execution_variants": 3,
+      "external_effects": false,
+      "name": "Professional Correspondence",
+      "proof_kind": "receipt_bound",
+      "proof_status": "CANON_EXTENSION_PROOF_VERIFIED",
+      "slug": "professional-correspondence",
+      "status": "PRODUCT_GRADE_VERIFIED",
+      "verified_variant_count": 3
+    },
+    {
+      "artifacts": [
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 1014,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "NORMAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/professional-correspondence-studio/variants/normal/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:2ff114b949155bbd61748387f4e34ae4da98f23efbf8b284710c73eaa45a37b1",
+          "suffix": ".html",
+          "variant": "normal"
+        },
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 1035,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "MESSY BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/professional-correspondence-studio/variants/messy/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:3ee1dc606092d533b9c125e817f7e5a882f1c7be439a471670b11596ef607e47",
+          "suffix": ".html",
+          "variant": "messy"
+        },
+        {
+          "adversarial_boundary_held": true,
+          "beast_mechanical_pass": true,
+          "bytes": 1270,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "ADVERSARIAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/professional-correspondence-studio/variants/adversarial/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:763a6ba5b5571ac3090d4743a3a8c47c33abbf80dad80802ff204f97b3c125bd",
+          "suffix": ".html",
+          "variant": "adversarial"
+        }
+      ],
+      "authority_created": false,
+      "claim_boundary": "Native canon-extension ProductGrade verifies normal, messy, and adversarial buyer-artifact execution, Lingua semantic custody, BEAST mechanical integrity, explicit authority boundaries, distinct variant generalisation, and current provenance binding. It does not prove buyer demand, payment, legal approval, publication authority, investment interest, funding approval, or market performance.",
+      "commercial_validation": "UNPROVED",
+      "evidence_receipts": [
+        {
+          "kind": "product_grade",
+          "name": "ProductGrade receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/professional-correspondence-studio/PRODUCT_GRADE_RECEIPT.json",
+          "sha256": "sha256:287daf10722bf8e1246344a3474508ff12c7795d8c62afd2904158d8ff8a0854"
+        },
+        {
+          "kind": "variant_normal",
+          "name": "Normal variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/professional-correspondence-studio/variants/normal/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:30b7c4d9594e24239e97fac348edb2a2c3e40347feb3645216ca0fb2c9c4acdb"
+        },
+        {
+          "kind": "variant_messy",
+          "name": "Messy variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/professional-correspondence-studio/variants/messy/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:a958fcbee63c01397cee5be6093c6b4b851d97b6abfb875c2253625de887e05f"
+        },
+        {
+          "kind": "variant_adversarial",
+          "name": "Adversarial variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/professional-correspondence-studio/variants/adversarial/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:09d65912e556cf33c17df8f722fc7ed3f12315c3089bc1dd5dd739d6b85494b1"
+        },
+        {
+          "kind": "upstream_studio_product_grade",
+          "name": "Upstream Studio ProductGrade receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/studio_product_grade_support/professional_correspondence_studio/PRODUCT_GRADE_RECEIPT.json",
+          "sha256": "sha256:370787708f6572d9b7c3d7dc5fe1488b87d38e356c9ff2b0bf0e945081351d00"
+        }
+      ],
+      "execution_variant_count": 3,
+      "execution_variants": 3,
+      "external_effects": false,
+      "name": "Professional Correspondence Studio",
+      "proof_kind": "studio_product_grade",
+      "proof_status": "CANON_EXTENSION_PROOF_VERIFIED",
+      "slug": "professional-correspondence-studio",
+      "status": "PRODUCT_GRADE_VERIFIED",
+      "verified_variant_count": 3
+    },
+    {
+      "artifacts": [
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 1055,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "NORMAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/report-pitch-studio/variants/normal/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:b22fd501910ee5a1cf1e811707fbe9a935d12f8c673820d31bdb9d2672b1461e",
+          "suffix": ".html",
+          "variant": "normal"
+        },
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 1086,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "MESSY BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/report-pitch-studio/variants/messy/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:b02b85386c4f1170adcc725b16bb7afd26ace2b2919b9b08cea2b8f78babf83b",
+          "suffix": ".html",
+          "variant": "messy"
+        },
+        {
+          "adversarial_boundary_held": true,
+          "beast_mechanical_pass": true,
+          "bytes": 1304,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "ADVERSARIAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/report-pitch-studio/variants/adversarial/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:d7df0697af74a385eb779fb5550c5fd0144067b7716617fba88297d41e291e92",
+          "suffix": ".html",
+          "variant": "adversarial"
+        }
+      ],
+      "authority_created": false,
+      "claim_boundary": "Native canon-extension ProductGrade verifies normal, messy, and adversarial buyer-artifact execution, Lingua semantic custody, BEAST mechanical integrity, explicit authority boundaries, distinct variant generalisation, and current provenance binding. It does not prove buyer demand, payment, legal approval, publication authority, investment interest, funding approval, or market performance.",
+      "commercial_validation": "UNPROVED",
+      "evidence_receipts": [
+        {
+          "kind": "product_grade",
+          "name": "ProductGrade receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/report-pitch-studio/PRODUCT_GRADE_RECEIPT.json",
+          "sha256": "sha256:4d37b1d68444e2873c49b0c973b19dc01a82c24c254a3f32d47ff2feb52e018f"
+        },
+        {
+          "kind": "variant_normal",
+          "name": "Normal variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/report-pitch-studio/variants/normal/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:61a5ea59247fcf337609b6bf95982e81e4ba2e80f5b4c66e7cdbb9f02a6221d0"
+        },
+        {
+          "kind": "variant_messy",
+          "name": "Messy variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/report-pitch-studio/variants/messy/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:693f6630da945915e68bcc23c53a991e4e5c3f00a75d01ec2475dbee3987fe19"
+        },
+        {
+          "kind": "variant_adversarial",
+          "name": "Adversarial variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/report-pitch-studio/variants/adversarial/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:c3e1fb6d3631f6cd7afcfdf465b1b6147bd926979b211a68e4446c4188158088"
+        },
+        {
+          "kind": "materialization",
+          "name": "Materialization",
+          "path": "products/proof/extension-evidence/raw/product_portfolio/canon_extensions/report-pitch-studio/site/CANON_EXTENSION_MATERIALIZATION_RECEIPT.json",
+          "sha256": "sha256:f64de16adf2b190be4f99127ae39b671e1376910ace253f577555f0a78de11cd"
+        },
+        {
+          "kind": "provenance_seal",
+          "name": "Provenance Seal",
+          "path": "products/proof/extension-evidence/raw/product_portfolio/canon_extensions/report-pitch-studio/site/CANON_EXTENSION_PROOF_RECEIPT.json",
+          "sha256": "sha256:926950f917e3d18a0aa14f85ca7c8e86a3b42d55b197daa570c6c43ad3fdc4d7"
+        }
+      ],
+      "execution_variant_count": 3,
+      "execution_variants": 3,
+      "external_effects": false,
+      "name": "Report & Pitch Studio",
+      "proof_kind": "receipt_bound",
+      "proof_status": "CANON_EXTENSION_PROOF_VERIFIED",
+      "slug": "report-pitch-studio",
+      "status": "PRODUCT_GRADE_VERIFIED",
+      "verified_variant_count": 3
+    },
+    {
+      "artifacts": [
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 1057,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "NORMAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/site-studio/variants/normal/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:02bf5dfc31833376f63b423ea7feb9e195b8c3130f448976c00968298250fcdd",
+          "suffix": ".html",
+          "variant": "normal"
+        },
+        {
+          "adversarial_boundary_held": false,
+          "beast_mechanical_pass": true,
+          "bytes": 1048,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "MESSY BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/site-studio/variants/messy/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:a7273295c907e53f1b72c1d6515d8a3b3712abe378b966a92a06636e3c176e67",
+          "suffix": ".html",
+          "variant": "messy"
+        },
+        {
+          "adversarial_boundary_held": true,
+          "beast_mechanical_pass": true,
+          "bytes": 1343,
+          "human_boundary_present": true,
+          "lingua_semantic_custody": true,
+          "name": "ADVERSARIAL BUYER ARTIFACT",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/site-studio/variants/adversarial/customer_delivery/index.html",
+          "proof_relation": "customer_facing_artifact_from_verified_canon_extension_productgrade_run",
+          "sha256": "sha256:36c20015c5feb6e59b2b9e2992fcace37a6261d8b9606dc3f59f8f99a269efda",
+          "suffix": ".html",
+          "variant": "adversarial"
+        }
+      ],
+      "authority_created": false,
+      "claim_boundary": "Native canon-extension ProductGrade verifies normal, messy, and adversarial buyer-artifact execution, Lingua semantic custody, BEAST mechanical integrity, explicit authority boundaries, distinct variant generalisation, and current provenance binding. It does not prove buyer demand, payment, legal approval, publication authority, investment interest, funding approval, or market performance.",
+      "commercial_validation": "UNPROVED",
+      "evidence_receipts": [
+        {
+          "kind": "product_grade",
+          "name": "ProductGrade receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/site-studio/PRODUCT_GRADE_RECEIPT.json",
+          "sha256": "sha256:14bffb52478b4d446a3dad839b3a2648d594971534d3f64f5c5e6eea285c0fed"
+        },
+        {
+          "kind": "variant_normal",
+          "name": "Normal variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/site-studio/variants/normal/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:e3cc7a856f0b30fb67759c65653ddd5b2ae3648c9f2107be45ce73109f341fea"
+        },
+        {
+          "kind": "variant_messy",
+          "name": "Messy variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/site-studio/variants/messy/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:578b28011751b9abe70e029cd8c8420a5ec3da4d334e2a45ffd939d6055cfd2a"
+        },
+        {
+          "kind": "variant_adversarial",
+          "name": "Adversarial variant receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/canon_extensions/site-studio/variants/adversarial/PRODUCT_GRADE_VARIANT_RECEIPT.json",
+          "sha256": "sha256:9ab7c2222bde1cf64b7a1bee27787e4a65e030b8dd4c8e88b8310fd432e84a8c"
+        },
+        {
+          "kind": "upstream_studio_product_grade",
+          "name": "Upstream Studio ProductGrade receipt",
+          "path": "products/proof/extension-evidence/raw/product_grade/studio_product_grade_support/site_studio/PRODUCT_GRADE_RECEIPT.json",
+          "sha256": "sha256:0fe89574152aed4e469f437f4a8d1b01bb1ceb248fbbb2e94ca0972fd8b3ec7b"
+        }
+      ],
+      "execution_variant_count": 3,
+      "execution_variants": 3,
+      "external_effects": false,
+      "name": "Site Studio",
+      "proof_kind": "studio_product_grade",
+      "proof_status": "CANON_EXTENSION_PROOF_VERIFIED",
+      "slug": "site-studio",
+      "status": "PRODUCT_GRADE_VERIFIED",
+      "verified_variant_count": 3
+    }
+  ],
+  "schema": "dio.public.canon_extension_proof_catalog.v1",
+  "source_artifact_id": 10037123970,
+  "source_artifact_sha256": "sha256:cd49538d3a6eece75cbb8b4a3458269a21c84f9da5760e1b3e4f92b76e096ed1",
+  "source_commit": "c19705f1298af6f297076d8f631d74e77a639051",
+  "source_repository": "Byron2306/DIO-Full-Audit",
+  "source_workflow_run_id": 34175560147
+}

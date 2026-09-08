@@ -1,0 +1,127 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-CONTRACT_DESK-MESSY",
+  "domain": "publication_professional",
+  "subject": "DA-208 agreement with unsigned schedule",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "contract-desk",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-CONTRACT_DESK-MESSY",
+    "audience": "small-business contract owners",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:45212c8f445791688d6443de870d013f7648002d697cc075b0c1fef2b369405f",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "DA-208 agreement with unsigned schedule",
+        "source_hash": "sha256:e4490a5e0ce28eb310145d74d18701d1467e24f16e034983f7ba187d6edccdb3",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "labelled_instruction",
+        "source_text": "Counterparty: Mhlabeni Distribution",
+        "source_hash": "sha256:ae25eb8df335babc6c514e002e2e10589fb41d8a0146360ef41f307bd04f1bcb",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "body",
+        "source_text": "Purpose",
+        "source_hash": "sha256:d4e8830a71c73edffe0115b8abad16b0b5cb2e121047c64cd01995203cfad062",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "body",
+        "source_text": "Review the agreement while holding an unsigned pricing schedule as unresolved evidence.",
+        "source_hash": "sha256:d2925ad5d1be145109ea711e1d98c7fe755e00f7de03df6234d932ce4586f968",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "body",
+        "source_text": "Recorded facts",
+        "source_hash": "sha256:2c506eb5768e0330fa637f19d4d7fbc570155eb6b5fb6b7b29a4dc4991f8438c",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "labelled_instruction",
+        "source_text": "Recorded fact: The master agreement is signed.",
+        "source_hash": "sha256:18a9610708f4976e5009ed3c6d52eff81b17d07db3bd1bc969abc5451da38c3d",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "labelled_instruction",
+        "source_text": "Recorded fact: The attached pricing schedule is unsigned.",
+        "source_hash": "sha256:25c801f2b9abfe9af3886477b06c453ed3820a2b206d758c72d276fbeacf0344",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "body",
+        "source_text": "Open questions",
+        "source_hash": "sha256:5e0a96ef86c219c391afd5f0a25827cf8813194caf8e2753aff31c4213879415",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "labelled_instruction",
+        "source_text": "Question for human review: Which schedule version governs?",
+        "source_hash": "sha256:fcd6308ddf4f3671742ce50a1f1a2281d9daaa0d4bd4095aa6a6a86738bf2f03",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P010",
+        "unit_type": "labelled_instruction",
+        "source_text": "Question for human review: Is a signed schedule available?",
+        "source_hash": "sha256:fca458d492a9fcf479660a125a78b29f511f1dbe41d0a9a21bc3fe1a0e006e2a",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P011",
+        "unit_type": "instruction",
+        "source_text": "Human legal review and decision authority remain required. This brief does not determine legal validity or enforceability.",
+        "source_hash": "sha256:d09861ed5095228c039a49a5b0af516a52c1ca376a6f385ac6a3e7292cb4889c",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:45212c8f445791688d6443de870d013f7648002d697cc075b0c1fef2b369405f",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010",
+        "P011"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:31+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:31+00:00"
+}

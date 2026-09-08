@@ -1,0 +1,127 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-PROFESSIONAL_CORRESPONDENCE-NORMAL",
+  "domain": "publication_professional",
+  "subject": "INV-441 Aster Procurement",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "professional-correspondence",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-PROFESSIONAL_CORRESPONDENCE-NORMAL",
+    "audience": "business operators drafting controlled customer replies",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:73685cdef21cff53cd75d4a66d90e89be49f2b1a2158988bc8cbe2b3355c60dc",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Draft correspondence: INV-441 Aster Procurement",
+        "source_hash": "sha256:456335a529a530e0ab10459146afa9515723f3f8af8e0a1a220ea3d97916cbe9",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "labelled_instruction",
+        "source_text": "Recipient: Aster Procurement",
+        "source_hash": "sha256:e1c07f2a6eb3aa5a52a1baaedff58330476fb89fee2123079a682f9d199f4d28",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "body",
+        "source_text": "Purpose",
+        "source_hash": "sha256:d4e8830a71c73edffe0115b8abad16b0b5cb2e121047c64cd01995203cfad062",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "body",
+        "source_text": "Draft a firm professional reply while invoice evidence is reviewed.",
+        "source_hash": "sha256:6b1a0df11ec691821ee63376006770fa5cecdfa8de21bde5db67984e99b851c1",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "body",
+        "source_text": "Facts being preserved",
+        "source_hash": "sha256:1c9056369bb476745170e5c339078c1d139b6097c7fdb392208a59435a3502ff",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "labelled_instruction",
+        "source_text": "Fact: Invoice INV-441 is disputed.",
+        "source_hash": "sha256:8836742cce55e0495257ad301d714251178d08e4ad490d77eabae1d043eb2686",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "labelled_instruction",
+        "source_text": "Fact: Signed scope and timesheets remain under review.",
+        "source_hash": "sha256:b15b4bc837ab7acc12b7c7d9ee0c949c1a62e508356ac5d08c430ab356238561",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "labelled_instruction",
+        "source_text": "Fact: No settlement has been authorised.",
+        "source_hash": "sha256:b4247678714e0d6af2ac27f5fdda94df008f61e4ca1885105d41c0076403aeb9",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "body",
+        "source_text": "Draft position",
+        "source_hash": "sha256:d84339b547209f20deea05f92e371630cc6f313664a579ff1c6f3184e8ea113a",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P010",
+        "unit_type": "body",
+        "source_text": "No concession, settlement or external commitment is created by this draft.",
+        "source_hash": "sha256:dcdb214f0ad60541f51af67e6c805e3f6aa775c9fefad40571abb4b7eb6c9e21",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P011",
+        "unit_type": "instruction",
+        "source_text": "Human sender approval remains required before external send.",
+        "source_hash": "sha256:6793df9f8154e4d8c4e67429eed1c82ab2e41333a67489cbc1eb905012a46043",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:73685cdef21cff53cd75d4a66d90e89be49f2b1a2158988bc8cbe2b3355c60dc",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010",
+        "P011"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:33+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:33+00:00"
+}

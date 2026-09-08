@@ -1,0 +1,135 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-SITE_STUDIO-MESSY",
+  "domain": "publication_professional",
+  "subject": "Site studio missing alt-text case",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "site-studio",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-SITE_STUDIO-MESSY",
+    "audience": "operators assembling accessible governed publication sites",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:add2de9fb228770b93b2d7ac3bb43a32331bd6ab0377cfdcf5d6356db0064ae1",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Site studio missing alt-text case",
+        "source_hash": "sha256:14f3ec9168768d19fc4c583cd825f63c5dd2cd6b9cf6fd48b699fd09b9bf64f6",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "body",
+        "source_text": "Publication and audience",
+        "source_hash": "sha256:79ca693a1f0aa7e9763231de7f3737e7b2dffcb42ce3463eb97e6ea40b840f88",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "labelled_instruction",
+        "source_text": "Target publication: Public website",
+        "source_hash": "sha256:ecea2558a8017e7cac4a6a0cba2dfb2ebce14f26d091fef1c228353c8f4a7c25",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "labelled_instruction",
+        "source_text": "Audience: programme participants",
+        "source_hash": "sha256:2d7da83f830dbc4e71b9437c85e94616e150ead8c410b9238c08595b02e4bb89",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "body",
+        "source_text": "Purpose",
+        "source_hash": "sha256:d4e8830a71c73edffe0115b8abad16b0b5cb2e121047c64cd01995203cfad062",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "body",
+        "source_text": "Assemble the site while surfacing an image with missing alt text.",
+        "source_hash": "sha256:9489c9fe9c4d83e0304f3b2bf1ec59513e94ad51c0052c46ab6194e30b3ea287",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "body",
+        "source_text": "Supported evidence",
+        "source_hash": "sha256:2946bba7a5b20900f3537f0c68cab252cc1580434416632a5e175b421fcb6a75",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "labelled_instruction",
+        "source_text": "Supported: Page copy is supplied.",
+        "source_hash": "sha256:0197960bfde3569d86c31a47f93ced6ccee0671c6213ca6cc2ea327b4e65cfb9",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "labelled_instruction",
+        "source_text": "Supported: One hero image lacks alternative text.",
+        "source_hash": "sha256:19c537274d458dbcaaef5802f80692ef9c9bdc76f169ba980838dd5436cbb258",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P010",
+        "unit_type": "body",
+        "source_text": "Held claims",
+        "source_hash": "sha256:da3e5d0fa6ce1b5b94bfcb4c2dabb18eaed00c7054de998de4fd5eeaee4b42c8",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P011",
+        "unit_type": "labelled_instruction",
+        "source_text": "Held for human review: The accessibility gap remains visible for human remediation.",
+        "source_hash": "sha256:53581a3e380a53d718cb63827533081a019512ffe9cae510d63b735df18b87e3",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P012",
+        "unit_type": "instruction",
+        "source_text": "Human editorial review and publication authority remain required before external release.",
+        "source_hash": "sha256:4ce243b60d34be7d5a61deaf829fc30c03fde1aa4d297b455893e896d8796475",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:add2de9fb228770b93b2d7ac3bb43a32331bd6ab0377cfdcf5d6356db0064ae1",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010",
+        "P011",
+        "P012"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:34+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:34+00:00"
+}

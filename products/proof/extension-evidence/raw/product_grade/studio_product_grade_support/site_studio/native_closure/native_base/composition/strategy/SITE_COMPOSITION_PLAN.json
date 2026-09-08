@@ -1,0 +1,24 @@
+{
+  "buyer": "South African research consultancy",
+  "customer_job": "I need a professional website for a South African research consultancy.",
+  "human_gate": "NEEDS_YOU",
+  "positioning": {
+    "buyer_problem": "Important research is often trapped in reports, disconnected evidence and unclear decision pathways.",
+    "category": "research advisory",
+    "desired_outcome": "A credible public presence that makes expertise, services and evidence boundaries immediately understandable.",
+    "forbidden_claims": [
+      "guaranteed research outcomes",
+      "fabricated clients",
+      "fabricated testimonials",
+      "automatic publication"
+    ]
+  },
+  "publication": "REFUSE",
+  "required_sections": [
+    "Research strategy",
+    "Evidence synthesis",
+    "Decision communication"
+  ],
+  "schema": "dio.site_studio_composition_plan.v1",
+  "studio_id": "site_studio"
+}

@@ -1,0 +1,111 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-FINANCE_READINESS_STUDIO-MESSY",
+  "domain": "readiness_assurance",
+  "subject": "Finance studio duplicate forecast case",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "finance-readiness-studio",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-FINANCE_READINESS_STUDIO-MESSY",
+    "audience": "operators assembling finance-ready evidence packs",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:b349b5b47bb8e9f6cf41a1964cd709827648a224b3deff777022a326aa6f8c10",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Finance studio duplicate forecast case",
+        "source_hash": "sha256:cfb4b7d1a2fa6060f8967e614a7f811544fbe8f23d10d50a8acf727ac4274d28",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "body",
+        "source_text": "Purpose",
+        "source_hash": "sha256:d4e8830a71c73edffe0115b8abad16b0b5cb2e121047c64cd01995203cfad062",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "body",
+        "source_text": "Assemble the pack while exposing two materially different forecast versions.",
+        "source_hash": "sha256:98d7072e02c9d023836a1a8ec3d40b6016cbc066c72bd1f70b4580587934232f",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "body",
+        "source_text": "Requirement review",
+        "source_hash": "sha256:f10eeb64927c224658eb00a5d1900f7fb2b277d6d044b8f080d793acd57e24c3",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "labelled_instruction",
+        "source_text": "Forecast v3: SUPPLIED",
+        "source_hash": "sha256:30ba8cf2c54ee8f8562a6e33f29d8f5f435437e23645f17060ef00af785c5eef",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "labelled_instruction",
+        "source_text": "Forecast v4: CONFLICTING",
+        "source_hash": "sha256:caa2334555b47fc1e20ef972fe9644be9a8ed9858a2d41e3aa08ca80d3e64741",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "labelled_instruction",
+        "source_text": "Operator selection: MISSING",
+        "source_hash": "sha256:6a01eb1e0f1a1a7b60cf29cabb7b4eff1c3d1cfd9e7ef1f7602f7ab24ed86c33",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "labelled_instruction",
+        "source_text": "Missing or unresolved evidence items: 2",
+        "source_hash": "sha256:8815c56dcf9d79af1bf575fc6822e2bfe1a37bd795652b14cf5b8c2a2b59b5cb",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "instruction",
+        "source_text": "This is an evidence-readiness assessment, not a lending, affordability or funding decision. Human decision authority remains required.",
+        "source_hash": "sha256:0c608da668253589d6e9d007ac5d4972b0d009b7e0b2bcdd1e63881fc3e22b58",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:b349b5b47bb8e9f6cf41a1964cd709827648a224b3deff777022a326aa6f8c10",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:32+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:32+00:00"
+}

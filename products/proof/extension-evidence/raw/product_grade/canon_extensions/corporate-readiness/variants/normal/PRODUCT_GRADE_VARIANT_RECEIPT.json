@@ -1,0 +1,61 @@
+{
+  "adversarial_boundary_held": null,
+  "adversarial_expected_boundary": null,
+  "adversarial_pressure": null,
+  "anchor_present": true,
+  "authority_created": false,
+  "beast_artifact_checks": {
+    "checks": [
+      {
+        "evidence": {
+          "languages": {
+            "html": 1
+          }
+        },
+        "name": "language_inventory",
+        "status": "passed",
+        "summary": "Detected 1 language/artifact family(ies)"
+      },
+      {
+        "evidence": {
+          "errors": [],
+          "files_checked": 1
+        },
+        "name": "html_syntax",
+        "status": "passed",
+        "summary": "Parsed 1 HTML file(s)"
+      },
+      {
+        "evidence": {},
+        "name": "javascript_syntax",
+        "status": "skipped",
+        "summary": "No JavaScript files found"
+      }
+    ],
+    "failed_count": 0,
+    "mechanical_pass": true,
+    "quality_cascade_source_sha256": "f5f4e897510234905e1c40f5fd55a448c991308657e74f3dfadd50303d4e4737",
+    "schema": "dio.beast.product_grade_artifact_checks.v1",
+    "source": "EdgeK-BEAST/app/kernel/data_processing/quality_cascade.py",
+    "workspace": "/home/runner/work/DIO-Full-Audit/DIO-Full-Audit/state/product_grade/canon_extensions/corporate-readiness/variants/normal/customer_delivery"
+  },
+  "beast_mechanical_pass": true,
+  "critical_blockers": [],
+  "customer_artifact": "state/product_grade/canon_extensions/corporate-readiness/variants/normal/customer_delivery/index.html",
+  "customer_artifact_sha256": "cec54f92034a9e0d2d4d17dc1cb7ee57b43429c88483a721a056062a07d6ae74",
+  "expected_anchor": "Karoo Field Services",
+  "external_effects": false,
+  "forbidden_claim_hits": [],
+  "human_boundary_present": true,
+  "lingua_object_id": "DIO-PG-CORPORATE_READINESS-NORMAL",
+  "lingua_registration_fingerprint": "sha256:7daf0f4a99f9e5402eb6fb7fa834baeb50a74caec553c9ad683c1f3e0ef29be5",
+  "lingua_registration_schema": "dio.lingua.product_registration_receipt.v1",
+  "lingua_semantic_custody": true,
+  "lingua_source_document_hash": "sha256:a34ac16cd0ecda445c8e1a814a5d79c24067779da5d31734b990cacf6f5e83a9",
+  "passed": true,
+  "receipt_fingerprint": "sha256:00934d40f0f29649e624511ebd592e55de6ecec434e68324454bd44a99597ae1",
+  "schema": "dio.product_grade.canon_extension_native_variant.v1",
+  "semantic_unit_count": 9,
+  "slug": "corporate-readiness",
+  "variant": "normal"
+}

@@ -1,0 +1,26 @@
+{
+  "approval": {
+    "required": true,
+    "state": "pending"
+  },
+  "authority_created": false,
+  "body": "Dear Client,\nThank you for raising your concern regarding the invoice.\nWe have noted the points you have raised and will review the relevant scope, records and billing basis before responding on the substance of the dispute.\nAt this stage, this acknowledgement does not amend the invoice, concede liability, waive any rights, or create a settlement or refund commitment.\nOnce the review is complete, an authorised person will respond with the appropriate next step.\nKind regards,\nProfessional Services Team",
+  "direction": "outbound",
+  "external_send_executed": false,
+  "lingua": {
+    "authority_created": false,
+    "object_id": "VESPER-COMM-321EB1AB966E78ED5285",
+    "schema": "dio.lingua.communication_receipt.v1",
+    "semantic_lineage_created": true,
+    "send_authorized": false,
+    "source_document_hash": "sha256:934d981d4326fc4ed83c3439199ebbecbf5aca6b8cafc6f2a01527a7766ee811",
+    "translation_state": "source_language"
+  },
+  "mail_intent_id": "MAIL-STUDIO-HARVEST-CORRESPONDENCE-001",
+  "purpose": "professional_correspondence_controlled_draft",
+  "recipient": "client@example.invalid",
+  "risk": "moderate",
+  "schema": "dio.mail_intent.v1",
+  "send_state": "draft",
+  "subject": "Re: Invoice query and review"
+}

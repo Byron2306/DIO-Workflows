@@ -1,0 +1,16 @@
+{
+  "artifact_type": "site_studio_controlled_draft",
+  "authority_created": false,
+  "channel": "studio_harvest",
+  "external_action_executed": false,
+  "object_id": "SITE_STUDIO-COMM-382A41CA70AA03546394",
+  "owner": "site_studio",
+  "publication_authorized": false,
+  "schema": "dio.lingua.communication_receipt.v1",
+  "semantic_lineage_created": true,
+  "send_authorized": false,
+  "source_document_hash": "sha256:d8b76906cb62069b7a2958946cff9c10971af1fa5ac8a9ade916e20d793f8614",
+  "source_language": "English",
+  "target_language": "English",
+  "translation_state": "source_language"
+}

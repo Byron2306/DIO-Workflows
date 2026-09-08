@@ -1,0 +1,33 @@
+{
+  "authority_created": false,
+  "delivery_profile": "editable_review",
+  "delivery_profile_hash": "6edd3459fdf23d7ce62d5bf1ed48796f132f98e2ec25273a777c02aa84b0ece8",
+  "object_id": "STUDIO-ARTICLE_PUBLICATION_STUDIO",
+  "outputs": [
+    {
+      "bytes": 3053,
+      "channel": "html",
+      "sha256": "c6afe91375716722f25ac4b185f8a1e3ed90f2ccabdd65bcdcb9a50a54544eed"
+    }
+  ],
+  "publication_authorized": false,
+  "qa": {
+    "errors": [],
+    "passed": true,
+    "semantic_completeness": {
+      "html": {
+        "expected_strings": 7,
+        "missing": [],
+        "missing_count": 0
+      }
+    },
+    "warnings": []
+  },
+  "release_mode": false,
+  "schema": "dio.format_core.receipt.v1",
+  "semantic_blocks": 7,
+  "semantic_source_hash": "c9667d65d0a590298a5f50a8c08a3471cc40ae6357b97a13b0b6a5fcb1a29664",
+  "status": "rendered_review_candidate",
+  "style_profile": "dio_professional",
+  "style_profile_hash": "f08f383c90917a43a2f70439657fe368302ac1a623a61656cf7443c3bfad23e5"
+}

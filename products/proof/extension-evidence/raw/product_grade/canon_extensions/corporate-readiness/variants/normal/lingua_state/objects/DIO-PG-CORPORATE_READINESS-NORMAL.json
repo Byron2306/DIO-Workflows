@@ -1,0 +1,111 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-CORPORATE_READINESS-NORMAL",
+  "domain": "readiness_assurance",
+  "subject": "Karoo Field Services",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "corporate-readiness",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-CORPORATE_READINESS-NORMAL",
+    "audience": "owner-managed businesses",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:a34ac16cd0ecda445c8e1a814a5d79c24067779da5d31734b990cacf6f5e83a9",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Karoo Field Services",
+        "source_hash": "sha256:db147ef0f93f816bb7eafb4135443277d138c8aabedce285e89a8bc880681233",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "body",
+        "source_text": "Purpose",
+        "source_hash": "sha256:d4e8830a71c73edffe0115b8abad16b0b5cb2e121047c64cd01995203cfad062",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "body",
+        "source_text": "Assess whether the supplied corporate evidence pack is ready for human review.",
+        "source_hash": "sha256:f30d746e026bd3cd617ff8a786a43d6cb8931387f80362376cf55dbb86515685",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "body",
+        "source_text": "Requirement review",
+        "source_hash": "sha256:f10eeb64927c224658eb00a5d1900f7fb2b277d6d044b8f080d793acd57e24c3",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "labelled_instruction",
+        "source_text": "Company profile: SUPPLIED",
+        "source_hash": "sha256:d0f2f2289fb35844ab94912a702d25abfb7b78b2bea7ef032a1ee14b7fa55d44",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "labelled_instruction",
+        "source_text": "Board resolution: MISSING",
+        "source_hash": "sha256:c589bd338260d2088033eebe6b521f250f54819aa22f593d3e944491a2632e7d",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "labelled_instruction",
+        "source_text": "Financial statements: SUPPLIED",
+        "source_hash": "sha256:64dd1b2430902ce1ad9149a31b18ded019569afa38a62f34d5fd518218a312b9",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "labelled_instruction",
+        "source_text": "Missing or unresolved evidence items: 1",
+        "source_hash": "sha256:b2a575818791c1bbbf00e5f081ab80f50101b3c94a5c48a3eb2e7b8f8f3da6b7",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "instruction",
+        "source_text": "This is an evidence-readiness assessment, not an approval or legal clearance. Human decision authority remains required.",
+        "source_hash": "sha256:cfb621d9550f5c0cf74094dae9c151d7f8fafd6ff890e93fb0145ba53b8408bd",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:a34ac16cd0ecda445c8e1a814a5d79c24067779da5d31734b990cacf6f5e83a9",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:32+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:32+00:00"
+}

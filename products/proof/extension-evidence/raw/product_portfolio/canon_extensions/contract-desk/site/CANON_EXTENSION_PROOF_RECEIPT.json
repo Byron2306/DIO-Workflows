@@ -1,0 +1,19 @@
+{
+  "authority_created": false,
+  "canon_id": "CANON-EXT-CONTRACT_DESK",
+  "claim_boundary": "For canon materialization receipts, this seal requires the source receipt to bind the exact current artifact SHA-256. Legacy historical generation receipts remain readable for compatibility but are not used by the current canon-extension production workflow. This seal does not create ProductGrade, buyer demand, payment, legal approval, publication authority or commercial validation.",
+  "commercial_validation": "UNPROVED",
+  "current_artifact_sha256": "9d1cc10629cf77ca9c159e5cc1ea2ca119c4b855c9cefed03278dbeb59592cc8",
+  "external_effects": false,
+  "name": "Contract Desk",
+  "primary_artifact": "state/product_portfolio/canon_extensions/contract-desk/site/index.html",
+  "receipt_fingerprint": "sha256:7219b26c70b9b227e6382ec4a0e68dbd46c55ce1102658d5d3c949987e768e18",
+  "schema": "dio.canon_extension.proof_seal.v1",
+  "slug": "contract-desk",
+  "source_generation_receipt": "state/product_portfolio/canon_extensions/contract-desk/site/CANON_EXTENSION_MATERIALIZATION_RECEIPT.json",
+  "source_generation_receipt_schema": "dio.canon_extension.materialization_receipt.v1",
+  "source_generation_receipt_sha256": "f304ba55bc61a45248b0cf49e3a2406497c4a5e4ebb32ca73c3ea5e92c8c8016",
+  "source_receipt_artifact_bound": true,
+  "status": "PASS",
+  "strict_materialization_binding": true
+}

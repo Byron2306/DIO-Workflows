@@ -1,0 +1,37 @@
+{
+  "authority_created": false,
+  "capabilities_executed": [
+    "media.creative.compose"
+  ],
+  "creative": {
+    "editorial_register": [
+      "clear",
+      "evidence-first",
+      "measured",
+      "non-sensational"
+    ],
+    "fabricated_quotations": "REFUSE",
+    "fabricated_sources": "REFUSE",
+    "headline": "Why evidence lineage matters when professional work moves faster",
+    "publication": "REFUSE",
+    "social_teaser": {
+      "angle": "authority plus proof",
+      "body": "Fast editorial production can separate polished prose from the source trail needed for later review and correction. Article Studio turns one bounded\u2026",
+      "cta": "Prepare an editorial review",
+      "funnel_stage": "authority",
+      "headline": "Produce a clear article draft while preserving source, claim and\u2026",
+      "objection": "Will this become another transformation project?",
+      "objection_answer": "Start with one bounded case at a fixed launch scope before expanding anything.",
+      "offer": "R 5,900 ZAR for one bounded case.",
+      "proof_angle": "The controlled editorial fixture keeps source and claim relationships visible and refuses automatic publication.",
+      "tone": "executive_confidence",
+      "truth_boundary": "Human authority stays with the authorised reviewer."
+    },
+    "standfirst": "A controlled editorial fixture showing how source provenance and claim boundaries can remain visible while a draft becomes publication-ready."
+  },
+  "media_spend": "REFUSE",
+  "publication": "REFUSE",
+  "schema": "dio.nichefoundry_article_creative_receipt.v1",
+  "source_engine": "nichefoundry",
+  "studio_id": "article_publication_studio"
+}

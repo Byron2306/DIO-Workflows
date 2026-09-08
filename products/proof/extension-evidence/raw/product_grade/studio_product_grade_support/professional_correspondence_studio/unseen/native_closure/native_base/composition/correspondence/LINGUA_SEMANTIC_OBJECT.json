@@ -1,0 +1,28 @@
+{
+  "meaning_state": "CONTROLLED_TEST_FIXTURE",
+  "must_not_invent": [
+    "admission of fault",
+    "waiver",
+    "refund promise",
+    "discount promise",
+    "settlement agreement",
+    "legal conclusion"
+  ],
+  "must_preserve": [
+    "the client disputes invoice INV-2047",
+    "the signed scope and timesheets require review",
+    "no settlement has been authorised"
+  ],
+  "purpose": "Respond firmly and professionally to an invoice dispute while preserving factual and authority boundaries.",
+  "schema": "dio.lingua_correspondence_semantic_object.v1",
+  "send_authority": "REFUSE",
+  "source_engine": "lingua",
+  "source_request": "Please draft a firm but professional reply to a client disputing invoice INV-2047 while we verify the signed scope and timesheets.",
+  "studio_id": "professional_correspondence_studio",
+  "tone": [
+    "calm",
+    "firm",
+    "professional",
+    "non-adversarial"
+  ]
+}

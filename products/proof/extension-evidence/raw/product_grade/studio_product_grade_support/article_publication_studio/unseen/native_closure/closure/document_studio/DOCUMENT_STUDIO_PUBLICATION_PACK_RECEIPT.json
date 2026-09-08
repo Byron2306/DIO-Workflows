@@ -1,0 +1,19 @@
+{
+  "artifact_type": "publication_review_pack",
+  "authority_created": false,
+  "bytes": 3146,
+  "capability_executed": "document.publication_pack",
+  "channel": "html",
+  "delivery_profile_hash": "6edd3459fdf23d7ce62d5bf1ed48796f132f98e2ec25273a777c02aa84b0ece8",
+  "external_delivery": "REFUSE",
+  "output_path": "closure/document_studio/publication_pack/studio-publication-article-publication-studio-english.html",
+  "publication": "REFUSE",
+  "qa_passed": true,
+  "release_mode": false,
+  "schema": "dio.document_studio_publication_pack_receipt.v1",
+  "semantic_source_hash": "9988267cdf3611a65ed0f4796645963444d1f3d57bc4452f796633da9db440f2",
+  "sha256": "58c9144f37288ed40a39bbe0615230738b880a1fbdbdd6692f73a7de5f43cdd3",
+  "source_engine": "document_studio",
+  "studio_id": "article_publication_studio",
+  "style_profile_hash": "f08f383c90917a43a2f70439657fe368302ac1a623a61656cf7443c3bfad23e5"
+}

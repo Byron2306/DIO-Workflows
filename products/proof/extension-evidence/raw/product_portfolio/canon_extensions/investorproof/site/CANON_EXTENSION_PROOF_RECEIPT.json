@@ -1,0 +1,19 @@
+{
+  "authority_created": false,
+  "canon_id": "CANON-EXT-INVESTORPROOF",
+  "claim_boundary": "For canon materialization receipts, this seal requires the source receipt to bind the exact current artifact SHA-256. Legacy historical generation receipts remain readable for compatibility but are not used by the current canon-extension production workflow. This seal does not create ProductGrade, buyer demand, payment, legal approval, publication authority or commercial validation.",
+  "commercial_validation": "UNPROVED",
+  "current_artifact_sha256": "0789cf88330a7ce4c0336c6f6aa69f8245cbe08a2a48f676e121f56feb1be2f8",
+  "external_effects": false,
+  "name": "InvestorProof",
+  "primary_artifact": "state/product_portfolio/canon_extensions/investorproof/site/index.html",
+  "receipt_fingerprint": "sha256:bee146ac58776f253ef09a05d37f9ce4e83c6cce29f2b7da00efd6fa2dae5fba",
+  "schema": "dio.canon_extension.proof_seal.v1",
+  "slug": "investorproof",
+  "source_generation_receipt": "state/product_portfolio/canon_extensions/investorproof/site/CANON_EXTENSION_MATERIALIZATION_RECEIPT.json",
+  "source_generation_receipt_schema": "dio.canon_extension.materialization_receipt.v1",
+  "source_generation_receipt_sha256": "34789252b3c4ec54b40d51ac05ea7c9b5383a4deef49706f1eefe8fd1c9ccc3b",
+  "source_receipt_artifact_bound": true,
+  "status": "PASS",
+  "strict_materialization_binding": true
+}

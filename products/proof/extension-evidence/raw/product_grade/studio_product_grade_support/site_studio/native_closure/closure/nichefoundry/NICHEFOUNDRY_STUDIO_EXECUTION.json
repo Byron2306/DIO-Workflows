@@ -1,0 +1,73 @@
+{
+  "authority_created": false,
+  "capabilities_executed": [
+    "market.position",
+    "media.creative.compose"
+  ],
+  "channel": "LINKEDIN_ORGANIC",
+  "copy": {
+    "angle": "authority plus proof",
+    "body": "Important research is often trapped in reports, disconnected evidence and unclear decision pathways. Site Studio turns one bounded case into\u2026",
+    "cta": "Prepare a website brief",
+    "funnel_stage": "authority",
+    "headline": "A credible public presence that makes expertise, services and\u2026",
+    "objection": "Will this become another transformation project?",
+    "objection_answer": "Start with one bounded case at a fixed launch scope before expanding anything.",
+    "offer": "R 7,900 ZAR for one bounded case.",
+    "proof_angle": "Controlled Studio composition produces a reviewable website package while publication remains human-held.",
+    "tone": "executive_confidence",
+    "truth_boundary": "Human authority stays with the authorised reviewer."
+  },
+  "media_spend": "REFUSE",
+  "publication": "REFUSE",
+  "schema": "dio.nichefoundry_studio_execution_receipt.v1",
+  "source_engine": "nichefoundry",
+  "strategy": {
+    "buyer_pain": "Important research is often trapped in reports, disconnected evidence and unclear decision pathways.",
+    "commercial_family": "Professional Intelligence Studios",
+    "cost_of_inaction": "Leave it manual and the same rework, searching and deadline pressure keeps recurring: important research is often trapped in reports, disconnected evidence and unclear decision pathways.",
+    "cta": "Prepare a website brief",
+    "desired_outcome": "A credible public presence that makes expertise, services and evidence boundaries immediately understandable.",
+    "hooks": [
+      "Important research is often trapped in reports, disconnected evidence and\u2026",
+      "A credible public presence that makes expertise, services and evidence\u2026",
+      "Site Studio: one bounded proof-backed pilot from R 7,900 ZAR."
+    ],
+    "objections": [
+      {
+        "answer": "Start with one bounded case at a fixed launch scope before expanding anything.",
+        "question": "Will this become another transformation project?"
+      },
+      {
+        "answer": "The bounded route produces inspectable artifacts and proof receipts rather than asking you to trust an opaque answer.",
+        "question": "Is this just generic AI in a new wrapper?"
+      },
+      {
+        "answer": "No. DIO prepares and binds the work; the authorised human keeps the consequential decision.",
+        "question": "Will software make the professional decision?"
+      },
+      {
+        "answer": "No. The pilot is designed around the minimum authorised material needed for one bounded case.",
+        "question": "Do I have to hand over everything?"
+      }
+    ],
+    "offer": {
+      "expansion_rule": "Expand only after the bounded pilot produces inspectable value and the operator chooses to continue.",
+      "launch_price_zar": 7900,
+      "name": "One bounded professional website composition proof",
+      "price_label": "R 7,900 ZAR",
+      "scope": "one bounded case"
+    },
+    "promise": "A credible public presence that makes expertise, services and evidence boundaries immediately understandable.",
+    "proof_angle": "Controlled Studio composition produces a reviewable website package while publication remains human-held.",
+    "schema": "dio.marketing.commercial_strategy.v1",
+    "target_buyer": "South African research consultancy",
+    "truth_boundaries": [
+      "Controlled proof is not guaranteed ROI or customer validation.",
+      "Consequential professional decisions remain human-owned.",
+      "No automatic publication or ad spend is created by this strategy.",
+      "No fabricated scarcity, urgency, certification or outcome claims."
+    ]
+  },
+  "studio_id": "site_studio"
+}

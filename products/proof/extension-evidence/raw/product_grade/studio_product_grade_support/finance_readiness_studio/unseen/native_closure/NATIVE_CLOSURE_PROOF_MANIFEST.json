@@ -1,0 +1,56 @@
+{
+  "all_declared_capabilities_executed": true,
+  "artifacts": [
+    {
+      "bytes": 1989,
+      "path": "closure/commercial_truth/COMMERCIAL_TRUTH_STUDIO.json",
+      "sha256": "6ffe0ca2fcd3617acd6219132690b28f0757baf294b8a684bc72b72407eab58c"
+    },
+    {
+      "bytes": 920,
+      "path": "closure/document_studio/DOCUMENT_STUDIO_FINANCE_PACK_RECEIPT.json",
+      "sha256": "416ff7be6399d003cce618352185331adf35d8bef7be78001465ee80f235056f"
+    },
+    {
+      "bytes": 2966,
+      "path": "closure/document_studio/finance_readiness_pack/studio-finance-finance-readiness-studio-english.html",
+      "sha256": "f1d076209c5efff1d6eed5c238e2183b77ed47d7f26b22720984ae389db5d170"
+    },
+    {
+      "bytes": 1782,
+      "path": "closure/evidex/EVIDEX_READINESS_GAP_MAP.json",
+      "sha256": "4693d38b9ae5e22e82cbe1fdf6a2fd4881a4a016cf40ed52cde10872321f4cf2"
+    },
+    {
+      "bytes": 2329,
+      "path": "closure/evidex/EVIDEX_STUDIO_INTAKE.json",
+      "sha256": "763c7716af9c1f92febce89c1d1a13ea7e52b0a115a9eeb94c5bd957b3804ea3"
+    },
+    {
+      "bytes": 517,
+      "path": "closure/presence/PRESENCE_STUDIO_RELEASE.json",
+      "sha256": "98e3a7d13facced10ad1d00db8e5e5725ede894c78e2ab822552ddecb2cdba1c"
+    },
+    {
+      "bytes": 4857,
+      "path": "NATIVE_CAPABILITY_CLOSURE_LEDGER.json",
+      "sha256": "99d040f7e8073ad52199305d601f604498ab042997d0bbb311a13b538d3f1c86"
+    }
+  ],
+  "authority_created": false,
+  "base_native_execution_fingerprint": "sha256:494f9dafc80d6c9b2677792d299f40a799327a23c2c9f88d27bd04434661f8e1",
+  "base_proof_fingerprint": "sha256:8fc5cd87a4ba2f9d716cee57f1fb11ab10b2a828562300fca54134b3c7e7882f",
+  "external_effects": false,
+  "external_publication": "REFUSE",
+  "external_send": "REFUSE",
+  "media_spend": "REFUSE",
+  "native_organ_count": 8,
+  "new_engine_created": false,
+  "organ_execution_truth": "NATIVE_MULTI_ORGAN_EXECUTION_PROVED",
+  "partial_organ_count": 0,
+  "payment": "REFUSE",
+  "proof_fingerprint": "sha256:1371a9ff2b2f6fb3e038f729771989285cf223d17de3032f607e70adb8c35cc6",
+  "schema": "dio.studio_native_closure_proof_manifest.v1",
+  "source_bound_only_count": 0,
+  "studio_id": "finance_readiness_studio"
+}

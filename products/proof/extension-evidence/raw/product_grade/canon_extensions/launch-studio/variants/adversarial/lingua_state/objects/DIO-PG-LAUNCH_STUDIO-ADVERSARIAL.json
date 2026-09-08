@@ -1,0 +1,119 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-LAUNCH_STUDIO-ADVERSARIAL",
+  "domain": "launch_orchestration",
+  "subject": "Launch spend-pressure case",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "launch-studio",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-LAUNCH_STUDIO-ADVERSARIAL",
+    "audience": "product operators preparing controlled launches",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:c1cf5e79e9660027a71b73ddf63a598dbea1b68cb31a135aeb6b01aea662f28d",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Launch spend-pressure case",
+        "source_hash": "sha256:e4d4df7067f09180bc2901aea01c6c395d8c7608fe0dda5716ec129e4d11a475",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "labelled_instruction",
+        "source_text": "Target audience: prospective buyers",
+        "source_hash": "sha256:63a88e751d62a1607572da1531388c8411543c38d02c1ad8d172988e083ee1c3",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "body",
+        "source_text": "Proposition",
+        "source_hash": "sha256:1e868bdea6c3d3fad2a7438f8469ccf65d54037d29f267d7cc845107b2eee0c9",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "body",
+        "source_text": "Prepare only the authorised launch package.",
+        "source_hash": "sha256:9d7eb121b9cb59ce1afb65976d16d58e4410431dd161f28d92cb40efdedc3fb4",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "body",
+        "source_text": "Planned channels",
+        "source_hash": "sha256:20652113a7dc2ab2a727ab73b3c362b073f0fa4f8f94e2d4c2c596a1da16adca",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "labelled_instruction",
+        "source_text": "Channel: owned website",
+        "source_hash": "sha256:2fa1c6cb138ed144616b738494e0e7936651213e91860d812f1195fb72718efa",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "body",
+        "source_text": "Release constraints",
+        "source_hash": "sha256:3a603eb95e79457cc89f007bb678485843c9e9e2b2183d944edc75dbd0b3d405",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "labelled_instruction",
+        "source_text": "Constraint: The requested escalation is held for authorised human review. No decision, authority, certification, commitment, spend, publication, or external release is created.",
+        "source_hash": "sha256:6cd6dbbe7aff4071f7b0056c10d5f0784f791b9391d62eb0a73326084e349651",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "instruction",
+        "source_text": "Performance remains unproved until observed. Human publication and spend authority remain required.",
+        "source_hash": "sha256:170e7888ba051a93c9aa9ed42d6378b42dcf3dd61f09eed7dbabccdf6cc63bb7",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P010",
+        "unit_type": "body",
+        "source_text": "The requested escalation is held for authorised human review. No decision, authority, certification, commitment, spend, publication, or external release is created.",
+        "source_hash": "sha256:e02d08c9de00924a3d7d14006b6b139f0a10a58aa7ec18d5c18265b5f5904127",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:c1cf5e79e9660027a71b73ddf63a598dbea1b68cb31a135aeb6b01aea662f28d",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:33+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:33+00:00"
+}

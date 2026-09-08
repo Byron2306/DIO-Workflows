@@ -1,0 +1,17 @@
+{
+  "authority_created": false,
+  "canon_id": "CANON-EXT-CONTRACT_DESK",
+  "claim_boundary": "This receipt proves deterministic canon-extension materialization from the current extension spec and native profile while binding lineage to the immutable historical 53x3 evidence anchor. The historical anchor is a lineage root, not evidence that this extension existed in the historical 53-product corpus. No buyer demand, payment, legal approval, publication authority, investment interest, funding approval, market performance, or commercial validation is created.",
+  "commercial_validation": "UNPROVED",
+  "external_effects": false,
+  "historical_anchor": "evidence/historical/PROFESSIONAL_EVIDENCE_53_X3_ANCHOR.json",
+  "historical_anchor_sha256": "d20a4a7310f4d64be264678db425ee7b6400f1688f56b94ecb9054b22ecd7a74",
+  "name": "Contract Desk",
+  "primary_artifact": "state/product_portfolio/canon_extensions/contract-desk/site/index.html",
+  "primary_artifact_sha256": "9d1cc10629cf77ca9c159e5cc1ea2ca119c4b855c9cefed03278dbeb59592cc8",
+  "profile_fingerprint": "sha256:581406d1148a7e5172b4c8e15c0875ec03494824feddc4e818cae0425bb10b67",
+  "receipt_fingerprint": "sha256:25aa9a3b517ba98adbe67f827e54a1a58af6c0b7f9b2328d7122cd6b288988f1",
+  "schema": "dio.canon_extension.materialization_receipt.v1",
+  "slug": "contract-desk",
+  "status": "PASS"
+}

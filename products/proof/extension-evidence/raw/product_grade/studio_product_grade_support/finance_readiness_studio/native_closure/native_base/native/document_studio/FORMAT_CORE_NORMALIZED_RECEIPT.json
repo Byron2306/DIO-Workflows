@@ -1,0 +1,33 @@
+{
+  "authority_created": false,
+  "delivery_profile": "editable_review",
+  "delivery_profile_hash": "6edd3459fdf23d7ce62d5bf1ed48796f132f98e2ec25273a777c02aa84b0ece8",
+  "object_id": "STUDIO-FINANCE_READINESS_STUDIO",
+  "outputs": [
+    {
+      "bytes": 2890,
+      "channel": "html",
+      "sha256": "948eaadd1fe185176e0134b1a70f009b160ba5fc381d08f07634ad3681b0ca1e"
+    }
+  ],
+  "publication_authorized": false,
+  "qa": {
+    "errors": [],
+    "passed": true,
+    "semantic_completeness": {
+      "html": {
+        "expected_strings": 12,
+        "missing": [],
+        "missing_count": 0
+      }
+    },
+    "warnings": []
+  },
+  "release_mode": false,
+  "schema": "dio.format_core.receipt.v1",
+  "semantic_blocks": 12,
+  "semantic_source_hash": "de9c9b14ad376d429d8c25ab2acca8ccdc9ae73300fc2c2b995e60b89d9c8199",
+  "status": "rendered_review_candidate",
+  "style_profile": "dio_professional",
+  "style_profile_hash": "f08f383c90917a43a2f70439657fe368302ac1a623a61656cf7443c3bfad23e5"
+}

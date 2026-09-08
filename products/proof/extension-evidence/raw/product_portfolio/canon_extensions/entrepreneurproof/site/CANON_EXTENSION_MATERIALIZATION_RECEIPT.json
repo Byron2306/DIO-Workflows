@@ -1,0 +1,17 @@
+{
+  "authority_created": false,
+  "canon_id": "CANON-EXT-ENTREPRENEURPROOF",
+  "claim_boundary": "This receipt proves deterministic canon-extension materialization from the current extension spec and native profile while binding lineage to the immutable historical 53x3 evidence anchor. The historical anchor is a lineage root, not evidence that this extension existed in the historical 53-product corpus. No buyer demand, payment, legal approval, publication authority, investment interest, funding approval, market performance, or commercial validation is created.",
+  "commercial_validation": "UNPROVED",
+  "external_effects": false,
+  "historical_anchor": "evidence/historical/PROFESSIONAL_EVIDENCE_53_X3_ANCHOR.json",
+  "historical_anchor_sha256": "d20a4a7310f4d64be264678db425ee7b6400f1688f56b94ecb9054b22ecd7a74",
+  "name": "EntrepreneurProof",
+  "primary_artifact": "state/product_portfolio/canon_extensions/entrepreneurproof/site/index.html",
+  "primary_artifact_sha256": "6ebcb4d8aea6793edcb17272a8da40bf84f85264fa8b6199c6fa2602c521221d",
+  "profile_fingerprint": "sha256:e7a1077487347adffffc3c847ddf700a5385f8701f3c9df0a1fe5b9f2cc7d3dc",
+  "receipt_fingerprint": "sha256:dd0696478e0b6de174981a20006a03f555bd7049c8333197ee527700ee2144f8",
+  "schema": "dio.canon_extension.materialization_receipt.v1",
+  "slug": "entrepreneurproof",
+  "status": "PASS"
+}

@@ -1,0 +1,19 @@
+{
+  "authority_created": false,
+  "canon_id": "CANON-EXT-CORPORATE_READINESS",
+  "claim_boundary": "For canon materialization receipts, this seal requires the source receipt to bind the exact current artifact SHA-256. Legacy historical generation receipts remain readable for compatibility but are not used by the current canon-extension production workflow. This seal does not create ProductGrade, buyer demand, payment, legal approval, publication authority or commercial validation.",
+  "commercial_validation": "UNPROVED",
+  "current_artifact_sha256": "31481e50053239de7ce6801a6173f30792dae7ea52704bcd33876a3b0083690a",
+  "external_effects": false,
+  "name": "Corporate Readiness",
+  "primary_artifact": "state/product_portfolio/canon_extensions/corporate-readiness/site/index.html",
+  "receipt_fingerprint": "sha256:5bdf0307a1c79179eba752ae0ee5c26ca5a08177721e72d5cb8d14f808f794b6",
+  "schema": "dio.canon_extension.proof_seal.v1",
+  "slug": "corporate-readiness",
+  "source_generation_receipt": "state/product_portfolio/canon_extensions/corporate-readiness/site/CANON_EXTENSION_MATERIALIZATION_RECEIPT.json",
+  "source_generation_receipt_schema": "dio.canon_extension.materialization_receipt.v1",
+  "source_generation_receipt_sha256": "c642542182c0bc9cf5017dbd14ab2473a3d511b0299010d9049f95e9a8e0f6d0",
+  "source_receipt_artifact_bound": true,
+  "status": "PASS",
+  "strict_materialization_binding": true
+}

@@ -1,0 +1,10 @@
+{
+  "custom_domain": "UNBOUND",
+  "entrypoint": "finance/READINESS_REPORT.html",
+  "hosting_package": "REVIEW_PACKAGE_READY",
+  "human_gate": "NEEDS_YOU",
+  "publication": "REFUSE",
+  "schema": "dio.presence_release_projection.v1",
+  "source_engine": "presence_core",
+  "studio_id": "finance_readiness_studio"
+}

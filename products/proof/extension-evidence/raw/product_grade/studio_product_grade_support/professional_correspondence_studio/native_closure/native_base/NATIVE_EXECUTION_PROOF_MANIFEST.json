@@ -1,0 +1,48 @@
+{
+  "artifacts": [
+    {
+      "bytes": 687,
+      "path": "native/commercial_truth/COMMERCIAL_TRUTH_EVALUATION.json",
+      "sha256": "a57786399aac75424d69604265d4e921c8033f5ac46c945717511b08330d1714"
+    },
+    {
+      "bytes": 2507,
+      "path": "native/document_studio/CONTROLLED_PREVIEW.html",
+      "sha256": "371ffaebfa672bda9938b4f9cff216298d43e9a467f3e6303064d3b15be2457f"
+    },
+    {
+      "bytes": 997,
+      "path": "native/document_studio/FORMAT_CORE_NORMALIZED_RECEIPT.json",
+      "sha256": "996b983a356d3c3d9b144df7d6fad147088051c176ae1ccf236b4edaaed084a6"
+    },
+    {
+      "bytes": 647,
+      "path": "native/lingua/LINGUA_NATIVE_RECEIPT.json",
+      "sha256": "9d5134221da1c05236c4fdffd9b707954857a32c548d215994d0ab6f4ba257f5"
+    },
+    {
+      "bytes": 1348,
+      "path": "native/outlook_mail_core/OUTLOOK_NATIVE_DRAFT_RECEIPT.json",
+      "sha256": "3bd142fe4d73b13374944f3a39dd7cbfcdd32b9ab91211ded677892839f6e90b"
+    },
+    {
+      "bytes": 2815,
+      "path": "NATIVE_ORGAN_EXECUTION_LEDGER.json",
+      "sha256": "84dc592807103be99553f65ae78deadda8fba9d39dbd2be549bc2474b528822e"
+    }
+  ],
+  "authority_created": false,
+  "composition_proof_fingerprint": "sha256:384769dd41e83d8fdda36b9da2c4b077fbf106d48e687cef9ec1a9db254fbf00",
+  "external_effects": false,
+  "external_publication": "REFUSE",
+  "external_send": "REFUSE",
+  "media_spend": "REFUSE",
+  "native_organ_count": 4,
+  "organ_execution_truth": "NATIVE_MULTI_ORGAN_EXECUTION_PROVED_WITH_AUXILIARY_GAPS",
+  "partial_organ_count": 1,
+  "payment": "REFUSE",
+  "proof_fingerprint": "sha256:36c0ca130dcdf9706d2452d27488ce090c90f20180a0ea1b943a54ce916de662",
+  "schema": "dio.studio_native_execution_proof_manifest.v1",
+  "source_bound_only_count": 1,
+  "studio_id": "professional_correspondence_studio"
+}

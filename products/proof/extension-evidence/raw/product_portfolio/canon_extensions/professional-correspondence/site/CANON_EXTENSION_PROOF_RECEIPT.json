@@ -1,0 +1,19 @@
+{
+  "authority_created": false,
+  "canon_id": "CANON-EXT-PROFESSIONAL_CORRESPONDENCE",
+  "claim_boundary": "For canon materialization receipts, this seal requires the source receipt to bind the exact current artifact SHA-256. Legacy historical generation receipts remain readable for compatibility but are not used by the current canon-extension production workflow. This seal does not create ProductGrade, buyer demand, payment, legal approval, publication authority or commercial validation.",
+  "commercial_validation": "UNPROVED",
+  "current_artifact_sha256": "2ae30b3ba976882325edc76a37ad328ec91929bb67a0f23b3774dc30e3746933",
+  "external_effects": false,
+  "name": "Professional Correspondence",
+  "primary_artifact": "state/product_portfolio/canon_extensions/professional-correspondence/site/index.html",
+  "receipt_fingerprint": "sha256:61c5258cb6ca3fcd6b151915daec5edfedeaec2cd9ae63dc5b601be27f1f9efc",
+  "schema": "dio.canon_extension.proof_seal.v1",
+  "slug": "professional-correspondence",
+  "source_generation_receipt": "state/product_portfolio/canon_extensions/professional-correspondence/site/CANON_EXTENSION_MATERIALIZATION_RECEIPT.json",
+  "source_generation_receipt_schema": "dio.canon_extension.materialization_receipt.v1",
+  "source_generation_receipt_sha256": "d8bc8f1e13ae1b2f77955ce78a1b87b0e356dd195a254fe0eb8b077dfeaf06c0",
+  "source_receipt_artifact_bound": true,
+  "status": "PASS",
+  "strict_materialization_binding": true
+}

@@ -1,0 +1,155 @@
+{
+  "artifacts": [
+    {
+      "bytes": 2338,
+      "path": "finance/FINANCE_READINESS_OBJECT.json",
+      "sha256": "fb2e510b575f886b82fd64f701a86ef4353d51095aaee783d78f659e242477d8"
+    },
+    {
+      "bytes": 323,
+      "path": "finance/FINANCIAL_AUTHORITY_BOUNDARY.json",
+      "sha256": "181f5b4be1053757ddcfe24f520e1852ac05ddcbc9bb25bc6d820d2a6777fc55"
+    },
+    {
+      "bytes": 2261,
+      "path": "finance/READINESS_REPORT.html",
+      "sha256": "ed7503f9d46dbb1d5a23c3da0526c2c47e2bf98be69cb53c2bed6afe699b88a3"
+    },
+    {
+      "bytes": 333,
+      "path": "finance/READINESS_SUMMARY.txt",
+      "sha256": "aa06bf4461d35e2ab084a651c371581165a35c0056d70aaf1badb149dc664acc"
+    },
+    {
+      "bytes": 338,
+      "path": "operations/AUTHORITY_BOUNDARY.json",
+      "sha256": "6e54916450123ac212e62179f869aaf73aa854757965bf16060f22b3fb6575f1"
+    },
+    {
+      "bytes": 700,
+      "path": "operations/COMMERCIAL_MEASUREMENT_CONTRACT.json",
+      "sha256": "9a46e62f46d0092ed8d87a86c6fb0f12b432f25a50d1b0cd4d85510d2cebc74f"
+    },
+    {
+      "bytes": 3232,
+      "path": "operations/ORGAN_BINDINGS.json",
+      "sha256": "7f8c504d887f7e82a576feb87d99d0d0d79f5ca1e73a98240b9daa723f659aa2"
+    },
+    {
+      "bytes": 312,
+      "path": "operations/PRESENCE_RELEASE.json",
+      "sha256": "0cb72e515e1505f7335246ea312d282f0b2c1a110e569de237bad8786312da95"
+    },
+    {
+      "bytes": 467,
+      "path": "operations/VESPER_ROUTE_RECEIPT.json",
+      "sha256": "134bf0e3c8a1728183513d7c1017ecd3dd2d0622f5f24bc6cbbb607c65626543"
+    }
+  ],
+  "authority_created": false,
+  "external_effects": false,
+  "external_publication": "REFUSE",
+  "external_send": "REFUSE",
+  "manifest_sha256": "a39765aa14992d7f046d5ffb406b9923c142bcfce157b76145b99de7c5ebe2b9",
+  "media_spend": "REFUSE",
+  "organ_bindings": [
+    {
+      "binding_state": "SOURCE_BOUND",
+      "capabilities": [
+        "storefront.route.bind",
+        "presence.release.prepare"
+      ],
+      "engine_id": "vesper",
+      "execution_claim": "BOUND_NOT_LIVE_INVOKED",
+      "source_ref": "presence_core/router.py",
+      "source_sha256": "5fa3fcba9f3439898d16671bf77c943813a8e2f2dce7ae6ac349ff4a86d72b93"
+    },
+    {
+      "binding_state": "SOURCE_BOUND",
+      "capabilities": [
+        "communication.meaning.register",
+        "communication.render.bound"
+      ],
+      "engine_id": "lingua",
+      "execution_claim": "BOUND_NOT_LIVE_INVOKED",
+      "source_ref": "adapters/lingua/communicator.py",
+      "source_sha256": "f1e074a0ab9202e51795487c5ad6bd86dcfd2cdfa4aa8cc8618df6d062ed3743"
+    },
+    {
+      "binding_state": "SOURCE_BOUND",
+      "capabilities": [
+        "market.position",
+        "market.research.hypothesis"
+      ],
+      "engine_id": "nichefoundry",
+      "execution_claim": "BOUND_NOT_LIVE_INVOKED",
+      "source_ref": "scripts/build_hustle_campaign_factory.py",
+      "source_sha256": "ad2bb82f0e34fbc7872b9aa160e513a3635dafb83010d5e3c88043f77c20f909"
+    },
+    {
+      "binding_state": "SOURCE_BOUND",
+      "capabilities": [
+        "evidence.intake.structure",
+        "evidence.readiness.gap_map"
+      ],
+      "engine_id": "evidex",
+      "execution_claim": "BOUND_NOT_LIVE_INVOKED",
+      "source_ref": "adapters/evidex_studio.py",
+      "source_sha256": "1b26e107eacbd555a98ac09977bc4135283effbb09c43f3cfbba39bb86f62009"
+    },
+    {
+      "binding_state": "SOURCE_BOUND",
+      "capabilities": [
+        "claim.lineage.audit",
+        "assumption.boundary"
+      ],
+      "engine_id": "sophia",
+      "execution_claim": "BOUND_NOT_LIVE_INVOKED",
+      "source_ref": "adapters/sophia/review_pipeline.py",
+      "source_sha256": "9707363ab24a477f36462a1e3b39a13602012554f2e0482b0726c20282b08821"
+    },
+    {
+      "binding_state": "SOURCE_BOUND",
+      "capabilities": [
+        "document.preview.render",
+        "document.finance_readiness_pack"
+      ],
+      "engine_id": "document_studio",
+      "execution_claim": "BOUND_NOT_LIVE_INVOKED",
+      "source_ref": "adapters/document_studio/studio_sales.py",
+      "source_sha256": "295fc795000c6af7373d9c88772c97401df495c24251a8686836693a2f251970"
+    },
+    {
+      "binding_state": "SOURCE_BOUND",
+      "capabilities": [
+        "objective.milestone.map"
+      ],
+      "engine_id": "vamp",
+      "execution_claim": "BOUND_NOT_LIVE_INVOKED",
+      "source_ref": "adapters/vamp/snapshot_pipeline.py",
+      "source_sha256": "18271766ee598546d0237fc0c0d2a62486c204953917a2ac68fe0e2f67a21dfc"
+    },
+    {
+      "binding_state": "SOURCE_BOUND",
+      "capabilities": [
+        "commercial.claim.boundary",
+        "commercial.measurement.contract"
+      ],
+      "engine_id": "commercial_truth",
+      "execution_claim": "BOUND_NOT_LIVE_INVOKED",
+      "source_ref": "products/commercial_truth.py",
+      "source_sha256": "ab9632a01214af1e97a726dd68bb3e47a5072aa08875ed51a349930778dc01f7"
+    }
+  ],
+  "payment": "REFUSE",
+  "proof_fingerprint": "sha256:d671b8fe68791444c5ca1d0934db3afdf69c5f8c28eb830897e782a25a20b6c6",
+  "schema": "dio.professional_intelligence_studio_proof_manifest.v1",
+  "studio_id": "finance_readiness_studio",
+  "vesper_route": {
+    "confidence": 0.91,
+    "intent": "intake_request",
+    "product": "finance_readiness_studio",
+    "reason": "product request",
+    "source": "deterministic"
+  }
+}

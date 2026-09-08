@@ -1,0 +1,17 @@
+{
+  "authority_created": false,
+  "canon_id": "CANON-EXT-REPORT_PITCH_STUDIO",
+  "claim_boundary": "This receipt proves deterministic canon-extension materialization from the current extension spec and native profile while binding lineage to the immutable historical 53x3 evidence anchor. The historical anchor is a lineage root, not evidence that this extension existed in the historical 53-product corpus. No buyer demand, payment, legal approval, publication authority, investment interest, funding approval, market performance, or commercial validation is created.",
+  "commercial_validation": "UNPROVED",
+  "external_effects": false,
+  "historical_anchor": "evidence/historical/PROFESSIONAL_EVIDENCE_53_X3_ANCHOR.json",
+  "historical_anchor_sha256": "d20a4a7310f4d64be264678db425ee7b6400f1688f56b94ecb9054b22ecd7a74",
+  "name": "Report & Pitch Studio",
+  "primary_artifact": "state/product_portfolio/canon_extensions/report-pitch-studio/site/index.html",
+  "primary_artifact_sha256": "3a1a5823c1581e41dfd90edb093aa510a7edc503a596262c03afb114aa69b37a",
+  "profile_fingerprint": "sha256:ed11618fd05fc8950cae335aba2c8b1809d3d9afccefbdd946f579d651241bc3",
+  "receipt_fingerprint": "sha256:1ca392e3c526148865e73bf085b7e548ee26a3df7c540aff55b53cbd578ae20f",
+  "schema": "dio.canon_extension.materialization_receipt.v1",
+  "slug": "report-pitch-studio",
+  "status": "PASS"
+}

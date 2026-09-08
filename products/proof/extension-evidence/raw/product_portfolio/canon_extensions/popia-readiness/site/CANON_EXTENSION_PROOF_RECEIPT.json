@@ -1,0 +1,19 @@
+{
+  "authority_created": false,
+  "canon_id": "CANON-EXT-POPIA_READINESS",
+  "claim_boundary": "For canon materialization receipts, this seal requires the source receipt to bind the exact current artifact SHA-256. Legacy historical generation receipts remain readable for compatibility but are not used by the current canon-extension production workflow. This seal does not create ProductGrade, buyer demand, payment, legal approval, publication authority or commercial validation.",
+  "commercial_validation": "UNPROVED",
+  "current_artifact_sha256": "dd24a0e3a38b2550133a7d9728f5cb8e834fa2a14e7c3f483519ed90d6eba473",
+  "external_effects": false,
+  "name": "POPIA Readiness",
+  "primary_artifact": "state/product_portfolio/canon_extensions/popia-readiness/site/index.html",
+  "receipt_fingerprint": "sha256:a482825138e93702a11b67e491a22e46251cf102f1afa20ca6ace36b703c0ebb",
+  "schema": "dio.canon_extension.proof_seal.v1",
+  "slug": "popia-readiness",
+  "source_generation_receipt": "state/product_portfolio/canon_extensions/popia-readiness/site/CANON_EXTENSION_MATERIALIZATION_RECEIPT.json",
+  "source_generation_receipt_schema": "dio.canon_extension.materialization_receipt.v1",
+  "source_generation_receipt_sha256": "df380093c3d764eaaa4b8272ed1e715e9d37b9998017726604d863e33ea009a1",
+  "source_receipt_artifact_bound": true,
+  "status": "PASS",
+  "strict_materialization_binding": true
+}

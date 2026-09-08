@@ -1,0 +1,111 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-FINANCE_READINESS_STUDIO-NORMAL",
+  "domain": "readiness_assurance",
+  "subject": "Kopano Fleet Finance Pack",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "finance-readiness-studio",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-FINANCE_READINESS_STUDIO-NORMAL",
+    "audience": "operators assembling finance-ready evidence packs",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:0183e0a1de83f2e198894fbdcb3a00af0ec9b0508426d1a459f9d437bc32bfa4",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Kopano Fleet Finance Pack",
+        "source_hash": "sha256:de2617d8ddddce4bc781f42be7ac2fc535da83a9a33f9cd2955650b6586305fb",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "body",
+        "source_text": "Purpose",
+        "source_hash": "sha256:d4e8830a71c73edffe0115b8abad16b0b5cb2e121047c64cd01995203cfad062",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "body",
+        "source_text": "Assemble a review-ready finance evidence package.",
+        "source_hash": "sha256:a2ec7f1eeeb3214d5eb0cc74864f49357961ee5c239f8eb4b452ee068602f0c5",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "body",
+        "source_text": "Requirement review",
+        "source_hash": "sha256:f10eeb64927c224658eb00a5d1900f7fb2b277d6d044b8f080d793acd57e24c3",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "labelled_instruction",
+        "source_text": "Entity records: SUPPLIED",
+        "source_hash": "sha256:eadbd4a544ad24203f39284d8bbe0fc055ceb1beb80afdf2a2fbdcb640b5f685",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "labelled_instruction",
+        "source_text": "Cash-flow model: SUPPLIED",
+        "source_hash": "sha256:ff92d2dbdcf3e5ead3635f26b92a355bf004f91b60711327751922404863d3bb",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "labelled_instruction",
+        "source_text": "Lender decision: NOT SUPPLIED",
+        "source_hash": "sha256:f5ff174023c53dc6f27ea165bd5ceb80da3f1a0fa2a6c253b4ec6765cf49f4cc",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "labelled_instruction",
+        "source_text": "Missing or unresolved evidence items: 1",
+        "source_hash": "sha256:b2a575818791c1bbbf00e5f081ab80f50101b3c94a5c48a3eb2e7b8f8f3da6b7",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "instruction",
+        "source_text": "This is an evidence-readiness assessment, not a lending, affordability or funding decision. Human decision authority remains required.",
+        "source_hash": "sha256:0c608da668253589d6e9d007ac5d4972b0d009b7e0b2bcdd1e63881fc3e22b58",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:0183e0a1de83f2e198894fbdcb3a00af0ec9b0508426d1a459f9d437bc32bfa4",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:32+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:32+00:00"
+}

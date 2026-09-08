@@ -1,0 +1,135 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-REPORT_PITCH_STUDIO-NORMAL",
+  "domain": "publication_professional",
+  "subject": "Atlas Field Systems",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "report-pitch-studio",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-REPORT_PITCH_STUDIO-NORMAL",
+    "audience": "founders and operators preparing evidence-bound briefs",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:b1fd4b3f71168b8f96a7e69d697b24bf5e5f3d980c243c0e4ad975577929b0da",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Atlas Field Systems",
+        "source_hash": "sha256:a88aee544a4d9b8f29ac71b3bf51d775ab118f32a5e369d58d4ec8d63d6b1129",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "labelled_instruction",
+        "source_text": "Target audience: seed-stage investors",
+        "source_hash": "sha256:7b0d4f1abb59fb3ebf0cba1086e8f2d780f4b57fa691670af722bd053ed3739b",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "body",
+        "source_text": "Purpose",
+        "source_hash": "sha256:d4e8830a71c73edffe0115b8abad16b0b5cb2e121047c64cd01995203cfad062",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "body",
+        "source_text": "Prepare an evidence-bound pitch brief for a R2.4m pilot expansion.",
+        "source_hash": "sha256:004b88001fc993ff8265818d60a94e37126d6234d73a3e93416ca4995ec62ad6",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "body",
+        "source_text": "Evidence available",
+        "source_hash": "sha256:606459655a1ba91b66e6cf9e54e5fbe023cdd4ea40634e044bb85e5ccd3f00d7",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "labelled_instruction",
+        "source_text": "Evidence: Three paid field deployments are recorded.",
+        "source_hash": "sha256:0213c8d091bf9d75b19c51c7aba4f1c8308bf850f5ff00a6009987dca5181946",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "labelled_instruction",
+        "source_text": "Evidence: Repeatable national demand remains unproved.",
+        "source_hash": "sha256:d55dd444d6cbd1df8c9664abf8d58145483d6de32617eda656603d1fcb23951e",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "body",
+        "source_text": "Material risks",
+        "source_hash": "sha256:dc6577c6f9e19e56dfea64e271aad27c5187fa377baa5ac75b2f1168c42d4003",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "labelled_instruction",
+        "source_text": "Risk: Customer concentration",
+        "source_hash": "sha256:8c16477377ff47ffd3e164dc1fbf020c97ce1f1b120faacc410784d9c8c19f10",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P010",
+        "unit_type": "labelled_instruction",
+        "source_text": "Risk: hardware deployment lead time",
+        "source_hash": "sha256:d6948a96b1e8d52d159d1e9565b9eb2db0c9e5865fb20e5cca43bc80057faead",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P011",
+        "unit_type": "body",
+        "source_text": "Held claims",
+        "source_hash": "sha256:da3e5d0fa6ce1b5b94bfcb4c2dabb18eaed00c7054de998de4fd5eeaee4b42c8",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P012",
+        "unit_type": "instruction",
+        "source_text": "Investment interest, valuation and funding remain unproved until independently observed. Human release authority remains required.",
+        "source_hash": "sha256:c3fa962d341a041d134e4763b897be8e5b015868488541c06a1ed95c915fbe0b",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:b1fd4b3f71168b8f96a7e69d697b24bf5e5f3d980c243c0e4ad975577929b0da",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010",
+        "P011",
+        "P012"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:34+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:34+00:00"
+}

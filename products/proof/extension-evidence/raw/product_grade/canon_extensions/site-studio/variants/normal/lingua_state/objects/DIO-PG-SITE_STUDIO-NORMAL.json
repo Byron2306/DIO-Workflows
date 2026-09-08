@@ -1,0 +1,135 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-SITE_STUDIO-NORMAL",
+  "domain": "publication_professional",
+  "subject": "Accessible programme microsite",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "site-studio",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-SITE_STUDIO-NORMAL",
+    "audience": "operators assembling accessible governed publication sites",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:6f2632dd2b9148c64ff5b24e94dd1e6a2b0228cb701a885f3fda7b4c9571440d",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Accessible programme microsite",
+        "source_hash": "sha256:6718292724293a48458dbd25569f0f3b744bb36fbf202f4922b89e4a3fc21640",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "body",
+        "source_text": "Publication and audience",
+        "source_hash": "sha256:79ca693a1f0aa7e9763231de7f3737e7b2dffcb42ce3463eb97e6ea40b840f88",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "labelled_instruction",
+        "source_text": "Target publication: Public website",
+        "source_hash": "sha256:ecea2558a8017e7cac4a6a0cba2dfb2ebce14f26d091fef1c228353c8f4a7c25",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "labelled_instruction",
+        "source_text": "Audience: programme participants",
+        "source_hash": "sha256:2d7da83f830dbc4e71b9437c85e94616e150ead8c410b9238c08595b02e4bb89",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "body",
+        "source_text": "Purpose",
+        "source_hash": "sha256:d4e8830a71c73edffe0115b8abad16b0b5cb2e121047c64cd01995203cfad062",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "body",
+        "source_text": "Assemble an accessible review-ready site package from authorised content.",
+        "source_hash": "sha256:ff9785174ca453b8843d6b90e5b52255f18c7626366f17847ba9a4767fb5b2fa",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "body",
+        "source_text": "Supported evidence",
+        "source_hash": "sha256:2946bba7a5b20900f3537f0c68cab252cc1580434416632a5e175b421fcb6a75",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "labelled_instruction",
+        "source_text": "Supported: Approved copy and media are supplied.",
+        "source_hash": "sha256:cd4d3ccbf78345e3efcc4d30cc003e0ca655fa9193fd823737bddd1456597a59",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "labelled_instruction",
+        "source_text": "Supported: Human publication authority remains separate.",
+        "source_hash": "sha256:77c6b860e8e3521baf3dc4f36332b5ac401a78aa33097fec1aa16a8f0b655cc5",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P010",
+        "unit_type": "body",
+        "source_text": "Held claims",
+        "source_hash": "sha256:da3e5d0fa6ce1b5b94bfcb4c2dabb18eaed00c7054de998de4fd5eeaee4b42c8",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P011",
+        "unit_type": "labelled_instruction",
+        "source_text": "Held for human review: External release remains human-controlled.",
+        "source_hash": "sha256:03bd2cfd21bdab1bb3088071e3298822bce4084f3a07d31562c7187350da5506",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P012",
+        "unit_type": "instruction",
+        "source_text": "Human editorial review and publication authority remain required before external release.",
+        "source_hash": "sha256:4ce243b60d34be7d5a61deaf829fc30c03fde1aa4d297b455893e896d8796475",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:6f2632dd2b9148c64ff5b24e94dd1e6a2b0228cb701a885f3fda7b4c9571440d",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010",
+        "P011",
+        "P012"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:34+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:34+00:00"
+}

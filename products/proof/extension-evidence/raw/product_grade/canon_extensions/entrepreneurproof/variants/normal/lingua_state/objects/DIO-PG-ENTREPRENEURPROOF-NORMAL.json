@@ -1,0 +1,119 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-ENTREPRENEURPROOF-NORMAL",
+  "domain": "opportunity_venture",
+  "subject": "ThriveCrop Analytics",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "entrepreneurproof",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-ENTREPRENEURPROOF-NORMAL",
+    "audience": "early-stage founders",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:f8b3fec2b515c993bf7f3a05f3c1179133130dba1b6e1de32ebd02173fb1d0e2",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "ThriveCrop Analytics",
+        "source_hash": "sha256:e6c7f0f6c1d2d074846bbc6229731064907b5cda552375ab937982907acba66a",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "body",
+        "source_text": "Business model",
+        "source_hash": "sha256:559c1801aad854cfa62ca13de767d7e9f0652ca73b5bf89d2a868a14ade0b492",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "body",
+        "source_text": "Subscription crop-risk analytics for regional farming cooperatives.",
+        "source_hash": "sha256:09ff0c042f2be7b07f431af4d90328852d7003937d81ee2832f5030c42d62471",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "body",
+        "source_text": "Evidence available",
+        "source_hash": "sha256:606459655a1ba91b66e6cf9e54e5fbe023cdd4ea40634e044bb85e5ccd3f00d7",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "labelled_instruction",
+        "source_text": "Evidence: Two controlled pilot interviews are recorded.",
+        "source_hash": "sha256:ff19dfc302c79e866902f0380a95c015dff5944969588cd4824ae6d5577b784f",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "labelled_instruction",
+        "source_text": "Evidence: Pricing willingness has not been observed.",
+        "source_hash": "sha256:3b89f934ba7f3775f6cf5c2b8ccbb4dcb80681846da3dee970b04eb9f9054ebf",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "body",
+        "source_text": "Questions still open",
+        "source_hash": "sha256:930a0dab843b45cea371e82b37b46e70d21a77d14c6a438b7d5e1a431d6d54f7",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "labelled_instruction",
+        "source_text": "Open question: Which buyer owns the budget?",
+        "source_hash": "sha256:79ee2ef3103ffb982c99b5573a278c0e45eb8056820a3ed2819b74cd924771bc",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "labelled_instruction",
+        "source_text": "Open question: What evidence distinguishes interest from willingness to pay?",
+        "source_hash": "sha256:d8fd330dec1a9a610e20fc3adcfc1eec169c9acc0c2204d6aeef5793f36e7fde",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P010",
+        "unit_type": "instruction",
+        "source_text": "Venture viability and willingness to pay remain unproved until independently observed. Human decision authority remains required.",
+        "source_hash": "sha256:ba97a98a0b4cfaebec1f97d56a18d3c76a20b8cdecf19aa1434daa953fad5d35",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:f8b3fec2b515c993bf7f3a05f3c1179133130dba1b6e1de32ebd02173fb1d0e2",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:32+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:32+00:00"
+}

@@ -1,0 +1,127 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-PROFESSIONAL_CORRESPONDENCE_STUDIO-MESSY",
+  "domain": "publication_professional",
+  "subject": "Correspondence studio missing attachment case",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "professional-correspondence-studio",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-PROFESSIONAL_CORRESPONDENCE_STUDIO-MESSY",
+    "audience": "teams producing governed professional correspondence packs",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:fd7067b442a30ffe12adc0df4f2f3c213736a903763e187ad6f0a2b4db7054be",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Draft correspondence: Correspondence studio missing attachment case",
+        "source_hash": "sha256:4ed8a0222982a53d25e18170629324324296182723419a4b24ebee6a6e4b6ba0",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "labelled_instruction",
+        "source_text": "Recipient: Mhlabeni Services",
+        "source_hash": "sha256:7b6edf418b7a21cf53236c695907cf315aecaa7d1bff1ac47e1ad654d087748c",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "body",
+        "source_text": "Purpose",
+        "source_hash": "sha256:d4e8830a71c73edffe0115b8abad16b0b5cb2e121047c64cd01995203cfad062",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "body",
+        "source_text": "Prepare the pack while surfacing a referenced but absent attachment.",
+        "source_hash": "sha256:1da7ee4c24036ca7e088e1202664f7e51070368561ce9b738f1962e94c2bed34",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "body",
+        "source_text": "Facts being preserved",
+        "source_hash": "sha256:1c9056369bb476745170e5c339078c1d139b6097c7fdb392208a59435a3502ff",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "labelled_instruction",
+        "source_text": "Fact: The draft references Attachment C.",
+        "source_hash": "sha256:854bab25815ad87a5bf2f054e750b3f28176ffc9cf9d8152d855181d5d865724",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "labelled_instruction",
+        "source_text": "Fact: Attachment C is missing.",
+        "source_hash": "sha256:281265f96ea27c73c51cbfdabf31c72d87a63e4a5d1e3b11cbee7b9c5ce69192",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "labelled_instruction",
+        "source_text": "Fact: The omission remains held for review.",
+        "source_hash": "sha256:6bd7375001c504af543badc040fba26aff97b8b70d5f059f660b7ca12e275cb4",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "body",
+        "source_text": "Draft position",
+        "source_hash": "sha256:d84339b547209f20deea05f92e371630cc6f313664a579ff1c6f3184e8ea113a",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P010",
+        "unit_type": "body",
+        "source_text": "No concession, settlement or external commitment is created by this draft.",
+        "source_hash": "sha256:dcdb214f0ad60541f51af67e6c805e3f6aa775c9fefad40571abb4b7eb6c9e21",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P011",
+        "unit_type": "instruction",
+        "source_text": "Human sender approval remains required before external send.",
+        "source_hash": "sha256:6793df9f8154e4d8c4e67429eed1c82ab2e41333a67489cbc1eb905012a46043",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:fd7067b442a30ffe12adc0df4f2f3c213736a903763e187ad6f0a2b4db7054be",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010",
+        "P011"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:34+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:34+00:00"
+}

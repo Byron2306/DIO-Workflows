@@ -1,0 +1,10 @@
+{
+  "affordability_decision": "REFUSE",
+  "credit_decision": "REFUSE",
+  "human_gate": "NEEDS_YOU",
+  "lending_decision": "REFUSE",
+  "readiness_assessment": "ALLOW_CONTROLLED",
+  "regulated_financial_advice": "REFUSE",
+  "schema": "dio.finance_readiness_authority_boundary.v1",
+  "studio_id": "finance_readiness_studio"
+}

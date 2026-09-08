@@ -1,0 +1,119 @@
+{
+  "native_organ_count": 2,
+  "new_engine_created": false,
+  "organ_execution_truth": "NATIVE_MULTI_ORGAN_EXECUTION_PROVED_WITH_AUXILIARY_GAPS",
+  "organs": [
+    {
+      "engine_id": "nichefoundry",
+      "executed_capabilities": [
+        "media.creative.compose"
+      ],
+      "execution_state": "PARTIAL_NATIVE_EXECUTION",
+      "missing_capabilities": [
+        "market.position"
+      ],
+      "provider_ref": "scripts/build_multichannel_campaign_factory.py",
+      "receipt_ref": "native/nichefoundry/NICHEFOUNDRY_NATIVE_COPY.json",
+      "required_capabilities": [
+        "market.position",
+        "media.creative.compose"
+      ]
+    },
+    {
+      "engine_id": "lingua",
+      "executed_capabilities": [
+        "communication.meaning.register",
+        "communication.render.bound"
+      ],
+      "execution_state": "NATIVE_EXECUTED",
+      "missing_capabilities": [],
+      "provider_ref": "adapters/lingua/communicator.py",
+      "receipt_ref": "native/lingua/LINGUA_NATIVE_RECEIPT.json",
+      "required_capabilities": [
+        "communication.meaning.register",
+        "communication.render.bound"
+      ]
+    },
+    {
+      "engine_id": "document_studio",
+      "executed_capabilities": [
+        "document.preview.render"
+      ],
+      "execution_state": "PARTIAL_NATIVE_EXECUTION",
+      "missing_capabilities": [
+        "document.sales_assets"
+      ],
+      "provider_ref": "adapters/format_core/renderer.py",
+      "receipt_ref": "native/document_studio/FORMAT_CORE_NORMALIZED_RECEIPT.json",
+      "required_capabilities": [
+        "document.preview.render",
+        "document.sales_assets"
+      ]
+    },
+    {
+      "engine_id": "evidex",
+      "executed_capabilities": [
+        "evidence.intake.structure"
+      ],
+      "execution_state": "PARTIAL_NATIVE_EXECUTION",
+      "missing_capabilities": [
+        "evidence.campaign.proof"
+      ],
+      "provider_ref": "scripts/run_evidex_jobs.py",
+      "receipt_ref": "native/evidex/EVIDEX_NATIVE_ADAPTER_RECEIPT.json",
+      "required_capabilities": [
+        "evidence.campaign.proof",
+        "evidence.intake.structure"
+      ]
+    },
+    {
+      "engine_id": "vesper",
+      "executed_capabilities": [
+        "storefront.route.bind"
+      ],
+      "execution_state": "PARTIAL_NATIVE_EXECUTION",
+      "missing_capabilities": [
+        "presence.release.prepare"
+      ],
+      "provider_ref": "presence_core/router.py",
+      "receipt_ref": "composition/operations/VESPER_ROUTE_RECEIPT.json",
+      "required_capabilities": [
+        "storefront.route.bind",
+        "presence.release.prepare"
+      ]
+    },
+    {
+      "engine_id": "market_command",
+      "executed_capabilities": [
+        "campaign.plan"
+      ],
+      "execution_state": "NATIVE_EXECUTED",
+      "missing_capabilities": [],
+      "provider_ref": "market_command/core.py",
+      "receipt_ref": "native/market_command/MARKET_COMMAND_NATIVE_RECEIPT.json",
+      "required_capabilities": [
+        "campaign.plan"
+      ]
+    },
+    {
+      "engine_id": "commercial_truth",
+      "executed_capabilities": [
+        "commercial.claim.boundary"
+      ],
+      "execution_state": "PARTIAL_NATIVE_EXECUTION",
+      "missing_capabilities": [
+        "commercial.measurement.contract"
+      ],
+      "provider_ref": "products/commercial_truth.py",
+      "receipt_ref": "native/commercial_truth/COMMERCIAL_TRUTH_EVALUATION.json",
+      "required_capabilities": [
+        "commercial.measurement.contract",
+        "commercial.claim.boundary"
+      ]
+    }
+  ],
+  "partial_organ_count": 5,
+  "schema": "dio.studio_native_organ_execution_ledger.v1",
+  "source_bound_only_count": 0,
+  "studio_id": "site_studio"
+}

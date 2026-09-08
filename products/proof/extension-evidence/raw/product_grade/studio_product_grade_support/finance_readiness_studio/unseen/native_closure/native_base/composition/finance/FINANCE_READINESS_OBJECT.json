@@ -1,0 +1,77 @@
+{
+  "assumptions": [
+    "Projected monthly revenue grows after equipment acquisition.",
+    "Working-capital requirement is limited to three months.",
+    "No lender approval, affordability or underwriting outcome is known."
+  ],
+  "decision_boundary": "DIO assesses finance readiness and published fit. The lender, investor or authorised financial decision maker decides approval.",
+  "evidence_needed_count": 1,
+  "financial_advice": "NOT_PROVIDED",
+  "forbidden_claims": [
+    "guaranteed finance approval",
+    "guaranteed affordability",
+    "lender underwriting score",
+    "credit bureau conclusion",
+    "regulated investment or financial advice"
+  ],
+  "human_gate": "NEEDS_YOU",
+  "lender_decision": "NOT_MADE",
+  "readiness_state": "EVIDENCE_GAPS_PRESENT",
+  "requirement_gap_map": [
+    {
+      "label": "business registration evidence",
+      "mandatory": true,
+      "requirement_id": "FR-01",
+      "state": "SUPPORTED_FOR_READINESS_REVIEW",
+      "supporting_evidence_ids": [
+        "EV-01"
+      ]
+    },
+    {
+      "label": "recent bank statements",
+      "mandatory": true,
+      "requirement_id": "FR-02",
+      "state": "SUPPORTED_FOR_READINESS_REVIEW",
+      "supporting_evidence_ids": [
+        "EV-02"
+      ]
+    },
+    {
+      "label": "management accounts or financial statements",
+      "mandatory": true,
+      "requirement_id": "FR-03",
+      "state": "SUPPORTED_FOR_READINESS_REVIEW",
+      "supporting_evidence_ids": [
+        "EV-04"
+      ]
+    },
+    {
+      "label": "use-of-funds breakdown",
+      "mandatory": true,
+      "requirement_id": "FR-04",
+      "state": "SUPPORTED_FOR_READINESS_REVIEW",
+      "supporting_evidence_ids": [
+        "EV-03"
+      ]
+    },
+    {
+      "label": "repayment or cash-flow assumptions",
+      "mandatory": true,
+      "requirement_id": "FR-05",
+      "state": "EVIDENCE_NEEDED",
+      "supporting_evidence_ids": []
+    }
+  ],
+  "schema": "dio.finance_readiness_controlled_object.v1",
+  "studio_id": "finance_readiness_studio",
+  "venture": {
+    "business_model": "Installation and maintenance services for small commercial solar systems.",
+    "funding_need": "R500,000 vehicle, tools and working-capital facility",
+    "name": "Mhlabeni Solar Services",
+    "use_of_funds": [
+      "service vehicle",
+      "installation tools",
+      "working capital"
+    ]
+  }
+}

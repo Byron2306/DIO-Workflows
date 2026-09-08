@@ -1,0 +1,133 @@
+{
+  "native_organ_count": 4,
+  "new_engine_created": false,
+  "organ_execution_truth": "NATIVE_MULTI_ORGAN_EXECUTION_PROVED_WITH_AUXILIARY_GAPS",
+  "organs": [
+    {
+      "engine_id": "vesper",
+      "executed_capabilities": [
+        "storefront.route.bind"
+      ],
+      "execution_state": "PARTIAL_NATIVE_EXECUTION",
+      "missing_capabilities": [
+        "presence.release.prepare"
+      ],
+      "provider_ref": "presence_core/router.py",
+      "receipt_ref": "composition/operations/VESPER_ROUTE_RECEIPT.json",
+      "required_capabilities": [
+        "storefront.route.bind",
+        "presence.release.prepare"
+      ]
+    },
+    {
+      "engine_id": "lingua",
+      "executed_capabilities": [
+        "communication.meaning.register",
+        "communication.render.bound"
+      ],
+      "execution_state": "NATIVE_EXECUTED",
+      "missing_capabilities": [],
+      "provider_ref": "adapters/lingua/communicator.py",
+      "receipt_ref": "native/lingua/LINGUA_NATIVE_RECEIPT.json",
+      "required_capabilities": [
+        "communication.meaning.register",
+        "communication.render.bound"
+      ]
+    },
+    {
+      "engine_id": "nichefoundry",
+      "executed_capabilities": [
+        "market.position",
+        "market.research.hypothesis"
+      ],
+      "execution_state": "NATIVE_EXECUTED",
+      "missing_capabilities": [],
+      "provider_ref": "scripts/nichefoundry_studio_adapter.py",
+      "receipt_ref": "native/nichefoundry/NICHEFOUNDRY_FINANCE_RECEIPT.json",
+      "required_capabilities": [
+        "market.position",
+        "market.research.hypothesis"
+      ]
+    },
+    {
+      "engine_id": "evidex",
+      "executed_capabilities": [
+        "evidence.intake.structure"
+      ],
+      "execution_state": "PARTIAL_NATIVE_EXECUTION",
+      "missing_capabilities": [
+        "evidence.readiness.gap_map"
+      ],
+      "provider_ref": "adapters/evidex_studio.py",
+      "receipt_ref": "native/evidex/EVIDEX_FINANCE_INTAKE.json",
+      "required_capabilities": [
+        "evidence.intake.structure",
+        "evidence.readiness.gap_map"
+      ]
+    },
+    {
+      "engine_id": "sophia",
+      "executed_capabilities": [
+        "claim.lineage.audit",
+        "assumption.boundary"
+      ],
+      "execution_state": "NATIVE_EXECUTED",
+      "missing_capabilities": [],
+      "provider_ref": "adapters/sophia/studio_finance.py",
+      "receipt_ref": "native/sophia/SOPHIA_FINANCE_AUDIT.json",
+      "required_capabilities": [
+        "claim.lineage.audit",
+        "assumption.boundary"
+      ]
+    },
+    {
+      "engine_id": "document_studio",
+      "executed_capabilities": [
+        "document.preview.render"
+      ],
+      "execution_state": "PARTIAL_NATIVE_EXECUTION",
+      "missing_capabilities": [
+        "document.finance_readiness_pack"
+      ],
+      "provider_ref": "adapters/format_core/renderer.py",
+      "receipt_ref": "native/document_studio/FORMAT_CORE_NORMALIZED_RECEIPT.json",
+      "required_capabilities": [
+        "document.preview.render",
+        "document.finance_readiness_pack"
+      ]
+    },
+    {
+      "engine_id": "vamp",
+      "executed_capabilities": [
+        "objective.milestone.map"
+      ],
+      "execution_state": "NATIVE_EXECUTED",
+      "missing_capabilities": [],
+      "provider_ref": "adapters/vamp/finance_readiness.py",
+      "receipt_ref": "native/vamp/VAMP_FINANCE_OBJECTIVE_MAP.json",
+      "required_capabilities": [
+        "objective.milestone.map"
+      ]
+    },
+    {
+      "engine_id": "commercial_truth",
+      "executed_capabilities": [
+        "commercial.claim.boundary"
+      ],
+      "execution_state": "PARTIAL_NATIVE_EXECUTION",
+      "missing_capabilities": [
+        "commercial.measurement.contract"
+      ],
+      "provider_ref": "products/commercial_truth.py",
+      "receipt_ref": "native/commercial_truth/COMMERCIAL_TRUTH_EVALUATION.json",
+      "required_capabilities": [
+        "commercial.claim.boundary",
+        "commercial.measurement.contract"
+      ]
+    }
+  ],
+  "partial_organ_count": 4,
+  "schema": "dio.studio_native_organ_execution_ledger.v1",
+  "source_bound_only_count": 0,
+  "studio_id": "finance_readiness_studio"
+}

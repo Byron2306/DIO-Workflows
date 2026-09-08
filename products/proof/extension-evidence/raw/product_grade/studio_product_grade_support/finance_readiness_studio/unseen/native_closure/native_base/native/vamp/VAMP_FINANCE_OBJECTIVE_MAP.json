@@ -1,0 +1,69 @@
+{
+  "authority_created": false,
+  "boundary": "This map structures proposed objectives and evidence milestones. It is not a lending decision, business-performance rating, affordability conclusion, or guarantee of outcomes.",
+  "capabilities_executed": [
+    "objective.milestone.map"
+  ],
+  "map_fingerprint": "sha256:014d1d49b1d99893f8a5bf9b99bcc1fad0e9d3f3b31bb96db2c0bc9f498787e1",
+  "objective_count": 3,
+  "objectives": [
+    {
+      "fingerprint": "sha256:3d2429f83531b428038fbb5c91903ca65db8e6c07dcad534d59146a9f83b0c4d",
+      "milestones": [
+        {
+          "evidence_required": "authorised purchase or allocation record",
+          "milestone_id": "FIN-OBJ-01-M1",
+          "state": "PLANNED"
+        },
+        {
+          "evidence_required": "post-deployment outcome or operational record",
+          "milestone_id": "FIN-OBJ-01-M2",
+          "state": "PLANNED"
+        }
+      ],
+      "objective": "Deploy funding allocation for service vehicle",
+      "objective_id": "FIN-OBJ-01",
+      "performance_decision": "NOT_MADE"
+    },
+    {
+      "fingerprint": "sha256:3abc20425a4557ccae91dba20ebdb48c50c65060d67d85ca294b5670580939e7",
+      "milestones": [
+        {
+          "evidence_required": "authorised purchase or allocation record",
+          "milestone_id": "FIN-OBJ-02-M1",
+          "state": "PLANNED"
+        },
+        {
+          "evidence_required": "post-deployment outcome or operational record",
+          "milestone_id": "FIN-OBJ-02-M2",
+          "state": "PLANNED"
+        }
+      ],
+      "objective": "Deploy funding allocation for installation tools",
+      "objective_id": "FIN-OBJ-02",
+      "performance_decision": "NOT_MADE"
+    },
+    {
+      "fingerprint": "sha256:78d0b2f3f5af02586fbabba3d03e89cbcab05d341d5258a190d441600f7dad06",
+      "milestones": [
+        {
+          "evidence_required": "authorised purchase or allocation record",
+          "milestone_id": "FIN-OBJ-03-M1",
+          "state": "PLANNED"
+        },
+        {
+          "evidence_required": "post-deployment outcome or operational record",
+          "milestone_id": "FIN-OBJ-03-M2",
+          "state": "PLANNED"
+        }
+      ],
+      "objective": "Deploy funding allocation for working capital",
+      "objective_id": "FIN-OBJ-03",
+      "performance_decision": "NOT_MADE"
+    }
+  ],
+  "schema": "dio.vamp_finance_objective_map.v1",
+  "source_engine": "vamp",
+  "studio_id": "finance_readiness_studio",
+  "venture": "Mhlabeni Solar Services"
+}

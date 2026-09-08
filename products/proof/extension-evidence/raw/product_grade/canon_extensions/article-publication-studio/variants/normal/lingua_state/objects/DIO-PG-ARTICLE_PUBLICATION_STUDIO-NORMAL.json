@@ -1,0 +1,135 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-ARTICLE_PUBLICATION_STUDIO-NORMAL",
+  "domain": "publication_professional",
+  "subject": "Quarterly evidence narrative",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "article-publication-studio",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-ARTICLE_PUBLICATION_STUDIO-NORMAL",
+    "audience": "teams producing publication-ready evidence narratives",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:14e34891a58def3cd54b4352429426b02d2e2c3498f09c7cc6cfc838e65c9455",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Quarterly evidence narrative",
+        "source_hash": "sha256:90809c6c246d4397f01eedd33eb92e32fd60596b3e13cd6ec62cf169aaa6a459",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "body",
+        "source_text": "Publication and audience",
+        "source_hash": "sha256:79ca693a1f0aa7e9763231de7f3737e7b2dffcb42ce3463eb97e6ea40b840f88",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "labelled_instruction",
+        "source_text": "Target publication: DIO Practice Review",
+        "source_hash": "sha256:7488a1f66332aab0a771e4d43ccd517ef2d519eaf72546024b40cf50d73702ca",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "labelled_instruction",
+        "source_text": "Audience: professional readers",
+        "source_hash": "sha256:7d14ca0d097d0d2e01f9846b9cbbd673fff8e88403ec05ab03215b1eebe43eda",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "body",
+        "source_text": "Purpose",
+        "source_hash": "sha256:d4e8830a71c73edffe0115b8abad16b0b5cb2e121047c64cd01995203cfad062",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "body",
+        "source_text": "Compose a structured article package from authorised evidence.",
+        "source_hash": "sha256:a0916eece446a737590f29f336e4be343dfb9335367c06fdb118da0b55f79936",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "body",
+        "source_text": "Supported evidence",
+        "source_hash": "sha256:2946bba7a5b20900f3537f0c68cab252cc1580434416632a5e175b421fcb6a75",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "labelled_instruction",
+        "source_text": "Supported: Three source-bound findings are available.",
+        "source_hash": "sha256:0a82de1c0188d45aa10a37fd1920beabca78cb1f2bce5d9154cb6805cf58d32c",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "labelled_instruction",
+        "source_text": "Supported: Editorial release remains human.",
+        "source_hash": "sha256:383e44727c79bd31a57ef93ef654e265bea9e51bf8e1017562261fbf4151ffd8",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P010",
+        "unit_type": "body",
+        "source_text": "Held claims",
+        "source_hash": "sha256:da3e5d0fa6ce1b5b94bfcb4c2dabb18eaed00c7054de998de4fd5eeaee4b42c8",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P011",
+        "unit_type": "labelled_instruction",
+        "source_text": "Held for human review: Independent verification is outside the supplied record.",
+        "source_hash": "sha256:bc64173a16e27c05cd4034e4a4ccd6f8183fbb2ea9c21f77529d5bd27f2cb9ba",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P012",
+        "unit_type": "instruction",
+        "source_text": "Human editorial review and publication authority remain required before external release.",
+        "source_hash": "sha256:4ce243b60d34be7d5a61deaf829fc30c03fde1aa4d297b455893e896d8796475",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:14e34891a58def3cd54b4352429426b02d2e2c3498f09c7cc6cfc838e65c9455",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010",
+        "P011",
+        "P012"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:31+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:31+00:00"
+}
