@@ -6,7 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 HOME = (ROOT / 'index.html').read_text(encoding='utf-8')
 SOUP = BeautifulSoup(HOME, 'html.parser')
 POLISH = ROOT / 'assets' / 'corpo-cult-polish.css'
-BASE_VESPER_SHA256 = 'd93fae9453de5030f67ef982ddd18faaa79784c44beba55d68163ded50a2e037'
+BASE_VESPER_SHA256 = 'e765756ae65a78ec401e1bbcf88ceed3d782ef7c6daf4558dc9abc24f3d1b96c'
 
 
 def test_polish_layer_is_loaded_last_without_replacing_site_spine():
