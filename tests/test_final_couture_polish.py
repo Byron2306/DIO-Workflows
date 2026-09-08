@@ -92,6 +92,22 @@ def test_finish_layer_is_loaded_after_existing_couture_everywhere():
     assert "data-dio-couture-finish" in config
 
 
+def test_final_hero_lighting_mini_patch_improves_contrast_without_flattening_art():
+    text = css()
+    for token in (
+        "DIO FINAL HERO LIGHTING MINI PATCH",
+        "--dio-hero-gold:#f3d77d",
+        "--dio-hero-gold-hot:#ffe29a",
+        "--dio-hero-copy:#eee6d7",
+        "background:linear-gradient(90deg,rgba(5,6,8,.76)",
+        ".editorial-copy h1{",
+        "text-shadow:0 0 1px rgba(255,226,154,.18),0 0 14px rgba(215,175,74,.10)",
+        ".editorial-copy .lead,.editorial-copy .buyer-line{color:var(--dio-hero-copy)!important",
+        "box-shadow:inset 0 1px 0 rgba(255,226,154,.08),0 14px 36px rgba(0,0,0,.38),0 0 24px rgba(215,175,74,.06)!important",
+    ):
+        assert token in text
+
+
 if __name__ == "__main__":
     tests = [value for name, value in sorted(globals().items()) if name.startswith("test_") and callable(value)]
     for test in tests:
