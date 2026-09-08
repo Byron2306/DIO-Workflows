@@ -1,0 +1,169 @@
+/* DIO FINAL COUTURE FINISH · 2026-09-08
+   Live mobile-QA closure: contain every orbit-stage element, align hero motifs to the
+   visual panel, and harmonise the final reading/card/control rhythm site-wide.
+   Presentation only. Product truth and evidence remain authoritative elsewhere. */
+:root{
+  --dio-orbit-safe:clamp(18px,3vw,30px);
+  --dio-copy-measure-tight:58ch;
+  --dio-fine-line:rgba(232,198,95,.18);
+  --dio-fine-glow:rgba(245,215,122,.055);
+}
+
+/* DIO COUTURE CONTENT CONTAINMENT
+   The lower incarnation caption is part of the panel, never decoration outside it. */
+.product-orbit-stage figcaption{
+  box-sizing:border-box!important;
+  left:var(--dio-orbit-safe)!important;
+  right:var(--dio-orbit-safe)!important;
+  bottom:var(--dio-orbit-safe)!important;
+  width:auto!important;
+  max-width:90%!important;
+  min-width:0!important;
+  overflow:hidden!important;
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1.45fr)!important;
+  align-items:end!important;
+  gap:10px!important;
+  padding-top:10px!important;
+}
+.product-orbit-stage figcaption span,
+.product-orbit-stage figcaption strong{
+  min-width:0!important;
+  max-width:100%!important;
+}
+.product-orbit-stage figcaption strong{
+  overflow:hidden!important;
+  overflow-wrap:anywhere!important;
+  text-overflow:ellipsis;
+  line-height:1.08!important;
+  text-wrap:balance!important;
+}
+
+/* The hero artwork's visual centre should sit behind the right-hand panel rather than
+   behind the viewport midpoint. Individual flagship art can tune one variable only. */
+body:is([data-view="flagship"],[data-view="product"]){--family-hero-position:72% center}
+body:is([data-view="flagship"],[data-view="product"])[data-product="document-studio"]{--family-hero-position:76% center}
+body:is([data-view="flagship"],[data-view="product"])[data-product="homs"]{--family-hero-position:73% center}
+body:is([data-view="flagship"],[data-view="product"])[data-product="evidex"]{--family-hero-position:74% center}
+body:is([data-view="flagship"],[data-view="product"])[data-product="sophia"]{--family-hero-position:72% center}
+body:is([data-view="flagship"],[data-view="product"])[data-product="vamp"]{--family-hero-position:74% center}
+body:is([data-view="flagship"],[data-view="product"])[data-product="vesper"]{--family-hero-position:75% center}
+body:is([data-view="flagship"],[data-view="product"]) .editorial-hero::before{
+  background-position:var(--family-hero-position)!important;
+  background-repeat:no-repeat!important;
+  background-size:cover!important;
+}
+
+/* Inner safe zone shared by the frame, chips and caption. */
+.product-orbit-stage{
+  padding:var(--dio-orbit-safe)!important;
+  box-sizing:border-box!important;
+}
+.orbit-label.a{left:var(--dio-orbit-safe)!important;top:var(--dio-orbit-safe)!important}
+.orbit-label.b{right:var(--dio-orbit-safe)!important;top:var(--dio-orbit-safe)!important}
+.orbit-label.c{left:var(--dio-orbit-safe)!important;bottom:clamp(72px,14%,96px)!important}
+.orbit-label.d{right:var(--dio-orbit-safe)!important;bottom:clamp(72px,14%,96px)!important}
+.orbit-label{
+  min-width:0!important;
+  width:max-content!important;
+  max-width:min(42%,220px)!important;
+  min-height:36px!important;
+  padding:8px 11px!important;
+  overflow:hidden!important;
+  overflow-wrap:anywhere!important;
+  word-break:normal!important;
+  hyphens:none!important;
+  white-space:normal!important;
+  text-wrap:balance!important;
+  line-height:1.08!important;
+  box-sizing:border-box!important;
+}
+.orbit-label.c{max-width:min(46%,240px)!important}
+
+/* DIO FINAL SITEWIDE FINISH */
+.truthgrid,.evidence-layout,.pilot-grid{
+  gap:clamp(30px,4.6vw,72px)!important;
+}
+.card-body,.artifact-card,.proof-artifact-card,.evidence-receipt-card{
+  min-width:0!important;
+}
+.card h2,.artifact-card h3,.proof-artifact-card h3{
+  text-wrap:balance!important;
+  overflow-wrap:anywhere!important;
+}
+.editorial-copy .lead,
+.section-intro>p,
+.evidence-ledger p,
+.truth p,
+.truth li,
+.launch-v2 .mega-copy p,
+.launch-v2 .suite-explainer-head p{
+  max-width:var(--dio-copy-measure-tight)!important;
+}
+.editorial-section+.editorial-section{
+  border-top-color:rgba(232,198,95,.07)!important;
+}
+.artifact-card,.proof-artifact-card,.evidence-receipt-card,.pilot-card,
+body[data-view="portfolio"] .card{
+  border-color:var(--dio-fine-line)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.025),0 16px 42px rgba(0,0,0,.27),0 0 22px var(--dio-fine-glow)!important;
+}
+
+/* Give text panels a calm local contrast field without flattening the artwork. */
+body:is([data-view="flagship"],[data-view="product"]) .editorial-copy{
+  position:relative!important;
+  isolation:isolate!important;
+}
+body:is([data-view="flagship"],[data-view="product"]) .editorial-copy::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:-20px -26px -20px -34px;
+  background:linear-gradient(90deg,rgba(5,6,7,.46),rgba(5,6,7,.18) 72%,transparent);
+  filter:blur(8px);
+  pointer-events:none;
+}
+
+/* Navigation and controls share optical centering and enough breathing room. */
+.navlinks a,.button,.film-cta,.orbit-label{
+  -webkit-font-smoothing:antialiased;
+}
+.navlinks .cta,.hero-actions .button,.card-actions .button,.film-cta{
+  box-sizing:border-box!important;
+  min-width:0!important;
+}
+
+@media(max-width:900px){
+  body:is([data-view="flagship"],[data-view="product"]){--family-hero-position:center top}
+  body:is([data-view="flagship"],[data-view="product"]) .editorial-copy::before{
+    inset:-18px -16px;
+    background:linear-gradient(180deg,rgba(5,6,7,.34),rgba(5,6,7,.12) 72%,transparent);
+  }
+  .product-orbit-stage figcaption{
+    grid-template-columns:1fr!important;
+    gap:2px!important;
+  }
+  .product-orbit-stage figcaption strong{text-align:left!important}
+}
+
+@media(max-width:560px){
+  :root{--dio-orbit-safe:14px}
+  .product-orbit-stage{width:100%!important;max-width:100%!important;padding:var(--dio-orbit-safe)!important}
+  .orbit-label{max-width:40%!important;min-height:32px!important;padding:6px 8px!important;font-size:.49rem!important;letter-spacing:.055em!important}
+  .orbit-label.c{max-width:44%!important;bottom:60px!important}
+  .orbit-label.d{bottom:60px!important}
+  .product-orbit-stage figcaption{left:14px!important;right:14px!important;bottom:12px!important;max-width:calc(100% - 28px)!important;padding-top:7px!important}
+  .product-orbit-stage figcaption span{font-size:.5rem!important}
+  .product-orbit-stage figcaption strong{font-size:.84rem!important;line-height:1.05!important}
+  .hero-actions{display:grid!important;grid-template-columns:1fr!important;width:100%!important}
+  .hero-actions .button{width:100%!important;min-width:0!important}
+  .card-actions{display:grid!important;grid-template-columns:1fr!important}
+  .card-actions .button{width:100%!important}
+  .editorial-copy h1{overflow-wrap:normal!important;word-break:normal!important}
+}
+
+@media(max-width:390px){
+  .orbit-label{max-width:38%!important;font-size:.46rem!important;letter-spacing:.045em!important}
+  .orbit-label.c{max-width:43%!important}
+  .product-orbit-stage .route-word{max-width:45%!important;font-size:.86rem!important}
+}
