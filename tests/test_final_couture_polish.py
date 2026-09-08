@@ -108,6 +108,26 @@ def test_final_hero_lighting_mini_patch_improves_contrast_without_flattening_art
         assert token in text
 
 
+def test_magnum_opus_visual_canon_separates_gold_and_lifts_real_hero_art():
+    text = css()
+    for token in (
+        "DIO MAGNUM OPUS VISUAL CANON",
+        "--dio-magnum-headline-top:#f0dfb1",
+        "--dio-magnum-ui:#d99a36",
+        "--dio-magnum-ornament:#8b622c",
+        "--dio-hero-lift:1.42",
+        'data-product="document-studio"]{--dio-hero-lift:1.18}',
+        "background-image:radial-gradient(circle at 74% 44%,rgba(225,165,67,.11),transparent 34%)",
+        "filter:brightness(var(--dio-hero-lift)) contrast(1.06) saturate(.98)!important",
+        "DIO MAGNUM OPUS PRODUCT FRAME",
+        "url('dio-frame-tracer.svg') center/100% 100% no-repeat",
+        "border:1px solid rgba(207,146,48,.38)!important",
+        "brightness(.86) contrast(1.08) saturate(.72) sepia(.16)",
+    ):
+        assert token in text
+    assert "DIO WARM GOLD + HERO LIGHTING FINAL PASS" not in text
+
+
 if __name__ == "__main__":
     tests = [value for name, value in sorted(globals().items()) if name.startswith("test_") and callable(value)]
     for test in tests:

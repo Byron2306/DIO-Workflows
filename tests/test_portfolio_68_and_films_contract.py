@@ -48,8 +48,10 @@ def test_portfolio_surface_explains_68_as_53_base_plus_15_extensions():
     html = (ROOT / 'products' / 'index.html').read_text(encoding='utf-8')
     assert '68 canonical product incarnations' in html
     assert '53 base canon + 15 canon extensions' in html
-    assert '68 incarnations' in html
-    assert '159 / 159 base-canon journeys verified' in html
+    assert '68 mapped incarnations' in html
+    assert '159-journey production gauntlet' in html
+    assert '45/45 controlled ProductGrade journeys' in html
+    assert '204 / 204 controlled journeys verified' in html
 
 
 def test_homepage_promotes_68_without_rewriting_historic_53x3_proof():
