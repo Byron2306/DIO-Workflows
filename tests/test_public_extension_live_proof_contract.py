@@ -5,7 +5,8 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-PROOF_CATALOG = ROOT / "products" / "proof" / "portfolio-proof-catalog.json"
+BASE_PROOF_CATALOG = ROOT / "products" / "proof" / "portfolio-proof-catalog.json"
+EXTENSION_PROOF_CATALOG = ROOT / "products" / "proof" / "canon-extension-proof-catalog.json"
 APP = ROOT / "products" / "app.js"
 VISUAL_CSS = ROOT / "assets" / "dio-visual-system.css"
 PROOF_CSS = ROOT / "products" / "proof-layer.css"
@@ -35,19 +36,30 @@ def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def test_public_proof_catalog_promotes_full_68x3_truth():
-    data = json.loads(PROOF_CATALOG.read_text(encoding="utf-8"))
-    assert data["canonical_product_count"] == 68
-    assert data["execution_journey_count"] == 204
-    assert data["execution_verified_journey_count"] == 204
-    assert data["commercial_validation"] == "UNPROVED"
-    assert data["authority_created"] is False
-    assert len(data["products"]) == 68
+def load_extension_catalog() -> dict:
+    return json.loads(EXTENSION_PROOF_CATALOG.read_text(encoding="utf-8"))
+
+
+def test_historic_53_catalog_stays_immutable_while_extension_catalog_completes_68x3_truth():
+    base = json.loads(BASE_PROOF_CATALOG.read_text(encoding="utf-8"))
+    ext = load_extension_catalog()
+    assert base["canonical_product_count"] == 53
+    assert base["execution_journey_count"] == 159
+    assert len(base["products"]) == 53
+    assert ext["canon_extension_count"] == 15
+    assert ext["execution_journey_count"] == 45
+    assert ext["execution_verified_journey_count"] == 45
+    assert ext["combined_canonical_product_count"] == 68
+    assert ext["combined_execution_journey_count"] == 204
+    assert ext["combined_execution_verified_journey_count"] == 204
+    assert ext["commercial_validation"] == "UNPROVED"
+    assert ext["authority_created"] is False
+    assert len(ext["products"]) == 15
 
 
 def test_all_15_extensions_have_three_real_hash_bound_public_buyer_artifacts():
-    data = json.loads(PROOF_CATALOG.read_text(encoding="utf-8"))
-    rows = {row["slug"]: row for row in data["products"] if row["slug"] in EXTENSION_SLUGS}
+    data = load_extension_catalog()
+    rows = {row["slug"]: row for row in data["products"]}
     assert set(rows) == EXTENSION_SLUGS
 
     for slug, row in rows.items():
@@ -65,8 +77,8 @@ def test_all_15_extensions_have_three_real_hash_bound_public_buyer_artifacts():
 
 
 def test_all_15_extensions_publish_verification_receipts_and_full_ci_bundle():
-    data = json.loads(PROOF_CATALOG.read_text(encoding="utf-8"))
-    rows = {row["slug"]: row for row in data["products"] if row["slug"] in EXTENSION_SLUGS}
+    data = load_extension_catalog()
+    rows = {row["slug"]: row for row in data["products"]}
     for slug, row in rows.items():
         receipt_kinds = {receipt["kind"] for receipt in row["evidence_receipts"]}
         assert "product_grade" in receipt_kinds, slug
@@ -78,10 +90,12 @@ def test_all_15_extensions_publish_verification_receipts_and_full_ci_bundle():
 
     assert FULL_BUNDLE.is_file()
     assert sha256(FULL_BUNDLE) == EXPECTED_BUNDLE_SHA256
+    assert data["full_evidence_bundle"]["sha256"].removeprefix("sha256:") == EXPECTED_BUNDLE_SHA256
 
 
-def test_extension_renderer_has_no_prose_only_success_fallback():
+def test_extension_renderer_merges_two_proof_families_and_has_no_prose_only_success_fallback():
     app = APP.read_text(encoding="utf-8")
+    assert "canon-extension-proof-catalog.json" in app
     assert "ProductGrade verified.</h3>" not in app
     assert "PUBLIC PROOF MISSING" in app
     assert "evidence_receipts" in app
