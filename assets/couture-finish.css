@@ -209,3 +209,217 @@ body:is([data-view="flagship"],[data-view="product"]) .editorial-copy .breadcrum
     background:linear-gradient(180deg,rgba(5,6,8,.62),rgba(5,6,8,.22) 74%,transparent)!important;
   }
 }
+/* =========================================================
+   DIO WARM GOLD + HERO LIGHTING FINAL PASS
+   ========================================================= */
+
+:root{
+  --dio-gold-hot: #f0c96a;      /* highlight gold */
+  --dio-gold-main: #d7a94b;     /* warm amber gold */
+  --dio-gold-deep: #9a6a24;     /* antique bronze-gold */
+  --dio-gold-soft: #e6c98a;     /* softer champagne-gold */
+
+  --dio-ivory: #e7dcc6;
+  --dio-parchment: #cdbfa6;
+}
+
+/* =========================
+   WARMER GOLD SITEWIDE
+   ========================= */
+h1, h2, h3,
+.display-title,
+.hero-copy h1,
+.editorial-copy h1,
+.editorial-hero h1,
+.product-hero h1,
+.section-intro h2,
+.product-film-copy h2,
+.family-workflow-copy h2,
+.route-word{
+  background: linear-gradient(
+    180deg,
+    #f2d07a 0%,
+    #d8a64a 48%,
+    #9e6b27 100%
+  ) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  text-shadow:
+    0 0 1px rgba(255, 223, 150, 0.10),
+    0 0 12px rgba(215, 169, 75, 0.08) !important;
+}
+
+.eyebrow,
+.section-kicker,
+.product-kicker,
+.hero-kicker,
+.breadcrumb,
+.breadcrumb a,
+.variant-label,
+.orbit-label,
+.proof-label,
+.card-label{
+  color: var(--dio-gold-main) !important;
+}
+
+p, li,
+.hero-copy p,
+.editorial-copy p,
+.editorial-copy .lead,
+.family-workflow-copy p,
+.card p,
+.proof-copy,
+.product-description{
+  color: var(--dio-ivory) !important;
+}
+
+small,
+.muted,
+.secondary,
+.hash,
+.boundary-copy,
+.proof-meta{
+  color: var(--dio-parchment) !important;
+}
+
+/* =========================
+   LIGHTER HERO BACKGROUNDS
+   ========================= */
+.editorial-hero,
+.product-hero,
+.family-hero{
+  position: relative;
+  isolation: isolate;
+}
+
+/* Lift the artwork instead of crushing it */
+.editorial-hero::before,
+.product-hero::before,
+.family-hero::before{
+  filter: brightness(1.12) contrast(1.04) saturate(1.08) !important;
+  opacity: 0.62 !important;
+}
+
+/* Keep text readable with a gentler, smarter overlay */
+.editorial-hero::after,
+.product-hero::after,
+.family-hero::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 6, 8, 0.76) 0%,
+      rgba(5, 6, 8, 0.60) 26%,
+      rgba(5, 6, 8, 0.34) 56%,
+      rgba(5, 6, 8, 0.16) 100%
+    ) !important;
+}
+
+/* Ensure content sits above overlays */
+.editorial-hero > *,
+.product-hero > *,
+.family-hero > *{
+  position: relative;
+  z-index: 1;
+}
+
+/* Extra readability on the copy side only */
+.editorial-copy,
+.hero-copy{
+  position: relative;
+}
+
+.editorial-copy::before,
+.hero-copy::before{
+  content: "";
+  position: absolute;
+  inset: -1rem -1rem -1rem -1rem;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 6, 8, 0.30) 0%,
+      rgba(5, 6, 8, 0.16) 65%,
+      transparent 100%
+    );
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* =========================
+   ORBIT / PANEL LUMINOSITY
+   ========================= */
+.product-orbit-stage,
+.family-workflow-figure,
+.card,
+.panel{
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.012)),
+    linear-gradient(180deg, rgba(12,14,18,0.90), rgba(8,10,14,0.94)) !important;
+  border-color: rgba(215,169,75,0.24) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,233,170,0.06),
+    0 12px 30px rgba(0,0,0,0.30),
+    0 0 22px rgba(215,169,75,0.05) !important;
+}
+
+/* Little gold rectangles / chips */
+.orbit-label,
+.orbit-chip,
+.route-chip,
+.product-orbit-stage figcaption{
+  color: #ecd39a !important;
+  border: 1px solid rgba(215,169,75,0.28) !important;
+  background:
+    linear-gradient(180deg, rgba(255,221,140,0.06), rgba(255,221,140,0.015)),
+    rgba(9,10,12,0.82) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,232,170,0.08),
+    0 0 16px rgba(215,169,75,0.05) !important;
+}
+
+/* =========================
+   PAGE-SPECIFIC HERO LIFT
+   ========================= */
+body[data-product="document-studio"] .editorial-hero::before,
+body[data-product="product-factory"] .editorial-hero::before,
+body[data-product="homs-assess"] .editorial-hero::before,
+body[data-product="homs-exam"] .editorial-hero::before,
+body[data-product="sophia"] .editorial-hero::before,
+body[data-product="vesper"] .editorial-hero::before{
+  filter: brightness(1.16) contrast(1.05) saturate(1.10) !important;
+  opacity: 0.66 !important;
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 700px){
+  .editorial-hero::after,
+  .product-hero::after,
+  .family-hero::after{
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5,6,8,0.64) 0%,
+        rgba(5,6,8,0.70) 36%,
+        rgba(5,6,8,0.42) 100%
+      ) !important;
+  }
+
+  .editorial-copy::before,
+  .hero-copy::before{
+    inset: -0.5rem;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5,6,8,0.22) 0%,
+        rgba(5,6,8,0.14) 100%
+      ) !important;
+  }
+}
