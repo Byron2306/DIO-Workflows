@@ -36,6 +36,7 @@ window.DIO_SITE_CONFIG = {
   addStylesheet('visual-safety.css', 'data-dio-visual-safety');
   addStylesheet('orbital-architecture.css', 'data-dio-orbital-architecture');
   addStylesheet('eye-strategy.css', 'data-dio-eye-strategy');
+  addStylesheet('canon-gold-sheen.css', 'data-dio-canon-gold-sheen');
 
   if (!document.querySelector('script[data-dio-orbital-architecture]')) {
     const orbital = document.createElement('script');
