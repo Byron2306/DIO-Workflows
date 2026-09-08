@@ -1,0 +1,284 @@
+/* DIO FINAL COUTURE · 2026-09-08
+   Final live-QA layer: exact orbital centering, content-aware gold controls,
+   elegant spacing rhythm and restrained reading contrast. Presentation only. */
+:root{
+  --dio-section-space:clamp(72px,8vw,118px);
+  --dio-card-pad:clamp(22px,2.4vw,32px);
+  --dio-control-height:46px;
+  --dio-copy-measure:66ch;
+}
+
+html{background:#060708}
+body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+
+/* DIO COUTURE ORBIT ALIGNMENT
+   Retire the offset grid-sized ring. The decorative orbit now belongs to the stage itself. */
+html body:is([data-view="product"],[data-view="flagship"]) .editorial-hero-grid::after{
+  content:none!important;
+  display:none!important;
+  background:none!important;
+}
+.product-orbit-stage{
+  position:relative!important;
+  display:grid!important;
+  place-items:center!important;
+  isolation:isolate!important;
+  overflow:hidden!important;
+  width:100%!important;
+  max-width:680px!important;
+  min-height:0!important;
+  aspect-ratio:1 / 1!important;
+  padding:clamp(20px,2.8vw,30px)!important;
+  background:
+    radial-gradient(circle at 50% 49%,rgba(232,198,95,.10),transparent 37%),
+    linear-gradient(145deg,rgba(13,15,18,.94),rgba(5,6,7,.98))!important;
+}
+.product-orbit-stage::after{
+  content:""!important;
+  position:absolute!important;
+  left:50%!important;
+  top:50%!important;
+  width:90%!important;
+  height:90%!important;
+  transform:translate(-50%,-50%)!important;
+  transform-origin:center center!important;
+  background:url('premium/dio-gilded-orbit-ring.webp') center center/contain no-repeat!important;
+  opacity:.13!important;
+  pointer-events:none!important;
+  z-index:0!important;
+  mix-blend-mode:screen;
+  filter:drop-shadow(0 0 24px rgba(232,198,95,.10));
+}
+.product-matrix,.product-orbit-eye{
+  position:absolute!important;
+  left:50%!important;
+  top:50%!important;
+  transform:translate(-50%,-50%)!important;
+  transform-origin:center center!important;
+  object-position:center center!important;
+  margin:0!important;
+}
+.product-orbit-stage .product-matrix{
+  inset:auto!important;
+  width:88%!important;
+  height:88%!important;
+  object-fit:contain!important;
+  opacity:.25!important;
+  z-index:1!important;
+}
+.product-orbit-stage .product-orbit-eye{
+  width:min(52%,350px)!important;
+  height:min(52%,350px)!important;
+  object-fit:contain!important;
+  opacity:.74!important;
+  z-index:2!important;
+  filter:saturate(.86) contrast(1.03) brightness(.88) drop-shadow(0 0 26px rgba(232,198,95,.13))!important;
+}
+.product-orbit-stage .premium-family-medallion{
+  position:absolute!important;
+  left:50%!important;
+  top:50%!important;
+  width:clamp(62px,9vw,92px)!important;
+  height:clamp(62px,9vw,92px)!important;
+  transform:translate(-50%,-50%)!important;
+  object-fit:contain!important;
+  z-index:3!important;
+}
+.product-orbit-stage .route-word{
+  position:relative!important;
+  left:auto!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:auto!important;
+  transform:none!important;
+  place-self:center!important;
+  z-index:4!important;
+  max-width:58%!important;
+  margin:0!important;
+  text-align:center!important;
+  text-wrap:balance;
+  overflow-wrap:anywhere;
+  font-family:var(--dio-display-serif,"Iowan Old Style","Baskerville",Georgia,serif)!important;
+  font-size:clamp(1.05rem,2.1vw,1.7rem)!important;
+  line-height:1.04!important;
+  letter-spacing:.09em!important;
+  color:#f3d77d!important;
+  text-shadow:0 0 16px rgba(232,198,95,.10)!important;
+}
+
+/* Content-aware gold rectangles. They may wrap, but they may never escape their frame. */
+.orbit-label{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-width:clamp(104px,13vw,148px)!important;
+  max-width:clamp(124px,17vw,184px)!important;
+  min-height:38px!important;
+  padding:8px 12px!important;
+  box-sizing:border-box!important;
+  white-space:normal!important;
+  overflow:hidden!important;
+  overflow-wrap:anywhere!important;
+  word-break:normal!important;
+  line-height:1.12!important;
+  text-align:center!important;
+  font-family:var(--dio-ui-sans,Inter,Aptos,"Segoe UI",Arial,sans-serif)!important;
+  font-size:clamp(.54rem,.72vw,.66rem)!important;
+  font-weight:700!important;
+  letter-spacing:.10em!important;
+  color:#ead49a!important;
+  background:linear-gradient(180deg,rgba(14,14,13,.92),rgba(6,7,8,.88))!important;
+  border:1px solid rgba(232,198,95,.30)!important;
+  box-shadow:inset 0 1px 0 rgba(255,244,196,.055),0 10px 26px rgba(0,0,0,.28),0 0 16px rgba(232,198,95,.035)!important;
+  backdrop-filter:blur(6px);
+}
+.orbit-label.a{left:5%!important;top:5%!important}
+.orbit-label.b{right:5%!important;top:5%!important}
+.orbit-label.c{
+  left:5%!important;
+  bottom:clamp(66px,13%,88px)!important;
+  max-width:clamp(150px,20vw,220px)!important;
+}
+.orbit-label.d{right:5%!important;bottom:clamp(66px,13%,88px)!important}
+.product-orbit-stage figcaption{
+  left:5%!important;
+  right:5%!important;
+  bottom:18px!important;
+  align-items:end!important;
+  gap:12px!important;
+}
+.product-orbit-stage figcaption strong{
+  font-family:var(--dio-display-serif,"Iowan Old Style","Baskerville",Georgia,serif)!important;
+  line-height:1.08!important;
+  text-align:right!important;
+}
+
+/* DIO SITEWIDE COUTURE RHYTHM */
+.editorial-section{padding:var(--dio-section-space) 0!important}
+.proof-artifact-card,.evidence-receipt-card,.artifact-card,.pilot-card{
+  padding:var(--dio-card-pad)!important;
+}
+.section-intro,.product-film-grid,.family-workflow-grid{
+  gap:clamp(28px,4.4vw,66px)!important;
+}
+.section-intro{margin-bottom:clamp(32px,4vw,52px)!important}
+.artifact-gallery,.live-proof-grid{gap:clamp(14px,1.6vw,20px)!important}
+.delivery-flow article{padding:clamp(22px,2.6vw,32px)!important}
+
+/* One control geometry throughout navigation, hero, cards and handoff. */
+.nav{align-items:center!important;gap:clamp(16px,2.4vw,28px)!important}
+.navlinks{align-items:center!important;gap:clamp(14px,2vw,24px)!important}
+.navlinks .cta,.hero-actions .button,.card-actions .button,.film-cta{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-height:var(--dio-control-height)!important;
+  padding:0 18px!important;
+  line-height:1.12!important;
+  text-align:center!important;
+  white-space:normal!important;
+}
+.hero-actions,.card-actions{align-items:stretch!important;gap:12px!important}
+
+/* Editorial elegance: confident display type, calm reading measure. */
+body:is([data-view="product"],[data-view="flagship"]) .editorial-copy h1,
+body:is([data-view="product"],[data-view="flagship"]) .section-intro h2,
+body:is([data-view="product"],[data-view="flagship"]) .family-workflow-copy h2,
+body:is([data-view="product"],[data-view="flagship"]) .product-film-copy h2,
+.launch-v2 .mega-copy h2,
+.launch-v2 .suite-explainer-head h2{
+  text-wrap:balance!important;
+  font-family:var(--dio-display-serif,"Iowan Old Style","Baskerville",Georgia,serif)!important;
+}
+body:is([data-view="product"],[data-view="flagship"]) .editorial-copy h1{
+  line-height:.93!important;
+  letter-spacing:-.042em!important;
+}
+body:is([data-view="product"],[data-view="flagship"]) .editorial-copy .lead{
+  max-width:31ch!important;
+  line-height:1.38!important;
+}
+body:is([data-view="product"],[data-view="flagship"]) .buyer-line,
+body:is([data-view="product"],[data-view="flagship"]) .section-intro>p,
+body:is([data-view="product"],[data-view="flagship"]) .family-workflow-copy p,
+.launch-v2 .mega-copy p,
+.launch-v2 .suite-explainer-head p{
+  max-width:var(--dio-copy-measure)!important;
+  line-height:1.7!important;
+}
+
+/* Quiet the artwork one final notch wherever it sits behind readable copy. */
+body:is([data-view="product"],[data-view="flagship"]) .editorial-hero::before{
+  filter:saturate(.78) contrast(1.04) brightness(.72)!important;
+}
+.family-workflow-figure img,.launch-v2 .family-explainer figure img{
+  filter:saturate(.78) contrast(1.035) brightness(.86)!important;
+}
+.launch-v2 .mega-section[data-atmosphere]::before{
+  filter:saturate(.82) contrast(1.045) brightness(.74)!important;
+}
+
+/* Homepage chapters inherit the same breathing rhythm rather than feeling like a different site. */
+.launch-v2 .mega-section,
+.launch-v2 .product-bridge,
+.launch-v2 .suite-explainers,
+.launch-v2 .launch-proof,
+.launch-v2 .launch-intake{
+  padding-block:var(--dio-section-space)!important;
+}
+.launch-v2 .mega-copy,.launch-v2 .cinematic-product-copy{
+  padding:clamp(24px,2.8vw,40px)!important;
+}
+.launch-v2 .mega-copy h2,.launch-v2 .suite-explainer-head h2{
+  line-height:.97!important;
+  letter-spacing:-.032em!important;
+}
+
+/* Proof and portfolio surfaces get the same precise inset rhythm. */
+.proof-job-card,.proof-state-card,.proof-missing-card,.evidence-receipts-panel,
+body[data-view="portfolio"] .card-body{
+  padding:var(--dio-card-pad)!important;
+}
+.evidence-receipt-grid{gap:clamp(10px,1.3vw,14px)!important}
+.proof-checks{gap:7px!important}
+
+@media(max-width:980px){
+  .product-orbit-stage{max-width:620px!important;justify-self:center!important;margin-inline:auto!important}
+  .section-intro,.product-film-grid,.family-workflow-grid{gap:30px!important}
+}
+
+@media(max-width:700px){
+  :root{--dio-section-space:clamp(58px,14vw,82px);--dio-card-pad:20px;--dio-control-height:44px}
+  .product-orbit-stage{aspect-ratio:1 / 1!important;padding:16px!important}
+  .product-orbit-stage::after{width:94%!important;height:94%!important;opacity:.10!important}
+  .product-orbit-stage .product-matrix{width:92%!important;height:92%!important}
+  .product-orbit-stage .product-orbit-eye{width:48%!important;height:48%!important}
+  .product-orbit-stage .route-word{max-width:52%!important;font-size:clamp(.9rem,4.5vw,1.25rem)!important;letter-spacing:.065em!important}
+  .orbit-label{
+    min-width:92px!important;
+    max-width:42%!important;
+    min-height:34px!important;
+    padding:7px 9px!important;
+    font-size:.52rem!important;
+    letter-spacing:.075em!important;
+  }
+  .orbit-label.a{left:4%!important;top:4%!important}
+  .orbit-label.b{right:4%!important;top:4%!important}
+  .orbit-label.c{left:4%!important;bottom:64px!important;max-width:46%!important}
+  .orbit-label.d{right:4%!important;bottom:64px!important}
+  .product-orbit-stage figcaption{left:4%!important;right:4%!important;bottom:14px!important;display:grid!important;grid-template-columns:1fr!important;gap:3px!important}
+  .product-orbit-stage figcaption strong{text-align:left!important;font-size:.9rem!important}
+  .product-orbit-stage figcaption span{font-size:.54rem!important}
+  .navlinks .cta,.hero-actions .button,.card-actions .button,.film-cta{padding-inline:14px!important;font-size:.78rem!important}
+  body:is([data-view="product"],[data-view="flagship"]) .editorial-copy .lead{max-width:none!important}
+}
+
+@media(max-width:460px){
+  .orbit-label{font-size:.49rem!important;letter-spacing:.06em!important;min-width:84px!important}
+  .orbit-label.c{max-width:48%!important}
+  .product-orbit-stage .route-word{max-width:48%!important}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .product-orbit-stage::after{filter:none!important}
+}
