@@ -5,6 +5,7 @@ on:
       - "products/**"
       - "assets/**"
       - "tests/test_public_extension_live_proof_contract.py"
+      - "tests/test_full_elegance_polish.py"
       - ".github/workflows/product-editorial-evidence.yml"
   workflow_dispatch:
 jobs:
@@ -39,3 +40,5 @@ jobs:
           PY
       - name: Validate 15-extension live proof and gilded typography
         run: python3 tests/test_public_extension_live_proof_contract.py
+      - name: Validate full elegance polish
+        run: python3 tests/test_full_elegance_polish.py
