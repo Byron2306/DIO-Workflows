@@ -1,0 +1,207 @@
+name: Import verified canon-extension evidence
+on:
+  push:
+    branches: [finish/gilded-68-live-proof]
+    paths: ['.github/workflows/import-canon-extension-evidence.yml']
+permissions:
+  contents: write
+jobs:
+  import-evidence:
+    runs-on: ubuntu-latest
+    env:
+      EVIDENCE_URL: "https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-8ea0-8211-bf2d-ce1a300e93fb/raw?se=2026-09-08T01%3A36%3A49Z&sp=r&sv=2026-02-06&sr=b&scid=65b9ba6c-e555-5941-8dc3-ec57e138a21c&skoid=37f774a3-b6f2-4e56-9fdd-339e5d6e97f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-08T01%3A17%3A26Z&ske=2026-09-09T01%3A17%3A26Z&sks=b&skv=2026-02-06&sig=EblRzpu3IUBacUD4uOAVfb0xX%2BAMomfwSnGqjzT1678%3D"
+      EVIDENCE_SHA256: cd49538d3a6eece75cbb8b4a3458269a21c84f9da5760e1b3e4f92b76e096ed1
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: finish/gilded-68-live-proof
+          fetch-depth: 0
+      - name: Fetch and verify exact CI evidence bundle
+        shell: bash
+        run: |
+          curl --fail --location --retry 3 "$EVIDENCE_URL" -o /tmp/dio-evidence.zip
+          echo "$EVIDENCE_SHA256  /tmp/dio-evidence.zip" | sha256sum --check --strict
+      - name: Materialize permanent public evidence tree and catalogs
+        shell: bash
+        run: |
+          rm -rf products/proof/extension-evidence
+          mkdir -p products/proof/extension-evidence/raw
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, html, json, mimetypes, zipfile
+
+          ROOT = Path('.').resolve()
+          OUT = ROOT / 'products/proof/extension-evidence'
+          RAW = OUT / 'raw'
+          ZIP = Path('/tmp/dio-evidence.zip')
+          SOURCE_SHA = 'cd49538d3a6eece75cbb8b4a3458269a21c84f9da5760e1b3e4f92b76e096ed1'
+          SOURCE_RUN = 34175560147
+          SOURCE_COMMIT = 'c19705f1298af6f297076d8f631d74e77a639051'
+          SOURCE_ARTIFACT_ID = 10037123970
+
+          with zipfile.ZipFile(ZIP) as zf:
+              zf.extractall(RAW)
+          files = sorted(p for p in RAW.rglob('*') if p.is_file())
+          if len(files) != 455:
+              raise SystemExit(f'expected 455 evidence files, got {len(files)}')
+          (OUT / 'dio-canon-68x3-productgrade-evidence.zip').write_bytes(ZIP.read_bytes())
+
+          def sha(path):
+              return hashlib.sha256(path.read_bytes()).hexdigest()
+          def media(path):
+              if path.suffix.lower() == '.json': return 'application/json'
+              if path.suffix.lower() == '.html': return 'text/html'
+              if path.suffix.lower() in ('.txt', '.md'): return 'text/plain'
+              return mimetypes.guess_type(path.name)[0] or 'application/octet-stream'
+          def public_path(key):
+              return f'products/proof/extension-evidence/raw/{key}'
+          def strip_state(value):
+              value = str(value or '')
+              return value[6:] if value.startswith('state/') else value
+
+          manifest_files = {}
+          for path in files:
+              key = path.relative_to(RAW).as_posix()
+              manifest_files[key] = {
+                  'path': public_path(key),
+                  'bytes': path.stat().st_size,
+                  'sha256': 'sha256:' + sha(path),
+                  'media_type': media(path),
+              }
+          manifest = {
+              'schema': 'dio.public.canon_extension_evidence_manifest.v1',
+              'source_repository': 'Byron2306/DIO-Full-Audit',
+              'source_workflow_run_id': SOURCE_RUN,
+              'source_commit': SOURCE_COMMIT,
+              'source_artifact_id': SOURCE_ARTIFACT_ID,
+              'source_artifact_sha256': 'sha256:' + SOURCE_SHA,
+              'file_count': len(manifest_files),
+              'commercial_validation': 'UNPROVED',
+              'authority_created': False,
+              'external_effects': False,
+              'files': manifest_files,
+          }
+          (OUT / 'evidence-manifest.json').write_text(json.dumps(manifest, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+
+          aggregate = json.loads((RAW / 'product_grade/canon_extension_aggregate/CANON_EXTENSION_PRODUCT_GRADE_RECEIPT.json').read_text())
+          products = []
+          for slug, agg in sorted(aggregate['extensions'].items()):
+              product_key = f'product_grade/canon_extensions/{slug}/PRODUCT_GRADE_RECEIPT.json'
+              product_receipt = json.loads((RAW / product_key).read_text())
+              artifacts = []
+              evidence_receipts = []
+              for variant in ('normal', 'messy', 'adversarial'):
+                  v = product_receipt['variants'][variant]
+                  artifact_key = f'product_grade/canon_extensions/{slug}/variants/{variant}/customer_delivery/index.html'
+                  variant_receipt_key = f'product_grade/canon_extensions/{slug}/variants/{variant}/PRODUCT_GRADE_VARIANT_RECEIPT.json'
+                  artifacts.append({
+                      'name': f'{variant.upper()} BUYER ARTIFACT',
+                      'variant': variant,
+                      'path': public_path(artifact_key),
+                      'bytes': manifest_files[artifact_key]['bytes'],
+                      'sha256': manifest_files[artifact_key]['sha256'],
+                      'suffix': '.html',
+                      'proof_relation': 'customer_facing_artifact_from_verified_canon_extension_productgrade_run',
+                      'beast_mechanical_pass': bool(v.get('beast_mechanical_pass')),
+                      'lingua_semantic_custody': bool(v.get('lingua_semantic_custody')),
+                      'human_boundary_present': bool(v.get('human_boundary_present')),
+                      'adversarial_boundary_held': bool(v.get('adversarial_boundary_held')),
+                  })
+                  evidence_receipts.append({
+                      'kind': f'variant_{variant}',
+                      'name': f'{variant.title()} variant receipt',
+                      'path': public_path(variant_receipt_key),
+                      'sha256': manifest_files[variant_receipt_key]['sha256'],
+                  })
+              evidence_receipts.insert(0, {
+                  'kind': 'product_grade',
+                  'name': 'ProductGrade receipt',
+                  'path': public_path(product_key),
+                  'sha256': manifest_files[product_key]['sha256'],
+              })
+              for kind, source in (
+                  ('materialization', agg.get('generation_receipt')),
+                  ('provenance_seal', agg.get('proof_receipt')),
+              ):
+                  key = strip_state(source)
+                  if key in manifest_files:
+                      evidence_receipts.append({
+                          'kind': kind,
+                          'name': kind.replace('_', ' ').title(),
+                          'path': public_path(key),
+                          'sha256': manifest_files[key]['sha256'],
+                      })
+              upstream_id = product_receipt.get('upstream_studio_id')
+              if upstream_id:
+                  key = f'product_grade/studio_product_grade_support/{upstream_id}/PRODUCT_GRADE_RECEIPT.json'
+                  if key in manifest_files:
+                      evidence_receipts.append({
+                          'kind': 'upstream_studio_product_grade',
+                          'name': 'Upstream Studio ProductGrade receipt',
+                          'path': public_path(key),
+                          'sha256': manifest_files[key]['sha256'],
+                      })
+              products.append({
+                  'slug': slug,
+                  'name': agg['name'],
+                  'status': agg['status'],
+                  'proof_status': agg['proof_status'],
+                  'proof_kind': agg['proof_kind'],
+                  'commercial_validation': 'UNPROVED',
+                  'authority_created': False,
+                  'external_effects': False,
+                  'execution_variants': 3,
+                  'execution_variant_count': 3,
+                  'verified_variant_count': 3,
+                  'claim_boundary': product_receipt.get('claim_boundary', ''),
+                  'artifacts': artifacts,
+                  'evidence_receipts': evidence_receipts,
+              })
+          ext_catalog = {
+              'schema': 'dio.public.canon_extension_proof_catalog.v1',
+              'source_repository': 'Byron2306/DIO-Full-Audit',
+              'source_workflow_run_id': SOURCE_RUN,
+              'source_commit': SOURCE_COMMIT,
+              'source_artifact_id': SOURCE_ARTIFACT_ID,
+              'source_artifact_sha256': 'sha256:' + SOURCE_SHA,
+              'base_canon_product_count': 53,
+              'base_canon_execution_journey_count': 159,
+              'canon_extension_count': 15,
+              'execution_journey_count': 45,
+              'execution_verified_journey_count': 45,
+              'combined_canonical_product_count': 68,
+              'combined_execution_journey_count': 204,
+              'combined_execution_verified_journey_count': 204,
+              'commercial_validation': 'UNPROVED',
+              'authority_created': False,
+              'external_effects': False,
+              'evidence_manifest': 'products/proof/extension-evidence/evidence-manifest.json',
+              'full_evidence_bundle': {
+                  'path': 'products/proof/extension-evidence/dio-canon-68x3-productgrade-evidence.zip',
+                  'sha256': 'sha256:' + SOURCE_SHA,
+                  'file_count': 455,
+              },
+              'products': products,
+          }
+          (ROOT / 'products/proof/canon-extension-proof-catalog.json').write_text(json.dumps(ext_catalog, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+
+          cards = []
+          for p in products:
+              art = ''.join(f'<a href="../../{html.escape(a["path"])}" target="_blank">{html.escape(a["variant"].upper())} ARTIFACT</a>' for a in p['artifacts'])
+              receipts = ''.join(f'<a href="../../{html.escape(r["path"])}" target="_blank">{html.escape(r["name"])}</a>' for r in p['evidence_receipts'])
+              cards.append(f'<article><p class="eyebrow">PRODUCTGRADE VERIFIED · 3 / 3</p><h2>{html.escape(p["name"])}</h2><div class="links">{art}{receipts}</div><p class="boundary">Authority created: NO · External effects: NO · Commercial validation: UNPROVED</p></article>')
+          page = '''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DIO 68×3 Evidence Ledger</title><style>
+          :root{--black:#050607;--panel:#0d1013;--gold:#d8ad54;--bright:#f3d98c;--ivory:#eee3ce;--parchment:#cabb9b}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 70% 0,rgba(216,173,84,.12),transparent 35%),var(--black);color:var(--ivory);font:16px/1.6 system-ui,sans-serif}.wrap{width:min(1180px,92%);margin:auto;padding:64px 0}h1,h2{font-family:Georgia,serif;color:var(--gold)}h1{font-size:clamp(2.8rem,7vw,6rem);margin:.15em 0}.eyebrow{letter-spacing:.16em;text-transform:uppercase;color:var(--bright);font-size:.72rem}.lead,.boundary{color:var(--parchment)}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(216,173,84,.22);margin:36px 0}.stats div{background:#090b0d;padding:22px}.stats b{display:block;color:var(--bright);font:2rem Georgia,serif}main{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}article{border:1px solid rgba(216,173,84,.24);background:linear-gradient(145deg,#101317,#070809);padding:26px;box-shadow:0 0 28px rgba(216,173,84,.035)}.links{display:flex;flex-wrap:wrap;gap:8px}.links a,.bundle{border:1px solid rgba(216,173,84,.42);padding:9px 11px;color:var(--bright);text-decoration:none;font-size:.75rem;letter-spacing:.06em}.links a:hover,.bundle:hover{background:rgba(216,173,84,.1)}code{color:var(--parchment);overflow-wrap:anywhere}@media(max-width:760px){.stats,main{grid-template-columns:1fr}}
+          </style></head><body><div class="wrap"><p class="eyebrow">DIO WORKFLOWS · PUBLIC PRODUCTION EVIDENCE</p><h1>68 × 3</h1><p class="lead">53 historical base-canon products and 15 current canon extensions. The extension proof below comes from the successful CI run that physically produced 45 normal, messy and adversarial buyer artifacts. Market validation remains separate.</p><div class="stats"><div><b>68</b>engineering ProductGrade products</div><div><b>204</b>verified controlled journeys</div><div><b>455</b>preserved evidence files</div><div><b>0</b>authority created</div></div><p><a class="bundle" href="dio-canon-68x3-productgrade-evidence.zip">DOWNLOAD EXACT 455-FILE CI BUNDLE ↗</a></p><p class="lead">Source workflow run 34175560147 · source commit c19705f1298af6f297076d8f631d74e77a639051</p><code>sha256:cd49538d3a6eece75cbb8b4a3458269a21c84f9da5760e1b3e4f92b76e096ed1</code><main>''' + ''.join(cards) + '''</main></div></body></html>'''
+          (OUT / 'index.html').write_text(page, encoding='utf-8')
+          print('DIO_PUBLIC_EXTENSION_EVIDENCE_IMPORTED files=455 products=15 journeys=45')
+          PY
+      - name: Commit permanent evidence and remove one-shot importer
+        shell: bash
+        run: |
+          git config user.name "DIO Evidence Importer"
+          git config user.email "132565250+Byron2306@users.noreply.github.com"
+          git add products/proof/canon-extension-proof-catalog.json products/proof/extension-evidence
+          git rm .github/workflows/import-canon-extension-evidence.yml
+          git commit -m "proof: publish exact 455-file canon extension evidence"
+          git push origin HEAD:finish/gilded-68-live-proof
