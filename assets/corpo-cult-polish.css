@@ -113,3 +113,41 @@ body:is([data-view="flagship"],[data-view="product"]) .evidence-layout{grid-temp
   .launch-v2 .about-copy{padding:24px 20px}
   body:is([data-view="flagship"],[data-view="product"]) .family-workflow-section{padding:72px 0!important}
 }
+
+/* DIO FLAGSHIP CANON LATE-BIND · 2026-09-08
+   The flagship pages load this file last, so bind the approved canon hierarchy here
+   after older ivory-focused polish rules. */
+body:is([data-view="flagship"],[data-view="product"]) .editorial-copy h1,
+body:is([data-view="flagship"],[data-view="product"]) .family-workflow-copy h2,
+body:is([data-view="flagship"],[data-view="product"]) .product-film-copy h2,
+body:is([data-view="flagship"],[data-view="product"]) .family-production-transition h2,
+body:is([data-view="flagship"],[data-view="product"]) .vesper-conversion h2,
+body:is([data-view="flagship"],[data-view="product"]) .section-intro h2,
+body:is([data-view="flagship"],[data-view="product"]) .pilot-grid h2{
+  color:#e7c45a!important;
+  background:linear-gradient(180deg,#fff0b8 0%,#f5d77a 20%,#e7c45a 54%,#b8922e 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow:0 0 18px rgba(245,215,122,.07),0 1px 0 rgba(255,255,255,.025)!important;
+}
+body:is([data-view="flagship"],[data-view="product"]) .editorial-copy .eyebrow,
+body:is([data-view="flagship"],[data-view="product"]) .family-workflow-copy .eyebrow,
+body:is([data-view="flagship"],[data-view="product"]) .product-film-copy .eyebrow,
+body:is([data-view="flagship"],[data-view="product"]) .family-production-transition .eyebrow,
+body:is([data-view="flagship"],[data-view="product"]) .vesper-conversion .eyebrow,
+body:is([data-view="flagship"],[data-view="product"]) .breadcrumb a,
+body:is([data-view="flagship"],[data-view="product"]) .buyer-line span{
+  color:#ebd9a3!important;
+}
+body:is([data-view="flagship"],[data-view="product"]) .editorial-copy .lead{
+  color:#e4d5b5!important;
+}
+body:is([data-view="flagship"],[data-view="product"]) .buyer-line,
+body:is([data-view="flagship"],[data-view="product"]) .breadcrumb,
+body:is([data-view="flagship"],[data-view="product"]) .family-workflow-copy p,
+body:is([data-view="flagship"],[data-view="product"]) .product-film-copy p,
+body:is([data-view="flagship"],[data-view="product"]) .family-production-transition p,
+body:is([data-view="flagship"],[data-view="product"]) .vesper-conversion p{
+  color:#cfc2a2!important;
+}
