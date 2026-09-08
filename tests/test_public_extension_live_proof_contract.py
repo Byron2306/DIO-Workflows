@@ -35,6 +35,15 @@ EXTENSION_SLUGS = {
     "site-studio",
 }
 
+FLAGSHIP_SLUGS = (
+    "homs",
+    "evidex",
+    "sophia",
+    "vamp",
+    "document-studio",
+    "vesper",
+)
+
 
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -169,6 +178,16 @@ def test_canon_gold_sheen_uses_layered_metallic_gold_and_selective_panel_glints(
     assert "box-shadow" in css
     assert "canon-gold-sheen.css" in config
     assert "canon-gold-sheen.css" in proof
+
+
+def test_flagship_product_pages_load_canon_gold_after_legacy_polish_layers():
+    for slug in FLAGSHIP_SLUGS:
+        page = (ROOT / "products" / slug / "index.html").read_text(encoding="utf-8")
+        canon = '../../assets/canon-gold-sheen.css'
+        legacy = '../../assets/corpo-cult-polish.css'
+        assert canon in page, f"{slug}: canon gold stylesheet missing"
+        assert legacy in page, f"{slug}: legacy polish stylesheet missing"
+        assert page.rfind(canon) > page.rfind(legacy), f"{slug}: canon gold must load last"
 
 
 if __name__ == "__main__":
