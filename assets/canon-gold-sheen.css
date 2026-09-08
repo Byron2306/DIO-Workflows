@@ -1,0 +1,261 @@
+/* DIO CANON GOLD SHEEN · 2026-09-08
+   Final gilded corpo-cult polish: layered metallic gold, parchment reading copy,
+   and restrained specular sheen. No evidence or product truth is changed here. */
+:root{
+  --canon-obsidian:#06070b;
+  --canon-panel:#0d0f13;
+  --canon-panel-hi:#13161b;
+  --canon-gold-antique:#b8922e;
+  --canon-gold-rich:#e7c45a;
+  --canon-gold-bright:#f5d77a;
+  --canon-gold-champagne:#ebd9a3;
+  --canon-gold-shadow:#6f5520;
+  --canon-ivory:#f1e7cf;
+  --canon-parchment:#cfc2a2;
+  --canon-muted:#a9966e;
+  --canon-line:rgba(231,196,90,.34);
+  --canon-line-soft:rgba(235,217,163,.16);
+  --canon-glow:rgba(245,215,122,.15);
+  --canon-glow-strong:rgba(245,215,122,.28);
+
+  /* Promote the approved canon palette through existing DIO tokens. */
+  --dio-gold:#d9b34d;
+  --dio-gold2:var(--canon-gold-champagne);
+  --dio-gold-rich:var(--canon-gold-rich);
+  --dio-gold-bright:var(--canon-gold-bright);
+  --dio-ivory:var(--canon-ivory);
+  --dio-parchment:var(--canon-parchment);
+  --dio-line:var(--canon-line);
+}
+
+/* Layered hierarchy: no single mustard note across the whole page. */
+body:is([data-view="product"],[data-view="flagship"],[data-view="portfolio"]) .editorial-copy h1,
+body:is([data-view="product"],[data-view="flagship"],[data-view="portfolio"]) .section-intro h2,
+body[data-view="portfolio"] .hero h1,
+.launch-v2 .mega-copy h2,
+.launch-v2 .product-bridge-head h2,
+.launch-v2 .suite-explainer-head h2,
+.launch-v2 .film-head h2,
+.launch-v2 .about-copy h2{
+  color:var(--canon-gold-rich)!important;
+  background:linear-gradient(180deg,#fff0b8 0%,var(--canon-gold-bright) 20%,var(--canon-gold-rich) 54%,var(--canon-gold-antique) 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow:0 0 18px rgba(245,215,122,.07),0 1px 0 rgba(255,255,255,.025)!important;
+}
+
+.card-body h2,
+.proof-job-card h3,
+.proof-artifact-card h3,
+.proof-missing-card h3,
+.evidence-receipts-panel h3,
+.evidence-receipt-card h3,
+.artifact-card h3,
+.delivery-flow h3,
+.pilot-card strong,
+.pathway-node b,
+.launch-v2 .cinematic-product-copy h3,
+.launch-v2 .family-explainer-copy h3{
+  color:var(--canon-gold-rich)!important;
+  text-shadow:0 0 14px rgba(245,215,122,.055)!important;
+}
+
+/* Champagne for labels, bright ceremonial gold for actions and proof state. */
+.eyebrow,
+.mega-kicker,
+.canon-extension-label,
+.proof-job-card small,
+.proof-state-card small,
+.proof-artifact-card small,
+.proof-missing-card small,
+.evidence-receipts-panel small,
+.artifact-card small,
+.evidence-ledger small,
+.card-body .family,
+.product-orbit-stage figcaption span,
+.launch-v2 .cinematic-product-copy small,
+.launch-v2 .family-explainer-copy small{
+  color:var(--canon-gold-champagne)!important;
+}
+
+.proof-job-card b,
+.proof-state-card b,
+.proof-state-card strong,
+.proof-checks span,
+.evidence-receipt-card span,
+.evidence-bundle-line a,
+.proof-artifact-card .text-link,
+.evidence-receipts-panel .text-link,
+.card-body .badge,
+.price-line,
+.breadcrumb a,
+.provenance-line strong,
+.proof-strip-grid b,
+.launch-v2 a:not(.btn):hover{
+  color:var(--canon-gold-bright)!important;
+}
+
+/* Reading copy stays warm. Hashes and boundaries recede into bronze/parchment. */
+body:is([data-view="product"],[data-view="flagship"]) .editorial-copy .lead,
+body:is([data-view="product"],[data-view="flagship"]) .section-intro>p,
+.proof-job-card p,
+.proof-artifact-card p,
+.proof-state-card p,
+.proof-missing-card p,
+.evidence-ledger p,
+.delivery-flow p,
+.delivery-flow li,
+.card .headline,
+.card .buyer,
+.launch-v2 .mega-copy p,
+.launch-v2 .product-bridge-head>p,
+.launch-v2 .film-head p,
+.launch-v2 .family-explainer-copy p,
+.launch-v2 .about-copy p:not(.eyebrow){
+  color:var(--canon-ivory)!important;
+}
+
+.proof-artifact-card code,
+.evidence-receipt-card code,
+.evidence-bundle-line code,
+.claim-boundary,
+.proof-state-card span,
+.breadcrumb,
+.hero-price span,
+.price-line small,
+.product-orbit-stage figcaption,
+.local-band small,
+.truth p,
+.truth li,
+.launch-v2 .suite-proofline{
+  color:var(--canon-parchment)!important;
+}
+
+/* Canon panel surface: antique-gold structure, black glass, restrained depth. */
+.proof-job-card,
+.proof-state-card,
+.proof-artifact-card,
+.proof-missing-card,
+.evidence-receipts-panel,
+.evidence-receipt-card,
+.artifact-card,
+.pathway-node,
+.pilot-card,
+body[data-view="portfolio"] .card{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  border-color:var(--canon-line)!important;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.018),rgba(255,255,255,.004)),
+    linear-gradient(145deg,var(--canon-panel-hi),var(--canon-panel))!important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.025),
+    0 0 0 1px rgba(184,146,46,.035),
+    0 18px 46px rgba(0,0,0,.30),
+    0 0 24px rgba(245,215,122,.035)!important;
+}
+
+/* The visible proof cards get a single static specular glint, not neon rails. */
+.proof-job-card::before,
+.proof-state-card::before,
+.proof-artifact-card::before,
+.proof-missing-card::before,
+.evidence-receipts-panel::before,
+.evidence-receipt-card::before{
+  content:"";
+  position:absolute;
+  z-index:2;
+  left:8%;
+  top:-1px;
+  width:42%;
+  height:2px;
+  pointer-events:none;
+  background:linear-gradient(90deg,transparent 0%,rgba(245,215,122,0) 8%,rgba(245,215,122,.18) 30%,rgba(255,239,180,.94) 50%,rgba(245,215,122,.16) 70%,rgba(245,215,122,0) 92%,transparent 100%);
+  filter:blur(.15px) drop-shadow(0 0 5px rgba(245,215,122,.24));
+  opacity:.9;
+}
+
+.proof-job-card::after,
+.proof-state-card::after,
+.proof-artifact-card::after,
+.proof-missing-card::after,
+.evidence-receipts-panel::after,
+.evidence-receipt-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 0% 31%,rgba(245,215,122,.11),transparent 19%),
+    radial-gradient(circle at 84% 100%,rgba(231,196,90,.08),transparent 18%),
+    linear-gradient(115deg,transparent 0 74%,rgba(235,217,163,.025) 84%,transparent 94%);
+  mix-blend-mode:screen;
+}
+
+.proof-job-card>* ,
+.proof-state-card>* ,
+.proof-artifact-card>* ,
+.proof-missing-card>* ,
+.evidence-receipts-panel>* ,
+.evidence-receipt-card>*{
+  position:relative;
+  z-index:1;
+}
+
+/* Slightly brighter interaction edge without turning the site into a casino. */
+.proof-artifact-card:hover,
+.evidence-receipt-card:hover,
+body[data-view="portfolio"] .card:hover,
+.artifact-card:hover{
+  border-color:rgba(245,215,122,.52)!important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.035),
+    0 0 0 1px rgba(231,196,90,.065),
+    0 20px 50px rgba(0,0,0,.34),
+    0 0 28px rgba(245,215,122,.075)!important;
+}
+
+/* Buttons keep a metal gradient, while ghost buttons remain architectural. */
+.button:not(.ghost),
+.btn.primary,
+.nav-cta{
+  background:linear-gradient(180deg,#f8df88 0%,var(--canon-gold-rich) 48%,var(--canon-gold-antique) 100%)!important;
+  border-color:rgba(245,215,122,.62)!important;
+  color:#151006!important;
+  box-shadow:inset 0 1px 0 rgba(255,248,214,.38),0 7px 18px rgba(0,0,0,.30),0 0 20px rgba(245,215,122,.08)!important;
+}
+
+.button.ghost,
+.btn.ghost,
+.navlinks .cta{
+  background:rgba(184,146,46,.035)!important;
+  border-color:rgba(231,196,90,.36)!important;
+  color:var(--canon-gold-champagne)!important;
+}
+
+/* Home/portfolio supporting lines inherit the antique side of the palette. */
+.launch-v2 .truth-ribbon,
+.launch-v2 .law-grid span,
+.launch-v2 .about-copy,
+.launch-v2 .family-explainer,
+.launch-v2 .proof-story,
+.launch-v2 .launch-product-card,
+.launch-v2 .portfolio-cta,
+.launch-v2 .platform-map,
+.launch-v2 .stage-steps article,
+.launch-v2 .youtube-card,
+.launch-v2 .launch-form,
+.launch-v2 .vesper-inline,
+.product-orbit-stage,
+.editorial-media{
+  border-color:rgba(184,146,46,.32)!important;
+  box-shadow:0 0 0 1px rgba(231,196,90,.035),0 22px 60px rgba(0,0,0,.34),0 0 26px rgba(245,215,122,.035)!important;
+}
+
+/* Accessible restraint for users who request reduced motion. This layer is static anyway. */
+@media (prefers-reduced-motion:reduce){
+  .proof-artifact-card,.evidence-receipt-card,body[data-view="portfolio"] .card,.artifact-card{transition:none!important}
+}
