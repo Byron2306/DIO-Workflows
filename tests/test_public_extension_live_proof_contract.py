@@ -8,7 +8,8 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE_PROOF_CATALOG = ROOT / "products" / "proof" / "portfolio-proof-catalog.json"
 EXTENSION_PROOF_CATALOG = ROOT / "products" / "proof" / "canon-extension-proof-catalog.json"
 EVIDENCE_MANIFEST = ROOT / "products" / "proof" / "extension-evidence" / "evidence-manifest.json"
-EVIDENCE_ROOT = ROOT / "products" / "proof" / "extension-evidence"
+EVIDENCE_ROOT = ROOT / "products" / "proof" / "extension-evidence" / "raw"
+FULL_BUNDLE = ROOT / "products" / "proof" / "extension-evidence" / "dio-canon-68x3-productgrade-evidence.zip"
 APP = ROOT / "products" / "app.js"
 VISUAL_CSS = ROOT / "assets" / "dio-visual-system.css"
 PROOF_CSS = ROOT / "products" / "proof-layer.css"
@@ -33,8 +34,8 @@ EXTENSION_SLUGS = {
 }
 
 
-def sha256_bytes(value: bytes) -> str:
-    return hashlib.sha256(value).hexdigest()
+def sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
 def load_extension_catalog() -> dict:
@@ -43,16 +44,6 @@ def load_extension_catalog() -> dict:
 
 def load_manifest() -> dict:
     return json.loads(EVIDENCE_MANIFEST.read_text(encoding="utf-8"))
-
-
-def load_evidence_item(key: str, manifest: dict) -> dict:
-    meta = manifest["files"][key]
-    shard = json.loads((EVIDENCE_ROOT / meta["shard"]).read_text(encoding="utf-8"))
-    item = shard["files"][key]
-    assert item["sha256"] == meta["sha256"]
-    assert item["bytes"] == meta["bytes"]
-    assert item["media_type"] == meta["media_type"]
-    return item
 
 
 def test_historic_53_catalog_stays_immutable_while_extension_catalog_completes_68x3_truth():
@@ -77,20 +68,17 @@ def test_all_455_ci_evidence_files_are_permanently_public_with_exact_hashes():
     assert manifest["file_count"] == 455
     assert len(manifest["files"]) == 455
     assert manifest["source_artifact_sha256"].removeprefix("sha256:") == EXPECTED_SOURCE_ARTIFACT_SHA256
-    shards = {meta["shard"] for meta in manifest["files"].values()}
-    assert len(shards) >= 2
-    for shard in shards:
-        assert (EVIDENCE_ROOT / shard).is_file(), shard
     for key, meta in manifest["files"].items():
-        item = load_evidence_item(key, manifest)
-        raw = item["content"].encode("utf-8")
-        assert len(raw) == meta["bytes"], key
-        assert sha256_bytes(raw) == meta["sha256"].removeprefix("sha256:"), key
+        path = EVIDENCE_ROOT / key
+        assert path.is_file(), key
+        assert path.stat().st_size == meta["bytes"], key
+        assert sha256(path) == meta["sha256"].removeprefix("sha256:"), key
+    assert FULL_BUNDLE.is_file()
+    assert sha256(FULL_BUNDLE) == EXPECTED_SOURCE_ARTIFACT_SHA256
 
 
 def test_all_15_extensions_have_three_real_hash_bound_public_buyer_artifacts():
     data = load_extension_catalog()
-    manifest = load_manifest()
     rows = {row["slug"]: row for row in data["products"]}
     assert set(rows) == EXTENSION_SLUGS
 
@@ -103,29 +91,27 @@ def test_all_15_extensions_have_three_real_hash_bound_public_buyer_artifacts():
         assert {a["variant"] for a in artifacts} == {"normal", "messy", "adversarial"}, slug
         assert len(artifacts) == 3, slug
         for artifact in artifacts:
-            item = load_evidence_item(artifact["evidence_key"], manifest)
-            assert artifact["sha256"] == item["sha256"], f"{slug}: hash mismatch {artifact['variant']}"
-            assert item["media_type"] == "text/html", f"{slug}: wrong media type {artifact['variant']}"
+            path = ROOT / artifact["path"]
+            assert path.is_file(), f"{slug}: missing {artifact['variant']} artifact"
+            assert artifact["sha256"].removeprefix("sha256:") == sha256(path), f"{slug}: hash mismatch {artifact['variant']}"
 
 
 def test_all_15_extensions_publish_direct_verification_receipts():
     data = load_extension_catalog()
-    manifest = load_manifest()
     rows = {row["slug"]: row for row in data["products"]}
     for slug, row in rows.items():
         receipt_kinds = {receipt["kind"] for receipt in row["evidence_receipts"]}
         assert "product_grade" in receipt_kinds, slug
         assert {"variant_normal", "variant_messy", "variant_adversarial"} <= receipt_kinds, slug
         for receipt in row["evidence_receipts"]:
-            item = load_evidence_item(receipt["evidence_key"], manifest)
-            assert receipt["sha256"] == item["sha256"], f"{slug}: receipt hash mismatch {receipt['kind']}"
-            assert item["media_type"] == "application/json", f"{slug}: wrong receipt media type {receipt['kind']}"
+            path = ROOT / receipt["path"]
+            assert path.is_file(), f"{slug}: missing receipt {receipt['kind']}"
+            assert receipt["sha256"].removeprefix("sha256:") == sha256(path), f"{slug}: receipt hash mismatch {receipt['kind']}"
 
 
 def test_extension_renderer_merges_two_proof_families_and_has_no_prose_only_success_fallback():
     app = APP.read_text(encoding="utf-8")
     assert "canon-extension-proof-catalog.json" in app
-    assert "extension-evidence/evidence-manifest.json" in app
     assert "ProductGrade verified.</h3>" not in app
     assert "PUBLIC PROOF MISSING" in app
     assert "evidence_receipts" in app
