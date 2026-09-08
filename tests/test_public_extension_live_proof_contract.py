@@ -11,7 +11,7 @@ EVIDENCE_MANIFEST = ROOT / "products" / "proof" / "extension-evidence" / "eviden
 EVIDENCE_ROOT = ROOT / "products" / "proof" / "extension-evidence" / "raw"
 FULL_BUNDLE = ROOT / "products" / "proof" / "extension-evidence" / "dio-canon-68x3-productgrade-evidence.zip"
 APP = ROOT / "products" / "app.js"
-ROOT_PAGE = ROOT / "index.html"
+DIO_CONFIG = ROOT / "assets" / "dio-config.js"
 VISUAL_CSS = ROOT / "assets" / "dio-visual-system.css"
 PROOF_CSS = ROOT / "products" / "proof-layer.css"
 CANON_SHEEN_CSS = ROOT / "assets" / "canon-gold-sheen.css"
@@ -141,8 +141,8 @@ def test_gilded_corpo_cult_typography_uses_gold_for_display_text_and_ivory_for_b
 def test_canon_gold_sheen_uses_layered_metallic_gold_and_selective_panel_glints():
     assert CANON_SHEEN_CSS.is_file()
     css = CANON_SHEEN_CSS.read_text(encoding="utf-8")
-    app = APP.read_text(encoding="utf-8")
-    root_page = ROOT_PAGE.read_text(encoding="utf-8")
+    config = DIO_CONFIG.read_text(encoding="utf-8")
+    proof = PROOF_CSS.read_text(encoding="utf-8")
 
     palette = (
         "--canon-gold-antique:#b8922e",
@@ -167,8 +167,8 @@ def test_canon_gold_sheen_uses_layered_metallic_gold_and_selective_panel_glints(
     assert "linear-gradient" in css
     assert "radial-gradient" in css
     assert "box-shadow" in css
-    assert "canon-gold-sheen.css" in app
-    assert "canon-gold-sheen.css" in root_page
+    assert "canon-gold-sheen.css" in config
+    assert "canon-gold-sheen.css" in proof
 
 
 if __name__ == "__main__":
