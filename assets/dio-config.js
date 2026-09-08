@@ -39,6 +39,7 @@ window.DIO_SITE_CONFIG = {
   addStylesheet('canon-gold-sheen.css', 'data-dio-canon-gold-sheen');
   addStylesheet('couture-final.css', 'data-dio-couture-final');
   addStylesheet('couture-finish.css', 'data-dio-couture-finish');
+  addStylesheet('straggler-closure.css', 'data-dio-straggler-closure');
 
   if (!document.querySelector('script[data-dio-orbital-architecture]')) {
     const orbital = document.createElement('script');
