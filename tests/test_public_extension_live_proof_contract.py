@@ -11,8 +11,10 @@ EVIDENCE_MANIFEST = ROOT / "products" / "proof" / "extension-evidence" / "eviden
 EVIDENCE_ROOT = ROOT / "products" / "proof" / "extension-evidence" / "raw"
 FULL_BUNDLE = ROOT / "products" / "proof" / "extension-evidence" / "dio-canon-68x3-productgrade-evidence.zip"
 APP = ROOT / "products" / "app.js"
+ROOT_PAGE = ROOT / "index.html"
 VISUAL_CSS = ROOT / "assets" / "dio-visual-system.css"
 PROOF_CSS = ROOT / "products" / "proof-layer.css"
+CANON_SHEEN_CSS = ROOT / "assets" / "canon-gold-sheen.css"
 EXPECTED_SOURCE_ARTIFACT_SHA256 = "cd49538d3a6eece75cbb8b4a3458269a21c84f9da5760e1b3e4f92b76e096ed1"
 
 EXTENSION_SLUGS = {
@@ -134,6 +136,39 @@ def test_gilded_corpo_cult_typography_uses_gold_for_display_text_and_ivory_for_b
         assert token in visual + proof
     assert "color:var(--dio-gold-rich)" in visual + proof
     assert "color:var(--dio-ivory)" in visual + proof
+
+
+def test_canon_gold_sheen_uses_layered_metallic_gold_and_selective_panel_glints():
+    assert CANON_SHEEN_CSS.is_file()
+    css = CANON_SHEEN_CSS.read_text(encoding="utf-8")
+    app = APP.read_text(encoding="utf-8")
+    root_page = ROOT_PAGE.read_text(encoding="utf-8")
+
+    palette = (
+        "--canon-gold-antique:#b8922e",
+        "--canon-gold-rich:#e7c45a",
+        "--canon-gold-bright:#f5d77a",
+        "--canon-gold-champagne:#ebd9a3",
+        "--canon-parchment:#cfc2a2",
+    )
+    for token in palette:
+        assert token in css
+
+    for selector in (
+        ".proof-job-card",
+        ".proof-state-card",
+        ".proof-artifact-card",
+        ".evidence-receipt-card",
+        ".proof-job-card::before",
+        ".proof-job-card::after",
+    ):
+        assert selector in css
+
+    assert "linear-gradient" in css
+    assert "radial-gradient" in css
+    assert "box-shadow" in css
+    assert "canon-gold-sheen.css" in app
+    assert "canon-gold-sheen.css" in root_page
 
 
 if __name__ == "__main__":
