@@ -2,10 +2,16 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 COUTURE = ROOT / "assets" / "couture-final.css"
+FINISH = ROOT / "assets" / "couture-finish.css"
+PROOF = ROOT / "products" / "proof-layer.css"
+CONFIG = ROOT / "assets" / "dio-config.js"
 
 
 def css() -> str:
-    return COUTURE.read_text(encoding="utf-8")
+    parts = [COUTURE.read_text(encoding="utf-8")]
+    if FINISH.is_file():
+        parts.append(FINISH.read_text(encoding="utf-8"))
+    return "\n".join(parts)
 
 
 def test_orbit_caption_and_brand_material_are_contained_inside_panel():
@@ -73,6 +79,17 @@ def test_mobile_controls_and_orbit_content_remain_inside_viewport():
         ".hero-actions .button{width:100%!important",
     ):
         assert token in text
+
+
+def test_finish_layer_is_loaded_after_existing_couture_everywhere():
+    assert FINISH.is_file()
+    proof = PROOF.read_text(encoding="utf-8")
+    config = CONFIG.read_text(encoding="utf-8")
+    assert "couture-final.css" in proof and "couture-finish.css" in proof
+    assert proof.index("couture-final.css") < proof.index("couture-finish.css")
+    assert "couture-final.css" in config and "couture-finish.css" in config
+    assert config.index("couture-final.css") < config.index("couture-finish.css")
+    assert "data-dio-couture-finish" in config
 
 
 if __name__ == "__main__":
