@@ -38,6 +38,7 @@ window.DIO_SITE_CONFIG = {
   addStylesheet('eye-strategy.css', 'data-dio-eye-strategy');
   addStylesheet('canon-gold-sheen.css', 'data-dio-canon-gold-sheen');
   addStylesheet('couture-final.css', 'data-dio-couture-final');
+  addStylesheet('couture-finish.css', 'data-dio-couture-finish');
 
   if (!document.querySelector('script[data-dio-orbital-architecture]')) {
     const orbital = document.createElement('script');
