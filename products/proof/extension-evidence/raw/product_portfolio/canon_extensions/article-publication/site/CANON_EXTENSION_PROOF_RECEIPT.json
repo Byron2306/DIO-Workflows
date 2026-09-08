@@ -1,0 +1,19 @@
+{
+  "authority_created": false,
+  "canon_id": "CANON-EXT-ARTICLE_PUBLICATION",
+  "claim_boundary": "For canon materialization receipts, this seal requires the source receipt to bind the exact current artifact SHA-256. Legacy historical generation receipts remain readable for compatibility but are not used by the current canon-extension production workflow. This seal does not create ProductGrade, buyer demand, payment, legal approval, publication authority or commercial validation.",
+  "commercial_validation": "UNPROVED",
+  "current_artifact_sha256": "0bc5a73b783226d441c398629ffdff133b86167cd926acb0ba392135b4db64c7",
+  "external_effects": false,
+  "name": "Article Publication",
+  "primary_artifact": "state/product_portfolio/canon_extensions/article-publication/site/index.html",
+  "receipt_fingerprint": "sha256:0cf3469a24d98bfabc290c73058c69c5d1253547fb0142a64f026bcce4b4b8ac",
+  "schema": "dio.canon_extension.proof_seal.v1",
+  "slug": "article-publication",
+  "source_generation_receipt": "state/product_portfolio/canon_extensions/article-publication/site/CANON_EXTENSION_MATERIALIZATION_RECEIPT.json",
+  "source_generation_receipt_schema": "dio.canon_extension.materialization_receipt.v1",
+  "source_generation_receipt_sha256": "0e0eded07970ce6665b24e12bf34ddc9d834c3733fd214f4435294da8d4ac980",
+  "source_receipt_artifact_bound": true,
+  "status": "PASS",
+  "strict_materialization_binding": true
+}

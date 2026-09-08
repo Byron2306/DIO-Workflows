@@ -1,0 +1,100 @@
+{
+  "artifact_count": 9,
+  "artifacts": [
+    {
+      "bytes": 340,
+      "path": "operations/AUTHORITY_BOUNDARY.json",
+      "sha256": "3b3bebe0179f1de701a8c23fca7e28245a0b45e94b64b26fdb3582aa1f904d6b"
+    },
+    {
+      "bytes": 702,
+      "path": "operations/COMMERCIAL_MEASUREMENT_CONTRACT.json",
+      "sha256": "f1f36cf6738450587e1afaf1ef855dcb415cb00e33ea1c68b7e1e3d22fc962f3"
+    },
+    {
+      "bytes": 2853,
+      "path": "operations/ORGAN_BINDINGS.json",
+      "sha256": "41b4fe95d54adf3eb790d2aff3dcd2c2ae8056d60e1ab0061f030bacdc6b0a95"
+    },
+    {
+      "bytes": 315,
+      "path": "operations/PRESENCE_RELEASE.json",
+      "sha256": "7d6f11772dcebee8c2eda07e883dcea1d536654278e5b8c7ea3c9ca732e1bf98"
+    },
+    {
+      "bytes": 475,
+      "path": "operations/VESPER_ROUTE_RECEIPT.json",
+      "sha256": "c999d9db3246855616a40bedb47daf0c48b4cec1865c668021ae519d786a72a4"
+    },
+    {
+      "bytes": 2920,
+      "path": "publication/ARTICLE_DRAFT.html",
+      "sha256": "124bb273daad7de552a5f664cf80eba64bf08e0f3d744ca3e2b880483760112e"
+    },
+    {
+      "bytes": 1867,
+      "path": "publication/ARTICLE_LINEAGE_OBJECT.json",
+      "sha256": "0899e8abe1238412be82b82f2accfb13e54de9e973989df7835e30becc47b79a"
+    },
+    {
+      "bytes": 410,
+      "path": "publication/CLAIM_SOURCE_MAP.txt",
+      "sha256": "d68b6fb1fc90fda618bba452564e9e309122fa650d8aa41274673ce47e75a6be"
+    },
+    {
+      "bytes": 300,
+      "path": "publication/PUBLICATION_BOUNDARY.json",
+      "sha256": "314dcec4191dbd3f23451a9bf696f2bc93e2bda956a61825b4b32dc3f365fa03"
+    }
+  ],
+  "authority_created": false,
+  "capability_executed": "evidence.editorial.proof",
+  "claim_bindings": [
+    {
+      "claim_id": "CL-01",
+      "evidence_ids": [
+        "SRC-01"
+      ],
+      "source_binding_valid": true,
+      "state": "SUPPORTED"
+    },
+    {
+      "claim_id": "CL-02",
+      "evidence_ids": [
+        "SRC-01",
+        "SRC-02"
+      ],
+      "source_binding_valid": true,
+      "state": "SUPPORTED"
+    },
+    {
+      "claim_id": "CL-03",
+      "evidence_ids": [
+        "SRC-02"
+      ],
+      "source_binding_valid": true,
+      "state": "SUPPORTED"
+    },
+    {
+      "claim_id": "CL-04",
+      "evidence_ids": [],
+      "source_binding_valid": true,
+      "state": "REFUSE"
+    }
+  ],
+  "external_action_executed": false,
+  "external_send": "REFUSE",
+  "forbidden_claims_retained": [
+    "fabricated quotation",
+    "fabricated source",
+    "invented evidence",
+    "guaranteed factual accuracy",
+    "automatic publication"
+  ],
+  "full_evidex_pack_engine_invoked": false,
+  "proof_fingerprint": "sha256:c4222829476fcd0afa2748537464382b5b0bf73363c72e69f7cfcc08a33c2860",
+  "publication": "REFUSE",
+  "schema": "dio.evidex_editorial_proof.v1",
+  "source_engine": "evidex",
+  "studio_id": "article_publication_studio"
+}

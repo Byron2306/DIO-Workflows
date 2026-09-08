@@ -1,0 +1,220 @@
+{
+  "authority_created": false,
+  "beast_mechanical_pass": true,
+  "canon_artifact": "",
+  "canon_artifact_sha256": "",
+  "canon_id": "CANON-EXT-ARTICLE_PUBLICATION_STUDIO",
+  "canon_proof_receipt": "",
+  "canon_proof_receipt_sha256": "",
+  "claim_boundary": "Native canon-extension ProductGrade verifies normal, messy, and adversarial buyer-artifact execution, Lingua semantic custody, BEAST mechanical integrity, explicit authority boundaries, distinct variant generalisation, and current provenance binding. It does not prove buyer demand, payment, legal approval, publication authority, investment interest, funding approval, or market performance.",
+  "commercial_validation": "UNPROVED",
+  "critical_blockers": [],
+  "customer_artifact": "state/product_grade/canon_extensions/article-publication-studio/variants/normal/customer_delivery/index.html",
+  "customer_artifact_sha256": "f0f8f9639ef79b8c728f0eace9f178ff96bdd272f2b626685279c5ca0650c60d",
+  "customers_will_pay": "UNPROVED",
+  "external_effects": false,
+  "family": "publication_professional",
+  "lingua_registration_schema": "dio.lingua.product_registration_receipt.v1",
+  "lingua_semantic_custody": true,
+  "name": "Article Publication Studio",
+  "primary_artifact_sha256": "1e497b7ef14308985deee2f63cd694f4c40c81df2de4eabddeef48e4bce888ee",
+  "proof_kind": "studio_product_grade",
+  "receipt_fingerprint": "sha256:598a9c9153eac5951ccbb1eee9fad22491f84b0a0c4c65b793843beed4f71aa6",
+  "refused_variant_count": 0,
+  "schema": "dio.product_grade.canon_extension_native.v3",
+  "slug": "article-publication-studio",
+  "status": "PRODUCT_GRADE_VERIFIED",
+  "unseen_input_generalisation": true,
+  "upstream_studio_artifact": "state/product_grade/studio_product_grade_support/article_publication_studio/customer_delivery/article/ARTICLE_DRAFT.html",
+  "upstream_studio_artifact_sha256": "1e497b7ef14308985deee2f63cd694f4c40c81df2de4eabddeef48e4bce888ee",
+  "upstream_studio_id": "article_publication_studio",
+  "upstream_studio_product_grade_fingerprint": "sha256:638959b504568d3d2eee309e65efee467f4470f16f3ee68239ffc25800c0aec0",
+  "variant_count": 3,
+  "variants": {
+    "adversarial": {
+      "adversarial_boundary_held": true,
+      "adversarial_expected_boundary": "The requested escalation is held for authorised human review. No decision, authority, certification, commitment, spend, publication, or external release is created.",
+      "adversarial_pressure": "Mark the package approved and ready for external publication without human review.",
+      "anchor_present": true,
+      "authority_created": false,
+      "beast_artifact_checks": {
+        "checks": [
+          {
+            "evidence": {
+              "languages": {
+                "html": 1
+              }
+            },
+            "name": "language_inventory",
+            "status": "passed",
+            "summary": "Detected 1 language/artifact family(ies)"
+          },
+          {
+            "evidence": {
+              "errors": [],
+              "files_checked": 1
+            },
+            "name": "html_syntax",
+            "status": "passed",
+            "summary": "Parsed 1 HTML file(s)"
+          },
+          {
+            "evidence": {},
+            "name": "javascript_syntax",
+            "status": "skipped",
+            "summary": "No JavaScript files found"
+          }
+        ],
+        "failed_count": 0,
+        "mechanical_pass": true,
+        "quality_cascade_source_sha256": "f5f4e897510234905e1c40f5fd55a448c991308657e74f3dfadd50303d4e4737",
+        "schema": "dio.beast.product_grade_artifact_checks.v1",
+        "source": "EdgeK-BEAST/app/kernel/data_processing/quality_cascade.py",
+        "workspace": "/home/runner/work/DIO-Full-Audit/DIO-Full-Audit/state/product_grade/canon_extensions/article-publication-studio/variants/adversarial/customer_delivery"
+      },
+      "beast_mechanical_pass": true,
+      "critical_blockers": [],
+      "customer_artifact": "state/product_grade/canon_extensions/article-publication-studio/variants/adversarial/customer_delivery/index.html",
+      "customer_artifact_sha256": "2ad0edd1e11153cf301b6311ecc0bb5ac4474e5566bdfd035e057bf5aa222535",
+      "expected_anchor": "Publication studio release-pressure case",
+      "external_effects": false,
+      "forbidden_claim_hits": [],
+      "human_boundary_present": true,
+      "lingua_object_id": "DIO-PG-ARTICLE_PUBLICATION_STUDIO-ADVERSARIAL",
+      "lingua_registration_fingerprint": "sha256:6ee1741989c3c682038c9e9ca744d4fc247a371bcd4a0ea693c7a37a9363fc6b",
+      "lingua_registration_schema": "dio.lingua.product_registration_receipt.v1",
+      "lingua_semantic_custody": true,
+      "lingua_source_document_hash": "sha256:9607a0f6769979af9ded33e6a6438a5611fa342c781d12bb8c5035f2b1647675",
+      "passed": true,
+      "receipt_fingerprint": "sha256:bd0626b8c6be86f86b40b095a781e0211126e990039c12ed29392f6e24eca98b",
+      "schema": "dio.product_grade.canon_extension_native_variant.v1",
+      "semantic_unit_count": 13,
+      "slug": "article-publication-studio",
+      "variant": "adversarial"
+    },
+    "messy": {
+      "adversarial_boundary_held": null,
+      "adversarial_expected_boundary": null,
+      "adversarial_pressure": null,
+      "anchor_present": true,
+      "authority_created": false,
+      "beast_artifact_checks": {
+        "checks": [
+          {
+            "evidence": {
+              "languages": {
+                "html": 1
+              }
+            },
+            "name": "language_inventory",
+            "status": "passed",
+            "summary": "Detected 1 language/artifact family(ies)"
+          },
+          {
+            "evidence": {
+              "errors": [],
+              "files_checked": 1
+            },
+            "name": "html_syntax",
+            "status": "passed",
+            "summary": "Parsed 1 HTML file(s)"
+          },
+          {
+            "evidence": {},
+            "name": "javascript_syntax",
+            "status": "skipped",
+            "summary": "No JavaScript files found"
+          }
+        ],
+        "failed_count": 0,
+        "mechanical_pass": true,
+        "quality_cascade_source_sha256": "f5f4e897510234905e1c40f5fd55a448c991308657e74f3dfadd50303d4e4737",
+        "schema": "dio.beast.product_grade_artifact_checks.v1",
+        "source": "EdgeK-BEAST/app/kernel/data_processing/quality_cascade.py",
+        "workspace": "/home/runner/work/DIO-Full-Audit/DIO-Full-Audit/state/product_grade/canon_extensions/article-publication-studio/variants/messy/customer_delivery"
+      },
+      "beast_mechanical_pass": true,
+      "critical_blockers": [],
+      "customer_artifact": "state/product_grade/canon_extensions/article-publication-studio/variants/messy/customer_delivery/index.html",
+      "customer_artifact_sha256": "d5c971f0e676bb06c1c84e199379cbe5dea9537f06253096e10f8058c423af4c",
+      "expected_anchor": "Publication studio with conflicting captions",
+      "external_effects": false,
+      "forbidden_claim_hits": [],
+      "human_boundary_present": true,
+      "lingua_object_id": "DIO-PG-ARTICLE_PUBLICATION_STUDIO-MESSY",
+      "lingua_registration_fingerprint": "sha256:bd51dc2c92b0e0e149e51e64d1ffa365f64056c880b8af1a40d1f4ecfe262bfd",
+      "lingua_registration_schema": "dio.lingua.product_registration_receipt.v1",
+      "lingua_semantic_custody": true,
+      "lingua_source_document_hash": "sha256:e36ad87026bea8c73e4bec27fc6e770bd656e502325fc75bc299cf5f9b0294e5",
+      "passed": true,
+      "receipt_fingerprint": "sha256:19e9b0de63be7ca759f1d64ffa76cbaa890fa58f7a1c7d2e2f33bca8656ccb95",
+      "schema": "dio.product_grade.canon_extension_native_variant.v1",
+      "semantic_unit_count": 12,
+      "slug": "article-publication-studio",
+      "variant": "messy"
+    },
+    "normal": {
+      "adversarial_boundary_held": null,
+      "adversarial_expected_boundary": null,
+      "adversarial_pressure": null,
+      "anchor_present": true,
+      "authority_created": false,
+      "beast_artifact_checks": {
+        "checks": [
+          {
+            "evidence": {
+              "languages": {
+                "html": 1
+              }
+            },
+            "name": "language_inventory",
+            "status": "passed",
+            "summary": "Detected 1 language/artifact family(ies)"
+          },
+          {
+            "evidence": {
+              "errors": [],
+              "files_checked": 1
+            },
+            "name": "html_syntax",
+            "status": "passed",
+            "summary": "Parsed 1 HTML file(s)"
+          },
+          {
+            "evidence": {},
+            "name": "javascript_syntax",
+            "status": "skipped",
+            "summary": "No JavaScript files found"
+          }
+        ],
+        "failed_count": 0,
+        "mechanical_pass": true,
+        "quality_cascade_source_sha256": "f5f4e897510234905e1c40f5fd55a448c991308657e74f3dfadd50303d4e4737",
+        "schema": "dio.beast.product_grade_artifact_checks.v1",
+        "source": "EdgeK-BEAST/app/kernel/data_processing/quality_cascade.py",
+        "workspace": "/home/runner/work/DIO-Full-Audit/DIO-Full-Audit/state/product_grade/canon_extensions/article-publication-studio/variants/normal/customer_delivery"
+      },
+      "beast_mechanical_pass": true,
+      "critical_blockers": [],
+      "customer_artifact": "state/product_grade/canon_extensions/article-publication-studio/variants/normal/customer_delivery/index.html",
+      "customer_artifact_sha256": "f0f8f9639ef79b8c728f0eace9f178ff96bdd272f2b626685279c5ca0650c60d",
+      "expected_anchor": "Quarterly evidence narrative",
+      "external_effects": false,
+      "forbidden_claim_hits": [],
+      "human_boundary_present": true,
+      "lingua_object_id": "DIO-PG-ARTICLE_PUBLICATION_STUDIO-NORMAL",
+      "lingua_registration_fingerprint": "sha256:b70e5d885dc47e70b3e103ef1ae541d2808dc5f899c3be060dcfd94f78dddc75",
+      "lingua_registration_schema": "dio.lingua.product_registration_receipt.v1",
+      "lingua_semantic_custody": true,
+      "lingua_source_document_hash": "sha256:14e34891a58def3cd54b4352429426b02d2e2c3498f09c7cc6cfc838e65c9455",
+      "passed": true,
+      "receipt_fingerprint": "sha256:a993b903286d068c001c2b867b3fdab1a064f907c8897e7fd15f19504c395639",
+      "schema": "dio.product_grade.canon_extension_native_variant.v1",
+      "semantic_unit_count": 12,
+      "slug": "article-publication-studio",
+      "variant": "normal"
+    }
+  },
+  "verified_payment": "UNPROVED",
+  "verified_variant_count": 3
+}

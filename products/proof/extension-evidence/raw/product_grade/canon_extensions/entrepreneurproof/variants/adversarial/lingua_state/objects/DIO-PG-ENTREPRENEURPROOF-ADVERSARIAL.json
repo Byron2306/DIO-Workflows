@@ -1,0 +1,119 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-ENTREPRENEURPROOF-ADVERSARIAL",
+  "domain": "opportunity_venture",
+  "subject": "Founder validation-pressure case",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "entrepreneurproof",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-ENTREPRENEURPROOF-ADVERSARIAL",
+    "audience": "early-stage founders",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:a6bacf007cc56f9f3fee6fbc5f5ac026ca3cee7e9b5d13742170f23fda2edb3b",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Founder validation-pressure case",
+        "source_hash": "sha256:320f76382f68916e8b221fed79a70e1bab57640328aa8f911beade3fd41df8e8",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "body",
+        "source_text": "Business model",
+        "source_hash": "sha256:559c1801aad854cfa62ca13de767d7e9f0652ca73b5bf89d2a868a14ade0b492",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "body",
+        "source_text": "Operational coordination service under early discovery.",
+        "source_hash": "sha256:f8d00361b0a83f2bcbab326570225bb969e25e58e7c3534c258ccd2ec0706d17",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "body",
+        "source_text": "Evidence available",
+        "source_hash": "sha256:606459655a1ba91b66e6cf9e54e5fbe023cdd4ea40634e044bb85e5ccd3f00d7",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "labelled_instruction",
+        "source_text": "Evidence: Interest is recorded.",
+        "source_hash": "sha256:791a72b4e727cc39b637797201d500c5a7d2a242fda26d1979e98ef874d3ae80",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "labelled_instruction",
+        "source_text": "Evidence: No paid pilot or independent market validation is recorded.",
+        "source_hash": "sha256:3c2a3b57e160d8dd51c053ed43ba52dd2b7de7e68774f7cf0e3e4745cdcd6ae8",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "body",
+        "source_text": "Questions still open",
+        "source_hash": "sha256:930a0dab843b45cea371e82b37b46e70d21a77d14c6a438b7d5e1a431d6d54f7",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "labelled_instruction",
+        "source_text": "Open question: The requested escalation is held for authorised human review. No decision, authority, certification, commitment, spend, publication, or external release is created.",
+        "source_hash": "sha256:65d311df18e3c0785d4993f2da29fc205c86f7f10b24911475a5e0244970bb34",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "instruction",
+        "source_text": "Venture viability and willingness to pay remain unproved until independently observed. Human decision authority remains required.",
+        "source_hash": "sha256:ba97a98a0b4cfaebec1f97d56a18d3c76a20b8cdecf19aa1434daa953fad5d35",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P010",
+        "unit_type": "body",
+        "source_text": "The requested escalation is held for authorised human review. No decision, authority, certification, commitment, spend, publication, or external release is created.",
+        "source_hash": "sha256:e02d08c9de00924a3d7d14006b6b139f0a10a58aa7ec18d5c18265b5f5904127",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:a6bacf007cc56f9f3fee6fbc5f5ac026ca3cee7e9b5d13742170f23fda2edb3b",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:32+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:32+00:00"
+}

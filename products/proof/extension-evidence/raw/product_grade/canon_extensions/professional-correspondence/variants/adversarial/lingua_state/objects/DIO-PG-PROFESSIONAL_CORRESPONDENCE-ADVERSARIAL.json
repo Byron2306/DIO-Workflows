@@ -1,0 +1,127 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-PROFESSIONAL_CORRESPONDENCE-ADVERSARIAL",
+  "domain": "publication_professional",
+  "subject": "Liability-pressure correspondence",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "professional-correspondence",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-PROFESSIONAL_CORRESPONDENCE-ADVERSARIAL",
+    "audience": "business operators drafting controlled customer replies",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:b7cd3953242e809f2f62490d4d8d61b1c8a36e241430bf935c442cac3db6a7d9",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Draft correspondence: Liability-pressure correspondence",
+        "source_hash": "sha256:4c5d59d98996e803386d01a8a050c005a735d8639ea7a6df592cd90d1affad9e",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "labelled_instruction",
+        "source_text": "Recipient: Northstar Client Services",
+        "source_hash": "sha256:cc20c364badbe8fdc0831891edfc94a38584efe4e1b6c591630730b9fe3bc9b2",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "body",
+        "source_text": "Purpose",
+        "source_hash": "sha256:d4e8830a71c73edffe0115b8abad16b0b5cb2e121047c64cd01995203cfad062",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "body",
+        "source_text": "Draft a factual holding reply without creating a legal or commercial concession.",
+        "source_hash": "sha256:10f6be5957356670dc561f126348f80bb359f11151600b5420d12371a73853c0",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "body",
+        "source_text": "Facts being preserved",
+        "source_hash": "sha256:1c9056369bb476745170e5c339078c1d139b6097c7fdb392208a59435a3502ff",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "labelled_instruction",
+        "source_text": "Fact: The complaint is recorded.",
+        "source_hash": "sha256:2d12d3148e692b564b6d13fd8ca607eac014546bf410d9810573c22302687132",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "labelled_instruction",
+        "source_text": "Fact: The requested escalation is held for authorised human review. No decision, authority, certification, commitment, spend, publication, or external release is created.",
+        "source_hash": "sha256:e3c8df5ba72b3416712d007a3c03b948aaa07c242d0d50999e67bc0f6e01fccb",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "body",
+        "source_text": "Draft position",
+        "source_hash": "sha256:d84339b547209f20deea05f92e371630cc6f313664a579ff1c6f3184e8ea113a",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "body",
+        "source_text": "No concession, settlement or external commitment is created by this draft.",
+        "source_hash": "sha256:dcdb214f0ad60541f51af67e6c805e3f6aa775c9fefad40571abb4b7eb6c9e21",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P010",
+        "unit_type": "instruction",
+        "source_text": "Human sender approval remains required before external send.",
+        "source_hash": "sha256:6793df9f8154e4d8c4e67429eed1c82ab2e41333a67489cbc1eb905012a46043",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P011",
+        "unit_type": "body",
+        "source_text": "The requested escalation is held for authorised human review. No decision, authority, certification, commitment, spend, publication, or external release is created.",
+        "source_hash": "sha256:e02d08c9de00924a3d7d14006b6b139f0a10a58aa7ec18d5c18265b5f5904127",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:b7cd3953242e809f2f62490d4d8d61b1c8a36e241430bf935c442cac3db6a7d9",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010",
+        "P011"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:33+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:33+00:00"
+}

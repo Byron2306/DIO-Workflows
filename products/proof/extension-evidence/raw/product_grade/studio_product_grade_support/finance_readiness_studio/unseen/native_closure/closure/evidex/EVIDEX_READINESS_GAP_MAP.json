@@ -1,0 +1,59 @@
+{
+  "authority_created": false,
+  "capability_executed": "evidence.readiness.gap_map",
+  "decision_boundary": "DIO assesses finance readiness and published fit. The lender, investor or authorised financial decision maker decides approval.",
+  "external_action_executed": false,
+  "full_evidex_pack_engine_invoked": false,
+  "lender_decision": "NOT_MADE",
+  "mandatory_gap_count": 1,
+  "proof_fingerprint": "sha256:6d2879880676094c5d2a6d927217f74a25c8951d0f45e772d2afc3ba377d5291",
+  "readiness_state": "EVIDENCE_GAPS_PRESENT",
+  "requirements": [
+    {
+      "label": "business registration evidence",
+      "mandatory": true,
+      "requirement_id": "FR-01",
+      "state": "SUPPORTED_FOR_READINESS_REVIEW",
+      "supporting_evidence_ids": [
+        "EV-01"
+      ]
+    },
+    {
+      "label": "recent bank statements",
+      "mandatory": true,
+      "requirement_id": "FR-02",
+      "state": "SUPPORTED_FOR_READINESS_REVIEW",
+      "supporting_evidence_ids": [
+        "EV-02"
+      ]
+    },
+    {
+      "label": "management accounts or financial statements",
+      "mandatory": true,
+      "requirement_id": "FR-03",
+      "state": "SUPPORTED_FOR_READINESS_REVIEW",
+      "supporting_evidence_ids": [
+        "EV-04"
+      ]
+    },
+    {
+      "label": "use-of-funds breakdown",
+      "mandatory": true,
+      "requirement_id": "FR-04",
+      "state": "SUPPORTED_FOR_READINESS_REVIEW",
+      "supporting_evidence_ids": [
+        "EV-03"
+      ]
+    },
+    {
+      "label": "repayment or cash-flow assumptions",
+      "mandatory": true,
+      "requirement_id": "FR-05",
+      "state": "EVIDENCE_NEEDED",
+      "supporting_evidence_ids": []
+    }
+  ],
+  "schema": "dio.evidex_finance_readiness_gap_map.v1",
+  "source_engine": "evidex",
+  "studio_id": "finance_readiness_studio"
+}

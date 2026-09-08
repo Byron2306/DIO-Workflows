@@ -1,0 +1,14 @@
+{
+  "decision": {
+    "confidence": 0.91,
+    "intent": "intake_request",
+    "product": "finance_readiness_studio",
+    "reason": "product request",
+    "source": "deterministic"
+  },
+  "external_action": false,
+  "request": "Assess whether my business evidence is ready for a finance application and show me what is missing.",
+  "route_state": "CONTROLLED_ROUTE_PROVED",
+  "schema": "dio.vesper_studio_route_receipt.v1",
+  "studio_id": "finance_readiness_studio"
+}

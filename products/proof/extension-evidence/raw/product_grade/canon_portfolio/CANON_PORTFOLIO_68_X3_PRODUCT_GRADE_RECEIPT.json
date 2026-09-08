@@ -1,0 +1,42 @@
+{
+  "acceptance_token": "DIO_CANON_PORTFOLIO_68_X3_PRODUCT_GRADE_VERIFIED",
+  "all_product_grade_verified": true,
+  "authority_created": false,
+  "base_canon_journey_count": 159,
+  "base_canon_product_count": 53,
+  "canon_extension_count": 15,
+  "canon_extension_journey_count": 45,
+  "canon_extensions_15x3": {
+    "acceptance_token": "DIO_CANON_EXTENSION_15_X3_PRODUCT_GRADE_VERIFIED",
+    "journey_count": 45,
+    "portfolio_fingerprint": "sha256:d18a4704306117fbad8afd19a76f292d3c9c0ecae9fc51b894537225c62cbcff",
+    "product_count": 15,
+    "schema": "dio.product_grade.canon_extension_gauntlet_receipt.v2",
+    "verified_journey_count": 45
+  },
+  "canon_product_count": 68,
+  "claim_boundary": "This portfolio receipt binds two distinct immutable evidence families: the historical 53-product, 159-journey base-canon corpus and the independently verified 15-product, 45-journey canon-extension ProductGrade corpus. The combined 68-product / 204-journey statement is an aggregation of those verified families, not a claim that all 204 journeys were produced in one historical run. Capability proof remains distinct from market validation, willingness to pay, payment, and external authority.",
+  "commercial_validation": "UNPROVED",
+  "controlled_journey_count": 204,
+  "critical_blockers": [],
+  "external_effects": false,
+  "historical_53": {
+    "acceptance_token": "DIO_PROFESSIONAL_EVIDENCE_53_X3_VERIFIED",
+    "anchor_fingerprint": "sha256:46c48d96e70340cce1cbcc403da6bea221750a0deaedd98bfe553a655a0bcc2e",
+    "anchor_sha256": "d20a4a7310f4d64be264678db425ee7b6400f1688f56b94ecb9054b22ecd7a74",
+    "journey_count": 159,
+    "product_count": 53,
+    "source_commit": "3119e290efd62cdeccd3f4f5938cc5be85014464",
+    "source_git_blob_sha": "7ffeb400a4ec0ffd51d0a10c3035d3303fd24c4e",
+    "source_path": "products/proof/receipts/PROFESSIONAL_EVIDENCE_53_X3_RECEIPT.json",
+    "source_repository": "Byron2306/DIO-Workflows"
+  },
+  "historical_53_receipt_mutated": false,
+  "product_grade_refuse_count": 0,
+  "product_grade_verified_count": 68,
+  "receipt_fingerprint": "sha256:7722697cfd2434ffbd16da6d3037ad8bdd3ea6703ba07d114fec951c5c9342e2",
+  "refused_journey_count": 0,
+  "schema": "dio.product_grade.canon_portfolio_68_x3_receipt.v1",
+  "variants_per_product": 3,
+  "verified_journey_count": 204
+}

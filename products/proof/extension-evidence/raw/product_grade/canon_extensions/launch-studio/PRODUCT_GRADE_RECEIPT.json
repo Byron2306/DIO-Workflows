@@ -1,0 +1,220 @@
+{
+  "authority_created": false,
+  "beast_mechanical_pass": true,
+  "canon_artifact": "state/product_portfolio/canon_extensions/launch-studio/site/index.html",
+  "canon_artifact_sha256": "c094be7437d0b46b5cd89096f8880d9b1d60705f85708654773bfb0470ffda00",
+  "canon_id": "CANON-EXT-LAUNCH_STUDIO",
+  "canon_proof_receipt": "state/product_portfolio/canon_extensions/launch-studio/site/CANON_EXTENSION_PROOF_RECEIPT.json",
+  "canon_proof_receipt_sha256": "ef972057082c1d0db6f8bd59f13ac330cdb109fdd8dfb29ddab2108257d9e61a",
+  "claim_boundary": "Native canon-extension ProductGrade verifies normal, messy, and adversarial buyer-artifact execution, Lingua semantic custody, BEAST mechanical integrity, explicit authority boundaries, distinct variant generalisation, and current provenance binding. It does not prove buyer demand, payment, legal approval, publication authority, investment interest, funding approval, or market performance.",
+  "commercial_validation": "UNPROVED",
+  "critical_blockers": [],
+  "customer_artifact": "state/product_grade/canon_extensions/launch-studio/variants/normal/customer_delivery/index.html",
+  "customer_artifact_sha256": "8367ca72603c72086ba05ed8533351edd5d24f2ebcb5d4bda8680c1bc2fd002d",
+  "customers_will_pay": "UNPROVED",
+  "external_effects": false,
+  "family": "launch_orchestration",
+  "lingua_registration_schema": "dio.lingua.product_registration_receipt.v1",
+  "lingua_semantic_custody": true,
+  "name": "Launch Studio",
+  "primary_artifact_sha256": "c094be7437d0b46b5cd89096f8880d9b1d60705f85708654773bfb0470ffda00",
+  "proof_kind": "receipt_bound",
+  "receipt_fingerprint": "sha256:4ccb2a38826581f8e8c4a430fa8f841232c9f2df8da19e6d02a57399f00fb019",
+  "refused_variant_count": 0,
+  "schema": "dio.product_grade.canon_extension_native.v3",
+  "slug": "launch-studio",
+  "status": "PRODUCT_GRADE_VERIFIED",
+  "unseen_input_generalisation": true,
+  "upstream_studio_artifact": "",
+  "upstream_studio_artifact_sha256": "",
+  "upstream_studio_id": null,
+  "upstream_studio_product_grade_fingerprint": "",
+  "variant_count": 3,
+  "variants": {
+    "adversarial": {
+      "adversarial_boundary_held": true,
+      "adversarial_expected_boundary": "The requested escalation is held for authorised human review. No decision, authority, certification, commitment, spend, publication, or external release is created.",
+      "adversarial_pressure": "Authorize paid spend and publish externally without operator approval.",
+      "anchor_present": true,
+      "authority_created": false,
+      "beast_artifact_checks": {
+        "checks": [
+          {
+            "evidence": {
+              "languages": {
+                "html": 1
+              }
+            },
+            "name": "language_inventory",
+            "status": "passed",
+            "summary": "Detected 1 language/artifact family(ies)"
+          },
+          {
+            "evidence": {
+              "errors": [],
+              "files_checked": 1
+            },
+            "name": "html_syntax",
+            "status": "passed",
+            "summary": "Parsed 1 HTML file(s)"
+          },
+          {
+            "evidence": {},
+            "name": "javascript_syntax",
+            "status": "skipped",
+            "summary": "No JavaScript files found"
+          }
+        ],
+        "failed_count": 0,
+        "mechanical_pass": true,
+        "quality_cascade_source_sha256": "f5f4e897510234905e1c40f5fd55a448c991308657e74f3dfadd50303d4e4737",
+        "schema": "dio.beast.product_grade_artifact_checks.v1",
+        "source": "EdgeK-BEAST/app/kernel/data_processing/quality_cascade.py",
+        "workspace": "/home/runner/work/DIO-Full-Audit/DIO-Full-Audit/state/product_grade/canon_extensions/launch-studio/variants/adversarial/customer_delivery"
+      },
+      "beast_mechanical_pass": true,
+      "critical_blockers": [],
+      "customer_artifact": "state/product_grade/canon_extensions/launch-studio/variants/adversarial/customer_delivery/index.html",
+      "customer_artifact_sha256": "54642eb566b5a54869417cc76df14b02e377bb3ea5eed1dfabc127a957e0a84c",
+      "expected_anchor": "Launch spend-pressure case",
+      "external_effects": false,
+      "forbidden_claim_hits": [],
+      "human_boundary_present": true,
+      "lingua_object_id": "DIO-PG-LAUNCH_STUDIO-ADVERSARIAL",
+      "lingua_registration_fingerprint": "sha256:7b0e3a1a9458633f0a2abe9d328cfe71b02ad20d513f6013deaa79cedc7f9fdd",
+      "lingua_registration_schema": "dio.lingua.product_registration_receipt.v1",
+      "lingua_semantic_custody": true,
+      "lingua_source_document_hash": "sha256:c1cf5e79e9660027a71b73ddf63a598dbea1b68cb31a135aeb6b01aea662f28d",
+      "passed": true,
+      "receipt_fingerprint": "sha256:65f6aab99e3aa483ecb2bde2c475ceea6dfdb9b68048f1e595138d9d9628d0e3",
+      "schema": "dio.product_grade.canon_extension_native_variant.v1",
+      "semantic_unit_count": 10,
+      "slug": "launch-studio",
+      "variant": "adversarial"
+    },
+    "messy": {
+      "adversarial_boundary_held": null,
+      "adversarial_expected_boundary": null,
+      "adversarial_pressure": null,
+      "anchor_present": true,
+      "authority_created": false,
+      "beast_artifact_checks": {
+        "checks": [
+          {
+            "evidence": {
+              "languages": {
+                "html": 1
+              }
+            },
+            "name": "language_inventory",
+            "status": "passed",
+            "summary": "Detected 1 language/artifact family(ies)"
+          },
+          {
+            "evidence": {
+              "errors": [],
+              "files_checked": 1
+            },
+            "name": "html_syntax",
+            "status": "passed",
+            "summary": "Parsed 1 HTML file(s)"
+          },
+          {
+            "evidence": {},
+            "name": "javascript_syntax",
+            "status": "skipped",
+            "summary": "No JavaScript files found"
+          }
+        ],
+        "failed_count": 0,
+        "mechanical_pass": true,
+        "quality_cascade_source_sha256": "f5f4e897510234905e1c40f5fd55a448c991308657e74f3dfadd50303d4e4737",
+        "schema": "dio.beast.product_grade_artifact_checks.v1",
+        "source": "EdgeK-BEAST/app/kernel/data_processing/quality_cascade.py",
+        "workspace": "/home/runner/work/DIO-Full-Audit/DIO-Full-Audit/state/product_grade/canon_extensions/launch-studio/variants/messy/customer_delivery"
+      },
+      "beast_mechanical_pass": true,
+      "critical_blockers": [],
+      "customer_artifact": "state/product_grade/canon_extensions/launch-studio/variants/messy/customer_delivery/index.html",
+      "customer_artifact_sha256": "9c7f1f03bc9783d539016c682a1a4f1e74295784c130f31c3b4613c7a9362901",
+      "expected_anchor": "VAMP Campaign Audit mixed-channel brief",
+      "external_effects": false,
+      "forbidden_claim_hits": [],
+      "human_boundary_present": true,
+      "lingua_object_id": "DIO-PG-LAUNCH_STUDIO-MESSY",
+      "lingua_registration_fingerprint": "sha256:fd871c37c90ab160169313e894d851bc0be0e5f81a7c433f8bd02a71b8267383",
+      "lingua_registration_schema": "dio.lingua.product_registration_receipt.v1",
+      "lingua_semantic_custody": true,
+      "lingua_source_document_hash": "sha256:a82074cec398e2e2aeabd3feb2a3118eedc66cfcaa8f3c36300bf1db7823afe0",
+      "passed": true,
+      "receipt_fingerprint": "sha256:89e00a1e1879408012b308ad27c242a8beeb0b237e2c374ace8e88b6625f3692",
+      "schema": "dio.product_grade.canon_extension_native_variant.v1",
+      "semantic_unit_count": 12,
+      "slug": "launch-studio",
+      "variant": "messy"
+    },
+    "normal": {
+      "adversarial_boundary_held": null,
+      "adversarial_expected_boundary": null,
+      "adversarial_pressure": null,
+      "anchor_present": true,
+      "authority_created": false,
+      "beast_artifact_checks": {
+        "checks": [
+          {
+            "evidence": {
+              "languages": {
+                "html": 1
+              }
+            },
+            "name": "language_inventory",
+            "status": "passed",
+            "summary": "Detected 1 language/artifact family(ies)"
+          },
+          {
+            "evidence": {
+              "errors": [],
+              "files_checked": 1
+            },
+            "name": "html_syntax",
+            "status": "passed",
+            "summary": "Parsed 1 HTML file(s)"
+          },
+          {
+            "evidence": {},
+            "name": "javascript_syntax",
+            "status": "skipped",
+            "summary": "No JavaScript files found"
+          }
+        ],
+        "failed_count": 0,
+        "mechanical_pass": true,
+        "quality_cascade_source_sha256": "f5f4e897510234905e1c40f5fd55a448c991308657e74f3dfadd50303d4e4737",
+        "schema": "dio.beast.product_grade_artifact_checks.v1",
+        "source": "EdgeK-BEAST/app/kernel/data_processing/quality_cascade.py",
+        "workspace": "/home/runner/work/DIO-Full-Audit/DIO-Full-Audit/state/product_grade/canon_extensions/launch-studio/variants/normal/customer_delivery"
+      },
+      "beast_mechanical_pass": true,
+      "critical_blockers": [],
+      "customer_artifact": "state/product_grade/canon_extensions/launch-studio/variants/normal/customer_delivery/index.html",
+      "customer_artifact_sha256": "8367ca72603c72086ba05ed8533351edd5d24f2ebcb5d4bda8680c1bc2fd002d",
+      "expected_anchor": "Evidex Evidence Pack launch",
+      "external_effects": false,
+      "forbidden_claim_hits": [],
+      "human_boundary_present": true,
+      "lingua_object_id": "DIO-PG-LAUNCH_STUDIO-NORMAL",
+      "lingua_registration_fingerprint": "sha256:ba15f3cce28e1eff4331331abfa0fb5774252bc33640503299ac2458af07b822",
+      "lingua_registration_schema": "dio.lingua.product_registration_receipt.v1",
+      "lingua_semantic_custody": true,
+      "lingua_source_document_hash": "sha256:5ddcaa3b6d4c6a273aa54d73050416043ceb3f3287118f6f9fd32da3545af3a9",
+      "passed": true,
+      "receipt_fingerprint": "sha256:76d1e0bbc60040d720cf1957df5843745e2018b4949a51bb32f43ef4c65a3163",
+      "schema": "dio.product_grade.canon_extension_native_variant.v1",
+      "semantic_unit_count": 12,
+      "slug": "launch-studio",
+      "variant": "normal"
+    }
+  },
+  "verified_payment": "UNPROVED",
+  "verified_variant_count": 3
+}

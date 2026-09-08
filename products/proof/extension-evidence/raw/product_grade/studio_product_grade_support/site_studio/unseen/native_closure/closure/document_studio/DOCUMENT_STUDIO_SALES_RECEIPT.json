@@ -1,0 +1,19 @@
+{
+  "artifact_type": "controlled_sales_asset",
+  "authority_created": false,
+  "bytes": 2652,
+  "capability_executed": "document.sales_assets",
+  "channel": "html",
+  "delivery_profile_hash": "6edd3459fdf23d7ce62d5bf1ed48796f132f98e2ec25273a777c02aa84b0ece8",
+  "external_delivery": "REFUSE",
+  "output_path": "closure/document_studio/sales_asset/studio-sales-site-studio-english.html",
+  "publication": "REFUSE",
+  "qa_passed": true,
+  "release_mode": false,
+  "schema": "dio.document_studio_sales_asset_receipt.v1",
+  "semantic_source_hash": "e07ec962fafdd2625481c0e949cd499931b04571f5a9c94e0a238f213ff25401",
+  "sha256": "f15d2d7bf61a48bdd23e13f6f267b9c82857b0ca8184a319be1e73c84ad4d0ec",
+  "source_engine": "document_studio",
+  "studio_id": "site_studio",
+  "style_profile_hash": "f08f383c90917a43a2f70439657fe368302ac1a623a61656cf7443c3bfad23e5"
+}

@@ -1,0 +1,69 @@
+{
+  "authority_created": false,
+  "boundary": "This map structures proposed objectives and evidence milestones. It is not a lending decision, business-performance rating, affordability conclusion, or guarantee of outcomes.",
+  "capabilities_executed": [
+    "objective.milestone.map"
+  ],
+  "map_fingerprint": "sha256:d045d9b3fa35bbc07889ceeaf869ae4b7a0bdf523a4cbee3a3e46e87bc9f4595",
+  "objective_count": 3,
+  "objectives": [
+    {
+      "fingerprint": "sha256:4699ee18057aa725031c66b16eb6b8cc152b6922e1e440337b1b61b2c4e5427a",
+      "milestones": [
+        {
+          "evidence_required": "authorised purchase or allocation record",
+          "milestone_id": "FIN-OBJ-01-M1",
+          "state": "PLANNED"
+        },
+        {
+          "evidence_required": "post-deployment outcome or operational record",
+          "milestone_id": "FIN-OBJ-01-M2",
+          "state": "PLANNED"
+        }
+      ],
+      "objective": "Deploy funding allocation for field equipment",
+      "objective_id": "FIN-OBJ-01",
+      "performance_decision": "NOT_MADE"
+    },
+    {
+      "fingerprint": "sha256:c9978cc6cfcec0b1cb7c4333f7be0e012ad4749154f0460642c629424af41462",
+      "milestones": [
+        {
+          "evidence_required": "authorised purchase or allocation record",
+          "milestone_id": "FIN-OBJ-02-M1",
+          "state": "PLANNED"
+        },
+        {
+          "evidence_required": "post-deployment outcome or operational record",
+          "milestone_id": "FIN-OBJ-02-M2",
+          "state": "PLANNED"
+        }
+      ],
+      "objective": "Deploy funding allocation for laptop and data-capture hardware",
+      "objective_id": "FIN-OBJ-02",
+      "performance_decision": "NOT_MADE"
+    },
+    {
+      "fingerprint": "sha256:b729f138ee6d282e8a99b2d2cf5e0a3ea1b22b3ae1152df684539c1b801cd073",
+      "milestones": [
+        {
+          "evidence_required": "authorised purchase or allocation record",
+          "milestone_id": "FIN-OBJ-03-M1",
+          "state": "PLANNED"
+        },
+        {
+          "evidence_required": "post-deployment outcome or operational record",
+          "milestone_id": "FIN-OBJ-03-M2",
+          "state": "PLANNED"
+        }
+      ],
+      "objective": "Deploy funding allocation for three months working capital",
+      "objective_id": "FIN-OBJ-03",
+      "performance_decision": "NOT_MADE"
+    }
+  ],
+  "schema": "dio.vamp_finance_objective_map.v1",
+  "source_engine": "vamp",
+  "studio_id": "finance_readiness_studio",
+  "venture": "Karoo Field Analytics"
+}

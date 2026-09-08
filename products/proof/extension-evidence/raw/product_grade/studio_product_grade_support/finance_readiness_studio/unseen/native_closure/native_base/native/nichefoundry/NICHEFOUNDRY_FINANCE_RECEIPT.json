@@ -1,0 +1,72 @@
+{
+  "authority_created": false,
+  "capabilities_executed": [
+    "market.position",
+    "market.research.hypothesis"
+  ],
+  "market_hypothesis": {
+    "approval_probability": "NOT_INFERRED",
+    "buyer_problem": "Funding applications often fail late because evidence gaps and assumptions are discovered only during lender review.",
+    "customer_demand": "UNKNOWN",
+    "funding_need": "R500,000 vehicle, tools and working-capital facility",
+    "hypothesized_value": "See what is supplied, what remains missing, and which assumptions still require human or lender scrutiny before application.",
+    "media_spend": "REFUSE",
+    "publication": "REFUSE",
+    "schema": "dio.nichefoundry_finance_market_hypothesis.v1",
+    "studio_id": "finance_readiness_studio",
+    "validation_state": "UNVALIDATED_CONTROLLED_HYPOTHESIS",
+    "venture": "Mhlabeni Solar Services"
+  },
+  "media_spend": "REFUSE",
+  "publication": "REFUSE",
+  "schema": "dio.nichefoundry_finance_readiness_execution_receipt.v1",
+  "source_engine": "nichefoundry",
+  "strategy": {
+    "buyer_pain": "Funding applications often fail late because evidence gaps and assumptions are discovered only during lender review.",
+    "commercial_family": "Professional Intelligence Studios",
+    "cost_of_inaction": "Leave it manual and the same rework, searching and deadline pressure keeps recurring: funding applications often fail late because evidence gaps and assumptions are discovered only during lender review.",
+    "cta": "Prepare a finance-readiness review",
+    "desired_outcome": "See what is supplied, what remains missing, and which assumptions still require human or lender scrutiny before application.",
+    "hooks": [
+      "Funding applications often fail late because evidence gaps and assumptions\u2026",
+      "See what is supplied, what remains missing, and which assumptions still\u2026",
+      "Finance Readiness: one bounded proof-backed pilot from R 7,900 ZAR."
+    ],
+    "objections": [
+      {
+        "answer": "Start with one bounded case at a fixed launch scope before expanding anything.",
+        "question": "Will this become another transformation project?"
+      },
+      {
+        "answer": "The bounded route produces inspectable artifacts and proof receipts rather than asking you to trust an opaque answer.",
+        "question": "Is this just generic AI in a new wrapper?"
+      },
+      {
+        "answer": "No. DIO prepares and binds the work; the authorised human keeps the consequential decision.",
+        "question": "Will software make the professional decision?"
+      },
+      {
+        "answer": "No. The pilot is designed around the minimum authorised material needed for one bounded case.",
+        "question": "Do I have to hand over everything?"
+      }
+    ],
+    "offer": {
+      "expansion_rule": "Expand only after the bounded pilot produces inspectable value and the operator chooses to continue.",
+      "launch_price_zar": 7900,
+      "name": "One bounded evidence-readiness review for a finance application",
+      "price_label": "R 7,900 ZAR",
+      "scope": "one bounded case"
+    },
+    "promise": "A clearer, evidence-bound finance application preparation pack for human review.",
+    "proof_angle": "The controlled review separates supplied evidence, missing requirements and unresolved assumptions without predicting lender approval.",
+    "schema": "dio.marketing.commercial_strategy.v1",
+    "target_buyer": "South African small-business owner preparing a funding application",
+    "truth_boundaries": [
+      "Controlled proof is not guaranteed ROI or customer validation.",
+      "Consequential professional decisions remain human-owned.",
+      "No automatic publication or ad spend is created by this strategy.",
+      "No fabricated scarcity, urgency, certification or outcome claims."
+    ]
+  },
+  "studio_id": "finance_readiness_studio"
+}

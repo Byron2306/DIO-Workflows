@@ -1,0 +1,53 @@
+{
+  "authority_created": false,
+  "capability_executed": "evidence.intake.structure",
+  "external_action_executed": false,
+  "full_evidex_pack_engine_invoked": false,
+  "intake": {
+    "billing": {
+      "client_type": "ngo",
+      "currency": "ZAR",
+      "quantity": 1,
+      "service_name": "Evidex Evidence Pack"
+    },
+    "client": {
+      "contact_email": "fixture@example.invalid",
+      "contact_name": "Controlled Studio Fixture",
+      "organization": "Client organization to confirm"
+    },
+    "constraints": {
+      "avoid_claims": [
+        "Do not claim outcomes that are not directly supported by supplied evidence.",
+        "Do not treat this generated pack as final until reviewed by the operator."
+      ],
+      "known_gaps": [
+        "Client organization, reporting period, donor template, and KPI list may need confirmation.",
+        "Original route reason: Studio native Evidex adapter proof",
+        "Original evidence extract: Mokoena, T. (2024). Evidence lineage in professional decision systems. Journal of Applied Governance, 12(2), 44-61. Naidoo, P. (2025). Human authority in AI-assisted professional workflows. Review of Digital Practice, 8(1), 15-29. Structured audit trails make later editorial correction easier to reconstruct. Rapid drafting increases the importance of keeping evidence relationships inspectable during revision. Release authority remains distinct from production quality. Audit trails guarantee fact"
+      ]
+    },
+    "kpis": [
+      {
+        "actual": "Candidate evidence received",
+        "measurement": "Email request, listed attachments, and source notes",
+        "name": "Evidence request and source materials organized",
+        "target": "Complete evidence pack"
+      }
+    ],
+    "pack": {
+      "donor": "To be confirmed",
+      "grant_id": "STUDIO-ARTICLE_PUBLICATION_STUDIO-EVIDEX-001",
+      "include_appendix": true,
+      "project_name": "Applied Practice Quarterly controlled editorial evidence intake",
+      "purpose": "Applied Practice Quarterly controlled editorial evidence intake",
+      "reporting_period": {
+        "end": "To be confirmed",
+        "start": "To be confirmed"
+      },
+      "tone": "clear, conservative, audit-ready"
+    }
+  },
+  "schema": "dio.evidex_studio_intake_receipt.v1",
+  "source_engine": "evidex",
+  "studio_id": "article_publication_studio"
+}

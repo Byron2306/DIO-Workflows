@@ -1,0 +1,28 @@
+{
+  "meaning_state": "CONTROLLED_TEST_FIXTURE",
+  "must_not_invent": [
+    "admission of fault",
+    "waiver",
+    "refund promise",
+    "discount promise",
+    "settlement agreement",
+    "legal conclusion"
+  ],
+  "must_preserve": [
+    "the client has disputed the invoice",
+    "the matter requires review",
+    "no settlement has been authorised"
+  ],
+  "purpose": "Respond firmly and professionally to an invoice dispute while preserving factual and authority boundaries.",
+  "schema": "dio.lingua_correspondence_semantic_object.v1",
+  "send_authority": "REFUSE",
+  "source_engine": "lingua",
+  "source_request": "I need a firm but professional reply to a client disputing an invoice.",
+  "studio_id": "professional_correspondence_studio",
+  "tone": [
+    "calm",
+    "firm",
+    "professional",
+    "non-adversarial"
+  ]
+}

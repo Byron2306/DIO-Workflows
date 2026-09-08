@@ -3,6 +3,8 @@ on:
   pull_request:
     paths:
       - "products/**"
+      - "assets/**"
+      - "tests/test_public_extension_live_proof_contract.py"
       - ".github/workflows/product-editorial-evidence.yml"
   workflow_dispatch:
 jobs:
@@ -21,7 +23,7 @@ jobs:
           const rows=window.DIO_PRODUCT_CATALOG;
           if(rows.length!==68) throw new Error(`expected 68 routes, got ${rows.length}`);
           const app=fs.readFileSync('products/app.js','utf8');
-          for(const token of ['PRODUCTION PROOF','TRUTH BOUNDARY','BUYER JOB','OPEN / DOWNLOAD','MARKET VALIDATION','68-product portfolio','vesper-intake.html'])
+          for(const token of ['PRODUCTION PROOF','TRUTH BOUNDARY','BUYER JOB','OPEN ARTIFACT','MARKET VALIDATION','68-product portfolio','vesper-intake.html'])
             if(!app.includes(token)) throw new Error(`renderer missing: ${token}`);
           const css=fs.readFileSync('products/proof-layer.css','utf8');
           for(const token of ['.live-proof-grid','.proof-artifact-card','@media']) if(!css.includes(token)) throw new Error(`proof CSS missing: ${token}`);
@@ -35,3 +37,5 @@ jobs:
                   if token not in page: raise SystemExit(f'{slug} flagship missing: {token}')
           print('DIO_FLAGSHIP_EVIDENCE_FILMS_VERIFIED')
           PY
+      - name: Validate 15-extension live proof and gilded typography
+        run: python3 tests/test_public_extension_live_proof_contract.py

@@ -1,0 +1,135 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-LAUNCH_STUDIO-NORMAL",
+  "domain": "launch_orchestration",
+  "subject": "Evidex Evidence Pack launch",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "launch-studio",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-LAUNCH_STUDIO-NORMAL",
+    "audience": "product operators preparing controlled launches",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:5ddcaa3b6d4c6a273aa54d73050416043ceb3f3287118f6f9fd32da3545af3a9",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Evidex Evidence Pack launch",
+        "source_hash": "sha256:4d431504e22078fff6aee562847ddca3ded151dd3ee5ad97e976d7f5b761e120",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "labelled_instruction",
+        "source_text": "Target audience: small regulated service firms",
+        "source_hash": "sha256:285b45086a44922d3ca4c69fdc4a3fce19a536a49e2b969f8db46ea252ace130",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "body",
+        "source_text": "Proposition",
+        "source_hash": "sha256:1e868bdea6c3d3fad2a7438f8469ccf65d54037d29f267d7cc845107b2eee0c9",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "body",
+        "source_text": "Turn scattered evidence into a reviewable customer proof pack.",
+        "source_hash": "sha256:fa4f2dfc36ca2749f36ef09cab64830a41b3d3efd33a3756b98455555ff6c398",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "body",
+        "source_text": "Planned channels",
+        "source_hash": "sha256:20652113a7dc2ab2a727ab73b3c362b073f0fa4f8f94e2d4c2c596a1da16adca",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "labelled_instruction",
+        "source_text": "Channel: LinkedIn",
+        "source_hash": "sha256:8060f5d4c1deccbf8324717b1538dd6c934d2ba7b22e4219af2280f6342705ad",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "labelled_instruction",
+        "source_text": "Channel: email",
+        "source_hash": "sha256:a6e7a7b72c2815ceaa7f04ac57dc0f64a45460fbaab52067530dacd50b28932a",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "labelled_instruction",
+        "source_text": "Channel: owned website",
+        "source_hash": "sha256:2fa1c6cb138ed144616b738494e0e7936651213e91860d812f1195fb72718efa",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "body",
+        "source_text": "Release constraints",
+        "source_hash": "sha256:3a603eb95e79457cc89f007bb678485843c9e9e2b2183d944edc75dbd0b3d405",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P010",
+        "unit_type": "labelled_instruction",
+        "source_text": "Constraint: No paid media spend is authorised.",
+        "source_hash": "sha256:260089f5721fcbbeb9f1b334ec2dc17dadfa4cd2d8b0d2b13bdb6d6dfa8781c4",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P011",
+        "unit_type": "labelled_instruction",
+        "source_text": "Constraint: External publication requires human approval.",
+        "source_hash": "sha256:aac278cef24f244e3abfa82fd59109cf82a5bd700544e31bc8bfe6eaa67f4b6a",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P012",
+        "unit_type": "instruction",
+        "source_text": "Performance remains unproved until observed. Human publication and spend authority remain required.",
+        "source_hash": "sha256:170e7888ba051a93c9aa9ed42d6378b42dcf3dd61f09eed7dbabccdf6cc63bb7",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:5ddcaa3b6d4c6a273aa54d73050416043ceb3f3287118f6f9fd32da3545af3a9",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010",
+        "P011",
+        "P012"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:33+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:33+00:00"
+}

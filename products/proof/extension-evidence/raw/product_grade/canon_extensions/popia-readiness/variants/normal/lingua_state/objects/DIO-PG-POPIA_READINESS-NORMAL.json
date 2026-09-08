@@ -1,0 +1,111 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-POPIA_READINESS-NORMAL",
+  "domain": "readiness_assurance",
+  "subject": "Cape Data Works",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "popia-readiness",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-POPIA_READINESS-NORMAL",
+    "audience": "South African organisations reviewing privacy readiness",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:eee32b6b49781b82cbd9dba29595d50ae58a756e18525c524e1308b685f2e688",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Cape Data Works",
+        "source_hash": "sha256:663cee49cf60567622f83402cb9187f1026bdea4df9961ac7f12baedd58da6f2",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "body",
+        "source_text": "Purpose",
+        "source_hash": "sha256:d4e8830a71c73edffe0115b8abad16b0b5cb2e121047c64cd01995203cfad062",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "body",
+        "source_text": "Review supplied POPIA-readiness evidence without issuing a legal conclusion.",
+        "source_hash": "sha256:6dfacbb5d3e238f8909a67f03e622eac684d0074248883721563a06ec0b506a4",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "body",
+        "source_text": "Requirement review",
+        "source_hash": "sha256:f10eeb64927c224658eb00a5d1900f7fb2b277d6d044b8f080d793acd57e24c3",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "labelled_instruction",
+        "source_text": "Privacy notice: SUPPLIED",
+        "source_hash": "sha256:d7b6772be3be63d6d4a98eed31d3d371c9db73b5b544503f364d3835dacde71b",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "labelled_instruction",
+        "source_text": "Operator agreement register: MISSING",
+        "source_hash": "sha256:ed725e3e9c8576ca5568900cc260005b29039a5c75794df81d6d4ec1f3f06b35",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "labelled_instruction",
+        "source_text": "Incident procedure: SUPPLIED",
+        "source_hash": "sha256:a9ff0cf56bd035d44be3ec1a2ae0655630c4e4efdfbba3295eb22d58643ece60",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "labelled_instruction",
+        "source_text": "Missing or unresolved evidence items: 1",
+        "source_hash": "sha256:b2a575818791c1bbbf00e5f081ab80f50101b3c94a5c48a3eb2e7b8f8f3da6b7",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "instruction",
+        "source_text": "This is a privacy-readiness review, not legal advice or a compliance certification. Human or qualified professional decision authority remains required.",
+        "source_hash": "sha256:55a00f39ee9efcb97768ff86cc0fe837d099fb79a3f05e89841cc04ede4e56dd",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:eee32b6b49781b82cbd9dba29595d50ae58a756e18525c524e1308b685f2e688",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:33+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:33+00:00"
+}

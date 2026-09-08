@@ -1,0 +1,61 @@
+{
+  "adversarial_boundary_held": null,
+  "adversarial_expected_boundary": null,
+  "adversarial_pressure": null,
+  "anchor_present": true,
+  "authority_created": false,
+  "beast_artifact_checks": {
+    "checks": [
+      {
+        "evidence": {
+          "languages": {
+            "html": 1
+          }
+        },
+        "name": "language_inventory",
+        "status": "passed",
+        "summary": "Detected 1 language/artifact family(ies)"
+      },
+      {
+        "evidence": {
+          "errors": [],
+          "files_checked": 1
+        },
+        "name": "html_syntax",
+        "status": "passed",
+        "summary": "Parsed 1 HTML file(s)"
+      },
+      {
+        "evidence": {},
+        "name": "javascript_syntax",
+        "status": "skipped",
+        "summary": "No JavaScript files found"
+      }
+    ],
+    "failed_count": 0,
+    "mechanical_pass": true,
+    "quality_cascade_source_sha256": "f5f4e897510234905e1c40f5fd55a448c991308657e74f3dfadd50303d4e4737",
+    "schema": "dio.beast.product_grade_artifact_checks.v1",
+    "source": "EdgeK-BEAST/app/kernel/data_processing/quality_cascade.py",
+    "workspace": "/home/runner/work/DIO-Full-Audit/DIO-Full-Audit/state/product_grade/canon_extensions/launch-studio/variants/messy/customer_delivery"
+  },
+  "beast_mechanical_pass": true,
+  "critical_blockers": [],
+  "customer_artifact": "state/product_grade/canon_extensions/launch-studio/variants/messy/customer_delivery/index.html",
+  "customer_artifact_sha256": "9c7f1f03bc9783d539016c682a1a4f1e74295784c130f31c3b4613c7a9362901",
+  "expected_anchor": "VAMP Campaign Audit mixed-channel brief",
+  "external_effects": false,
+  "forbidden_claim_hits": [],
+  "human_boundary_present": true,
+  "lingua_object_id": "DIO-PG-LAUNCH_STUDIO-MESSY",
+  "lingua_registration_fingerprint": "sha256:fd871c37c90ab160169313e894d851bc0be0e5f81a7c433f8bd02a71b8267383",
+  "lingua_registration_schema": "dio.lingua.product_registration_receipt.v1",
+  "lingua_semantic_custody": true,
+  "lingua_source_document_hash": "sha256:a82074cec398e2e2aeabd3feb2a3118eedc66cfcaa8f3c36300bf1db7823afe0",
+  "passed": true,
+  "receipt_fingerprint": "sha256:89e00a1e1879408012b308ad27c242a8beeb0b237e2c374ace8e88b6625f3692",
+  "schema": "dio.product_grade.canon_extension_native_variant.v1",
+  "semantic_unit_count": 12,
+  "slug": "launch-studio",
+  "variant": "messy"
+}

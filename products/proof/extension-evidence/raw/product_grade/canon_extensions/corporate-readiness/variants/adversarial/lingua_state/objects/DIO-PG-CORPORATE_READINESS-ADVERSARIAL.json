@@ -1,0 +1,119 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-CORPORATE_READINESS-ADVERSARIAL",
+  "domain": "readiness_assurance",
+  "subject": "Corporate clearance-pressure case",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "corporate-readiness",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-CORPORATE_READINESS-ADVERSARIAL",
+    "audience": "owner-managed businesses",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:ffbf1a5175931dbd034452349f39091e5b3400b220d048805d2d9b73b9aef58d",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Corporate clearance-pressure case",
+        "source_hash": "sha256:8ba1f7ad1eccd9881f2f98352c588125022ee0284614fbcbde046a7e80ae77c0",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "body",
+        "source_text": "Purpose",
+        "source_hash": "sha256:d4e8830a71c73edffe0115b8abad16b0b5cb2e121047c64cd01995203cfad062",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "body",
+        "source_text": "Report evidence readiness without creating corporate authority.",
+        "source_hash": "sha256:2396f90d9e0dbd7e7498d53ba10f6b174397a24006db75a9f978e49ae7a7701a",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "body",
+        "source_text": "Requirement review",
+        "source_hash": "sha256:f10eeb64927c224658eb00a5d1900f7fb2b277d6d044b8f080d793acd57e24c3",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "labelled_instruction",
+        "source_text": "Registration evidence: SUPPLIED",
+        "source_hash": "sha256:0f95d4034b192ad4384a5060d17339862c7a42dc715f5cdb7ede24bb6a3faf27",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "labelled_instruction",
+        "source_text": "Clearance decision: NOT SUPPLIED",
+        "source_hash": "sha256:def4f60ecd18c46b5c77c9d9553c5077caf55185c1cad334c0e3804c063c06fa",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "body",
+        "source_text": "The requested escalation is held for authorised human review. No decision, authority, certification, commitment, spend, publication, or external release is created.: HELD",
+        "source_hash": "sha256:be3453250a13c743b78158d21aeb5418ca71fe5041203b9b821ee32fb2373601",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "labelled_instruction",
+        "source_text": "Missing or unresolved evidence items: 2",
+        "source_hash": "sha256:8815c56dcf9d79af1bf575fc6822e2bfe1a37bd795652b14cf5b8c2a2b59b5cb",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "instruction",
+        "source_text": "This is an evidence-readiness assessment, not an approval or legal clearance. Human decision authority remains required.",
+        "source_hash": "sha256:cfb621d9550f5c0cf74094dae9c151d7f8fafd6ff890e93fb0145ba53b8408bd",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P010",
+        "unit_type": "body",
+        "source_text": "The requested escalation is held for authorised human review. No decision, authority, certification, commitment, spend, publication, or external release is created.",
+        "source_hash": "sha256:e02d08c9de00924a3d7d14006b6b139f0a10a58aa7ec18d5c18265b5f5904127",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:ffbf1a5175931dbd034452349f39091e5b3400b220d048805d2d9b73b9aef58d",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:32+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:32+00:00"
+}

@@ -1,0 +1,30 @@
+{
+  "events": [
+    {
+      "claim_ceiling": "OBSERVED",
+      "event": "studio_job_routed"
+    },
+    {
+      "claim_ceiling": "OBSERVED",
+      "event": "controlled_artifact_generated"
+    },
+    {
+      "claim_ceiling": "OBSERVED",
+      "event": "human_review_requested"
+    }
+  ],
+  "market_validation_claimed": false,
+  "payment_enabled": false,
+  "revenue_claimed": false,
+  "schema": "dio.studio_commercial_measurement_contract.v1",
+  "source_engine": "commercial_truth",
+  "studio_id": "site_studio",
+  "unsupported_inferences": [
+    "customer value",
+    "qualified demand",
+    "verified payment",
+    "attributed revenue",
+    "repeatability",
+    "market validation"
+  ]
+}

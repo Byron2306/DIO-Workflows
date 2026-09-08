@@ -1,0 +1,16 @@
+{
+  "admission_authority": "REFUSE",
+  "forbidden_commitments": [
+    "admission of fault",
+    "waiver",
+    "refund promise",
+    "discount promise",
+    "settlement agreement",
+    "legal conclusion"
+  ],
+  "human_gate": "NEEDS_YOU",
+  "schema": "dio.correspondence_commitment_boundary.v1",
+  "send_authority": "REFUSE",
+  "settlement_authority": "REFUSE",
+  "studio_id": "professional_correspondence_studio"
+}

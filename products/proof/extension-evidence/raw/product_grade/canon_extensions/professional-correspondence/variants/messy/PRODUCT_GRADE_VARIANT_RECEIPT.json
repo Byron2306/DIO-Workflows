@@ -1,0 +1,61 @@
+{
+  "adversarial_boundary_held": null,
+  "adversarial_expected_boundary": null,
+  "adversarial_pressure": null,
+  "anchor_present": true,
+  "authority_created": false,
+  "beast_artifact_checks": {
+    "checks": [
+      {
+        "evidence": {
+          "languages": {
+            "html": 1
+          }
+        },
+        "name": "language_inventory",
+        "status": "passed",
+        "summary": "Detected 1 language/artifact family(ies)"
+      },
+      {
+        "evidence": {
+          "errors": [],
+          "files_checked": 1
+        },
+        "name": "html_syntax",
+        "status": "passed",
+        "summary": "Parsed 1 HTML file(s)"
+      },
+      {
+        "evidence": {},
+        "name": "javascript_syntax",
+        "status": "skipped",
+        "summary": "No JavaScript files found"
+      }
+    ],
+    "failed_count": 0,
+    "mechanical_pass": true,
+    "quality_cascade_source_sha256": "f5f4e897510234905e1c40f5fd55a448c991308657e74f3dfadd50303d4e4737",
+    "schema": "dio.beast.product_grade_artifact_checks.v1",
+    "source": "EdgeK-BEAST/app/kernel/data_processing/quality_cascade.py",
+    "workspace": "/home/runner/work/DIO-Full-Audit/DIO-Full-Audit/state/product_grade/canon_extensions/professional-correspondence/variants/messy/customer_delivery"
+  },
+  "beast_mechanical_pass": true,
+  "critical_blockers": [],
+  "customer_artifact": "state/product_grade/canon_extensions/professional-correspondence/variants/messy/customer_delivery/index.html",
+  "customer_artifact_sha256": "93b18ba34f4cf55429b45c7cf6d73f2c11f192edcef792ce7811eea3b35c74c3",
+  "expected_anchor": "CV-29 correspondence with conflicting delivery dates",
+  "external_effects": false,
+  "forbidden_claim_hits": [],
+  "human_boundary_present": true,
+  "lingua_object_id": "DIO-PG-PROFESSIONAL_CORRESPONDENCE-MESSY",
+  "lingua_registration_fingerprint": "sha256:b500ea05af9adf2bc9ec1b6e0c286f368a9c89f2f18e679a029761b58422e0f9",
+  "lingua_registration_schema": "dio.lingua.product_registration_receipt.v1",
+  "lingua_semantic_custody": true,
+  "lingua_source_document_hash": "sha256:20c3d3a06807c848f31ef2ed690a6f8e8996ee6f9470d190686341f1c4967659",
+  "passed": true,
+  "receipt_fingerprint": "sha256:a346c2f4fb637ac42dac93735e3dc00fe53be5600ca8c4fd012fb5a56e24c386",
+  "schema": "dio.product_grade.canon_extension_native_variant.v1",
+  "semantic_unit_count": 11,
+  "slug": "professional-correspondence",
+  "variant": "messy"
+}

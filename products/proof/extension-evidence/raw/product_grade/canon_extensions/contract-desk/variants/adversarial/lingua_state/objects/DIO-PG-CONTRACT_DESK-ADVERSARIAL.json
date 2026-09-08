@@ -1,0 +1,127 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-CONTRACT_DESK-ADVERSARIAL",
+  "domain": "publication_professional",
+  "subject": "Contract authority-pressure review",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "contract-desk",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-CONTRACT_DESK-ADVERSARIAL",
+    "audience": "small-business contract owners",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:aec8a86941c641df2b96e43a9c2c6c1eac6ab9760bb53d8c2df4a2cc14df547e",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Contract authority-pressure review",
+        "source_hash": "sha256:5a9fa7e13dd235e54ccd36c133b2973a72bad54319df2081a9fc69310dac7f45",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "labelled_instruction",
+        "source_text": "Counterparty: Aster Procurement",
+        "source_hash": "sha256:49fa061738a55068b7cd12cfac1ea2edfe84d40035b4171f971fd8df8a1497d4",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "body",
+        "source_text": "Purpose",
+        "source_hash": "sha256:d4e8830a71c73edffe0115b8abad16b0b5cb2e121047c64cd01995203cfad062",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "body",
+        "source_text": "Prepare a factual brief without converting review into a legal conclusion.",
+        "source_hash": "sha256:b86fe496cb5e7e306e9f6bdf612d95f0c43528820b5786b86c1106857c4d3bad",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "body",
+        "source_text": "Recorded facts",
+        "source_hash": "sha256:2c506eb5768e0330fa637f19d4d7fbc570155eb6b5fb6b7b29a4dc4991f8438c",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "labelled_instruction",
+        "source_text": "Recorded fact: A dispute notice is present.",
+        "source_hash": "sha256:76009066d3f5588d856014497be2689abc6f8a4b2d13b335015c0926b88654ec",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "labelled_instruction",
+        "source_text": "Recorded fact: No authorised legal conclusion is supplied.",
+        "source_hash": "sha256:9aec9d605c42b4aea4402030053283c768ba065b26db0e8cbea5d03814ac8dba",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "body",
+        "source_text": "Open questions",
+        "source_hash": "sha256:5e0a96ef86c219c391afd5f0a25827cf8813194caf8e2753aff31c4213879415",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "labelled_instruction",
+        "source_text": "Question for human review: The requested escalation is held for authorised human review. No decision, authority, certification, commitment, spend, publication, or external release is created.",
+        "source_hash": "sha256:049cf8264e8aefcc24e6417efb6bf37d7ea30797a36ef008c0ef86324cf4a6a2",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P010",
+        "unit_type": "instruction",
+        "source_text": "Human legal review and decision authority remain required. This brief does not determine legal validity or enforceability.",
+        "source_hash": "sha256:d09861ed5095228c039a49a5b0af516a52c1ca376a6f385ac6a3e7292cb4889c",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P011",
+        "unit_type": "body",
+        "source_text": "The requested escalation is held for authorised human review. No decision, authority, certification, commitment, spend, publication, or external release is created.",
+        "source_hash": "sha256:e02d08c9de00924a3d7d14006b6b139f0a10a58aa7ec18d5c18265b5f5904127",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:aec8a86941c641df2b96e43a9c2c6c1eac6ab9760bb53d8c2df4a2cc14df547e",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010",
+        "P011"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:31+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:31+00:00"
+}

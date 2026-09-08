@@ -1,0 +1,61 @@
+{
+  "adversarial_boundary_held": null,
+  "adversarial_expected_boundary": null,
+  "adversarial_pressure": null,
+  "anchor_present": true,
+  "authority_created": false,
+  "beast_artifact_checks": {
+    "checks": [
+      {
+        "evidence": {
+          "languages": {
+            "html": 1
+          }
+        },
+        "name": "language_inventory",
+        "status": "passed",
+        "summary": "Detected 1 language/artifact family(ies)"
+      },
+      {
+        "evidence": {
+          "errors": [],
+          "files_checked": 1
+        },
+        "name": "html_syntax",
+        "status": "passed",
+        "summary": "Parsed 1 HTML file(s)"
+      },
+      {
+        "evidence": {},
+        "name": "javascript_syntax",
+        "status": "skipped",
+        "summary": "No JavaScript files found"
+      }
+    ],
+    "failed_count": 0,
+    "mechanical_pass": true,
+    "quality_cascade_source_sha256": "f5f4e897510234905e1c40f5fd55a448c991308657e74f3dfadd50303d4e4737",
+    "schema": "dio.beast.product_grade_artifact_checks.v1",
+    "source": "EdgeK-BEAST/app/kernel/data_processing/quality_cascade.py",
+    "workspace": "/home/runner/work/DIO-Full-Audit/DIO-Full-Audit/state/product_grade/canon_extensions/site-studio/variants/normal/customer_delivery"
+  },
+  "beast_mechanical_pass": true,
+  "critical_blockers": [],
+  "customer_artifact": "state/product_grade/canon_extensions/site-studio/variants/normal/customer_delivery/index.html",
+  "customer_artifact_sha256": "02bf5dfc31833376f63b423ea7feb9e195b8c3130f448976c00968298250fcdd",
+  "expected_anchor": "Accessible programme microsite",
+  "external_effects": false,
+  "forbidden_claim_hits": [],
+  "human_boundary_present": true,
+  "lingua_object_id": "DIO-PG-SITE_STUDIO-NORMAL",
+  "lingua_registration_fingerprint": "sha256:47cefdf0807d3c7d6a20cd251ee5904e65500b805aefcd5eee2ad33c2048401a",
+  "lingua_registration_schema": "dio.lingua.product_registration_receipt.v1",
+  "lingua_semantic_custody": true,
+  "lingua_source_document_hash": "sha256:6f2632dd2b9148c64ff5b24e94dd1e6a2b0228cb701a885f3fda7b4c9571440d",
+  "passed": true,
+  "receipt_fingerprint": "sha256:797d6bda1fd1202ce1944ae80b40ca8fdac62fd7c1476caedaed3f4a91a0b442",
+  "schema": "dio.product_grade.canon_extension_native_variant.v1",
+  "semantic_unit_count": 12,
+  "slug": "site-studio",
+  "variant": "normal"
+}

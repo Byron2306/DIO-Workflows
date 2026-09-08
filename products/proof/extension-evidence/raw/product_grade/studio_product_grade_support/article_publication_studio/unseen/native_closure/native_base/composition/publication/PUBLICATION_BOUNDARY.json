@@ -1,0 +1,9 @@
+{
+  "automatic_publication": "REFUSE",
+  "draft_generation": "ALLOW_CONTROLLED",
+  "fabricated_quotations": "REFUSE",
+  "fabricated_sources": "REFUSE",
+  "human_editorial_review": "NEEDS_YOU",
+  "schema": "dio.article_publication_authority_boundary.v1",
+  "studio_id": "article_publication_studio"
+}

@@ -1,0 +1,111 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-FINANCE_READINESS-NORMAL",
+  "domain": "readiness_assurance",
+  "subject": "Mhlabeni Solar Services",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "finance-readiness",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-FINANCE_READINESS-NORMAL",
+    "audience": "small businesses preparing finance applications",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:0374f2fa15a64581c91367eee17cf8deda623670dd8350f9fb6ac6457292c184",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Mhlabeni Solar Services",
+        "source_hash": "sha256:0458354cc1463de47e9de6c7e35645c6fdd83016f525095983364716b4144ebd",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "body",
+        "source_text": "Purpose",
+        "source_hash": "sha256:d4e8830a71c73edffe0115b8abad16b0b5cb2e121047c64cd01995203cfad062",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "body",
+        "source_text": "Assess evidence for a R500,000 vehicle, tools and working-capital application.",
+        "source_hash": "sha256:b9087d79170e67dca828c5a47ee69ecf491f23882713d11af56f4917c60917fc",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "body",
+        "source_text": "Requirement review",
+        "source_hash": "sha256:f10eeb64927c224658eb00a5d1900f7fb2b277d6d044b8f080d793acd57e24c3",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "labelled_instruction",
+        "source_text": "Registration: SUPPLIED",
+        "source_hash": "sha256:f738342ecd636fd2b19203570b2352478c4ca2dfb12b287979454674f92f1993",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "labelled_instruction",
+        "source_text": "Management accounts: SUPPLIED",
+        "source_hash": "sha256:9f3c445fd0540aeb2e235ae51b64d395895f9e5dca00a85f699139070995a95b",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "labelled_instruction",
+        "source_text": "Pipeline evidence: MISSING",
+        "source_hash": "sha256:aed27ff6ed5a20872c72779e3489bdd379bcb09ffacfafc908c43cbc9fa311a2",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "labelled_instruction",
+        "source_text": "Missing or unresolved evidence items: 1",
+        "source_hash": "sha256:b2a575818791c1bbbf00e5f081ab80f50101b3c94a5c48a3eb2e7b8f8f3da6b7",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "instruction",
+        "source_text": "This is an evidence-readiness assessment, not a lending, affordability or funding decision. Human decision authority remains required.",
+        "source_hash": "sha256:0c608da668253589d6e9d007ac5d4972b0d009b7e0b2bcdd1e63881fc3e22b58",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:0374f2fa15a64581c91367eee17cf8deda623670dd8350f9fb6ac6457292c184",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:32+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:32+00:00"
+}

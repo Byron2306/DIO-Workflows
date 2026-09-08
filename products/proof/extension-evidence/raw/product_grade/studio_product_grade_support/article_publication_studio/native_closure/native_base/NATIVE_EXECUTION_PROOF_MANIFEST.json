@@ -1,0 +1,58 @@
+{
+  "artifacts": [
+    {
+      "bytes": 679,
+      "path": "native/commercial_truth/COMMERCIAL_TRUTH_EVALUATION.json",
+      "sha256": "bceb6c386500a3ba65249d7a032039279b08cdab3f3b94a2583443d8ca03bcd3"
+    },
+    {
+      "bytes": 3053,
+      "path": "native/document_studio/CONTROLLED_PREVIEW.html",
+      "sha256": "c6afe91375716722f25ac4b185f8a1e3ed90f2ccabdd65bcdcb9a50a54544eed"
+    },
+    {
+      "bytes": 989,
+      "path": "native/document_studio/FORMAT_CORE_NORMALIZED_RECEIPT.json",
+      "sha256": "3806f05a82046967e681711eefb74e8dd5eb4bb86eb7acff196b1e3907027d8c"
+    },
+    {
+      "bytes": 2363,
+      "path": "native/evidex/EVIDEX_ARTICLE_INTAKE.json",
+      "sha256": "3455d1a402cec98f2491a8ab06e85d09bc8dadbdfa03c866f21a9db9427bf360"
+    },
+    {
+      "bytes": 624,
+      "path": "native/lingua/LINGUA_NATIVE_RECEIPT.json",
+      "sha256": "d266e83d340a26f8f72de992dcbedc417df2f52e67e6e78f69c5f9da2baca0bb"
+    },
+    {
+      "bytes": 1673,
+      "path": "native/nichefoundry/NICHEFOUNDRY_ARTICLE_CREATIVE.json",
+      "sha256": "8a6f9e1f805eea97ec56990f52f665e8f0508390a9ebcb8c417773f2324a5b16"
+    },
+    {
+      "bytes": 2709,
+      "path": "native/sophia/SOPHIA_ARTICLE_LINEAGE.json",
+      "sha256": "4cd4eda329ae02fb296361ec6a5fc9a6d34791d3744c5f0fe184c0ddda0d67c5"
+    },
+    {
+      "bytes": 3673,
+      "path": "NATIVE_ORGAN_EXECUTION_LEDGER.json",
+      "sha256": "2948de28a847d9cb97185cd3dabcbeab2ae502d97ddc5b742849c92c96552f31"
+    }
+  ],
+  "authority_created": false,
+  "composition_proof_fingerprint": "sha256:11be22ff5a83b64b0f5384324a39d246d1a376c8a931ffd326ff1444d1dbb0dc",
+  "external_effects": false,
+  "external_publication": "REFUSE",
+  "external_send": "REFUSE",
+  "media_spend": "REFUSE",
+  "native_organ_count": 3,
+  "organ_execution_truth": "NATIVE_MULTI_ORGAN_EXECUTION_PROVED_WITH_AUXILIARY_GAPS",
+  "partial_organ_count": 4,
+  "payment": "REFUSE",
+  "proof_fingerprint": "sha256:c2691b25142e3bef9b3550cbff66f5e45319d256bff4a71a4045ab0d5e07aeb8",
+  "schema": "dio.studio_native_execution_proof_manifest.v1",
+  "source_bound_only_count": 0,
+  "studio_id": "article_publication_studio"
+}

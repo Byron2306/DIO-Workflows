@@ -1,0 +1,35 @@
+{
+  "approval_state": "pending",
+  "audience": "South African research consultancy",
+  "authority_created": false,
+  "budget_cap_minor": 0,
+  "campaign_id": "MKT-STUDIO-SITE-CONTROLLED",
+  "channel_id": "LINKEDIN_ORGANIC",
+  "currency": "ZAR",
+  "governance": {
+    "operator_created": true,
+    "personalised_outreach_allowed": false,
+    "proof_required": true,
+    "publication_requires_approval": true,
+    "source_gates": {},
+    "source_lineage": {
+      "studio_id": "site_studio"
+    },
+    "spend_requires_release": false
+  },
+  "mode": "controlled_proof",
+  "name": "Site Studio controlled demand observation",
+  "objective": "Prepare a bounded, zero-spend campaign shell for the Site Studio controlled proof.",
+  "product_line_id": "site_studio",
+  "publication_executed": false,
+  "publication_state": "held",
+  "schema": "dio.studio_native_market_command_receipt.v1",
+  "spend_executed": false,
+  "state": "draft",
+  "utm": {
+    "utm_campaign": "mkt-studio-site-controlled",
+    "utm_content": "proof-led",
+    "utm_medium": "organic",
+    "utm_source": "linkedin_organic"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "binding_truth": "SOURCE_BOUND_ONLY_EXCEPT_VESPER_ROUTE_EXECUTED",
+  "bindings": [
+    {
+      "binding_state": "SOURCE_BOUND",
+      "capabilities": [
+        "storefront.route.bind",
+        "presence.release.prepare"
+      ],
+      "engine_id": "vesper",
+      "execution_claim": "BOUND_NOT_LIVE_INVOKED",
+      "source_ref": "presence_core/router.py",
+      "source_sha256": "5fa3fcba9f3439898d16671bf77c943813a8e2f2dce7ae6ac349ff4a86d72b93"
+    },
+    {
+      "binding_state": "SOURCE_BOUND",
+      "capabilities": [
+        "communication.meaning.register",
+        "communication.render.bound"
+      ],
+      "engine_id": "lingua",
+      "execution_claim": "BOUND_NOT_LIVE_INVOKED",
+      "source_ref": "adapters/lingua/communicator.py",
+      "source_sha256": "f1e074a0ab9202e51795487c5ad6bd86dcfd2cdfa4aa8cc8618df6d062ed3743"
+    },
+    {
+      "binding_state": "SOURCE_BOUND",
+      "capabilities": [
+        "source.reference.audit",
+        "claim.lineage.audit"
+      ],
+      "engine_id": "sophia",
+      "execution_claim": "BOUND_NOT_LIVE_INVOKED",
+      "source_ref": "adapters/sophia/review_pipeline.py",
+      "source_sha256": "9707363ab24a477f36462a1e3b39a13602012554f2e0482b0726c20282b08821"
+    },
+    {
+      "binding_state": "SOURCE_BOUND",
+      "capabilities": [
+        "evidence.intake.structure",
+        "evidence.editorial.proof"
+      ],
+      "engine_id": "evidex",
+      "execution_claim": "BOUND_NOT_LIVE_INVOKED",
+      "source_ref": "adapters/evidex_studio.py",
+      "source_sha256": "1b26e107eacbd555a98ac09977bc4135283effbb09c43f3cfbba39bb86f62009"
+    },
+    {
+      "binding_state": "SOURCE_BOUND",
+      "capabilities": [
+        "document.preview.render",
+        "document.publication_pack"
+      ],
+      "engine_id": "document_studio",
+      "execution_claim": "BOUND_NOT_LIVE_INVOKED",
+      "source_ref": "adapters/document_studio/studio_sales.py",
+      "source_sha256": "295fc795000c6af7373d9c88772c97401df495c24251a8686836693a2f251970"
+    },
+    {
+      "binding_state": "SOURCE_BOUND",
+      "capabilities": [
+        "media.creative.compose"
+      ],
+      "engine_id": "nichefoundry",
+      "execution_claim": "BOUND_NOT_LIVE_INVOKED",
+      "source_ref": "scripts/build_hustle_campaign_factory.py",
+      "source_sha256": "ad2bb82f0e34fbc7872b9aa160e513a3635dafb83010d5e3c88043f77c20f909"
+    },
+    {
+      "binding_state": "SOURCE_BOUND",
+      "capabilities": [
+        "commercial.claim.boundary",
+        "commercial.measurement.contract"
+      ],
+      "engine_id": "commercial_truth",
+      "execution_claim": "BOUND_NOT_LIVE_INVOKED",
+      "source_ref": "products/commercial_truth.py",
+      "source_sha256": "ab9632a01214af1e97a726dd68bb3e47a5072aa08875ed51a349930778dc01f7"
+    }
+  ],
+  "schema": "dio.studio_organ_binding_receipt.v1",
+  "studio_id": "article_publication_studio"
+}

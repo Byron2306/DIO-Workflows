@@ -1,0 +1,21 @@
+{
+  "authority_created": false,
+  "composition_execution": "PASS",
+  "external_effects": false,
+  "external_publication": "REFUSE",
+  "external_send": "REFUSE",
+  "human_gate": "NEEDS_YOU",
+  "media_spend": "REFUSE",
+  "native_execution_fingerprint": "sha256:3f217eb7f046805fa491501c182827933383e2bf9ac119b41577ce66f94fb1f7",
+  "native_multi_organ_execution": "PASS",
+  "native_organ_count": 4,
+  "new_engine_created": false,
+  "organ_execution_truth": "NATIVE_MULTI_ORGAN_EXECUTION_PROVED_WITH_AUXILIARY_GAPS",
+  "partial_organ_count": 1,
+  "payment": "REFUSE",
+  "proof_fingerprint": "sha256:36c0ca130dcdf9706d2452d27488ce090c90f20180a0ea1b943a54ce916de662",
+  "schema": "dio.studio_native_execution_receipt.v1",
+  "source_bound_only_count": 1,
+  "studio_id": "professional_correspondence_studio",
+  "studio_name": "DIO Professional Correspondence Studio"
+}

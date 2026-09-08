@@ -1,0 +1,49 @@
+{
+  "assumption_boundary": "No assumption is promoted to a lender fact, underwriting conclusion, affordability decision, approval probability, or regulated financial recommendation.",
+  "assumptions": [
+    {
+      "assumption_id": "ASM-01",
+      "epistemic_state": "ASSUMPTION_NOT_ESTABLISHED_FACT",
+      "fingerprint": "sha256:9e06139b600cf15292a167671c99efdd78775fa6d0230a4305f193b0e9e19965",
+      "human_review_required": true,
+      "lender_decision_effect": "NOT_INFERRED",
+      "text": "Projected monthly revenue grows after equipment acquisition."
+    },
+    {
+      "assumption_id": "ASM-02",
+      "epistemic_state": "ASSUMPTION_NOT_ESTABLISHED_FACT",
+      "fingerprint": "sha256:c340c479fe133b1411196cf8b15f49aedbcfe294ec3802a69c70d8782db97794",
+      "human_review_required": true,
+      "lender_decision_effect": "NOT_INFERRED",
+      "text": "Working-capital requirement is limited to three months."
+    },
+    {
+      "assumption_id": "ASM-03",
+      "epistemic_state": "ASSUMPTION_NOT_ESTABLISHED_FACT",
+      "fingerprint": "sha256:601538a164faf0bb1dbe7945d4575aa836f9adcd44f94378222e8cdbd00e435b",
+      "human_review_required": true,
+      "lender_decision_effect": "NOT_INFERRED",
+      "text": "No lender approval, affordability or underwriting outcome is known."
+    }
+  ],
+  "audit_fingerprint": "sha256:da5a06a2b55208085b8b93d812f6b8e8bb819c23545b76714ecfb2c14b774f13",
+  "authority_created": false,
+  "capabilities_executed": [
+    "claim.lineage.audit",
+    "assumption.boundary"
+  ],
+  "claim_lineage_state": "HASH_BOUND_ASSUMPTIONS",
+  "decision_boundary": "DIO assesses finance readiness and published fit. The lender, investor or authorised financial decision maker decides approval.",
+  "forbidden_claim_count": 5,
+  "forbidden_claims": [
+    "guaranteed finance approval",
+    "guaranteed affordability",
+    "lender underwriting score",
+    "credit bureau conclusion",
+    "regulated investment or financial advice"
+  ],
+  "lender_decision": "NOT_MADE",
+  "schema": "dio.sophia_finance_readiness_audit.v1",
+  "source_engine": "sophia",
+  "studio_id": "finance_readiness_studio"
+}

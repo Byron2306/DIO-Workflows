@@ -1,0 +1,61 @@
+{
+  "adversarial_boundary_held": null,
+  "adversarial_expected_boundary": null,
+  "adversarial_pressure": null,
+  "anchor_present": true,
+  "authority_created": false,
+  "beast_artifact_checks": {
+    "checks": [
+      {
+        "evidence": {
+          "languages": {
+            "html": 1
+          }
+        },
+        "name": "language_inventory",
+        "status": "passed",
+        "summary": "Detected 1 language/artifact family(ies)"
+      },
+      {
+        "evidence": {
+          "errors": [],
+          "files_checked": 1
+        },
+        "name": "html_syntax",
+        "status": "passed",
+        "summary": "Parsed 1 HTML file(s)"
+      },
+      {
+        "evidence": {},
+        "name": "javascript_syntax",
+        "status": "skipped",
+        "summary": "No JavaScript files found"
+      }
+    ],
+    "failed_count": 0,
+    "mechanical_pass": true,
+    "quality_cascade_source_sha256": "f5f4e897510234905e1c40f5fd55a448c991308657e74f3dfadd50303d4e4737",
+    "schema": "dio.beast.product_grade_artifact_checks.v1",
+    "source": "EdgeK-BEAST/app/kernel/data_processing/quality_cascade.py",
+    "workspace": "/home/runner/work/DIO-Full-Audit/DIO-Full-Audit/state/product_grade/canon_extensions/article-publication/variants/messy/customer_delivery"
+  },
+  "beast_mechanical_pass": true,
+  "critical_blockers": [],
+  "customer_artifact": "state/product_grade/canon_extensions/article-publication/variants/messy/customer_delivery/index.html",
+  "customer_artifact_sha256": "34bc17d1950f1006bc693fe8edbdacd3ba8c79b9e0f010f502c8bdec6b270010",
+  "expected_anchor": "Traceability article with missing source date",
+  "external_effects": false,
+  "forbidden_claim_hits": [],
+  "human_boundary_present": true,
+  "lingua_object_id": "DIO-PG-ARTICLE_PUBLICATION-MESSY",
+  "lingua_registration_fingerprint": "sha256:82dc82b4d56c68e0796c568c15165280eb3c8940e6e83524a57b477e30afbfe3",
+  "lingua_registration_schema": "dio.lingua.product_registration_receipt.v1",
+  "lingua_semantic_custody": true,
+  "lingua_source_document_hash": "sha256:7a6fcab4c2e5a5f7dc115a1677f699791d38e8dca6489061f31052998780a990",
+  "passed": true,
+  "receipt_fingerprint": "sha256:7217e2a555828133cb7edc5423db6a22455e13f5322a360a1b3747eea872042a",
+  "schema": "dio.product_grade.canon_extension_native_variant.v1",
+  "semantic_unit_count": 12,
+  "slug": "article-publication",
+  "variant": "messy"
+}

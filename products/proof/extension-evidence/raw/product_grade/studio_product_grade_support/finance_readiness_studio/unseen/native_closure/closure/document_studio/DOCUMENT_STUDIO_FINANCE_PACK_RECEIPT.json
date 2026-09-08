@@ -1,0 +1,19 @@
+{
+  "artifact_type": "finance_readiness_review_pack",
+  "authority_created": false,
+  "bytes": 2966,
+  "capability_executed": "document.finance_readiness_pack",
+  "channel": "html",
+  "delivery_profile_hash": "6edd3459fdf23d7ce62d5bf1ed48796f132f98e2ec25273a777c02aa84b0ece8",
+  "external_delivery": "REFUSE",
+  "output_path": "closure/document_studio/finance_readiness_pack/studio-finance-finance-readiness-studio-english.html",
+  "publication": "REFUSE",
+  "qa_passed": true,
+  "release_mode": false,
+  "schema": "dio.document_studio_finance_readiness_pack_receipt.v1",
+  "semantic_source_hash": "9118d019d14ca5b1542257519f2b8ffbecf04cace965622d288dc43ac840e5a2",
+  "sha256": "f1d076209c5efff1d6eed5c238e2183b77ed47d7f26b22720984ae389db5d170",
+  "source_engine": "document_studio",
+  "studio_id": "finance_readiness_studio",
+  "style_profile_hash": "f08f383c90917a43a2f70439657fe368302ac1a623a61656cf7443c3bfad23e5"
+}

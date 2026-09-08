@@ -1,0 +1,61 @@
+{
+  "all_declared_capabilities_executed": true,
+  "artifacts": [
+    {
+      "bytes": 1950,
+      "path": "closure/commercial_truth/COMMERCIAL_TRUTH_STUDIO.json",
+      "sha256": "c73f21a66dcc4107e9b9e9724efafeef0e98109d9888f99d45f8f431496d4092"
+    },
+    {
+      "bytes": 853,
+      "path": "closure/document_studio/DOCUMENT_STUDIO_SALES_RECEIPT.json",
+      "sha256": "3067c5f472039583f81b9f4f699f2d1800bda2a10fa952f993ee2e7292303420"
+    },
+    {
+      "bytes": 2647,
+      "path": "closure/document_studio/sales_asset/studio-sales-site-studio-english.html",
+      "sha256": "7441351e6bba3e7ca32eca1afce7e2bab83f103ddf0fe0c938f057c186c8ad4c"
+    },
+    {
+      "bytes": 2340,
+      "path": "closure/evidex/EVIDEX_CAMPAIGN_PROOF.json",
+      "sha256": "75d86ce17386c9c2100eacecbcc99d8835ae1506cd70d034c0e12e6ba2e2d3a9"
+    },
+    {
+      "bytes": 2107,
+      "path": "closure/evidex/EVIDEX_STUDIO_INTAKE.json",
+      "sha256": "952f0ce65f76b64b7e5295b8ada808c108383acd9af57af6428ec2637df6c61b"
+    },
+    {
+      "bytes": 3858,
+      "path": "closure/nichefoundry/NICHEFOUNDRY_STUDIO_EXECUTION.json",
+      "sha256": "622721a3066304865db01962202333cb4a3ed71342ce0299beb875eb2a04b54d"
+    },
+    {
+      "bytes": 497,
+      "path": "closure/presence/PRESENCE_STUDIO_RELEASE.json",
+      "sha256": "291e43b0c22e97aa331ad9bd136d5df12ba17f00a8abbc26f126821edb3140d2"
+    },
+    {
+      "bytes": 4472,
+      "path": "NATIVE_CAPABILITY_CLOSURE_LEDGER.json",
+      "sha256": "9f3981a31dafb672034f5598d8093cbf2093711a1b41afd282583b74e6c7e14c"
+    }
+  ],
+  "authority_created": false,
+  "base_native_execution_fingerprint": "sha256:37a641ccb9323c615b8b46ddc2257b755495ce2080cedc4867968ef88c223ac5",
+  "base_proof_fingerprint": "sha256:da15aa94ce4b38bdf567e8871186010720d6561a2f408a2047c64d86e9c073f5",
+  "external_effects": false,
+  "external_publication": "REFUSE",
+  "external_send": "REFUSE",
+  "media_spend": "REFUSE",
+  "native_organ_count": 7,
+  "new_engine_created": false,
+  "organ_execution_truth": "NATIVE_MULTI_ORGAN_EXECUTION_PROVED",
+  "partial_organ_count": 0,
+  "payment": "REFUSE",
+  "proof_fingerprint": "sha256:2bed74f5ce0020fa92672045599d5a3cd2ec708194a1418471c0db664f84813c",
+  "schema": "dio.studio_native_closure_proof_manifest.v1",
+  "source_bound_only_count": 0,
+  "studio_id": "site_studio"
+}

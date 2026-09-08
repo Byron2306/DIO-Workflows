@@ -1,0 +1,26 @@
+{
+  "authority_created": false,
+  "claims": {
+    "customer_validation": "UNKNOWN",
+    "delivery_acceptance": "UNKNOWN",
+    "economic_proof": "UNKNOWN",
+    "fulfilment": "UNKNOWN",
+    "paid_customer": "UNKNOWN",
+    "qualified_demand": "UNKNOWN",
+    "repeatability": "UNKNOWN"
+  },
+  "evidence_counts": {
+    "economic_cases": 0,
+    "fulfilled_cases": 0,
+    "independent_validated_customers": 0,
+    "observed": 0,
+    "paid_cases": 0,
+    "qualifying": 0,
+    "validated_cases": 0
+  },
+  "external_release_authorized": false,
+  "human_commercial_review": false,
+  "maturity_changed": false,
+  "product_id": "site_studio",
+  "same_currency_net_minor": {}
+}

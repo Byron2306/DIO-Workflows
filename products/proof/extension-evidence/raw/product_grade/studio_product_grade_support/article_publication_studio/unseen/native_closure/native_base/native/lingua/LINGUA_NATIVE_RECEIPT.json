@@ -1,0 +1,16 @@
+{
+  "artifact_type": "article_studio_controlled_draft",
+  "authority_created": false,
+  "channel": "studio_harvest",
+  "external_action_executed": false,
+  "object_id": "ARTICLE_PUBLICATION_STUDIO-COMM-3FA0761844FC62747549",
+  "owner": "article_publication_studio",
+  "publication_authorized": false,
+  "schema": "dio.lingua.communication_receipt.v1",
+  "semantic_lineage_created": true,
+  "send_authorized": false,
+  "source_document_hash": "sha256:b5514df94bff873679e5e73d04de25e91ffcf27eb5fc24e3ad2a831ee2b7fe7f",
+  "source_language": "English",
+  "target_language": "English",
+  "translation_state": "source_language"
+}

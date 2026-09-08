@@ -1,0 +1,14 @@
+{
+  "decision": {
+    "confidence": 0.9,
+    "intent": "intake_request",
+    "product": "professional_correspondence_studio",
+    "reason": "product request",
+    "source": "deterministic"
+  },
+  "external_action": false,
+  "request": "Please draft a firm but professional reply to a client disputing invoice INV-2047 while we verify the signed scope and timesheets.",
+  "route_state": "CONTROLLED_ROUTE_PROVED",
+  "schema": "dio.vesper_studio_route_receipt.v1",
+  "studio_id": "professional_correspondence_studio"
+}

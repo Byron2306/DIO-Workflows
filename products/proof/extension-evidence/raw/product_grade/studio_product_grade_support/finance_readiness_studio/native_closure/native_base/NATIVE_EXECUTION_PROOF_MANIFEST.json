@@ -1,0 +1,63 @@
+{
+  "artifacts": [
+    {
+      "bytes": 677,
+      "path": "native/commercial_truth/COMMERCIAL_TRUTH_EVALUATION.json",
+      "sha256": "41a597b425d576a9e35537a5f35488de5e990822aeb2b9ffbe0ce2134f439522"
+    },
+    {
+      "bytes": 2890,
+      "path": "native/document_studio/CONTROLLED_PREVIEW.html",
+      "sha256": "948eaadd1fe185176e0134b1a70f009b160ba5fc381d08f07634ad3681b0ca1e"
+    },
+    {
+      "bytes": 989,
+      "path": "native/document_studio/FORMAT_CORE_NORMALIZED_RECEIPT.json",
+      "sha256": "42ecd2624273e672a955585ec92813628539f175616148429d18b336fba6a9d2"
+    },
+    {
+      "bytes": 2305,
+      "path": "native/evidex/EVIDEX_FINANCE_INTAKE.json",
+      "sha256": "088c3acafb046b9dc4b15577242c406530bf13f4c51d6971fabd54260d518a53"
+    },
+    {
+      "bytes": 630,
+      "path": "native/lingua/LINGUA_NATIVE_RECEIPT.json",
+      "sha256": "b42154350f71b05cb55aa6e52ee7710932f71e3a4d799c4c586e54ebcf962c46"
+    },
+    {
+      "bytes": 3865,
+      "path": "native/nichefoundry/NICHEFOUNDRY_FINANCE_RECEIPT.json",
+      "sha256": "7897a1d5d334324e60b410014bc646ee0b799621759869cb2faddd010c2ff083"
+    },
+    {
+      "bytes": 2118,
+      "path": "native/sophia/SOPHIA_FINANCE_AUDIT.json",
+      "sha256": "f7f2529ee24ce4b3a4c83d5a46fbc05b36ca7c7f14969e39729992dbb5c4efa2"
+    },
+    {
+      "bytes": 2494,
+      "path": "native/vamp/VAMP_FINANCE_OBJECTIVE_MAP.json",
+      "sha256": "a370d624818fb0e89a532de92f3f0187ad8e05c9f14b900d13f01d0ee62d03a1"
+    },
+    {
+      "bytes": 4135,
+      "path": "NATIVE_ORGAN_EXECUTION_LEDGER.json",
+      "sha256": "89327de4973490e6480f24a29f2df13800a1e322acd3fabedb2be1346cd3600b"
+    }
+  ],
+  "authority_created": false,
+  "composition_proof_fingerprint": "sha256:d671b8fe68791444c5ca1d0934db3afdf69c5f8c28eb830897e782a25a20b6c6",
+  "external_effects": false,
+  "external_publication": "REFUSE",
+  "external_send": "REFUSE",
+  "media_spend": "REFUSE",
+  "native_organ_count": 4,
+  "organ_execution_truth": "NATIVE_MULTI_ORGAN_EXECUTION_PROVED_WITH_AUXILIARY_GAPS",
+  "partial_organ_count": 4,
+  "payment": "REFUSE",
+  "proof_fingerprint": "sha256:fadfe954d5c75a6386cb44433401999ac397d4ac903da979a1e665ecbb4b0bf0",
+  "schema": "dio.studio_native_execution_proof_manifest.v1",
+  "source_bound_only_count": 0,
+  "studio_id": "finance_readiness_studio"
+}

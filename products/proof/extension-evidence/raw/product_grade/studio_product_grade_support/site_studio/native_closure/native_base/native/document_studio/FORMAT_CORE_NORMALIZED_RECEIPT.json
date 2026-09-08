@@ -1,0 +1,33 @@
+{
+  "authority_created": false,
+  "delivery_profile": "editable_review",
+  "delivery_profile_hash": "6edd3459fdf23d7ce62d5bf1ed48796f132f98e2ec25273a777c02aa84b0ece8",
+  "object_id": "STUDIO-SITE_STUDIO",
+  "outputs": [
+    {
+      "bytes": 2561,
+      "channel": "html",
+      "sha256": "da46268536d8e026d7dac21b1cf099c61665d0f5a061478e7a7c1c325701875f"
+    }
+  ],
+  "publication_authorized": false,
+  "qa": {
+    "errors": [],
+    "passed": true,
+    "semantic_completeness": {
+      "html": {
+        "expected_strings": 6,
+        "missing": [],
+        "missing_count": 0
+      }
+    },
+    "warnings": []
+  },
+  "release_mode": false,
+  "schema": "dio.format_core.receipt.v1",
+  "semantic_blocks": 6,
+  "semantic_source_hash": "31113a77c9065cbec7b205bf5285729753c44bfe3a9ff1387eda7b1be1f66d2b",
+  "status": "rendered_review_candidate",
+  "style_profile": "dio_professional",
+  "style_profile_hash": "f08f383c90917a43a2f70439657fe368302ac1a623a61656cf7443c3bfad23e5"
+}

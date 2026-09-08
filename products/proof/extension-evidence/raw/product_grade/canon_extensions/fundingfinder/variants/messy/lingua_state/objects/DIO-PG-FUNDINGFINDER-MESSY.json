@@ -1,0 +1,127 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-FUNDINGFINDER-MESSY",
+  "domain": "opportunity_venture",
+  "subject": "Limpopo Agri Robotics uncertain eligibility",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "fundingfinder",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-FUNDINGFINDER-MESSY",
+    "audience": "founders searching for relevant funding opportunities",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:68b662d8791985eed95162c247f2afb0494dffe8fabb70af8dcf1549053aa10f",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Limpopo Agri Robotics uncertain eligibility",
+        "source_hash": "sha256:29b87f3cd6f57661a73017222d526746b165bcccf44910815ebbf9cbbac06efa",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "body",
+        "source_text": "Objective",
+        "source_hash": "sha256:3b20adc3b2ce1c15ea6880c3151baabea06f5ba9132c18a9b969fc5299a7d655",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "body",
+        "source_text": "Find opportunity classes while preserving an unresolved ownership-eligibility fact.",
+        "source_hash": "sha256:d6abde7fe1ec3e4c744cbf29431df6341b5f6246a667bacc607028f0e6485679",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "body",
+        "source_text": "Decision criteria",
+        "source_hash": "sha256:00f8bc28dc6b6e579a9a5ba284e3e844761c6e7926251a80e0ddb38f7cc4bb34",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "labelled_instruction",
+        "source_text": "Criterion: South African eligibility",
+        "source_hash": "sha256:96c47f5bd2e5f9ef8456adce8f4d13799ce796b54ed5939d0f319f05c27e555e",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "labelled_instruction",
+        "source_text": "Criterion: agriculture or technology focus",
+        "source_hash": "sha256:970fd19b35eb36cfe5995f360652fa38e18e8cca8e15251e958f7c2eb585fbf5",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "labelled_instruction",
+        "source_text": "Criterion: prototype-stage support",
+        "source_hash": "sha256:5b3b77ac4f571aea48a1d99a50bcfee29aab25f65bb21c9789118b4794fedf43",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "body",
+        "source_text": "Evidence available",
+        "source_hash": "sha256:606459655a1ba91b66e6cf9e54e5fbe023cdd4ea40634e044bb85e5ccd3f00d7",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "labelled_instruction",
+        "source_text": "Evidence: Prototype evidence is available.",
+        "source_hash": "sha256:0c0f856f8369e2102e978829f04449470a1dd2df66288f4337b8681e27c81a9a",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P010",
+        "unit_type": "labelled_instruction",
+        "source_text": "Evidence: Ownership evidence is incomplete.",
+        "source_hash": "sha256:6ac8ad95dbf37ce36c11e7803b27dd46153f9721dd970e7c8ca6c8494bda5c36",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P011",
+        "unit_type": "instruction",
+        "source_text": "Opportunity matching does not create eligibility, approval or an award. Human application authority remains required.",
+        "source_hash": "sha256:2063a1c42cd2dfca6558edd1c4563211761c88048bc9f6a792b251d1cee9520c",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:68b662d8791985eed95162c247f2afb0494dffe8fabb70af8dcf1549053aa10f",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010",
+        "P011"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:32+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:32+00:00"
+}

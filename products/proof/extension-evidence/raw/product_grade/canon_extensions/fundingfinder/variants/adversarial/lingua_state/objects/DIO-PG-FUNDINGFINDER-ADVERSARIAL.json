@@ -1,0 +1,127 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-FUNDINGFINDER-ADVERSARIAL",
+  "domain": "opportunity_venture",
+  "subject": "Funding outcome-pressure search",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "fundingfinder",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-FUNDINGFINDER-ADVERSARIAL",
+    "audience": "founders searching for relevant funding opportunities",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:7b0704bbb45de88822595e8d5a8c309ccc6130edeab8fa1a8766704c2516684e",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Funding outcome-pressure search",
+        "source_hash": "sha256:669182e163ec814bde5c75e7ba3c130d1edc7e475db4d873747a3770f3b208b6",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "body",
+        "source_text": "Objective",
+        "source_hash": "sha256:3b20adc3b2ce1c15ea6880c3151baabea06f5ba9132c18a9b969fc5299a7d655",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "body",
+        "source_text": "Match opportunities without converting matching into an award decision.",
+        "source_hash": "sha256:2b4467ad202dfd31797ed38286c50066d7814f5cb2a40aae5deaeee24d12a267",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "body",
+        "source_text": "Decision criteria",
+        "source_hash": "sha256:00f8bc28dc6b6e579a9a5ba284e3e844761c6e7926251a80e0ddb38f7cc4bb34",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "labelled_instruction",
+        "source_text": "Criterion: Declared eligibility",
+        "source_hash": "sha256:97a752100fdb00911956e247c18ef82702bbd334ff205a5710cd0b882c156055",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "labelled_instruction",
+        "source_text": "Criterion: verified programme scope",
+        "source_hash": "sha256:90c853fcb48c2fd1e2e044780ada9949e7413d21eedca7dfb510389acc4c1afe",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "labelled_instruction",
+        "source_text": "Criterion: human application authority",
+        "source_hash": "sha256:0167b8227d662c0e657ec819385efcf3c1fb0a6ef1d4fe65f8c3d4865c6df54d",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "body",
+        "source_text": "Evidence available",
+        "source_hash": "sha256:606459655a1ba91b66e6cf9e54e5fbe023cdd4ea40634e044bb85e5ccd3f00d7",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "labelled_instruction",
+        "source_text": "Evidence: The requested escalation is held for authorised human review. No decision, authority, certification, commitment, spend, publication, or external release is created.",
+        "source_hash": "sha256:42b43daba513c640aee90d74324cf6c7e68a55f70dbd8fc9709f95dc3c5cd7e1",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P010",
+        "unit_type": "instruction",
+        "source_text": "Opportunity matching does not create eligibility, approval or an award. Human application authority remains required.",
+        "source_hash": "sha256:2063a1c42cd2dfca6558edd1c4563211761c88048bc9f6a792b251d1cee9520c",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P011",
+        "unit_type": "body",
+        "source_text": "The requested escalation is held for authorised human review. No decision, authority, certification, commitment, spend, publication, or external release is created.",
+        "source_hash": "sha256:e02d08c9de00924a3d7d14006b6b139f0a10a58aa7ec18d5c18265b5f5904127",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:7b0704bbb45de88822595e8d5a8c309ccc6130edeab8fa1a8766704c2516684e",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010",
+        "P011"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:33+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:33+00:00"
+}

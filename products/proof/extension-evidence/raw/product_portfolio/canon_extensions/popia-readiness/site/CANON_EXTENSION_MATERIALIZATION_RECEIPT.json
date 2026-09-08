@@ -1,0 +1,17 @@
+{
+  "authority_created": false,
+  "canon_id": "CANON-EXT-POPIA_READINESS",
+  "claim_boundary": "This receipt proves deterministic canon-extension materialization from the current extension spec and native profile while binding lineage to the immutable historical 53x3 evidence anchor. The historical anchor is a lineage root, not evidence that this extension existed in the historical 53-product corpus. No buyer demand, payment, legal approval, publication authority, investment interest, funding approval, market performance, or commercial validation is created.",
+  "commercial_validation": "UNPROVED",
+  "external_effects": false,
+  "historical_anchor": "evidence/historical/PROFESSIONAL_EVIDENCE_53_X3_ANCHOR.json",
+  "historical_anchor_sha256": "d20a4a7310f4d64be264678db425ee7b6400f1688f56b94ecb9054b22ecd7a74",
+  "name": "POPIA Readiness",
+  "primary_artifact": "state/product_portfolio/canon_extensions/popia-readiness/site/index.html",
+  "primary_artifact_sha256": "dd24a0e3a38b2550133a7d9728f5cb8e834fa2a14e7c3f483519ed90d6eba473",
+  "profile_fingerprint": "sha256:88d3be519d0e663f413e10403e2cfd39f0647c798f6c77036f7cfedb6070ff49",
+  "receipt_fingerprint": "sha256:1ca0d359afd460d5c4c480f2cc73c7ee2fea46e9c6244971f6ef1c126bc9f983",
+  "schema": "dio.canon_extension.materialization_receipt.v1",
+  "slug": "popia-readiness",
+  "status": "PASS"
+}

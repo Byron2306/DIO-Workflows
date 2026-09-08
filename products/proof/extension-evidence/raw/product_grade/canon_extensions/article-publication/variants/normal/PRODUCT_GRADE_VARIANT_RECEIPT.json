@@ -1,0 +1,61 @@
+{
+  "adversarial_boundary_held": null,
+  "adversarial_expected_boundary": null,
+  "adversarial_pressure": null,
+  "anchor_present": true,
+  "authority_created": false,
+  "beast_artifact_checks": {
+    "checks": [
+      {
+        "evidence": {
+          "languages": {
+            "html": 1
+          }
+        },
+        "name": "language_inventory",
+        "status": "passed",
+        "summary": "Detected 1 language/artifact family(ies)"
+      },
+      {
+        "evidence": {
+          "errors": [],
+          "files_checked": 1
+        },
+        "name": "html_syntax",
+        "status": "passed",
+        "summary": "Parsed 1 HTML file(s)"
+      },
+      {
+        "evidence": {},
+        "name": "javascript_syntax",
+        "status": "skipped",
+        "summary": "No JavaScript files found"
+      }
+    ],
+    "failed_count": 0,
+    "mechanical_pass": true,
+    "quality_cascade_source_sha256": "f5f4e897510234905e1c40f5fd55a448c991308657e74f3dfadd50303d4e4737",
+    "schema": "dio.beast.product_grade_artifact_checks.v1",
+    "source": "EdgeK-BEAST/app/kernel/data_processing/quality_cascade.py",
+    "workspace": "/home/runner/work/DIO-Full-Audit/DIO-Full-Audit/state/product_grade/canon_extensions/article-publication/variants/normal/customer_delivery"
+  },
+  "beast_mechanical_pass": true,
+  "critical_blockers": [],
+  "customer_artifact": "state/product_grade/canon_extensions/article-publication/variants/normal/customer_delivery/index.html",
+  "customer_artifact_sha256": "a55c9f12cf9af52b621e80127d3b680985e98d50ee16eaa0bd92eb87f05dc4ed",
+  "expected_anchor": "Evidence-bound automation",
+  "external_effects": false,
+  "forbidden_claim_hits": [],
+  "human_boundary_present": true,
+  "lingua_object_id": "DIO-PG-ARTICLE_PUBLICATION-NORMAL",
+  "lingua_registration_fingerprint": "sha256:2673acedcee994e2b4edda7e271f5cb1dba8f3d280b7d65fe29fe75ba1d0a387",
+  "lingua_registration_schema": "dio.lingua.product_registration_receipt.v1",
+  "lingua_semantic_custody": true,
+  "lingua_source_document_hash": "sha256:1e52644fb4ce18c20aa6b34a3e2f1cef38799e1766a82c6d60f77a4c3f2cd40c",
+  "passed": true,
+  "receipt_fingerprint": "sha256:41c41274f7a63df9c6bd5594a962e50ca0682b36cd68d1351a487dc33ae2fd03",
+  "schema": "dio.product_grade.canon_extension_native_variant.v1",
+  "semantic_unit_count": 12,
+  "slug": "article-publication",
+  "variant": "normal"
+}

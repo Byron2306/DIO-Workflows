@@ -1,0 +1,68 @@
+{
+  "artifact_count": 9,
+  "artifacts": [
+    {
+      "bytes": 791,
+      "path": "marketfront/app.js",
+      "sha256": "a949fb68746687e0e6254538b9139dc1af22cbc525f57cb1208dac6f5207a833"
+    },
+    {
+      "bytes": 2258,
+      "path": "marketfront/index.html",
+      "sha256": "392bc8dc9772e136b33a096e328f9de1bbb8d2cfceceb0aad3a2191233d9861c"
+    },
+    {
+      "bytes": 1680,
+      "path": "marketfront/styles.css",
+      "sha256": "71e6bf436d47a22a7a6a7632b1bc0d792b838e61e00e47371f576d764035e6aa"
+    },
+    {
+      "bytes": 325,
+      "path": "operations/AUTHORITY_BOUNDARY.json",
+      "sha256": "ef2dd47c48ced07ecda80a411d68ac418e9084fa728e8fd63d8051cdaa98c873"
+    },
+    {
+      "bytes": 687,
+      "path": "operations/COMMERCIAL_MEASUREMENT_CONTRACT.json",
+      "sha256": "ae24487d16e3d4d8af45810dac8f3e4090b10f4adc958fcd4139e48570ed5c99"
+    },
+    {
+      "bytes": 2807,
+      "path": "operations/ORGAN_BINDINGS.json",
+      "sha256": "f9ec6214f49407eb49e4cabd838909742db2c1e24fb44fb864d71c15d6227b3b"
+    },
+    {
+      "bytes": 284,
+      "path": "operations/PRESENCE_RELEASE.json",
+      "sha256": "810e5046c92a003b9dd9425527277407cc0b86196ffba8f55051e3ef8ba36f46"
+    },
+    {
+      "bytes": 427,
+      "path": "operations/VESPER_ROUTE_RECEIPT.json",
+      "sha256": "5f35793c9dd1049c8a01e94827565fae76e6f984c9d4bb4a2c94d826b534009f"
+    },
+    {
+      "bytes": 875,
+      "path": "strategy/SITE_COMPOSITION_PLAN.json",
+      "sha256": "ca99393f63dc71261d929fab6b3a726f65c3bec69cbfacaccc114837010edfb8"
+    }
+  ],
+  "authority_created": false,
+  "capability_executed": "evidence.campaign.proof",
+  "claim_boundary": "Only controlled artifact existence, integrity and declared authority boundaries are evidenced. Customer value, demand, payment, revenue and publication are not inferred.",
+  "external_action_executed": false,
+  "external_send": "REFUSE",
+  "forbidden_claims_retained": [
+    "guaranteed research outcomes",
+    "fabricated clients",
+    "fabricated testimonials",
+    "automatic publication"
+  ],
+  "full_evidex_pack_engine_invoked": false,
+  "proof_fingerprint": "sha256:50f36cadee26f102bbc13569ba5b2d3c451dd88b5782be732d6fa39ffbf5bcb8",
+  "publication": "REFUSE",
+  "schema": "dio.evidex_studio_campaign_proof.v1",
+  "source_engine": "evidex",
+  "state": "INTERNAL_PROOF",
+  "studio_id": "site_studio"
+}

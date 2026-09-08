@@ -1,0 +1,61 @@
+{
+  "adversarial_boundary_held": null,
+  "adversarial_expected_boundary": null,
+  "adversarial_pressure": null,
+  "anchor_present": true,
+  "authority_created": false,
+  "beast_artifact_checks": {
+    "checks": [
+      {
+        "evidence": {
+          "languages": {
+            "html": 1
+          }
+        },
+        "name": "language_inventory",
+        "status": "passed",
+        "summary": "Detected 1 language/artifact family(ies)"
+      },
+      {
+        "evidence": {
+          "errors": [],
+          "files_checked": 1
+        },
+        "name": "html_syntax",
+        "status": "passed",
+        "summary": "Parsed 1 HTML file(s)"
+      },
+      {
+        "evidence": {},
+        "name": "javascript_syntax",
+        "status": "skipped",
+        "summary": "No JavaScript files found"
+      }
+    ],
+    "failed_count": 0,
+    "mechanical_pass": true,
+    "quality_cascade_source_sha256": "f5f4e897510234905e1c40f5fd55a448c991308657e74f3dfadd50303d4e4737",
+    "schema": "dio.beast.product_grade_artifact_checks.v1",
+    "source": "EdgeK-BEAST/app/kernel/data_processing/quality_cascade.py",
+    "workspace": "/home/runner/work/DIO-Full-Audit/DIO-Full-Audit/state/product_grade/canon_extensions/popia-readiness/variants/messy/customer_delivery"
+  },
+  "beast_mechanical_pass": true,
+  "critical_blockers": [],
+  "customer_artifact": "state/product_grade/canon_extensions/popia-readiness/variants/messy/customer_delivery/index.html",
+  "customer_artifact_sha256": "e5a5dbbf0d87f260cb6ccf6965e6faa9072fa7d66db7e6767d11742adb53a46a",
+  "expected_anchor": "Kopano Learning Systems stale operator register",
+  "external_effects": false,
+  "forbidden_claim_hits": [],
+  "human_boundary_present": true,
+  "lingua_object_id": "DIO-PG-POPIA_READINESS-MESSY",
+  "lingua_registration_fingerprint": "sha256:5a3128d372f9181ec4a0c404274cc77306dfbcb47168c67cd93cfe90668405c2",
+  "lingua_registration_schema": "dio.lingua.product_registration_receipt.v1",
+  "lingua_semantic_custody": true,
+  "lingua_source_document_hash": "sha256:7439bafa6dc1ffea3f8ba380b4707736256ddf9fa1df58d3129eaa61878ddb63",
+  "passed": true,
+  "receipt_fingerprint": "sha256:2a233a249774feefd38510facb6cdf022b410daa4648dd8bae2c0f33be2096a4",
+  "schema": "dio.product_grade.canon_extension_native_variant.v1",
+  "semantic_unit_count": 9,
+  "slug": "popia-readiness",
+  "variant": "messy"
+}

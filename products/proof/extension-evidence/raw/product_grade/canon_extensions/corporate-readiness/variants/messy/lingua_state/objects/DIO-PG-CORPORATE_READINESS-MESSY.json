@@ -1,0 +1,111 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-CORPORATE_READINESS-MESSY",
+  "domain": "readiness_assurance",
+  "subject": "Limpopo Co-op duplicate governance pack",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "corporate-readiness",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-CORPORATE_READINESS-MESSY",
+    "audience": "owner-managed businesses",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:59f2ac690ccfbe29bea4b0f5f79960dfdd563e3b73589324fd02d5df063eb883",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Limpopo Co-op duplicate governance pack",
+        "source_hash": "sha256:c3b0c9887a1fd0ea07fc2f24a22d6b485b0a8e29b331289b19458f8699e38550",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "body",
+        "source_text": "Purpose",
+        "source_hash": "sha256:d4e8830a71c73edffe0115b8abad16b0b5cb2e121047c64cd01995203cfad062",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "body",
+        "source_text": "Assess a pack containing two conflicting delegation documents.",
+        "source_hash": "sha256:fd73366dfc0d5f96ad0e09705089ace3aec8a3174ab3f1936824e3658bd46ef2",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "body",
+        "source_text": "Requirement review",
+        "source_hash": "sha256:f10eeb64927c224658eb00a5d1900f7fb2b277d6d044b8f080d793acd57e24c3",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "labelled_instruction",
+        "source_text": "Member register: SUPPLIED",
+        "source_hash": "sha256:5818c0f6dff18ebed660a27cb6bda689e4cdc82425843e0e0a4c94e3312c8b67",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "labelled_instruction",
+        "source_text": "Procurement delegation: CONFLICTING",
+        "source_hash": "sha256:fbce5f60042da9c10597d007c32a693f10a0a3781600ebdb0a00d122a778a385",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "labelled_instruction",
+        "source_text": "Insurance schedule: MISSING",
+        "source_hash": "sha256:609f61901518ab2853fde0dfec1cdfee7b1792857976a96430a772c04a64f20c",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "labelled_instruction",
+        "source_text": "Missing or unresolved evidence items: 2",
+        "source_hash": "sha256:8815c56dcf9d79af1bf575fc6822e2bfe1a37bd795652b14cf5b8c2a2b59b5cb",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "instruction",
+        "source_text": "This is an evidence-readiness assessment, not an approval or legal clearance. Human decision authority remains required.",
+        "source_hash": "sha256:cfb621d9550f5c0cf74094dae9c151d7f8fafd6ff890e93fb0145ba53b8408bd",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:59f2ac690ccfbe29bea4b0f5f79960dfdd563e3b73589324fd02d5df063eb883",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:32+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:32+00:00"
+}

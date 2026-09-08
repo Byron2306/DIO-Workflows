@@ -1,0 +1,71 @@
+{
+  "authority_created": false,
+  "capabilities_executed": [
+    "commercial.claim.boundary",
+    "commercial.measurement.contract"
+  ],
+  "evaluation": {
+    "authority_created": false,
+    "claims": {
+      "customer_validation": "UNKNOWN",
+      "delivery_acceptance": "UNKNOWN",
+      "economic_proof": "UNKNOWN",
+      "fulfilment": "UNKNOWN",
+      "paid_customer": "UNKNOWN",
+      "qualified_demand": "UNKNOWN",
+      "repeatability": "UNKNOWN"
+    },
+    "evidence_counts": {
+      "economic_cases": 0,
+      "fulfilled_cases": 0,
+      "independent_validated_customers": 0,
+      "observed": 0,
+      "paid_cases": 0,
+      "qualifying": 0,
+      "validated_cases": 0
+    },
+    "external_release_authorized": false,
+    "human_commercial_review": false,
+    "maturity_changed": false,
+    "product_id": "article_publication_studio",
+    "same_currency_net_minor": {}
+  },
+  "external_release_authorized": false,
+  "measurement_contract": {
+    "authority_created": false,
+    "capability_executed": "commercial.measurement.contract",
+    "events": [
+      {
+        "claim_ceiling": "OBSERVED",
+        "event": "studio_job_routed"
+      },
+      {
+        "claim_ceiling": "OBSERVED",
+        "event": "controlled_artifact_generated"
+      },
+      {
+        "claim_ceiling": "OBSERVED",
+        "event": "human_review_requested"
+      }
+    ],
+    "external_release_authorized": false,
+    "market_validation_claimed": false,
+    "maturity_changed": false,
+    "payment_enabled": false,
+    "product_id": "article_publication_studio",
+    "revenue_claimed": false,
+    "schema": "dio.commercial_measurement_contract.v1",
+    "source_engine": "commercial_truth",
+    "unsupported_inferences": [
+      "qualified demand",
+      "verified payment",
+      "attributed revenue",
+      "customer value",
+      "repeatability",
+      "economic proof",
+      "market validation"
+    ]
+  },
+  "schema": "dio.commercial_truth_studio_receipt.v1",
+  "studio_id": "article_publication_studio"
+}

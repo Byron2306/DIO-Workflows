@@ -1,0 +1,53 @@
+{
+  "authority_created": false,
+  "capability_executed": "evidence.intake.structure",
+  "external_action_executed": false,
+  "full_evidex_pack_engine_invoked": false,
+  "intake": {
+    "billing": {
+      "client_type": "ngo",
+      "currency": "ZAR",
+      "quantity": 1,
+      "service_name": "Evidex Evidence Pack"
+    },
+    "client": {
+      "contact_email": "fixture@example.invalid",
+      "contact_name": "Controlled Studio Fixture",
+      "organization": "Client organization to confirm"
+    },
+    "constraints": {
+      "avoid_claims": [
+        "Do not claim outcomes that are not directly supported by supplied evidence.",
+        "Do not treat this generated pack as final until reviewed by the operator."
+      ],
+      "known_gaps": [
+        "Client organization, reporting period, donor template, and KPI list may need confirmation.",
+        "Original route reason: Studio native Evidex adapter proof",
+        "Original evidence extract: the client disputes invoice INV-2047 the signed scope and timesheets require review no settlement has been authorised"
+      ]
+    },
+    "kpis": [
+      {
+        "actual": "Candidate evidence received",
+        "measurement": "Email request, listed attachments, and source notes",
+        "name": "Evidence request and source materials organized",
+        "target": "Complete evidence pack"
+      }
+    ],
+    "pack": {
+      "donor": "To be confirmed",
+      "grant_id": "STUDIO-PROFESSIONAL_CORRESPONDENCE_STUDIO-EVIDEX-001",
+      "include_appendix": true,
+      "project_name": "Controlled professional correspondence evidence intake",
+      "purpose": "Controlled professional correspondence evidence intake",
+      "reporting_period": {
+        "end": "To be confirmed",
+        "start": "To be confirmed"
+      },
+      "tone": "clear, conservative, audit-ready"
+    }
+  },
+  "schema": "dio.evidex_studio_intake_receipt.v1",
+  "source_engine": "evidex",
+  "studio_id": "professional_correspondence_studio"
+}

@@ -1,0 +1,111 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-FINANCE_READINESS-MESSY",
+  "domain": "readiness_assurance",
+  "subject": "Ubuntu Cold Chain bank-statement gap",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "finance-readiness",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-FINANCE_READINESS-MESSY",
+    "audience": "small businesses preparing finance applications",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:59dc66b664c6d5f8126a804b8a3cdc5879d628a6c64d1a92fbf6f0baf555c5ed",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Ubuntu Cold Chain bank-statement gap",
+        "source_hash": "sha256:a2b4cf2285e5bdcfeb9673b57b8a96fdaa2350f294108799236897f086237e78",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "body",
+        "source_text": "Purpose",
+        "source_hash": "sha256:d4e8830a71c73edffe0115b8abad16b0b5cb2e121047c64cd01995203cfad062",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "body",
+        "source_text": "Assess finance-readiness while preserving a missing bank-statement period.",
+        "source_hash": "sha256:3a07c43935b5da479257352cf2665d0b20df8fbad0096225ea0f8dcaba410837",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "body",
+        "source_text": "Requirement review",
+        "source_hash": "sha256:f10eeb64927c224658eb00a5d1900f7fb2b277d6d044b8f080d793acd57e24c3",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "labelled_instruction",
+        "source_text": "Registration: SUPPLIED",
+        "source_hash": "sha256:f738342ecd636fd2b19203570b2352478c4ca2dfb12b287979454674f92f1993",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "labelled_instruction",
+        "source_text": "Bank statements: PARTIAL",
+        "source_hash": "sha256:01e14af9272e9ba0331c107751eae5b921ff2b02cd5f95faad0c1c71a29a7f60",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "labelled_instruction",
+        "source_text": "Equipment quotation: SUPPLIED",
+        "source_hash": "sha256:dd27417d405a3196e29b2a4e6253b57da12820e429f20cdfb7ac4b206d449fb6",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "labelled_instruction",
+        "source_text": "Missing or unresolved evidence items: 1",
+        "source_hash": "sha256:b2a575818791c1bbbf00e5f081ab80f50101b3c94a5c48a3eb2e7b8f8f3da6b7",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "instruction",
+        "source_text": "This is an evidence-readiness assessment, not a lending, affordability or funding decision. Human decision authority remains required.",
+        "source_hash": "sha256:0c608da668253589d6e9d007ac5d4972b0d009b7e0b2bcdd1e63881fc3e22b58",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:59dc66b664c6d5f8126a804b8a3cdc5879d628a6c64d1a92fbf6f0baf555c5ed",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:32+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:32+00:00"
+}

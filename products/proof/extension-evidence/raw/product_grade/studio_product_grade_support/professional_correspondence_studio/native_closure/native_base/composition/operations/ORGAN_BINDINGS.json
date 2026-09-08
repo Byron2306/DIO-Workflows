@@ -1,0 +1,69 @@
+{
+  "binding_truth": "SOURCE_BOUND_ONLY_EXCEPT_VESPER_ROUTE_EXECUTED",
+  "bindings": [
+    {
+      "binding_state": "SOURCE_BOUND",
+      "capabilities": [
+        "communication.meaning.register",
+        "communication.render.bound"
+      ],
+      "engine_id": "lingua",
+      "execution_claim": "BOUND_NOT_LIVE_INVOKED",
+      "source_ref": "adapters/lingua/communicator.py",
+      "source_sha256": "f1e074a0ab9202e51795487c5ad6bd86dcfd2cdfa4aa8cc8618df6d062ed3743"
+    },
+    {
+      "binding_state": "SOURCE_BOUND",
+      "capabilities": [
+        "storefront.route.bind",
+        "presence.release.prepare"
+      ],
+      "engine_id": "vesper",
+      "execution_claim": "BOUND_NOT_LIVE_INVOKED",
+      "source_ref": "presence_core/router.py",
+      "source_sha256": "5fa3fcba9f3439898d16671bf77c943813a8e2f2dce7ae6ac349ff4a86d72b93"
+    },
+    {
+      "binding_state": "SOURCE_BOUND",
+      "capabilities": [
+        "outlook.mail.draft.prepare"
+      ],
+      "engine_id": "outlook_mail_core",
+      "execution_claim": "BOUND_NOT_LIVE_INVOKED",
+      "source_ref": "scripts/manage_mail_intent.py",
+      "source_sha256": "cb0387459bc6230ae093bff50a06d77bf1a012d0cd7c79cd6423b3f4629399b3"
+    },
+    {
+      "binding_state": "SOURCE_BOUND",
+      "capabilities": [
+        "document.preview.render"
+      ],
+      "engine_id": "document_studio",
+      "execution_claim": "BOUND_NOT_LIVE_INVOKED",
+      "source_ref": "adapters/document_studio/pipeline.py",
+      "source_sha256": "d86aa1ad72810a326dff035866aa5ed9700117c78d75373ec118d0d56318020b"
+    },
+    {
+      "binding_state": "SOURCE_BOUND",
+      "capabilities": [
+        "evidence.intake.structure"
+      ],
+      "engine_id": "evidex",
+      "execution_claim": "BOUND_NOT_LIVE_INVOKED",
+      "source_ref": "scripts/run_evidex_jobs.py",
+      "source_sha256": "35ec874df7233d609ea8eb65d903be18c98d2865044f282d7f91bea62e0f4896"
+    },
+    {
+      "binding_state": "SOURCE_BOUND",
+      "capabilities": [
+        "commercial.claim.boundary"
+      ],
+      "engine_id": "commercial_truth",
+      "execution_claim": "BOUND_NOT_LIVE_INVOKED",
+      "source_ref": "products/commercial_truth.py",
+      "source_sha256": "ab9632a01214af1e97a726dd68bb3e47a5072aa08875ed51a349930778dc01f7"
+    }
+  ],
+  "schema": "dio.studio_organ_binding_receipt.v1",
+  "studio_id": "professional_correspondence_studio"
+}

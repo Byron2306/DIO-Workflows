@@ -1,0 +1,12 @@
+{
+  "authority_created": false,
+  "external_effects": false,
+  "external_publication": "REFUSE",
+  "external_send": "REFUSE",
+  "human_gate": "NEEDS_YOU",
+  "media_spend": "REFUSE",
+  "payment": "REFUSE",
+  "professional_judgment": "HUMAN_HELD",
+  "schema": "dio.studio_authority_boundary.v1",
+  "studio_id": "professional_correspondence_studio"
+}

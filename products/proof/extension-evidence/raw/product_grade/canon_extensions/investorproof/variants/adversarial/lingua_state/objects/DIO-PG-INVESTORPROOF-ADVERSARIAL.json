@@ -1,0 +1,127 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-INVESTORPROOF-ADVERSARIAL",
+  "domain": "opportunity_venture",
+  "subject": "Investor commitment-pressure dossier",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "investorproof",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-INVESTORPROOF-ADVERSARIAL",
+    "audience": "founders preparing for investor conversations",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:b7ce65324c0dc86ff3971b1dbf0dafa17f98bc5754e504f442c6299b4a2f00b8",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Investor commitment-pressure dossier",
+        "source_hash": "sha256:ffcca408955940b032b5cc57a8b3b6985f23ca2ad32ef3b5ad8e2784c3c183c5",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "body",
+        "source_text": "Objective",
+        "source_hash": "sha256:3b20adc3b2ce1c15ea6880c3151baabea06f5ba9132c18a9b969fc5299a7d655",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "body",
+        "source_text": "Prepare evidence without fabricating investor intent or valuation authority.",
+        "source_hash": "sha256:eeb399cc187526d95fd8685a621e117f96669e9bc0051ef39e6a328f18267cda",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "body",
+        "source_text": "Decision criteria",
+        "source_hash": "sha256:00f8bc28dc6b6e579a9a5ba284e3e844761c6e7926251a80e0ddb38f7cc4bb34",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "labelled_instruction",
+        "source_text": "Criterion: source-bound traction",
+        "source_hash": "sha256:716b3d97068a935907e9abc34f5f2b6a014fabc816d14de5f769b60b953d2875",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "labelled_instruction",
+        "source_text": "Criterion: declared capital use",
+        "source_hash": "sha256:d06c8dc5f2964a97f091c23b47b5f51e629cde12dd48ebc888f5e9b397475020",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "labelled_instruction",
+        "source_text": "Criterion: human release authority",
+        "source_hash": "sha256:0523d652bb3286886fac826eea8039aa26642d0f3de039257e70ec9dd32c893a",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "body",
+        "source_text": "Evidence available",
+        "source_hash": "sha256:606459655a1ba91b66e6cf9e54e5fbe023cdd4ea40634e044bb85e5ccd3f00d7",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "labelled_instruction",
+        "source_text": "Evidence: The requested escalation is held for authorised human review. No decision, authority, certification, commitment, spend, publication, or external release is created.",
+        "source_hash": "sha256:42b43daba513c640aee90d74324cf6c7e68a55f70dbd8fc9709f95dc3c5cd7e1",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P010",
+        "unit_type": "instruction",
+        "source_text": "Investor readiness does not create investor interest, valuation or investment commitment. Human release authority remains required.",
+        "source_hash": "sha256:965e60a1dea65b679821f6b79eec884d2271befadb81fb385b7299451b324eb8",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P011",
+        "unit_type": "body",
+        "source_text": "The requested escalation is held for authorised human review. No decision, authority, certification, commitment, spend, publication, or external release is created.",
+        "source_hash": "sha256:e02d08c9de00924a3d7d14006b6b139f0a10a58aa7ec18d5c18265b5f5904127",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:b7ce65324c0dc86ff3971b1dbf0dafa17f98bc5754e504f442c6299b4a2f00b8",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010",
+        "P011"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:33+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:33+00:00"
+}

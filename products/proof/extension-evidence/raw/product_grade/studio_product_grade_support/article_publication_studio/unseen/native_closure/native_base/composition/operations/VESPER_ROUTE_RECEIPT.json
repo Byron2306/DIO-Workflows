@@ -1,0 +1,14 @@
+{
+  "decision": {
+    "confidence": 0.9,
+    "intent": "intake_request",
+    "product": "article_publication_studio",
+    "reason": "product request",
+    "source": "deterministic"
+  },
+  "external_action": false,
+  "request": "Turn these supplied sources into a publication-ready article draft with traceable claims and references.",
+  "route_state": "CONTROLLED_ROUTE_PROVED",
+  "schema": "dio.vesper_studio_route_receipt.v1",
+  "studio_id": "article_publication_studio"
+}

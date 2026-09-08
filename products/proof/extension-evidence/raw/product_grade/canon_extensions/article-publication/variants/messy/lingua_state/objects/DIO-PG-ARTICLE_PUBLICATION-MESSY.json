@@ -1,0 +1,135 @@
+{
+  "schema": "dio.lingua.semantic_object.v1",
+  "object_id": "DIO-PG-ARTICLE_PUBLICATION-MESSY",
+  "domain": "publication_professional",
+  "subject": "Traceability article with missing source date",
+  "grade": null,
+  "curriculum_concept": null,
+  "origin": {
+    "product": "article-publication",
+    "artifact_type": "controlled_buyer_artifact",
+    "artifact_id": "DIO-PG-ARTICLE_PUBLICATION-MESSY",
+    "audience": "operations and evidence leaders",
+    "channel": "html"
+  },
+  "source": {
+    "language": "English",
+    "version": "1.0.0",
+    "document_hash": "sha256:7a6fcab4c2e5a5f7dc115a1677f699791d38e8dca6489061f31052998780a990",
+    "units": [
+      {
+        "unit_id": "P001",
+        "unit_type": "title",
+        "source_text": "Traceability article with missing source date",
+        "source_hash": "sha256:802e90783b49ea7582843b7fc5bfe645f95691a234ca2a2a80eca8de405bb4ae",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P002",
+        "unit_type": "body",
+        "source_text": "Publication and audience",
+        "source_hash": "sha256:79ca693a1f0aa7e9763231de7f3737e7b2dffcb42ce3463eb97e6ea40b840f88",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P003",
+        "unit_type": "labelled_instruction",
+        "source_text": "Target publication: Applied Practice Quarterly",
+        "source_hash": "sha256:0879c516b0f134736beb57b2279f16f0b4eae53989666ca87314da6a5f8e5119",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P004",
+        "unit_type": "labelled_instruction",
+        "source_text": "Audience: programme managers",
+        "source_hash": "sha256:e6b8a83f83c051a833c4dd768715392fc551919b50e0f4dabf96d2aeb589e7ac",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P005",
+        "unit_type": "body",
+        "source_text": "Purpose",
+        "source_hash": "sha256:d4e8830a71c73edffe0115b8abad16b0b5cb2e121047c64cd01995203cfad062",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P006",
+        "unit_type": "body",
+        "source_text": "Draft around supplied evidence while preserving an unresolved source-date gap.",
+        "source_hash": "sha256:a8cfb425fb08c715a94f5b65cf03224b9e101811be0aca0e83e073d84f71bd3c",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P007",
+        "unit_type": "body",
+        "source_text": "Supported evidence",
+        "source_hash": "sha256:2946bba7a5b20900f3537f0c68cab252cc1580434416632a5e175b421fcb6a75",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P008",
+        "unit_type": "labelled_instruction",
+        "source_text": "Supported: A source extract is supplied without a publication date.",
+        "source_hash": "sha256:d7956cac8d08d6f35b868b11d581ed8eac8feb8c249ed15e2302cef55d4ee715",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P009",
+        "unit_type": "labelled_instruction",
+        "source_text": "Supported: The missing date must remain explicit.",
+        "source_hash": "sha256:35f778b11fadb647a724d9a1329f0c910511d60f6f244b7c8ac48cb4c6363e03",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P010",
+        "unit_type": "body",
+        "source_text": "Held claims",
+        "source_hash": "sha256:da3e5d0fa6ce1b5b94bfcb4c2dabb18eaed00c7054de998de4fd5eeaee4b42c8",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P011",
+        "unit_type": "labelled_instruction",
+        "source_text": "Held for human review: The missing date is held for human review rather than invented.",
+        "source_hash": "sha256:d2a1e0c8e4302ec1eed98efc95dbd5bf538edc8d72a58863b01f27933f03bfd1",
+        "changed_from_previous": false
+      },
+      {
+        "unit_id": "P012",
+        "unit_type": "instruction",
+        "source_text": "Human editorial review and publication authority remain required before external release.",
+        "source_hash": "sha256:4ce243b60d34be7d5a61deaf829fc30c03fde1aa4d297b455893e896d8796475",
+        "changed_from_previous": false
+      }
+    ]
+  },
+  "source_versions": [
+    {
+      "version": "1.0.0",
+      "document_hash": "sha256:7a6fcab4c2e5a5f7dc115a1677f699791d38e8dca6489061f31052998780a990",
+      "changed_units": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010",
+        "P011",
+        "P012"
+      ],
+      "removed_units": [],
+      "recorded_at": "2026-09-08T01:07:31+00:00"
+    }
+  ],
+  "translations": {},
+  "authority": {
+    "machine_drafts_reusable": false,
+    "human_approval_required": true,
+    "crystallization_authority": "BEAST"
+  },
+  "updated_at": "2026-09-08T01:07:31+00:00"
+}

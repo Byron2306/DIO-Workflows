@@ -1,0 +1,68 @@
+{
+  "claim_fixture": [
+    {
+      "claim_id": "CL-01",
+      "evidence_ids": [
+        "SRC-01"
+      ],
+      "state": "SUPPORTED",
+      "text": "Structured audit trails make later editorial correction easier to reconstruct."
+    },
+    {
+      "claim_id": "CL-02",
+      "evidence_ids": [
+        "SRC-01",
+        "SRC-02"
+      ],
+      "state": "SUPPORTED",
+      "text": "Rapid drafting increases the importance of keeping evidence relationships inspectable during revision."
+    },
+    {
+      "claim_id": "CL-03",
+      "evidence_ids": [
+        "SRC-02"
+      ],
+      "state": "SUPPORTED",
+      "text": "Release authority remains distinct from production quality."
+    },
+    {
+      "claim_id": "CL-04",
+      "evidence_ids": [],
+      "state": "REFUSE",
+      "text": "Audit trails guarantee factual accuracy."
+    }
+  ],
+  "forbidden_claims": [
+    "fabricated quotation",
+    "fabricated source",
+    "invented evidence",
+    "guaranteed factual accuracy",
+    "automatic publication"
+  ],
+  "headline": "Why evidence lineage matters when professional work moves faster",
+  "human_gate": "NEEDS_YOU",
+  "publication": "REFUSE",
+  "refused_claim_count": 1,
+  "schema": "dio.article_publication_lineage_object.v1",
+  "source_fixture": [
+    {
+      "citation": "Mokoena, T. (2024). Evidence lineage in professional decision systems. Journal of Applied Governance, 12(2), 44-61.",
+      "source_id": "SRC-01",
+      "supports": [
+        "CL-01",
+        "CL-02"
+      ]
+    },
+    {
+      "citation": "Naidoo, P. (2025). Human authority in AI-assisted professional workflows. Review of Digital Practice, 8(1), 15-29.",
+      "source_id": "SRC-02",
+      "supports": [
+        "CL-02",
+        "CL-03"
+      ]
+    }
+  ],
+  "source_lineage_state": "CONTROLLED_FIXTURE_BOUND",
+  "studio_id": "article_publication_studio",
+  "supported_claim_count": 3
+}

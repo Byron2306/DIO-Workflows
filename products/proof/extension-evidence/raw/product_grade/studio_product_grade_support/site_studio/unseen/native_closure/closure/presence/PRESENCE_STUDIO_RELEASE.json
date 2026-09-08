@@ -1,0 +1,15 @@
+{
+  "authority_created": false,
+  "capability_executed": "presence.release.prepare",
+  "custom_domain": "UNBOUND",
+  "entrypoint": "native_base/composition/marketfront/index.html",
+  "external_action_executed": false,
+  "external_send": "REFUSE",
+  "hosting_package": "STATIC_READY",
+  "human_gate": "NEEDS_YOU",
+  "publication": "REFUSE",
+  "release_state": "PREPARED_HELD",
+  "schema": "dio.presence_studio_release_receipt.v1",
+  "source_engine": "presence_core",
+  "studio_id": "site_studio"
+}

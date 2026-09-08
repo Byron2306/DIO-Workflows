@@ -1,0 +1,21 @@
+{
+  "authority_created": false,
+  "composition_execution": "PASS",
+  "external_effects": false,
+  "external_publication": "REFUSE",
+  "external_send": "REFUSE",
+  "human_gate": "NEEDS_YOU",
+  "media_spend": "REFUSE",
+  "native_execution_fingerprint": "sha256:20ec6d041af5a4e8f821f497d61f59bc72c9d1fa31100913483c61a222d085b8",
+  "native_multi_organ_execution": "PASS",
+  "native_organ_count": 3,
+  "new_engine_created": false,
+  "organ_execution_truth": "NATIVE_MULTI_ORGAN_EXECUTION_PROVED_WITH_AUXILIARY_GAPS",
+  "partial_organ_count": 4,
+  "payment": "REFUSE",
+  "proof_fingerprint": "sha256:8c4e632e45e6734e7fdc90fb2fa41917cdc4b8f6e96ed6b570c2cc4419033edb",
+  "schema": "dio.studio_native_execution_receipt.v1",
+  "source_bound_only_count": 0,
+  "studio_id": "article_publication_studio",
+  "studio_name": "DIO Article & Publication Studio"
+}
