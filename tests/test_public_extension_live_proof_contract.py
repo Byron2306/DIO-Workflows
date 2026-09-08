@@ -15,6 +15,7 @@ DIO_CONFIG = ROOT / "assets" / "dio-config.js"
 VISUAL_CSS = ROOT / "assets" / "dio-visual-system.css"
 PROOF_CSS = ROOT / "products" / "proof-layer.css"
 CANON_SHEEN_CSS = ROOT / "assets" / "canon-gold-sheen.css"
+CORPO_CULT_CSS = ROOT / "assets" / "corpo-cult-polish.css"
 EXPECTED_SOURCE_ARTIFACT_SHA256 = "cd49538d3a6eece75cbb8b4a3458269a21c84f9da5760e1b3e4f92b76e096ed1"
 
 EXTENSION_SLUGS = {
@@ -180,14 +181,29 @@ def test_canon_gold_sheen_uses_layered_metallic_gold_and_selective_panel_glints(
     assert "canon-gold-sheen.css" in proof
 
 
-def test_flagship_product_pages_load_canon_gold_after_legacy_polish_layers():
+def test_flagship_editorial_sections_rebind_legacy_ivory_to_canon_gold_hierarchy():
+    css = CORPO_CULT_CSS.read_text(encoding="utf-8")
+    assert "DIO FLAGSHIP CANON LATE-BIND" in css
+    for selector in (
+        '.editorial-copy h1',
+        '.family-workflow-copy h2',
+        '.product-film-copy h2',
+        '.family-production-transition h2',
+        '.vesper-conversion h2',
+    ):
+        assert selector in css
+    for token in (
+        "#fff0b8",
+        "#f5d77a",
+        "#e7c45a",
+        "#b8922e",
+        "#ebd9a3",
+        "#cfc2a2",
+    ):
+        assert token in css
     for slug in FLAGSHIP_SLUGS:
         page = (ROOT / "products" / slug / "index.html").read_text(encoding="utf-8")
-        canon = '../../assets/canon-gold-sheen.css'
-        legacy = '../../assets/corpo-cult-polish.css'
-        assert canon in page, f"{slug}: canon gold stylesheet missing"
-        assert legacy in page, f"{slug}: legacy polish stylesheet missing"
-        assert page.rfind(canon) > page.rfind(legacy), f"{slug}: canon gold must load last"
+        assert '../../assets/corpo-cult-polish.css' in page, f"{slug}: missing late-binding stylesheet"
 
 
 if __name__ == "__main__":
