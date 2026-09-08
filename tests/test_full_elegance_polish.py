@@ -2,10 +2,16 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CORPO = ROOT / "assets" / "corpo-cult-polish.css"
+COUTURE = ROOT / "assets" / "couture-final.css"
+PROOF = ROOT / "products" / "proof-layer.css"
+CONFIG = ROOT / "assets" / "dio-config.js"
 
 
 def css() -> str:
-    return CORPO.read_text(encoding="utf-8")
+    parts = [CORPO.read_text(encoding="utf-8")]
+    if COUTURE.is_file():
+        parts.append(COUTURE.read_text(encoding="utf-8"))
+    return "\n".join(parts)
 
 
 def test_full_elegance_pass_is_bound_to_shared_live_style():
@@ -79,7 +85,8 @@ def test_gold_rectangles_are_content_aware_and_never_overflow():
         '.hero-actions .button',
     ):
         assert token in text
-    assert 'white-space:nowrap!important' not in text.split("DIO COUTURE ORBIT ALIGNMENT", 1)[1]
+    couture = COUTURE.read_text(encoding="utf-8")
+    assert 'white-space:nowrap!important' not in couture
 
 
 def test_sitewide_couture_rhythm_unifies_sections_cards_and_controls():
@@ -95,6 +102,15 @@ def test_sitewide_couture_rhythm_unifies_sections_cards_and_controls():
         'gap:clamp(28px,4.4vw,66px)!important',
     ):
         assert token in text
+
+
+def test_couture_layer_is_loaded_on_product_and_home_surfaces():
+    assert COUTURE.is_file()
+    proof = PROOF.read_text(encoding="utf-8")
+    config = CONFIG.read_text(encoding="utf-8")
+    assert "couture-final.css" in proof
+    assert "couture-final.css" in config
+    assert "data-dio-couture-final" in config
 
 
 def test_home_family_story_uses_same_elegant_hierarchy():
