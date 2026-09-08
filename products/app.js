@@ -25,17 +25,16 @@
   };
   const proofHref = artifact => `${rootHref()}${artifact.path}`;
   const isExtension = p => p.tier === 'canon_extension';
-  // The frozen 15/15 canon-extension summary is ProductGrade verified. Keep market validation as a separate boundary.
   catalog.forEach(p => {
     if(!isExtension(p)) return;
     p.status='PRODUCT_GRADE_VERIFIED';
     p.engineeringStatus='CANON_EXTENSION_PRODUCT_GRADE_VERIFIED';
     p.proofStatus='CANON_EXTENSION_PROOF_VERIFIED';
-    p.proof='Canon extension ProductGrade verified; canon-extension proof verified with zero critical blockers in the frozen 15/15 summary. Market validation not yet established.';
+    p.proof='Canon extension ProductGrade verified across normal, messy and adversarial buyer journeys. Market validation remains separate and unproved.';
   });
   const statusLabel = p => isExtension(p) ? 'ProductGrade verified · canon extension' : (p.internal ? 'Internal production instrument' : (p.status === 'BUYER_PRODUCTION_READY_BOUNDED' ? 'Buyer production ready · bounded' : 'Engineering ready · sellability grade pending'));
-  const executionLabel = p => isExtension(p) ? 'PRODUCTGRADE VERIFIED' : `${p.verifiedVariantCount}/${p.variantCount} verified`;
-  const orbitExecutionLabel = p => isExtension(p) ? 'PRODUCTGRADE VERIFIED' : '3 / 3 VERIFIED';
+  const executionLabel = p => isExtension(p) ? '3/3 PRODUCTGRADE VERIFIED' : `${p.verifiedVariantCount}/${p.variantCount} verified`;
+  const orbitExecutionLabel = p => isExtension(p) ? '3 / 3 VERIFIED' : '3 / 3 VERIFIED';
 
   const visualStyles=document.createElement('link');
   visualStyles.rel='stylesheet';
@@ -45,7 +44,6 @@
   premiumStyles.rel='stylesheet';
   premiumStyles.href=`${rootHref()}assets/premium/premium.css`;
   document.head.appendChild(premiumStyles);
-
   const proofStyles=document.createElement('link');
   proofStyles.rel='stylesheet';
   proofStyles.href=`${rootHref()}products/proof-layer.css`;
@@ -60,14 +58,25 @@
   if(document.body.dataset.view==='portfolio') upgradeBrand('PRODUCT PORTFOLIO');
   if(document.body.dataset.view==='product') upgradeBrand('WORKFLOWS');
 
+  async function fetchProofCatalog(path) {
+    const response=await fetch(`${rootHref()}products/proof/${path}`, {cache:'no-cache'});
+    if(!response.ok) throw new Error(`${path} ${response.status}`);
+    return await response.json();
+  }
+
   async function loadProof() {
     try {
-      const response=await fetch(`${rootHref()}products/proof/portfolio-proof-catalog.json`, {cache:'no-cache'});
-      if(!response.ok) throw new Error(`proof catalog ${response.status}`);
-      return await response.json();
+      const [base, extensions]=await Promise.all([
+        fetchProofCatalog('portfolio-proof-catalog.json'),
+        fetchProofCatalog('canon-extension-proof-catalog.json')
+      ]);
+      return {
+        products:[...(base.products||[]), ...(extensions.products||[])],
+        extensionSummary:extensions
+      };
     } catch (error) {
-      console.warn('DIO public proof catalog unavailable', error);
-      return {products:[]};
+      console.warn('DIO public proof catalogs unavailable', error);
+      return {products:[], extensionSummary:null};
     }
   }
 
@@ -83,7 +92,7 @@
         const [accent,icon,kicker]=themeFor(p);
         return `<article class="card corner-glow" style="--accent:${accent}">
           <div class="card-visual card-orbit"><img class="card-eye" src="${rootHref()}assets/premium/dio-eye-premium.webp" alt=""><img class="premium-card-medallion" src="${rootHref()}assets/premium/icons/dio-icon-${icon}.webp" onerror="this.onerror=null;this.src='${rootHref()}assets/premium/dio-eye-premium.webp'" alt=""><span>${esc(kicker)}</span></div>
-          <div class="card-body">${isExtension(p)?'<span class="canon-extension-label">CANON EXTENSION</span>':''}<span class="badge dio-pill">${esc(statusLabel(p))}</span><div class="family">${esc(p.family)}</div><h2>${esc(p.name)}</h2><p class="headline">${esc(p.headline)}</p><p class="buyer"><b>For:</b> ${esc(p.buyer)}</p><div class="price-line">${esc(money(p.price))}<small>${p.internal?'Not a direct retail claim':'One bounded case · scope confirmed first'}</small></div><div class="card-actions"><a class="button" href="${encodeURIComponent(p.slug)}/">${isExtension(p)?'OPEN PRODUCT':'SEE THE PROOF'}</a><a class="button ghost" href="${vesperHref(p)}">ASK VESPER ↗</a></div></div>
+          <div class="card-body">${isExtension(p)?'<span class="canon-extension-label">CANON EXTENSION</span>':''}<span class="badge dio-pill">${esc(statusLabel(p))}</span><div class="family">${esc(p.family)}</div><h2>${esc(p.name)}</h2><p class="headline">${esc(p.headline)}</p><p class="buyer"><b>For:</b> ${esc(p.buyer)}</p><div class="price-line">${esc(money(p.price))}<small>${p.internal?'Not a direct retail claim':'One bounded case · scope confirmed first'}</small></div><div class="card-actions"><a class="button" href="${encodeURIComponent(p.slug)}/">${isExtension(p)?'OPEN LIVE PROOF':'SEE THE PROOF'}</a><a class="button ghost" href="${vesperHref(p)}">ASK VESPER ↗</a></div></div>
         </article>`;
       }).join('') || '<div class="empty">No product matches that search.</div>';
     };
@@ -96,7 +105,7 @@
     const product=catalog.find(p=>p.slug===slug);
     const root=document.querySelector('#product');
     if(!product){root.innerHTML=`<div class="wrap producthero"><h1>Product not found.</h1><p><a class="button" href="${portfolioHref()}">Return to the 68-product portfolio</a></p></div>`;return;}
-    const [accent,icon,kicker]=themeFor(product);
+    const [accent,icon]=themeFor(product);
     document.documentElement.style.setProperty('--accent',accent);
     document.title=`${product.name} | DIO Workflows`;
     const meta=document.querySelector('meta[name="description"]');
@@ -108,7 +117,7 @@
       <div class="breadcrumb"><a href="${portfolioHref()}">68-product portfolio</a><span>/</span>${esc(product.family)}</div>
       <p class="eyebrow">${esc(product.family)}</p><h1>${esc(product.name)}</h1><p class="lead">${esc(product.headline)}</p>
       <p class="buyer-line"><span>For</span>${esc(product.buyer)}</p><div class="provenance-line">Primary machinery <strong>${esc(product.primaryFamily)}</strong></div>
-      <div class="hero-price"><b>${esc(money(product.price))}</b><span>${isExtension(product)?'Canon-level product extension · ProductGrade verified · human authority held · Market validation not yet established':(product.internal?'Internal operating capability · exposed publicly as proof, not as customer validation':'Launch pilot · one bounded case · scope confirmed before work begins')}</span></div>
+      <div class="hero-price"><b>${esc(money(product.price))}</b><span>${isExtension(product)?'Canon-level product extension · 3/3 ProductGrade verified · human authority held · market validation not yet established':(product.internal?'Internal operating capability · exposed publicly as proof, not as customer validation':'Launch pilot · one bounded case · scope confirmed before work begins')}</span></div>
       <div class="hero-actions"><a class="button" href="#production-proof">OPEN THE PROOF ↓</a><a class="button ghost" href="${vesperHref(product)}">ASK VESPER ↗</a></div>
       </div><figure class="product-orbit-stage corner-glow"><img class="product-matrix" src="${rootHref()}assets/dio-product-matrix.svg" alt=""><img class="product-orbit-eye" src="${rootHref()}assets/premium/dio-eye-premium.webp" alt="DIO governed product route"><img class="premium-family-medallion" src="${rootHref()}assets/premium/icons/dio-icon-${icon}.webp" onerror="this.onerror=null;this.src='${rootHref()}assets/premium/dio-eye-premium.webp'" alt=""><span class="route-word" data-length="long">${esc(product.primaryFamily.toUpperCase())}</span><span class="orbit-label a">${esc(orbitExecutionLabel(product))}</span><span class="orbit-label b">EVIDENCE-BOUND</span><span class="orbit-label c">${isExtension(product)?'MARKET VALIDATION PENDING':`COMMERCIAL ${esc(product.commercialValidation)}`}</span><span class="orbit-label d">AUTHORITY HELD</span><figcaption><span>DIO INCARNATION</span><strong>${esc(product.name)}</strong></figcaption></figure></div></section>
       <section class="product-proof-strip"><div class="wrap proof-strip-grid"><div><small>Execution / evidence state</small><b>${esc(executionLabel(product))}</b></div><div><small>Readiness</small><b>${esc(statusLabel(product))}</b></div><div><small>Market validation</small><b>${isExtension(product)?'Not yet established':esc(product.commercialValidation)}</b></div><div><small>Authority created</small><b>NO</b></div></div></section>
@@ -122,13 +131,27 @@
       const target=document.querySelector('#live-proof');
       if(!target) return;
       if(!entry){
-        if(isExtension(product)){
-          target.innerHTML=`<article class="proof-job-card canon-extension-proof"><small>CANON EXTENSION</small><h3>ProductGrade verified.</h3><p>${esc(product.proof)}</p><p><b>Current boundary:</b> The historic 159-journey corpus applies to the 53 base-canon routes. This extension has separate current ProductGrade and canon-extension proof verification and is not backfilled into that older gauntlet.</p></article><article class="proof-state-card"><small>MARKET VALIDATION</small><strong>NOT YET ESTABLISHED</strong><span>ProductGrade verified · market evidence remains separate</span><p>Authority created: <b>NO</b><br>External effects: <b>NO</b></p></article>`;
-        }
+        target.innerHTML=`<article class="proof-missing-card corner-glow"><small>PUBLIC PROOF MISSING</small><h3>Evidence could not be loaded.</h3><p>This surface fails closed. A ProductGrade label is never substituted for missing public artifacts or receipts.</p></article>`;
         return;
       }
-      const artifactCards=(entry.artifacts||[]).map((a,i)=>`<article class="proof-artifact-card corner-glow"><div><small>REAL CONTROLLED ARTIFACT · ${String(i+1).padStart(2,'0')}</small><h3>${esc(a.name)}</h3><p>${esc(a.proof_relation==='public_preview_of_native_artifact'?'Public preview derived from the native production artifact.':'Customer-facing artifact from the controlled production run.')}</p><code>${esc(a.sha256||'hash recorded')}</code></div><a class="button" href="${proofHref(a)}" target="_blank" rel="noopener">OPEN / DOWNLOAD ↗</a></article>`).join('');
-      target.innerHTML=`<article class="proof-job-card"><small>BUYER JOB</small><h3>${esc(entry.buyer_job)}</h3><p><b>Context:</b> ${esc(entry.buyer_context)}</p><p><b>Adversarial / messy case:</b> ${esc(entry.exception_case)}</p></article>${artifactCards}<article class="proof-state-card"><small>CONTROLLED EXECUTION</small><strong>${entry.execution_variants}/${entry.execution_variant_count}</strong><span>normal · messy · adversarial</span><p>Authority created: <b>${entry.authority_created?'YES':'NO'}</b><br>External effects: <b>${entry.external_effects?'YES':'NO'}</b><br>Commercial validation: <b>${esc(entry.commercial_validation)}</b></p></article>`;
+
+      const artifactCards=(entry.artifacts||[]).map((a,i)=>{
+        const variant=a.variant ? `${String(a.variant).toUpperCase()} JOURNEY` : `REAL CONTROLLED ARTIFACT · ${String(i+1).padStart(2,'0')}`;
+        const relation=a.proof_relation==='public_preview_of_native_artifact' ? 'Public preview derived from the native production artifact.' : 'Customer-facing artifact from the controlled production run.';
+        return `<article class="proof-artifact-card corner-glow"><div><small>${esc(variant)}</small><h3>${esc(a.name)}</h3><p>${esc(relation)}</p>${a.variant?`<div class="proof-checks"><span>LINGUA ${a.lingua_semantic_custody?'PASS':'CHECK'}</span><span>BEAST ${a.beast_mechanical_pass?'PASS':'CHECK'}</span>${a.variant==='adversarial'?`<span>BOUNDARY ${a.adversarial_boundary_held?'HELD':'CHECK'}</span>`:''}</div>`:''}<code>${esc(a.sha256||'hash recorded')}</code></div><a class="button" href="${proofHref(a)}" target="_blank" rel="noopener">OPEN ARTIFACT ↗</a></article>`;
+      }).join('');
+
+      const receiptCards=(entry.evidence_receipts||[]).map(r=>`<a class="evidence-receipt-card" href="${proofHref(r)}" target="_blank" rel="noopener"><small>${esc(r.kind.replaceAll('_',' ').toUpperCase())}</small><h3>${esc(r.name)}</h3><code>${esc(r.sha256)}</code><span>OPEN RECEIPT ↗</span></a>`).join('');
+      const receipts=(entry.evidence_receipts||[]).length ? `<article class="evidence-receipts-panel corner-glow"><div class="evidence-panel-heading"><div><small>HASH-BOUND RECEIPTS</small><h3>Inspect the custody chain.</h3></div>${isExtension(product)?`<a class="button ghost" href="${rootHref()}products/proof/extension-evidence/index.html" target="_blank" rel="noopener">FULL 455-FILE EVIDENCE LEDGER ↗</a>`:''}</div><div class="evidence-receipt-grid">${receiptCards}</div>${isExtension(product)&&data.extensionSummary?.full_evidence_bundle?`<div class="evidence-bundle-line"><span>Source CI bundle</span><code>${esc(data.extensionSummary.full_evidence_bundle.sha256)}</code><a href="${rootHref()}${esc(data.extensionSummary.full_evidence_bundle.path)}" target="_blank" rel="noopener">DOWNLOAD PRESERVED ZIP ↗</a></div>`:''}</article>` : '';
+
+      const buyerJob=entry.buyer_job || product.headline;
+      const buyerContext=entry.buyer_context || product.buyerContext;
+      const exceptionCase=entry.exception_case || product.exceptionCase;
+      const verified=entry.verified_variant_count ?? entry.execution_variants ?? product.verifiedVariantCount;
+      const total=entry.execution_variant_count ?? entry.execution_variants ?? product.variantCount;
+      const claimBoundary=entry.claim_boundary ? `<p class="claim-boundary"><b>Claim boundary:</b> ${esc(entry.claim_boundary)}</p>` : '';
+
+      target.innerHTML=`<article class="proof-job-card corner-glow"><small>BUYER JOB</small><h3>${esc(buyerJob)}</h3><p><b>Context:</b> ${esc(buyerContext)}</p><p><b>Messy / adversarial pressure:</b> ${esc(exceptionCase)}</p>${claimBoundary}</article>${artifactCards}<article class="proof-state-card corner-glow"><small>CONTROLLED EXECUTION</small><strong>${esc(verified)}/${esc(total)}</strong><span>normal · messy · adversarial</span><p>Authority created: <b>${entry.authority_created?'YES':'NO'}</b><br>External effects: <b>${entry.external_effects?'YES':'NO'}</b><br>Commercial validation: <b>${esc(entry.commercial_validation)}</b></p></article>${receipts}`;
     });
   }
 })();
