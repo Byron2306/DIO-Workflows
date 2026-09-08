@@ -1,0 +1,94 @@
+/* DIO STRAGGLER CLOSURE · 2026-09-08
+   Final visual-QA sweep. Lift the remaining buried scenes, keep contrast local
+   to copy, separate headline gold from ornament, clean proof CTAs and collapse
+   Vesper in landscape-phone viewports. Presentation only. */
+:root{
+  --dio-hero-lift:1.60;
+  --dio-straggler-headline-top:#eed9a8;
+  --dio-straggler-headline-mid:#c9933d;
+  --dio-straggler-headline-deep:#865b24;
+}
+
+body[data-view="product"] .editorial-hero::after{
+  background:linear-gradient(90deg,rgba(4,5,7,.48) 0%,rgba(4,5,7,.26) 30%,rgba(4,5,7,.08) 60%,rgba(4,5,7,.03) 100%)!important;
+}
+body[data-view="product"] .editorial-copy::before{
+  background:linear-gradient(90deg,rgba(4,5,7,.50),rgba(4,5,7,.16) 68%,transparent)!important;
+}
+
+body[data-view="portfolio"] .hero{
+  background:linear-gradient(90deg,rgba(5,6,7,.72) 0%,rgba(5,6,7,.48) 44%,rgba(5,6,7,.12) 76%,rgba(5,6,7,.26) 100%),url('premium/dio-hero-portfolio-2026.webp') 72% center/cover no-repeat!important;
+}
+body[data-view="portfolio"] .hero h1,
+.launch-v2 .product-bridge-head h2,
+.launch-v2 .about-copy h2{
+  color:var(--dio-straggler-headline-mid)!important;
+  background:linear-gradient(180deg,var(--dio-straggler-headline-top) 0%,#d9b46d 28%,var(--dio-straggler-headline-mid) 66%,var(--dio-straggler-headline-deep) 100%)!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  text-shadow:0 1px 0 rgba(0,0,0,.42),0 0 10px rgba(201,147,61,.04)!important;
+}
+
+.launch-v2 .product-bridge::after{
+  background:linear-gradient(90deg,rgba(5,6,7,.70) 0%,rgba(5,6,7,.40) 48%,rgba(5,6,7,.18) 100%),url('polish/chapter-product-factory.webp') 50% center/cover no-repeat!important;
+  opacity:.82!important;
+  filter:brightness(1.08) contrast(1.04) saturate(.90)!important;
+}
+.launch-v2 .suite-explainers::before{
+  background:linear-gradient(90deg,rgba(5,6,7,.68) 0%,rgba(5,6,7,.34) 50%,rgba(5,6,7,.50) 100%),url('polish/chapter-explainers.webp') center/cover no-repeat!important;
+  opacity:.92!important;
+  filter:brightness(1.10) contrast(1.05) saturate(.92)!important;
+}
+.launch-v2 .suite-explainers::after{
+  background:radial-gradient(circle at 18% 12%,rgba(231,196,90,.11),transparent 28%),linear-gradient(90deg,rgba(5,6,7,.12),rgba(5,6,7,.04) 52%,rgba(5,6,7,.14)),linear-gradient(180deg,rgba(5,6,7,.02),rgba(5,6,7,.32))!important;
+}
+.launch-v2 .about-founder::before{
+  background:linear-gradient(90deg,rgba(5,6,7,.70) 0%,rgba(5,6,7,.40) 54%,rgba(5,6,7,.24) 100%),url('polish/chapter-about.webp') 70% center/cover no-repeat!important;
+  opacity:.90!important;
+  filter:brightness(1.06) contrast(1.04) saturate(.90)!important;
+}
+.launch-v2 .about-founder::after{
+  background:radial-gradient(circle at 72% 20%,rgba(217,182,111,.09),transparent 32%),linear-gradient(180deg,transparent,rgba(5,6,7,.46))!important;
+}
+.launch-v2 .mega-section[data-atmosphere]::before{
+  filter:brightness(1.02) contrast(1.045) saturate(.88)!important;
+  opacity:.92!important;
+}
+.launch-v2 .product-bridge-head,
+.launch-v2 .suite-explainer-head,
+.launch-v2 .about-copy{position:relative!important;z-index:2!important}
+
+.product-orbit-stage .product-matrix{
+  opacity:.18!important;
+  filter:brightness(.82) saturate(.62) sepia(.16)!important;
+}
+.product-orbit-stage .product-orbit-eye{
+  opacity:.78!important;
+  filter:brightness(.94) contrast(1.08) saturate(.78) sepia(.12) drop-shadow(0 0 22px rgba(139,98,44,.15))!important;
+}
+
+.artifact-card>div:last-child{min-width:0!important}
+.artifact-card .button{margin-top:14px!important;max-width:100%!important}
+.artifact-card .button+.text-link{
+  display:block!important;
+  width:max-content!important;
+  max-width:100%!important;
+  margin:10px 0 0!important;
+  line-height:1.35!important;
+  overflow-wrap:anywhere!important;
+}
+
+@media(max-height:600px) and (orientation:landscape){
+  .launch-v2 .vesper-float{right:14px!important;bottom:14px!important;padding:6px!important;gap:0!important}
+  .vesper-float span{display:none!important}
+  .launch-v2 .vesper-float img{width:44px!important;height:44px!important}
+}
+
+@media(max-width:700px){
+  body[data-view="product"] .editorial-hero::after{
+    background:linear-gradient(180deg,rgba(4,5,7,.18),rgba(4,5,7,.30) 54%,rgba(4,5,7,.10) 100%)!important;
+  }
+  .artifact-card .button{display:flex!important;width:100%!important;justify-content:center!important}
+  .artifact-card .button+.text-link{width:100%!important;text-align:left!important}
+}
