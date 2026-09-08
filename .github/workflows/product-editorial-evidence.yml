@@ -6,6 +6,7 @@ on:
       - "assets/**"
       - "tests/test_public_extension_live_proof_contract.py"
       - "tests/test_full_elegance_polish.py"
+      - "tests/test_final_couture_polish.py"
       - ".github/workflows/product-editorial-evidence.yml"
   workflow_dispatch:
 jobs:
@@ -42,3 +43,5 @@ jobs:
         run: python3 tests/test_public_extension_live_proof_contract.py
       - name: Validate full elegance polish
         run: python3 tests/test_full_elegance_polish.py
+      - name: Validate final couture containment and alignment
+        run: python3 tests/test_final_couture_polish.py
