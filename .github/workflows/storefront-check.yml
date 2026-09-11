@@ -64,3 +64,5 @@ jobs:
           }
           console.log('COMMERCIAL_STORE_FRONT_READY products=68 base=53 extensions=15');
           NODE
+      - name: Validate public pricing tier hydration
+        run: python3 tests/test_pricing_tiers.py

@@ -1,9 +1,46 @@
-(() => {
+(async () => {
   const catalog = window.DIO_PRODUCT_CATALOG || [];
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const rootHref = () => document.body.dataset.product ? '../../' : '../';
   const portfolioHref = () => document.body.dataset.product ? '../' : './';
-  const money = value => value ? `R ${Number(value).toLocaleString('en-ZA')} ZAR` : 'Scoped through Vesper';
+  const pricingHref = () => document.body.dataset.product ? '../pricing.js' : 'pricing.js';
+  const money = value => value != null ? `R ${Number(value).toLocaleString('en-ZA')} ZAR` : 'Not offered';
+
+  async function ensurePricingCensus() {
+    if (window.DIO_PRICING_CENSUS) return window.DIO_PRICING_CENSUS;
+    await new Promise((resolve, reject) => {
+      const script=document.createElement('script');
+      script.src=pricingHref();
+      script.onload=resolve;
+      script.onerror=()=>reject(new Error('governed pricing census unavailable'));
+      document.head.appendChild(script);
+    });
+    return window.DIO_PRICING_CENSUS || null;
+  }
+
+  const pricingCensus = await ensurePricingCensus();
+  const pricingBySlug = new Map(((pricingCensus&&pricingCensus.products)||[]).map(row=>[row.slug,row]));
+  const pricingFor = product => pricingBySlug.get(product.slug) || null;
+  const bandText = product => {
+    const pricing=pricingFor(product);
+    const band=pricing&&pricing.governed_reference_band_zar;
+    return band ? `${money(band.min)} – ${money(band.max)}` : 'Scoped through Vesper';
+  };
+  const tierLabels = {
+    individual_professional: 'Individual / Professional',
+    team_department: 'Team / Department',
+    enterprise_programme: 'Enterprise / Programme'
+  };
+  const tierCards = product => {
+    const pricing=pricingFor(product);
+    const tiers=(pricing&&pricing.commercial_tiers)||[];
+    return tiers.map(tier=>{
+      const label=tierLabels[tier.tier_id]||tier.label||tier.tier_id;
+      const amount=tier.available ? money(tier.reference_amount_zar) : 'Not offered for this product';
+      const classes=(tier.eligible_buyer_classes||[]).join(' · ') || 'No eligible buyer class';
+      return `<article class="pricing-tier-card${tier.available?'':' unavailable'}"><small>${esc(label)}</small><strong>${esc(amount)}</strong><span>${esc(classes)}</span><p>${tier.available?'Governed reference point · scope confirmed before quote':'This buyer tier is outside the current governed product profile.'}</p></article>`;
+    }).join('');
+  };
   const familyThemes = {
     'Education & Research': ['#c3a65f','education','learning, assessment and scholarly evidence'],
     'Enterprise Operations': ['#c5a16e','growth','performance, operations and organisational evidence'],
@@ -20,7 +57,13 @@
   const vesperHref = product => `${rootHref()}vesper-intake.html?incarnation=${encodeURIComponent(product.slug)}`;
   const intakeHref = product => {
     const q=new URLSearchParams({product:product.ingress||'evidex',class:product.slug,offer:product.offer});
-    if(product.price) q.set('price',String(product.price));
+    const pricing=pricingFor(product);
+    const band=pricing&&pricing.governed_reference_band_zar;
+    if(band){
+      q.set('price_min',String(band.min));
+      q.set('price_max',String(band.max));
+      q.set('pricing_state',String(pricing.pricing_state||'HYPOTHESIS'));
+    }
     return `${rootHref()}?${q.toString()}#contact`;
   };
   const proofHref = artifact => `${rootHref()}${artifact.path}`;
@@ -92,7 +135,7 @@
         const [accent,icon,kicker]=themeFor(p);
         return `<article class="card corner-glow" style="--accent:${accent}">
           <div class="card-visual card-orbit"><img class="card-eye" src="${rootHref()}assets/premium/dio-eye-premium.webp" alt=""><img class="premium-card-medallion" src="${rootHref()}assets/premium/icons/dio-icon-${icon}.webp" onerror="this.onerror=null;this.src='${rootHref()}assets/premium/dio-eye-premium.webp'" alt=""><span>${esc(kicker)}</span></div>
-          <div class="card-body">${isExtension(p)?'<span class="canon-extension-label">CANON EXTENSION</span>':''}<span class="badge dio-pill">${esc(statusLabel(p))}</span><div class="family">${esc(p.family)}</div><h2>${esc(p.name)}</h2><p class="headline">${esc(p.headline)}</p><p class="buyer"><b>For:</b> ${esc(p.buyer)}</p><div class="price-line">${esc(money(p.price))}<small>${p.internal?'Not a direct retail claim':'One bounded case · scope confirmed first'}</small></div><div class="card-actions"><a class="button" href="${encodeURIComponent(p.slug)}/">${isExtension(p)?'OPEN LIVE PROOF':'SEE THE PROOF'}</a><a class="button ghost" href="${vesperHref(p)}">ASK VESPER ↗</a></div></div>
+          <div class="card-body">${isExtension(p)?'<span class="canon-extension-label">CANON EXTENSION</span>':''}<span class="badge dio-pill">${esc(statusLabel(p))}</span><div class="family">${esc(p.family)}</div><h2>${esc(p.name)}</h2><p class="headline">${esc(p.headline)}</p><p class="buyer"><b>For:</b> ${esc(p.buyer)}</p><div class="price-line">${esc(bandText(p))}<small>3 governed commercial tiers · Commercial validation remains unproved</small></div><div class="card-actions"><a class="button" href="${encodeURIComponent(p.slug)}/">${isExtension(p)?'OPEN LIVE PROOF':'SEE THE PROOF'}</a><a class="button ghost" href="${vesperHref(p)}">ASK VESPER ↗</a></div></div>
         </article>`;
       }).join('') || '<div class="empty">No product matches that search.</div>';
     };
@@ -117,10 +160,11 @@
       <div class="breadcrumb"><a href="${portfolioHref()}">68-product portfolio</a><span>/</span>${esc(product.family)}</div>
       <p class="eyebrow">${esc(product.family)}</p><h1>${esc(product.name)}</h1><p class="lead">${esc(product.headline)}</p>
       <p class="buyer-line"><span>For</span>${esc(product.buyer)}</p><div class="provenance-line">Primary machinery <strong>${esc(product.primaryFamily)}</strong></div>
-      <div class="hero-price"><b>${esc(money(product.price))}</b><span>${isExtension(product)?'Canon-level product extension · 3/3 ProductGrade verified · human authority held · market validation not yet established':(product.internal?'Internal operating capability · exposed publicly as proof, not as customer validation':'Launch pilot · one bounded case · scope confirmed before work begins')}</span></div>
+      <div class="hero-price"><b>${esc(bandText(product))}</b><span>Governed reference band · Commercial validation remains unproved · scope and buyer tier confirmed before quote</span></div>
       <div class="hero-actions"><a class="button" href="#production-proof">OPEN THE PROOF ↓</a><a class="button ghost" href="${vesperHref(product)}">ASK VESPER ↗</a></div>
       </div><figure class="product-orbit-stage corner-glow"><img class="product-matrix" src="${rootHref()}assets/dio-product-matrix.svg" alt=""><img class="product-orbit-eye" src="${rootHref()}assets/premium/dio-eye-premium.webp" alt="DIO governed product route"><img class="premium-family-medallion" src="${rootHref()}assets/premium/icons/dio-icon-${icon}.webp" onerror="this.onerror=null;this.src='${rootHref()}assets/premium/dio-eye-premium.webp'" alt=""><span class="route-word" data-length="long">${esc(product.primaryFamily.toUpperCase())}</span><span class="orbit-label a">${esc(orbitExecutionLabel(product))}</span><span class="orbit-label b">EVIDENCE-BOUND</span><span class="orbit-label c">${isExtension(product)?'MARKET VALIDATION PENDING':`COMMERCIAL ${esc(product.commercialValidation)}`}</span><span class="orbit-label d">AUTHORITY HELD</span><figcaption><span>DIO INCARNATION</span><strong>${esc(product.name)}</strong></figcaption></figure></div></section>
       <section class="product-proof-strip"><div class="wrap proof-strip-grid"><div><small>Execution / evidence state</small><b>${esc(executionLabel(product))}</b></div><div><small>Readiness</small><b>${esc(statusLabel(product))}</b></div><div><small>Market validation</small><b>${isExtension(product)?'Not yet established':esc(product.commercialValidation)}</b></div><div><small>Authority created</small><b>NO</b></div></div></section>
+      <section class="editorial-section pricing-tier-section" id="pricing-tiers"><div class="wrap"><div class="section-intro"><div><p class="eyebrow">COMMERCIAL TIERS</p><h2>Three governed ways to scope the work.</h2></div><p>Individual / Professional, Team / Department, and Enterprise / Programme reference points are derived inside the governed product band. They are pricing hypotheses, not proof that customers will pay.</p></div><div class="pricing-tier-grid">${tierCards(product)}</div><p class="pricing-tier-truth">Governed reference band: <b>${esc(bandText(product))}</b>. Commercial validation remains unproved. Vesper confirms scope before any human-approved quote.</p></div></section>
       <section class="editorial-section" id="production-proof"><div class="wrap"><div class="section-intro"><div><p class="eyebrow">PRODUCTION PROOF</p><h2>The job, the exception, the artifact.</h2></div><p>${esc(product.buyerContext)}</p></div><div id="live-proof" class="live-proof-grid"><article class="artifact-card corner-glow"><div class="artifact-index">…</div><div><small>LOADING PUBLIC PROOF</small><h3>Binding artifact to receipt.</h3></div></article></div></div></section>
       <section class="editorial-section evidence-section" id="evidence"><div class="wrap evidence-layout"><div class="section-intro"><p class="eyebrow">TRUTH BOUNDARY</p><h2>What this proves, and what it does not.</h2><p>Controlled execution evidence is engineering evidence. Commercial validation is earned outside the system.</p></div><div class="evidence-ledger"><article><small>CONTROLLED ROUTE</small><p>${esc(product.proof)}</p></article><article><small>EXCEPTION CASE</small><p>${esc(product.exceptionCase)}</p></article><article><small>AUTHORITY BOUNDARY</small><p>${esc(product.boundary)}</p></article><article><small>SELLABILITY / READINESS</small><p>${esc(product.status)} · ${esc(product.engineeringStatus)}</p></article></div></div></section>
       <section class="editorial-section flow-section"><div class="wrap"><div class="section-intro compact"><p class="eyebrow">BOUNDED DELIVERY</p><h2>Bring authorised context. Receive inspectable work. Keep the decision.</h2></div><div class="delivery-flow"><article><span>01</span><h3>Bring this</h3><ul>${product.bring.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></article><article><span>02</span><h3>DIO does this</h3><p>Runs the governed product route, records the controlled execution, and keeps evidence and authority separate.</p></article><article><span>03</span><h3>You receive this</h3><ul>${product.deliverables.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></article><article><span>04</span><h3>Human decides this</h3><p>${esc(product.boundary)}</p></article></div></div></section>
