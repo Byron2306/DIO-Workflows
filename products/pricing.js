@@ -2,7 +2,7 @@
   window.DIO_PRICING_CENSUS = {
   "schema": "dio.public_pricing_census.v1",
   "source_repo": "Byron2306/DIO-Full-Audit",
-  "source_commit": "44e40b0790a0c6c962d5aaea972c7db7aee2e0f1",
+  "source_commit": "46a5a7f8c981a2e15f9c2c053ef52b6f512985ca",
   "source_truth": "governed commercial pricing hypotheses",
   "product_count": 68,
   "tier_policy": {
@@ -336,7 +336,7 @@
             "C3"
           ],
           "available": true,
-          "reference_amount_zar": 2150,
+          "reference_amount_zar": 2100,
           "pricing_truth": "GOVERNED_REFERENCE_POINT",
           "market_validation": "UNPROVED",
           "quote_issue_authority": false,
@@ -908,7 +908,7 @@
             "C3"
           ],
           "available": true,
-          "reference_amount_zar": 2150,
+          "reference_amount_zar": 2100,
           "pricing_truth": "GOVERNED_REFERENCE_POINT",
           "market_validation": "UNPROVED",
           "quote_issue_authority": false,
@@ -990,7 +990,7 @@
             "C3"
           ],
           "available": true,
-          "reference_amount_zar": 2150,
+          "reference_amount_zar": 2100,
           "pricing_truth": "GOVERNED_REFERENCE_POINT",
           "market_validation": "UNPROVED",
           "quote_issue_authority": false,
@@ -1805,7 +1805,7 @@
             "C3"
           ],
           "available": true,
-          "reference_amount_zar": 1450,
+          "reference_amount_zar": 1400,
           "pricing_truth": "GOVERNED_REFERENCE_POINT",
           "market_validation": "UNPROVED",
           "quote_issue_authority": false,
@@ -1889,7 +1889,7 @@
             "C3"
           ],
           "available": true,
-          "reference_amount_zar": 1050,
+          "reference_amount_zar": 1000,
           "pricing_truth": "GOVERNED_REFERENCE_POINT",
           "market_validation": "UNPROVED",
           "quote_issue_authority": false,
@@ -2384,7 +2384,7 @@
             "C3"
           ],
           "available": true,
-          "reference_amount_zar": 2150,
+          "reference_amount_zar": 2100,
           "pricing_truth": "GOVERNED_REFERENCE_POINT",
           "market_validation": "UNPROVED",
           "quote_issue_authority": false,
@@ -3046,7 +3046,7 @@
             "C3"
           ],
           "available": true,
-          "reference_amount_zar": 2750,
+          "reference_amount_zar": 2700,
           "pricing_truth": "GOVERNED_REFERENCE_POINT",
           "market_validation": "UNPROVED",
           "quote_issue_authority": false,
@@ -3128,7 +3128,7 @@
             "C3"
           ],
           "available": true,
-          "reference_amount_zar": 1650,
+          "reference_amount_zar": 1600,
           "pricing_truth": "GOVERNED_REFERENCE_POINT",
           "market_validation": "UNPROVED",
           "quote_issue_authority": false,
@@ -3376,7 +3376,7 @@
             "C3"
           ],
           "available": true,
-          "reference_amount_zar": 2150,
+          "reference_amount_zar": 2100,
           "pricing_truth": "GOVERNED_REFERENCE_POINT",
           "market_validation": "UNPROVED",
           "quote_issue_authority": false,
@@ -3701,7 +3701,7 @@
             "C3"
           ],
           "available": true,
-          "reference_amount_zar": 2150,
+          "reference_amount_zar": 2100,
           "pricing_truth": "GOVERNED_REFERENCE_POINT",
           "market_validation": "UNPROVED",
           "quote_issue_authority": false,
@@ -4194,7 +4194,7 @@
             "C3"
           ],
           "available": true,
-          "reference_amount_zar": 2150,
+          "reference_amount_zar": 2100,
           "pricing_truth": "GOVERNED_REFERENCE_POINT",
           "market_validation": "UNPROVED",
           "quote_issue_authority": false,
@@ -4357,7 +4357,7 @@
             "C3"
           ],
           "available": true,
-          "reference_amount_zar": 2150,
+          "reference_amount_zar": 2100,
           "pricing_truth": "GOVERNED_REFERENCE_POINT",
           "market_validation": "UNPROVED",
           "quote_issue_authority": false,
@@ -4856,7 +4856,7 @@
             "C3"
           ],
           "available": true,
-          "reference_amount_zar": 2150,
+          "reference_amount_zar": 2100,
           "pricing_truth": "GOVERNED_REFERENCE_POINT",
           "market_validation": "UNPROVED",
           "quote_issue_authority": false,
@@ -5189,7 +5189,7 @@
             "C3"
           ],
           "available": true,
-          "reference_amount_zar": 750,
+          "reference_amount_zar": 700,
           "pricing_truth": "GOVERNED_REFERENCE_POINT",
           "market_validation": "UNPROVED",
           "quote_issue_authority": false,
