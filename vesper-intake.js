@@ -143,9 +143,23 @@ function sessionIdentifiers(body){
     token: row.session_token || row.token || body.session_token || body.token || null,
   };
 }
+function safeIncarnationHint(raw){
+  const value = String(raw || "").trim();
+  if (!value) return null;
+  if (value.toLowerCase() === "vesper") return null;
+  return value;
+}
+
 function bindHint(){
-  const hinted = params.get("incarnation") || params.get("product") || "";
-  if (!hinted) return "";
+  const hinted = safeIncarnationHint(
+    params.get("incarnation")
+    || params.get("product")
+    || ""
+  );
+  if (!hinted) {
+    routeCandidates.textContent = "General Vesper front door";
+    return "";
+  }
   if (![...product.options].some(option => option.value === hinted)) {
     const option = document.createElement("option");
     option.value = hinted;
@@ -238,7 +252,12 @@ async function send(){
   try {
     await startSession();
     appendMessage("customer", text, "You · submitted");
-    const incarnationHint = product.value || params.get("incarnation") || params.get("product") || null;
+    const incarnationHint = safeIncarnationHint(
+      product.value
+      || params.get("incarnation")
+      || params.get("product")
+      || null
+    );
     await jsonRequest(
       "/api/vesper/web/message",
       {
@@ -326,11 +345,12 @@ async function submitVoiceBlob(blob){
     await blob.arrayBuffer()
   );
 
-  const incarnationHint =
+  const incarnationHint = safeIncarnationHint(
     product.value
     || params.get("incarnation")
     || params.get("product")
-    || null;
+    || null
+  );
 
   appendMessage(
     "customer",
