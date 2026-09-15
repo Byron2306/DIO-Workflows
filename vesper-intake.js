@@ -7,6 +7,7 @@ const messageInput = $("#message");
 const filesInput = $("#files");
 const fileCount = $("#fileCount");
 const sendButton = $("#send");
+const voiceButton = $("#voice");
 const notice = $("#notice");
 const routeState = $("#routeState");
 const routeCandidates = $("#routeCandidates");
@@ -18,7 +19,7 @@ const cfg = window.DIO_SITE_CONFIG || {};
 const apiOrigin = (
   params.get("api") ||
   cfg.vesperPresenceApiOrigin ||
-  "https://dio-presence-gateway-public.dio-workflows.workers.dev"
+  "https://dio-presence-gateway-staging.dio-workflows.workers.dev"
 ).replace(/\/+$/, "");
 const messageMode = "text";
 
@@ -27,6 +28,10 @@ let sessionToken = null;
 let sessionReady = false;
 let replyCursor = null;
 let waitingForReply = false;
+let mediaRecorder = null;
+let mediaStream = null;
+let voiceChunks = [];
+let voiceRecording = false;
 const renderedReplies = new Set();
 
 function endpoint(path){ return `${apiOrigin}${path}`; }
@@ -73,6 +78,38 @@ function appendMessage(role, text, metaText){
   messages.scrollTop = messages.scrollHeight;
   return wrap;
 }
+function replyAudio(row){
+  return row?.reply?.audio ?? row?.audio ?? null;
+}
+
+function attachReplyAudio(wrap, audio){
+  if (!wrap || audio?.state !== "ready") return;
+  if (!audio.content_b64 || !audio.mime_type) return;
+
+  const binary = atob(audio.content_b64);
+  const bytes = new Uint8Array(binary.length);
+
+  for (let i = 0; i < binary.length; i += 1) {
+    bytes[i] = binary.charCodeAt(i);
+  }
+
+  const url = URL.createObjectURL(
+    new Blob([bytes], {type: audio.mime_type})
+  );
+
+  const player = document.createElement("audio");
+  player.className = "reply-audio";
+  player.controls = true;
+  player.preload = "metadata";
+  player.src = url;
+
+  wrap.querySelector(".bubble")?.appendChild(player);
+
+  player.play()
+    .then(() => pulseVesper(2400))
+    .catch(() => {});
+}
+
 function errorMessage(error){
   if (error?.status === 429) {
     return "Vesper's public edge is temporarily rate-limited by Cloudflare. The conversation rail is deployed; retry when the request window reopens.";
@@ -166,7 +203,15 @@ async function pollForReply(){
         const key = replyKey(row, text);
         if (renderedReplies.has(key)) continue;
         renderedReplies.add(key);
-        appendMessage("vesper", text, "Vesper · governed response");
+        const wrap = appendMessage(
+          "vesper",
+          text,
+          "Vesper · governed response"
+        );
+        attachReplyAudio(
+          wrap,
+          replyAudio(row),
+        );
         rendered += 1;
       }
       replyCursor = advanceCursor(body, rows);
@@ -228,7 +273,217 @@ if (attachLabel) attachLabel.classList.add("is-disabled");
 if (fileCount) fileCount.textContent = "Text bridge v1 · attachments held";
 bindHint();
 
+function preferredVoiceMime(){
+  const candidates = [
+    "audio/webm;codecs=opus",
+    "audio/webm",
+    "audio/mp4",
+    "audio/ogg;codecs=opus",
+    "audio/ogg",
+  ];
+
+  return candidates.find(
+    type => MediaRecorder.isTypeSupported(type)
+  ) || "";
+}
+
+function bytesToBase64(bytes){
+  let binary = "";
+  const chunkSize = 0x8000;
+
+  for (
+    let offset = 0;
+    offset < bytes.length;
+    offset += chunkSize
+  ) {
+    binary += String.fromCharCode(
+      ...bytes.subarray(
+        offset,
+        offset + chunkSize,
+      )
+    );
+  }
+
+  return btoa(binary);
+}
+
+async function submitVoiceBlob(blob){
+  if (!blob?.size) {
+    throw new Error(
+      "No voice audio was captured."
+    );
+  }
+
+  if (blob.size > 2 * 1024 * 1024) {
+    throw new Error(
+      "Voice note is too large. Please keep it shorter."
+    );
+  }
+
+  await startSession();
+
+  const bytes = new Uint8Array(
+    await blob.arrayBuffer()
+  );
+
+  const incarnationHint =
+    product.value
+    || params.get("incarnation")
+    || params.get("product")
+    || null;
+
+  appendMessage(
+    "customer",
+    "🎙 Voice message",
+    "You · voice submitted"
+  );
+
+  await jsonRequest(
+    "/api/vesper/web/voice",
+    {
+      method: "POST",
+      body: JSON.stringify({
+        conversation_id: conversationId,
+        audio_b64: bytesToBase64(bytes),
+        mime_type:
+          (blob.type || "audio/webm")
+            .split(";", 1)[0],
+        incarnation_hint: incarnationHint,
+        message_mode: "voice",
+      }),
+    },
+    true,
+  );
+
+  setRoute(
+    "Voice accepted",
+    true,
+  );
+
+  setNotice(
+    "Voice accepted. Waiting for Vesper's governed reply…"
+  );
+
+  await pollForReply();
+}
+
+async function toggleVoiceRecording(){
+  if (!navigator.mediaDevices?.getUserMedia || !window.MediaRecorder) {
+    setNotice("Voice capture is not supported by this browser.", true);
+    return;
+  }
+
+  if (voiceRecording) {
+    voiceRecording = false;
+    voiceButton.disabled = true;
+    voiceButton.classList.remove("is-recording");
+    voiceButton.setAttribute("aria-pressed", "false");
+    voiceButton.textContent = "🎙 Talk to Vesper";
+    setNotice("Vesper is listening…");
+    mediaRecorder.stop();
+    return;
+  }
+
+  try {
+    await startSession();
+
+    mediaStream = await navigator.mediaDevices.getUserMedia({
+      audio: true,
+    });
+
+    const mime = preferredVoiceMime();
+
+    mediaRecorder = new MediaRecorder(
+      mediaStream,
+      mime ? {mimeType: mime} : undefined
+    );
+
+    voiceChunks = [];
+
+    mediaRecorder.ondataavailable = event => {
+      if (event.data?.size) voiceChunks.push(event.data);
+    };
+
+    mediaRecorder.onstop = async () => {
+      const type =
+        mediaRecorder?.mimeType
+        || voiceChunks[0]?.type
+        || "audio/webm";
+
+      const blob = new Blob(
+        voiceChunks,
+        {type}
+      );
+
+      for (const track of mediaStream?.getTracks() || []) {
+        track.stop();
+      }
+
+      mediaStream = null;
+      mediaRecorder = null;
+      voiceChunks = [];
+
+      try {
+        await submitVoiceBlob(blob);
+      } catch (error) {
+        console.warn(
+          "Vesper web voice submission failed",
+          error
+        );
+        setRoute("Voice unavailable", false);
+        setNotice(errorMessage(error), true);
+      } finally {
+        voiceButton.disabled = false;
+      }
+    };
+
+    mediaRecorder.start();
+    voiceRecording = true;
+
+    voiceButton.classList.add("is-recording");
+    voiceButton.setAttribute("aria-pressed", "true");
+    voiceButton.textContent = "■ Stop";
+
+    setRoute("Listening", true);
+    setNotice(
+      "Vesper is listening. Tap Stop when finished."
+    );
+  } catch (error) {
+    console.warn(
+      "Vesper microphone unavailable",
+      error
+    );
+
+    for (const track of mediaStream?.getTracks() || []) {
+      track.stop();
+    }
+
+    mediaStream = null;
+    mediaRecorder = null;
+    voiceChunks = [];
+    voiceRecording = false;
+
+    voiceButton.classList.remove("is-recording");
+    voiceButton.setAttribute("aria-pressed", "false");
+    voiceButton.textContent = "🎙 Talk to Vesper";
+    voiceButton.disabled = false;
+
+    setRoute("Microphone unavailable", false);
+    setNotice(
+      "Microphone access was refused or unavailable.",
+      true
+    );
+  }
+}
+
 sendButton.addEventListener("click", send);
+
+if (voiceButton) {
+  voiceButton.addEventListener(
+    "click",
+    toggleVoiceRecording
+  );
+}
 messageInput.addEventListener("keydown", event => {
   if (event.key === "Enter" && !event.shiftKey) {
     event.preventDefault();
