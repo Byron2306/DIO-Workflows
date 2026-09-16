@@ -243,15 +243,65 @@ async function pollForReply(){
     waitingForReply = false;
   }
 }
+const MAX_WEB_ATTACHMENT_BYTES = 2097152;
+
+async function selectedWebAttachment(){
+  const file = filesInput?.files?.[0] || null;
+
+  if (!file) return null;
+
+  if (filesInput.files.length > 1) {
+    throw new Error(
+      "Vesper accepts one attachment per message."
+    );
+  }
+
+  if (
+    file.size <= 0
+    || file.size > MAX_WEB_ATTACHMENT_BYTES
+  ) {
+    throw new Error(
+      "Attachment must be between 1 byte and 2 MiB."
+    );
+  }
+
+  const bytes = new Uint8Array(
+    await file.arrayBuffer()
+  );
+
+  return {
+    file_name: file.name,
+    mime_type:
+      file.type || "application/octet-stream",
+    content_b64: bytesToBase64(bytes),
+  };
+}
+
 async function send(){
   const text = messageInput.value.trim();
-  if (!text) return;
+  const selectedFile =
+    filesInput?.files?.[0] || null;
+
+  if (!text && !selectedFile) return;
+
   sendButton.disabled = true;
   messageInput.disabled = true;
+  if (filesInput) filesInput.disabled = true;
   setNotice("Binding your message to Vesper…");
   try {
     await startSession();
-    appendMessage("customer", text, "You · submitted");
+
+    const attachment =
+      await selectedWebAttachment();
+
+    appendMessage(
+      "customer",
+      text || `Attached ${attachment.file_name}`,
+      attachment
+        ? `You · ${attachment.file_name} · submitted`
+        : "You · submitted"
+    );
+
     const incarnationHint = safeIncarnationHint(
       product.value
       || params.get("incarnation")
@@ -265,7 +315,8 @@ async function send(){
         body:JSON.stringify({
           conversation_id: conversationId,
           message: text,
-          attachments: [],
+          attachments:
+            attachment ? [attachment] : [],
           incarnation_hint: incarnationHint,
           message_mode: messageMode,
         }),
@@ -273,6 +324,16 @@ async function send(){
       true,
     );
     messageInput.value = "";
+
+    if (filesInput) {
+      filesInput.value = "";
+    }
+
+    if (fileCount) {
+      fileCount.textContent =
+        "One file · max 2 MiB · quarantine only";
+    }
+
     setRoute("Message accepted", true);
     setNotice("Message accepted. Waiting for Vesper's governed reply…");
     await pollForReply();
@@ -283,13 +344,39 @@ async function send(){
   } finally {
     sendButton.disabled = false;
     messageInput.disabled = false;
+    if (filesInput) filesInput.disabled = false;
     messageInput.focus();
   }
 }
 
-if (filesInput) filesInput.disabled = true;
-if (attachLabel) attachLabel.classList.add("is-disabled");
-if (fileCount) fileCount.textContent = "Text bridge v1 · attachments held";
+if (filesInput) {
+  filesInput.disabled = false;
+
+  filesInput.addEventListener("change", () => {
+    const file = filesInput.files?.[0];
+
+    if (!file) {
+      fileCount.textContent =
+        "One file · max 2 MiB · quarantine only";
+      return;
+    }
+
+    const sizeKiB = Math.ceil(file.size / 1024);
+
+    fileCount.textContent =
+      `${file.name} · ${sizeKiB} KiB · quarantine only`;
+  });
+}
+
+if (attachLabel) {
+  attachLabel.classList.remove("is-disabled");
+}
+
+if (fileCount) {
+  fileCount.textContent =
+    "One file · max 2 MiB · quarantine only";
+}
+
 bindHint();
 
 function preferredVoiceMime(){
