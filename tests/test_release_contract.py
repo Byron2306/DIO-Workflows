@@ -51,10 +51,10 @@ class ReleaseContract(unittest.TestCase):
         ):
             self.assertIn(token, js)
 
-    def test_site_config_points_vesper_at_presence_public_worker(self):
+    def test_site_config_points_vesper_at_sovereign_api(self):
         cfg = (ROOT / 'assets/dio-config.js').read_text(encoding='utf-8')
         self.assertIn('vesperPresenceApiOrigin', cfg)
-        self.assertIn('https://dio-presence-gateway-public.dio-workflows.workers.dev', cfg)
+        self.assertIn('https://api.dioworkflows.co.za', cfg)
 
 
     def test_vesper_text_limit_matches_public_worker(self):

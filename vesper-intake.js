@@ -19,7 +19,7 @@ const cfg = window.DIO_SITE_CONFIG || {};
 const apiOrigin = (
   params.get("api") ||
   cfg.vesperPresenceApiOrigin ||
-  "https://dio-presence-gateway-staging.dio-workflows.workers.dev"
+  "https://api.dioworkflows.co.za"
 ).replace(/\/+$/, "");
 const messageMode = "text";
 
@@ -83,7 +83,8 @@ function replyAudio(row){
 }
 
 function attachReplyAudio(wrap, audio){
-  if (!wrap || audio?.state !== "ready") return;
+  if (!wrap || !audio) return;
+  if (audio.state && audio.state !== "ready") return;
   if (!audio.content_b64 || !audio.mime_type) return;
 
   const binary = atob(audio.content_b64);
@@ -112,7 +113,7 @@ function attachReplyAudio(wrap, audio){
 
 function errorMessage(error){
   if (error?.status === 429) {
-    return "Vesper's public edge is temporarily rate-limited by Cloudflare. The conversation rail is deployed; retry when the request window reopens.";
+    return "Vesper's public API is temporarily rate-limited. Please retry shortly.";
   }
   if (error?.status === 403) return "This Vesper session was refused by the public origin gate.";
   return error?.message || "Vesper's public conversation rail is temporarily unavailable.";
@@ -339,7 +340,7 @@ async function send(){
     await pollForReply();
   } catch (error) {
     console.warn("Vesper public web route unavailable", error);
-    setRoute(error?.status === 429 ? "Cloudflare quota gate" : "Conversation unavailable", false);
+    setRoute(error?.status === 429 ? "API rate limit" : "Conversation unavailable", false);
     setNotice(errorMessage(error), true);
   } finally {
     sendButton.disabled = false;
@@ -605,7 +606,7 @@ product.addEventListener("change", () => {
   try { await startSession(); }
   catch (error) {
     console.warn("Vesper initial public session unavailable", error);
-    setRoute(error?.status === 429 ? "Cloudflare quota gate" : "Awaiting connection", false);
+    setRoute(error?.status === 429 ? "API rate limit" : "Awaiting connection", false);
     setNotice(errorMessage(error), true);
     sendButton.disabled = false;
   }
