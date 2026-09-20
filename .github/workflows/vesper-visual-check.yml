@@ -58,7 +58,7 @@ jobs:
               if token not in js:
                   raise SystemExit(f"Vesper public web contract missing: {token}")
 
-          if 'vesperPresenceApiOrigin' not in config or 'dio-presence-gateway-public.dio-workflows.workers.dev' not in config:
+          if 'vesperPresenceApiOrigin' not in config or 'api.dioworkflows.co.za' not in config:
               raise SystemExit('Vesper public presence API origin missing')
 
           print("VESPER_PUBLIC_WEB_BRIDGE_VERIFIED")
