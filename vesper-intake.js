@@ -83,7 +83,8 @@ function replyAudio(row){
 }
 
 function attachReplyAudio(wrap, audio){
-  if (!wrap || audio?.state !== "ready") return;
+  if (!wrap || !audio) return;
+  if (audio.state && audio.state !== "ready") return;
   if (!audio.content_b64 || !audio.mime_type) return;
 
   const binary = atob(audio.content_b64);
