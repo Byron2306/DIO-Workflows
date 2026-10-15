@@ -33,6 +33,34 @@ let mediaStream = null;
 let voiceChunks = [];
 let voiceRecording = false;
 const renderedReplies = new Set();
+const custodyKey = `dio.actual.vesper:${apiOrigin}`;
+let sessionPromise = null;
+let pendingSubmission = JSON.parse(sessionStorage.getItem(`${custodyKey}:pending`) || "null");
+let productContextChanged = false;
+
+function clearPending(){
+  pendingSubmission = null;
+  sessionStorage.removeItem(`${custodyKey}:pending`);
+}
+async function bindPending(path, body){
+  const request = JSON.parse(body);
+  const bytes = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(body));
+  const digest = [...new Uint8Array(bytes)].map(value=>value.toString(16).padStart(2,"0")).join("");
+  if (pendingSubmission && (pendingSubmission.digest !== digest || pendingSubmission.path !== path)){
+    throw new Error("An earlier submission is unresolved. Restore its original message and files before retrying.");
+  }
+  if (!pendingSubmission){
+    const candidate = {id:crypto.randomUUID(), digest, path,
+      message:request.message || "", hint:request.incarnation_hint || "",
+      contextChanged:request.product_context_changed === true,
+      hasBinary:Boolean(request.audio_b64 || request.attachments?.length), body};
+    // Persist exact retry bytes before issuing the request. If tab storage is
+    // full, no submission leaves the browser and custody remains unchanged.
+    sessionStorage.setItem(`${custodyKey}:pending`, JSON.stringify(candidate));
+    pendingSubmission = candidate;
+  }
+  return JSON.stringify({...request, client_message_id:pendingSubmission.id});
+}
 
 function endpoint(path){ return `${apiOrigin}${path}`; }
 function sleep(ms){ return new Promise(resolve => setTimeout(resolve, ms)); }
@@ -119,6 +147,8 @@ function errorMessage(error){
   return error?.message || "Vesper's public conversation rail is temporarily unavailable.";
 }
 async function jsonRequest(path, options = {}, withSession = false){
+  const submission = options.method === "POST" && ["/api/vesper/web/message", "/api/vesper/web/voice"].includes(path);
+  if (submission) options = {...options, body:await bindPending(path, options.body)};
   const headers = new Headers(options.headers || {});
   if (options.body && !headers.has("Content-Type")) headers.set("Content-Type", "application/json");
   if (withSession && sessionToken) headers.set("X-Vesper-Session-Token", sessionToken);
@@ -130,10 +160,15 @@ async function jsonRequest(path, options = {}, withSession = false){
     catch { body = {message: raw}; }
   }
   if (!response.ok) {
+    if (submission && body.processing_state === "REJECTED_NO_CANONICAL_EFFECT") clearPending();
     const error = new Error(body.message || body.error || `HTTP ${response.status}`);
     error.status = response.status;
     error.body = body;
     throw error;
+  }
+  if (submission && body.state === "completed"){
+    clearPending();
+    productContextChanged = false;
   }
   return body;
 }
@@ -173,6 +208,37 @@ function bindHint(){
 }
 async function startSession(){
   if (sessionReady) return true;
+  if (sessionPromise) return sessionPromise;
+  sessionPromise = bindSession();
+  try { return await sessionPromise; }
+  finally { sessionPromise = null; }
+}
+async function bindSession(){
+  const saved = JSON.parse(sessionStorage.getItem(custodyKey) || "null");
+  if (saved){
+    conversationId = saved.conversationId;
+    sessionToken = saved.token;
+    const body = await jsonRequest(`/api/vesper/web/session?conversation_id=${encodeURIComponent(conversationId)}`, {method:"GET"}, true);
+    const session = body.session;
+    if (!session || session.conversation_id !== conversationId) throw new Error("The earlier conversation needs reconciliation.");
+    messages.replaceChildren();
+    for (const row of (session.messages || []).slice(1)) appendMessage(row.role === "customer" ? "customer" : "vesper", row.text);
+    replyCursor = (session.messages || []).length;
+    if (pendingSubmission){
+      const recovered = (body.replies || []).some(row=>String(row.source_message_id || "").endsWith(`:${pendingSubmission.id}`));
+      if (recovered){ clearPending(); messageInput.value = ""; }
+      else {
+        messageInput.value = pendingSubmission.message;
+        product.value = pendingSubmission.hint;
+        productContextChanged = pendingSubmission.contextChanged;
+        setNotice(pendingSubmission.hasBinary ? "An earlier submission is unresolved. Press Send to retry its original audio or file." : "An earlier submission is unresolved. Retry its original message.");
+      }
+    }
+    sessionReady = true;
+    setRoute("Conversation restored", true);
+    return true;
+  }
+  if (pendingSubmission) throw new Error("The earlier submission needs its original conversation restored.");
   const body = await jsonRequest(
     "/api/vesper/web/session",
     {method:"POST", body:JSON.stringify({surface:"dio_web"})},
@@ -182,6 +248,7 @@ async function startSession(){
   if (!ids.conversationId || !ids.token) throw new Error("Vesper session response did not include conversation custody credentials.");
   conversationId = ids.conversationId;
   sessionToken = ids.token;
+  sessionStorage.setItem(custodyKey, JSON.stringify(ids));
   sessionReady = true;
   setRoute("Conversation bound", true);
   setNotice("Vesper is ready. Text conversation is bound to the governed public rail.");
@@ -279,6 +346,26 @@ async function selectedWebAttachment(){
 }
 
 async function send(){
+  if (pendingSubmission?.hasBinary && pendingSubmission.body){
+    sendButton.disabled = true;
+    try {
+      await startSession();
+      // Session recovery may already prove this exact request completed.
+      if (pendingSubmission){
+        const {path, body} = pendingSubmission;
+        await jsonRequest(path, {method:"POST", body}, true);
+        messageInput.value = "";
+        if (filesInput) filesInput.value = "";
+        setNotice("Original submission accepted. Waiting for Vesper…");
+        await pollForReply();
+      }
+    } catch (error) {
+      setNotice(`${errorMessage(error)} Press Send to retry the original submission.`, true);
+    } finally {
+      sendButton.disabled = false;
+    }
+    return;
+  }
   const text = messageInput.value.trim();
   const selectedFile =
     filesInput?.files?.[0] || null;
@@ -320,6 +407,7 @@ async function send(){
             attachment ? [attachment] : [],
           incarnation_hint: incarnationHint,
           message_mode: messageMode,
+          product_context_changed: productContextChanged,
         }),
       },
       true,
@@ -458,6 +546,7 @@ async function submitVoiceBlob(blob){
             .split(";", 1)[0],
         incarnation_hint: incarnationHint,
         message_mode: "voice",
+        product_context_changed: productContextChanged,
       }),
     },
     true,
@@ -599,6 +688,7 @@ messageInput.addEventListener("keydown", event => {
   }
 });
 product.addEventListener("change", () => {
+  productContextChanged = true;
   if (sessionReady) setNotice("Product context changed. The next message will carry the new incarnation hint.");
 });
 
@@ -611,3 +701,4 @@ product.addEventListener("change", () => {
     sendButton.disabled = false;
   }
 })();
+
