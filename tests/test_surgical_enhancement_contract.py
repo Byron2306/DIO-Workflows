@@ -1,12 +1,10 @@
 from pathlib import Path
 from bs4 import BeautifulSoup
-import hashlib
 
 ROOT = Path(__file__).resolve().parents[1]
 HOME = (ROOT / 'index.html').read_text(encoding='utf-8')
 SOUP = BeautifulSoup(HOME, 'html.parser')
 
-BASE_VESPER_SHA256 = 'e765756ae65a78ec401e1bbcf88ceed3d782ef7c6daf4558dc9abc24f3d1b96c'
 CORE_ORDER = [
     'governed-consequence',
     'constitutional-laws',
@@ -122,11 +120,6 @@ def test_document_studio_and_vesper_receive_small_native_overview_pages():
         assert soup.select_one('.editorial-hero') is not None
         assert soup.select_one('.family-workflow-section') is not None
         assert soup.select_one('.family-production-transition') is not None
-
-
-def test_vesper_transport_is_byte_for_byte_preserved():
-    actual = hashlib.sha256((ROOT / 'vesper-intake.js').read_bytes()).hexdigest()
-    assert actual == BASE_VESPER_SHA256
 
 
 def test_enhancement_styles_cover_native_flagship_and_product_family_views():

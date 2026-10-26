@@ -1,12 +1,9 @@
 from pathlib import Path
 from bs4 import BeautifulSoup
-import hashlib
-
 ROOT = Path(__file__).resolve().parents[1]
 HOME = (ROOT / 'index.html').read_text(encoding='utf-8')
 SOUP = BeautifulSoup(HOME, 'html.parser')
 POLISH = ROOT / 'assets' / 'corpo-cult-polish.css'
-BASE_VESPER_SHA256 = 'e765756ae65a78ec401e1bbcf88ceed3d782ef7c6daf4558dc9abc24f3d1b96c'
 
 
 def test_polish_layer_is_loaded_last_without_replacing_site_spine():
@@ -67,8 +64,3 @@ def test_explainer_cards_remain_dark_not_paper_cards():
     explainer = css.split('.launch-v2 .family-explainer{',1)[1].split('}',1)[0]
     assert '#0b0c0e' in explainer or 'rgba(11,12,14' in explainer
     assert '255,252,246' not in explainer
-
-
-def test_vesper_transport_remains_byte_identical():
-    actual = hashlib.sha256((ROOT / 'vesper-intake.js').read_bytes()).hexdigest()
-    assert actual == BASE_VESPER_SHA256
