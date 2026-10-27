@@ -1,0 +1,2117 @@
+{
+  "schema": "dio.public_offer_evidence.v1",
+  "source_commit": "cc4316f88c1991bc3c49707e12f5a0ef07ba4f5c",
+  "offer_count": 68,
+  "offers": [
+    {
+      "product_id": "accessible_publish",
+      "product_name": "Accessible Publish",
+      "suite": "Demand & Presence",
+      "buyer_job": "For Accessible Publish: Publication owners need to publish material people can use with assistive technology.",
+      "bounded_outcome": "A accessible publication pack prepared for human review across the agreed scope of one page.",
+      "primary_deliverable": "accessible publication pack",
+      "acceptance_criteria": [
+        "accessibility checks and reading order are recorded",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the accessible publication pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=accessible_publish"
+      }
+    },
+    {
+      "product_id": "agent_authority",
+      "product_name": "Agent Authority",
+      "suite": "AI & Digital Trust",
+      "buyer_job": "For Agent Authority: AI governance owners need to define what each agent may do and who can approve it.",
+      "bounded_outcome": "A agent authority register prepared for human review across the agreed scope of one agent.",
+      "primary_deliverable": "agent authority register",
+      "acceptance_criteria": [
+        "every action class has a typed authority rule",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the agent authority register",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=agent_authority"
+      }
+    },
+    {
+      "product_id": "ai_incidentroom",
+      "product_name": "AI IncidentRoom",
+      "suite": "AI & Digital Trust",
+      "buyer_job": "For AI IncidentRoom: AI incident leads need to reconstruct an AI incident without losing evidence or accountability.",
+      "bounded_outcome": "A AI incident evidence room prepared for human review across the agreed scope of one incident.",
+      "primary_deliverable": "AI incident evidence room",
+      "acceptance_criteria": [
+        "events, actors, evidence, and decisions are time-linked",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the AI incident evidence room",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=ai_incidentroom"
+      }
+    },
+    {
+      "product_id": "article_publication",
+      "product_name": "Article Publication",
+      "suite": "Canon Extensions",
+      "buyer_job": "For Article Publication: Authors and editors need to turn an approved article into a controlled publication.",
+      "bounded_outcome": "A article publication bundle prepared for human review across the agreed scope of one article page.",
+      "primary_deliverable": "article publication bundle",
+      "acceptance_criteria": [
+        "the published structure matches the approved manuscript",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the article publication bundle",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=article_publication"
+      }
+    },
+    {
+      "product_id": "article_publication_studio",
+      "product_name": "Article Publication Studio",
+      "suite": "Canon Extensions",
+      "buyer_job": "For Article Publication Studio: Editorial teams need to prepare a complete article package for channel review.",
+      "bounded_outcome": "A article studio package prepared for human review across the agreed scope of one publication package.",
+      "primary_deliverable": "article studio package",
+      "acceptance_criteria": [
+        "copy, visuals, metadata, and channel files reconcile",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the article studio package",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=article_publication_studio"
+      }
+    },
+    {
+      "product_id": "assuranceroom",
+      "product_name": "AssuranceRoom",
+      "suite": "Evidence & Assurance",
+      "buyer_job": "For AssuranceRoom: Assurance leaders need to assemble controls and evidence for governed review.",
+      "bounded_outcome": "A assurance evidence room prepared for human review across the agreed scope of one assurance control.",
+      "primary_deliverable": "assurance evidence room",
+      "acceptance_criteria": [
+        "each control links to current evidence and an owner",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the assurance evidence room",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=assuranceroom"
+      }
+    },
+    {
+      "product_id": "auditproof",
+      "product_name": "AuditProof",
+      "suite": "Evidence & Assurance",
+      "buyer_job": "For AuditProof: Audit teams need to show which controls are supported and where gaps remain.",
+      "bounded_outcome": "A audit proof pack prepared for human review across the agreed scope of one control evidence item.",
+      "primary_deliverable": "audit proof pack",
+      "acceptance_criteria": [
+        "control evidence is traceable and gaps are explicit",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the audit proof pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=auditproof"
+      }
+    },
+    {
+      "product_id": "campaign_lab",
+      "product_name": "Campaign Lab",
+      "suite": "Demand & Presence",
+      "buyer_job": "For Campaign Lab: Campaign owners need to translate an approved offer into coherent campaign materials.",
+      "bounded_outcome": "A campaign concept pack prepared for human review across the agreed scope of one campaign.",
+      "primary_deliverable": "campaign concept pack",
+      "acceptance_criteria": [
+        "audience, message, evidence, and approvals align",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the campaign concept pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=campaign_lab"
+      }
+    },
+    {
+      "product_id": "certificationproof",
+      "product_name": "CertificationProof",
+      "suite": "Evidence & Assurance",
+      "buyer_job": "For CertificationProof: Certification owners need to prepare requirement evidence before a certification review.",
+      "bounded_outcome": "A certification readiness pack prepared for human review across the agreed scope of one certification requirement.",
+      "primary_deliverable": "certification readiness pack",
+      "acceptance_criteria": [
+        "every requirement has evidence, a gap, or a named action",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the certification readiness pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=certificationproof"
+      }
+    },
+    {
+      "product_id": "changeproof",
+      "product_name": "ChangeProof",
+      "suite": "AI & Digital Trust",
+      "buyer_job": "For ChangeProof: Change managers need to prove what changed, why, and under whose authority.",
+      "bounded_outcome": "A change proof record prepared for human review across the agreed scope of one change record.",
+      "primary_deliverable": "change proof record",
+      "acceptance_criteria": [
+        "before-and-after state and approvals are linked",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the change proof record",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=changeproof"
+      }
+    },
+    {
+      "product_id": "contract_desk",
+      "product_name": "Contract Desk",
+      "suite": "Canon Extensions",
+      "buyer_job": "For Contract Desk: Contract owners need to review contract clauses and decisions in one controlled workspace.",
+      "bounded_outcome": "A contract review desk pack prepared for human review across the agreed scope of one contract clause.",
+      "primary_deliverable": "contract review desk pack",
+      "acceptance_criteria": [
+        "clauses, issues, owners, and decisions reconcile",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the contract review desk pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=contract_desk"
+      }
+    },
+    {
+      "product_id": "contractproof",
+      "product_name": "ContractProof",
+      "suite": "Evidence & Assurance",
+      "buyer_job": "For ContractProof: Contract assurance teams need to demonstrate obligations and supporting evidence clause by clause.",
+      "bounded_outcome": "A contract obligation proof pack prepared for human review across the agreed scope of one contract clause.",
+      "primary_deliverable": "contract obligation proof pack",
+      "acceptance_criteria": [
+        "each material clause has an evidence or escalation state",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the contract obligation proof pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=contractproof"
+      }
+    },
+    {
+      "product_id": "controldrift",
+      "product_name": "ControlDrift",
+      "suite": "AI & Digital Trust",
+      "buyer_job": "For ControlDrift: Control owners need to detect when operating controls diverge from their approved state.",
+      "bounded_outcome": "A control drift report prepared for human review across the agreed scope of one control monitoring cycle.",
+      "primary_deliverable": "control drift report",
+      "acceptance_criteria": [
+        "changes are compared to a dated control baseline",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the control drift report",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=controldrift"
+      }
+    },
+    {
+      "product_id": "corporate_readiness",
+      "product_name": "Corporate Readiness",
+      "suite": "Canon Extensions",
+      "buyer_job": "For Corporate Readiness: Corporate operations leaders need to prepare institutional evidence for a defined readiness decision.",
+      "bounded_outcome": "A corporate readiness dossier prepared for human review across the agreed scope of one readiness requirement.",
+      "primary_deliverable": "corporate readiness dossier",
+      "acceptance_criteria": [
+        "every readiness requirement has an owner and status",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the corporate readiness dossier",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=corporate_readiness"
+      }
+    },
+    {
+      "product_id": "cpdproof",
+      "product_name": "CPDProof",
+      "suite": "Enterprise Operations",
+      "buyer_job": "For CPDProof: Professionals and CPD reviewers need to organise continuing-development records for credible review.",
+      "bounded_outcome": "A CPD evidence portfolio prepared for human review across the agreed scope of one cpd record.",
+      "primary_deliverable": "CPD evidence portfolio",
+      "acceptance_criteria": [
+        "activities, dates, outcomes, and evidence reconcile",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the CPD evidence portfolio",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=cpdproof"
+      }
+    },
+    {
+      "product_id": "criticalai_assurance",
+      "product_name": "CriticalAI Assurance",
+      "suite": "AI & Digital Trust",
+      "buyer_job": "For CriticalAI Assurance: Critical-system assurance leads need to evaluate an AI system against safety and authority obligations.",
+      "bounded_outcome": "A critical AI assurance dossier prepared for human review across the agreed scope of one critical ai system.",
+      "primary_deliverable": "critical AI assurance dossier",
+      "acceptance_criteria": [
+        "hazards, controls, evidence, and residual gaps are linked",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the critical AI assurance dossier",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=criticalai_assurance"
+      }
+    },
+    {
+      "product_id": "cyberassurance",
+      "product_name": "CyberAssurance",
+      "suite": "AI & Digital Trust",
+      "buyer_job": "For CyberAssurance: Cyber risk owners need to turn cyber controls and evidence into a reviewable assurance position.",
+      "bounded_outcome": "A cyber assurance pack prepared for human review across the agreed scope of one cyber control.",
+      "primary_deliverable": "cyber assurance pack",
+      "acceptance_criteria": [
+        "control coverage and evidence freshness are explicit",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the cyber assurance pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=cyberassurance"
+      }
+    },
+    {
+      "product_id": "diligenceroom",
+      "product_name": "DiligenceRoom",
+      "suite": "Evidence & Assurance",
+      "buyer_job": "For DiligenceRoom: Transaction and diligence leads need to organise diligence material for a bounded decision.",
+      "bounded_outcome": "A diligence evidence room prepared for human review across the agreed scope of one diligence document.",
+      "primary_deliverable": "diligence evidence room",
+      "acceptance_criteria": [
+        "documents, questions, findings, and access history reconcile",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the diligence evidence room",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=diligenceroom"
+      }
+    },
+    {
+      "product_id": "dio_ai_assurance",
+      "product_name": "DIO AI Assurance",
+      "suite": "AI & Digital Trust",
+      "buyer_job": "For DIO AI Assurance: AI assurance leaders need to assess an AI system across governance, risk, and evidence.",
+      "bounded_outcome": "A AI assurance report prepared for human review across the agreed scope of one ai system.",
+      "primary_deliverable": "AI assurance report",
+      "acceptance_criteria": [
+        "claims are tied to controls, tests, and stated limitations",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the AI assurance report",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=dio_ai_assurance"
+      }
+    },
+    {
+      "product_id": "dio_regops",
+      "product_name": "DIO RegOps",
+      "suite": "Public & Programme Ops",
+      "buyer_job": "For DIO RegOps: Regulatory operations teams need to translate obligations into owned, evidenced operating work.",
+      "bounded_outcome": "A regulatory operations register prepared for human review across the agreed scope of one regulatory obligation.",
+      "primary_deliverable": "regulatory operations register",
+      "acceptance_criteria": [
+        "each obligation has applicability, owner, action, and evidence state",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the regulatory operations register",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=dio_regops"
+      }
+    },
+    {
+      "product_id": "document_studio_edit",
+      "product_name": "Document Studio Edit",
+      "suite": "Demand & Presence",
+      "buyer_job": "For Document Studio Edit: Document owners need to improve clarity and consistency without changing approved meaning.",
+      "bounded_outcome": "A controlled edited document prepared for human review across the agreed scope of one page.",
+      "primary_deliverable": "controlled edited document",
+      "acceptance_criteria": [
+        "edits preserve source meaning and tracked decisions",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the controlled edited document",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=document_studio_edit"
+      }
+    },
+    {
+      "product_id": "document_studio_localize",
+      "product_name": "Document Studio Localize",
+      "suite": "Demand & Presence",
+      "buyer_job": "For Document Studio Localize: Localization owners need to adapt approved content for a named language and audience.",
+      "bounded_outcome": "A localized document bundle prepared for human review across the agreed scope of one word.",
+      "primary_deliverable": "localized document bundle",
+      "acceptance_criteria": [
+        "language approval and layout expansion checks are recorded",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the localized document bundle",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=document_studio_localize"
+      }
+    },
+    {
+      "product_id": "document_studio_publish",
+      "product_name": "Document Studio Publish",
+      "suite": "Demand & Presence",
+      "buyer_job": "For Document Studio Publish: Publication teams need to turn approved content into exact requested formats.",
+      "bounded_outcome": "A multi-format publication bundle prepared for human review across the agreed scope of one output document.",
+      "primary_deliverable": "multi-format publication bundle",
+      "acceptance_criteria": [
+        "semantic content is complete across every requested format",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the multi-format publication bundle",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=document_studio_publish"
+      }
+    },
+    {
+      "product_id": "donorproof",
+      "product_name": "DonorProof",
+      "suite": "Public & Programme Ops",
+      "buyer_job": "For DonorProof: Programme and donor-reporting leads need to substantiate donor-facing claims with source evidence.",
+      "bounded_outcome": "A donor evidence pack prepared for human review across the agreed scope of one donor evidence item.",
+      "primary_deliverable": "donor evidence pack",
+      "acceptance_criteria": [
+        "each reported claim has a source binding and review state",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the donor evidence pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=donorproof"
+      }
+    },
+    {
+      "product_id": "dora_vendor_assurance",
+      "product_name": "DORA Vendor Assurance",
+      "suite": "Evidence & Assurance",
+      "buyer_job": "For DORA Vendor Assurance: ICT risk and procurement leads need to assess regulated vendor evidence against DORA obligations.",
+      "bounded_outcome": "A DORA vendor assurance pack prepared for human review across the agreed scope of one regulated vendor.",
+      "primary_deliverable": "DORA vendor assurance pack",
+      "acceptance_criteria": [
+        "vendor evidence maps to applicable DORA requirements",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the DORA vendor assurance pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=dora_vendor_assurance"
+      }
+    },
+    {
+      "product_id": "dossierops",
+      "product_name": "DossierOps",
+      "suite": "Demand & Presence",
+      "buyer_job": "For DossierOps: Dossier owners need to assemble a controlled dossier from distributed source material.",
+      "bounded_outcome": "A indexed dossier bundle prepared for human review across the agreed scope of one dossier item.",
+      "primary_deliverable": "indexed dossier bundle",
+      "acceptance_criteria": [
+        "every dossier item has provenance, version, and inclusion status",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the indexed dossier bundle",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=dossierops"
+      }
+    },
+    {
+      "product_id": "entrepreneurproof",
+      "product_name": "EntrepreneurProof",
+      "suite": "Canon Extensions",
+      "buyer_job": "For EntrepreneurProof: Founders and venture reviewers need to test venture claims against available operating evidence.",
+      "bounded_outcome": "A venture claim evidence pack prepared for human review across the agreed scope of one venture claim.",
+      "primary_deliverable": "venture claim evidence pack",
+      "acceptance_criteria": [
+        "claims are separated into proven, declared, and missing evidence",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the venture claim evidence pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=entrepreneurproof"
+      }
+    },
+    {
+      "product_id": "evidex_evidenceops",
+      "product_name": "Evidex EvidenceOps",
+      "suite": "Evidence & Assurance",
+      "buyer_job": "For Evidex EvidenceOps: Evidence and reporting teams need to convert scattered records into a defensible evidence package.",
+      "bounded_outcome": "A source-bound evidence pack prepared for human review across the agreed scope of one evidence item.",
+      "primary_deliverable": "source-bound evidence pack",
+      "acceptance_criteria": [
+        "claims, sources, gaps, and review states reconcile",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the source-bound evidence pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=evidex_evidenceops"
+      }
+    },
+    {
+      "product_id": "finance_readiness",
+      "product_name": "Finance Readiness",
+      "suite": "Canon Extensions",
+      "buyer_job": "For Finance Readiness: Finance leaders need to identify what is ready and missing for a finance decision.",
+      "bounded_outcome": "A finance readiness assessment prepared for human review across the agreed scope of one finance requirement.",
+      "primary_deliverable": "finance readiness assessment",
+      "acceptance_criteria": [
+        "requirements, supplied records, and unresolved gaps are explicit",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the finance readiness assessment",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=finance_readiness"
+      }
+    },
+    {
+      "product_id": "finance_readiness_studio",
+      "product_name": "Finance Readiness Studio",
+      "suite": "Canon Extensions",
+      "buyer_job": "For Finance Readiness Studio: Finance teams and advisors need to prepare a customer-ready finance package from approved records.",
+      "bounded_outcome": "A finance readiness presentation pack prepared for human review across the agreed scope of one finance pack.",
+      "primary_deliverable": "finance readiness presentation pack",
+      "acceptance_criteria": [
+        "figures, narratives, and source records reconcile",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the finance readiness presentation pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=finance_readiness_studio"
+      }
+    },
+    {
+      "product_id": "fundingfinder",
+      "product_name": "FundingFinder",
+      "suite": "Canon Extensions",
+      "buyer_job": "For FundingFinder: Funding leads need to screen funding opportunities against real eligibility and timing.",
+      "bounded_outcome": "A funding opportunity shortlist prepared for human review across the agreed scope of one funding opportunity.",
+      "primary_deliverable": "funding opportunity shortlist",
+      "acceptance_criteria": [
+        "eligibility, evidence grade, deadline, and fit are recorded",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE8_FRESH_PROOF_REQUIRED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the funding opportunity shortlist",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=fundingfinder"
+      }
+    },
+    {
+      "product_id": "grantproof",
+      "product_name": "GrantProof",
+      "suite": "Public & Programme Ops",
+      "buyer_job": "For GrantProof: Grant managers need to show that grant obligations and reported performance are supported.",
+      "bounded_outcome": "A grant compliance proof pack prepared for human review across the agreed scope of one grant requirement.",
+      "primary_deliverable": "grant compliance proof pack",
+      "acceptance_criteria": [
+        "requirements, claims, and evidence bind at item level",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the grant compliance proof pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=grantproof"
+      }
+    },
+    {
+      "product_id": "homs_accreditation",
+      "product_name": "HOMS Accreditation",
+      "suite": "Education & Research",
+      "buyer_job": "For HOMS Accreditation: Accreditation teams need to prepare programme evidence against accreditation requirements.",
+      "bounded_outcome": "A accreditation evidence matrix prepared for human review across the agreed scope of one accreditation requirement.",
+      "primary_deliverable": "accreditation evidence matrix",
+      "acceptance_criteria": [
+        "each criterion has evidence, ownership, and gap status",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the accreditation evidence matrix",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=homs_accreditation"
+      }
+    },
+    {
+      "product_id": "homs_assess",
+      "product_name": "HOMS Assess",
+      "suite": "Education & Research",
+      "buyer_job": "For HOMS Assess: Educators and assessment teams need to evaluate learner work consistently while preserving educator judgement.",
+      "bounded_outcome": "A assessment support pack prepared for human review across the agreed scope of one learner script.",
+      "primary_deliverable": "assessment support pack",
+      "acceptance_criteria": [
+        "rubric use, evidence, and human decisions are visible",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the assessment support pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=homs_assess"
+      }
+    },
+    {
+      "product_id": "homs_curriculum",
+      "product_name": "HOMS Curriculum",
+      "suite": "Education & Research",
+      "buyer_job": "For HOMS Curriculum: Curriculum leaders need to map curriculum intent into teachable, reviewable units.",
+      "bounded_outcome": "A curriculum alignment pack prepared for human review across the agreed scope of one curriculum unit.",
+      "primary_deliverable": "curriculum alignment pack",
+      "acceptance_criteria": [
+        "outcomes, content, activities, and assessment links reconcile",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the curriculum alignment pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=homs_curriculum"
+      }
+    },
+    {
+      "product_id": "homs_exam",
+      "product_name": "HOMS Exam",
+      "suite": "Education & Research",
+      "buyer_job": "For HOMS Exam: Exam setters and moderators need to prepare a balanced assessment package from approved scope.",
+      "bounded_outcome": "A exam construction pack prepared for human review across the agreed scope of one assessment package.",
+      "primary_deliverable": "exam construction pack",
+      "acceptance_criteria": [
+        "coverage, marks, cognitive demand, and memorandum align",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the exam construction pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=homs_exam"
+      }
+    },
+    {
+      "product_id": "homs_learning_studio",
+      "product_name": "HOMS Learning Studio",
+      "suite": "Education & Research",
+      "buyer_job": "For HOMS Learning Studio: Learning designers need to produce coherent learning assets for a defined topic and audience.",
+      "bounded_outcome": "A learning topic bundle prepared for human review across the agreed scope of one topic pack.",
+      "primary_deliverable": "learning topic bundle",
+      "acceptance_criteria": [
+        "objectives, explanations, activities, and checks align",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the learning topic bundle",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=homs_learning_studio"
+      }
+    },
+    {
+      "product_id": "homs_moderate",
+      "product_name": "HOMS Moderate",
+      "suite": "Education & Research",
+      "buyer_job": "For HOMS Moderate: Assessment moderators need to review assessment consistency across a defined batch.",
+      "bounded_outcome": "A moderation findings pack prepared for human review across the agreed scope of one assessment batch.",
+      "primary_deliverable": "moderation findings pack",
+      "acceptance_criteria": [
+        "sampling, rubric application, exceptions, and decisions are recorded",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the moderation findings pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=homs_moderate"
+      }
+    },
+    {
+      "product_id": "impactproof",
+      "product_name": "ImpactProof",
+      "suite": "Public & Programme Ops",
+      "buyer_job": "For ImpactProof: Impact and evaluation leads need to substantiate outcome claims with traceable evidence.",
+      "bounded_outcome": "A impact evidence pack prepared for human review across the agreed scope of one outcome evidence item.",
+      "primary_deliverable": "impact evidence pack",
+      "acceptance_criteria": [
+        "outcome claims distinguish contribution, evidence, and uncertainty",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the impact evidence pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=impactproof"
+      }
+    },
+    {
+      "product_id": "incidentproof",
+      "product_name": "IncidentProof",
+      "suite": "AI & Digital Trust",
+      "buyer_job": "For IncidentProof: Incident and assurance leads need to reconstruct an incident and preserve accountable decisions.",
+      "bounded_outcome": "A incident proof pack prepared for human review across the agreed scope of one incident.",
+      "primary_deliverable": "incident proof pack",
+      "acceptance_criteria": [
+        "timeline, evidence, actors, and decisions reconcile",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the incident proof pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=incidentproof"
+      }
+    },
+    {
+      "product_id": "investorproof",
+      "product_name": "InvestorProof",
+      "suite": "Canon Extensions",
+      "buyer_job": "For InvestorProof: Founders and investment teams need to prepare investor claims for evidence-based scrutiny.",
+      "bounded_outcome": "A investor readiness evidence pack prepared for human review across the agreed scope of one investor readiness item.",
+      "primary_deliverable": "investor readiness evidence pack",
+      "acceptance_criteria": [
+        "traction, market, finance, and risk claims show evidence state",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the investor readiness evidence pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=investorproof"
+      }
+    },
+    {
+      "product_id": "launch_studio",
+      "product_name": "Launch Studio",
+      "suite": "Canon Extensions",
+      "buyer_job": "For Launch Studio: Launch owners need to coordinate an approved offer across launch channels.",
+      "bounded_outcome": "A launch orchestration pack prepared for human review across the agreed scope of one launch channel.",
+      "primary_deliverable": "launch orchestration pack",
+      "acceptance_criteria": [
+        "channel assets, owners, dates, approvals, and spend gates align",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the launch orchestration pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=launch_studio"
+      }
+    },
+    {
+      "product_id": "market_radar",
+      "product_name": "Market Radar",
+      "suite": "Demand & Presence",
+      "buyer_job": "For Market Radar: Commercial decision-makers need to monitor a defined market segment using graded evidence.",
+      "bounded_outcome": "A market signal brief prepared for human review across the agreed scope of one market segment.",
+      "primary_deliverable": "market signal brief",
+      "acceptance_criteria": [
+        "signals identify source, freshness, confidence, and implication",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE8_FRESH_PROOF_REQUIRED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the market signal brief",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=market_radar"
+      }
+    },
+    {
+      "product_id": "modelproof",
+      "product_name": "ModelProof",
+      "suite": "AI & Digital Trust",
+      "buyer_job": "For ModelProof: Model risk owners need to document model purpose, tests, limits, and approvals.",
+      "bounded_outcome": "A model evidence dossier prepared for human review across the agreed scope of one model.",
+      "primary_deliverable": "model evidence dossier",
+      "acceptance_criteria": [
+        "model claims bind to tests, versions, limits, and owners",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the model evidence dossier",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=modelproof"
+      }
+    },
+    {
+      "product_id": "offer_lab",
+      "product_name": "Offer Lab",
+      "suite": "Demand & Presence",
+      "buyer_job": "For Offer Lab: Offer owners need to compare offer variants before committing commercial resources.",
+      "bounded_outcome": "A offer experiment brief prepared for human review across the agreed scope of one offer variant.",
+      "primary_deliverable": "offer experiment brief",
+      "acceptance_criteria": [
+        "audience, problem, promise, evidence, and test criteria are explicit",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE8_FRESH_PROOF_REQUIRED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the offer experiment brief",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=offer_lab"
+      }
+    },
+    {
+      "product_id": "opportunity_foundry",
+      "product_name": "Opportunity Foundry",
+      "suite": "Demand & Presence",
+      "buyer_job": "For Opportunity Foundry: Growth and strategy teams need to turn raw signals into a reviewable opportunity thesis.",
+      "bounded_outcome": "A opportunity assessment pack prepared for human review across the agreed scope of one opportunity scan.",
+      "primary_deliverable": "opportunity assessment pack",
+      "acceptance_criteria": [
+        "fit, evidence, uncertainty, effort, and next test are recorded",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE8_FRESH_PROOF_REQUIRED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the opportunity assessment pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=opportunity_foundry"
+      }
+    },
+    {
+      "product_id": "permitproof",
+      "product_name": "PermitProof",
+      "suite": "Public & Programme Ops",
+      "buyer_job": "For PermitProof: Permit and operations teams need to prepare evidence against permit conditions.",
+      "bounded_outcome": "A permit compliance pack prepared for human review across the agreed scope of one permit requirement.",
+      "primary_deliverable": "permit compliance pack",
+      "acceptance_criteria": [
+        "each permit condition has applicability, evidence, and exception status",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the permit compliance pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=permitproof"
+      }
+    },
+    {
+      "product_id": "policyproof",
+      "product_name": "PolicyProof",
+      "suite": "Evidence & Assurance",
+      "buyer_job": "For PolicyProof: Policy owners need to show how approved policy clauses translate into evidenced practice.",
+      "bounded_outcome": "A policy implementation proof pack prepared for human review across the agreed scope of one policy clause.",
+      "primary_deliverable": "policy implementation proof pack",
+      "acceptance_criteria": [
+        "clauses map to controls, owners, evidence, and gaps",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the policy implementation proof pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=policyproof"
+      }
+    },
+    {
+      "product_id": "popia_readiness",
+      "product_name": "POPIA Readiness",
+      "suite": "Canon Extensions",
+      "buyer_job": "For POPIA Readiness: Privacy and information officers need to assess operational readiness against POPIA requirements.",
+      "bounded_outcome": "A POPIA readiness pack prepared for human review across the agreed scope of one privacy requirement.",
+      "primary_deliverable": "POPIA readiness pack",
+      "acceptance_criteria": [
+        "privacy requirements map to evidence, owners, and remediation",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the POPIA readiness pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=popia_readiness"
+      }
+    },
+    {
+      "product_id": "professional_correspondence",
+      "product_name": "Professional Correspondence",
+      "suite": "Canon Extensions",
+      "buyer_job": "For Professional Correspondence: Professional service teams need to prepare precise correspondence from controlled facts.",
+      "bounded_outcome": "A review-ready correspondence prepared for human review across the agreed scope of one correspondence item.",
+      "primary_deliverable": "review-ready correspondence",
+      "acceptance_criteria": [
+        "facts, tone, requested action, and authority boundary are checked",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the review-ready correspondence",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=professional_correspondence"
+      }
+    },
+    {
+      "product_id": "professional_correspondence_studio",
+      "product_name": "Professional Correspondence Studio",
+      "suite": "Canon Extensions",
+      "buyer_job": "For Professional Correspondence Studio: Client-service teams need to produce a coordinated correspondence set for a live case.",
+      "bounded_outcome": "A correspondence case pack prepared for human review across the agreed scope of one correspondence pack.",
+      "primary_deliverable": "correspondence case pack",
+      "acceptance_criteria": [
+        "messages remain consistent across recipients, facts, and actions",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the correspondence case pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=professional_correspondence_studio"
+      }
+    },
+    {
+      "product_id": "programmeproof",
+      "product_name": "ProgrammeProof",
+      "suite": "Public & Programme Ops",
+      "buyer_job": "For ProgrammeProof: Programme leaders need to connect programme indicators and decisions to current evidence.",
+      "bounded_outcome": "A programme performance proof pack prepared for human review across the agreed scope of one programme indicator.",
+      "primary_deliverable": "programme performance proof pack",
+      "acceptance_criteria": [
+        "indicators, periods, sources, variance, and decisions reconcile",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the programme performance proof pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=programmeproof"
+      }
+    },
+    {
+      "product_id": "projectproof",
+      "product_name": "ProjectProof",
+      "suite": "Enterprise Operations",
+      "buyer_job": "For ProjectProof: Project leaders need to assemble project delivery evidence for a defined review.",
+      "bounded_outcome": "A project evidence pack prepared for human review across the agreed scope of one project evidence item.",
+      "primary_deliverable": "project evidence pack",
+      "acceptance_criteria": [
+        "milestones, outputs, decisions, and supporting records are linked",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the project evidence pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=projectproof"
+      }
+    },
+    {
+      "product_id": "promotionproof",
+      "product_name": "PromotionProof",
+      "suite": "Enterprise Operations",
+      "buyer_job": "For PromotionProof: Professionals and promotion panels need to organise promotion claims into a reviewable evidence record.",
+      "bounded_outcome": "A promotion evidence portfolio prepared for human review across the agreed scope of one promotion evidence item.",
+      "primary_deliverable": "promotion evidence portfolio",
+      "acceptance_criteria": [
+        "each claim links to dated evidence and declared context",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the promotion evidence portfolio",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=promotionproof"
+      }
+    },
+    {
+      "product_id": "qualityproof",
+      "product_name": "QualityProof",
+      "suite": "Evidence & Assurance",
+      "buyer_job": "For QualityProof: Quality managers need to demonstrate that quality controls operated as intended.",
+      "bounded_outcome": "A quality control proof pack prepared for human review across the agreed scope of one quality control.",
+      "primary_deliverable": "quality control proof pack",
+      "acceptance_criteria": [
+        "control execution, exceptions, evidence, and corrective action reconcile",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the quality control proof pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=qualityproof"
+      }
+    },
+    {
+      "product_id": "releaseproof",
+      "product_name": "ReleaseProof",
+      "suite": "AI & Digital Trust",
+      "buyer_job": "For ReleaseProof: Release and change owners need to show that a release met its gates before approval.",
+      "bounded_outcome": "A release evidence pack prepared for human review across the agreed scope of one release.",
+      "primary_deliverable": "release evidence pack",
+      "acceptance_criteria": [
+        "tests, approvals, changes, risks, and rollback evidence are linked",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the release evidence pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=releaseproof"
+      }
+    },
+    {
+      "product_id": "report_pitch_studio",
+      "product_name": "Report & Pitch Studio",
+      "suite": "Canon Extensions",
+      "buyer_job": "For Report & Pitch Studio: Report and proposal owners need to turn approved evidence into a decision-ready narrative.",
+      "bounded_outcome": "A report and pitch bundle prepared for human review across the agreed scope of one report page.",
+      "primary_deliverable": "report and pitch bundle",
+      "acceptance_criteria": [
+        "claims, figures, narrative, and source references reconcile",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the report and pitch bundle",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=report_pitch_studio"
+      }
+    },
+    {
+      "product_id": "site_studio",
+      "product_name": "Site Studio",
+      "suite": "Canon Extensions",
+      "buyer_job": "For Site Studio: Service and product owners need to publish a credible site from approved positioning and evidence.",
+      "bounded_outcome": "A responsive website bundle prepared for human review across the agreed scope of one site page.",
+      "primary_deliverable": "responsive website bundle",
+      "acceptance_criteria": [
+        "content, navigation, accessibility, forms, and evidence claims are checked",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the responsive website bundle",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=site_studio"
+      }
+    },
+    {
+      "product_id": "sophia_integrity",
+      "product_name": "Sophia Integrity",
+      "suite": "Education & Research",
+      "buyer_job": "For Sophia Integrity: Academic integrity teams need to review a manuscript for integrity risks without replacing human judgement.",
+      "bounded_outcome": "A integrity review report prepared for human review across the agreed scope of one manuscript page.",
+      "primary_deliverable": "integrity review report",
+      "acceptance_criteria": [
+        "flagged passages, sources, reasons, and reviewer actions are traceable",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the integrity review report",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=sophia_integrity"
+      }
+    },
+    {
+      "product_id": "sophia_research",
+      "product_name": "Sophia Research",
+      "suite": "Education & Research",
+      "buyer_job": "For Sophia Research: Researchers need to organise sources and claims for a bounded research question.",
+      "bounded_outcome": "A research evidence map prepared for human review across the agreed scope of one source item.",
+      "primary_deliverable": "research evidence map",
+      "acceptance_criteria": [
+        "sources, claims, methods, limitations, and gaps are explicit",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the research evidence map",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=sophia_research"
+      }
+    },
+    {
+      "product_id": "sophia_review",
+      "product_name": "Sophia Review",
+      "suite": "Education & Research",
+      "buyer_job": "For Sophia Review: Authors and reviewers need to obtain anchored feedback without surrendering authorship.",
+      "bounded_outcome": "A anchored manuscript review prepared for human review across the agreed scope of one manuscript page.",
+      "primary_deliverable": "anchored manuscript review",
+      "acceptance_criteria": [
+        "each comment points to text, rationale, and suggested action",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the anchored manuscript review",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=sophia_review"
+      }
+    },
+    {
+      "product_id": "sophia_supervisor",
+      "product_name": "Sophia Supervisor",
+      "suite": "Education & Research",
+      "buyer_job": "For Sophia Supervisor: Research supervisors need to review milestone progress against agreed research expectations.",
+      "bounded_outcome": "A supervision milestone pack prepared for human review across the agreed scope of one research milestone.",
+      "primary_deliverable": "supervision milestone pack",
+      "acceptance_criteria": [
+        "progress, evidence, concerns, decisions, and next actions are recorded",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the supervision milestone pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=sophia_supervisor"
+      }
+    },
+    {
+      "product_id": "sophia_tutor",
+      "product_name": "Sophia Tutor",
+      "suite": "Education & Research",
+      "buyer_job": "For Sophia Tutor: Learners and educators need to receive guided support on a defined learning topic.",
+      "bounded_outcome": "A guided learning review pack prepared for human review across the agreed scope of one learning topic.",
+      "primary_deliverable": "guided learning review pack",
+      "acceptance_criteria": [
+        "explanations, checks, sources, and human feedback boundaries are clear",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the guided learning review pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=sophia_tutor"
+      }
+    },
+    {
+      "product_id": "suppliercyberproof",
+      "product_name": "SupplierCyberProof",
+      "suite": "AI & Digital Trust",
+      "buyer_job": "For SupplierCyberProof: Supply-chain cyber risk teams need to assess supplier cyber evidence before a sourcing decision.",
+      "bounded_outcome": "A supplier cyber assurance pack prepared for human review across the agreed scope of one supplier.",
+      "primary_deliverable": "supplier cyber assurance pack",
+      "acceptance_criteria": [
+        "supplier claims map to controls, evidence freshness, and gaps",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the supplier cyber assurance pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=suppliercyberproof"
+      }
+    },
+    {
+      "product_id": "tenderproof",
+      "product_name": "TenderProof",
+      "suite": "Public & Programme Ops",
+      "buyer_job": "For TenderProof: Bid and tender teams need to prepare a compliant tender response evidence base.",
+      "bounded_outcome": "A tender compliance matrix prepared for human review across the agreed scope of one tender requirement.",
+      "primary_deliverable": "tender compliance matrix",
+      "acceptance_criteria": [
+        "every requirement maps to response content, evidence, owner, and status",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the tender compliance matrix",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=tenderproof"
+      }
+    },
+    {
+      "product_id": "vamp_performance",
+      "product_name": "VAMP Performance",
+      "suite": "Enterprise Operations",
+      "buyer_job": "For VAMP Performance: Professionals and performance reviewers need to organise performance claims before consequential review.",
+      "bounded_outcome": "A performance evidence snapshot prepared for human review across the agreed scope of one performance evidence item.",
+      "primary_deliverable": "performance evidence snapshot",
+      "acceptance_criteria": [
+        "objectives, claims, evidence, periods, and reviewer boundaries reconcile",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the performance evidence snapshot",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=vamp_performance"
+      }
+    },
+    {
+      "product_id": "vendorproof",
+      "product_name": "VendorProof",
+      "suite": "Evidence & Assurance",
+      "buyer_job": "For VendorProof: Procurement and vendor-risk teams need to assess vendor claims against required evidence.",
+      "bounded_outcome": "A vendor due-diligence proof pack prepared for human review across the agreed scope of one vendor record.",
+      "primary_deliverable": "vendor due-diligence proof pack",
+      "acceptance_criteria": [
+        "requirements, vendor evidence, freshness, exceptions, and owners are explicit",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE7_VERIFIED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the vendor due-diligence proof pack",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=vendorproof"
+      }
+    },
+    {
+      "product_id": "vesper_desk",
+      "product_name": "Vesper Desk",
+      "suite": "Demand & Presence",
+      "buyer_job": "For Vesper Desk: Customer-service operators need to turn conversations into controlled, followable customer cases.",
+      "bounded_outcome": "A customer case record prepared for human review across the agreed scope of one customer case.",
+      "primary_deliverable": "customer case record",
+      "acceptance_criteria": [
+        "conversation lineage, scope, next action, owner, and approval state are present",
+        "the agreed scope is complete and exclusions are stated",
+        "customer-facing claims remain traceable to supplied sources",
+        "the requested output format passes semantic and file validation"
+      ],
+      "route_proof": {
+        "label": "Route-family execution proof",
+        "state": "PHASE8_FRESH_PROOF_REQUIRED",
+        "scope": "ROUTE_FAMILY_EXECUTION"
+      },
+      "named_product_proof": {
+        "label": "Named-product customer artifact proof",
+        "state": "UNPROVED",
+        "scope": "NAMED_PRODUCT_CUSTOMER_ARTIFACT",
+        "available": false
+      },
+      "market_validation": "UNPROVED",
+      "cta": {
+        "label": "Scope the customer case record",
+        "action": "BEGIN_GOVERNED_INTAKE",
+        "href": "/vesper-intake.html?product=vesper_desk"
+      }
+    }
+  ],
+  "artifact_id": "PUBLIC-OFFER-EVIDENCE-3BFF2E03EA70458C",
+  "artifact_sha256": "3bff2e03ea70458ccf8a9ab4c2933b1332d30b0f54c6d35cf9913a67bc541d07"
+}

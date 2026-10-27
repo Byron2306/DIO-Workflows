@@ -109,13 +109,15 @@
 
   async function loadProof() {
     try {
-      const [base, extensions]=await Promise.all([
+      const [base, extensions, publicEvidence]=await Promise.all([
         fetchProofCatalog('portfolio-proof-catalog.json'),
-        fetchProofCatalog('canon-extension-proof-catalog.json')
+        fetchProofCatalog('canon-extension-proof-catalog.json'),
+        fetchProofCatalog('public-offer-evidence.json')
       ]);
       return {
         products:[...(base.products||[]), ...(extensions.products||[])],
-        extensionSummary:extensions
+        extensionSummary:extensions,
+        publicEvidence:publicEvidence.offers||[]
       };
     } catch (error) {
       console.warn('DIO public proof catalogs unavailable', error);
@@ -172,10 +174,12 @@
 
     proofDataPromise.then(data=>{
       const entry=(data.products||[]).find(p=>p.slug===product.slug);
+      const publicOffer=(data.publicEvidence||[]).find(p=>p.product_name===product.name);
       const target=document.querySelector('#live-proof');
       if(!target) return;
+      const publicEvidenceCard=publicOffer ? `<article class="proof-job-card corner-glow"><small>PUBLIC OFFER EVIDENCE</small><h3>${esc(publicOffer.primary_deliverable)}</h3><p><b>Bounded outcome:</b> ${esc(publicOffer.bounded_outcome)}</p><p><b>Route proof:</b> ${esc(publicOffer.route_proof.label)} · ${esc(publicOffer.route_proof.state)}</p><p><b>Named-product artifact:</b> ${esc(publicOffer.named_product_proof.state)}</p></article>` : '';
       if(!entry){
-        target.innerHTML=`<article class="proof-missing-card corner-glow"><small>PUBLIC PROOF MISSING</small><h3>Evidence could not be loaded.</h3><p>This surface fails closed. A ProductGrade label is never substituted for missing public artifacts or receipts.</p></article>`;
+        target.innerHTML=`${publicEvidenceCard}<article class="proof-missing-card corner-glow"><small>PUBLIC PROOF MISSING</small><h3>Evidence could not be loaded.</h3><p>This surface fails closed. A ProductGrade label is never substituted for missing public artifacts or receipts.</p></article>`;
         return;
       }
 
@@ -195,7 +199,7 @@
       const total=entry.execution_variant_count ?? entry.execution_variants ?? product.variantCount;
       const claimBoundary=entry.claim_boundary ? `<p class="claim-boundary"><b>Claim boundary:</b> ${esc(entry.claim_boundary)}</p>` : '';
 
-      target.innerHTML=`<article class="proof-job-card corner-glow"><small>BUYER JOB</small><h3>${esc(buyerJob)}</h3><p><b>Context:</b> ${esc(buyerContext)}</p><p><b>Messy / adversarial pressure:</b> ${esc(exceptionCase)}</p>${claimBoundary}</article>${artifactCards}<article class="proof-state-card corner-glow"><small>CONTROLLED EXECUTION</small><strong>${esc(verified)}/${esc(total)}</strong><span>normal · messy · adversarial</span><p>Authority created: <b>${entry.authority_created?'YES':'NO'}</b><br>External effects: <b>${entry.external_effects?'YES':'NO'}</b><br>Commercial validation: <b>${esc(entry.commercial_validation)}</b></p></article>${receipts}`;
+      target.innerHTML=`${publicEvidenceCard}<article class="proof-job-card corner-glow"><small>BUYER JOB</small><h3>${esc(buyerJob)}</h3><p><b>Context:</b> ${esc(buyerContext)}</p><p><b>Messy / adversarial pressure:</b> ${esc(exceptionCase)}</p>${claimBoundary}</article>${artifactCards}<article class="proof-state-card corner-glow"><small>CONTROLLED EXECUTION</small><strong>${esc(verified)}/${esc(total)}</strong><span>normal · messy · adversarial</span><p>Authority created: <b>${entry.authority_created?'YES':'NO'}</b><br>External effects: <b>${entry.external_effects?'YES':'NO'}</b><br>Commercial validation: <b>${esc(entry.commercial_validation)}</b></p></article>${receipts}`;
     });
   }
 })();
