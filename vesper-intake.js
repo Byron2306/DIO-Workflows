@@ -28,8 +28,6 @@ const apiOrigin = (
   cfg.vesperPresenceApiOrigin ||
   "https://api.dioworkflows.co.za"
 ).replace(/\/+$/, "");
-const messageMode = "text";
-
 let conversationId = null;
 let sessionToken = null;
 let sessionReady = false;
