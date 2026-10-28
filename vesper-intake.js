@@ -3,6 +3,13 @@
 const $ = selector => document.querySelector(selector);
 const messages = $("#messages");
 const product = $("#product");
+const nameInput = $("#customerName");
+const emailInput = $("#customerEmail");
+const organisationInput = $("#customerOrganisation");
+const desiredOutcomeInput = $("#desiredOutcome");
+const neededByInput = $("#neededBy");
+const workContextInput = $("#workContext");
+const INTAKE_CONTRACT = "dio.vesper.public_intake.v1";
 const messageInput = $("#message");
 const filesInput = $("#files");
 const fileCount = $("#fileCount");
@@ -53,6 +60,7 @@ async function bindPending(path, body){
     const candidate = {id:crypto.randomUUID(), digest, path,
       message:request.message || "", hint:request.incarnation_hint || "",
       contextChanged:request.product_context_changed === true,
+      contact:request.contact || {}, intakeContext:request.intake_context || {},
       hasBinary:Boolean(request.audio_b64 || request.attachments?.length), body};
     // Persist exact retry bytes before issuing the request. If tab storage is
     // full, no submission leaves the browser and custody remains unchanged.
@@ -223,6 +231,16 @@ async function bindSession(){
     if (!session || session.conversation_id !== conversationId) throw new Error("The earlier conversation needs reconciliation.");
     messages.replaceChildren();
     for (const row of (session.messages || []).slice(1)) appendMessage(row.role === "customer" ? "customer" : "vesper", row.text);
+    if (session.contact) {
+      if (nameInput) nameInput.value = session.contact.name || "";
+      if (emailInput) emailInput.value = session.contact.email || "";
+      if (organisationInput) organisationInput.value = session.contact.organisation || "";
+    }
+    const lastCustomerMessage = [...(session.messages || [])].reverse().find(row => row.role === "customer");
+    const savedContext = lastCustomerMessage?.intake_context || {};
+    if (desiredOutcomeInput) desiredOutcomeInput.value = savedContext.desired_outcome || "";
+    if (neededByInput) neededByInput.value = savedContext.needed_by || "";
+    if (workContextInput) workContextInput.value = savedContext.work_context || "";
     replyCursor = (session.messages || []).length;
     if (pendingSubmission){
       const recovered = (body.replies || []).some(row=>String(row.source_message_id || "").endsWith(`:${pendingSubmission.id}`));
@@ -230,6 +248,16 @@ async function bindSession(){
       else {
         messageInput.value = pendingSubmission.message;
         product.value = pendingSubmission.hint;
+        if (pendingSubmission.contact) {
+          if (nameInput) nameInput.value = pendingSubmission.contact.name || "";
+          if (emailInput) emailInput.value = pendingSubmission.contact.email || "";
+          if (organisationInput) organisationInput.value = pendingSubmission.contact.organisation || "";
+        }
+        if (pendingSubmission.intakeContext) {
+          if (desiredOutcomeInput) desiredOutcomeInput.value = pendingSubmission.intakeContext.desired_outcome || "";
+          if (neededByInput) neededByInput.value = pendingSubmission.intakeContext.needed_by || "";
+          if (workContextInput) workContextInput.value = pendingSubmission.intakeContext.work_context || "";
+        }
         productContextChanged = pendingSubmission.contextChanged;
         setNotice(pendingSubmission.hasBinary ? "An earlier submission is unresolved. Press Send to retry its original audio or file." : "An earlier submission is unresolved. Retry its original message.");
       }
@@ -241,7 +269,12 @@ async function bindSession(){
   if (pendingSubmission) throw new Error("The earlier submission needs its original conversation restored.");
   const body = await jsonRequest(
     "/api/vesper/web/session",
-    {method:"POST", body:JSON.stringify({surface:"dio_web"})},
+    {method:"POST", body:JSON.stringify({
+      intake_contract: INTAKE_CONTRACT, operation: "open_session",
+      surface: bindHint() ? "product_site" : "dio_web",
+      incarnation_hint: safeIncarnationHint(product.value),
+      contact: {name:nameInput?.value || "", email:emailInput?.value || "", organisation:organisationInput?.value || ""},
+    })},
     false,
   );
   const ids = sessionIdentifiers(body);
@@ -353,7 +386,9 @@ async function send(){
       // Session recovery may already prove this exact request completed.
       if (pendingSubmission){
         const {path, body} = pendingSubmission;
-        await jsonRequest(path, {method:"POST", body}, true);
+        const original = JSON.parse(body);
+        const retryBody = JSON.stringify({...original, client_message_id:pendingSubmission.id});
+        await jsonRequest(path, {method:"POST", body:retryBody}, true);
         messageInput.value = "";
         if (filesInput) filesInput.value = "";
         setNotice("Original submission accepted. Waiting for Vesper…");
@@ -401,10 +436,13 @@ async function send(){
       {
         method:"POST",
         body:JSON.stringify({
+          intake_contract: INTAKE_CONTRACT, operation: "submit_message",
           conversation_id: conversationId,
           message: text,
           attachments:
             attachment ? [attachment] : [],
+          contact: {name:nameInput?.value || "", email:emailInput?.value || "", organisation:organisationInput?.value || ""},
+          intake_context: {desired_outcome:desiredOutcomeInput?.value || "", needed_by:neededByInput?.value || "", work_context:workContextInput?.value || ""},
           incarnation_hint: incarnationHint,
           message_mode: messageMode,
           product_context_changed: productContextChanged,
@@ -539,12 +577,15 @@ async function submitVoiceBlob(blob){
     {
       method: "POST",
       body: JSON.stringify({
+        intake_contract: INTAKE_CONTRACT, operation: "submit_voice",
         conversation_id: conversationId,
         audio_b64: bytesToBase64(bytes),
         mime_type:
           (blob.type || "audio/webm")
             .split(";", 1)[0],
         incarnation_hint: incarnationHint,
+        contact: {name:nameInput?.value || "", email:emailInput?.value || "", organisation:organisationInput?.value || ""},
+        intake_context: {desired_outcome:desiredOutcomeInput?.value || "", needed_by:neededByInput?.value || "", work_context:workContextInput?.value || ""},
         message_mode: "voice",
         product_context_changed: productContextChanged,
       }),
