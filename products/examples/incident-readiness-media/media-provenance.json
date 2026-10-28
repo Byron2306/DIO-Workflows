@@ -1,0 +1,12 @@
+{
+  "title": "DIO Incident Readiness Proof",
+  "sample_type": "DIO_PROCESS_EXPLAINER",
+  "voice": "Vera synthetic voice, Kyutai PocketTTS / VCTK p229",
+  "music": "Warm Sunset by MusicLFiles, CC BY 4.0",
+  "rendered_with": "Canonical DIO media pipeline; locally verified rendered output",
+  "files": {
+    "landscape-explainer.mp4": "ef36b38befa9ca79a2d010dc51bf371f98e97731f0760040fcccb68f778bff33",
+    "vertical-short.mp4": "d2ef69ec6da0f5e436b9e1a9c4391368bf8573de2ced54f97fdcfa7678d419b9"
+  },
+  "note": "This is a process explainer, not one of the 12 pilot product qualifications. Local renderer verification does not constitute a third-party service attestation."
+}

@@ -1,0 +1,1 @@
+DIO Incident Readiness Proof maps what is supplied, what is missing, what is stale, and which decisions still require a named human authority.

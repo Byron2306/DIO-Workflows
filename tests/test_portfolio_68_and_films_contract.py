@@ -49,18 +49,20 @@ def test_portfolio_surface_explains_68_as_53_base_plus_15_extensions():
     assert '68 canonical product incarnations' in html
     assert '53 base canon + 15 canon extensions' in html
     assert '68 mapped incarnations' in html
-    assert '159-journey production gauntlet' in html
-    assert '45/45 controlled ProductGrade journeys' in html
-    assert '204 / 204 controlled journeys verified' in html
+    assert 'Historical controlled-run receipts' in html
+    assert 'Twelve fictional sample outputs' in html
+    assert 'Independent professional sign-off' in html
 
 
 def test_homepage_promotes_68_without_rewriting_historic_53x3_proof():
     html = (ROOT / 'index.html').read_text(encoding='utf-8')
-    assert 'EXPLORE 68 PRODUCTS' in html
+    assert 'EXPLORE 68 MAPPED ROUTES' in html
     assert '<strong>68</strong>' in html
+    assert '<strong>12</strong>' in html
+    assert 'REVIEW 12 PILOT SAMPLES' in html
     assert '53 base canon + 15 canon extensions' in html
-    assert 'OPEN THE 68-PRODUCT PORTFOLIO' in html
-    assert 'EXPLORE ALL 68 PRODUCT ROUTES' in html
+    assert 'REVIEW PILOT EXAMPLES' in html
+    assert 'EXPLORE 68 MAPPED ROUTES' in html
     # Historical proof claims remain explicitly bound to the original base-canon gauntlet.
     assert '53-product production gauntlet records 159 controlled journeys' in html
     assert 'PROFESSIONAL_EVIDENCE_53_X3_RECEIPT.json' in html
