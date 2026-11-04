@@ -3,6 +3,10 @@
 const $ = selector => document.querySelector(selector);
 const messages = $("#messages");
 const product = $("#product");
+const journeyState = $("#journeyState");
+const journeyDetails = $("#journeyDetails");
+const journeyFields = $("#journeyFields");
+const journeyActions = $("#journeyActions");
 const nameInput = $("#customerName");
 const emailInput = $("#customerEmail");
 const organisationInput = $("#customerOrganisation");
@@ -38,6 +42,8 @@ let mediaStream = null;
 let voiceChunks = [];
 let voiceRecording = false;
 const renderedReplies = new Set();
+const renderedJourneyActions = new Set();
+let currentJourney = null;
 const custodyKey = `dio.actual.vesper:${apiOrigin}`;
 let sessionPromise = null;
 let pendingSubmission = JSON.parse(sessionStorage.getItem(`${custodyKey}:pending`) || "null");
@@ -192,6 +198,73 @@ function safeIncarnationHint(raw){
   return value;
 }
 
+function journeyButton(label, action, ref, handler){
+  const button=document.createElement("button"); button.type="button"; button.className="journey-action"; button.textContent=label;
+  button.addEventListener("click",()=>handler(action,ref)); journeyActions.appendChild(button);
+}
+function renderJourney(journey){
+  currentJourney=journey; journeyFields?.replaceChildren(); journeyActions?.replaceChildren(); journeyDetails?.replaceChildren();
+  const view=journey?.view;
+  if(!view){ if(journeyState) journeyState.textContent="A resolved request opens a case"; return; }
+  const facts=view.facts||{}, intake=facts.intake||{}, quote=facts.quote||{}, order=facts.order||{}, settlement=facts.settlement||{}, fulfilment=facts.fulfilment||{}, delivery=facts.delivery||{}, communication=facts.communication||{};
+  journeyState.textContent=`${view.stage.replaceAll("_"," ")} · ${view.product_id||"DIO service"}`;
+  journeyState.className="state "+(["QUOTE_READY","PAYMENT_VERIFIED","WORK_QUEUED","PROCESSING","REVIEW_READY","DELIVERED","CLOSED"].includes(view.stage)?"ok":"wait");
+  const detail=text=>{const row=document.createElement("div");row.textContent=text;journeyDetails.appendChild(row);};
+  if(view.case_id) detail(`Customer case reference: ${view.case_id}`);
+  if(communication.customer_id) detail(`Customer ID: ${communication.customer_id}`);
+  else detail(`Customer identity: ${communication.customer_identity_state||"unverified"} · account ID not linked`);
+  if(communication.contact_email) detail(`Email on this case: ${communication.contact_email}`);
+  if(fulfilment.job_id) detail(`Job ID: ${fulfilment.job_id}`);
+  else detail("Job ID: not assigned yet");
+  for(const attachment of facts.attachments||[]) detail(`Sample ${attachment.file_name||attachment.attachment_id}: ${attachment.state||"quarantined"} · quarantined for operator review`);
+  if(intake.missing_input_ids?.length) detail(`Still needed: ${intake.missing_input_ids.join(", ")}`);
+  if(facts.scope?.state) detail(`Scope: ${facts.scope.state.toLowerCase()}`);
+  if(quote.quote_id){const row=document.createElement("div");row.className="journey-quote";row.textContent=`Quote ${quote.quote_id}: ${quote.currency||"ZAR"} ${quote.amount??"amount pending"} · presentation only`;journeyDetails.appendChild(row);}
+  if(quote.reason) detail(`Quote review: ${String(quote.reason).replaceAll("_"," ")}`);
+  if(order.invoice_id||order.invoice_state) detail(`Invoice: ${order.invoice_state||"not created"}${order.invoice_id?` · ${order.invoice_id}`:""}`);
+  if(order.invoice_id&&order.invoice_state==="issued"){const button=document.createElement("button");button.type="button";button.className="journey-action";button.textContent="Open issued invoice";button.addEventListener("click",async()=>{button.disabled=true;try{const response=await fetch(endpoint(`/api/vesper/web/invoice?conversation_id=${encodeURIComponent(conversationId)}`),{headers:{"X-Vesper-Session-Token":sessionToken}});if(!response.ok)throw new Error("Invoice is unavailable");const blob=await response.blob(),url=URL.createObjectURL(blob);window.open(url,"_blank","noopener");setTimeout(()=>URL.revokeObjectURL(url),60000);}catch(error){setNotice(errorMessage(error),true);}finally{button.disabled=false;}});journeyActions.appendChild(button);}
+  if(order.payment_state) detail(`Payment: ${order.payment_state}${order.checkout_available?" · checkout link issued":""}`);
+  if(order.operator_review_required) detail("Next step: operator pricing review is pending");
+  if(settlement.settlement_class) detail(`Payment verification: ${settlement.settlement_class}`);
+  if(fulfilment.state) detail(`Work: ${fulfilment.state}`);
+  if(communication.outlook_draft_count||communication.outlook_sent_receipt_count) detail(`Email: ${communication.outlook_draft_count} draft(s), ${communication.outlook_sent_receipt_count} send receipt(s)`);
+  if(delivery.delivery_receipt_id){detail(`Return pack: ${delivery.sent?"delivered":"prepared, not sent"}`);if(delivery.sent&&delivery.channel==="web_portal"){const button=document.createElement("button");button.type="button";button.className="journey-action";button.textContent="Download released return package";button.addEventListener("click",async()=>{button.disabled=true;try{const response=await fetch(endpoint(`/api/vesper/web/package?conversation_id=${encodeURIComponent(conversationId)}`),{headers:{"X-Vesper-Session-Token":sessionToken}});if(!response.ok)throw new Error("Released package is unavailable");const blob=await response.blob(),url=URL.createObjectURL(blob),anchor=document.createElement("a");anchor.href=url;anchor.download="DIO-return-package.zip";document.body.appendChild(anchor);anchor.click();anchor.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);}catch(error){setNotice(errorMessage(error),true);}finally{button.disabled=false;}});journeyActions.appendChild(button);}}
+  else if(facts.deliverables?.manifest_id) detail(`Return pack: ${facts.deliverables.artifact_count||0} item(s) · ${facts.deliverables.release_state||"awaiting release review"}`);
+  if(!order.invoice_id&&!order.checkout_available) detail("Invoice and checkout: not issued · email sending: approval required");
+  const actions=view.actions||[], get=id=>actions.find(row=>row.action_id===id);
+  if(get("OPEN_INTAKE")) journeyButton("Begin structured order intake","OPEN_INTAKE",get("OPEN_INTAKE").action_ref,submitJourneyAction);
+  if(get("RECORD_INTAKE_INPUTS")){
+    const missing=new Set(intake.missing_input_ids||[]), defs=(intake.required_inputs||[]).filter(row=>missing.has(row.field_id)), controls={};
+    for(const field of defs){const wrap=document.createElement("div"),label=document.createElement("label");label.textContent=field.field_id==="requested_outcome"?(view.product_id==="Document Studio Edit"?"Describe deliverables, output formats, deadline and editing boundaries":"What outcome should this work produce?"):field.field_id==="buyer_class"?"Who is the work for?":`How many ${(field.semantic_unit||"units")+(String(field.semantic_unit||"units").endsWith("s")?"":"s")} are in scope?`;wrap.appendChild(label);let input;
+      if(field.kind==="enum"){input=document.createElement("select");input.className="journey-input";const empty=document.createElement("option");empty.value="";empty.textContent="Choose one…";empty.selected=true;input.appendChild(empty);(field.allowed_values||[]).forEach((value,index)=>{const option=document.createElement("option");option.value=value;option.textContent=field.labels?.[index]||value;input.appendChild(option);});}
+      else if(field.kind==="integer"){input=document.createElement("input");input.type="number";input.min=field.minimum||1;input.placeholder="Enter a whole number";input.className="journey-input";}
+      else{input=document.createElement("textarea");input.rows=3;input.maxLength=4000;input.placeholder="Describe the result you need";input.className="journey-input";}
+      wrap.appendChild(input);journeyFields.appendChild(wrap);controls[field.field_id]=input;}
+    if(defs.length) journeyButton("Save order details","RECORD_INTAKE_INPUTS",get("RECORD_INTAKE_INPUTS").action_ref,async(a,ref)=>{const inputs={};for(const [key,control] of Object.entries(controls))inputs[key]=control.value.trim();await submitJourneyAction(a,ref,{inputs});});
+  }
+  if(get("ASSESS_SCOPE")&&!intake.missing_input_ids?.length) journeyButton("Review scope","ASSESS_SCOPE",get("ASSESS_SCOPE").action_ref,submitJourneyAction);
+  if(get("PREPARE_QUOTE")&&(view.product_id!=="Document Studio Edit"||(facts.attachments||[]).length)) journeyButton("Prepare quote for operator review","PREPARE_QUOTE",get("PREPARE_QUOTE").action_ref,submitJourneyAction);
+  else if(get("PREPARE_QUOTE")&&view.product_id==="Document Studio Edit") detail("Upload one sample before requesting quote review; the sample is held for operator clearance.");
+  if(get("REQUEST_OPERATOR")) journeyButton(view.stage==="QUOTE_READY"?"Request invoice & payment follow-up":"Ask an operator to review", "REQUEST_OPERATOR", get("REQUEST_OPERATOR").action_ref, submitJourneyAction);
+}
+async function refreshJourney(){
+  if(!conversationId||!sessionToken)return;
+  const body=await jsonRequest(`/api/vesper/web/journey?conversation_id=${encodeURIComponent(conversationId)}`,{method:"GET"},true);
+  renderJourney(body.journey);
+}
+async function submitJourneyAction(action,actionRef,payload={}){
+  journeyActions?.querySelectorAll("button").forEach(button=>button.disabled=true);
+  try{
+    const body=await jsonRequest("/api/vesper/web/journey",{method:"POST",body:JSON.stringify({conversation_id:conversationId,action,action_ref:actionRef,payload})},true);
+    const actionMessage=[...(body.session?.messages||[])].reverse().find(row=>row.journey_action_ref===actionRef);
+    const messageKey=`${actionRef}:${actionMessage?.journey_payload_sha256||""}`;
+    if(body.assistant_message&&!renderedJourneyActions.has(messageKey)){appendMessage("vesper",body.assistant_message);renderedJourneyActions.add(messageKey);}
+    if(Number.isInteger(body.session?.messages?.length)){replyCursor=Math.max(Number(replyCursor)||0,body.session.messages.length);renderedReplies.add(String(body.session.messages.length));}
+    renderJourney(body.journey);setNotice(`Order record updated: ${body.journey.view?.stage?.replaceAll("_"," ")||"active"}. No payment, email, or release was triggered.`);
+  }catch(error){setNotice(`Order update needs attention: ${errorMessage(error)}`,true);await refreshJourney().catch(()=>{});}
+}
+
+
 function bindHint(){
   const hinted = safeIncarnationHint(
     params.get("incarnation")
@@ -262,6 +335,7 @@ async function bindSession(){
     }
     sessionReady = true;
     setRoute("Conversation restored", true);
+    await refreshJourney();
     return true;
   }
   if (pendingSubmission) throw new Error("The earlier submission needs its original conversation restored.");
@@ -283,6 +357,7 @@ async function bindSession(){
   sessionReady = true;
   setRoute("Conversation bound", true);
   setNotice("Vesper is ready. Text conversation is bound to the governed public rail.");
+  await refreshJourney();
   return true;
 }
 function replyRows(body){
@@ -332,6 +407,7 @@ async function pollForReply(){
         pulseVesper();
         setRoute("Vesper replied", true);
         setNotice("Reply received through the governed Vesper public rail.");
+        await refreshJourney();
         return;
       }
       await sleep(2000);
