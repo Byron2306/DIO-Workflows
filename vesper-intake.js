@@ -216,8 +216,12 @@ function renderJourney(journey){
   if(communication.contact_email) detail(`Email on this case: ${communication.contact_email}`);
   if(fulfilment.job_id) detail(`Job ID: ${fulfilment.job_id}`);
   else detail("Job ID: not assigned yet");
-  for(const attachment of facts.attachments||[]) detail(`Sample ${attachment.file_name||attachment.attachment_id}: ${attachment.state||"quarantined"} · quarantined for operator review`);
+  const attachmentGroups=new Map();
+  for(const attachment of facts.attachments||[]){const key=attachment.sha256||attachment.file_name||attachment.attachment_id;const group=attachmentGroups.get(key)||{attachment,count:0};group.count++;attachmentGroups.set(key,group);}
+  for(const {attachment,count} of attachmentGroups.values()) detail(`Sample ${attachment.file_name||attachment.attachment_id}: ${attachment.state||"quarantined"}${count>1?` · ${count} identical upload records`:""} · not inspected`);
   if(intake.missing_input_ids?.length) detail(`Still needed: ${intake.missing_input_ids.join(", ")}`);
+  const provided=intake.provided_inputs||{};
+  if(Object.keys(provided).length){const unit=(intake.required_inputs||[]).find(row=>row.field_id==="scope_quantity")?.semantic_unit||"units";const parts=[];if(provided.scope_quantity)parts.push(`${provided.scope_quantity} ${unit}`);if(provided.buyer_class)parts.push(`buyer ${provided.buyer_class}`);if(provided.requested_outcome)parts.push(String(provided.requested_outcome));if(parts.length)detail(`Saved customer-stated scope: ${parts.join(" · ")}`);}
   if(facts.scope?.state) detail(`Scope: ${facts.scope.state.toLowerCase()}`);
   if(quote.quote_id){const row=document.createElement("div");row.className="journey-quote";row.textContent=`Quote ${quote.quote_id}: ${quote.currency||"ZAR"} ${quote.amount??"amount pending"} · presentation only`;journeyDetails.appendChild(row);}
   else if(quote.quote_request_id){const row=document.createElement("div");row.className="journey-quote";row.textContent=`Quote request ${quote.quote_request_id}: awaiting operator pricing review · no quotation issued`;journeyDetails.appendChild(row);}
@@ -233,7 +237,7 @@ function renderJourney(journey){
   else if(facts.deliverables?.manifest_id) detail(`Return pack: ${facts.deliverables.artifact_count||0} item(s) · ${facts.deliverables.release_state||"awaiting release review"}`);
   if(!order.invoice_id&&!order.checkout_available) detail("Invoice and checkout: not issued · email sending: approval required");
   const actions=view.actions||[], get=id=>actions.find(row=>row.action_id===id);
-  if(get("OPEN_INTAKE")) journeyButton("Begin structured order intake","OPEN_INTAKE",get("OPEN_INTAKE").action_ref,submitJourneyAction);
+  if(get("OPEN_INTAKE")&&(intake.missing_input_ids||[]).length) journeyButton("Complete missing order details","OPEN_INTAKE",get("OPEN_INTAKE").action_ref,submitJourneyAction);
   if(get("RECORD_INTAKE_INPUTS")){
     const missing=new Set(intake.missing_input_ids||[]), defs=(intake.required_inputs||[]).filter(row=>missing.has(row.field_id)), controls={};
     for(const field of defs){const wrap=document.createElement("div"),label=document.createElement("label");label.textContent=field.field_id==="requested_outcome"?(view.product_id==="Document Studio Edit"?"Describe deliverables, output formats, deadline and editing boundaries":"What outcome should this work produce?"):field.field_id==="buyer_class"?"Who is the work for?":`How many ${(field.semantic_unit||"units")+(String(field.semantic_unit||"units").endsWith("s")?"":"s")} are in scope?`;wrap.appendChild(label);let input;
