@@ -250,6 +250,14 @@ function renderJourney(journey){
   if(get("ASSESS_SCOPE")&&!intake.missing_input_ids?.length) journeyButton("Review scope","ASSESS_SCOPE",get("ASSESS_SCOPE").action_ref,submitJourneyAction);
   if(get("PREPARE_QUOTE")&&(view.product_id!=="Document Studio Edit"||(facts.attachments||[]).length)) journeyButton("Prepare quote for operator review","PREPARE_QUOTE",get("PREPARE_QUOTE").action_ref,submitJourneyAction);
   else if(get("PREPARE_QUOTE")&&view.product_id==="Document Studio Edit") detail("Upload one sample before requesting quote review; the sample is held for operator clearance.");
+  // Render the customer-facing action issued by the canonical journey. Never infer acceptance from quote text.
+  if(get("ACCEPT_QUOTE")&&quote.quote_id&&quote.quote_truth_sha256&&get("ACCEPT_QUOTE").action_ref){
+    journeyButton(`Accept quote ${quote.quote_id}`,"ACCEPT_QUOTE",get("ACCEPT_QUOTE").action_ref,async(action,actionRef)=>{
+      const confirmed=window.confirm(`Accept exact quote ${quote.quote_id} for ${quote.currency||"ZAR"} ${quote.amount}?\n\nThis records your final order intake and may advance the invoice workflow.`);
+      if(!confirmed)return;
+      await submitJourneyAction(action,actionRef,{quote_id:quote.quote_id,quote_truth_sha256:quote.quote_truth_sha256});
+    });
+  }
   if(get("REQUEST_OPERATOR")) journeyButton(view.stage==="QUOTE_READY"?"Request invoice & payment follow-up":"Ask an operator to review", "REQUEST_OPERATOR", get("REQUEST_OPERATOR").action_ref, submitJourneyAction);
 }
 async function refreshJourney(){
