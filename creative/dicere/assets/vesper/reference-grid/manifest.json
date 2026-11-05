@@ -1,0 +1,82 @@
+{
+  "schema": "dio.dicere.reference_grid.v1",
+  "source_filename": "VESPER_VISEME_10GRID_CONCEPT.png",
+  "source_dimensions": [
+    1961,
+    802
+  ],
+  "classification_status": "concept_visual_reference_not_phoneme_verified",
+  "order": "left_to_right_top_then_bottom",
+  "items": [
+    {
+      "key": "rest",
+      "position": 1,
+      "portrait": "rest.webp",
+      "mouth": "rest-mouth.webp",
+      "verification": "not_verified"
+    },
+    {
+      "key": "mbp",
+      "position": 2,
+      "portrait": "mbp.webp",
+      "mouth": "mbp-mouth.webp",
+      "verification": "not_verified"
+    },
+    {
+      "key": "fv",
+      "position": 3,
+      "portrait": "fv.webp",
+      "mouth": "fv-mouth.webp",
+      "verification": "not_verified"
+    },
+    {
+      "key": "ee",
+      "position": 4,
+      "portrait": "ee.webp",
+      "mouth": "ee-mouth.webp",
+      "verification": "not_verified"
+    },
+    {
+      "key": "ah",
+      "position": 5,
+      "portrait": "ah.webp",
+      "mouth": "ah-mouth.webp",
+      "verification": "not_verified"
+    },
+    {
+      "key": "oh",
+      "position": 6,
+      "portrait": "oh.webp",
+      "mouth": "oh-mouth.webp",
+      "verification": "not_verified"
+    },
+    {
+      "key": "oo",
+      "position": 7,
+      "portrait": "oo.webp",
+      "mouth": "oo-mouth.webp",
+      "verification": "not_verified"
+    },
+    {
+      "key": "th",
+      "position": 8,
+      "portrait": "th.webp",
+      "mouth": "th-mouth.webp",
+      "verification": "not_verified"
+    },
+    {
+      "key": "l",
+      "position": 9,
+      "portrait": "l.webp",
+      "mouth": "l-mouth.webp",
+      "verification": "not_verified"
+    },
+    {
+      "key": "sh",
+      "position": 10,
+      "portrait": "sh.webp",
+      "mouth": "sh-mouth.webp",
+      "verification": "not_verified"
+    }
+  ]
+}

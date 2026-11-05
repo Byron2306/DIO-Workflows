@@ -1,0 +1,125 @@
+{
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "v1-5-pruned-emaonly.safetensors"
+    }
+  },
+  "2": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "DIO Gilded House visual canon, abstract governance instrumentation, ceremonial precision-engineered intelligence interface, obsidian black void, fine champagne-gold concentric mechanisms, intricate radial circuit paths, fine concentric calibration marks, luminous gold nodes and delicate connecting traces, warm volumetric glows, intricate sharp graphic detail, monumental dimensional layering, visual editorial concept art, premium technology art direction, coherent materiality, deep shadows, asymmetric visual storytelling with intentional negative space, no visible words. Central dramatic story: a SERIES of distinct small gold evidence nodes now linked in a clear converging, orderly path from foreground bottom toward an elevated focal authorization mechanism. All lines of evidence are coherent, but the FINAL terminal at center-top remains CLOSED and visibly DARK, with a restrained thin crimson lock indicator. Clearly depict authorization as pending, not approved. Show measured progress toward a guarded decision threshold, abstract graphical apparatus rather than architecture. Reserve a dark left margin for later text. ",
+      "clip": [
+        "1",
+        1
+      ]
+    }
+  },
+  "3": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "real estate, headquarters, building, skyscraper, facade, windows, architectural exterior, architecture photography, sky, tree, grass, office, hallway, cathedral, palace, baroque interior, rococo, golden room, paper, stationery, desk, folders, documents, book, stamps, people, faces, hands, stock photography, literal screens, fake user interface, typography, text, letters, numbers, symbols resembling language, watermark, logos, giant eyeball, photorealistic landscape, overexposed haze, clutter, illegible data",
+      "clip": [
+        "1",
+        1
+      ]
+    }
+  },
+  "4": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 768,
+      "height": 512,
+      "batch_size": 1
+    }
+  },
+  "5": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "DIO_V3_APPROVED_CANON_0402d383b9ab.png"
+    }
+  },
+  "6": {
+    "class_type": "IPAdapterUnifiedLoader",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "preset": "PLUS (high strength)"
+    }
+  },
+  "7": {
+    "class_type": "IPAdapterAdvanced",
+    "inputs": {
+      "model": [
+        "6",
+        0
+      ],
+      "ipadapter": [
+        "6",
+        1
+      ],
+      "image": [
+        "5",
+        0
+      ],
+      "weight": 0.65,
+      "weight_type": "linear",
+      "combine_embeds": "concat",
+      "start_at": 0.0,
+      "end_at": 1.0,
+      "embeds_scaling": "V only"
+    }
+  },
+  "8": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 552583,
+      "steps": 32,
+      "cfg": 7,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1.0,
+      "model": [
+        "7",
+        0
+      ],
+      "positive": [
+        "2",
+        0
+      ],
+      "negative": [
+        "3",
+        0
+      ],
+      "latent_image": [
+        "4",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "8",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "10": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "9",
+        0
+      ],
+      "filename_prefix": "DIO_ControlDrift_V4_03_human_approval_pending"
+    }
+  }
+}

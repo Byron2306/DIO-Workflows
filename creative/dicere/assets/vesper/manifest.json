@@ -1,0 +1,99 @@
+{
+  "source": "VESPER_V3_5S_BLINK_TALK.mp4",
+  "duration_seconds": 5,
+  "fps": 25,
+  "resolution": "1254x1254",
+  "classification": "Unlabelled visual samples only. Not phoneme aligned or verified visemes.",
+  "frames": [
+    {
+      "id": 1,
+      "seconds": 0.15,
+      "thumbnail": "assets/vesper/frame-01.webp",
+      "mouth": "assets/vesper/mouth-01.webp"
+    },
+    {
+      "id": 2,
+      "seconds": 0.47,
+      "thumbnail": "assets/vesper/frame-02.webp",
+      "mouth": "assets/vesper/mouth-02.webp"
+    },
+    {
+      "id": 3,
+      "seconds": 0.79,
+      "thumbnail": "assets/vesper/frame-03.webp",
+      "mouth": "assets/vesper/mouth-03.webp"
+    },
+    {
+      "id": 4,
+      "seconds": 1.11,
+      "thumbnail": "assets/vesper/frame-04.webp",
+      "mouth": "assets/vesper/mouth-04.webp"
+    },
+    {
+      "id": 5,
+      "seconds": 1.43,
+      "thumbnail": "assets/vesper/frame-05.webp",
+      "mouth": "assets/vesper/mouth-05.webp"
+    },
+    {
+      "id": 6,
+      "seconds": 1.75,
+      "thumbnail": "assets/vesper/frame-06.webp",
+      "mouth": "assets/vesper/mouth-06.webp"
+    },
+    {
+      "id": 7,
+      "seconds": 2.07,
+      "thumbnail": "assets/vesper/frame-07.webp",
+      "mouth": "assets/vesper/mouth-07.webp"
+    },
+    {
+      "id": 8,
+      "seconds": 2.39,
+      "thumbnail": "assets/vesper/frame-08.webp",
+      "mouth": "assets/vesper/mouth-08.webp"
+    },
+    {
+      "id": 9,
+      "seconds": 2.71,
+      "thumbnail": "assets/vesper/frame-09.webp",
+      "mouth": "assets/vesper/mouth-09.webp"
+    },
+    {
+      "id": 10,
+      "seconds": 3.03,
+      "thumbnail": "assets/vesper/frame-10.webp",
+      "mouth": "assets/vesper/mouth-10.webp"
+    },
+    {
+      "id": 11,
+      "seconds": 3.35,
+      "thumbnail": "assets/vesper/frame-11.webp",
+      "mouth": "assets/vesper/mouth-11.webp"
+    },
+    {
+      "id": 12,
+      "seconds": 3.67,
+      "thumbnail": "assets/vesper/frame-12.webp",
+      "mouth": "assets/vesper/mouth-12.webp"
+    },
+    {
+      "id": 13,
+      "seconds": 3.99,
+      "thumbnail": "assets/vesper/frame-13.webp",
+      "mouth": "assets/vesper/mouth-13.webp"
+    },
+    {
+      "id": 14,
+      "seconds": 4.31,
+      "thumbnail": "assets/vesper/frame-14.webp",
+      "mouth": "assets/vesper/mouth-14.webp"
+    },
+    {
+      "id": 15,
+      "seconds": 4.63,
+      "thumbnail": "assets/vesper/frame-15.webp",
+      "mouth": "assets/vesper/mouth-15.webp"
+    }
+  ]
+}

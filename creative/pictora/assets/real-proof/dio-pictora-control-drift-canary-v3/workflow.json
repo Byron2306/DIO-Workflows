@@ -1,0 +1,125 @@
+{
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "v1-5-pruned-emaonly.safetensors"
+    }
+  },
+  "2": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "DIO Gilded House visual canon, cinematic dark premium intelligence visualization, a CONTROL EXCEPTION DISCOVERY portrayed as an immense floating precision instrument, one unmistakable small crimson fault node interrupting a dense connected constellation of many verified champagne-gold control nodes and delicate lines, black obsidian negative space, volumetric warm gold point lights, precise concentric calibrated mechanical rings, fine etched filigree, graph-like governance circuitry, scientific dashboard concept art, staggered dimensional data layers, deliberate asymmetric hierarchy, restrained luxury, deep black backdrop, no human, no architecture, no typography, no brand lettering",
+      "clip": [
+        "1",
+        1
+      ]
+    }
+  },
+  "3": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "building, exterior, facade, office tower, windows, sky, trees, grass, building interior, hallway, cathedral, palace, temple, baroque room, rococo decorations, gold room, paper, notebook, envelope, desk, meeting room, portrait, person, stock photography, text, lettering, numbers, words, watermark, logo, giant eye, blurry, flat lighting",
+      "clip": [
+        "1",
+        1
+      ]
+    }
+  },
+  "4": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 768,
+      "height": 512,
+      "batch_size": 1
+    }
+  },
+  "5": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "DIO_GILDED_CANON_V3_fbd43481fb.png"
+    }
+  },
+  "6": {
+    "class_type": "IPAdapterUnifiedLoader",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "preset": "PLUS (high strength)"
+    }
+  },
+  "7": {
+    "class_type": "IPAdapterAdvanced",
+    "inputs": {
+      "model": [
+        "6",
+        0
+      ],
+      "ipadapter": [
+        "6",
+        1
+      ],
+      "image": [
+        "5",
+        0
+      ],
+      "weight": 0.65,
+      "weight_type": "linear",
+      "combine_embeds": "concat",
+      "start_at": 0.0,
+      "end_at": 1.0,
+      "embeds_scaling": "V only"
+    }
+  },
+  "8": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 552280,
+      "steps": 32,
+      "cfg": 7.0,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1.0,
+      "model": [
+        "7",
+        0
+      ],
+      "positive": [
+        "2",
+        0
+      ],
+      "negative": [
+        "3",
+        0
+      ],
+      "latent_image": [
+        "4",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "8",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "10": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "9",
+        0
+      ],
+      "filename_prefix": "DIO_ControlDrift_Gilded_V3"
+    }
+  }
+}

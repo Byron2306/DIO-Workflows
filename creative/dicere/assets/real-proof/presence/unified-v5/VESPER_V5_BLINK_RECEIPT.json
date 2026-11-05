@@ -1,0 +1,21 @@
+{
+  "state": "AWAITING_HUMAN_REVIEW",
+  "speech_source": "/data/byron/lilith-local/vesper-github-lipsync/results/dicere/v15/DICERE_V5_VERA_MUSETALK.mp4",
+  "eye_source": "/data/byron/lilith-local/vesper-github-lipsync/motion-tests/VESPER_CANONICAL_RGB--vesper_two_blinks_8s.mp4",
+  "narration_source": "/data/byron/dio-wsl-restored-20261015/home/byron/DIO-Full-Audit/media/dicere/debut/v5-narration/DICERE_V5_VERA_CANDIDATE.wav",
+  "duration_seconds": 33.76,
+  "frames_written": 844,
+  "blink_schedule_seconds": [
+    2.2,
+    6.8,
+    11.6,
+    15.1,
+    20.3,
+    24.0,
+    28.9,
+    32.0
+  ],
+  "blink_active_frames": 139,
+  "output": "/data/byron/lilith-local/vesper-github-lipsync/presence/unified-v5/VESPER_V5_BLINK_TALK.mp4",
+  "publication_authorized": false
+}

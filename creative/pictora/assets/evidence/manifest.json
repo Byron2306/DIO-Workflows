@@ -1,0 +1,52 @@
+{
+  "schema": "dio.pictora.site_evidence.v2",
+  "source": "ControlDrift V4 captured canary",
+  "receipt": "assets/real-proof/receipt.json",
+  "status": "AWAITING_HUMAN_SEMANTIC_REVIEW",
+  "pictora_pass": false,
+  "semantic_review": "NOT_PERFORMED",
+  "items": [
+    {
+      "kind": "ComfyUI canary \u00b7 V4",
+      "title": "01 Exception Detected",
+      "description": "A single control exception is detected in an otherwise coherent verified register. Generated successfully; semantic acceptance remains pending.",
+      "image": "assets/real-proof/01_exception_detected.png",
+      "sha256": "9615917959063351b8551cd205b630f74db9c39d9edcc2064e2d8b59c5e3c696",
+      "original_path": "/data/byron/dio-pictora-control-drift-canary-v4/01_exception_detected.png",
+      "seed": 552381,
+      "workflow": "assets/real-proof/01_exception_detected_workflow.json",
+      "workflow_sha256": "91b4051a8c5b7c7726f850d89fbac2da847e5df9b01f561be26388689d714ff8",
+      "status": "AWAITING_HUMAN_SEMANTIC_REVIEW",
+      "source_image": null,
+      "prompt_id": "ff819d66-4573-47bc-b510-674727ba0907"
+    },
+    {
+      "kind": "ComfyUI canary \u00b7 V4",
+      "title": "02 Conflicting Evidence",
+      "description": "Two evidence branches disagree; reconciliation and sign-off are unresolved. Generated successfully; semantic acceptance remains pending.",
+      "image": "assets/real-proof/02_conflicting_evidence.png",
+      "sha256": "84d1f0776786246143c60bca6035fd02661c3e52a1a3d623d2088521a363e490",
+      "original_path": "/data/byron/dio-pictora-control-drift-canary-v4/02_conflicting_evidence.png",
+      "seed": 552482,
+      "workflow": "assets/real-proof/02_conflicting_evidence_workflow.json",
+      "workflow_sha256": "ed5a477a316682801e1ef2f7a254719aa5ffe4e6a5dcb6a455cd09aa2f8c9aa9",
+      "status": "AWAITING_HUMAN_SEMANTIC_REVIEW",
+      "source_image": null,
+      "prompt_id": "24915ae8-a8cc-45ed-b1c1-18604c985923"
+    },
+    {
+      "kind": "ComfyUI canary \u00b7 V4",
+      "title": "03 Human Approval Pending",
+      "description": "The reconciled evidence trail is review-ready; human approval has not been granted. Generated successfully; semantic acceptance remains pending.",
+      "image": "assets/real-proof/03_human_approval_pending.png",
+      "sha256": "2b4dc9661bebf679fa99b5d3fa68bb623d0ca128f800121e409020a3879723c0",
+      "original_path": "/data/byron/dio-pictora-control-drift-canary-v4/03_human_approval_pending.png",
+      "seed": 552583,
+      "workflow": "assets/real-proof/03_human_approval_pending_workflow.json",
+      "workflow_sha256": "4524075d088ebaacc07e1f2826f46297cec75e992c23c1a35435284453497fde",
+      "status": "AWAITING_HUMAN_SEMANTIC_REVIEW",
+      "source_image": null,
+      "prompt_id": "0608cdda-da5e-4e85-a417-51f60ba539ff"
+    }
+  ]
+}

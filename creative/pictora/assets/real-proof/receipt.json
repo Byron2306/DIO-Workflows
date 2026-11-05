@@ -1,0 +1,223 @@
+{
+  "contract": "DIO_PICTORA_CONTROLDRIFT_REFERENCE_CONDITIONED_V4",
+  "product": "ControlDrift",
+  "status": "AWAITING_HUMAN_SEMANTIC_REVIEW",
+  "pictora_pass": false,
+  "production_replacement": false,
+  "semantic_review": "NOT_PERFORMED",
+  "created_utc": "2026-11-04T12:41:52.710589+00:00",
+  "reference_path": "/data/byron/dio-wsl-restored-20261015/home/byron/DIO-Full-Audit/DIO_ControlDrift_Gilded_V3_00001_.png",
+  "conditioning": "IPAdapterUnifiedLoader -> IPAdapterAdvanced -> KSampler",
+  "scenes": [
+    {
+      "scene_id": "01_exception_detected",
+      "meaning": "A single control exception is detected in an otherwise coherent verified register.",
+      "must_show": [
+        "one localized crimson exception",
+        "normal gold network visibly distinct",
+        "broken/interrupting control path"
+      ],
+      "status": "GENERATED",
+      "workflow_path": "/data/byron/dio-pictora-control-drift-canary-v4/01_exception_detected_workflow.json",
+      "workflow_sha256": "91b4051a8c5b7c7726f850d89fbac2da847e5df9b01f561be26388689d714ff8",
+      "seed": 552381,
+      "prompt": "DIO Gilded House visual canon, abstract governance instrumentation, ceremonial precision-engineered intelligence interface, obsidian black void, fine champagne-gold concentric mechanisms, intricate radial circuit paths, fine concentric calibration marks, luminous gold nodes and delicate connecting traces, warm volumetric glows, intricate sharp graphic detail, monumental dimensional layering, visual editorial concept art, premium technology art direction, coherent materiality, deep shadows, asymmetric visual storytelling with intentional negative space, no visible words. Central dramatic story: ONE tiny vivid crimson-red anomaly node has broken an otherwise orderly circular perimeter of twenty verified warm gold control nodes. The anomalous node sits off-axis at lower right, with one severed luminous connection visibly interrupting the gold circuit. Fine gold lines connect unaffected nodes, and a faint crimson ripple propagates from exactly one point. Obvious red-versus-gold contrast, clearly localized single exception, large dark negative-space area on left for later typography. ",
+      "negative_prompt": "real estate, headquarters, building, skyscraper, facade, windows, architectural exterior, architecture photography, sky, tree, grass, office, hallway, cathedral, palace, baroque interior, rococo, golden room, paper, stationery, desk, folders, documents, book, stamps, people, faces, hands, stock photography, literal screens, fake user interface, typography, text, letters, numbers, symbols resembling language, watermark, logos, giant eyeball, photorealistic landscape, overexposed haze, clutter, illegible data",
+      "prompt_id": "ff819d66-4573-47bc-b510-674727ba0907",
+      "image_path": "/data/byron/dio-pictora-control-drift-canary-v4/01_exception_detected.png",
+      "image_sha256": "9615917959063351b8551cd205b630f74db9c39d9edcc2064e2d8b59c5e3c696",
+      "comfy_output": {
+        "filename": "DIO_ControlDrift_V4_01_exception_detected_00001_.png",
+        "subfolder": "",
+        "type": "output",
+        "metadata": {
+          "kind": "image",
+          "width": 768,
+          "height": 512
+        }
+      },
+      "comfy_status": {
+        "status_str": "success",
+        "completed": true,
+        "messages": [
+          [
+            "execution_start",
+            {
+              "prompt_id": "ff819d66-4573-47bc-b510-674727ba0907",
+              "timestamp": 1793796141158
+            }
+          ],
+          [
+            "execution_cached",
+            {
+              "nodes": [],
+              "prompt_id": "ff819d66-4573-47bc-b510-674727ba0907",
+              "timestamp": 1793796141173
+            }
+          ],
+          [
+            "execution_success",
+            {
+              "prompt_id": "ff819d66-4573-47bc-b510-674727ba0907",
+              "timestamp": 1793796161588
+            }
+          ]
+        ]
+      },
+      "reference_conditioning_graph_verified": true
+    },
+    {
+      "scene_id": "02_conflicting_evidence",
+      "meaning": "Two evidence branches disagree; reconciliation and sign-off are unresolved.",
+      "must_show": [
+        "two opposing evidence branches",
+        "visible contradiction at their meeting",
+        "unlit approval receptacle"
+      ],
+      "status": "GENERATED",
+      "workflow_path": "/data/byron/dio-pictora-control-drift-canary-v4/02_conflicting_evidence_workflow.json",
+      "workflow_sha256": "ed5a477a316682801e1ef2f7a254719aa5ffe4e6a5dcb6a455cd09aa2f8c9aa9",
+      "seed": 552482,
+      "prompt": "DIO Gilded House visual canon, abstract governance instrumentation, ceremonial precision-engineered intelligence interface, obsidian black void, fine champagne-gold concentric mechanisms, intricate radial circuit paths, fine concentric calibration marks, luminous gold nodes and delicate connecting traces, warm volumetric glows, intricate sharp graphic detail, monumental dimensional layering, visual editorial concept art, premium technology art direction, coherent materiality, deep shadows, asymmetric visual storytelling with intentional negative space, no visible words. Central dramatic story: TWO DISTINCT elegantly engineered gold evidence rings, separated left and right, each connected to its own gold node chains. Their outgoing light traces converge near center but terminate in an unmistakable fractured bridge of alternating gold and restrained crimson light. Between them a SMALL dark empty authorization receptacle stays unlit. Two opposing systems in tension, a visible unresolved contradiction, not one single circular emblem. Reserve a dark upper-left zone for later composited typography. ",
+      "negative_prompt": "real estate, headquarters, building, skyscraper, facade, windows, architectural exterior, architecture photography, sky, tree, grass, office, hallway, cathedral, palace, baroque interior, rococo, golden room, paper, stationery, desk, folders, documents, book, stamps, people, faces, hands, stock photography, literal screens, fake user interface, typography, text, letters, numbers, symbols resembling language, watermark, logos, giant eyeball, photorealistic landscape, overexposed haze, clutter, illegible data",
+      "prompt_id": "24915ae8-a8cc-45ed-b1c1-18604c985923",
+      "image_path": "/data/byron/dio-pictora-control-drift-canary-v4/02_conflicting_evidence.png",
+      "image_sha256": "84d1f0776786246143c60bca6035fd02661c3e52a1a3d623d2088521a363e490",
+      "comfy_output": {
+        "filename": "DIO_ControlDrift_V4_02_conflicting_evidence_00001_.png",
+        "subfolder": "",
+        "type": "output",
+        "metadata": {
+          "kind": "image",
+          "width": 768,
+          "height": 512
+        }
+      },
+      "comfy_status": {
+        "status_str": "success",
+        "completed": true,
+        "messages": [
+          [
+            "execution_start",
+            {
+              "prompt_id": "24915ae8-a8cc-45ed-b1c1-18604c985923",
+              "timestamp": 1793796163269
+            }
+          ],
+          [
+            "execution_cached",
+            {
+              "nodes": [
+                "1",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+              ],
+              "prompt_id": "24915ae8-a8cc-45ed-b1c1-18604c985923",
+              "timestamp": 1793796163273
+            }
+          ],
+          [
+            "execution_success",
+            {
+              "prompt_id": "24915ae8-a8cc-45ed-b1c1-18604c985923",
+              "timestamp": 1793796175712
+            }
+          ]
+        ]
+      },
+      "reference_conditioning_graph_verified": true
+    },
+    {
+      "scene_id": "03_human_approval_pending",
+      "meaning": "The reconciled evidence trail is review-ready; human approval has not been granted.",
+      "must_show": [
+        "coherent traceable evidence path",
+        "visibly closed approval point",
+        "no granted approval"
+      ],
+      "status": "GENERATED",
+      "workflow_path": "/data/byron/dio-pictora-control-drift-canary-v4/03_human_approval_pending_workflow.json",
+      "workflow_sha256": "4524075d088ebaacc07e1f2826f46297cec75e992c23c1a35435284453497fde",
+      "seed": 552583,
+      "prompt": "DIO Gilded House visual canon, abstract governance instrumentation, ceremonial precision-engineered intelligence interface, obsidian black void, fine champagne-gold concentric mechanisms, intricate radial circuit paths, fine concentric calibration marks, luminous gold nodes and delicate connecting traces, warm volumetric glows, intricate sharp graphic detail, monumental dimensional layering, visual editorial concept art, premium technology art direction, coherent materiality, deep shadows, asymmetric visual storytelling with intentional negative space, no visible words. Central dramatic story: a SERIES of distinct small gold evidence nodes now linked in a clear converging, orderly path from foreground bottom toward an elevated focal authorization mechanism. All lines of evidence are coherent, but the FINAL terminal at center-top remains CLOSED and visibly DARK, with a restrained thin crimson lock indicator. Clearly depict authorization as pending, not approved. Show measured progress toward a guarded decision threshold, abstract graphical apparatus rather than architecture. Reserve a dark left margin for later text. ",
+      "negative_prompt": "real estate, headquarters, building, skyscraper, facade, windows, architectural exterior, architecture photography, sky, tree, grass, office, hallway, cathedral, palace, baroque interior, rococo, golden room, paper, stationery, desk, folders, documents, book, stamps, people, faces, hands, stock photography, literal screens, fake user interface, typography, text, letters, numbers, symbols resembling language, watermark, logos, giant eyeball, photorealistic landscape, overexposed haze, clutter, illegible data",
+      "prompt_id": "0608cdda-da5e-4e85-a417-51f60ba539ff",
+      "image_path": "/data/byron/dio-pictora-control-drift-canary-v4/03_human_approval_pending.png",
+      "image_sha256": "2b4dc9661bebf679fa99b5d3fa68bb623d0ca128f800121e409020a3879723c0",
+      "comfy_output": {
+        "filename": "DIO_ControlDrift_V4_03_human_approval_pending_00001_.png",
+        "subfolder": "",
+        "type": "output",
+        "metadata": {
+          "kind": "image",
+          "width": 768,
+          "height": 512
+        }
+      },
+      "comfy_status": {
+        "status_str": "success",
+        "completed": true,
+        "messages": [
+          [
+            "execution_start",
+            {
+              "prompt_id": "0608cdda-da5e-4e85-a417-51f60ba539ff",
+              "timestamp": 1793796177289
+            }
+          ],
+          [
+            "execution_cached",
+            {
+              "nodes": [
+                "1",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+              ],
+              "prompt_id": "0608cdda-da5e-4e85-a417-51f60ba539ff",
+              "timestamp": 1793796177293
+            }
+          ],
+          [
+            "execution_success",
+            {
+              "prompt_id": "0608cdda-da5e-4e85-a417-51f60ba539ff",
+              "timestamp": 1793796190466
+            }
+          ]
+        ]
+      },
+      "reference_conditioning_graph_verified": true
+    }
+  ],
+  "reference_sha256": "0a1508bb99aa0f12203e532989adb7ee2c02c1c6579054757070459698c8b7d3",
+  "checkpoint": "v1-5-pruned-emaonly.safetensors",
+  "preset": "PLUS (high strength)",
+  "parameters": {
+    "weight": 0.65,
+    "cfg": 7,
+    "steps": 32,
+    "seed_base": 552280,
+    "width": 768,
+    "height": 512
+  },
+  "reference_upload": {
+    "name": "DIO_V3_APPROVED_CANON_0402d383b9ab.png",
+    "subfolder": "",
+    "type": "input"
+  },
+  "visual_dhash_distances": {
+    "01_exception_detected vs 02_conflicting_evidence": 26,
+    "01_exception_detected vs 03_human_approval_pending": 28,
+    "02_conflicting_evidence vs 03_human_approval_pending": 20
+  },
+  "all_distinct_byte_hashes": true,
+  "minimum_dhash_distance": 20,
+  "contact_sheet_path": "/data/byron/dio-pictora-control-drift-canary-v4/three_scene_contact_sheet.jpg",
+  "contact_sheet_sha256": "585ea4de5cf54b9aaddb2672dba31ddced87399f67be2c0130df4de6723978ef"
+}

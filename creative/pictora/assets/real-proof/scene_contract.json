@@ -1,0 +1,49 @@
+{
+  "contract": "DIO_PICTORA_CONTROLDRIFT_REFERENCE_CONDITIONED_V4",
+  "visual_canon_reference": "DIO_ControlDrift_Gilded_V3_00001_.png",
+  "requirements": [
+    "three separately generated scenes",
+    "actual IPAdapter in model execution path",
+    "one product-specific visual metaphor per scene",
+    "human semantic and style review"
+  ],
+  "forbidden": [
+    "production writes",
+    "PICTORA_PASS from hash difference alone"
+  ],
+  "scenes": [
+    {
+      "id": "01_exception_detected",
+      "seed_offset": 101,
+      "meaning": "A single control exception is detected in an otherwise coherent verified register.",
+      "prompt": "Central dramatic story: ONE tiny vivid crimson-red anomaly node has broken an otherwise orderly circular perimeter of twenty verified warm gold control nodes. The anomalous node sits off-axis at lower right, with one severed luminous connection visibly interrupting the gold circuit. Fine gold lines connect unaffected nodes, and a faint crimson ripple propagates from exactly one point. Obvious red-versus-gold contrast, clearly localized single exception, large dark negative-space area on left for later typography. ",
+      "must_show": [
+        "one localized crimson exception",
+        "normal gold network visibly distinct",
+        "broken/interrupting control path"
+      ]
+    },
+    {
+      "id": "02_conflicting_evidence",
+      "seed_offset": 202,
+      "meaning": "Two evidence branches disagree; reconciliation and sign-off are unresolved.",
+      "prompt": "Central dramatic story: TWO DISTINCT elegantly engineered gold evidence rings, separated left and right, each connected to its own gold node chains. Their outgoing light traces converge near center but terminate in an unmistakable fractured bridge of alternating gold and restrained crimson light. Between them a SMALL dark empty authorization receptacle stays unlit. Two opposing systems in tension, a visible unresolved contradiction, not one single circular emblem. Reserve a dark upper-left zone for later composited typography. ",
+      "must_show": [
+        "two opposing evidence branches",
+        "visible contradiction at their meeting",
+        "unlit approval receptacle"
+      ]
+    },
+    {
+      "id": "03_human_approval_pending",
+      "seed_offset": 303,
+      "meaning": "The reconciled evidence trail is review-ready; human approval has not been granted.",
+      "prompt": "Central dramatic story: a SERIES of distinct small gold evidence nodes now linked in a clear converging, orderly path from foreground bottom toward an elevated focal authorization mechanism. All lines of evidence are coherent, but the FINAL terminal at center-top remains CLOSED and visibly DARK, with a restrained thin crimson lock indicator. Clearly depict authorization as pending, not approved. Show measured progress toward a guarded decision threshold, abstract graphical apparatus rather than architecture. Reserve a dark left margin for later text. ",
+      "must_show": [
+        "coherent traceable evidence path",
+        "visibly closed approval point",
+        "no granted approval"
+      ]
+    }
+  ]
+}

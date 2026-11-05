@@ -1,0 +1,78 @@
+{
+  "schema": "dio.sonoris.website_audio_catalog.v1",
+  "provenance": "User-supplied Sonoris render files; names and roles editorially assigned, not evidence of clearance.",
+  "tracks": [
+    {
+      "id": "rave-iron",
+      "title": "Rave Iron",
+      "genre": "Darksynth / industrial",
+      "category": "Darksynth",
+      "file": "assets/flagship/rave-iron.mp3",
+      "source_filename": "RAVE_IRON_AUDITION.mp3",
+      "description": "A propulsive cyber-industrial sketch with layered synths and a driving beat.",
+      "status": "Audition excerpt \u00b7 unfinished composition",
+      "duration_sec": 15.14,
+      "sha256": "b775ddee3209c317cdcaf5be0a17ef83da5e9a30c269fcf09cb29c06fc128d68"
+    },
+    {
+      "id": "black-metal",
+      "title": "Song Candidate",
+      "genre": "Extreme metal",
+      "category": "Metal",
+      "file": "assets/flagship/black-metal.mp3",
+      "source_filename": "SONG_CANDIDATE.mp3",
+      "description": "Sustained extreme-metal textures and rapid rhythmic programming.",
+      "status": "Candidate mix \u00b7 listening review pending",
+      "duration_sec": 128.1,
+      "sha256": "0c1015bfbacc2aa576c2d6b44749a2476647494d56023f5e0e58af511615b1db"
+    },
+    {
+      "id": "chainsaw",
+      "title": "Chainsaw Caps V1",
+      "genre": "Thrash metal",
+      "category": "Metal",
+      "file": "assets/flagship/chainsaw.mp3",
+      "source_filename": "SONORIS_THRASH_CHAINSAW_CAPS_V1.mp3",
+      "description": "Fast rhythmic accents and chainsaw-toned guitar programming.",
+      "status": "Experimental render \u00b7 listening review pending",
+      "duration_sec": 82.57,
+      "sha256": "29732303017d7fec89f41cab3ac8b4687db5b1e351d480b91f5a43ba4b0aa31e"
+    },
+    {
+      "id": "glass",
+      "title": "Glass Meridian V3",
+      "genre": "Jazz / synth fusion",
+      "category": "Fusion",
+      "file": "assets/flagship/glass.mp3",
+      "source_filename": "GLASS_MERIDIAN_V3_AUDITION.mp3",
+      "description": "Rhodes, tenor, bass and drums interact across a longer instrumental arrangement.",
+      "status": "Audition render \u00b7 temporary FluidSynth bridge",
+      "duration_sec": 97.94,
+      "sha256": "7d7bb05d4a61b56176196fc3b541af29f537597be9ddef9fbf246dbef87a7b20"
+    },
+    {
+      "id": "velvet",
+      "title": "Velvet Nocturne V1",
+      "genre": "Cinematic underscore",
+      "category": "Cinematic",
+      "file": "assets/flagship/velvet.mp3",
+      "source_filename": "DICERE_VELVET_NOCTURNE_V1.mp3",
+      "description": "Dark sustained harmonic motion and an understated rhythmic pulse, composed for presentation use.",
+      "status": "45-second cue \u00b7 Dicere use case",
+      "duration_sec": 45.02,
+      "sha256": "060fe07f09157ae32dcde29f359dbdf98f1ef23ea42eb66da9c4dae5ab327730"
+    },
+    {
+      "id": "grooves",
+      "title": "Three Grooves",
+      "genre": "Electronic groove",
+      "category": "Darksynth",
+      "file": "assets/flagship/grooves.mp3",
+      "source_filename": "THREE_GROOVES_AUDITION.mp3",
+      "description": "Short, syncopated electronic grooves highlighting bass and drum patterning.",
+      "status": "Audition excerpt \u00b7 not a finished song",
+      "duration_sec": 27.46,
+      "sha256": "16dc9b0a8c8a47377c8bfef4c2736b09ae74923a367879aeef1bfff2fd856c28"
+    }
+  ]
+}
