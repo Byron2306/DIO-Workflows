@@ -158,12 +158,111 @@ function errorMessage(error){
   if (error?.status === 403) return "This Vesper session was refused by the public origin gate.";
   return error?.message || "Vesper's public conversation rail is temporarily unavailable.";
 }
+
+// Coordinate custody renewal between tabs without replaying customer actions.
+async function ensureVesperCustody() {
+  if (!conversationId || !sessionToken) return;
+
+  const sync = () => {
+    let stored = null;
+    try {
+      stored = JSON.parse(localStorage.getItem(custodyKey) || "null");
+    } catch {}
+
+    if (stored?.conversationId === conversationId && stored.token) {
+      sessionToken = stored.token;
+      sessionStorage.setItem(custodyKey, JSON.stringify(stored));
+    }
+    return stored;
+  };
+
+  // The Web Locks API provides cross-tab mutual exclusion.
+  // Without it, retain existing authentication but do not rotate
+  // automatically, avoiding competing rotations.
+  if (!navigator.locks?.request) {
+    sync();
+    return;
+  }
+
+  await navigator.locks.request(
+    `dio-vesper-renew:${apiOrigin}:${conversationId}`,
+    async () => {
+      const stored = sync();
+      const issuedAt = Number(stored?.issuedAt || 0);
+      const age = issuedAt ? Date.now() - issuedAt : Infinity;
+
+      // Renew after 20 hours, leaving a four-hour safety margin.
+      if (age >= 0 && age < 20 * 60 * 60 * 1000) return;
+
+      const response = await fetch(
+        endpoint("/api/vesper/web/session/renew"),
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-Vesper-Session-Token": sessionToken
+          },
+          body: JSON.stringify({conversation_id: conversationId})
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(
+          "This Vesper conversation could not be renewed. " +
+          "Its history remains preserved; authenticated recovery " +
+          "may be required."
+        );
+      }
+
+      const body = await response.json();
+      const next = body?.session;
+
+      if (
+        next?.conversation_id !== conversationId ||
+        typeof next?.session_token !== "string" ||
+        !next.session_token
+      ) {
+        throw new Error("Vesper renewal returned invalid custody.");
+      }
+
+      const updated = {
+        ...(stored?.conversationId === conversationId ? stored : {}),
+        conversationId,
+        token: next.session_token,
+        issuedAt: Date.now()
+      };
+
+      sessionToken = updated.token;
+      localStorage.setItem(custodyKey, JSON.stringify(updated));
+      sessionStorage.setItem(custodyKey, JSON.stringify(updated));
+    }
+  );
+}
+
+// Adopt newer credentials from another tab for the SAME conversation.
+window.addEventListener("storage", (event) => {
+  if (event.key !== custodyKey || !event.newValue) return;
+  try {
+    const updated = JSON.parse(event.newValue);
+    if (
+      updated.conversationId === conversationId &&
+      updated.token
+    ) {
+      sessionToken = updated.token;
+      sessionStorage.setItem(custodyKey, JSON.stringify(updated));
+    }
+  } catch {}
+});
+
 async function jsonRequest(path, options = {}, withSession = false){
   const submission = options.method === "POST" && ["/api/vesper/web/message", "/api/vesper/web/voice"].includes(path);
   if (submission) options = {...options, body:await bindPending(path, options.body)};
   const headers = new Headers(options.headers || {});
   if (options.body && !headers.has("Content-Type")) headers.set("Content-Type", "application/json");
-  if (withSession && sessionToken) headers.set("X-Vesper-Session-Token", sessionToken);
+  if (withSession && sessionToken) {
+    await ensureVesperCustody();
+    headers.set("X-Vesper-Session-Token", sessionToken);
+  }
   const response = await fetch(endpoint(path), {...options, headers});
   const raw = await response.text();
   let body = {};
@@ -353,8 +452,15 @@ async function bindSession(){
       }
     }
     // Persist only AFTER the server authenticates this session.
-    sessionStorage.setItem(custodyKey, JSON.stringify(saved));
-    localStorage.setItem(custodyKey, JSON.stringify(saved));
+    // A successful authenticated GET may already have renewed
+    // custody. Never overwrite that new token with the stale saved one.
+    const latest = JSON.parse(localStorage.getItem(custodyKey) || "null");
+    const restored = (
+      latest?.conversationId === conversationId &&
+      latest.token === sessionToken
+    ) ? latest : {...saved, token: sessionToken};
+    sessionStorage.setItem(custodyKey, JSON.stringify(restored));
+    localStorage.setItem(custodyKey, JSON.stringify(restored));
     sessionReady = true;
     setRoute("Conversation restored", true);
     await refreshJourney();
@@ -372,6 +478,7 @@ async function bindSession(){
     false,
   );
   const ids = sessionIdentifiers(body);
+  ids.issuedAt = Date.now();
   if (!ids.conversationId || !ids.token) throw new Error("Vesper session response did not include conversation custody credentials.");
   conversationId = ids.conversationId;
   sessionToken = ids.token;
