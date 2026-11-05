@@ -1,0 +1,127 @@
+{
+  "contract": "PICTORA_SCENE_ASSET_CANARY_V1",
+  "product": "ControlDrift",
+  "comfy_url": "http://127.0.0.1:8188",
+  "timestamp_utc": "2026-11-04T12:02:43.454698+00:00",
+  "checkpoint": "v1-5-pruned-emaonly.safetensors",
+  "checkpoint_sha256": "6ce0161689b3853acaa03779ec93eafe75a02f4ced659bee03f50797806fa2fa",
+  "checkpoint_hash_status": "VERIFIED",
+  "status": "AWAITING_HUMAN_SEMANTIC_REVIEW",
+  "scenes": [
+    {
+      "scene": "01_exception_discovery",
+      "meaning": "exception discovery",
+      "seed": 441170,
+      "prompt": "An enterprise internal control exception register shown as a realistic high-end editorial still life: a dark workstation with a physical open ledger and a precise single amber warning indicator among quiet checkmarks, several distinct evidence rows, an analyst's gloved hand pointing at the exception; emphasis on exception discovery, dramatic black-and-antique-gold corporate lighting, impeccable material realism, intentional negative space, cinematic photography, NO visible writing, NO letters, NO words, NO logo, NO watermarks",
+      "negative_prompt": "typography, text, letters, words, writing, watermark, logo, circular gold medallion, ornamental concentric rings, repeated wallpaper, duplicate objects, jpeg artifacts, blurry, incoherent geometry, low quality",
+      "workflow_path": "/data/byron/dio-pictora-control-drift-canary/01_exception_discovery_workflow.json",
+      "workflow_sha256": "7ebd51fca45598dc4492faa0ea30fe0b9f4b3cc638296e9cd184e53c5a8bdc93",
+      "checkpoint": "v1-5-pruned-emaonly.safetensors",
+      "steps": 24,
+      "cfg": 7.0,
+      "width": 768,
+      "height": 512,
+      "comfy_prompt_id": "70f7a16c-d4e5-47f8-9145-9986b177caa4",
+      "source": "COMFYUI_HISTORY_OUTPUT",
+      "comfy_output": {
+        "filename": "DIO_ControlDrift_Canary_00001_.png",
+        "subfolder": "",
+        "type": "output",
+        "metadata": {
+          "kind": "image",
+          "width": 768,
+          "height": 512
+        }
+      },
+      "image_path": "/data/byron/dio-pictora-control-drift-canary/01_exception_discovery.png",
+      "image_sha256": "f166998eea31529e27fa6e27645214f88f5dcd086355371cfb02dfdc8afbca9f",
+      "bytes": 479655
+    },
+    {
+      "scene": "02_conflicting_evidence",
+      "meaning": "contradictory evidence and missing sign-off",
+      "seed": 441271,
+      "prompt": "A premium forensic documentation scene about contradictory evidence and a missing control sign-off: two visibly different conflicting document folders on a black stone desk, one with a crimson contradictory marker and one with a blank unapproved signature seal, a bridging evidence comparison arrangement and audit trail of distinct papers; intricate but legible physical scene, editorial black and muted gold visual language, elegant controlled lighting, no circular emblem, NO visible writing, NO letters, NO words, NO logo, NO watermarks",
+      "negative_prompt": "typography, text, letters, words, writing, watermark, logo, circular gold medallion, ornamental concentric rings, repeated wallpaper, duplicate objects, jpeg artifacts, blurry, incoherent geometry, low quality",
+      "workflow_path": "/data/byron/dio-pictora-control-drift-canary/02_conflicting_evidence_workflow.json",
+      "workflow_sha256": "252207069ccb12aa1625e702180ab98af0c281caa29092b43638a8c2692b0d49",
+      "checkpoint": "v1-5-pruned-emaonly.safetensors",
+      "steps": 24,
+      "cfg": 7.0,
+      "width": 768,
+      "height": 512,
+      "comfy_prompt_id": "3b2c2c04-b7cf-4dcc-97e6-f1440afccece",
+      "source": "COMFYUI_HISTORY_OUTPUT",
+      "comfy_output": {
+        "filename": "DIO_ControlDrift_Canary_00002_.png",
+        "subfolder": "",
+        "type": "output",
+        "metadata": {
+          "kind": "image",
+          "width": 768,
+          "height": 512
+        }
+      },
+      "image_path": "/data/byron/dio-pictora-control-drift-canary/02_conflicting_evidence.png",
+      "image_sha256": "e291b20fc4d5796c000962a7c9e8af978298e7f68510e138344f447932b920dc",
+      "bytes": 435977
+    },
+    {
+      "scene": "03_review_pending",
+      "meaning": "evidence trail with human approval pending",
+      "seed": 441372,
+      "prompt": "A premium corporate governance resolution scene: a transparent, orderly evidence trail of three linked physical document packets ending at a human review desk, a prominent clearly unapproved final checkpoint with unpressed brass approval stamp, organized complete evidence chain and intentionally pending human authorization; restrained black and gold editorial photography, realistic materials, confident composition, NO visible writing, NO letters, NO words, NO logo, NO watermarks",
+      "negative_prompt": "typography, text, letters, words, writing, watermark, logo, circular gold medallion, ornamental concentric rings, repeated wallpaper, duplicate objects, jpeg artifacts, blurry, incoherent geometry, low quality",
+      "workflow_path": "/data/byron/dio-pictora-control-drift-canary/03_review_pending_workflow.json",
+      "workflow_sha256": "4dea8b94bf7be2f2f3e64399c676c47a5a9a6b0e610970d2c004059792225687",
+      "checkpoint": "v1-5-pruned-emaonly.safetensors",
+      "steps": 24,
+      "cfg": 7.0,
+      "width": 768,
+      "height": 512,
+      "comfy_prompt_id": "54d16ac9-4e7b-4232-af33-0a488ae7536f",
+      "source": "COMFYUI_HISTORY_OUTPUT",
+      "comfy_output": {
+        "filename": "DIO_ControlDrift_Canary_00003_.png",
+        "subfolder": "",
+        "type": "output",
+        "metadata": {
+          "kind": "image",
+          "width": 768,
+          "height": 512
+        }
+      },
+      "image_path": "/data/byron/dio-pictora-control-drift-canary/03_review_pending.png",
+      "image_sha256": "1a74fac320aec0d987d8f7cc19ba2f7f46926cd7df70fe36516b0954020fad04",
+      "bytes": 469132
+    }
+  ],
+  "pairwise": [
+    {
+      "a": "01_exception_discovery",
+      "b": "02_conflicting_evidence",
+      "average_hash_hamming_256": 107,
+      "different_pixels": true
+    },
+    {
+      "a": "01_exception_discovery",
+      "b": "03_review_pending",
+      "average_hash_hamming_256": 142,
+      "different_pixels": true
+    },
+    {
+      "a": "02_conflicting_evidence",
+      "b": "03_review_pending",
+      "average_hash_hamming_256": 131,
+      "different_pixels": true
+    }
+  ],
+  "contact_sheet_path": "/data/byron/dio-pictora-control-drift-canary/three_scene_contact_sheet.jpg",
+  "contact_sheet_sha256": "4bcc50dff42e82abafb1fd258bc5379b627626046e676e8b0441fc1dfe40e244",
+  "automated_checks": {
+    "three_real_comfy_outputs": true,
+    "unique_image_sha256": true,
+    "visual_difference_ahash_hamming_at_least_12": true,
+    "hash_bound_workflows": true
+  }
+}

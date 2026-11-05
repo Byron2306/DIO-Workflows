@@ -1,0 +1,40 @@
+{
+  "schema": "dio.pictora.observatory.v1",
+  "source": "user-uploaded Pictora-generated/edited images",
+  "verification": "file hashes and dimensions verified; workflow execution settings/receipt not independently checked",
+  "entries": [
+    {
+      "stage": "01_design",
+      "description": "Pictora Studio generated source",
+      "source_filename": "pictora_studio_00366_.png",
+      "site_original": "assets/observatory-proof/01_design.png",
+      "site_preview": "assets/observatory-proof/01_design.webp",
+      "width": 640,
+      "height": 896,
+      "sha256": "fe7ee05cb38a64bf66bd10b8282783411bd798b83de863b269dabca1830f8357",
+      "receipt_status": "not supplied for this run"
+    },
+    {
+      "stage": "02_enhance",
+      "description": "Pictora edited output",
+      "source_filename": "pictora-edited(7).png",
+      "site_original": "assets/observatory-proof/02_enhance.png",
+      "site_preview": "assets/observatory-proof/02_enhance.webp",
+      "width": 1280,
+      "height": 1792,
+      "sha256": "a5376446a9a4b9bbd3a3e906c8ff4352fe132e478b3bb0730c0d6c48c8b6d558",
+      "receipt_status": "not supplied for this run"
+    },
+    {
+      "stage": "03_reimagine",
+      "description": "Pictora img2img output",
+      "source_filename": "pictora_studio_00367_.png",
+      "site_original": "assets/observatory-proof/03_reimagine.png",
+      "site_preview": "assets/observatory-proof/03_reimagine.webp",
+      "width": 1096,
+      "height": 1536,
+      "sha256": "fb2a28960672e9162ef8ad8c666a7250c1dd83f5ec78de8f5cf16584258aee4c",
+      "receipt_status": "not supplied for this run"
+    }
+  ]
+}

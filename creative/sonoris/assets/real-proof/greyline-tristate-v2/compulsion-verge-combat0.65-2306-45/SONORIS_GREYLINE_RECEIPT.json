@@ -1,0 +1,98 @@
+{
+  "schema": "sonoris.greyline.tristate.receipt.v2",
+  "seed": 2306,
+  "duration": 45,
+  "trajectory": [
+    {
+      "time": 0,
+      "g": 1
+    }
+  ],
+  "region": "verge",
+  "combat": 0.65,
+  "state_at_start": {
+    "g": 1,
+    "side": "compulsion",
+    "extremity": 1,
+    "wL": 0,
+    "wR": 1,
+    "wB": 0,
+    "tempo_scale": 1.1,
+    "sub_bpm": 320,
+    "melody_bpm": 112,
+    "effective_tempo": 1,
+    "pitch_multiplier": 1.1670773207638445,
+    "semitone_correction": -2,
+    "bass_multiplier": 1.15,
+    "pulse_decay": 0.12,
+    "pulse_amount": 0.32,
+    "balance_harmony": false
+  },
+  "score_sha256": "578c688f495f1d21da93b2f0243e06d20bcd71a39a4c397614d69b4c8aa6c617",
+  "synthesis": "native_js_pcm_48k_stereo_16bit",
+  "stems": {
+    "melody": {
+      "sha256": "ba727088affc89a5ac2310c6790f057cf33a03299ff9bb832fee5a27c08f906a",
+      "peak": 0.11837312579154968,
+      "rms": 0.02433282022722783,
+      "events": 104
+    },
+    "bass": {
+      "sha256": "71cdd32faab06132b5d61a6c43d89d72de1487c48c25d3119f268cc4370dd7a0",
+      "peak": 0.01767384447157383,
+      "rms": 0.0041354617668673,
+      "events": 52
+    },
+    "pads": {
+      "sha256": "ccbd17c639e1f4e46369f44213073d98cedbdd8ab4a0ffd41d32760c1adf615c",
+      "peak": 0.00874104630202055,
+      "rms": 0.0014129762749480407,
+      "events": 3
+    },
+    "pulse": {
+      "sha256": "7a09000b74ec99a91063af59e224b39035c1c2ae570c733eb101b1b303f3eac3",
+      "peak": 0.00898667611181736,
+      "rms": 0.0037818415522582207,
+      "events": 240
+    },
+    "atmosphere": {
+      "sha256": "82246dc4e88e8abbdad8f89c030bb4ca6298f24c77fb9fc2321e0baa33fb3316",
+      "peak": 0.005255527328699827,
+      "rms": 0.002688456482840528,
+      "events": 4
+    },
+    "industrial": {
+      "sha256": "d2328133e91aa3f510ca280a48aee4febcdf52a859028dd229077087ba5a5a4d",
+      "peak": 0.006349784787744284,
+      "rms": 0.002317420729312704,
+      "events": 45
+    },
+    "dissonance": {
+      "sha256": "f467edef005e6f2623962bea4abb8ee73e7bdc74e07a6736ea737dffb79fcadc",
+      "peak": 0.034822143614292145,
+      "rms": 0.012085519109476398,
+      "events": 45
+    },
+    "interference": {
+      "sha256": "d4e930353cf776a46224d5b44e61d28f073072b1e8bcf3d188b2d04f9057c185",
+      "peak": 0.006286433432251215,
+      "rms": 0.00029009304750961967,
+      "events": 26
+    },
+    "environment": {
+      "sha256": "b78e3a57308c9841423333395b967ac8897100288f07ce26c02243d92c5c09e2",
+      "peak": 0.0033043527510017157,
+      "rms": 0.0006569223222557358,
+      "events": 132
+    }
+  },
+  "master": {
+    "sha256": "81341362da45882aace0c707e219860454b0b533f5f2288e6012f4bc4afec4df",
+    "peak": 0.1358984261751175,
+    "rms": 0.02799027274681245,
+    "gain": 1
+  },
+  "source_claim": "Surround-Me-derived formulas and phrases; not an exact game capture",
+  "review_required": true,
+  "release_authorized": false
+}

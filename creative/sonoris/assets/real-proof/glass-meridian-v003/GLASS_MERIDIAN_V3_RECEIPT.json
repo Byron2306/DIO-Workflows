@@ -1,0 +1,50 @@
+{
+  "schema": "dio.sonoris.performance_realization.v3",
+  "composition_source": "/data/byron/sonoris/rendered/glass-meridian-v002/GLASS_MERIDIAN_JAZZ_SYNTH_FUSION.mid",
+  "composition_source_sha256": "903819cc8204eefd48c04205438c2b1022d41d74279d936689896c40159da17f",
+  "composition_changed": false,
+  "seed": 20261028,
+  "realization": {
+    "electric_piano": {
+      "source": "/home/byron/fusion-instruments/sonoris/jlearman.jRhodes3c/jRhodes3c-looped-flac-sfz/_jRhodes-stereo-looped.sfz",
+      "sha256": "b2f47e04ede7b266ac50d1121873face75a65a88bbec0075f446e772b39d9dad",
+      "behavior": [
+        "velocity_asymmetry",
+        "chord_rake",
+        "phrase_timing_drift"
+      ]
+    },
+    "tenor_saxophone": {
+      "source": "/home/byron/fusion-instruments/sonoris/MTG.SoloSax/MTG Solo Saxophones/MTG Tenor Sax.sfz",
+      "sha256": "28e25102e99a00f8dd864d8596ef2ac2a8a263203fe958814d9c9a54246ed636",
+      "behavior": [
+        "expression_cc11",
+        "delayed_vibrato_cc1",
+        "legato_cc64"
+      ]
+    },
+    "drums": {
+      "source": "/home/byron/fusion-instruments/sonoris/virtuosity_drums/Programs/02-full-kit.sfz",
+      "sha256": "805034d3b0f9352bfaeb1dd49d6ab15c313289d2b83f64fe1cd5a695ecd0a732",
+      "behavior": [
+        "instrument_specific_microtiming",
+        "dynamic_variation",
+        "cymbal_breath"
+      ]
+    },
+    "legacy_remaining": {
+      "engine": "FluidSynth",
+      "source": "/usr/share/sounds/sf2/FluidR3_GM.sf2",
+      "contains": [
+        "electric_bass",
+        "synth_lead",
+        "flute"
+      ],
+      "status": "temporary_v3_bridge"
+    }
+  },
+  "outputs": {
+    "wav": "/data/byron/sonoris/rendered/glass-meridian-v003/GLASS_MERIDIAN_V3.wav",
+    "mp3": "/data/byron/sonoris/rendered/glass-meridian-v003/GLASS_MERIDIAN_V3_AUDITION.mp3"
+  }
+}
