@@ -188,11 +188,18 @@ async function ensureVesperCustody() {
     `dio-vesper-renew:${apiOrigin}:${conversationId}`,
     async () => {
       const stored = sync();
+      const expiresAt = Number(stored?.expiresAt || 0);
       const issuedAt = Number(stored?.issuedAt || 0);
-      const age = issuedAt ? Date.now() - issuedAt : Infinity;
 
-      // Renew after 20 hours, leaving a four-hour safety margin.
-      if (age >= 0 && age < 20 * 60 * 60 * 1000) return;
+      // Prefer the server-provided expiry. Older sessions fall back
+      // to the original 20-hour renewal threshold.
+      const renewAt = expiresAt
+        ? expiresAt - 4 * 60 * 60 * 1000
+        : issuedAt
+          ? issuedAt + 20 * 60 * 60 * 1000
+          : 0;
+
+      if (Date.now() < renewAt) return;
 
       const response = await fetch(
         endpoint("/api/vesper/web/session/renew"),
@@ -225,11 +232,18 @@ async function ensureVesperCustody() {
         throw new Error("Vesper renewal returned invalid custody.");
       }
 
+      const expirySeconds = Number(next.expires_at);
+      if (!Number.isFinite(expirySeconds) ||
+          expirySeconds * 1000 <= Date.now()) {
+        throw new Error("Vesper returned an invalid token expiry.");
+      }
+
       const updated = {
         ...(stored?.conversationId === conversationId ? stored : {}),
         conversationId,
         token: next.session_token,
-        issuedAt: Date.now()
+        issuedAt: Date.now(),
+        expiresAt: expirySeconds * 1000
       };
 
       sessionToken = updated.token;
@@ -259,11 +273,45 @@ async function jsonRequest(path, options = {}, withSession = false){
   if (submission) options = {...options, body:await bindPending(path, options.body)};
   const headers = new Headers(options.headers || {});
   if (options.body && !headers.has("Content-Type")) headers.set("Content-Type", "application/json");
-  if (withSession && sessionToken) {
+  let response;
+  if (withSession) {
+    if (!sessionToken || !conversationId) {
+      throw new Error("Authenticated Vesper session required.");
+    }
+
+    // Renewal takes the exclusive lock. Authenticated requests
+    // take a shared lock, preventing rotation during a request.
     await ensureVesperCustody();
-    headers.set("X-Vesper-Session-Token", sessionToken);
+
+    const authenticatedFetch = async () => {
+      // Refresh credentials after obtaining the shared lock.
+      // Another tab may have renewed while this tab was waiting.
+      let latest = null;
+      try {
+        latest = JSON.parse(localStorage.getItem(custodyKey) || "null");
+      } catch {}
+
+      if (latest?.conversationId === conversationId && latest.token) {
+        sessionToken = latest.token;
+        sessionStorage.setItem(custodyKey, JSON.stringify(latest));
+      }
+
+      headers.set("X-Vesper-Session-Token", sessionToken);
+      return fetch(endpoint(path), {...options, headers});
+    };
+
+    if (navigator.locks?.request) {
+      response = await navigator.locks.request(
+        `dio-vesper-renew:${apiOrigin}:${conversationId}`,
+        {mode: "shared"},
+        authenticatedFetch
+      );
+    } else {
+      response = await authenticatedFetch();
+    }
+  } else {
+    response = await fetch(endpoint(path), {...options, headers});
   }
-  const response = await fetch(endpoint(path), {...options, headers});
   const raw = await response.text();
   let body = {};
   if (raw) {
