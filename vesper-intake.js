@@ -375,6 +375,9 @@ function renderJourney(journey){
   if(quote.reason) detail(`Quote review: ${String(quote.reason).replaceAll("_"," ")}`);
   if(order.invoice_id||order.invoice_state) detail(`Invoice: ${order.invoice_state||"not created"}${order.invoice_id?` · ${order.invoice_id}`:""}`);
   if(order.invoice_id&&order.invoice_state==="issued"){const button=document.createElement("button");button.type="button";button.className="journey-action";button.textContent="Open issued invoice";button.addEventListener("click",async()=>{button.disabled=true;try{const response=await fetch(endpoint(`/api/vesper/web/invoice?conversation_id=${encodeURIComponent(conversationId)}`),{headers:{"X-Vesper-Session-Token":sessionToken}});if(!response.ok)throw new Error("Invoice is unavailable");const blob=await response.blob(),url=URL.createObjectURL(blob);window.open(url,"_blank","noopener");setTimeout(()=>URL.revokeObjectURL(url),60000);}catch(error){setNotice(errorMessage(error),true);}finally{button.disabled=false;}});journeyActions.appendChild(button);}
+  if(order.invoice_id&&order.invoice_state==="issued"){
+    renderOrderCorrespondence();
+  }
   if(order.payment_state) detail(`Payment: ${order.payment_state}${order.checkout_available?" · checkout link issued":""}`);
   if(order.operator_review_required) detail("Next step: operator pricing review is pending");
   if(settlement.settlement_class) detail(`Payment verification: ${settlement.settlement_class}`);
@@ -407,6 +410,35 @@ function renderJourney(journey){
   }
   if(get("REQUEST_OPERATOR")) journeyButton(view.stage==="QUOTE_READY"?"Request invoice & payment follow-up":"Ask an operator to review", "REQUEST_OPERATOR", get("REQUEST_OPERATOR").action_ref, submitJourneyAction);
 }
+function renderOrderCorrespondence(){
+  const wrap=document.createElement("section");wrap.className="journey-panel";
+  const heading=document.createElement("strong");heading.textContent="Next: email your document bundle";wrap.appendChild(heading);
+  const explanation=document.createElement("p");explanation.textContent="After opening your invoice, add your name and email, then approve order correspondence. DIO will prepare a secure invitation for operator-approved sending. Reply to that email with your DOCX bundle, or use its secure Vesper link. Payment and production remain held.";wrap.appendChild(explanation);
+  const name=document.createElement("input");name.type="text";name.maxLength=140;name.placeholder="Contact name";name.required=true;name.className="journey-input";name.value=nameInput?.value||"";
+  const mail=document.createElement("input");mail.type="email";mail.maxLength=254;mail.placeholder="Email address";mail.required=true;mail.className="journey-input";mail.value=emailInput?.value||"";
+  const org=document.createElement("input");org.type="text";org.maxLength=140;org.placeholder="Organisation (optional)";org.className="journey-input";org.value=organisationInput?.value||"";
+  const consentWrap=document.createElement("label");const consent=document.createElement("input");consent.type="checkbox";consentWrap.append(consent,document.createTextNode(" I consent to DIO using this email for correspondence about this order and its document submission."));
+  const note=document.createElement("p");note.className="muted";
+  const submit=document.createElement("button");submit.type="button";submit.className="journey-action";submit.textContent="Save contact & prepare email handoff";
+  submit.addEventListener("click",async()=>{
+    if(!name.value.trim()||!mail.validity.valid||!mail.value.trim()||!consent.checked){note.textContent="Enter your name and valid email, and tick correspondence consent.";return;}
+    submit.disabled=true;
+    try{
+      const response=await jsonRequest("/api/vesper/web/order-contact",{method:"POST",body:JSON.stringify({conversation_id:conversationId,customer_name:name.value.trim(),customer_email:mail.value.trim(),organisation:org.value.trim(),consent:true})},true);
+      note.textContent=`${response.state.replaceAll("_"," ")}. No email sent; operator approval required.`;
+      await refreshOrderCorrespondenceStatus(note,submit);
+    }catch(e){note.textContent=`Contact details could not be recorded: ${errorMessage(e)}`;submit.disabled=false;}
+  });
+  wrap.append(name,mail,org,consentWrap,submit,note);journeyFields.appendChild(wrap);
+  refreshOrderCorrespondenceStatus(note,submit).catch(()=>{});
+}
+async function refreshOrderCorrespondenceStatus(note,submit){
+  const result=await jsonRequest(`/api/vesper/web/order-contact?conversation_id=${encodeURIComponent(conversationId)}`,{method:"GET"},true);
+  if(result.state==="AWAITING_ORDER_CONTACT")return;
+  note.textContent=`Contact recorded (${result.customer_email||"email pending"}). ${String(result.state||"").replaceAll("_"," ")}. Email sending still requires operator approval.`;
+  submit.disabled=true;
+}
+
 async function refreshJourney(){
   if(!conversationId||!sessionToken)return;
   const body=await jsonRequest(`/api/vesper/web/journey?conversation_id=${encodeURIComponent(conversationId)}`,{method:"GET"},true);
