@@ -452,7 +452,50 @@ async function startSession(){
   try { return await sessionPromise; }
   finally { sessionPromise = null; }
 }
+
+async function redeemEmailResumeInvitation(){
+  const fragment = new URLSearchParams(location.hash.slice(1));
+  const invitation = fragment.get("resume");
+  if (!invitation) return;
+
+  history.replaceState(null, "", location.pathname + location.search);
+
+  if (!/^[A-Za-z0-9_-]{40,64}$/.test(invitation))
+    throw new Error("Invalid Vesper invitation.");
+
+  const result = await jsonRequest(
+    "/api/vesper/web/session/resume",
+    {
+      method: "POST",
+      body: JSON.stringify({invitation_token: invitation})
+    },
+    false
+  );
+
+  const session = result?.session;
+  if (!session?.conversation_id || !session?.session_token)
+    throw new Error("Authenticated resume was not established.");
+
+  const expirySeconds = Number(session.expires_at);
+  if (!Number.isFinite(expirySeconds) ||
+      expirySeconds * 1000 <= Date.now())
+    throw new Error("Vesper returned an invalid resume expiry.");
+
+  const restored = {
+    conversationId: session.conversation_id,
+    token: session.session_token,
+    issuedAt: Date.now(),
+    expiresAt: expirySeconds * 1000
+  };
+
+  // Both stores must agree before authenticated restoration.
+  // Existing cross-tab renewal reads localStorage first.
+  localStorage.setItem(custodyKey, JSON.stringify(restored));
+  sessionStorage.setItem(custodyKey, JSON.stringify(restored));
+}
+
 async function bindSession(){
+  await redeemEmailResumeInvitation();
   // Prefer the current tab's custody, then the same-browser
   // persistent custody. Never resume using an ID without its token.
   const savedRaw = sessionStorage.getItem(custodyKey)
