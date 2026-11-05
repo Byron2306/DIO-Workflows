@@ -306,8 +306,14 @@ async function startSession(){
   finally { sessionPromise = null; }
 }
 async function bindSession(){
-  const saved = JSON.parse(sessionStorage.getItem(custodyKey) || "null");
+  // Prefer the current tab's custody, then the same-browser
+  // persistent custody. Never resume using an ID without its token.
+  const savedRaw = sessionStorage.getItem(custodyKey)
+    || localStorage.getItem(custodyKey);
+  const saved = savedRaw ? JSON.parse(savedRaw) : null;
   if (saved){
+    if (!saved.conversationId || !saved.token)
+      throw new Error("Saved conversation custody is incomplete.");
     conversationId = saved.conversationId;
     sessionToken = saved.token;
     const body = await jsonRequest(`/api/vesper/web/session?conversation_id=${encodeURIComponent(conversationId)}`, {method:"GET"}, true);
@@ -346,6 +352,9 @@ async function bindSession(){
         setNotice(pendingSubmission.hasBinary ? "An earlier submission is unresolved. Press Send to retry its original audio or file." : "An earlier submission is unresolved. Retry its original message.");
       }
     }
+    // Persist only AFTER the server authenticates this session.
+    sessionStorage.setItem(custodyKey, JSON.stringify(saved));
+    localStorage.setItem(custodyKey, JSON.stringify(saved));
     sessionReady = true;
     setRoute("Conversation restored", true);
     await refreshJourney();
@@ -367,6 +376,7 @@ async function bindSession(){
   conversationId = ids.conversationId;
   sessionToken = ids.token;
   sessionStorage.setItem(custodyKey, JSON.stringify(ids));
+  localStorage.setItem(custodyKey, JSON.stringify(ids));
   sessionReady = true;
   setRoute("Conversation bound", true);
   setNotice("Vesper is ready. Text conversation is bound to the governed public rail.");
