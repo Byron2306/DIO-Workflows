@@ -892,13 +892,18 @@ async function submitVoiceBlob(blob){
     || null
   );
 
+  // Capture only the DOM nodes created by this specific voice turn.
+  const existingVoiceMessageNodes = new Set(messages.children);
   appendMessage(
     "customer",
     "🎙 Voice message",
     "You · voice submitted"
   );
+  const thisVoiceMessageNodes = [...messages.children].filter(
+    node => !existingVoiceMessageNodes.has(node)
+  );
 
-  await jsonRequest(
+  const voiceSubmission = await jsonRequest(
     "/api/vesper/web/voice",
     {
       method: "POST",
@@ -926,6 +931,38 @@ async function submitVoiceBlob(blob){
   setNotice(
     "Voice accepted. Waiting for Vesper's governed reply…"
   );
+
+  // The server returns the transcript only after canonical persistence.
+  // Replace the temporary voice bubble without changing the saved record.
+  const recognizedVoiceText =
+    typeof voiceSubmission?.transcript === "string"
+      ? voiceSubmission.transcript.trim()
+      : "";
+
+  if (recognizedVoiceText) {
+    const matches = [];
+    for (const container of thisVoiceMessageNodes) {
+      if (!messages.contains(container)) continue;
+      const walker = document.createTreeWalker(
+        container, NodeFilter.SHOW_TEXT
+      );
+      let node;
+      while ((node = walker.nextNode())) {
+        if (node.textContent.trim() === "🎙 Voice message") {
+          matches.push(node);
+        }
+      }
+    }
+    if (matches.length === 1) {
+      matches[0].textContent = recognizedVoiceText;
+    } else {
+      // A concurrent voice turn must never receive this transcript.
+      // The saved canonical session remains authoritative.
+      console.warn(
+        "Voice transcript persisted; unique placeholder not found"
+      );
+    }
+  }
 
   await pollForReply();
 }
